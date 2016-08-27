@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Cards",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 7/11/2016 13:56",
+	"instvars" : [
+		"closeId",
+		"openId" ],
+	"name" : "MDLLoginDialogWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLLoginWidget",
+	"type" : "normal" }
