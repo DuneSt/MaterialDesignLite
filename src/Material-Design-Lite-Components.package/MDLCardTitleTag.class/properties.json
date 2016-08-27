@@ -7,7 +7,7 @@
 	"commentStamp" : "KevinLanvin 7/21/2015 14:20",
 	"instvars" : [
 		 ],
-	"name" : "MDLCardTitle",
+	"name" : "MDLCardTitleTag",
 	"pools" : [
 		 ],
 	"super" : "MDLCardInnerDiv",
