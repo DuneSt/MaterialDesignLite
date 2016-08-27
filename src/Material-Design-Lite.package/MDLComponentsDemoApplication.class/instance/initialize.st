@@ -1,10 +1,8 @@
 initialization
 initialize
-	| footer |
 	super initialize.
-	footer := self initializeFooter.
 	self defaultScreens
 		do: [ :each | 
-			each addDecoration: (MDLScreenFooter newWithFooter: footer).
+			each addDecoration: (MDLScreenLayout newWithLayout: self initializeLayout).
 			self addScreen: each ].
 	activeScreen := screens first

@@ -1,5 +1,5 @@
 initialization
 initializeDrawer
 	^ MDLSimpleDrawerSection new
-		links: self initializeHeaderLinks;
+		links: self initializeDrawerLinks;
 		yourself

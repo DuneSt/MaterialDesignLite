@@ -1,6 +1,6 @@
 initialization
 initializeFooter
-	^ MDLFooter new
-		atTopRightAddComponents: self initializeTopRightComponents;
-		"atMiddleAddComponents: self initializeFooterMiddleSection;"
+	^ MDLSmallFooter new
+		onRightSideAddComponents: self initializeFooterRightSideComponents;
+		onLeftSideAddLinks: self initializeFooterLeftSideLinks;
 		yourself
