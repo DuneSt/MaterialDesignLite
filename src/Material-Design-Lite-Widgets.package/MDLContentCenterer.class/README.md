@@ -1,0 +1,1 @@
+Just a widget that allow to center a component and specify its size
