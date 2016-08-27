@@ -20,9 +20,7 @@ nestedListCss
 	padding-left: 0;
 }
 
-.listContainer .collapsed ul{
-	display: none;
-}
+
  
 .listContainer a{
 	font-size: 16px;
@@ -77,32 +75,44 @@ nestedListCss
     margin-left: 0 !important;
 }
 
-.expList .expIcon{
+
+
+.listContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.expList .expanded {
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: rgb(220,220,220);
+}
+
+.expList .expanded .icon{
+    background: url(' , (self urlOf: 'arrowUpPng') asString
+		,
+			') no-repeat center center;
+}
+
+.expList .collapsed ul{
+	display: none;
+}
+
+.expList .collapsed .icon{ 
+	background: url(' , (self urlOf: 'arrowDownPng') asString
+		,
+	') no-repeat center center; 
+}
+
+.expList .icon{
     width: 40px;
 	height: 40px;
 	float: right;
 	cursor: pointer;
-   background: url(' , (self urlOf: 'arrowDownPng') asString
-		,
-			') no-repeat center center;
+   
 	padding-left: 15px;
 	position: absolute;
    right: 5px;
    top: 0;
 } 
 
-.expList .expandedIcon{
-    background: url(' , (self urlOf: 'arrowUpPng') asString
-		,
-			') no-repeat center center;
-}
-
-.listContainer::-webkit-scrollbar {
-    display: none;
-}
-
-.expanded {
-    border-style: solid;
-    border-width: 1px 0;
-    border-color: rgb(220,220,220);
-}'
+'

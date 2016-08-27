@@ -10,9 +10,9 @@
 		"groups",
 		"currentPage",
 		"pageSize",
+		"widgetId",
 		"tableBodyId",
-		"arrowsId",
-		"items" ],
+		"arrowsId" ],
 	"name" : "MDLPaginationWidget",
 	"pools" : [
 		 ],

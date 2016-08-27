@@ -14,7 +14,7 @@ printHtmlForElementsFrom: start to: end on: stream
 										to: (end min: self elements size)
 										do: [ :anElement | 
 											self
-												renderListItem: anElement
+												renderListTree: (self obtainTreeFor: anElement)
 												index: (self elements indexOf: anElement)
 												indentedBy: 1
 												on: htmlDyn ] ] ])
