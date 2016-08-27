@@ -1,6 +1,8 @@
 accessing
 class: aString
 	| stringToAdd |
+	aString isEmptyOrNil
+		ifTrue: [ ^ self ].
 	properties
 		at: #class:
 		ifPresent: [ :oldClasses | 
