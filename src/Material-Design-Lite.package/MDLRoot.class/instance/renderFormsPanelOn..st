@@ -6,18 +6,23 @@ renderFormsPanelOn: html
 		with: [ 
 			html form: [ 
 				html heading level4 with: 'Text fields'.
-				html mdlTextField floatingLabel; with: [ 
+				html mdlTextFieldContainer floatingLabel; with: [ 
 					html mdlTextFieldLabelFor: 'input_text' with: 'First name'.
 					html mdlTextFieldInputId: 'input_text' type: 'text' ].
 				html break.
-				html mdlTextField floatingLabel; with: [ 
+				html mdlTextFieldContainer floatingLabel; with: [ 
 					html mdlTextFieldLabelFor: 'input_email' with: 'Email'.
 					html mdlTextFieldInputId: 'input_email' type: 'email' ]. 
 				html break.
-				html mdlTextField floatingLabel; with: [ 
+				html mdlTextFieldContainer floatingLabel; with: [ 
 					html mdlTextFieldLabelFor: 'input_password' with: 'Password'.
 					html mdlTextFieldInputId: 'input_password' type: 'password' pattern: '[0-9]*'.
 					html mdlTextFieldError: 'Digits only' ].
+				html break.
+					html mdlTextFieldContainer: [ 
+						html mdlMultilineTextField rows: 3; id:'textArea'.
+						html mdlTextFieldLabelFor: 'textArea' with: 'TextLines' ] .
+				html break.
 				html heading level4 with: 'Checkboxes and radio buttons'.
 				html mdlCheckboxContainer for:'checkbox1'; with: [ 
 					html mdlCheckbox id: 'checkbox1' ; value: true.
@@ -33,7 +38,7 @@ renderFormsPanelOn: html
 				html heading level4 with: 'Sliders'.
 				html mdlSlider min:0; max: 10; value: 0.
 				html break.
-				html mdlSlider min:0; max: 100; value: 25.
+				html mdlSlider min:0; max: 100; value: 25 .
 				html break.
 			] 
 		]
