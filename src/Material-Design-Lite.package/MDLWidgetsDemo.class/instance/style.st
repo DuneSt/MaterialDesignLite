@@ -18,4 +18,9 @@ style
  .mdl-snackbar { 
 	 z-index: 99999999;
  }
+ body {
+  	 padding: 20px;
+  	 background: #fafafa;
+  	 position: relative;
+ }
 '

@@ -1,0 +1,5 @@
+rendering
+initTable
+	table := MDLSortableTable new.
+	table header: #('Class' 'Number of Methods').
+	table rows: (Object allSubclasses collect: [ :each | {each name. each methods size}])

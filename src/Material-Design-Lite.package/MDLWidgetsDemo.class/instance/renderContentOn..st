@@ -12,4 +12,7 @@ renderContentOn: html
 				action: [ :o | Transcript crShow: o asString ]
 				choosingText: 'Select Your Number'
 				description: 'description').
-	self renderCalendarOn: html
+	self renderCalendarOn: html.
+	html break.
+	html break.
+	table renderContentOn: html
