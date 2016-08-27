@@ -1,3 +1,3 @@
 rendering
 renderHeaderOn: html
-	html render: (MDLLayoutWidget new links: self initializeLinks) beCollapsible
+	html render: (MDLHeader new links: self initializeLinks) beCollapsible

@@ -1,6 +1,6 @@
 initialization
 initializeMiniFooter
 	^ MDLSmallFooter new
-		onLeftSideAddLinks: self initializeBottomLinks;
-		onRightSideAddComponents: self initializeTopComponents2;
+		addLinksToLeftSection: self initializeBottomLinks asDictionary;
+		addComponentsToRightSection: self initializeTopComponents2;
 		yourself

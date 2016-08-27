@@ -14,4 +14,5 @@ renderContentOn: html
 				description: 'description').
 	html break.
 	html break."
+	html render: (MDLSimpleDialog title: 'My name is' content: 'Dialog' buttonName: 'Simple dialog' ).
 	self renderFooterOn: html
