@@ -1,6 +1,6 @@
 as yet unclassified
 style
-	^'::-webkit-scrollbar { 
+	^super style , '::-webkit-scrollbar { 
 		display: none; 
 	}
 	.mdl-navigation__link.is-active {
@@ -14,4 +14,6 @@ style
 	
 	.screen-content {
 		padding-left: 20px;
-	}'
+	}
+	
+	'
