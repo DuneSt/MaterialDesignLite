@@ -3,10 +3,9 @@ renderContentOn: html
 
 	html render: self report.
 	
-	html div 
-		class: 'form-actions'; 
+	html mdlCardActions 
 		with: [
-			html anchor
-				class: 'btn' ;
-				callback: [ self close ] ;
-				with: 'Close' ]
+			html anchor with: [ 
+				html mdlButton raised
+					callback: [ self close ] ;
+					with: 'Close' ] ]

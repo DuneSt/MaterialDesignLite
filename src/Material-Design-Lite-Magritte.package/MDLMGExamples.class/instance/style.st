@@ -9,4 +9,4 @@ style
 	
 	.mdl-card {
   		width: 512px;
-	}'
+	}', MDLMAReport cssStylesheet

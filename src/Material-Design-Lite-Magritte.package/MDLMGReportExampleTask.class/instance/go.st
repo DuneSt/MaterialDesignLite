@@ -5,4 +5,4 @@ go
 	chosenReport := (self createReportBasedOn: reportChooser).
 	
 	self call: chosenReport.
-	self twbsInformSuccess: [ :r | r strong: 'Thanks for looking at my report!' ]
+	self render: 'Thanks for looking at my report!' 

@@ -3,12 +3,7 @@ createReportBasedOn: reportChooser
 
 	| theReport |
 	
-	theReport := TWBSMagritteReport rows: self demoRows description: MDLMGExampleFormDescription new magritteDescription. 
-	theReport
-		showBatchFirstLast: reportChooser showBatchFirstLast ;
-		showBordered: reportChooser bordered ;
-		showStriped: reportChooser striped ;
-		showCondensed: reportChooser condensed.
+	theReport := MDLMAReport rows: self demoRows description: MDLMGExampleFormDescription new magritteDescription. 
 	
 	^ MDLMGReportWrapper new
 		report: theReport ;

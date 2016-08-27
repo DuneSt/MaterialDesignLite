@@ -2,5 +2,5 @@ magrittes-descriptions
 descriptionContainer
 	<magritteContainer>
 	^ super descriptionContainer
-		componentRenderer: TWBSMagritteFormRenderer;
+		componentRenderer: MDLMAFormRenderer;
 		yourself

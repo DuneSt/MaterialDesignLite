@@ -4,7 +4,7 @@ createFormBasedOn: formChooser
 	theForm := MDLMGExampleFormDescription new asComponent.
 	
 	formChooser isValidationMessageStyleTop ifTrue: [
-		theForm addDecoration: TWBSMagritteValidationDecoration new ].
+		theForm addDecoration: MAValidationDecoration new ].
 	
 	theForm
 		addDecoration: 

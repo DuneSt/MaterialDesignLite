@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "MerwanOuddane 5/17/2016 14:43",
 	"instvars" : [
-		"title" ],
-	"name" : "MDLMAFormDecoration",
+		 ],
+	"name" : "MDLMAReport",
 	"pools" : [
 		 ],
-	"super" : "MAFormDecoration",
+	"super" : "MAReport",
 	"type" : "normal" }
