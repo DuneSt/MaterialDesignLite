@@ -15,5 +15,5 @@ renderItemContentOf: anItem index: anIndex indentedBy: anInteger on: html
 										class: #item;
 										id: anId;
 										with: [ html text: (self format value: anItem) ] ].
-					(self childrenBlock value: anItem) ifNotEmpty: [ html div class: #expIcon ] ].
+					(self childrenBlock value: anItem) ifNotEmpty: [ html div onClick: 'expandCollapse(this)';class: #expIcon ] ].
 	self renderHelpOf: anItem at: anId on: html

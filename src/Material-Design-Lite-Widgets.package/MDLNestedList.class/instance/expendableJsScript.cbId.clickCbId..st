@@ -1,16 +1,10 @@
 javascript
 expendableJsScript: url cbId: cbId clickCbId: clickCb
-	^ 'function prepareList() {
-  $(''.expList'').find(''li:has(ul) .expIcon'')
-  	.click( function(event) {
-  		if (this == event.target) {
-  			$(this.closest(''li'')).toggleClass(''expanded'');
-  			$(this).toggleClass(''expandedIcon'');
-  			$(this.closest(''li'')).children(''ul'').toggle(''medium'');
-  		}
-  		return false;
-  	});
-  };
+	^ 'function expandCollapse(element) {
+			$(element.closest(''li'')).toggleClass(''expanded'');
+  			$(element).toggleClass(''expandedIcon'');
+  			$(element.closest(''li'')).children(''ul'').toggle(''medium'');
+  	}
 
   function post(path, parameters) {
     var form = $(''<form></form>'');
@@ -127,6 +121,5 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
 	}
 
   $(document).ready( function() {
-      prepareList();
-		defineExpandable();
+     defineExpandable();
   });'
