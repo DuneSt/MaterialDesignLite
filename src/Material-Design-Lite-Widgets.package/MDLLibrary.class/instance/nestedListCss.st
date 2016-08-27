@@ -38,15 +38,6 @@ nestedListCss
     background-color:#EEEEEE;
 }
 
-.expList .itemContener.isSelected {
-    background-color: #FFCC80;
-	position: relative;
-}
-
-.expList .itemContener.isSelected:hover {
-    background-color: #FFB74D;
-}
-
 .expList li .item{
 	line-height: 40px;
 	vertical-align: middle;
@@ -88,7 +79,12 @@ nestedListCss
     background: url(' , (self urlOf: 'arrowUpPng') asString , ') no-repeat center center;
 }
 
-.expList .expanded{
-    border-top: 1px solid rgb(217, 217, 217);
-    border-bottom: 1px solid rgb(217, 217, 217);
+.listContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.expanded {
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: rgba(0,0,0,.07);
 }'
