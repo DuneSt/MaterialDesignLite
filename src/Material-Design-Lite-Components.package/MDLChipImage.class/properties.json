@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Chips",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 7/19/2016 12:54",
+	"instvars" : [
+		 ],
+	"name" : "MDLChipImage",
+	"pools" : [
+		 ],
+	"super" : "WAImageTag",
+	"type" : "normal" }
