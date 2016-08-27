@@ -10,5 +10,5 @@
 	"name" : "MDLCardTextContainerWidget",
 	"pools" : [
 		 ],
-	"super" : "MDLWidget",
+	"super" : "MDLHighLevelWidget",
 	"type" : "normal" }

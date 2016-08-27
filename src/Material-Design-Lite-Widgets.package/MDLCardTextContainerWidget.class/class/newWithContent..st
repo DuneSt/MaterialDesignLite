@@ -1,5 +1,5 @@
 instance creation
-newWithContent: aString
+newWithContent: anObject
 	^ self new
-		content: aString;
+		content: anObject;
 		yourself
