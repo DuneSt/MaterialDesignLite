@@ -1,0 +1,1 @@
+I represent a widget for card title
