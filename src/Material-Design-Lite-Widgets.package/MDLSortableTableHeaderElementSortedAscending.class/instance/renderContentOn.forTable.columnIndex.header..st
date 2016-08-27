@@ -1,9 +1,8 @@
 rendering
 renderContentOn: aRenderer forTable: table columnIndex: i header: header
+	aRenderer mdlTableHeading
+		sortedAscending;
+		with: [ 
 			aRenderer anchor 
 				callback: [ table sortDescendingAtRow: i. header goToNextState ];
-				with: [
-					aRenderer mdlButton
-								icon;
-								with: [ aRenderer mdlIcon: 'keyboard_arrow_down' ].
-					aRenderer text: header element ]
+				with: header element ]

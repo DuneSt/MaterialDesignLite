@@ -1,3 +1,3 @@
 sorting
-unsorted
+unsort
 	self currentState: self unsortedState
