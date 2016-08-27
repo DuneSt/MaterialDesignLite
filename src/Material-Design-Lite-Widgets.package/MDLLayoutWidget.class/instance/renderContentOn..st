@@ -5,4 +5,3 @@ renderContentOn: html
 			html render: headerSection.
 			html render: drawerSection.
 			html mdlLayoutContent: contentBlock ].
-	html render: footerSection

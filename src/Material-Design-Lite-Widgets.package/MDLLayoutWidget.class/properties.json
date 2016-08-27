@@ -10,7 +10,6 @@
 		"icon",
 		"headerSection",
 		"drawerSection",
-		"footerSection",
 		"contentBlock",
 		"brush" ],
 	"name" : "MDLLayoutWidget",

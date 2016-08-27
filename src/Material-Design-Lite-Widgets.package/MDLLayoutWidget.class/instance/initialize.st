@@ -5,6 +5,5 @@ initialize
 	icon := MDLIconComponent new.
 	headerSection := MDLNilLayoutSection new.
 	drawerSection := MDLNilLayoutSection new.
-	footerSection := MDLNilLayoutSection new.
 	contentBlock := [ ].
 	brush := MDLLayout new. 
