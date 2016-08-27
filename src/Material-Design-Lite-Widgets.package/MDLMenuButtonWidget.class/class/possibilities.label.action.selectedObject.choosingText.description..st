@@ -1,4 +1,4 @@
-creation
+instance creation
 possibilities: aCollectionOfObjects label: aLabelBlock action: anAction selectedObject: anObjectOrNil choosingText: aText description: aDescriptionValuable 
 	^ self new
 		choosingText: aText;
