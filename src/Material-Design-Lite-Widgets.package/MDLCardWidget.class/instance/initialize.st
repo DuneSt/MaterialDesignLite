@@ -1,5 +1,5 @@
 initialization
 initialize
 	super initialize.
-	contents := OrderedCollection new.
+	componentOrBlocks := OrderedCollection new.
 	shadow := 0

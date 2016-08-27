@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "ThomasHeniart 6/7/2016 10:18",
 	"instvars" : [
-		"contents",
+		"componentOrBlocks",
 		"shadow",
 		"cardActions" ],
-	"name" : "MDLCard",
+	"name" : "MDLCardWidget",
 	"pools" : [
 		 ],
 	"super" : "MDLHighLevelWidget",

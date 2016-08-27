@@ -3,4 +3,9 @@ renderContentOn: html
 	| cardActions |
 	cardActions := html mdlCardActions.
 	self addPropertiesToBrush: cardActions.
-	componentOrBlocks do: [ :aComponentOrBlock | aComponentOrBlock value ]
+	cardActions
+		with: [ componentOrBlocks
+				do: [ :aComponentOrBlock | 
+					aComponentOrBlock isBlock
+						ifTrue: [ aComponentOrBlock cull: html ]
+						ifFalse: [ html render: aComponentOrBlock ] ] ]
