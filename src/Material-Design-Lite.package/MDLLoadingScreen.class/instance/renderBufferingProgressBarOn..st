@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderBufferingProgressBarOn: html
 	html div
 		class: 'mdl-typography--text-center';

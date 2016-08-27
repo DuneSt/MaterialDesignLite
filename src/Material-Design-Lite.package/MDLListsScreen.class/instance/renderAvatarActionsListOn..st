@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderAvatarActionsListOn: html
 	html div
 		class: 'centered-content';

@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderImageCardOn: html
 	html mdlCard
 		shadow: 2;

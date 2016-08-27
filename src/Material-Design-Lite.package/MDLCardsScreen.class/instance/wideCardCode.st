@@ -1,4 +1,4 @@
-as yet unclassified
+code
 wideCardCode 
 	^ 'html mdlCard
 	shadow: 2;

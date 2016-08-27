@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderThreeLineListOn: html
 	html div
 		class: 'centered-content';

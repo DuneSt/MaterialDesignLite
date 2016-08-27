@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderListWithIconsOn: html
 	html div
 		class: 'centered-content';

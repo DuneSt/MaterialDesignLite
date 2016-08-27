@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderSliderDisabledOn: html
 	html div
 		class: 'mdl-typography--text-center';

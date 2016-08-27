@@ -31,4 +31,13 @@ style
 		width: -moz-max-content;    /* Firefox/Gecko */
 		width: -webkit-max-content; /* Chrome */
 	}
+	
+	
+ 	.wa-toolbar { 
+		display: none;
+ 	}
+	
+	.mdl-layout__content { 
+		overflow: visible;
+	}
 	'

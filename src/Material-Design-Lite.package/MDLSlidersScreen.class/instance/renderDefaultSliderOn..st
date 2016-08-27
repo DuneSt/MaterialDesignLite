@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderDefaultSliderOn: html
 	html div
 		class: 'centered-content';

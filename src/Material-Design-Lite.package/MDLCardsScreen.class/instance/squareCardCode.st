@@ -1,4 +1,4 @@
-as yet unclassified
+code
 squareCardCode 
 	^ 'html mdlCard
 	shadow: 2;

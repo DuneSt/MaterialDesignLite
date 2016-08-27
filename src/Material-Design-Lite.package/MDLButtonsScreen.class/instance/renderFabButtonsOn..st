@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderFabButtonsOn: html
 	html mdlGrid
 		class: 'mdl-typography--text-center';

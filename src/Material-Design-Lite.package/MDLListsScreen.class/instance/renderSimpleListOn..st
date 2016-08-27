@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderSimpleListOn: html
 	html div
 		class: 'centered-content';

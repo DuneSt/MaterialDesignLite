@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderAvatarControlsListOn: html
 	html div
 		class: 'centered-content';

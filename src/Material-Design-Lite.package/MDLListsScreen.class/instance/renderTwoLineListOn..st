@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderTwoLineListOn: html
 	html div
 		class: 'centered-content';

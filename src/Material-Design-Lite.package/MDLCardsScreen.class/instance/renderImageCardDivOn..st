@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderImageCardDivOn: html
 	html mdlGrid
 		class: 'mdl-typography--text-center';

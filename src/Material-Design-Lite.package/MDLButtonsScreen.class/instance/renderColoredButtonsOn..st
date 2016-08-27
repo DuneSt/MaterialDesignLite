@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderColoredButtonsOn: html
 	html mdlGrid
 		class: 'mdl-typography--text-center';
