@@ -16,11 +16,11 @@ mdlChipCss
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 
-.mdl-chip.mdl-chip__deletable{
+.mdl-chip.mdl-chip__deletable, .mdl-chip.mdl-chip__deletable-ajax{
 	padding-right: 0;
 }
 
-.mdl-chip.mdl-chip__deletable .mdl-chip__deleteIcon{
+.mdl-chip .mdl-chip__deleteIcon{
 	width: 24px;
 	height: 24px;
 	line-height: 20px;
@@ -29,9 +29,10 @@ mdlChipCss
 	font-size: 20px;
 	vertical-align: middle;
 	color: #BDBDBD;
+	cursor: pointer;
 }
 
-.mdl-chip.mdl-chip__deletable:hover .mdl-chip__deleteIcon{
+.mdl-chip:hover .mdl-chip__deleteIcon{
 	-webkit-filter: invert(100%);
     filter: invert(100%);
 }
