@@ -21,13 +21,7 @@ renderContentOn: html
 							html render: (MDLSwitchWidget id: 'switch2' value: false).
 							html
 								render: (MDLDialogWidget title: 'My name is' content: 'Dialog' buttonName: 'Simple dialog') ] ].
-			html
-				render:
-					(MDLFormSelectWidget
-						possibilities: #(1 2 3 4)
-						label: #asString
-						choosingText: 'Select Your Number'
-						description: 'description').
+			html form: [ html render: self selectWidget ].
 			self renderCalendarOn: html.
 			html div
 				style: 'width: 800px';
