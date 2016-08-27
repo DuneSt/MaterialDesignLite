@@ -15,4 +15,4 @@ renderContentOn: html
 						style: 'padding : 24px';
 						with: self renderCalendarCurrentDate.
 					html mdlDialogContent style: 'padding : 0px' ; with: [ self renderCalendarContentOn: html ].
-					html mdlDialogActions with: [ self renderButtonsOn: html ] ]
+					html mdlDialogActions: [ self renderButtonsOn: html ] ]
