@@ -6,7 +6,7 @@ renderContentOn: html
 		with: [ 
 					| elementsToDisplay firstElementIndex |
 					elementsToDisplay := self elementsDisplayList.
-					firstElementIndex := self elements indexOf: elementsToDisplay first.
+					firstElementIndex := self elements indexOf: (elementsToDisplay ifEmpty: [ nil ] ifNotEmpty: [ :coll | coll first ]).
 					html unorderedList
 						class: #expList;
 						with: [ 
@@ -33,5 +33,5 @@ renderContentOn: html
 										doNotCache;
 										contentType: WAMimeType textHtml;
 										stream) ] ]).
-	clickCb := div storeCallback: (WAValuesCallback on: self actionBlock values: self ).
+	clickCb := div storeCallback: (WAValuesCallback on: self actionBlock values: self).
 	html script: (self expendableJsScript: html actionUrl cbId: scrollCb clickCbId: clickCb)
