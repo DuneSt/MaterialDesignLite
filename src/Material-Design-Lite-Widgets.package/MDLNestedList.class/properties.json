@@ -1,0 +1,20 @@
+{
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"elements",
+		"format",
+		"actionBlock",
+		"selectedEntity",
+		"helpBlock",
+		"iconBlock",
+		"childrenBlock" ],
+	"name" : "MDLNestedList",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }

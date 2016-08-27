@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"label",
+		"helpText" ],
+	"name" : "MDLListIconComponent",
+	"pools" : [
+		 ],
+	"super" : "SYNComponent",
+	"type" : "normal" }
