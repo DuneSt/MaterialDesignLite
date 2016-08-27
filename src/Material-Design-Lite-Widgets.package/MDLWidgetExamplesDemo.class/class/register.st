@@ -2,4 +2,7 @@ tools registry
 register
 	"self register"
 
-	^ self registerToDevelopment: 'MDLWidgetExamples'
+	| app |
+	app := self registerToDevelopment: 'MDLWidgetExamples'.
+	app addLibrary: MDLDemoLibrary.
+	^ app
