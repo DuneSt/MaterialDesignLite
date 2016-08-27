@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	componentOrBlocks := OrderedCollection new.
-	shadow := 0
+	self class: 'mdl-card-widget'

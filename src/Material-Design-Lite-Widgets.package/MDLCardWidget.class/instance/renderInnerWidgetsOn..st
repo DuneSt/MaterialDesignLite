@@ -5,4 +5,3 @@ renderInnerWidgetsOn: html
 			aComponentOrBlock isBlock
 				ifTrue: [ aComponentOrBlock cull: html ]
 				ifFalse: [ html render: aComponentOrBlock ] ]
-	"contents do: [ :c | html render: c ]"
