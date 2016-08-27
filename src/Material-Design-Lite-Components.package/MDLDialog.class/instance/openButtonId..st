@@ -10,5 +10,9 @@ openButtonId: id
        }
        showDialogButton.addEventListener(''click'', function() \{
          dialog.showModal();
+			document.querySelector(''.backdrop'').addEventListener(''click'', function() \{
+				dialog.close();
+		 	});
+			document.querySelector(''._dialog_overlay'').style.display = "none";
        });
 		})()' format: {self id.  id}))

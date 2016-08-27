@@ -4,7 +4,6 @@ closeButtonId: id
 	self script: (JSStream on: 
 		('(function() \{ 
 		var dialog = document.querySelector(''#{1}'');
-		
        dialog.querySelector(''#{2}'').addEventListener(''click'', function() \{
          dialog.close();
        });
