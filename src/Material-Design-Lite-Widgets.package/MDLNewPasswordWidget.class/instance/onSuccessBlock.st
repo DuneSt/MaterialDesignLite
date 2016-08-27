@@ -1,0 +1,3 @@
+accessing
+onSuccessBlock
+	^ onSuccessBlock ifNil: [ ^ [  ] ]
