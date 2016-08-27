@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 nextState: anObject
 	nextState := anObject

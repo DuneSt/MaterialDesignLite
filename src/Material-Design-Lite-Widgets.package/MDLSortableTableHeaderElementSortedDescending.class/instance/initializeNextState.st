@@ -1,4 +1,4 @@
-rendering
+initialization
 initializeNextState
 	self nextState: 
 		(MDLSortableTableHeaderElementUnsorted new 

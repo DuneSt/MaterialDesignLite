@@ -1,4 +1,4 @@
-rendering
+initialization
 initialize
 	super initialize.
 	elementsToShow := 10.

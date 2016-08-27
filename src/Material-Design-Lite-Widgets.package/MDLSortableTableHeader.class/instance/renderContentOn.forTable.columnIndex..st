@@ -1,3 +1,9 @@
 rendering
 renderContentOn: aRenderer forTable: table columnIndex: i
-	self currentState renderContentOn: aRenderer forTable: table columnIndex: i header: self
+		aRenderer
+		mdlTableHeading: [ 
+			self currentState 
+				renderContentOn: aRenderer 
+				forTable: table 
+				columnIndex: i 
+				header: self ]
