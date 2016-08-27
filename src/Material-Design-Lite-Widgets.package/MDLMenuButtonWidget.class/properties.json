@@ -11,7 +11,8 @@
 		"selectedObject",
 		"objectsPossibilities",
 		"description",
-		"action" ],
+		"action",
+		"sortBlock" ],
 	"name" : "MDLMenuButtonWidget",
 	"pools" : [
 		 ],
