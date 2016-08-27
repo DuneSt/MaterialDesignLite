@@ -1,3 +1,4 @@
 options
 beFloatingLabelIf: aBoolean
-	aBoolean ifTrue: [ self floatingLabel ]
+	aBoolean
+		ifTrue: [ self class: 'mdl-textfield--floating-label' ]
