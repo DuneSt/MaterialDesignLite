@@ -1,3 +1,3 @@
-initialization
+accessing
 nextMonth
 	currentDate := currentDate onNextMonth

@@ -1,6 +1,9 @@
 private-rendering
 renderYearsHeaderOn: html
-	self renderButtonWithIcon: 'navigate_before' action: #goToPreviousYears on: html.
+	self
+		renderYearsIntervalButtonWithIcon: 'navigate_before'
+		action: #goToPreviousYears
+		on: html.
 	html
 		mdlCellDesktop: 8
 		tablet: 6
@@ -9,7 +12,10 @@ renderYearsHeaderOn: html
 			(String
 				streamContents: [ :aStream | 
 					aStream
-						nextPutAll: (calendar currentDate year - 4) greaseString;
+						nextPutAll: calendar yearsInterval first greaseString;
 						nextPutAll: ' - ';
-						nextPutAll: (calendar currentDate year + 4) greaseString ]).
-	self renderButtonWithIcon: 'navigate_next' action: #goToPreviousMonth on: html
+						nextPutAll: calendar yearsInterval last greaseString ]).
+	self
+		renderYearsIntervalButtonWithIcon: 'navigate_next'
+		action: #goToNextYears
+		on: html

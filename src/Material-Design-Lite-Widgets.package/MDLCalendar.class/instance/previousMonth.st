@@ -1,3 +1,3 @@
-initialization
+accessing
 previousMonth
 	currentDate := currentDate onPreviousMonth

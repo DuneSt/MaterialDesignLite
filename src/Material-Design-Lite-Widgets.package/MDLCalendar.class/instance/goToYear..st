@@ -1,3 +1,3 @@
 accessing
 goToYear: aNumber
-	currentDate := currentDate addMonths: (aNumber - currentDate year) * 12
+	self currentDate: (currentDate addMonths: (aNumber - currentDate year) * 12)

@@ -8,8 +8,6 @@
 	"instvars" : [
 		"daysList",
 		"calendar",
-		"fullDateId",
-		"calendarContentId",
 		"calendarId" ],
 	"name" : "MDLCalendarWidget",
 	"pools" : [

@@ -7,7 +7,8 @@
 	"commentStamp" : "MerwanOuddane 4/11/2016 17:21",
 	"instvars" : [
 		"currentDate",
-		"firstDayOfWeekIndex" ],
+		"firstDayOfWeekIndex",
+		"yearsInterval" ],
 	"name" : "MDLCalendar",
 	"pools" : [
 		 ],

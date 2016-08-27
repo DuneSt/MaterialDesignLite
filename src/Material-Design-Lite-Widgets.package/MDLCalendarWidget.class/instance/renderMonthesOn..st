@@ -2,7 +2,7 @@ private-rendering
 renderMonthesOn: html
 	html mdlGrid
 		style: 'text-align: center';
-		with: [ Date monthNames
+		with: [ self monthesNames
 				do: [ :aString | 
 					html mdlCell
 						class: 'month-cell';

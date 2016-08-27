@@ -3,7 +3,7 @@ renderYearsOn: html
 	html mdlGrid
 		style: 'text-align: center';
 		with: [ self renderYearsHeaderOn: html.
-			(calendar currentDate year - 4 to: calendar currentDate year + 4)
+			calendar yearsInterval
 				do: [ :aYear | 
 					html mdlCell
 						class: 'year-cell';
