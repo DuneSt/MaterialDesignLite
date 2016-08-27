@@ -6,17 +6,21 @@ style
 	.mdl-navigation__link.is-active {
 		font-weight: 700;
 	}
+	.screen-content { 
+		margin : 32px;
+		color: rgba(0,0,0,.54);
+	 }
 	
 	.mdl-layout__drawer { 
 		background-color: white
 	 }
 	pre {
+		margin-left: -32px;
+		margin-right: -32px;
 		background-color: #eee;
+		color: rgb(0,0,0);
 		padding: 10px;
 	}
 	
-	.screen-content {
-		padding-left: 20px;
-	}
 	
 	'
