@@ -1,7 +1,7 @@
 rendering
 renderContentOn: html
 	| inputId |
-	inputId := html nextId.
+	self id ifNotNil: [ :aString | inputId := aString ] ifNil: [ inputId := html nextId ].
 	html mdlTextFieldContainer
 		beFloatingLabelIf: isFloatingLabel;
 		beExpandableIf: isExpandable;
@@ -15,4 +15,5 @@ renderContentOn: html
 						id: inputId;
 						yourself).
 			self addPropertiesToBrush.
-			patternErrorMessage ifNotEmpty: [ html mdlTextFieldError: patternErrorMessage ] ]
+			patternErrorMessage ifNotEmpty: [ html mdlTextFieldError: patternErrorMessage ].
+			self errorMessage ifNotEmpty: [ :message | html mdlTextFieldError: message ] ]
