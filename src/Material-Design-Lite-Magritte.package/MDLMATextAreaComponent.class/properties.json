@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ThomasHeniart 6/6/2016 19:28",
+	"commentStamp" : "ThomasHeniart 6/6/2016 18:51",
 	"instvars" : [
-		"title" ],
-	"name" : "MDLMAFormDecoration",
+		 ],
+	"name" : "MDLMATextAreaComponent",
 	"pools" : [
 		 ],
-	"super" : "MAFormDecoration",
+	"super" : "MATextAreaComponent",
 	"type" : "normal" }

@@ -1,11 +1,13 @@
-as yet unclassified
+rendering
 renderInputOn: html
+	| inputId |
+	inputId := self labelId.
 	html mdlTextFieldContainer
+		style: 'display: block';
 		floatingLabel;
-		with: [ 
-					html mdlTextFieldLabel
-						for: 'input_text';
-						with: self magritteDescription comment.
-					html mdlTextFieldInput
-						id: self labelId;
-						on: #string of: self ]
+		with: [ html mdlTextFieldLabel
+				for: inputId;
+				with: self magritteDescription label.
+			html mdlTextFieldInput
+				id: inputId;
+				on: #string of: self ]
