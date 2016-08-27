@@ -5,4 +5,5 @@ initialize
 	position := 1.
 	rows := #().
 	header := #().
-	unsortedRows := #()
+	unsortedRows := #().
+	width := '500px'
