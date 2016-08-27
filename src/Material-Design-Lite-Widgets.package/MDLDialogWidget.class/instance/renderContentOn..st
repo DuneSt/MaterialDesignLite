@@ -8,6 +8,7 @@ renderContentOn: html
 		rippleEffect;
 		with: buttonName.
 	html mdlDialog
+		id: html nextId;
 		openButtonId: openButtonId;
 		closeButtonId: closeButtonId;
 		with: [ title ifNotNil: [ html mdlDialogTitle: title ].
