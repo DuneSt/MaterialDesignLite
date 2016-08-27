@@ -1,5 +1,5 @@
 *Material-Design-Lite-Components
 mdlCardTitleText: text level: lvl
-	^ (self mdlCardTitleText: text)
+	^ self mdlCardTitleText
 		level: lvl;
-		yourself
+		with: text
