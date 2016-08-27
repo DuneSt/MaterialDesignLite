@@ -1,4 +1,6 @@
 initialization
 initialize
 	super initialize.
-	rightOldPassword := false
+	rightOldPassword := false.
+	pattern := ''.
+	errorMessage := ''

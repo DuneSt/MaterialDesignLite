@@ -1,3 +1,6 @@
 rendering
 renderContentOn: html
-	html mdlCardTextContainer with: content
+	| brush |
+	brush := html mdlCardTextContainer.
+	self addPropertiesToBrush: brush.
+	brush with: content

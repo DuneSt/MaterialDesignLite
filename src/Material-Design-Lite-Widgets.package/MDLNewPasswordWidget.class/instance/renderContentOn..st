@@ -16,6 +16,7 @@ renderContentOn: html
 			(MDLTextFieldWidget new
 				beFloatingLabel;
 				type: 'password';
+				pattern: pattern errorMessage: errorMessage;
 				on: #newPassword of: self;
 				label: self newPasswordLabel;
 				yourself).

@@ -1,3 +1,3 @@
 options
 onKeyUp: anObject
-	textInputProperties at: #onKeyUp: put: {anObject}
+	brushProperties at: #onKeyUp: put: (Array with: anObject)

@@ -1,6 +1,6 @@
 rendering
 renderContentOn: html
-	| inputId brush |
+	| inputId |
 	inputId := html nextId.
 	html mdlTextFieldContainer
 		beFloatingLabelIf: isFloatingLabel;
@@ -9,8 +9,10 @@ renderContentOn: html
 				ifNotNil: [ html mdlTextFieldLabel
 						for: inputId;
 						with: label ].
-			brush := html mdlTextFieldInput
-				id: inputId;
-				yourself.
-			self
-				addTextInputPropertiesToBrush: brush ]
+			html
+				brush:
+					(brush
+						id: inputId;
+						yourself).
+			self addPropertiesToBrush.
+			patternErrorMessage ifNotEmpty: [ html mdlTextFieldError: patternErrorMessage ] ]

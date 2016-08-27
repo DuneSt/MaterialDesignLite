@@ -1,7 +1,3 @@
 options
 on: aSymbol of: anObject
-	textInputProperties
-		at: #on:of:
-		put:
-			{aSymbol.
-			anObject}
+	brushProperties at: #on:of: put: (Array with: aSymbol with: anObject)

@@ -1,3 +1,3 @@
 options
 size: anObject
-	textInputProperties at: #size: put: {anObject}
+	brushProperties at: #size: put: (Array with: anObject)

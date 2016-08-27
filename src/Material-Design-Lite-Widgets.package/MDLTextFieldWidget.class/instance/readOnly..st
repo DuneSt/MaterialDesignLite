@@ -1,3 +1,3 @@
 options
 readOnly: anObject
-	textInputProperties at: #readOnly: put: {anObject}
+	brushProperties at: #readOnly: put: (Array with: anObject)

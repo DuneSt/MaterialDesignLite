@@ -1,3 +1,3 @@
 options
 type: anObject
-	textInputProperties at: #type: put: {anObject}
+	brushProperties at: #type: put: (Array with: anObject)

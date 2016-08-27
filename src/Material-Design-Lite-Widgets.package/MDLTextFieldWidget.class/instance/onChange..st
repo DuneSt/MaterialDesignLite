@@ -1,3 +1,3 @@
 options
 onChange: anObject
-	textInputProperties at: #onChange: put: {anObject}
+	brushProperties at: #onChange: put: (Array with: anObject)

@@ -1,3 +1,3 @@
 options
 pattern: anObject
-	textInputProperties at: #pattern: put: {anObject}
+	brushProperties at: #pattern: put: (Array with: anObject)

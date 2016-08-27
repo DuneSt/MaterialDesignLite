@@ -3,6 +3,6 @@ labeled: aString callback: aBlock floatingLabel: aBoolean expandable: aBoolean2
 	^ self new
 		label: aString;
 		callback: aBlock;
-		isFloatingLabel: aBoolean;
-		isExpandable: aBoolean2;
+		floatingLabelIf: aBoolean;
+		expandableIf: aBoolean2;
 		yourself

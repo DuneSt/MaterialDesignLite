@@ -1,3 +1,3 @@
 options
 onSubmit: anObject
-	textInputProperties at: #onSubmit: put: {anObject}
+	brushProperties at: #onSubmit: put: (Array with: anObject)

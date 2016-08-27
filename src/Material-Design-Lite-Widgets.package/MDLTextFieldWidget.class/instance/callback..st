@@ -1,3 +1,3 @@
 options
 callback: aBlock
-	textInputProperties at: #callback: put: {aBlock}
+	brushProperties at: #callback: put: (Array with: aBlock)
