@@ -4,11 +4,15 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "olivierauverlot 7/25/2015 22:37",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MDLPageWidget",
+		"title",
+		"content",
+		"actions",
+		"buttonName",
+		"closeButtonName" ],
+	"name" : "MDLSimpleDialog",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "MDLWidget",
 	"type" : "normal" }
