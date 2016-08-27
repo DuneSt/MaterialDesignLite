@@ -1,6 +1,6 @@
 rendering
 renderContentOn: aRenderer forTable: table columnIndex: i header: header
-	aRenderer mdlTableHeading
+	(header headingCellOn: aRenderer)
 		sortedAscending;
 		with: [ 
 			aRenderer anchor 
