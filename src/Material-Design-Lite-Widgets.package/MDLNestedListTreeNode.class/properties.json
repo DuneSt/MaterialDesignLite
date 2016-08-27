@@ -1,0 +1,17 @@
+{
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "GuillaumeLarcheveque 6/14/2016 10:37",
+	"instvars" : [
+		"element",
+		"children",
+		"selectedBranch",
+		"selectedElement" ],
+	"name" : "MDLNestedListTreeNode",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
