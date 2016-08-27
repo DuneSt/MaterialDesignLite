@@ -7,7 +7,7 @@
 	"commentStamp" : "ThomasHeniart 6/6/2016 18:58",
 	"instvars" : [
 		 ],
-	"name" : "MDLTextAreaTag",
+	"name" : "MDLTextArea",
 	"pools" : [
 		 ],
 	"super" : "WATextAreaTag",

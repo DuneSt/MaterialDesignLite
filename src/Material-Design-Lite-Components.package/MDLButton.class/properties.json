@@ -6,7 +6,7 @@
 		 ],
 	"commentStamp" : "KevinLanvin 7/21/2015 14:19",
 	"instvars" : [
-		 ],
+		"tag" ],
 	"name" : "MDLButton",
 	"pools" : [
 		 ],
