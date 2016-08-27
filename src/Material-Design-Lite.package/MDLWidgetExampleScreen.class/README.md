@@ -1,0 +1,1 @@
+Superclass for widgets screens of the demo

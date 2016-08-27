@@ -2,3 +2,4 @@ SystemOrganization addCategory: #'Material-Design-Lite'!
 SystemOrganization addCategory: 'Material-Design-Lite-Applications'!
 SystemOrganization addCategory: 'Material-Design-Lite-Example'!
 SystemOrganization addCategory: 'Material-Design-Lite-Example-Components'!
+SystemOrganization addCategory: 'Material-Design-Lite-Example-Widgets'!
