@@ -126,6 +126,19 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
 		});
 	}
 
+	function scrollToSelection(){
+		var selection = $(''div.isSelected'')[0].parentNode;
+		var children = $(''.expList'')[0].children;
+		var dec = 0;
+		while($(children).index(selection) == -1) selection = selection.parentNode;
+		for(var i=0;i < $(children).index(selection); i++){
+			dec += $(children[i]).height();
+		}
+		
+		$(''.listContainer'')[0].scrollTop = dec;
+	}
+
   $(document).ready( function() {
+	  	scrollToSelection();
      defineExpandable();
   });'

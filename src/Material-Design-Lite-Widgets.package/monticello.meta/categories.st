@@ -8,3 +8,4 @@ SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Pagination'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Poll'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Table'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Tests'!
+SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Util'!
