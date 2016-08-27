@@ -10,5 +10,5 @@
 	"name" : "MDLPageWidget",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "MDLWidget",
 	"type" : "normal" }

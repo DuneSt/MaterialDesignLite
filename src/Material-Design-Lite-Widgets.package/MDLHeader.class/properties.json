@@ -6,9 +6,10 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"title" ],
-	"name" : "MDLWidget",
+		"links",
+		"beCollapsible" ],
+	"name" : "MDLHeader",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "MDLWidget",
 	"type" : "normal" }

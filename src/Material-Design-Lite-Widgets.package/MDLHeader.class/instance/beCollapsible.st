@@ -1,0 +1,3 @@
+accessing
+beCollapsible
+	beCollapsible := true

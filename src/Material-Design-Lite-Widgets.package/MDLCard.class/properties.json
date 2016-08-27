@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"title" ],
-	"name" : "MDLWidget",
+		"content" ],
+	"name" : "MDLCard",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "MDLWidget",
 	"type" : "normal" }
