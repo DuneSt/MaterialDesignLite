@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Magritte",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLMACheckboxGroupComponent",
+	"pools" : [
+		 ],
+	"super" : "MACheckboxGroupComponent",
+	"type" : "normal" }

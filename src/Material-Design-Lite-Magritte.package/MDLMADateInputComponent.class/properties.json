@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Magritte",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "MerwanOuddane 4/12/2016 20:56",
+	"instvars" : [
+		 ],
+	"name" : "MDLMADateInputComponent",
+	"pools" : [
+		 ],
+	"super" : "MADateInputComponent",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Magritte",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLMATextInputComponent",
+	"pools" : [
+		 ],
+	"super" : "MATextInputComponent",
+	"type" : "normal" }
