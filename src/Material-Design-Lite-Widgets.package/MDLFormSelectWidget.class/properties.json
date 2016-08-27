@@ -1,0 +1,20 @@
+{
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "MerwanOuddane 5/16/2016 15:35",
+	"instvars" : [
+		"choosingText",
+		"textBlock",
+		"selectedObject",
+		"objectsPossibilities",
+		"description",
+		"sortBlock",
+		"name" ],
+	"name" : "MDLFormSelectWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }
