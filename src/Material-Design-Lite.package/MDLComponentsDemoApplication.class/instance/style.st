@@ -1,8 +1,6 @@
 accessing
 style
-	^super style , '::-webkit-scrollbar { 
-		display: none; 
-	}
+	^super style , '
 	.mdl-navigation__link.is-active {
 		font-weight: 700;
 	}

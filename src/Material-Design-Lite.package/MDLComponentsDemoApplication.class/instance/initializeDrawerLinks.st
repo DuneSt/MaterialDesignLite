@@ -4,5 +4,5 @@ initializeDrawerLinks
 		collect: [ :aScreen | 
 			MDLNavigationLinkWithIconComponent new
 				callback: [ self activeScreen: aScreen ];
-				icon: aScreen icon;
+				iconUrl: aScreen iconUrl;
 				label: aScreen title ]

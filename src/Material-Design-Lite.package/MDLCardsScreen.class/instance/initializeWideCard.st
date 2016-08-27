@@ -1,3 +1,6 @@
 initialization
 initializeWideCard
-	^ MDLCard new shadow: 2; addContent: (MDLCardTitle new level: 2 ; title: 'Welcome')
+	^ MDLCardWidget new
+		shadow: 2;
+		addTitle: 'Welcome' level: 2;
+		yourself
