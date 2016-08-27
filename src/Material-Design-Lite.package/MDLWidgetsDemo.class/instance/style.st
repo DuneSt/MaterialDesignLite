@@ -25,15 +25,8 @@ style
  }
 
  th a {
-	font-family: ''Roboto'', sans-serif;
-	color: rgb(138,138,138);
-   font-size: 12px;
+	color: rgba(0,0,0,.54);
    text-decoration: none;
- }
-
- td a { 
-	font-family: ''Roboto'', sans-serif;
-	color: rgb(222,222,222);
-   font-size: 13px;
+	font-weight: 700;
  }
 '
