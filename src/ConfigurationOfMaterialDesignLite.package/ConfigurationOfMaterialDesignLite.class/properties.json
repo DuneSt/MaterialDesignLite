@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfMaterialDesignLite",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfMaterialDesignLite",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
