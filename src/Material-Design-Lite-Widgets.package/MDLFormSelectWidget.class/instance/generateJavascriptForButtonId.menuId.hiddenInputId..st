@@ -4,7 +4,7 @@ generateJavascriptForButtonId: buttonId menuId: menuId hiddenInputId: hiddenInpu
 		(
 	'(function () \{
 		function selectedValue (value) \{ 
-			document.getElementById("{1}").innerHTML = value;
+			document.getElementById("{1}").innerHTML = value + ''<i class="material-icons">arrow_drop_down</i>'';
 			document.getElementById("{2}").setAttribute("value", value);
 		\};
 	
