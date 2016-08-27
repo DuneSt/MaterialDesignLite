@@ -1,3 +1,3 @@
 rendering
 renderPaginationWidgetOn: html
-	^ self renderTableOn: html
+	self renderTableOn: html
