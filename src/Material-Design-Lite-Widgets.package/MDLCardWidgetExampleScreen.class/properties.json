@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ThomasHeniart 6/7/2016 13:59",
+	"commentStamp" : "",
 	"instvars" : [
-		"activeScreen" ],
-	"name" : "MDLWidgetExamplesDemo",
+		 ],
+	"name" : "MDLCardWidgetExampleScreen",
 	"pools" : [
 		 ],
-	"super" : "MDLApplication",
+	"super" : "MDLWidgetExampleScreen",
 	"type" : "normal" }
