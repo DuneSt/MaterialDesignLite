@@ -1,6 +1,11 @@
 public api
 deleteCallback: aNiladicValuable
-	aNiladicValuable argumentCount > 0
-		ifTrue: [ GRInvalidArgumentCount signal: 'Chip expect a niladic callback.' ].
-	self removeUrl addField: (self storeCallback: (WAActionCallback on: aNiladicValuable)).
-	self class: #'mdl-chip__deletable'
+	self
+		addDeleteWithAppendBlock: [ :html | 
+			html anchor
+				callback: aNiladicValuable;
+				with: [ 
+							html mdlIcon
+								class: #'mdl-chip__deleteIcon';
+								with: #cancel ] ]
+		callback: aNiladicValuable
