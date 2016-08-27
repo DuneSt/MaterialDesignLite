@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Applications",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"header" ],
+	"name" : "MDLScreenHeader",
+	"pools" : [
+		 ],
+	"super" : "WADecoration",
+	"type" : "normal" }

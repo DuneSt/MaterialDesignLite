@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Example",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLExampleScreen",
+	"pools" : [
+		 ],
+	"super" : "MDLScreen",
+	"type" : "normal" }
