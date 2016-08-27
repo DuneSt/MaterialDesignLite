@@ -1,3 +1,3 @@
 accessing
 selectorsToInclude
-	^ #(#nestedListCss #calendarWidgetCss #paginationWidgetCss)
+	^ #(#nestedListCss #calendarWidgetCss #paginationWidgetCss #getmdlselectminCss #getmdlselectminJs)
