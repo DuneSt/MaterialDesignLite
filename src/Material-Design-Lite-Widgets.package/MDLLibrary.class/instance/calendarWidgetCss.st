@@ -1,7 +1,7 @@
 uploaded
 calendarWidgetCss
 	^ '
-.mdl-calendar-widget .mld-card { 
+.mdl-card.mdl-calendar-widget { 
 	margin: auto;
 }
 

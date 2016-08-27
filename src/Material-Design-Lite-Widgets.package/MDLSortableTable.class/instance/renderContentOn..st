@@ -1,21 +1,22 @@
 rendering
-renderContentOn: html
-	html
+renderContentOn: aRenderer
+	super renderContentOn: aRenderer.
+	aRenderer
 		mdlGrid: [ 
-			html mdlCard
+			aRenderer mdlCard
 				shadow: 2;
-				style: 'overflow: visible; width: 100%;';
+				style: 'overflow: visible; width: ' , self width asString;
 				with: [ 
 							self title
 								ifNotNil: [ 
-									html mdlCardTitle
+									aRenderer mdlCardTitle
 										style: 'padding-left: 24px;';
-										with: [ html mdlCardTitleText: self title level: 2 ] ].
+										with: [ aRenderer mdlCardTitleText: self title level: 2 ] ].
 							(selectable
-								ifTrue: [ html mdlTable selectable ]
-								ifFalse: [ html mdlTable ])
+								ifTrue: [ aRenderer mdlTable selectable ]
+								ifFalse: [ aRenderer mdlTable ])
 								style: 'width: 100%; border: none';
 								with: [ 
-											self renderHeaderOn: html.
-											self renderRowsOn: html ].
-							self renderFooterPaginationOn: html ] ]
+											self renderHeaderOn: aRenderer.
+											self renderRowsOn: aRenderer ].
+							self renderFooterPaginationOn: aRenderer ] ]
