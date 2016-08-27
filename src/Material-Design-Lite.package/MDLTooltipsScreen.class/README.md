@@ -1,1 +1,0 @@
-I am representing tooltips screen

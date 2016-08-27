@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfMaterialDesignLite",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 8/27/2016 19:45",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfMaterialDesignLite",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

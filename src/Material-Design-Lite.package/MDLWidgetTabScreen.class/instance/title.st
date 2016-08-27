@@ -1,3 +1,0 @@
-rendering
-title
-	^ 'Tabs'

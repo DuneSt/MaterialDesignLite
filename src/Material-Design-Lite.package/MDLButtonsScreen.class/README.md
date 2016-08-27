@@ -1,1 +1,0 @@
-I'm the screen representing the buttons.

@@ -1,1 +1,0 @@
-I'm representing dialogs screen
