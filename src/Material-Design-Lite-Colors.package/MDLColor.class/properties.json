@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		"colors" ],
-	"commentStamp" : "",
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"tint",
 		"code" ],

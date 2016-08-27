@@ -1,5 +1,5 @@
 tests
 testAllDefaultExist
-	|defaultColors|
-	defaultColors := (MDLColor class methodsInProtocol: #defaults) collect: [ :m | MDLColor perform: m selector ].
+	| defaultColors |
+	defaultColors := MDLColor allDefaultsColors.
 	self assert: defaultColors size equals: 19
