@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 2/17/2016 16:16",
+	"instvars" : [
+		 ],
+	"name" : "MDLCalendar",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }
