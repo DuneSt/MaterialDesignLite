@@ -1,3 +1,0 @@
-accessing
-selectedObject
-	^ selectedObject
