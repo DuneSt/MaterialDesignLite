@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	self class: 'mdl-layout__link'
+	self class: 'mdl-navigation__link'
