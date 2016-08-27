@@ -1,6 +1,5 @@
 rendering
 renderScreenContentOn: html
-	html paragraph: 'Building blocks for constructing a page layout.'.
 	html unorderedList
 		class: 'navigation';
 		with: [ 

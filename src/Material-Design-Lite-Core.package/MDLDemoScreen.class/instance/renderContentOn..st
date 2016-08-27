@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderContentOn: html
 	html div
 		class: #'screen-content';
@@ -6,4 +6,5 @@ renderContentOn: html
 					html heading level5
 						class: #'section-title';
 						with: self title.
+					html paragraph: self description.
 					self renderScreenContentOn: html ]

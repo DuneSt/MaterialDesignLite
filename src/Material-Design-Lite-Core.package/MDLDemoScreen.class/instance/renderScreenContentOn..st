@@ -1,3 +1,3 @@
-as yet unclassified
+rendering
 renderScreenContentOn: html
 	self subclassResponsibility

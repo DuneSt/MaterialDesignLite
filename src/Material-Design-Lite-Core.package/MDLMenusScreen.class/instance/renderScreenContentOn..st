@@ -1,6 +1,6 @@
 rendering
 renderScreenContentOn: html
-	html paragraph: 'Lists of clickable actions.'.
+	html paragraph: self description.
 	html
 		paragraph: [ 
 			html

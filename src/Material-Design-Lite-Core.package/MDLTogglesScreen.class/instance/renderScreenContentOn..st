@@ -1,6 +1,5 @@
 rendering
 renderScreenContentOn: html
-	html paragraph: 'Choose between states.'.
 	html unorderedList
 		class: 'navigation';
 		with: [ 
