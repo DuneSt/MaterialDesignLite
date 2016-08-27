@@ -4,6 +4,7 @@ baseline01: spec
 
 	spec for: #'common' do: [
 		spec blessing: #'baseline'.
+		spec repository: 'http://smalltalkhub.com/mc/KevinLanvin/MaterialDesignLite/main/'.
 		spec project: 'Seaside3' with: [
 				spec
 					className: #ConfigurationOfSeaside3;
