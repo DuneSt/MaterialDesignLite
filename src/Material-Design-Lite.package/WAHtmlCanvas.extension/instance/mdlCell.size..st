@@ -1,6 +1,6 @@
 *Material-Design-Lite
-mdlColumn: aBlock size: size
-	^ self mdlColumn
+mdlCell: aBlock size: size
+	^ self mdlCell
 		size: size;
 		with: aBlock;
 		yourself

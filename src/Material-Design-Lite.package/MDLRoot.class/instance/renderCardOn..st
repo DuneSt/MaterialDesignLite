@@ -18,7 +18,7 @@ renderCardOn: html
 </style>
 '.
 	html
-		mdlColumn: [ 
+		mdlCell: [ 
 			html
 				mdlCard: [ 
 					html mdlCardTitle: [ html mdlCardTitleText: 'Title' level: 2 ].

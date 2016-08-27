@@ -1,3 +1,3 @@
 *Material-Design-Lite
-mdlColumn
+mdlCell
 	^ self brush: MDLCell new 

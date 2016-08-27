@@ -1,6 +1,6 @@
 *Material-Design-Lite
-mdlColumn: aBlock phoneSize: size
-	^ self mdlColumn
+mdlCell: aBlock phoneSize: size
+	^ self mdlCell
 		phoneSize: size;
 		with: aBlock;
 		yourself

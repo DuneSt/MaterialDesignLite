@@ -2,19 +2,19 @@ rendering
 renderContentOnOld: html
 	html
 		mdlGrid: [ 
-			html mdlColumn
+			html mdlCell
 				size: 3;
 				hideDesktop;
 				with: [ html text: 'hello' ].
-			html mdlColumn: [ html text: 'world' ] size: 3.
+			html mdlCell: [ html text: 'world' ] size: 3.
 			html
-				mdlColumn: [ 
+				mdlCell: [ 
 					html div
 						badge: '1';
 						with: 'How are you ?' ]
 				size: 3.
 			html
-				mdlColumn: [ 
+				mdlCell: [ 
 					html mdlButton
 						raised;
 						colored;

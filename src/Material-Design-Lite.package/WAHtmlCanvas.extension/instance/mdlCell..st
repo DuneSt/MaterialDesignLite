@@ -1,5 +1,5 @@
 *Material-Design-Lite
-mdlColumn: aBlock
-	^ self mdlColumn
+mdlCell: aBlock
+	^ self mdlCell
 		with: aBlock;
 		yourself
