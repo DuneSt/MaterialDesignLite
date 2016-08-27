@@ -1,3 +1,3 @@
 accessing
 selectedObject
-	^ selectedObject
+	^ selectedObject value

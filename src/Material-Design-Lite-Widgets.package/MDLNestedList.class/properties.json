@@ -12,7 +12,8 @@
 		"selectedEntity",
 		"helpBlock",
 		"iconBlock",
-		"childrenBlock" ],
+		"childrenBlock",
+		"dragAndDropBlock" ],
 	"name" : "MDLNestedList",
 	"pools" : [
 		 ],

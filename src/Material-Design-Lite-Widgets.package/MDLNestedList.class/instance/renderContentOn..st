@@ -35,4 +35,5 @@ renderContentOn: html
 										stream) ] ]).
 	clickCb := div
 		storeCallback: (WAValueCallback on: [ :path | self actionBlock value: (self obtainElementForPath: path) ]).
-	html script: (self expendableJsScript: html actionUrl cbId: scrollCb clickCbId: clickCb)
+	html script: (self expendableJsScript: html actionUrl cbId: scrollCb clickCbId: clickCb).
+	self draggableMechanism: html forDiv: div

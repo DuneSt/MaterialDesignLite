@@ -4,6 +4,10 @@ renderItemContentOf: aNode index: anIndex indentedBy: anInteger on: html
 	anId := html nextId.
 	html div
 		class: #itemContener;
+		attributeAt: 'draggable' put: 'true';
+		attributeAt: 'onDragOver' put: 'if("' , anIndex asString , '" != event.dataTransfer.getData("sourceIndex")) {event.preventDefault();}';
+		attributeAt: 'ondrop' put: 'dropListItem(event, "' , anIndex asString , '");';
+		attributeAt: 'ondragstart' put: 'dragListItem(event,"' , anIndex asString , '")';
 		style: 'padding-left: ' , (15 * anInteger) asString , 'px;';
 		class: #isSelected if: aNode selectedElement;
 		with: [ 
