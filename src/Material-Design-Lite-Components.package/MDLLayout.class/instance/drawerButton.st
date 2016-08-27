@@ -1,3 +1,3 @@
 options
 drawerButton
-	self class: 'mdl-layout--overlay-drawer-button'
+	self class: 'mdl-layout--overlay-drawer-button' 
