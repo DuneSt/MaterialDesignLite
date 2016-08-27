@@ -13,6 +13,7 @@ renderContentOn: html
 		self renderCardPanelOn: html.
 		self renderTooltipsPanelOn: html.
 		self renderMiscPanelOn: html.
+		self renderDialogPanelOn: html.
 	]
 
 	

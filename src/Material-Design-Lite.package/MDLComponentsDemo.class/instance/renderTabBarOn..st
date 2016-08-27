@@ -9,5 +9,6 @@ renderTabBarOn: html
 		html mdlTab url: '#forms'; with: 'Forms'.
 		html mdlTab url: '#cards'; with: 'Cards'.
 		html mdlTab url: '#tooltips' ; with: 'Tooltips'.
-		html mdlTab url: '#misc' ; with: 'Misc'
+		html mdlTab url: '#misc' ; with: 'Misc'.
+		html mdlTab url: '#dialog' ; with: 'Dialogs'
 	]
