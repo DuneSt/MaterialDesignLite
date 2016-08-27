@@ -2,6 +2,6 @@
 mdlListAvatar: aText
 	"Defines a MDL glyph icon."
 
-	^ self mdlIcon listItemAvatar
+	^ self mdlListAvatar
 		with: aText;
 		yourself
