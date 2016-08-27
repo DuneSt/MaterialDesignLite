@@ -13,7 +13,7 @@ renderContentOn: html
 									elementsToDisplay
 										doWithIndex: [ :item :index | 
 											self
-												renderListTree: (self obtainTreeFor: item)
+												renderListItem: item
 												index: index + firstElementIndex - 1
 												indentedBy: 1
 												on: html ] ] ].
@@ -33,6 +33,5 @@ renderContentOn: html
 										doNotCache;
 										contentType: WAMimeType textHtml;
 										stream) ] ]).
-	clickCb := div
-		storeCallback: (WAValueCallback on: [ :path | self actionBlock value: (self obtainElementForPath: path) ]).
+	clickCb := div storeCallback: (WAValueCallback on: [:path | self actionBlock value: (self obtainElementForPath: path)]).
 	html script: (self expendableJsScript: html actionUrl cbId: scrollCb clickCbId: clickCb)

@@ -1,3 +1,4 @@
 accessing
 items: aCollection
-	groups := aCollection groupsOf: pageSize
+	items := aCollection asOrderedCollection.
+	groups := items groupsOf: pageSize

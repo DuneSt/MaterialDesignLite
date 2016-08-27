@@ -2,8 +2,8 @@ javascript
 expendableJsScript: url cbId: cbId clickCbId: clickCb
 	^ 'function expandCollapse(element) {
 			$(element.closest(''li'')).toggleClass(''expanded'');
+  			$(element).toggleClass(''expandedIcon'');
   			$(element.closest(''li'')).children(''ul'').toggle(''medium'');
-			$(element.closest(''li'')).toggleClass(''collapsed'');
   	}
 
   function post(path, parameters) {

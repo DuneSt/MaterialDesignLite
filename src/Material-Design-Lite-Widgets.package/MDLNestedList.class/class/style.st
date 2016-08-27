@@ -1,10 +1,6 @@
-uploaded
-nestedListCss
-	^ 'body{
-	height: 100%;	
-}
-	
-.listContainer{
+accessing
+style
+	^ '.listContainer{
 	border-right: 1px solid rgb(217, 217, 217);
 	height: 100%;
 	width: 100%;
@@ -19,10 +15,6 @@ nestedListCss
 .listContainer ul{
 	padding-left: 0;
 }
-
-.listContainer .collapsed ul{
-	display: none;
-}
  
 .listContainer a{
 	font-size: 16px;
@@ -31,16 +23,6 @@ nestedListCss
 	text-decoration: none;
 	display: block;
 	white-space: nowrap;
-	cursor: pointer;
-}
-
-.expList .itemContener.isSelected {
-    background-color: #CFD8DC;
-	position: relative;
-}
-
-.expList .itemContener.isSelected:hover {
-    background-color: #B0BEC5;
 }
 
 .expList ul, .expList li {
@@ -50,6 +32,15 @@ nestedListCss
 
 .expList .itemContener:hover {
     background-color:#EEEEEE;
+}
+
+.expList .itemContener.isSelected {
+    background-color: #FFCC80;
+	position: relative;
+}
+
+.expList .itemContener.isSelected:hover {
+    background-color: #FFB74D;
 }
 
 .expList li .item{
@@ -82,9 +73,7 @@ nestedListCss
 	height: 40px;
 	float: right;
 	cursor: pointer;
-   background: url(' , (self urlOf: 'arrowDownPng') asString
-		,
-			') no-repeat center center;
+   background: url(http://help.solidworks.com/2016/English/SolidWorks/sldworks/mqw1450446855364.image) no-repeat center center;
 	padding-left: 15px;
 	position: absolute;
    right: 5px;
@@ -92,17 +81,5 @@ nestedListCss
 } 
 
 .expList .expandedIcon{
-    background: url(' , (self urlOf: 'arrowUpPng') asString
-		,
-			') no-repeat center center;
-}
-
-.listContainer::-webkit-scrollbar {
-    display: none;
-}
-
-.expanded {
-    border-style: solid;
-    border-width: 1px 0;
-    border-color: rgb(220,220,220);
+    background: url(http://help.solidworks.com/2016/English/SolidWorks/sldworks/tti1450446855776.image) no-repeat center center;
 }'
