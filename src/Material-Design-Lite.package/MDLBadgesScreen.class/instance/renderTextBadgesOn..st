@@ -6,12 +6,14 @@ renderTextBadgesOn: html
 			html mdlLayoutSpacer.
 			html mdlCell size: 1; with: [ 
 				html mdlBadge dataBadge: '4'; with: 'Inbox' ].
+			html mdlLayoutSpacer.
 			html mdlCell size: 1; with: [ 
 				html mdlBadge dataBadge: '♥'; with: 'Mood' ].
 			html mdlLayoutSpacer ].
 	html mdlGrid: [ 
 		html mdlLayoutSpacer.
 		html mdlCell size: 1; with: 'Number'.
+		html mdlLayoutSpacer.
 		html mdlCell size: 1; with: 'Icon'.
 		html mdlLayoutSpacer ].
 	html preformatted: [ html code class: 'smalltalk'; with: self textBadge1Code ].

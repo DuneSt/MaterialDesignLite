@@ -9,6 +9,7 @@ renderColoredFabButtonsOn: html
 					fab;
 					colored;
 					with: '+' ].
+			html mdlLayoutSpacer.
 			html mdlCell size: 1; with: [ 
 				html mdlButton
 					fab;
@@ -19,6 +20,7 @@ renderColoredFabButtonsOn: html
 	html mdlGrid: [ 
 		html mdlLayoutSpacer.
 		html mdlCell: 'Colored FAB' size: 1.
+		html mdlLayoutSpacer.
 		html mdlCell: 'With ripple' size: 1.
 		html mdlLayoutSpacer ].
 	html preformatted: [ html code class: 'smalltalk'; with: self coloredFabButtonCode ].

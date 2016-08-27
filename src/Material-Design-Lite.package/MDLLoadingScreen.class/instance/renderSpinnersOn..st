@@ -11,6 +11,7 @@ renderSpinnersOn: html
 								with: [ html mdlSpinner active ].
 							html paragraph: 'Spinner' ]
 						size: 2.
+						html mdlLayoutSpacer.
 					html
 						mdlCell: [ 
 							html div

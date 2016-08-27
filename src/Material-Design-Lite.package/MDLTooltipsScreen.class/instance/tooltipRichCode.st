@@ -1,4 +1,4 @@
-as yet unclassified
+code
 tooltipRichCode
 	^ 'html mdlIcon id: ''tt3''; with: ''cloud_upload''.
 html mdlTooltip for: ''tt3''; with: [ 

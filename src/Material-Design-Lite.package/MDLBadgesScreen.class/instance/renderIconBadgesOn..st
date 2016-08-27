@@ -9,6 +9,7 @@ renderIconBadgesOn: html
 					dataBadge: '1';
 					overlap;
 					with: 'account_box' ].
+			html mdlLayoutSpacer.
 			html mdlCell size: 1; with: [ 
 				html mdlIconBadge
 					dataBadge: '♥';
@@ -18,6 +19,7 @@ renderIconBadgesOn: html
 	html mdlGrid: [ 
 		html mdlLayoutSpacer.
 		html mdlCell size: 1; with: 'Number'.
+		html mdlLayoutSpacer.
 		html mdlCell size: 1; with: 'Icon'.
 		html mdlLayoutSpacer ].
 	html preformatted: [ html code class: 'smalltalk'; with: self iconBadge1Code ].

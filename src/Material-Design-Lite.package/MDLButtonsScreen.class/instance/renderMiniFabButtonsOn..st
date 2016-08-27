@@ -11,6 +11,7 @@ renderMiniFabButtonsOn: html
 								miniFab;
 								with: '+' ]
 						size: 1.
+						html mdlLayoutSpacer.
 					html
 						mdlCell: [ 
 							html mdlButton
@@ -23,6 +24,7 @@ renderMiniFabButtonsOn: html
 	html mdlGrid: [ 
 					html mdlLayoutSpacer.
 					html mdlCell: 'Mini FAB' size: 1.
+					html mdlLayoutSpacer.
 					html mdlCell: 'Colored' size: 1.
 					html mdlLayoutSpacer ].
 	html preformatted: [ html code class: 'smmaltalk'; with: self miniFabButtonCode ].

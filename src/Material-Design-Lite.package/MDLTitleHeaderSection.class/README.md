@@ -1,0 +1,1 @@
+I'm a custom header section used to display the title of the displayed screen in the header.

@@ -10,6 +10,7 @@ renderIconButtonsOn: html
 								icon;
 								with: [ html mdlIcon: 'mood' ] ]
 						size: 1.
+						html mdlLayoutSpacer.
 					html
 						mdlCell: [ 
 							html mdlButton
@@ -23,6 +24,7 @@ renderIconButtonsOn: html
 		with: [ 
 					html mdlLayoutSpacer.
 					html mdlCell: 'Icon button' size: 1.
+					html mdlLayoutSpacer.
 					html mdlCell: 'Colored' size: 1.
 					html mdlLayoutSpacer ].
 	html preformatted: [ html code class: 'smalltalk'; with: self iconButtonCode ].

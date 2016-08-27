@@ -11,6 +11,7 @@ renderColoredButtonsOn: html
 								raised;
 								with: 'Button' ]
 						size: 1.
+					html mdlLayoutSpacer.
 					html
 						mdlCell: [ 
 							html mdlButton
@@ -18,6 +19,7 @@ renderColoredButtonsOn: html
 								accentColor;
 								with: 'Button' ]
 						size: 1.
+					html mdlLayoutSpacer.
 					html
 						mdlCell: [ 
 							html mdlButton
@@ -30,7 +32,9 @@ renderColoredButtonsOn: html
 	html mdlGrid: [ 
 					html mdlLayoutSpacer.
 					html mdlCell: 'Colored button' size: 1.
+					html mdlLayoutSpacer.
 					html mdlCell: 'Accent colored' size: 1.
+					html mdlLayoutSpacer.
 					html mdlCell: 'With Ripples' size: 1.
 					html mdlLayoutSpacer ].
 	html preformatted: [ html code class: 'smalltalk'; with: self coloredButtonCode ].

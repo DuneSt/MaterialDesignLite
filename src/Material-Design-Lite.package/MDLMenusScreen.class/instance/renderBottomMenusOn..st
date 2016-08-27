@@ -16,6 +16,7 @@ renderBottomMenusOn: html
 						html mdlMenuItem disabled; with: 'Disabled Action'.
 						html mdlMenuItem: 'Yet Another Action' ] ].
 			html div class: 'menu-background' ].
+		html mdlLayoutSpacer.
 		html mdlCell class: 'menu-container mdl-shadow--2dp'; size: 2; with: [ 
 			html div class: 'menu-bar mdl-color--primary mdl-color-text--primary-contrast'; style: 'text-align: right;'; with: [ 
 				html mdlButton icon
@@ -34,6 +35,7 @@ renderBottomMenusOn: html
 	html mdlGrid: [ 
 		html mdlLayoutSpacer.
 		html mdlCell: 'Lower Left' size: 2.
+		html mdlLayoutSpacer.
 		html mdlCell: 'Lower Right' size: 2.
 		html mdlLayoutSpacer ].
 	html preformatted: [ html code class: 'smalltalk'; with: self menuBottomLeftCode ].
