@@ -1,15 +1,14 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
+	"category" : "Material-Design-Lite-Widgets-Tests",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"id",
-		"value" ],
-	"name" : "MDLWidget",
+		"list" ],
+	"name" : "MDLNestedListTest",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "TestCase",
 	"type" : "normal" }

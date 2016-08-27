@@ -19,6 +19,10 @@ nestedListCss
 .listContainer ul{
 	padding-left: 0;
 }
+
+.listContainer .collapsed ul{
+	display: none;
+}
  
 .listContainer a{
 	font-size: 16px;
@@ -27,6 +31,7 @@ nestedListCss
 	text-decoration: none;
 	display: block;
 	white-space: nowrap;
+	cursor: pointer;
 }
 
 .expList .itemContener.isSelected {
@@ -77,7 +82,9 @@ nestedListCss
 	height: 40px;
 	float: right;
 	cursor: pointer;
-   background: url(' , (self urlOf: 'arrowDownPng') asString , ') no-repeat center center;
+   background: url(' , (self urlOf: 'arrowDownPng') asString
+		,
+			') no-repeat center center;
 	padding-left: 15px;
 	position: absolute;
    right: 5px;
@@ -85,7 +92,9 @@ nestedListCss
 } 
 
 .expList .expandedIcon{
-    background: url(' , (self urlOf: 'arrowUpPng') asString , ') no-repeat center center;
+    background: url(' , (self urlOf: 'arrowUpPng') asString
+		,
+			') no-repeat center center;
 }
 
 .listContainer::-webkit-scrollbar {
