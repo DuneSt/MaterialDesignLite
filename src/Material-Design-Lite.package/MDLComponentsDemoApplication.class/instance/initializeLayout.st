@@ -5,4 +5,5 @@ initializeLayout
 		drawerSection: self initializeDrawer;
 		headerSection: self initializeHeader;
 		fixedDrawer;
+		fixedHeader;
 		yourself

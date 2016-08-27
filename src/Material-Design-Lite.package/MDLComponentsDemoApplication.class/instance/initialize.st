@@ -7,4 +7,4 @@ initialize
 			each addDecoration: (MDLScreenLayout newWithLayout: self initializeLayout).
 			each addDecoration: (MDLScreenFooter newWithFooter: self initializeFooter) ].
 	activeScreen := screens first.
-	self colors: 'light_green-deep_orange'
+	self colors: 'blue_grey-orange'
