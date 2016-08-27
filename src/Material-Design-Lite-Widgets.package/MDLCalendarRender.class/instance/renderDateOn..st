@@ -4,4 +4,4 @@ renderDateOn: html
 		mdlCellDesktop: 6
 		tablet: 4
 		phone: 2
-		with: [ html text: '17 Février 2016' ]
+		with: [ html text: calendar currentDate mmddyyyy ]

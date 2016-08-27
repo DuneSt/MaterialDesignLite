@@ -4,12 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "MerwanOuddane 4/11/2016 17:21",
+	"commentStamp" : "KevinLanvin 2/17/2016 16:16",
 	"instvars" : [
-		"currentDate",
-		"firstDayOfWeekIndex" ],
-	"name" : "MDLCalendar",
+		"daysList",
+		"calendar" ],
+	"name" : "MDLCalendarRender",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MDLWidget",
 	"type" : "normal" }
