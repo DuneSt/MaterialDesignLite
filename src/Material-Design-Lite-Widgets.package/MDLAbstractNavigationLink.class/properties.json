@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Header",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"url",
+		"content" ],
+	"name" : "MDLAbstractNavigationLink",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }

@@ -1,4 +1,4 @@
 rendering
 renderHeaderRowOn: html
 	html mdlLayoutIcon.
-	header renderHeaderOn: html
+	super renderHeaderRowOn: html
