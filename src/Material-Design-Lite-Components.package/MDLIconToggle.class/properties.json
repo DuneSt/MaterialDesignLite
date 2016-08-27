@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-IconToggle",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "OlivierAuverlot 7/23/2015 09:01",
+	"instvars" : [
+		 ],
+	"name" : "MDLIconToggle",
+	"pools" : [
+		 ],
+	"super" : "WACheckboxTag",
+	"type" : "normal" }
