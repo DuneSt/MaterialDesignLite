@@ -1,5 +1,5 @@
 rendering
-loginWidget
+loginInputWidget
 	^ MDLTextFieldWidget new
 		beFloatingLabel;
 		on: #login of: self;

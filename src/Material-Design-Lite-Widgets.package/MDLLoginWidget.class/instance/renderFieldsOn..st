@@ -1,4 +1,4 @@
 rendering
 renderFieldsOn: html
-	html render: self loginWidget.
-	^ html render: self passwordWidget
+	html render: self loginInputWidget.
+	html render: self passwordInputWidget
