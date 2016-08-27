@@ -135,8 +135,12 @@ myStyleCss
 		width: -webkit-max-content; /* Chrome */
 	}
 	
+	.mdl-layout{
+		max-height: 100vh;
+		overflow-y: hidden;
+	}
 	.mdl-layout__content { 
-		overflow: visible;
+		overflow: scroll;
 	}
 	
 	.grid-cell-demo { 
@@ -185,5 +189,14 @@ myStyleCss
 	.menu-background { 
 		height: 148px;
 		background-color: white;
+	}
+	
+	.mdl-card-poll-demo .mdl-card__title { 
+	background-color: rgb(63,81,181);
+	color: white;
+}
+
+	.mdl-card-poll-demo .mdl-card__supporting-text { 
+		margin: auto;
 	}
 '

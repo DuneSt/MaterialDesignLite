@@ -1,1 +1,0 @@
-Library for widgets demo

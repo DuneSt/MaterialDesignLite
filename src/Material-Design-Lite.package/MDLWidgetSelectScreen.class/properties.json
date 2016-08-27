@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Example-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 6/15/2016 15:47",
+	"instvars" : [
+		 ],
+	"name" : "MDLWidgetSelectScreen",
+	"pools" : [
+		 ],
+	"super" : "MDLDemoScreen",
+	"type" : "normal" }

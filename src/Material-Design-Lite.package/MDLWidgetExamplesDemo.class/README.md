@@ -1,1 +1,0 @@
-I represent the class which displays examples

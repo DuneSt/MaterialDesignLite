@@ -10,5 +10,5 @@
 	"name" : "MDLButtonsScreen",
 	"pools" : [
 		 ],
-	"super" : "MDLComponentScreen",
+	"super" : "MDLDemoScreen",
 	"type" : "normal" }

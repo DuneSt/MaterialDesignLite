@@ -10,5 +10,5 @@
 	"name" : "MDLSnackbarScreen",
 	"pools" : [
 		 ],
-	"super" : "MDLComponentScreen",
+	"super" : "MDLDemoScreen",
 	"type" : "normal" }

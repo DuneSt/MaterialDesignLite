@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "KevinLanvin 6/20/2016 11:31",
 	"instvars" : [
-		"app" ],
+		"app",
+		"tabs",
+		"activeTab" ],
 	"name" : "MDLTitleHeaderSection",
 	"pools" : [
 		 ],

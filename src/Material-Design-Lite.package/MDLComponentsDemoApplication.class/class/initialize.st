@@ -1,3 +1,3 @@
 class initialization
 initialize
-	^ self registerToDevelopment: 'MDLComponentsDemoApplication'
+	^ self registerToDeployment: 'MDLComponentsDemoApplication'

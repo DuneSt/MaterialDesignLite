@@ -1,3 +1,0 @@
-private-accessing
-widgetClass
-	self subclassResponsibility

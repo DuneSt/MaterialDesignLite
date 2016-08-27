@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Example-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/8/2016 10:26",
+	"instvars" : [
+		 ],
+	"name" : "MDLWidgetCalendarScreen",
+	"pools" : [
+		 ],
+	"super" : "MDLDemoScreen",
+	"type" : "normal" }

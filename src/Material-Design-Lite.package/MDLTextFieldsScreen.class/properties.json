@@ -10,5 +10,5 @@
 	"name" : "MDLTextFieldsScreen",
 	"pools" : [
 		 ],
-	"super" : "MDLComponentScreen",
+	"super" : "MDLDemoScreen",
 	"type" : "normal" }
