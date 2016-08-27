@@ -11,5 +11,4 @@ initializeTable
 					{each name.
 					each methods size.
 					each class methods size} ]);
-		width: '800px';
 		title: 'Object subclasses statistics'
