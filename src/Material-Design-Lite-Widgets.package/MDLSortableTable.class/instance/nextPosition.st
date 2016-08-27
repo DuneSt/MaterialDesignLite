@@ -1,4 +1,4 @@
 rendering
 nextPosition
-	position + elementsToShow < self rows size
+	position + elementsToShow < rows size
 		ifTrue: [ self position: position + elementsToShow ]

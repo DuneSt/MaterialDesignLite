@@ -5,5 +5,5 @@ initialize
 	rows := #().
 	header := #().
 	unsortedRows := #().
-	self rowsPerPagePossibilities: #(10 50 100).
+	rowsPerPagePossibilities := #(10 50 100).
 	selectable := false

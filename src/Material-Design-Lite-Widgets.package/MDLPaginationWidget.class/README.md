@@ -1,0 +1,1 @@
+I represent a widget to easily use pagination
