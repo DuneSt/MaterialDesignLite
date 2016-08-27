@@ -5,23 +5,30 @@ renderFormsPanelOn: html
 		id: 'forms';
 		with: [ 
 			html form: [ 
+				html mdlTextFieldContainer expandable; with: [ 
+					html mdlClickableIconContainer for: 'bigorneau'; with: [ 
+						html mdlIcon: 'search' ].
+					html mdlTextFieldExpandableHolder: [ 
+						html mdlTextFieldInput id: 'bigorneau'; type: 'text'.
+						html mdlTextFieldLabel for: 'bigorneau-expandable'; with: 'Expandable Input'  ] ].
+				
 				html heading level4 with: 'Text fields'.
 				html mdlTextFieldContainer floatingLabel; with: [ 
-					html mdlTextFieldLabelFor: 'input_text' with: 'First name'.
-					html mdlTextFieldInputId: 'input_text' type: 'text' ].
+					html mdlTextFieldLabel for: 'input_text'; with: 'First name'.
+					html mdlTextFieldInput id: 'input_text'; type: 'text' ].
 				html break.
 				html mdlTextFieldContainer floatingLabel; with: [ 
-					html mdlTextFieldLabelFor: 'input_email' with: 'Email'.
-					html mdlTextFieldInputId: 'input_email' type: 'email' ]. 
+					html mdlTextFieldLabel for: 'input_email'; with: 'Email'.
+					html mdlTextFieldInput id: 'input_email'; type: 'email' ]. 
 				html break.
 				html mdlTextFieldContainer floatingLabel; with: [ 
-					html mdlTextFieldLabelFor: 'input_password' with: 'Password'.
-					html mdlTextFieldInputId: 'input_password' type: 'password' pattern: '[0-9]*'.
+					html mdlTextFieldLabel for: 'input_password'; with: 'Password'.
+					html mdlTextFieldInput id: 'input_password'; type: 'password'; pattern: '[0-9]*'.
 					html mdlTextFieldError: 'Digits only' ].
 				html break.
 					html mdlTextFieldContainer: [ 
 						html mdlMultilineTextField rows: 3; id:'textArea'.
-						html mdlTextFieldLabelFor: 'textArea' with: 'TextLines' ] .
+						html mdlTextFieldLabel for: 'textArea'; with: 'TextLines' ] .
 				html break.
 				html heading level4 with: 'Checkboxes and radio buttons'.
 				html mdlCheckboxContainer for:'checkbox1'; with: [ 

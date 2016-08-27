@@ -32,4 +32,6 @@ renderMiscPanelOn: html
 			html mdlSwitchContainer for: 'switch-2'; with: [ 
 				html mdlSwitch id: 'switch-2'.
 				html mdlSwitchLabel with: 'Label' ].
+			html heading level4; with: 'Icons'.
+			self renderIconsPanelOn: html
 		]
