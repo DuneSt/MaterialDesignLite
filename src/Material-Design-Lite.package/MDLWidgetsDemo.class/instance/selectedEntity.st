@@ -1,0 +1,3 @@
+accessing
+selectedEntity
+	^ selectedEntity

@@ -1,3 +1,3 @@
-as yet unclassified
+initialization
 initializeTopComponents1
 	^ { 'Links' } asOrderedCollection

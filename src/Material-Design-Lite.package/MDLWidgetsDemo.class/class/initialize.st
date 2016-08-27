@@ -1,5 +1,5 @@
 initialize
 initialize
-	super initialize.
-	WAAdmin register: MDLWidgetsDemo asApplicationAt: #MDLWidgetsDemo.
-	ZnZincServerAdaptor startOn: 8080
+	(WAAdmin register: MDLWidgetsDemo asApplicationAt: #MDLWidgetsDemo)
+		addLibrary: MDLLibrary;
+		addLibrary: JQDeploymentLibrary
