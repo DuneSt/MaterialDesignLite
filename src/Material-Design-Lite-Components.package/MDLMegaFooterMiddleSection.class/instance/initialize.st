@@ -1,4 +1,4 @@
 as yet unclassified
 initialize
 	super initialize.
-	self class: 'mdl-mega-footer__middle-section'
+	self class: 'mdl-mega-footer--middle-section'

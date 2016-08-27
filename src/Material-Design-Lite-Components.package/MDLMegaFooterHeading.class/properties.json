@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "KevinLanvin 7/22/2015 10:47",
 	"instvars" : [
 		 ],
 	"name" : "MDLMegaFooterHeading",
 	"pools" : [
 		 ],
-	"super" : "WATagBrush",
+	"super" : "WAHeadingTag",
 	"type" : "normal" }

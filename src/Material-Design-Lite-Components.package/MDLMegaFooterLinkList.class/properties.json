@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "KevinLanvin 7/22/2015 10:45",
+	"commentStamp" : "KevinLanvin 7/22/2015 11:12",
 	"instvars" : [
 		 ],
-	"name" : "MDLMegaFooterDropdownSection",
+	"name" : "MDLMegaFooterLinkList",
 	"pools" : [
 		 ],
-	"super" : "WADivTag",
+	"super" : "WAUnorderedListTag",
 	"type" : "normal" }
