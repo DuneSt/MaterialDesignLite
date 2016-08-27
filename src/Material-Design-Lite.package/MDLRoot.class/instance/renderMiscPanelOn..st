@@ -16,4 +16,10 @@ renderMiscPanelOn: html
 			html mdlSpinner active; singleColor.
 			html break.
 			html heading level4 with: 'Icon toggle'.
+			html mdlIconToggleContainer for:'icon-toggle-1'; with: [ 
+				html mdlIconToggle id: 'icon-toggle-1' ; value: true; with: #format_bold.
+			].
+			html mdlIconToggleContainer for:'icon-toggle-2'; with: [ 
+				html mdlIconToggle id: 'icon-toggle-2' ; with: #format_italic.
+			].
 		]
