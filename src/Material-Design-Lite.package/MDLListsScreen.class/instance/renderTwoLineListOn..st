@@ -1,7 +1,7 @@
 rendering
 renderTwoLineListOn: html
 	html div
-		class: 'centered-content';
+		class: 'centered-content examples';
 		with: [ 
 					html mdlList
 						style: 'width: 300px';
@@ -24,15 +24,4 @@ renderTwoLineListOn: html
 			html code
 				class: 'smalltalk';
 				with:
-						'html mdlList
-	style: ''width: 300px'';
-	with: [ 
-		html mdlListItem
-			twoLine;
-			with: [
-				html mdlListPrimaryContent: [ 
-					html mdlIcon
-						listItemAvatar;
-						with: #person.
-					html text: ''Bryan Cranston''.
-					html mdlListItemSubTitle: ''Appears in 62 Episodes'' ] ] ]' ]
+						self twoLinesListCode ]

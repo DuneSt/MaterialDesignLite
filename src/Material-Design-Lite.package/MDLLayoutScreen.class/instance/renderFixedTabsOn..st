@@ -1,6 +1,6 @@
-as yet unclassified
+rendering
 renderFixedTabsOn: html
-	html mdlLayout fixedHeader; fixedTabs; style: 'min-height: 300px; box-shadow: 0px 1px 2px #aaa;'; with: [ 
+	html mdlLayout fixedHeader; fixedTabs; class: 'examples'; style: 'min-height: 300px; box-shadow: 0px 1px 2px #aaa; margin-bottom: 20px;'; with: [ 
 		html mdlLayoutHeader: [ 
 			html mdlLayoutHeaderRow: [ 
 				html mdlLayoutTitle: 'Title' ].

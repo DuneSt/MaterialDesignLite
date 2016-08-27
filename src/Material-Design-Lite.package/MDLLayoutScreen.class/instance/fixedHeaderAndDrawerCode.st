@@ -1,4 +1,4 @@
-as yet unclassified
+code
 fixedHeaderAndDrawerCode
 	^ 'html mdlLayout
 	fixedDrawer;

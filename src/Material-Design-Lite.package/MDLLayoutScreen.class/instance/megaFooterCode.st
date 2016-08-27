@@ -1,4 +1,4 @@
-as yet unclassified
+code
 megaFooterCode
 	^ 'html mdlFooter: [ 
 	html mdlFooterMiddleSection: [ 

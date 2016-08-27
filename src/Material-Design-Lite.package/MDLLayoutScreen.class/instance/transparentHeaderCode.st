@@ -1,4 +1,4 @@
-as yet unclassified
+code
 transparentHeaderCode
 	^ 'html mdlLayout style: (''background: url('', (MDLDemoLibrary urlOf: #transparentJpg) asString , '') center / cover; min-height: 300px;''); with:  [ 
 	html mdlLayoutHeader transparent; with: [ 

@@ -1,8 +1,8 @@
 rendering
-renderListWithIconsOn: html
+renderIconsListOn: html
 	html div
 		class: 'centered-content';
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with: [ html
 				mdlList: [ #('Bryan Cranston' 'Aaron Paul' 'Bob Odenkirk')
 						do: [ :name | 
@@ -14,12 +14,4 @@ renderListWithIconsOn: html
 											html text: name ] ] ] ].
 			html paragraph: 'List with Icons' ].
 	html preformatted: [ html code class: 'smalltalk';
-				with:
-					'html mdlList: [ 
-	#(''Bryan Cranston'' ''Aaron Paul'' ''Bob Odenkirk'') do: [ :name | 
-		html mdlListItem: [ 
-			html mdlListPrimaryContent: [
-				html mdlIcon
-					listItemIcon;
-					with: #person.
-				html text: name ] ] ] ]' ]
+				with: self iconsListCode ]

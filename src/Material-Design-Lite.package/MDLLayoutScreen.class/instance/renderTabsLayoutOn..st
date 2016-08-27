@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderTabsLayoutOn: html
 	html heading level5 class: 'section-title';with: 'TABS'.
 	html mdlTabs: [ 

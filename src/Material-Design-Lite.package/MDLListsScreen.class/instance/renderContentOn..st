@@ -5,7 +5,7 @@ renderContentOn: html
 		with: [ html heading level5 class: 'section-title';with: 'Lists'.
 			html paragraph: 'Customizable scrollable lists.'.
 			self renderSimpleListOn: html .
-			self renderListWithIconsOn: html.
+			self renderIconsListOn: html.
 			self renderAvatarActionsListOn: html .
 			self renderAvatarControlsListOn: html .
 			self renderTwoLineListOn: html .

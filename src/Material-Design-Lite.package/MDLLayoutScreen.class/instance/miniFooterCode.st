@@ -1,4 +1,4 @@
-as yet unclassified
+code
 miniFooterCode
 	^ 'html mdlMiniFooter: [ 
 	html mdlMiniFooterLeftSection: [ 

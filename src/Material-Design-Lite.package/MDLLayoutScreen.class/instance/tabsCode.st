@@ -1,4 +1,4 @@
-as yet unclassified
+code
 tabsCode 
 	^  'html mdlTabs: [ 
 	html mdlTabBar: [ 

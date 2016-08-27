@@ -2,7 +2,7 @@ rendering
 renderSimpleListOn: html
 	html div
 		class: 'centered-content';
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with: [ 
 					html
 						mdlList: [ #('Bryan Cranston' 'Aaron Paul' 'Bob Odenkirk') do: [ :name | html mdlListItem: [ html mdlListPrimaryContent: name ] ] ].
@@ -12,6 +12,4 @@ renderSimpleListOn: html
 			html code
 				class: 'smalltalk';
 				with:
-						'html mdlList: [ 
-	#(''Bryan Cranston'' ''Aaron Paul'' ''Bob Odenkirk'') do: 
-		[ :name | html mdlListItem: [ html mdlListPrimaryContent: name ] ] ]' ]
+						self simpleListCode ]

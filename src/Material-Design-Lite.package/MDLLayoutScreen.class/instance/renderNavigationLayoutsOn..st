@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderNavigationLayoutsOn: html
 	html heading level5 class: 'section-title';with: 'NAVIGATION'.
 	self renderTransparentHeaderOn: html.

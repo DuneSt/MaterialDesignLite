@@ -1,6 +1,6 @@
-as yet unclassified
+rendering
 renderTransparentHeaderOn: html
-	html mdlLayout style: ('background: url(''', (MDLDemoLibrary urlOf: #transparentJpg) asString , ''') center / cover; min-height: 300px;box-shadow: 0px 1px 2px #aaa;'); with:  [ 
+	html mdlLayout class: 'examples'; style: ('background: url(''', (MDLDemoLibrary urlOf: #transparentJpg) asString , ''') center / cover; min-height: 300px;box-shadow: 0px 1px 2px #aaa; margin-bottom: 20px;'); with:  [ 
 		html mdlLayoutHeader transparent; with: [ 
 			html mdlLayoutHeaderRow: [ 
 				html mdlLayoutTitle: 'Title'.

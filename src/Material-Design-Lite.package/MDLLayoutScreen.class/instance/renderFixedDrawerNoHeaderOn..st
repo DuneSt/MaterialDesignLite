@@ -1,7 +1,8 @@
-as yet unclassified
+rendering
 renderFixedDrawerNoHeaderOn: html
 	html mdlLayout
-		style: 'min-height: 300px; width: 100%; box-shadow: 0px 1px 2px #aaa;';
+		class: 'examples';
+		style: 'min-height: 300px; width: 100%; box-shadow: 0px 1px 2px #aaa; margin-bottom: 20px;';
 		fixedDrawer;
 		with: [ 
 			html mdlLayoutDrawer: [ 

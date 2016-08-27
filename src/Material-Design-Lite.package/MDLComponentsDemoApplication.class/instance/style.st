@@ -34,7 +34,8 @@ style
 	 }
 	
 	.centered-content { 
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 		width: intrinsic;           /* Safari/WebKit uses a non-standard name */
 		width: -moz-max-content;    /* Firefox/Gecko */
 		width: -webkit-max-content; /* Chrome */
@@ -77,8 +78,5 @@ style
 		letter-spacing: -.02em;
 		text-transform: uppercase;
 	}
-	
-	.mdl-card { 
-		
-	}
+
 	'

@@ -1,6 +1,6 @@
-as yet unclassified
+rendering
 renderMiniFooterOn: html
-	html mdlMiniFooter: [ 
+	html mdlMiniFooter class: 'examples'; style: 'margin-bottom: 20px;'; with: [ 
 		html mdlMiniFooterLeftSection: [ 
 			html mdlLogo: 'Title'.
 			html mdlMiniFooterLinkList: [ 

@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderGridLayoutOn: html
 	html heading level5 class: 'section-title';with: 'GRID'.
 	html

@@ -1,6 +1,6 @@
-as yet unclassified
+rendering
 renderMegaFooterOn: html
-	html mdlFooter: [ 
+	html mdlFooter class: 'examples'; style: 'margin-bottom:20px;'; with: [ 
 		html mdlFooterMiddleSection: [ 
 			html mdlFooterDropdownSection: [ 
 				html mdlFooterHeadingCheckbox.

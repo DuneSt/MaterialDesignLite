@@ -1,6 +1,6 @@
-as yet unclassified
+rendering
 renderScrollableTabsOn: html
-	html mdlLayout fixedHeader; style: 'min-height: 300px; box-shadow: 0px 1px 2px #aaa;'; with: [ 
+	html mdlLayout fixedHeader; class: 'examples'; style: 'min-height: 300px; box-shadow: 0px 1px 2px #aaa; margin-bottom: 20px;'; with: [ 
 		html mdlLayoutHeader: [ 
 			html mdlLayoutHeaderRow: [ 
 				html mdlLayoutTitle: 'Title' ].
