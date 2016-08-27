@@ -1,4 +1,4 @@
-render
+rendering
 renderContentOn: html
 	html div 
 		style: 'width: 28px;';

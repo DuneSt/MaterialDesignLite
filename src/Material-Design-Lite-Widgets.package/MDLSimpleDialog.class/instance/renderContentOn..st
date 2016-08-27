@@ -1,4 +1,4 @@
-accessing
+rendering
 renderContentOn: html
 	|openButtonId closeButtonId| 
 	openButtonId := html nextId.

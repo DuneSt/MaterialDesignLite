@@ -9,5 +9,5 @@ renderButtonOn: html withId: buttonId
 			html text: 
 				(self selectedObject 
 					ifNil: [ self choosingText ] 
-					ifNotNilDo: [ :anObject | self labelFor: anObject ]). 
+					ifNotNil: [ :anObject | self labelFor: anObject ]). 
 			html mdlIcon: 'arrow_drop_down' ]

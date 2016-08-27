@@ -1,3 +1,3 @@
-first week
+running
 setUp
 	calendar := MDLCalendar new

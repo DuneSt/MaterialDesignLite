@@ -1,7 +1,7 @@
 rendering
 renderTooltipOn: html withId: buttonId
 	self description
-		ifNotNilDo: [ :descr | 
+		ifNotNil: [ :descr | 
 			html mdlTooltip
 				for: 'menuButton' , buttonId;
 				large;
