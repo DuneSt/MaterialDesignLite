@@ -1,4 +1,4 @@
 class initialization
 initialize
 	super initialize.
-	self newApplicationNamed: 'ApplicationDemo'
+	self registerToDevelopment: 'ApplicationDemo'
