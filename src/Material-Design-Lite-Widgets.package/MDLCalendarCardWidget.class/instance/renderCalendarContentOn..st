@@ -1,4 +1,4 @@
-rendering
+private-rendering
 renderCalendarContentOn: html
 	html mdlGrid
 		style: 'text-align: center; font-size: 14px; line-height:2; color: rgba(0,0,0,1)';

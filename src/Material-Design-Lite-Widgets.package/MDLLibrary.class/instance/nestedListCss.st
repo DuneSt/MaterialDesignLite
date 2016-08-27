@@ -1,7 +1,7 @@
 uploaded
 nestedListCss
 	^ 'body{
-	height: 100%;	
+	height: 100%;
 }
 	
 .listContainer{
@@ -100,7 +100,7 @@ nestedListCss
 .expList .collapsed .icon{ 
 	background: url(' , (self urlOf: 'arrowDownPng') asString
 		,
-	') no-repeat center center; 
+			') no-repeat center center; 
 }
 
 .expList .icon{

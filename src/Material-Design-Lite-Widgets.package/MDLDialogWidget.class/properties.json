@@ -4,14 +4,14 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "ThomasHeniart 6/14/2016 15:06",
 	"instvars" : [
 		"title",
 		"content",
 		"actions",
 		"buttonName",
 		"closeButtonName" ],
-	"name" : "MDLSimpleDialog",
+	"name" : "MDLDialogWidget",
 	"pools" : [
 		 ],
 	"super" : "MDLWidget",

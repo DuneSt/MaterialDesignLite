@@ -6,5 +6,5 @@ renderDaysOn: html
 				tableRow: [ self daysList
 						do: [ :day | 
 							html tableHeading
-								class: 'mdl-calendar__mini-day';
+								style: 'color: rgba(0,0,0,0.5)';
 								with: day ] ] ]

@@ -1,6 +1,31 @@
 uploaded
 calendarWidgetCss
 	^ '
+
+.mdl-calendar { 
+	padding: 0;
+	margin: 0;
+}
+
+.mdl-calendar__title > h3 { 
+	margin: 0;
+	padding: 20px;	
+}
+
+.mdl-calendar .mdl-button--icon { 
+	font-size: 14px;
+	margin: 10px;
+}
+
+
+.mdl-calendar .mdl-calendar__mini-day { 
+	color: rgba(0,0,0,0.8);
+}
+
+.mdl-calendar .disabled { 
+	color: rgba(0, 0, 0, 0.4);
+}
+
 .mdl-card.mdl-calendar-widget { 
 	margin: auto;
 }

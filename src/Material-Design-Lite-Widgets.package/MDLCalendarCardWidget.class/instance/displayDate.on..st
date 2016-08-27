@@ -2,11 +2,8 @@ private-rendering
 displayDate: aDate on: html
 	html mdlButton
 		class:
-			((aDate = Date today and: [ aDate ~= calendar currentDate ])
-				ifTrue: [ 'mdl-color-text--primary' ]);
-		class:
 			(aDate = calendar currentDate
-				ifTrue: [ 'mdl-color-text--primary-contrast mdl-color--primary' ]);
+				ifTrue: [ 'active' ]);
 		class:
 			(aDate month = calendar currentDate month
 				ifFalse: [ 'disabled' ]);
