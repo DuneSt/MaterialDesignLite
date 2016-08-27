@@ -15,6 +15,6 @@ renderYearsOn: html
 								callback: [ calendar goToYear: aYear ];
 								onComplete:
 									((html jQuery id: calendarId) load
-										html: [ :ajaxHtml | self renderCalendarCardOn: ajaxHtml ]));
+										html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
 						desktopSize: 4;
 						with: aYear greaseString ] ]

@@ -14,6 +14,6 @@ renderMonthesOn: html
 								callback: [ calendar goToMonth: (Month indexOfMonth: aString) ];
 								onComplete:
 									((html jQuery id: calendarId) load
-										html: [ :ajaxHtml | self renderCalendarCardOn: ajaxHtml ]));
+										html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
 						desktopSize: 4;
 						with: aString ] ]
