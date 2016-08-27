@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Footer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLFooterNilSection",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
