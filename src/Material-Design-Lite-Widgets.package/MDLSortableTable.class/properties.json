@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "CyrilFerlicot 6/13/2016 12:03",
+	"commentStamp" : "CyrilFerlicot 8/2/2016 10:43",
 	"instvars" : [
 		"title",
 		"header",
@@ -14,7 +14,8 @@
 		"position",
 		"rowsPerPagePossibilities",
 		"selectable",
-		"id" ],
+		"id",
+		"ajaxOnCompleteHook" ],
 	"name" : "MDLSortableTable",
 	"pools" : [
 		 ],

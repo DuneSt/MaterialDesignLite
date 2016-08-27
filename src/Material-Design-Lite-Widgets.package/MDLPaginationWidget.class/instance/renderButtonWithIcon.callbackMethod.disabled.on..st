@@ -5,9 +5,8 @@ renderButtonWithIcon: aString callbackMethod: aSymbol disabled: aBoolean on: htm
 		rippleEffect;
 		disabled: aBoolean;
 		onClick:
-				(aBoolean
-						ifFalse: [ 
-							html jQuery ajax
-								callback: [ self perform: aSymbol ];
-								onComplete: (self onCompleteScriptOn: html) ]);
+				(html jQuery ajax
+						callback: [ self perform: aSymbol ];
+						onComplete: (self onCompleteScriptOn: html))
+			if: aBoolean not;
 		with: [ html mdlIcon: aString ]
