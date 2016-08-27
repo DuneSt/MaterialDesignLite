@@ -1,0 +1,16 @@
+{
+	"category" : "Material-Design-Lite-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"icon",
+		"label",
+		"callback" ],
+	"name" : "MDLNavigationLinkWithIconComponent",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }
