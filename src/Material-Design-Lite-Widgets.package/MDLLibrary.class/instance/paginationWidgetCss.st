@@ -1,7 +1,8 @@
 uploaded
 paginationWidgetCss
 	^ '
-.mdl-pagination-widget table { 
+.mdl-pagination-widget {
+	display: table; 
 	margin: auto;
 }
 

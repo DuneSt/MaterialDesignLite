@@ -15,4 +15,4 @@ renderSearchbarOn: html
 						serializeThis;
 						onComplete:
 							((html jQuery id: paginationWidgetId) load
-								html: [ :ajaxHtml | self renderPaginationWidgetOn: ajaxHtml ])) ]
+								html: [ :ajaxHtml | self renderTableOn: ajaxHtml ])) ]

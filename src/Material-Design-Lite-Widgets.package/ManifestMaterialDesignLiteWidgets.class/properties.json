@@ -4,12 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ThomasHeniart 6/7/2016 10:25",
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"id",
-		"value" ],
-	"name" : "MDLWidget",
+		 ],
+	"name" : "ManifestMaterialDesignLiteWidgets",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "PackageManifest",
 	"type" : "normal" }

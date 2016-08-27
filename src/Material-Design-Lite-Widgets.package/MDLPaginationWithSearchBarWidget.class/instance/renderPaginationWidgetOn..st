@@ -1,3 +1,7 @@
 rendering
 renderPaginationWidgetOn: html
-	super renderScreenContentOn: html
+	paginationWidgetId := html nextId.
+	self renderSearchbarOn: html.
+	html div
+		id: paginationWidgetId;
+		with: [ self renderTableOn: html ]

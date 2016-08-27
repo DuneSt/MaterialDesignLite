@@ -1,3 +1,6 @@
 updating
 updateItemsMatching: aString
-	self items: (items select: [ :anObject | testingBlock value: anObject value: aString ])
+	aString isEmptyOrNil
+		ifTrue: [ self groupsOfItems: items ]
+		ifFalse: [ self
+				groupsOfItems: (items select: [ :anObject | testingBlock value: anObject value: aString ]) ]
