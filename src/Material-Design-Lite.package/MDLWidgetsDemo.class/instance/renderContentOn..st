@@ -11,4 +11,5 @@ renderContentOn: html
 				label: #asString
 				action: [ :o | Transcript crShow: o asString ]
 				choosingText: 'Select Your Number'
-				description: 'description')
+				description: 'description').
+	self renderCalendarOn: html

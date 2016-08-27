@@ -2,9 +2,9 @@ updating
 style
 	^ '
  .mdl-card {
-    width: 256px;
-    height: 256px;
     background: #3E4EB8;
+	 width: 500px;
+	 min-height: 300px;
   }
 
  .mdl-card__actions {
@@ -16,5 +16,26 @@ style
   }
 
 
+ .Calendar { 
+	width: 25%;
+	text-align: center;
+	background-color: ', MDLColor gray lighter lighter lighter lighter lighter asHTMLColor , '; 
+ }
 
+ .Calendar > .mdl-grid { 
+	padding: 0px;
+	width: 90%;
+	margin: 5%;
+ }
+
+ table { 
+	padding-top: 15px;
+	width: 90%;
+	margin: 5%;
+ }
+
+ .number { 
+	font-size: 16px;
+ }
 '
+
