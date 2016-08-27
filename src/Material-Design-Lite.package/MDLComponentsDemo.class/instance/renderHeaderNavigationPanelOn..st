@@ -3,7 +3,7 @@ renderHeaderNavigationPanelOn: html
 	html mdlTabsPanel
 		id: 'headerNavigation';
 		with: [ 
-			html mdlLayout drawerButton; with: [  
+			html mdlLayout with: [  
 				html mdlLayoutHeader: [  
 				html mdlLayoutIcon.
 				html mdlLayoutHeaderRow: [  

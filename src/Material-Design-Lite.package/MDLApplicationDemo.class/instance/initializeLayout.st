@@ -2,5 +2,6 @@ initialization
 initializeLayout
 	^ MDLLayoutWidget new
 		title: 'Op Website GG !';
-		links: self initializeHeaderLinks;
+		headerSection: self initializeHeader;
+		drawerSection: self initializeDrawer;
 		yourself
