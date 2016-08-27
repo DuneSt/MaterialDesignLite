@@ -1,10 +1,3 @@
-as yet unclassified
+rendering
 renderSectionOn: html
-	html
-		mdlFooterMiddleSection: [ 
-			links
-				keysAndValuesDo: [ :k :v | 
-					html
-						mdlFooterDropdownSection: [ 
-							html mdlFooterHeading: k.
-							self renderLinks: v on: html ] ] ]
+	linksLists do: [ :aList | html mdlFooterDropdownSection: [ aList renderLinksWithHeaderOn: html ] ].

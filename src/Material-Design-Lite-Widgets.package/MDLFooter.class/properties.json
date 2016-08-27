@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "KevinLanvin 5/10/2016 18:54",
 	"instvars" : [
-		"topSection",
+		"topLeftSection",
+		"topRightSection",
 		"middleSection",
 		"bottomSection" ],
 	"name" : "MDLFooter",

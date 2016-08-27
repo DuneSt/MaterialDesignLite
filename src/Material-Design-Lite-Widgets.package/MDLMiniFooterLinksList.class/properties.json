@@ -7,8 +7,8 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MDLFooterAbstractSection",
+	"name" : "MDLMiniFooterLinksList",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MDLAbstractFooterLinksList",
 	"type" : "normal" }

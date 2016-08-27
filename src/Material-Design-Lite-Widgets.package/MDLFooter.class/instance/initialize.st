@@ -1,6 +1,7 @@
 initialization
 initialize
 	super initialize.
-	topSection := MDLFooterNilSection new.
+	topLeftSection := MDLFooterNilSection new.
+	topRightSection := MDLFooterNilSection new.
 	middleSection := MDLFooterNilSection new.
-	bottomSection := MDLFooterNilSection new.
+	bottomSection := MDLFooterNilSection new

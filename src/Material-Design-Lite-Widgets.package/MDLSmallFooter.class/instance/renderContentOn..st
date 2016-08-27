@@ -1,5 +1,5 @@
 rendering
 renderContentOn: html
 	html mdlMiniFooter: [ 
-			html mdlMiniFooterLeftSection: [ self renderLinksOn: html ].
-			html mdlMiniFooterRightSection: [ self renderRightSideOn: html ] ] 
+			html mdlMiniFooterLeftSection: [ leftSection renderSectionOn: html ].
+			html mdlMiniFooterRightSection: [ rightSection renderSectionOn: html ] ] 

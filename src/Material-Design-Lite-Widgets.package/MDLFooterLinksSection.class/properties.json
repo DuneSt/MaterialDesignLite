@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MDLFooterAbstractSection",
+		"linksList" ],
+	"name" : "MDLFooterLinksSection",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MDLFooterAbstractSection",
 	"type" : "normal" }

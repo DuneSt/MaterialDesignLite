@@ -6,8 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MDLFooterAbstractSection",
+		"links",
+		"title" ],
+	"name" : "MDLAbstractFooterLinksList",
 	"pools" : [
 		 ],
 	"super" : "Object",
