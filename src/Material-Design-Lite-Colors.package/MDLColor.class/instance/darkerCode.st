@@ -1,4 +1,4 @@
-as yet unclassified
+transformations
 darkerCode
 	| intCode |
 	intCode := (self isAccentuated

@@ -1,4 +1,4 @@
-as yet unclassified
+transformations
 lighterCode
 	| intCode |
 	intCode := (self isAccentuated
