@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Tab",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/16/2016 11:28",
+	"instvars" : [
+		"tabs" ],
+	"name" : "MDLTabWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLHighLevelWidget",
+	"type" : "normal" }
