@@ -1,5 +1,5 @@
 {
-	"category" : "Material-Design-Lite-Components",
+	"category" : "Material-Design-Lite-Components-Tables",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
@@ -7,8 +7,8 @@
 	"commentStamp" : "KevinLanvin 7/22/2015 13:32",
 	"instvars" : [
 		 ],
-	"name" : "MDLLogo",
+	"name" : "MDLTable",
 	"pools" : [
 		 ],
-	"super" : "WADivTag",
+	"super" : "WATableTag",
 	"type" : "normal" }
