@@ -1,3 +1,3 @@
 options
-readOnly: anObject
-	brushProperties at: #readOnly: put: (Array with: anObject)
+readonly: aBoolean
+	brushProperties at: #readonly: put: aBoolean

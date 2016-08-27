@@ -3,6 +3,7 @@ renderContentOn: html
 	| inputId |
 	self id ifNotNil: [ :aString | inputId := aString ] ifNil: [ inputId := html nextId ].
 	html mdlTextFieldContainer
+		class: (self properties at: #class: ifAbsent: [ '' ]);
 		beFloatingLabelIf: isFloatingLabel;
 		beExpandableIf: isExpandable;
 		with: [ label
@@ -14,6 +15,9 @@ renderContentOn: html
 					(brush
 						id: inputId;
 						yourself).
+			brush
+				onClick: (html jQuery this parent addClass: 'is-focused');
+				onBlur: (html jQuery this parent removeClass: 'is-focused').
 			self addPropertiesToBrush.
 			patternErrorMessage ifNotEmpty: [ html mdlTextFieldError: patternErrorMessage ].
 			self errorMessage ifNotEmpty: [ :message | html mdlTextFieldError: message ] ]
