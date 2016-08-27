@@ -10,7 +10,9 @@
 		"content",
 		"actions",
 		"buttonName",
-		"closeButtonName" ],
+		"closeButtonName",
+		"buttonBrush",
+		"dialogBrush" ],
 	"name" : "MDLDialogWidget",
 	"pools" : [
 		 ],
