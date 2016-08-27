@@ -25,6 +25,8 @@ style
 	
 	.centered-content { 
 		margin: auto;
-		width: fit-content;
+		width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+		width: -moz-max-content;    /* Firefox/Gecko */
+		width: -webkit-max-content; /* Chrome */
 	}
 	'
