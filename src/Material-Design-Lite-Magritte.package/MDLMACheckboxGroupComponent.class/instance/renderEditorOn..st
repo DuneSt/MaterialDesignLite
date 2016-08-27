@@ -8,9 +8,9 @@ renderEditorOn: html
 			html mdlCheckboxContainer
 				for: optionId;
 				with: [ 
-							html mdlCheckbox
-								id: optionId;
-								value: (self selectedList includes: each);
-								onTrue: [ self add: each ] onFalse: [ self remove: each ].
-							html mdlCheckboxLabel: (self labelForOption: each) ] ]
+					html mdlCheckbox
+						id: optionId;
+						value: (self selectedList includes: each);
+						onTrue: [ self add: each ] onFalse: [ self remove: each ].
+					html mdlCheckboxLabel: (self labelForOption: each) ] ]
 		separatedBy: [  ]
