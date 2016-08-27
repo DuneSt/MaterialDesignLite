@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Buttons",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/21/2015 14:19",
+	"instvars" : [
+		"hasConflictualOptions" ],
+	"name" : "MDLButton",
+	"pools" : [
+		 ],
+	"super" : "WAAnchorTag",
+	"type" : "normal" }

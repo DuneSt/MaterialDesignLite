@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Footer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLMegaFooterSocialButton",
+	"pools" : [
+		 ],
+	"super" : "WAButtonTag",
+	"type" : "normal" }

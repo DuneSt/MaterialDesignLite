@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Footer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLMegaFooterMiddleSection",
+	"pools" : [
+		 ],
+	"super" : "WADivTag",
+	"type" : "normal" }

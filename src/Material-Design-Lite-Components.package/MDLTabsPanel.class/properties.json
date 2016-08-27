@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Nav",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/21/2015 16:09",
+	"instvars" : [
+		 ],
+	"name" : "MDLTabsPanel",
+	"pools" : [
+		 ],
+	"super" : "WADivTag",
+	"type" : "normal" }

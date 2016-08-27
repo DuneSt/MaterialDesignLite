@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Nav",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/21/2015 15:01",
+	"instvars" : [
+		 ],
+	"name" : "MDLNavigationLink",
+	"pools" : [
+		 ],
+	"super" : "WAAnchorTag",
+	"type" : "normal" }
