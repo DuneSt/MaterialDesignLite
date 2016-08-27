@@ -1,4 +1,4 @@
 accessing
 links: anOrderedCollection
-	"This should be a collection of dictionaries Text -> URL"
+	"This should be a collection of dictionaries Text -> callback"
 	links := anOrderedCollection
