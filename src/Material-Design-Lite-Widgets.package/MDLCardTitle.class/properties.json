@@ -6,9 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"contents",
-		"shadow" ],
-	"name" : "MDLCard",
+		"level" ],
+	"name" : "MDLCardTitle",
 	"pools" : [
 		 ],
 	"super" : "MDLWidget",

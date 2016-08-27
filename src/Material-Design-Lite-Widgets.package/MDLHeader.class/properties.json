@@ -1,13 +1,12 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
+	"category" : "Material-Design-Lite-Widgets-Header",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"links",
-		"beCollapsible" ],
+		"links" ],
 	"name" : "MDLHeader",
 	"pools" : [
 		 ],

@@ -1,7 +1,6 @@
 rendering
 renderLinksOn: html
-	html mdlNavigation: [ 
-		links do: [ :asso | 
+	links do: [ :l | 
 			html mdlNavigationLink
-				url: asso value;
-				with: asso key ] ]
+				url: l value;
+				with: l key ]

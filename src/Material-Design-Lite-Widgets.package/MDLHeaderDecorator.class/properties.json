@@ -1,15 +1,14 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Cards",
+	"category" : "Material-Design-Lite-Widgets-Header",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"contents",
-		"shadow" ],
-	"name" : "MDLCard",
+		"header" ],
+	"name" : "MDLHeaderDecorator",
 	"pools" : [
 		 ],
-	"super" : "MDLWidget",
+	"super" : "MDLHeader",
 	"type" : "normal" }

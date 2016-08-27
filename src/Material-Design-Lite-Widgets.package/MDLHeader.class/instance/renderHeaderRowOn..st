@@ -1,6 +1,6 @@
 rendering
-renderHeaderBarOn: html
+renderHeaderRowOn: html
 	html mdlLayoutHeaderRow: [ 
 		self renderTitleOn: html.
 		html mdlLayoutSpacer.
-		self renderLinksOn: html ]
+		self renderNavigationOn: html ]

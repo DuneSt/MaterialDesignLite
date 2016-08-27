@@ -1,13 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
+	"category" : "Material-Design-Lite-Widgets-Cards",
 	"classinstvars" : [
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "olivierauverlot 7/25/2015 22:37",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "MDLPageWidget",
+		"content" ],
+	"name" : "MDLCardText",
 	"pools" : [
 		 ],
 	"super" : "MDLWidget",

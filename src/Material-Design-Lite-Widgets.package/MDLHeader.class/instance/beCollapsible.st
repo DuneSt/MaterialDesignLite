@@ -1,3 +1,9 @@
-accessing
+as yet unclassified
 beCollapsible
-	beCollapsible := true
+	^ (self rules includes: #collapsible)
+		ifTrue: [ self ]
+		ifFalse: [ 
+			MDLCollapsibleHeader new
+				header: self;
+				links: self links;
+				yourself ]
