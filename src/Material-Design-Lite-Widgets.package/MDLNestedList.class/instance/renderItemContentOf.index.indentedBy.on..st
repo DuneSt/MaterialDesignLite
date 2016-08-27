@@ -8,7 +8,7 @@ renderItemContentOf: anItem index: anIndex indentedBy: anInteger on: html
 		class: #isSelected if: anItem = self selectedEntity;
 		with: [ 
 					html anchor
-						onClick: 'goTo(' , anIndex asString , ');';
+						onClick: 'goTo("' , anIndex asString , '");';
 						with: [ 
 									self renderIconOf: anItem on: html.
 									html span

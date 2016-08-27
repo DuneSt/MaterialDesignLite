@@ -33,5 +33,5 @@ renderContentOn: html
 										doNotCache;
 										contentType: WAMimeType textHtml;
 										stream) ] ]).
-	clickCb := div storeCallback: (WAValuesCallback on: self actionBlock values: self).
+	clickCb := div storeCallback: (WAValueCallback on: [:path | self actionBlock value: (self obtainElementForPath: path)]).
 	html script: (self expendableJsScript: html actionUrl cbId: scrollCb clickCbId: clickCb)

@@ -53,7 +53,10 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
 				list.removeChild(list.lastChild);
 				
 			}
-       }
+       },
+		error : function(){
+			location.reload();
+		}
     });
 	}
 
@@ -76,7 +79,10 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
 				list.removeChild(list.firstChild);
 				
 			}
-       }
+       },
+		error : function(){
+			location.reload();
+		}
     });
 	}
 

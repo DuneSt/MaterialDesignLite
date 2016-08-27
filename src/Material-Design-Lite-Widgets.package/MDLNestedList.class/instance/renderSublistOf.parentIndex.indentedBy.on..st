@@ -1,5 +1,5 @@
 rendering
-renderSublistOf: children indentedBy: anInteger on: html
+renderSublistOf: children parentIndex: parentIndex indentedBy: anInteger on: html
 	children ifEmpty: [ ^ self ].
 	html
 		unorderedList: [ 
@@ -7,6 +7,6 @@ renderSublistOf: children indentedBy: anInteger on: html
 				doWithIndex: [ :child :index | 
 					self
 						renderListItem: child
-						index: index
+						index: parentIndex asString, ':', index asString
 						indentedBy: anInteger + 1
 						on: html ] ]

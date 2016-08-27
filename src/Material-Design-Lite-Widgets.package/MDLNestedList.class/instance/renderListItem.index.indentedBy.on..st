@@ -11,4 +11,4 @@ renderListItem: item index: index indentedBy: indentation on: html
 						index: index
 						indentedBy: indentation
 						on: html.
-					self renderSublistOf: children indentedBy: indentation on: html ]
+					self renderSublistOf: children parentIndex: index indentedBy: indentation on: html ]
