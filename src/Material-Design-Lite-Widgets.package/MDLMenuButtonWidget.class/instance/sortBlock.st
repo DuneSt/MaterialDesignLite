@@ -1,3 +1,3 @@
 accessing
 sortBlock
-	^ sortBlock ifNil: [ :a :b | a <= b ]
+	^ sortBlock ifNil: [ sortBlock := [ :a :b | a <= b ] ]
