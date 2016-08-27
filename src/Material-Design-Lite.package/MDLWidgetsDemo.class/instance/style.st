@@ -1,13 +1,6 @@
 updating
 style
 	^ '
- .mdl-cell { 
-	background-color: #DDD; 
-	margin: auto; 
-	margin-top: 10px; 
-	margin-bottom: 10px;
- }
-
  .mdl-card {
     width: 256px;
     height: 256px;
