@@ -7,7 +7,6 @@
 	"commentStamp" : "ThomasHeniart 6/7/2016 10:18",
 	"instvars" : [
 		"componentOrBlocks",
-		"shadow",
 		"cardActions" ],
 	"name" : "MDLCardWidget",
 	"pools" : [
