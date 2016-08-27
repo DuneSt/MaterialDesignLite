@@ -10,5 +10,5 @@
 	"name" : "MDLMenuItem",
 	"pools" : [
 		 ],
-	"super" : "WATagBrush",
+	"super" : "WAAnchorTag",
 	"type" : "normal" }

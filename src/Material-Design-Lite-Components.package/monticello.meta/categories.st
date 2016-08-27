@@ -1,4 +1,5 @@
 SystemOrganization addCategory: #'Material-Design-Lite-Components'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Badge'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Buttons'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Cards'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Footer'!
