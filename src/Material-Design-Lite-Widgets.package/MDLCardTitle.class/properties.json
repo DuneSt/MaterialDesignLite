@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"level" ],
+		"level",
+		"title" ],
 	"name" : "MDLCardTitle",
 	"pools" : [
 		 ],
