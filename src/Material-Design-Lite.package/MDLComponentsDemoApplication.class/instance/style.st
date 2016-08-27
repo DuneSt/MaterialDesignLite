@@ -17,9 +17,9 @@ style
 	pre {
 		margin-left: -32px;
 		margin-right: -32px;
+		padding: 32px;
 		background-color: #eee;
 		color: rgb(0,0,0);
-		padding: 10px;
 	}
 	
 	

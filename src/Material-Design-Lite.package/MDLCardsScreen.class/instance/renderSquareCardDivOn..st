@@ -1,5 +1,5 @@
 as yet unclassified
-renderWideCardDivOn: html
+renderSquareCardDivOn: html
 	html mdlGrid
 		class: 'mdl-typography--text-center';
 		with: [ 
@@ -7,10 +7,10 @@ renderWideCardDivOn: html
 						mdlCellDesktop: 12
 						tablet: 8
 						phone: 4
-						with: [ self renderWideCardOn: html ].
+						with: [ self renderSquareCardOn: html ].
 					html
 						mdlCellDesktop: 12
 						tablet: 8
 						phone: 4
-						with: [ html text: 'Wide' ] ].
-	html code: [ html preformatted with: self wideCardCode ]
+						with: [ html text: 'Square' ] ].
+	html code: [ html preformatted with: self squareCardCode ]
