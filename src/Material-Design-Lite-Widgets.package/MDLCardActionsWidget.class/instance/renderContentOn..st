@@ -3,6 +3,8 @@ renderContentOn: html
 	| cardActions |
 	cardActions := html mdlCardActions.
 	self addPropertiesToBrush: cardActions.
+	bordered
+		ifTrue: [ cardActions border ].
 	cardActions
 		with: [ componentOrBlocks
 				do: [ :aComponentOrBlock | 

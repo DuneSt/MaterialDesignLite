@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ThomasHeniart 6/8/2016 10:10",
+	"commentStamp" : "ThomasHeniart 6/8/2016 10:00",
 	"instvars" : [
 		 ],
-	"name" : "MDLCardWidgetExampleScreen",
+	"name" : "MDLWidgetsDemoLibrary",
 	"pools" : [
 		 ],
-	"super" : "MDLWidgetExampleScreen",
+	"super" : "WAFileMetadataLibrary",
 	"type" : "normal" }

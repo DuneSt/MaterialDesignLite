@@ -1,4 +1,4 @@
-as yet unclassified
+updating
 updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
-	anHtmlRoot stylesheet url: (MDLDemoLibrary urlOf: #mdlDemoWidgetsCss)
+	anHtmlRoot title: 'MDL widgets demo'

@@ -4,5 +4,7 @@ register
 
 	| app |
 	app := self registerToDevelopment: 'MDLWidgetExamples'.
-	app addLibrary: MDLDemoLibrary.
+	app
+		addLibrary: MDLDemoLibrary;
+		addLibrary: MDLWidgetsDemoLibrary.
 	^ app

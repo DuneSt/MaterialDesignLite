@@ -1,0 +1,3 @@
+options
+actionsBordered
+	self cardActions beBordered
