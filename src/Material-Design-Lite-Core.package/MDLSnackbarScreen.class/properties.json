@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Core-Example-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 6/17/2016 11:32",
+	"instvars" : [
+		 ],
+	"name" : "MDLSnackbarScreen",
+	"pools" : [
+		 ],
+	"super" : "MDLDemoScreen",
+	"type" : "normal" }

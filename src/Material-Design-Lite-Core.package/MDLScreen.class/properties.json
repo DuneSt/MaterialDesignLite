@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Core-Applications",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 5/2/2016 16:25",
+	"instvars" : [
+		 ],
+	"name" : "MDLScreen",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }
