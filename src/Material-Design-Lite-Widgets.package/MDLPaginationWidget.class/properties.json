@@ -12,7 +12,8 @@
 		"pageSize",
 		"tableBodyId",
 		"arrowsId",
-		"items" ],
+		"items",
+		"displayBlock" ],
 	"name" : "MDLPaginationWidget",
 	"pools" : [
 		 ],
