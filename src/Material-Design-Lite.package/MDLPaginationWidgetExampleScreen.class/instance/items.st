@@ -1,4 +1,10 @@
 private-accessing
 items
-	^ {{'Pepito' . 'Pokitos'}.
-	{'Jackie' . 'Chan'}} asOrderedCollection
+	^ {(MDLExamplePaginationItem new
+		firstName: 'Pepito';
+		lastName: 'Pokitos';
+		yourself).
+	(MDLExamplePaginationItem new
+		firstName: 'Ali';
+		lastName: 'Baba';
+		yourself)} asOrderedCollection

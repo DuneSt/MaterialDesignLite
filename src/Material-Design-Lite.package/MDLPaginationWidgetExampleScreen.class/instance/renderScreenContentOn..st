@@ -2,7 +2,7 @@ rendering
 renderScreenContentOn: html
 	html
 		render:
-			((MDLPaginationWidget newWithItems: self items)
+			((self widgetClass newWithItems: self items)
 				addHeading: 'First name';
 				addHeading: 'Last name';
 				pageSize: 1;
