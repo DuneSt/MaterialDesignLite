@@ -3,6 +3,7 @@ componentScreenClasses
 	^ {MDLBadgesScreen.
 	MDLButtonsScreen.
 	MDLCardsScreen.
+	MDLChipsScreen.
 	MDLDialogsScreen.
 	MDLLayoutScreen.
 	MDLListsScreen.
