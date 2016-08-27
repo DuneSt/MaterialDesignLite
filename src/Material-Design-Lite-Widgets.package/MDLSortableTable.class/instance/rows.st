@@ -1,3 +1,3 @@
 accessing
 rows
-	^ rows
+	^ rows value
