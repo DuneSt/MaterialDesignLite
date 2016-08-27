@@ -1,5 +1,6 @@
 rendering
 renderFormsPanelOn: html
+	"sliders - switch"
 	html mdlTabsPanel
 		id: 'forms';
 		with: [ 
@@ -27,4 +28,6 @@ renderFormsPanelOn: html
 				html space.
 				html mdlRadioContainer for: 'radio2' ; with: [ 
 					html mdlRadioButton id: 'radio2'; value:'2'; name: 'options'.
-					html mdlRadioLabel: 'Option 2' ] ] ]
+					html mdlRadioLabel: 'Option 2' ] 
+			] 
+		]

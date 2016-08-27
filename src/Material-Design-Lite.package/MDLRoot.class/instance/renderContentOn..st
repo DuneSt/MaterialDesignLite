@@ -13,6 +13,7 @@ renderContentOn: html
 		self renderDropdownMenuPanelOn: html.
 		self renderTooltipsPanelOn: html.
 		self renderIconsPanelOn: html.
+		self renderMiscPanelOn: html.
 	]
 
 	

@@ -4,7 +4,7 @@ renderTablesPanelOn: html
 		id: 'tables';
 		with: [ 
 			html heading level4 with: 'Simple'.
-			html mdlTable shadow: 2; with: [ 
+			html mdlTable with: [ 
 				html tableHead: [ 
 					html tableRow: [ 
 						html mdlTableHeading: 'Text'.
@@ -20,7 +20,7 @@ renderTablesPanelOn: html
 							html mdlTableCell: 'TableCell' ] ] ] ].
 			html break.
 			html heading level4; with: 'Table design with checkbox'.
-			html mdlTable shadow: 2; selectable; with: [ 
+			html mdlTable selectable; with: [ 
 				html tableHead: [ 
 					html tableRow: [ 
 						html mdlTableHeading: 'Text'.
