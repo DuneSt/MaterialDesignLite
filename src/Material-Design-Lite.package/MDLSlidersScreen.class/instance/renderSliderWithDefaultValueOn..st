@@ -1,7 +1,7 @@
 rendering
 renderSliderWithDefaultValueOn: html
 	html div
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		class: 'centered-content';
 		with: [ 
 					html mdlSlider
@@ -13,8 +13,4 @@ renderSliderWithDefaultValueOn: html
 		preformatted: [ 
 			html code
 				class: 'smalltalk';
-				with:
-						'html mdlSlider
-	min:0;
-	max: 100;
-	value: 75' ]
+				with: self sliderDefaultValueCode ]

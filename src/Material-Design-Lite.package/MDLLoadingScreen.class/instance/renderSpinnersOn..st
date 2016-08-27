@@ -1,7 +1,7 @@
 rendering
 renderSpinnersOn: html
 	html mdlGrid
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with: [ 
 					html mdlLayoutSpacer.
 					html
@@ -24,11 +24,10 @@ renderSpinnersOn: html
 			html code
 				class: 'smalltalk';
 				with:
-						'html mdlIconBadge
-	dataBadge: ''1'';
-	overlap;
-	with: ''account_box''.
-html mdlIconBadge
-	dataBadge: ''♥'';
-	overlap;
-	with: ''account_box''' ]
+						self spinner1Code ].
+						html
+		preformatted: [ 
+			html code
+				class: 'smalltalk';
+				with:
+						self spinner2Code ].

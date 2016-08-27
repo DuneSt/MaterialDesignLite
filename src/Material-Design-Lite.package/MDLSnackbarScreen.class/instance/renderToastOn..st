@@ -1,30 +1,21 @@
-as yet unclassified
+rendering
 renderToastOn: html
 	html div
 		class: 'centered-content';
-		class: 'mdl-typography--text-center';
-		with:
-			[ | snackbar |
-			snackbar := html mdlSnackbar
-				message: 'Action finished.';
-				timeout: 3000;
-				yourself.
-			(html mdlSnackbarButtonFor: snackbar)
-				raised;
-				rippleEffect;
-				with: 'Show toast'.
-			html paragraph: 'Toast' ].
+		class: 'examples';
+		with: [ 
+					| snackbar |
+					snackbar := html mdlSnackbar
+						message: 'Action finished.';
+						timeout: 3000;
+						yourself.
+					(html mdlSnackbarButtonFor: snackbar)
+						raised;
+						rippleEffect;
+						with: 'Show toast'.
+					html paragraph: 'Toast' ].
 	html
-		preformatted:
-			[ html code
+		preformatted: [ 
+			html code
 				class: 'smalltalk';
-				with:
-					'| snackbar |
-snackbar := html mdlSnackbar
-	message: ''Action finished.'';
-	timeout: 3000;
-	yourself.
-(html mdlSnackbarButtonFor: snackbar)
-	raised;
-	rippleEffect;
-	with: ''Show toast''' ]
+				with: self toastCode ]

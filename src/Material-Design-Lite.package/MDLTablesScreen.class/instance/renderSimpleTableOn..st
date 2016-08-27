@@ -1,51 +1,36 @@
-as yet unclassified
+rendering
 renderSimpleTableOn: html
 	html div
 		class: 'centered-content';
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with:
-			[ html mdlTable selectable;
+			[ html mdlTable shadow: 2; selectable;
 				with:
 					[ html
 						tableHead:
 							[ html
 								tableRow:
-									[ html mdlTableHeading: 'Text'.
-									html mdlTableHeading: 'Text'.
-									html tableHeading: 'Numbers'.
-									html mdlTableHeading: 'Text' ] ].
+									[ html mdlTableHeading: 'Material'.
+									html tableHeading: 'Quantity'.
+									html tableHeading: 'Price' ] ].
 					html
 						tableBody:
-							[ 3
-								timesRepeat:
-									[ html
-										tableRow:
-											[ html mdlTableCell: 'TableCell'.
-											html mdlTableCell: 'TableCell'.
-											html tableData: '40'.
-											html mdlTableCell: 'TableCell' ] ] ] ].
-			html paragraph: 'Data table' ].
+							[ html tableRow: [ 
+								html mdlTableCell: 'Acrylic (Transparent)'.
+								html tableData: '25'.
+								html tableData: '$2.90' ].
+							html tableRow: [ 
+								html mdlTableCell: 'Plywood (Birch)'.
+								html tableData: '50'.
+								html tableData: '$1.25' ].
+							html tableRow: [ 
+								html mdlTableCell: 'Laminate (Gold on Blue)'.
+								html tableData: '10'.
+								html tableData: '$2.35' ] ] ] ].
+			html break.
+			html paragraph class: 'centered-content'; with: 'Data table'.
 		html
 		preformatted:
 			[ html code
 				class: 'smalltalk';
-				with: 'html mdlTable selectable;
-	with:
-		[ html
-			tableHead:
-				[ html
-					tableRow:
-						[ html mdlTableHeading: ''Text''.
-						html mdlTableHeading: ''Text''.
-						html tableHeading: ''Numbers''.
-						html mdlTableHeading: ''Text'' ] ].
-		html
-			tableBody:
-				[ 3
-					timesRepeat:
-						[ html
-							tableRow:
-								[ html mdlTableCell: ''TableCell''.
-								html mdlTableCell: ''TableCell''.
-								html tableData: ''40''.
-								html mdlTableCell: ''TableCell'' ] ] ] ]' ]
+				with: self tableCode ]

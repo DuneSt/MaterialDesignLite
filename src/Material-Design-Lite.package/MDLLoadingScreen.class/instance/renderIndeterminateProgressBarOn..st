@@ -1,7 +1,7 @@
 rendering
 renderIndeterminateProgressBarOn: html
 	html div
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with: [ 
 					html mdlProgressBar
 						style: 'margin: auto;';

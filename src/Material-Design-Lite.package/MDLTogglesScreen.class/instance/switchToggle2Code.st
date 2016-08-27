@@ -1,4 +1,4 @@
-as yet unclassified
+code
 switchToggle2Code 
 	^ 'html mdlSwitchContainer rippleEffect; for: ''switch-toggle-2''; with: [ 
 	html mdlSwitch id: ''switch-toggle-2''.

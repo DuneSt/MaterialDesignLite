@@ -79,4 +79,17 @@ style
 		text-transform: uppercase;
 	}
 
+	.menu-container { 
+		width: 200px;
+	}
+
+	.menu-bar { 
+		padding: 16px;
+		position: relative;
+	}
+	
+	.menu-background { 
+		height: 148px;
+		background-color: white;
+	}
 	'
