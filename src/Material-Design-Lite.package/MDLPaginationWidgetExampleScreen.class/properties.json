@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Example-Widgets",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/13/2016 15:16",
+	"instvars" : [
+		 ],
+	"name" : "MDLPaginationWidgetExampleScreen",
+	"pools" : [
+		 ],
+	"super" : "MDLWidgetExampleScreen",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+Screen to render MDLPaginationWidget examples
