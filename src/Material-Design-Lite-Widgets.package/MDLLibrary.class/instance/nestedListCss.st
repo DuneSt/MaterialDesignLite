@@ -86,4 +86,9 @@ nestedListCss
 
 .expList .expandedIcon{
     background: url(' , (self urlOf: 'arrowUpPng') asString , ') no-repeat center center;
+}
+
+.expList .expanded{
+    border-top: 1px solid rgb(217, 217, 217);
+    border-bottom: 1px solid rgb(217, 217, 217);
 }'
