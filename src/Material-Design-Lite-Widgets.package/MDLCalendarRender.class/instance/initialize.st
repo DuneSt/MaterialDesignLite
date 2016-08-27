@@ -1,5 +1,5 @@
-as yet unclassified
+initialization
 initialize
 	super initialize.
-	daysList := { 'Su' . 'Mon' . 'Tue' . 'Wed' . 'Thu' . 'Fri' . 'Sat' }.
+	daysList := { 'S' . 'M' . 'T' . 'W' . 'T' . 'F' . 'S' }.
 	calendar := MDLCalendar new

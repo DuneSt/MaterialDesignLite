@@ -1,8 +1,7 @@
 as yet unclassified
 renderDateOn: html
 	html
-		mdlCellDesktop: 6
-		tablet: 4
+		mdlCellDesktop: 8
+		tablet: 6
 		phone: 2
-		with: [ 
-			html text: calendar currentDate month ]
+		with: [ html text: calendar currentDate month ]

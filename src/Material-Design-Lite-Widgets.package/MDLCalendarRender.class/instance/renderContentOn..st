@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderContentOn: html
 	html mdlButton
 		id: 'Calendar1';
@@ -6,9 +6,13 @@ renderContentOn: html
 		rippleEffect;
 		with: 'Pick a date'.
 	html mdlDialog
+		style: 'padding: 0px';
 		openButtonId: 'Calendar1';
 		closeButtonId: 'PickDate';
 		with: [ 
-					html mdlDialogTitle with: self renderCalendarCurrentDate.
-					html mdlDialogContent with: [ html paragraph with: 'Hello' ].
+					html mdlDialogTitle
+						class: 'mdl-color--primary mdl-color-text--primary-contrast';
+						style: 'padding : 24px';
+						with: self renderCalendarCurrentDate.
+					html mdlDialogContent style: 'padding : 0px' ; with: [ self renderCalendarContentOn: html ].
 					html mdlDialogActions with: [ self renderButtonsOn: html ] ]

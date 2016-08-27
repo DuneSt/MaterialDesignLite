@@ -1,7 +1,5 @@
 as yet unclassified
 renderCalendarHeaderOn: html
-	html
-		mdlGrid: [ 
-			self renderButtonOn: html withIcon: [ html mdlIcon: 'chevron_left' ].
-			self renderDateOn: html.
-			self renderButtonOn: html withIcon: [ html mdlIcon: 'chevron_right' ] ]
+	self renderButtonOn: html withIcon: [ html mdlIcon: 'navigate_before' ].
+	self renderDateOn: html.
+	self renderButtonOn: html withIcon: [ html mdlIcon: 'navigate_next' ]

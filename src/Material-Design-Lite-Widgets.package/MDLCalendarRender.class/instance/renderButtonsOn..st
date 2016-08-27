@@ -1,9 +1,9 @@
-as yet unclassified
+rendering
 renderButtonsOn: html
-	html mdlButton
-		primaryColor;
-		with: 'Cancel'.
 	html mdlButton
 		id: 'PickDate';
 		primaryColor;
-		with: 'Confirm'
+		with: 'Confirm'.
+	html mdlButton
+		primaryColor;
+		with: 'Cancel'
