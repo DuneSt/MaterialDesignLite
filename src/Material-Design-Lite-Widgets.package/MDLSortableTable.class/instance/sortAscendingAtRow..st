@@ -4,4 +4,4 @@ sortAscendingAtRow: aRowIndex
 		do: [ :each | 
 			(header at: aRowIndex) = each
 				ifFalse: [ each unsort ] ].
-	rows := rows sorted: [ :cell :anotherCell | (cell at: aRowIndex) > (anotherCell at: aRowIndex) ]
+	rows :=  self rows sorted: [ :cell :anotherCell | (cell at: aRowIndex) > (anotherCell at: aRowIndex) ]
