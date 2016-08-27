@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "olivierauverlot 7/25/2015 22:17",
 	"instvars" : [
 		 ],
-	"name" : "MDLRoot",
+	"name" : "MDLWidgetsDemo",
 	"pools" : [
 		 ],
-	"super" : "WAComponent",
+	"super" : "MDLPageWidget",
 	"type" : "normal" }

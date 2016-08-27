@@ -1,15 +1,14 @@
 {
 	"category" : "Material-Design-Lite-Example",
 	"classinstvars" : [
-		"server",
-		"application" ],
+		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "olivierauverlot 7/25/2015 22:16",
 	"instvars" : [
 		 ],
-	"name" : "MDLConfiguration",
+	"name" : "MDLComponentsDemo",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "WAComponent",
 	"type" : "normal" }
