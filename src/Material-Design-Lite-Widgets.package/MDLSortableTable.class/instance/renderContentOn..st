@@ -8,7 +8,7 @@ renderContentOn: aRenderer
 		self title ifNotNil: [ aRenderer mdlCardTitle: [ aRenderer mdlCardTitleText: self title level: 2 ] ].
 		(selectable ifTrue: [ aRenderer mdlTable selectable ]
 			ifFalse: [ aRenderer mdlTable  ])
-			class: 'mdl-textfield--full-width';
+			style: 'width: 100%; border: none';
 			with: [ 
 				self renderHeaderOn: aRenderer.
 				self renderRowsOn: aRenderer ].
