@@ -9,6 +9,7 @@ mdlChipCss
 	border-radius: 16px;
 	margin: 8px;
 	white-space: nowrap;
+	text-decoration: none;
 }
 
 .mdl-chip:hover{
