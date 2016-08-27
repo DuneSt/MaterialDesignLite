@@ -11,5 +11,5 @@
 	"name" : "MDLCardTitle",
 	"pools" : [
 		 ],
-	"super" : "MDLWidget",
+	"super" : "MDLHighLevelWidget",
 	"type" : "normal" }

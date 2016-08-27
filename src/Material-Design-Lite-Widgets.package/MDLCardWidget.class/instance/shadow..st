@@ -1,3 +1,3 @@
 accessing
 shadow: aNumber
-	shadow := aNumber
+	properties at: #shadow: put: aNumber

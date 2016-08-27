@@ -1,3 +1,6 @@
 rendering
 renderContentOn: html
-	html mdlCardTitle: [ html mdlCardTitleText: self title level: self level ]
+	| brush |
+	brush := html mdlCardTitle.
+	self addPropertiesToBrush: brush.
+	brush with: [ html mdlCardTitleText: self title level: self level ]
