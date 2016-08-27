@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Forms",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/22/2015 16:49",
+	"instvars" : [
+		 ],
+	"name" : "MDLCheckboxContainer",
+	"pools" : [
+		 ],
+	"super" : "WALabelTag",
+	"type" : "normal" }
