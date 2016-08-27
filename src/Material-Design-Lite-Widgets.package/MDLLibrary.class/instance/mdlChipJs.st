@@ -1,7 +1,8 @@
 chip
 mdlChipJs
-	^ 'window.addEventListener("load", function(){
+	^ 'window.addEventListener("load", initChips);
 
+function initChips(){
   $.each($(".mdl-chip__deletable"), function (){
     addRemovableIconTo($(this))
   })
@@ -13,8 +14,7 @@ mdlChipJs
   $.each($(".mdl-chip__deletable-ajax"), function (){
     addAjaxRemovableIconTo($(this));
   })
-
-});
+}
 
 function addRemovableIconTo(chip){
   var anchor = $("<a>").attr("href", chip.attr("href"));
