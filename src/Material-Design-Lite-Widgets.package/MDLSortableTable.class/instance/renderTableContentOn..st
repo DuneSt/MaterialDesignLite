@@ -12,4 +12,4 @@ renderTableContentOn: html
 		with: [ 
 					self renderHeaderOn: html.
 					self renderRowsOn: html ].
-	^ self renderFooterPaginationOn: html
+	self renderFooterPaginationOn: html
