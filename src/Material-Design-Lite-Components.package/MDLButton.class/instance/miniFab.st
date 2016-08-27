@@ -1,3 +1,3 @@
 options
 miniFab
-	self addConflictualOption: 'mini-fab'
+	self class: 'mdl-button--mini-fab'

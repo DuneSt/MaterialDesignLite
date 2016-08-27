@@ -1,3 +1,3 @@
 options
 fab
-	self addConflictualOption: 'fab'
+	self class: 'mdl-button--fab'

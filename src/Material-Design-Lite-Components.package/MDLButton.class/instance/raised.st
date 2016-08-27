@@ -1,3 +1,3 @@
 options
 raised
-	self addConflictualOption: 'raised'
+	self class: 'mdl-button--raised'

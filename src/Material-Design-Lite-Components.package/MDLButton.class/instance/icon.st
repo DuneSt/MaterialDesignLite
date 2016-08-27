@@ -1,3 +1,3 @@
 options
 icon
-	self addConflictualOption: 'icon'
+	self class: 'mdl-button--icon'
