@@ -4,12 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "ThomasHeniart 6/7/2016 10:18",
 	"instvars" : [
 		"contents",
 		"shadow" ],
 	"name" : "MDLCard",
 	"pools" : [
 		 ],
-	"super" : "MDLWidget",
+	"super" : "MDLHighLevelWidget",
 	"type" : "normal" }
