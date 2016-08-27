@@ -1,0 +1,1 @@
+Mini footer link list

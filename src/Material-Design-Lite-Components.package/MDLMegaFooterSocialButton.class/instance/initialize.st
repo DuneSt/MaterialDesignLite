@@ -1,4 +1,4 @@
 as yet unclassified
 initialize
 	super initialize.
-	self class: 'mdl-mega-footer--social-btn'
+	self class: 'mdl-mega-footer__social-btn'
