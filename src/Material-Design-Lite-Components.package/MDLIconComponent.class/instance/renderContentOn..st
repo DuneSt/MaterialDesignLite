@@ -1,3 +1,3 @@
 rendering
 renderContentOn: html
-	html mdlIcon: iconName
+	iconName ifNotNil: [ html mdlIcon: iconName ] ifNil: [ html text: 'No icon name set' ]
