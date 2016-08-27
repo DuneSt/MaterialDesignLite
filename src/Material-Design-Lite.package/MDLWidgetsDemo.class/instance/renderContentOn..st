@@ -14,7 +14,7 @@ renderContentOn: html
 								mdlCell: [ 
 									html render: (MDLSwitchWidget id: 'switch1').
 									html render: (MDLSwitchWidget id: 'switch2' value: false).
-									html render: (MDLSimpleDialog title: 'My name is' content: 'Dialog' buttonName: 'Simple dialog') ] ].
+									html render: (MDLDialogWidget title: 'My name is' content: 'Dialog' buttonName: 'Simple dialog') ] ].
 					html
 						render:
 							(MDLFormSelectWidget
