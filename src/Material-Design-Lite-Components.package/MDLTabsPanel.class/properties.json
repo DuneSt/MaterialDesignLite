@@ -10,5 +10,5 @@
 	"name" : "MDLTabsPanel",
 	"pools" : [
 		 ],
-	"super" : "WADivTag",
+	"super" : "MDLDivTag",
 	"type" : "normal" }

@@ -10,5 +10,5 @@
 	"name" : "MDLLayoutTabBar",
 	"pools" : [
 		 ],
-	"super" : "WADivTag",
+	"super" : "MDLDivTag",
 	"type" : "normal" }

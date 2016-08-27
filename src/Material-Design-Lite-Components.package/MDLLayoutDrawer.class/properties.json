@@ -10,5 +10,5 @@
 	"name" : "MDLLayoutDrawer",
 	"pools" : [
 		 ],
-	"super" : "WADivTag",
+	"super" : "MDLDivTag",
 	"type" : "normal" }

@@ -12,5 +12,5 @@
 	"name" : "MDLCardTag",
 	"pools" : [
 		 ],
-	"super" : "WADivTag",
+	"super" : "MDLDivTag",
 	"type" : "normal" }

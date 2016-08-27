@@ -10,5 +10,5 @@
 	"name" : "MDLMegaFooterLeftSection",
 	"pools" : [
 		 ],
-	"super" : "WADivTag",
+	"super" : "MDLDivTag",
 	"type" : "normal" }
