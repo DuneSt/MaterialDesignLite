@@ -6,8 +6,10 @@
 		 ],
 	"commentStamp" : "KevinLanvin 7/21/2015 14:19",
 	"instvars" : [
-		 ],
-	"name" : "MDLCard",
+		"links",
+		"title",
+		"beCollapsible" ],
+	"name" : "MDLCardTag",
 	"pools" : [
 		 ],
 	"super" : "WADivTag",
