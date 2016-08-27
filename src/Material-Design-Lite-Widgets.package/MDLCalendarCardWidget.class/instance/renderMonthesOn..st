@@ -9,11 +9,6 @@ renderMonthesOn: html
 						class:
 							(aString = calendar currentDate monthName
 								ifTrue: [ 'active' ]);
-						onClick:
-							(html jQuery ajax
-								callback: [ calendar goToMonth: (Month indexOfMonth: aString) ];
-								onComplete:
-									((html jQuery id: calendarId) load
-										html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
+						onClick: (self scriptGoToMonth: (Month indexOfMonth: aString) on: html);
 						desktopSize: 4;
 						with: aString ] ]
