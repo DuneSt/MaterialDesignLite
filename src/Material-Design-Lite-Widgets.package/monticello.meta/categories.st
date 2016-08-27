@@ -4,5 +4,6 @@ SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Cards'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Footer'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Header'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-List'!
+SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Poll'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Table'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Tests'!

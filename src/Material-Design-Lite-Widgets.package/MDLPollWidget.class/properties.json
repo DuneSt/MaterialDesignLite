@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Poll",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/10/2016 11:37",
+	"instvars" : [
+		"poll",
+		"pollWidgetId" ],
+	"name" : "MDLPollWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLHighLevelWidget",
+	"type" : "normal" }

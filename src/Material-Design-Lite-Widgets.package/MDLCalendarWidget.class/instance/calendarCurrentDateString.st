@@ -1,5 +1,5 @@
-private-rendering
-renderCalendarCurrentDate
+private
+calendarCurrentDateString
 	^ (WriteStream with: calendar currentDate asDateAndTime dayOfWeekAbbreviation)
 		nextPutAll: ', ';
 		nextPutAll: calendar currentDate monthAbbreviation;

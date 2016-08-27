@@ -1,7 +1,6 @@
 accessing
 calendarFullDateComponent
 	^ MDLCardTitle new
-		id: fullDateId;
-		title: self renderCalendarCurrentDate;
+		title: self calendarCurrentDateString;
 		level: 2;
 		yourself

@@ -1,0 +1,3 @@
+private
+positivePollBlock
+	^ [ poll increasePositiveCount ]

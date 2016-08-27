@@ -1,0 +1,3 @@
+hooks
+negativelyVotedBy: anObject
+	self subclassResponsibility

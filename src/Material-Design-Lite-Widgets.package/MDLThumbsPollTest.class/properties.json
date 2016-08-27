@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"thumbsPoll" ],
+	"name" : "MDLThumbsPollTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }
