@@ -2,8 +2,11 @@ rendering
 renderContentOn: html
 	"self renderHeaderOn: html."
 
-	html render: (MDLSwitchWidget id: 'switch1').
-	html render: (MDLSwitchWidget id: 'switch2' value: false).
+	html
+		mdlGrid: [ 
+			html mdlCell: [ html render: (MDLSwitchWidget id: 'switch1').
+					html render: (MDLSwitchWidget id: 'switch2' value: false).
+					html render: (MDLSimpleDialog title: 'My name is' content: 'Dialog' buttonName: 'Simple dialog') ] ].
 	"html
 		render:
 			(MDLMenuButtonWidget
@@ -11,8 +14,8 @@ renderContentOn: html
 				label: #asString
 				action: [ :o | Transcript crShow: o asString ]
 				choosingText: 'Select Your Number'
-				description: 'description').
-	html break.
-	html break."
-	html render: (MDLSimpleDialog title: 'My name is' content: 'Dialog' buttonName: 'Simple dialog' ).
+				description: 'description')."
+	
+	html mdlGrid: [ table renderContentOn: html ].
+	
 	self renderFooterOn: html
