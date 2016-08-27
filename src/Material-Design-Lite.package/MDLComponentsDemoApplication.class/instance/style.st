@@ -14,13 +14,17 @@ style
 	.mdl-layout__drawer { 
 		background-color: white
 	 }
+	
 	pre {
 		margin-left: -32px;
 		margin-right: -32px;
-		padding: 32px;
 		background-color: #eee;
 		color: rgb(0,0,0);
+		padding: 20px 10px;
 	}
 	
-	
+	.centered-content { 
+		margin: auto;
+		width: fit-content;
+	}
 	'
