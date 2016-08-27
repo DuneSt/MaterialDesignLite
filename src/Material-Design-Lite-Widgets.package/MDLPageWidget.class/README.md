@@ -1,0 +1,1 @@
+A MDLPageWidget is a container for a HTML page that uses Material Design Lite.
