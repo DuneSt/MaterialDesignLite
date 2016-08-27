@@ -3,7 +3,7 @@ renderSquareCardOn: html
 	html mdlCard
 		shadow: 2;
 		class: 'mdl-typography--text-left';
-		style: 'margin: auto; width: 320px; height: 320px';
+		style: 'margin: 20px auto; width: 320px; height: 320px';
 		with: [ 
 			html mdlCardTitle 
 				expand;

@@ -1,7 +1,7 @@
 rendering
 renderMiniFabButtonsOn: html
 	html mdlGrid
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with: [ 
 					html mdlLayoutSpacer.
 					html
@@ -10,7 +10,7 @@ renderMiniFabButtonsOn: html
 								fab;
 								miniFab;
 								with: '+' ]
-						size: 2.
+						size: 1.
 					html
 						mdlCell: [ 
 							html mdlButton
@@ -18,27 +18,12 @@ renderMiniFabButtonsOn: html
 								miniFab;
 								colored;
 								with: '+' ]
-						size: 2.
+						size: 1.
 					html mdlLayoutSpacer ].
-	html mdlGrid
-		class: 'mdl-typography--text-center';
-		with: [ 
+	html mdlGrid: [ 
 					html mdlLayoutSpacer.
-					html mdlCell: 'Mini FAB' size: 2.
-					html mdlCell: 'Colored' size: 2.
+					html mdlCell: 'Mini FAB' size: 1.
+					html mdlCell: 'Colored' size: 1.
 					html mdlLayoutSpacer ].
-	html
-		preformatted: [ 
-			html code
-				class: 'smmaltalk';
-				with:
-						'html mdlButton
-	fab;
-	miniFab;
-	with: ''+''.
-
-html mdlButton
-	fab;
-	colored;
-	miniFab;
-	with: ''+''' ]
+	html preformatted: [ html code class: 'smmaltalk'; with: self miniFabButtonCode ].
+	html preformatted: [ html code class: 'smmaltalk'; with: self miniFabColoredButtonCode ]

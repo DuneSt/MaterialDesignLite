@@ -1,30 +1,18 @@
 rendering
 renderImageCardDivOn: html
 	html mdlGrid
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with: [ 
-					html mdlCell desktopSize: 3; hideTablet; hidePhone.
-					html
-						mdlCellDesktop: 3
-						tablet: 4
-						phone: 2
+					html mdlLayoutSpacer.
+					html mdlCell size: 3;
 						with: [ self renderImageCardOn: html ].
-					html
-						mdlCellDesktop: 3
-						tablet: 4
-						phone: 2
+					html mdlCell size: 3;
 						with: [ self renderDateCardOn: html ].
-					html mdlCell desktopSize: 3; hideTablet; hidePhone.
-					html mdlCell desktopSize: 3; hideTablet; hidePhone.
-					html
-						mdlCellDesktop: 3
-						tablet: 4
-						phone: 2
-						with: [ html text: 'Image' ].
-					html
-						mdlCellDesktop: 3
-						tablet: 4
-						phone: 2
-						with: [ html text: 'Event' ] ].
+					html mdlLayoutSpacer ].
+	html mdlGrid: [ 
+		html mdlLayoutSpacer.
+		html mdlCell: [ html text: 'Image' ] size: 3.
+		html mdlCell: [ html text: 'Event' ] size: 3.
+		html mdlLayoutSpacer ].
 	html preformatted with: [ html code class: 'smalltalk'; with: self imageCardCode ] .
 	html preformatted with: [ html code class: 'smalltalk'; with: self eventCardCode ]

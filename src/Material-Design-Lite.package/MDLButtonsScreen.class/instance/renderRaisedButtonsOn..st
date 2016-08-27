@@ -1,7 +1,7 @@
 rendering
 renderRaisedButtonsOn: html
 	html mdlGrid
-		class: 'mdl-typography--text-center';
+		class: 'examples';
 		with: [ 
 					html mdlLayoutSpacer.
 					html
@@ -9,45 +9,28 @@ renderRaisedButtonsOn: html
 							html mdlButton
 								raised;
 								with: 'Button' ]
-						size: 2.
+						size: 1.
 					html
 						mdlCell: [ 
 							html mdlButton
 								raised;
 								rippleEffect;
 								with: 'Button' ]
-						size: 2.
+						size: 1.
 					html
 						mdlCell: [ 
 							html mdlButton
 								raised;
 								disabled;
 								with: 'Button' ]
-						size: 2.
+						size: 1.
 					html mdlLayoutSpacer ].
-	html mdlGrid
-		class: 'mdl-typography--text-center';
-		with: [ 
+	html mdlGrid: [ 
 					html mdlLayoutSpacer.
-					html mdlCell: 'Plain raised' size: 2.
-					html mdlCell: 'With ripple' size: 2.
-					html mdlCell: 'Disabled' size: 2.
+					html mdlCell: 'Plain raised' size: 1.
+					html mdlCell: 'With ripple' size: 1.
+					html mdlCell: 'Disabled' size: 1.
 					html mdlLayoutSpacer ].
-	html
-		preformatted: [ 
-			html code
-				class: 'smalltalk';
-				with:
-						'html mdlButton
-	raised;
-	with: ''Button''.
-
-html mdlButton
-	raised;
-	rippleEffect;
-	with: ''Button''.
-	
-html mdlButton
-	raised;
-	disabled;
-	with: ''Button''' ]
+	html preformatted: [ html code class: 'smalltalk'; with: self raisedButtonCode ].
+	html preformatted: [ html code class: 'smalltalk'; with: self raisedRippleEffectButtonCode ].
+	html preformatted: [ html code class: 'smalltalk'; with: self raisedDisabledButtonCode ]

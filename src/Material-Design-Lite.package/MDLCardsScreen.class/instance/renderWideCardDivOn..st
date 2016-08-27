@@ -1,20 +1,8 @@
 rendering
 renderWideCardDivOn: html
-	html mdlGrid
-		class: 'mdl-typography--text-center';
+	html div
+		class: 'examples';
 		with: [ 
-					html
-						mdlCellDesktop: 12
-						tablet: 8
-						phone: 4
-						with: [ self renderWideCardOn: html ].
-					html
-						mdlCellDesktop: 12
-						tablet: 8
-						phone: 4
-						with: [ html text: 'Wide' ] ].
-	html preformatted
-		with: [ 
-			html code
-				class: 'smalltalk';
-				with: self wideCardCode ]
+			self renderWideCardOn: html.
+			html text: 'Wide' ].
+	html preformatted with: [ html code class: 'smalltalk'; with: self wideCardCode ]

@@ -3,7 +3,7 @@ renderWideCardOn: html
 	html mdlCard
 		shadow: 2;
 		class: 'mdl-typography--text-left';
-		style: 'margin: auto; width: 512px';
+		style: 'margin: 20px auto; width: 512px';
 		with: [ 
 					html mdlCardTitle
 						style:

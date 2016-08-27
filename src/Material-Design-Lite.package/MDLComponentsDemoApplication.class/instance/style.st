@@ -1,6 +1,6 @@
 accessing
 style
-	^super style , '
+	^ super style , '
 	.mdl-navigation__link.is-active {
 		font-weight: 700;
 	}
@@ -9,9 +9,18 @@ style
 		color: rgba(0,0,0,.54);
 	 }
 	
+	.examples { 
+		margin-top: 100px;
+		text-align: center;
+	 }
+	
 	.mdl-layout__drawer { 
 		background-color: white
 	 }
+	
+	.mdl-cell { 
+		text-align: center;
+	}
 	
 	pre {
 		margin: 0px -32px;
@@ -31,7 +40,6 @@ style
 		width: -webkit-max-content; /* Chrome */
 	}
 	
-	
 	.mdl-layout__content { 
 		overflow: visible;
 	}
@@ -41,7 +49,8 @@ style
 		background-color: #bdbdbd;
 		color: #fff;
 		padding-left: 8px;
-		padding-top: 4px; }
+		padding-top: 4px;
+		text-align: left; }
 		
 	.navigation { 
 		margin: 75px 0px;
@@ -67,4 +76,9 @@ style
 		color: rgba(0,0,0,0.54);
 		letter-spacing: -.02em;
 		text-transform: uppercase;
+	}
+	
+	.mdl-card { 
+		
+	}
 	'
