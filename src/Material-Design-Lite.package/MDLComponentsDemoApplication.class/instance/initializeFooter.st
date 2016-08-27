@@ -2,5 +2,5 @@ initialization
 initializeFooter
 	^ MDLFooter new
 		atTopRightAddComponents: self initializeTopRightComponents;
-		atMiddleAddComponents: self initializeFooterMiddleSection;
+		"atMiddleAddComponents: self initializeFooterMiddleSection;"
 		yourself
