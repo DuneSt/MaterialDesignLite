@@ -4,24 +4,19 @@ renderContentOn: html
 	buttonId := html nextId.
 	html mdlButton
 		id: 'menuButton' , buttonId;
+		class: 'menuButtonWidgetButton';
 		disabled: self objectsPossibilities isEmpty;
 		with: [ html text: (self selectedObject ifNil: [ self choosingText ] ifNotNilDo: [ :anObject | self labelFor: anObject ]) ].
 	html mdlMenu
 		bottomLeft;
 		for: 'menuButton' , buttonId;
+		class: 'menuButtonWidgetMenu';
 		with: [ 
 					self objectsPossibilitiesWithLabel
 						do: [ :anAssociation | 
 							html
 								mdlMenuItem: [ 
-									html div
-										class: 'ui-widget';
-										with: [ 
-													html
-														form: [ 
-															html mdlButton
-																id: anAssociation key;
-																title: (self description: html for: anAssociation value);
-																callback: [ self actionWith: anAssociation value ];
-																with: anAssociation key;
-																onClick: 'submit()' ] ] ] ] ]
+									html anchor
+										callback: [ self actionWith: anAssociation value ];
+										style: 'display: block; text-decoration: none; color: inherit;';
+										with: [ html text: anAssociation key ] ] ] ]
