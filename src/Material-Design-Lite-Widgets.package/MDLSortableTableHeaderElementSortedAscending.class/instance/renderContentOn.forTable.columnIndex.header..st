@@ -1,9 +1,11 @@
 rendering
-renderContentOn: aRenderer forTable: table columnIndex: i header: header
-	(header headingCellOn: aRenderer)
+renderContentOn: html forTable: table columnIndex: i header: header
+	(header headingCellOn: html)
 		sortedAscending;
-		with: [ 
-			aRenderer anchor 
-				style: 'color: rgba(0,0,0,.54); text-decoration: none; font-weight: 700;';
-				callback: [ table sortDescendingAtRow: i. header goToNextState ];
-				with: header element ]
+		onClick:
+				(html jQuery ajax
+						callback: [ 
+									table sortDescendingAtRow: i.
+									header goToNextState ];
+						onSuccess: (table ajaxUpdateScriptFrom: html));
+		with: header element

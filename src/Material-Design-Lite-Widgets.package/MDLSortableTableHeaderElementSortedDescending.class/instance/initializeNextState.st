@@ -1,8 +1,5 @@
 initialization
 initializeNextState
-	self nextState: 
-		(MDLSortableTableHeaderElementUnsorted new 
-			nextState: 
-				(MDLSortableTableHeaderElementSortedAscending new 
-						nextState: self)).
-	^ self
+	self
+		nextState:
+			(MDLSortableTableHeaderElementUnsorted new nextState: (MDLSortableTableHeaderElementSortedAscending new nextState: self))

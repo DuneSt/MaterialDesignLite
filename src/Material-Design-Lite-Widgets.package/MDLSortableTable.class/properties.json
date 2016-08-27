@@ -13,7 +13,8 @@
 		"unsortedRows",
 		"position",
 		"rowsPerPagePossibilities",
-		"selectable" ],
+		"selectable",
+		"id" ],
 	"name" : "MDLSortableTable",
 	"pools" : [
 		 ],
