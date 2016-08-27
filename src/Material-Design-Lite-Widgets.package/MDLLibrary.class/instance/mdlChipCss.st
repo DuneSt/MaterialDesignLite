@@ -8,6 +8,7 @@ mdlChipCss
 	color: #565656;
 	border-radius: 16px;
 	margin: 8px;
+	white-space: nowrap;
 }
 
 .mdl-chip:hover{
