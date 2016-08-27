@@ -13,7 +13,9 @@
 		"login",
 		"password",
 		"submitLabel",
-		"callback" ],
+		"callback",
+		"cancelLabel",
+		"cancelCallback" ],
 	"name" : "MDLLoginWidget",
 	"pools" : [
 		 ],

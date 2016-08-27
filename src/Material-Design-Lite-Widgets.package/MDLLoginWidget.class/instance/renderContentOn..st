@@ -15,5 +15,9 @@ renderContentOn: html
 								accentColor;
 								beSubmit;
 								callback: [ callback value: login value: password ];
-								with: submitLabel ];
+								with: submitLabel.
+							html anchor
+								class: 'mdl-button mdl-js-button mdl-button--raised';
+								callback: self cancelCallback;
+								with: self cancelLabel ];
 						yourself) ]

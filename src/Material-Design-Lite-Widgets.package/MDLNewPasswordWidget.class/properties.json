@@ -14,7 +14,6 @@
 		"onSuccessBlock",
 		"confirmPasswordLabel",
 		"notMatchingPasswordsBlock",
-		"onEnterScript",
 		"rightOldPassword",
 		"pattern",
 		"errorMessage" ],
