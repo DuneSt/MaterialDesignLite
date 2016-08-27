@@ -12,10 +12,9 @@ renderDialogOn: html
 		openButtonId: idButtonOpen;
 		closeButtonId: idButtonClose;
 		with: [ 
-					html mdlDialogTitle with: 'Good job !'.
-					html mdlDialogContent with: [ html paragraph with: 'You managed to click the button' ].
-					html mdlDialogActions
-						with: [ 
+					html mdlDialogTitle: 'Good job !'.
+					html mdlDialogContent: [ html paragraph with: 'You managed to click the button' ].
+					html mdlDialogActions: [ 
 							html mdlButton: 'Agree'.
 							html mdlButton
 								id: idButtonClose;
@@ -31,5 +30,5 @@ renderDialogOn: html
 	html mdlDialog
 		openButtonId: idButtonOpen2;
 		with: [ 
-					html mdlDialogTitle with: 'Good job !'.
-					html mdlDialogContent with: [ html paragraph with: 'You managed to open the second dialog' ] ]
+					html mdlDialogTitle: 'Good job !'.
+					html mdlDialogContent: [ html paragraph with: 'You managed to open the second dialog' ] ]
