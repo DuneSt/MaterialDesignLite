@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Example-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"navigation",
+		"activeScreen" ],
+	"name" : "MDLComponentsDemoApplication",
+	"pools" : [
+		 ],
+	"super" : "MDLApplication",
+	"type" : "normal" }
