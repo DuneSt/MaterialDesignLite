@@ -1,7 +1,9 @@
 rendering
 renderEditorForUngroupedOn: html
-	html render:
-			((MDLFormSelectWidget
+	html
+		render:
+			((MDLSelectWidget
 				possibilities: self options
-				label: #asString
-				choosingText: self magritteDescription label) id: self labelId)
+				inputLabel: self magritteDescription label
+				labelBlock: [ :anOption | anOption ]
+				callback: [ :anOption | 1 halt ]) id: self labelId)
