@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "CyrilFerlicot 6/15/2016 15:40",
+	"commentStamp" : "CyrilFerlicot 7/14/2016 01:13",
 	"instvars" : [
 		"choosingText",
 		"labelBlock",
@@ -12,7 +12,8 @@
 		"selectedObject",
 		"possibilities",
 		"description",
-		"sortBlock" ],
+		"sortBlock",
+		"autoSubmit" ],
 	"name" : "MDLSelectWidget",
 	"pools" : [
 		 ],

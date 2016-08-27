@@ -15,6 +15,7 @@ Public API and Key Messages
 There is many constructors in my class side. 
 
 - #defaultSorting 		Use this method to sort the labels using the #<= operator by default
+- #beAutoSubmit 		Use this method if you want to form to submit when the user select a value. Do not forget to put your widget in a form.
 		
 Examples
 -------------------		
@@ -27,6 +28,7 @@ Examples
 		defaultSorting;
 		callback: [ :input |  Transcript << input; cr ];
 		description: 'description';
+		beAutoSubmit;
 		yourself.
 		
 		
@@ -43,6 +45,7 @@ Internal Representation and Key Implementation Points.
 -------------------	
 
     Instance Variables
+	autoSubmit:  		<aBoolean>		If true, the form will be submit when the user select a value
 	callback:			<aBlock>		A callback to execute on the form submit. It will take as parameter the selected object.
 	choosingText:		<aString>		The label of the select input.
 	description:			<aString>		An optional tooltip for the input.
