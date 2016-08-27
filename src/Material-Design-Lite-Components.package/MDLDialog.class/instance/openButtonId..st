@@ -1,9 +1,9 @@
-as yet unclassified
-openButtonClass: class
-   self id ifNil: [ self id: class, '-dialog' ].
+javascript generation
+openButtonId: id
+   self id ifNil: [ self id: id, '-dialog' ].
 	self script: (JSStream on: 
 		'var dialog = document.querySelector(''#', self id, ''');
-       var showDialogButton = document.querySelector(''.', class,''');
+       var showDialogButton = document.querySelector(''#', id,''');
        if (! dialog.showModal) {
          dialogPolyfill.registerDialog(dialog);
        }
