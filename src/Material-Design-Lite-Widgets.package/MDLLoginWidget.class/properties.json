@@ -1,0 +1,21 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Cards",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/20/2016 14:48",
+	"instvars" : [
+		"titleLabel",
+		"titleLevel",
+		"loginLabel",
+		"passwordLabel",
+		"login",
+		"password",
+		"submitLabel",
+		"callback" ],
+	"name" : "MDLLoginWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLHighLevelWidget",
+	"type" : "normal" }

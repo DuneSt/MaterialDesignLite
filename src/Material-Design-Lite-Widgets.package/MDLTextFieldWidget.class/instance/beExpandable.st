@@ -1,0 +1,3 @@
+options
+beExpandable
+	beExpandable := true
