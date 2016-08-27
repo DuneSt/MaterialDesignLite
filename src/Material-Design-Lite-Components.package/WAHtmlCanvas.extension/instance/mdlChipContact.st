@@ -1,3 +1,3 @@
 *Material-Design-Lite-Components
-mdlChipInitial
+mdlChipContact
 	^ self brush: MDLChipInitial new
