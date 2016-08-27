@@ -141,7 +141,7 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
 		}
 	}
 
-  $(document).ready( function() {
-	  	defineExpandable();
+  window.addEventListener("load", function() {
 		scrollToSelection();
+		defineExpandable();
   });'
