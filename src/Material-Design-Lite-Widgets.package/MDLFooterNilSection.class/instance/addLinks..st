@@ -1,3 +1,3 @@
 adding
-addLinks: links
-	^ MDLFooterBottomSection new addLinks: links; yourself
+addLinks: someLinks
+	self shouldNotImplement 

@@ -4,11 +4,12 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "KevinLanvin 5/11/2016 10:41",
 	"instvars" : [
-		 ],
-	"name" : "MDLFooterNilSection",
+		"leftSection",
+		"rightSection" ],
+	"name" : "MDLSmallFooter",
 	"pools" : [
 		 ],
-	"super" : "MDLFooterAbstractSection",
+	"super" : "MDLWidget",
 	"type" : "normal" }
