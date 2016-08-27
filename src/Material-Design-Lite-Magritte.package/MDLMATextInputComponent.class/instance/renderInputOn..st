@@ -5,7 +5,7 @@ renderInputOn: html
 		with: [ 
 					html mdlTextFieldLabel
 						for: 'input_text';
-						with: self magritteDescription label.
+						with: self magritteDescription comment.
 					html mdlTextFieldInput
 						id: self labelId;
 						on: #string of: self ]

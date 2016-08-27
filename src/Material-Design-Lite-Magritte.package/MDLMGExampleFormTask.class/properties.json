@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Magritte-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLMGExampleFormTask",
+	"pools" : [
+		 ],
+	"super" : "WATask",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Magritte-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"informMessage",
+		"confirmMessage" ],
+	"name" : "MDLMGExampleInformsConfirms",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }

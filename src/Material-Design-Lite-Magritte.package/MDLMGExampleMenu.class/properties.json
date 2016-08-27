@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Magritte-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLMGExampleMenu",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }
