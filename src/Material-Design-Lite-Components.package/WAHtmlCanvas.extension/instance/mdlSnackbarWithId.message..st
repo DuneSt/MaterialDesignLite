@@ -1,7 +1,10 @@
 *Material-Design-Lite-Components
-mdlSnackbar
+mdlSnackbarWithId: id message: message
 	| snackbar |
-	snackbar := MDLSnackbar new.
+	snackbar := MDLSnackbar new
+		id: id;
+		message: message;
+		yourself.
 	self brush: snackbar.
 	snackbar
 		with: [ 
