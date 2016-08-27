@@ -14,7 +14,9 @@ I can have a little icon (a MDL icon or an image or an initial).
 Public API and Key Messages
 -----------------
 
-- #deleteCallback: aBlock						Make the chip deletable.
+- #deleteCallback: aBlock							Make the chip deletable.
+- #ajaxDeleteCallback: aBlock 						Execute a callback and delete the chip in the page with refresh.
+- #ajaxDeleteCallback: aBlock successHook: aString 	Same as before but you can add js on the success of the ajax request.
 
 Examples
 ------------------
@@ -25,6 +27,11 @@ Examples
 	"A Chip with a deleteIcon"
 	html mdlChip
 		deleteCallback: [ self deleteSelectedComponent ];
+		with: 'Example Chip'.
+	
+	"A Chip with a ajax deleteIcon"
+	html mdlChip
+		ajaxDeleteCallback: [ self deleteSelectedComponent ];
 		with: 'Example Chip'.
 	
 	"A Chip with a MDLIcon"
