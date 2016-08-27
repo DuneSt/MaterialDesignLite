@@ -10,5 +10,5 @@
 	"name" : "MDLWidgetsDemo",
 	"pools" : [
 		 ],
-	"super" : "MDLPageWidget",
+	"super" : "AnObsoleteMDLPageWidget",
 	"type" : "normal" }
