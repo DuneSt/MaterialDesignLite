@@ -7,7 +7,7 @@
 	"commentStamp" : "ThomasHeniart 6/7/2016 11:08",
 	"instvars" : [
 		"content" ],
-	"name" : "MDLCardText",
+	"name" : "MDLCardTextContainerWidget",
 	"pools" : [
 		 ],
 	"super" : "MDLWidget",

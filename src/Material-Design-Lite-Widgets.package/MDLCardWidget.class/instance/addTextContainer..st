@@ -1,3 +1,3 @@
 adding
 addTextContainer: aString
-	self addComponentOrBlock: (MDLCardText newWithContent: aString)
+	self addComponentOrBlock: (MDLCardTextContainerWidget newWithContent: aString)
