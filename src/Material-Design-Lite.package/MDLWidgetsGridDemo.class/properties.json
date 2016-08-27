@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "olivierauverlot 7/26/2015 09:33",
+	"commentStamp" : "",
 	"instvars" : [
-		"grid" ],
-	"name" : "MDLWidgetsDemo",
+		 ],
+	"name" : "MDLWidgetsGridDemo",
 	"pools" : [
 		 ],
-	"super" : "MDLPageWidget",
+	"super" : "WAComponent",
 	"type" : "normal" }
