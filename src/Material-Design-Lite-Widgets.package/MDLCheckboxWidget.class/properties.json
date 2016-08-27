@@ -1,0 +1,18 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Form",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/30/2016 21:49",
+	"instvars" : [
+		"label",
+		"checkboxProperties",
+		"rippleEffect",
+		"labelOnRight",
+		"checkbox" ],
+	"name" : "MDLCheckboxWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLHighLevelWidget",
+	"type" : "normal" }
