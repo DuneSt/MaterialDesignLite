@@ -4,12 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "ThomasHeniart 6/7/2016 10:18",
+	"commentStamp" : "ThomasHeniart 6/7/2016 11:16",
 	"instvars" : [
-		"contents",
-		"shadow",
-		"cardActions" ],
-	"name" : "MDLCard",
+		"componentOrBlocks" ],
+	"name" : "MDLCardActionsWidget",
 	"pools" : [
 		 ],
 	"super" : "MDLHighLevelWidget",
