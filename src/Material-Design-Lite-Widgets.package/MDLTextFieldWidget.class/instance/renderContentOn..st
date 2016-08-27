@@ -18,6 +18,7 @@ renderContentOn: html
 			brush
 				onClick: (html jQuery this parent addClass: 'is-focused');
 				onBlur: (html jQuery this parent removeClass: 'is-focused').
+			brush onClick: (html jQuery this parent addClass: 'is-dirty').
 			self addPropertiesToBrush.
 			patternErrorMessage ifNotEmpty: [ html mdlTextFieldError: patternErrorMessage ].
 			self errorMessage ifNotEmpty: [ :message | html mdlTextFieldError: message ] ]

@@ -10,13 +10,5 @@ renderButtonWithIcon: aString callbackMethod: aSymbol disabled: aBoolean on: htm
 			(aBoolean
 				ifFalse: [ html jQuery ajax
 						callback: [ self perform: aSymbol ];
-						onComplete:
-							(html jQuery
-								script: [ :s | 
-									s
-										<<
-											((html jQuery id: tableBodyId) load
-												html: [ :ajaxHtml | self renderTableBodyOn: ajaxHtml ]);
-										<<
-											((html jQuery id: arrowsId) load html: [ :ajaxHtml | self renderTableArrowsOn: ajaxHtml ]) ]) ]);
+						onComplete: (self onCompleteScriptOn: html) ]);
 		with: [ html mdlIcon: aString ]

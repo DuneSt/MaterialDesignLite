@@ -5,5 +5,5 @@ renderLoginDialogOn: html
 		closeButtonId: (closeId := html nextId);
 		with: [ html mdlDialogTitle
 				class: 'mdl-color--primary';
-				with: loginLabel.
+				with: signInTitleLabel.
 			html mdlDialogContent: [ super renderContentOn: html ] ]

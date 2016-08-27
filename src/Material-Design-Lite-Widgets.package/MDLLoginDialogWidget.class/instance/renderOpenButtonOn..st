@@ -5,4 +5,4 @@ renderOpenButtonOn: html
 		raised;
 		colored;
 		rippleEffect;
-		with: loginLabel
+		with: signInButtonLabel
