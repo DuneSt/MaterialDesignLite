@@ -13,11 +13,11 @@ baseline01: spec
 		spec 
 			package: 'Material-Design-Lite' with: [
 				spec requires: #('Seaside3' 'Material-Design-Lite-Components' 'Material-Design-Lite-Widgets' ). ];
+			package: #'Material-Design-Lite-Colors';
 			package: 'Material-Design-Lite-Components';
 			package: 'Material-Design-Lite-Widgets' with: [
-				spec requires: #('Material-Design-Lite-Components' ). ];
-			package: #'Material-Design-Lite-Colors'.
+				spec requires: #('Material-Design-Lite-Components' ). ].
 		spec 
-			group: 'default' with: #('Material-Design-Lite' 'Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' );
+			group: 'all' with: #('colors' 'default' );
 			group: 'colors' with: #(#'Material-Design-Lite-Colors' );
-			group: 'all' with: #('colors' 'default' ). ].
+			group: 'default' with: #('Material-Design-Lite' 'Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' #'Material-Design-Lite-Colors' ). ].
