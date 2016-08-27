@@ -12,7 +12,7 @@ renderBottomLeftMenuOn: html
 					html mdlMenuItem: 'Mandragore'.
 					html mdlMenuItem: 'Nyan' ].
 			html paragraph: 'Menu opening in the bottom left direction' ].
-	html code: [ html preformatted with: 'html mdlButton icon
+	html preformatted: [ html code class: 'smalltalk'; with: 'html mdlButton icon
 	id: #bottomLeftButton;
 	with: [ html mdlIcon: #more_vert ].
 html mdlMenu

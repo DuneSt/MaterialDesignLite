@@ -5,10 +5,12 @@ renderBadgeOverButtonOn: html
 		overlap;
 		style: 'width: fit-content; margin : auto';
 		with: [ html mdlButton: 'Inbox' ].
-	html
-		code: [ html preformatted
+	html preformatted
+		with: [ 
+			html code
+				class: 'smalltalk';
 				with:
-					'html mdlBadge
+						'html mdlBadge
 	dataBadge: ''38'';
 	overlap;
 	style: ''width: fit-content'';

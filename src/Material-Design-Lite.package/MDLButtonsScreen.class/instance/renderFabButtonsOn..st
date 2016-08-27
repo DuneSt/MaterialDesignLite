@@ -2,36 +2,43 @@ as yet unclassified
 renderFabButtonsOn: html
 	html mdlGrid
 		class: 'mdl-typography--text-center';
-		with: [ html mdlLayoutSpacer.
-			html
-				mdlCell: [ html mdlButton
-						fab;
-						with: '+' ]
-				size: 2.
-			html
-				mdlCell: [ html mdlButton
-						fab;
-						rippleEffect;
-						with: '+' ]
-				size: 2.
-			html
-				mdlCell: [ html mdlButton
-						fab;
-						disabled;
-						with: '+' ]
-				size: 2.
-			html mdlLayoutSpacer ].
+		with: [ 
+					html mdlLayoutSpacer.
+					html
+						mdlCell: [ 
+							html mdlButton
+								fab;
+								with: '+' ]
+						size: 2.
+					html
+						mdlCell: [ 
+							html mdlButton
+								fab;
+								rippleEffect;
+								with: '+' ]
+						size: 2.
+					html
+						mdlCell: [ 
+							html mdlButton
+								fab;
+								disabled;
+								with: '+' ]
+						size: 2.
+					html mdlLayoutSpacer ].
 	html mdlGrid
 		class: 'mdl-typography--text-center';
-		with: [ html mdlLayoutSpacer.
-			html mdlCell: 'Plain FAB' size: 2.
-			html mdlCell: 'With ripple' size: 2.
-			html mdlCell: 'Disabled' size: 2.
-			html mdlLayoutSpacer ].
+		with: [ 
+					html mdlLayoutSpacer.
+					html mdlCell: 'Plain FAB' size: 2.
+					html mdlCell: 'With ripple' size: 2.
+					html mdlCell: 'Disabled' size: 2.
+					html mdlLayoutSpacer ].
 	html
-		code: [ html preformatted
+		preformatted: [ 
+			html code
+				class: 'smalltalk';
 				with:
-					'html mdlButton
+						'html mdlButton
 	fab;
 	with: ''+''.
 

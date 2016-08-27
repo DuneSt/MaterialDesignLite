@@ -18,8 +18,7 @@ renderAvatarActionsListOn: html
 											url: '#';
 											with: [ html mdlIcon: #star ] ] ] ].
 			html paragraph: 'List with Avatars and Actions' ].
-	html
-		code: [ html preformatted
+	html preformatted: [ html code class: 'smalltalkt';
 				with:
 					'html mdlList: [ 
 	#(''Bryan Cranston'' ''Aaron Paul'' ''Bob Odenkirk'') do: [ :name | 

@@ -13,8 +13,7 @@ renderListWithIconsOn: html
 												with: #person.
 											html text: name ] ] ] ].
 			html paragraph: 'List with Icons' ].
-	html
-		code: [ html preformatted
+	html preformatted: [ html code class: 'smalltalk';
 				with:
 					'html mdlList: [ 
 	#(''Bryan Cranston'' ''Aaron Paul'' ''Bob Odenkirk'') do: [ :name | 

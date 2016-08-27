@@ -3,12 +3,18 @@ renderSliderWithDefaultValueOn: html
 	html div
 		class: 'mdl-typography--text-center';
 		class: 'centered-content';
-		with: [ html mdlSlider min:0; max: 100; value: 75.
-			html paragraph: 'Slider with a default value' ].
+		with: [ 
+					html mdlSlider
+						min: 0;
+						max: 100;
+						value: 75.
+					html paragraph: 'Slider with a default value' ].
 	html
-		code: [ html preformatted
+		preformatted: [ 
+			html code
+				class: 'smalltalk';
 				with:
-					'html mdlSlider
+						'html mdlSlider
 	min:0;
 	max: 100;
 	value: 75' ]

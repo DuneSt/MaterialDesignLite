@@ -13,4 +13,8 @@ renderWideCardDivOn: html
 						tablet: 8
 						phone: 4
 						with: [ html text: 'Wide' ] ].
-	html code: [ html preformatted with: self wideCardCode ]
+	html preformatted
+		with: [ 
+			html code
+				class: 'smalltalk';
+				with: self wideCardCode ]

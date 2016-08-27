@@ -26,5 +26,5 @@ renderImageCardDivOn: html
 						tablet: 2
 						phone: 2
 						with: [ html text: 'Event' ] ].
-	html code: [ html preformatted with: self imageCardCode ].
-	html code: [ html preformatted with: self eventCardCode ]
+	html preformatted with: [ html code class: 'smalltalk'; with: self imageCardCode ] .
+	html preformatted with: [ html code class: 'smalltalk'; with: self eventCardCode ]

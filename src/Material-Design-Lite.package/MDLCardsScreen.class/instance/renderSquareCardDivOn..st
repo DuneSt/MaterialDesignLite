@@ -13,4 +13,4 @@ renderSquareCardDivOn: html
 						tablet: 8
 						phone: 4
 						with: [ html text: 'Square' ] ].
-	html code: [ html preformatted with: self squareCardCode ]
+	html preformatted with: [ html code class: 'smalltalk'; with: self squareCardCode ]

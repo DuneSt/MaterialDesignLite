@@ -46,8 +46,7 @@ renderAvatarControlsListOn: html
 												value: '1'.
 											html mdlSwitchLabel ] ] ] ].
 			html paragraph: 'List with Avatars and Controls' ].
-	html
-		code: [ html preformatted
+	html preformatted: [ html code class: 'smalltalk';
 				with:
 					'html mdlList
 	style: ''width: 300px'';

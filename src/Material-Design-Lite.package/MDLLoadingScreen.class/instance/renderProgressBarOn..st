@@ -9,8 +9,7 @@ renderProgressBarOn: html
 	this.MaterialProgress.setProgress(44);
 });'.
 			html paragraph: 'Progress bar' ].
-	html
-		code: [ html preformatted
+	html preformatted: [ html code class: 'smalltalk';
 				with:
 					'html mdlProgressBar id: ''progressBar''.
 html script:

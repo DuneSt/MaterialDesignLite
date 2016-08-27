@@ -4,20 +4,24 @@ renderSimpleDialogOn: html
 	idButtonOpen2 := 'mdl_demo_second_dialog_open'.
 	html div
 		class: 'mdl-typography--text-center';
-		with: [ html mdlButton
-				id: idButtonOpen2;
-				raised;
-				rippleEffect;
-				with: 'Show second dialog'.
-			html paragraph: 'Simple dialog' ].
+		with: [ 
+					html mdlButton
+						id: idButtonOpen2;
+						raised;
+						rippleEffect;
+						with: 'Show second dialog'.
+					html paragraph: 'Simple dialog' ].
 	html mdlDialog
 		openButtonId: idButtonOpen2;
-		with: [ html mdlDialogTitle: 'Good job !'.
-			html mdlDialogContent: [ html paragraph with: 'You managed to open the dialog' ] ].
+		with: [ 
+					html mdlDialogTitle: 'Good job !'.
+					html mdlDialogContent: [ html paragraph with: 'You managed to open the dialog' ] ].
 	html
-		code: [ html preformatted
+		preformatted: [ 
+			html code
+				class: 'smalltalk';
 				with:
-					'| idButtonOpen |
+						'| idButtonOpen |
 idButtonOpen := ''mdl_demo_second_dialog_open''.
 
 html mdlButton
