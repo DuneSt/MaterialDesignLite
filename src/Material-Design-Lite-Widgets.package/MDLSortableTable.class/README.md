@@ -6,4 +6,3 @@ Sortable table, renders a table and adds the necessary behavior to navigate trou
 	position:	 the index of the first row to render
 	rows: a table with all the rows
 	selectable: a boolean saying that the cells can be selected or not
-	width: the size ( css style ) of the table

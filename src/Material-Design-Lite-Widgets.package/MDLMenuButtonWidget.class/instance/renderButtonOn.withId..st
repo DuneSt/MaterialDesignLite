@@ -1,8 +1,8 @@
 rendering
 renderButtonOn: html withId: buttonId
-	html mdlButton
+	html div
 		id: 'menuButton' , buttonId;
-		class: 'menuButtonWidgetButton';
+		class: 'menuButtonWidgetButton mdl-button mdl-js-button menuButtonWidgetButton';
 		disabled: self objectsPossibilities isEmpty;
 		with: [ html
 				text:

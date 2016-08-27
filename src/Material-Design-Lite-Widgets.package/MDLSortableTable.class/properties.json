@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "Mo 5/14/2016 20:58",
+	"commentStamp" : "CyrilFerlicot 6/13/2016 12:03",
 	"instvars" : [
 		"title",
 		"header",
@@ -12,7 +12,6 @@
 		"elementsToShow",
 		"unsortedRows",
 		"position",
-		"width",
 		"rowsPerPagePossibilities",
 		"selectable" ],
 	"name" : "MDLSortableTable",

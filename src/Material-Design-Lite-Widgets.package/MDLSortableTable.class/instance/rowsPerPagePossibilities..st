@@ -1,3 +1,4 @@
 accessing
-rowsPerPagePossibilities: anObject
-	rowsPerPagePossibilities := anObject
+rowsPerPagePossibilities: aCollection
+	rowsPerPagePossibilities := aCollection.
+	aCollection ifNotEmpty: [ self elementsToShow: aCollection first ]

@@ -1,12 +1,12 @@
 rendering
-renderFooterPaginationOn: aRenderer
-	aRenderer mdlCardTextContainer 
+renderFooterPaginationOn: html
+	html mdlCardTextContainer 
 		with: [ 
-			aRenderer div
+			html div
 				mdlTypographyTextRight;
 				with: [ 
-						aRenderer text: 'Rows per page: '.
-						aRenderer
+						html text: 'Rows per page: '.
+						html
 							render:
 								((MDLMenuButtonWidget
 									possibilities: rowsPerPagePossibilities
@@ -16,9 +16,9 @@ renderFooterPaginationOn: aRenderer
 										sortBlock: [ :a :b | a key asInteger <= b key asInteger ])
 										yourself.
 									
-						aRenderer text: '	'.
-						aRenderer text: position asString, ' - ', (position + elementsToShow - 1) asString, '  of ', self rows size asString.
-						aRenderer text: '	'.
+						html text: '	'.
+						html text: position asString, ' - ', (position + elementsToShow - 1) asString, '  of ', self rows size asString.
+						html text: '	'.
 						
-						aRenderer anchor callback: [ self previousPosition ]; with: [aRenderer mdlButton colored;icon ; with: [ aRenderer mdlIcon: 'keyboard_arrow_left' ] ].
-						aRenderer anchor callback: [ self nextPosition ]; with: [aRenderer mdlButton colored;icon ; with: [ aRenderer mdlIcon: 'keyboard_arrow_right' ] ] ] ]
+						html anchor callback: [ self previousPosition ]; with: [html mdlButton colored;icon ; with: [ html mdlIcon: 'keyboard_arrow_left' ] ].
+						html anchor callback: [ self nextPosition ]; with: [html mdlButton colored;icon ; with: [ html mdlIcon: 'keyboard_arrow_right' ] ] ] ]
