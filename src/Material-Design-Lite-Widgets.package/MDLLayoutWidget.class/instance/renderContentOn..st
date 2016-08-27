@@ -1,10 +1,7 @@
 rendering
 renderContentOn: html
-	html mdlLayout: [ 
-		html mdlLayoutHeader: [ 
-			html mdlLayoutHeaderRow: [ 
-				html mdlLayoutTitle: self title.
-				html mdlLayoutSpacer.
-				self renderLinksOn: html ] ].
-		html mdlLayoutContent: [ 
-			self content ] ]
+	(html brush: brush)
+		with: [ 
+			html render: headerSection.
+			html render: drawerSection.
+			html mdlLayoutContent: contentBlock ]

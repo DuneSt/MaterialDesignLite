@@ -1,5 +1,9 @@
 initialization
 initialize
 	super initialize.
-	links := OrderedCollection new.
-	title := 'Add a title to your header'
+	title := 'Define a title'.
+	icon := MDLIconComponent new.
+	headerSection := MDLNilLayoutSection new.
+	drawerSection := MDLNilLayoutSection new.
+	contentBlock := [ ].
+	brush := MDLLayout new. 

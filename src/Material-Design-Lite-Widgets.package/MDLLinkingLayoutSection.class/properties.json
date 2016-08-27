@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"title",
-		"icon",
-		"headerSection",
-		"drawerSection",
-		"contentBlock",
-		"brush" ],
-	"name" : "MDLLayoutWidget",
+		"links" ],
+	"name" : "MDLLinkingLayoutSection",
 	"pools" : [
 		 ],
-	"super" : "MDLWidget",
+	"super" : "MDLAbstractLayoutSection",
 	"type" : "normal" }

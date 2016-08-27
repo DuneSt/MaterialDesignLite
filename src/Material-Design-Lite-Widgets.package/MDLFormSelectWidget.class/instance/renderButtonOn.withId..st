@@ -2,7 +2,6 @@ rendering
 renderButtonOn: html withId: buttonId
 	html mdlButton
 		id: buttonId;
-		bePush;
 		class: 'menuButtonWidgetButton';
 		disabled: self objectsPossibilities isEmpty;
 		with: [ 
