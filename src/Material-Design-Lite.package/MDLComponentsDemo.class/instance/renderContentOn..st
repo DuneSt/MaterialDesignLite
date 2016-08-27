@@ -1,6 +1,6 @@
 rendering
 renderContentOn: html
-	html mdlTabs: [ 
+	html mdlTabs rippleEffect; with: [ 
 		self renderTabBarOn: html.
 		
 		"here are the panels tht you can switch between using the tab bar"
