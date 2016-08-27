@@ -1,6 +1,9 @@
 instance creation
 newApplicationNamed: aName
 	| app |
-	app := self new applicationName: aName.
-	WAAdmin register: self asApplicationAt: aName.
+	self new applicationName: aName.
+	app := WAAdmin register: self asApplicationAt: aName.
+	app
+		addLibrary: JQDeploymentLibrary;
+		addLibrary: JQUiDeploymentLibrary.
 	^ app

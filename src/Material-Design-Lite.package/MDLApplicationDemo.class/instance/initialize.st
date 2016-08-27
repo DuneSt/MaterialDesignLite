@@ -1,8 +1,8 @@
 initialization
 initialize
-	| screen header |
+	| screen footer |
 	super initialize.
 	screen := MDLExampleScreen new.
-	header := (MDLHeader new links: self initializeLinks; yourself) beCollapsible.
-	screen := screen addDecoration: (MDLScreenHeader newWithHeader: header).
+	footer := self initializeFooter.
+	screen := screen addDecoration: (MDLScreenFooter newWithFooter: footer).
 	self addScreen: screen
