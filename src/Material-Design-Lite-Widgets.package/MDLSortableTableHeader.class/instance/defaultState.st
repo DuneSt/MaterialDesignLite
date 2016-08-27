@@ -1,0 +1,3 @@
+accessing
+defaultState
+	^ MDLSortableTableHeaderElementUnsorted

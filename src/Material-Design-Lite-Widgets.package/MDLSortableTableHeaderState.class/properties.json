@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Table",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"nextState" ],
+	"name" : "MDLSortableTableHeaderState",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
