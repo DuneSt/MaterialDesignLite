@@ -1,4 +1,7 @@
 accessing
 defaultValueBasedOn: aLabelMap
-	^ (self selectedObject ifNil: [ self possibilities ifEmpty: [ nil ] ifNotEmpty: [ self possibilities first ] ])
-		ifNotNil: [ :obj | aLabelMap keyAtValue: obj ifAbsent: [ self error: 'The selected object is not in the possibilities collection.' ] ]
+	(self selectedObject isNil and: [ self possibilities isEmpty ]) ifTrue: [ ^ nil ].
+	
+	^ aLabelMap
+		keyAtValue: (self selectedObject ifNil: [ self possibilities first ])
+		ifAbsent: [ self error: 'The selected object is not in the possibilities collection.' ]
