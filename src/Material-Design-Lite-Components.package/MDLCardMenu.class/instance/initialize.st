@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	self class: 'mdl-card__subtitle-text'
+	self class: 'mdl-card__menu'
