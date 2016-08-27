@@ -3,8 +3,8 @@ renderContentOn: html
 	| inputId brush |
 	inputId := html nextId.
 	html mdlTextFieldContainer
-		beFloatingLabelIf: beFloatingLabel;
-		beExpandableIf: beExpandable;
+		beFloatingLabelIf: isFloatingLabel;
+		beExpandableIf: isExpandable;
 		with: [ label
 				ifNotNil: [ html mdlTextFieldLabel
 						for: inputId;

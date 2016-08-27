@@ -1,6 +1,6 @@
 initialization
 initialize
 	super initialize.
-	beExpandable := false.
-	beFloatingLabel := false.
+	isExpandable := false.
+	isFloatingLabel := false.
 	textInputProperties := Dictionary new

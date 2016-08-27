@@ -6,10 +6,10 @@
 		 ],
 	"commentStamp" : "ThomasHeniart 6/17/2016 15:06",
 	"instvars" : [
-		"beFloatingLabel",
-		"beExpandable",
 		"label",
-		"textInputProperties" ],
+		"textInputProperties",
+		"isExpandable",
+		"isFloatingLabel" ],
 	"name" : "MDLTextFieldWidget",
 	"pools" : [
 		 ],

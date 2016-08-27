@@ -1,3 +1,3 @@
 options
 beExpandable
-	beExpandable := true
+	isExpandable := true

@@ -1,0 +1,3 @@
+accessing
+isFloatingLabel
+	^ isFloatingLabel
