@@ -5,7 +5,7 @@ renderTabBarOn: html
 		html mdlTab url: '#headerNavigation'; with: 'Header Navigation'.
 		html mdlTab url: '#footer'; with: 'Footer'.
 		html mdlTab url: '#buttons'; with: 'Buttons'.
-		html mdlTab url: '#tables' ; with: 'Tables'.
+		html mdlTab url: '#tablesnlists' ; with: 'Tables & Lists'.
 		html mdlTab url: '#forms'; with: 'Forms'.
 		html mdlTab url: '#cards'; with: 'Cards'.
 		html mdlTab url: '#tooltips' ; with: 'Tooltips'.

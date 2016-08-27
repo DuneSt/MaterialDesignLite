@@ -5,14 +5,14 @@ renderFormsPanelOn: html
 		id: 'forms';
 		with: [ 
 			html form: [ 
+				html heading level4 with: 'Text fields'.
 				html mdlTextFieldContainer expandable; with: [ 
 					html mdlClickableIconContainer for: 'bigorneau'; with: [ 
 						html mdlIcon: 'search' ].
 					html mdlTextFieldExpandableHolder: [ 
 						html mdlTextFieldInput id: 'bigorneau'; type: 'text'.
 						html mdlTextFieldLabel for: 'bigorneau-expandable'; with: 'Expandable Input'  ] ].
-				
-				html heading level4 with: 'Text fields'.
+				html break.
 				html mdlTextFieldContainer floatingLabel; with: [ 
 					html mdlTextFieldLabel for: 'input_text'; with: 'First name'.
 					html mdlTextFieldInput id: 'input_text'; type: 'text' ].
