@@ -5,8 +5,9 @@ renderContentOn: html
 	html mdlIcon
 		id: id;
 		with: self label.
-
-	(self helpText isNil or: [ self helpText isEmpty ]) ifTrue: [ ^ self ].
+		
+	(self helpText isNil or: [ self helpText isEmpty ])
+		ifTrue: [ ^ self ].
 		
 	html mdlTooltip
 		large;
