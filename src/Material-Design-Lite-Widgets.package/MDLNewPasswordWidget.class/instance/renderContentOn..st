@@ -6,7 +6,8 @@ renderContentOn: html
 				beFloatingLabel;
 				type: 'password';
 				callback: [ :aString | 
-					(MD5 hashMessage: aString) = currentPassword
+					rightOldPassword := (MD5 hashMessage: aString) = currentPassword.
+					rightOldPassword
 						ifFalse: self badPasswordBlock ];
 				label: self oldPasswordLabel;
 				yourself).
@@ -27,4 +28,5 @@ renderContentOn: html
 				callback: [ :aString | 
 					aString = newPassword
 						ifFalse: self notMatchingPasswordsBlock
-						ifTrue: [ self onSuccessBlock value: aString ] ])
+						ifTrue: [ rightOldPassword
+								ifTrue: [ self onSuccessBlock value: aString ] ] ])

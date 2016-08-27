@@ -13,7 +13,9 @@
 		"newPasswordLabel",
 		"onSuccessBlock",
 		"confirmPasswordLabel",
-		"notMatchingPasswordsBlock" ],
+		"notMatchingPasswordsBlock",
+		"onEnterScript",
+		"rightOldPassword" ],
 	"name" : "MDLNewPasswordWidget",
 	"pools" : [
 		 ],
