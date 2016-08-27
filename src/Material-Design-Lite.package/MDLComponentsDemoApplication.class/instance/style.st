@@ -33,10 +33,6 @@ style
 	}
 	
 	
- 	.wa-toolbar { 
-		display: none;
- 	}
-	
 	.mdl-layout__content { 
 		overflow: visible;
 	}
