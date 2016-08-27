@@ -1,3 +1,3 @@
 options
 resetType
-	type := nil
+	type := 'button'
