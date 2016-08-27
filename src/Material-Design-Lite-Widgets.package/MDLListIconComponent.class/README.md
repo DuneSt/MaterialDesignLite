@@ -1,0 +1,1 @@
+I am a simple component to display a MDL icon in a nested list component. You can check the demo of MDLNestedList.
