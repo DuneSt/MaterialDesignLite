@@ -10,5 +10,5 @@
 	"name" : "MDLButton",
 	"pools" : [
 		 ],
-	"super" : "WAAnchorTag",
+	"super" : "WAButtonTag",
 	"type" : "normal" }

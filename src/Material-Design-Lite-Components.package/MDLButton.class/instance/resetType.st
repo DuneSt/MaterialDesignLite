@@ -1,0 +1,3 @@
+options
+resetType
+	type := nil
