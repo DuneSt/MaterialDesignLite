@@ -6,8 +6,8 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"header" ],
-	"name" : "MDLScreenHeader",
+		"layout" ],
+	"name" : "MDLScreenLayout",
 	"pools" : [
 		 ],
 	"super" : "WADecoration",
