@@ -22,7 +22,9 @@ style
 		color: rgb(0,0,0);
 		padding: 20px 10px;
 	}
-	
+	pre:hover { 
+		background-color: rgba(0,0,0,0.1);
+	 }
 	.centered-content { 
 		margin: auto;
 		width: intrinsic;           /* Safari/WebKit uses a non-standard name */
