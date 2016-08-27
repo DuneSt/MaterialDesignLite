@@ -12,9 +12,7 @@ createFormBasedOn: formChooser
 				yourself);
 		yourself.
 	
-	theForm magritteDescription twbsInlineValidationMessages: formChooser isValidationMessageStyleInline.
 	formChooser isLayoutStyleFormInline ifTrue: [
-		theForm magritteDescription twbsFormInline: true.
 		"inline styles look better without comments"
 		theForm magritteDescription do: [ :aDescription |
 			aDescription comment: nil ] ].

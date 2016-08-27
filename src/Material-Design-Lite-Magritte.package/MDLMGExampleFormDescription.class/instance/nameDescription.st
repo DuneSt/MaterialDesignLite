@@ -8,6 +8,5 @@ nameDescription
 		beRequired;
 		requiredErrorMessage: 'We cannot proceed without a name.';
 		comment: 'Please enter your name';
-		componentClass: MDLMATextInputComponent; "is required for placeholder text below"
-		placeholder: 'your name';
+		componentClass: MDLMATextInputComponent;
 		yourself
