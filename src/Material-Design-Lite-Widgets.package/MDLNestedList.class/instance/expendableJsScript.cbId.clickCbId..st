@@ -46,9 +46,9 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
        success : function(html_code, statut){
 			$(''.expList'').prepend(html_code);
 			var list = $(''.expList'')[0];           
-			for(var i=0;i<' , self listElementsDynamicalLoadingStep asString
+			while(list.length > ' , self listMaxSize asString
 		,
-			';i++){
+			'){
 				$(''.listContainer'')[0].scrollTop = $(''.listContainer'')[0].scrollTop + $(list.lastChild).height();
 				list.removeChild(list.lastChild);
 				
@@ -72,9 +72,9 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
        success : function(html_code, statut){
 			$(''.expList'').append(html_code);
 			var list = $(''.expList'')[0];           
-			for(var i=0;i<' , self listElementsDynamicalLoadingStep asString
+			while(list.length > ' , self listMaxSize asString
 		,
-			';i++){
+			'){
 				$(''.listContainer'')[0].scrollTop = $(''.listContainer'')[0].scrollTop - $(list.firstChild).height();
 				list.removeChild(list.firstChild);
 				
