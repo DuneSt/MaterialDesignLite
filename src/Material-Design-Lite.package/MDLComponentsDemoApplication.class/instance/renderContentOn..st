@@ -2,7 +2,9 @@ rendering
 renderContentOn: html
 	html mdlLayout fixedDrawer
 		with: [ html
-				mdlLayoutDrawer: [ html mdlLayoutTitle: 'Components'.
+				mdlLayoutDrawer
+				class: 'mdl-color--white';
+				with: [ html mdlLayoutTitle: 'Components'.
 					screens
 						do: [ :each | 
 							html
@@ -13,4 +15,5 @@ renderContentOn: html
 										ifFalse: [ html mdlNavigationLink callback: [ self activeScreen: each ] ])
 										with: [
 											html text: each title ] ] ] ].
-			html mdlLayoutContent: [ html render: activeScreen ] ]
+			html mdlLayoutContent
+				class: 'mdl-color--light-grey';with: [ html render: activeScreen ] ]
