@@ -1,7 +1,7 @@
 accessing
 simpleChips
 	^ OrderedDictionary new
-		add: self simpleChip;
-		add: self removableChip;
-		add: self ajaxRemovableChip;
+		add: 'Simple Chip' -> #renderSimpleChipOn:;
+		add: 'Deletable Chip' -> #renderRemovableChipOn:;
+		add: 'Deletable Ajax Chip' -> #renderAjaxRemovableChipOn:;
 		yourself

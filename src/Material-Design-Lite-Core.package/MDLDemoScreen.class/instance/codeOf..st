@@ -1,6 +1,8 @@
 accessing
-codeOf: aBlock
-	"I return the code inside a block. The block should have on parameter called 'html' and should be formated.' "
+codeOf: aSymbole
+	"I take a method selector I contains and return his source code without the declaration."
 
-	self flag: #todo.	"This should be used everywhere in the demo"
-	^ aBlock asString copyFrom: 11 to: aBlock asString size - 2
+	self
+		flag:
+			#'For now the line ending in Pharo is cr but it will change in the future. Infortunatly there is no way to know the current line ending, so this method will need to be updated by hand during the change.'.
+	^ (self class >> aSymbole) sourceCode copyAfter: Character cr

@@ -1,14 +1,14 @@
 rendering
-render: componentsMap on: html
+render: componentsMap withCardSizeOf: anInteger on: html
 	html mdlGrid
 		class: 'examples';
 		with: [ 
 					componentsMap
-						valuesDo: [ :block | 
+						valuesDo: [ :symbol | 
 							html mdlLayoutSpacer.
 							html mdlCell
-								size: 2;
-								with: [ block value: html ] ].
+								size: anInteger;
+								with: [ self perform: symbol with: html ] ].
 					html mdlLayoutSpacer ].
 	html
 		mdlGrid: [ 
@@ -16,13 +16,13 @@ render: componentsMap on: html
 				keysDo: [ :title | 
 					html mdlLayoutSpacer.
 					html mdlCell
-						size: 2;
+						size: anInteger;
 						with: title ].
 			html mdlLayoutSpacer ].
 	componentsMap
-		valuesDo: [ :block | 
+		valuesDo: [ :symbol | 
 			html
 				preformatted: [ 
 					html code
 						class: 'smalltalk';
-						with: (self codeOf: block) ] ]
+						with: (self codeOf: symbol) ] ]
