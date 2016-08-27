@@ -86,5 +86,5 @@ nestedListCss
 .expanded {
     border-style: solid;
     border-width: 1px 0;
-    border-color: rgba(0,0,0,.07);
+    border-color: rgb(220,220,220);
 }'
