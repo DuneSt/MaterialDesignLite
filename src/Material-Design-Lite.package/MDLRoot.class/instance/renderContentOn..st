@@ -10,7 +10,7 @@ renderContentOn: html
 		self renderButtonsPanelOn: html.
 		self renderTablesPanelOn: html.
 		self renderFormsPanelOn: html.
-		self renderDropdownMenuPanelOn: html.
+		self renderCardPanelOn: html.
 		self renderTooltipsPanelOn: html.
 		self renderMiscPanelOn: html.
 	]

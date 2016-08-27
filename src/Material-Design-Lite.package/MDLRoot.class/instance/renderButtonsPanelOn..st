@@ -17,4 +17,7 @@ renderButtonsPanelOn: html
 			html mdlButton rippleEffect; fab; colored; with: [ html mdlIcon: 'add' ].
 			html mdlButton rippleEffect; fab; miniFab; with: [ html mdlIcon: 'add' ].
 			html mdlButton rippleEffect; icon; with: [ html mdlIcon: 'mood' ].
+			
+			html heading level: 4; with: 'Dropdown menu'.
+			self renderDropdownMenuOn: html.
 		]

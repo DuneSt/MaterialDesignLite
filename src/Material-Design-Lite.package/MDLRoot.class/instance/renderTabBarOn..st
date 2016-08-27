@@ -7,7 +7,7 @@ renderTabBarOn: html
 		html mdlTab url: '#buttons'; with: 'Buttons'.
 		html mdlTab url: '#tables' ; with: 'Tables'.
 		html mdlTab url: '#forms'; with: 'Forms'.
-		html mdlTab url: '#dropdown'; with: 'Dropdown menu'.
+		html mdlTab url: '#cards'; with: 'Cards'.
 		html mdlTab url: '#tooltips' ; with: 'Tooltips'.
 		html mdlTab url: '#misc' ; with: 'Misc'
 	]

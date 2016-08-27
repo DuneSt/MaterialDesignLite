@@ -4,8 +4,12 @@ renderMiscPanelOn: html
 		id: 'misc';
 		with: [ 
 			html heading level4; with: 'Badges'.
-			html mdlIconBadge dataBadge: '2'; with: #account_box.
-			html mdlBadge dataBadge: '4'; with: 'Inbox'.
+			html mdlGrid: [ 
+				html mdlCellDesktop: 6 tablet: 4 phone: 2	with: [ html mdlIconBadge dataBadge: '2'; with: #account_box ].
+				html mdlCell desktopSize: 6; tabletSize: 4; hidePhone; with: [ html mdlBadge dataBadge: '4'; with: 'Inbox' ].
+			].
+			"html mdlIconBadge dataBadge: '2'; with: #account_box"
+			"html mdlBadge dataBadge: '4'; with: 'Inbox'."
 			html heading level4; with: 'Progress bar'.
 			html mdlProgressBar.
 			html break.
