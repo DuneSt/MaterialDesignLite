@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLCardWidget",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }
