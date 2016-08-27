@@ -1,3 +1,3 @@
 defaults
 blueGrey
-	^ self tint: #blueGrey
+	^ self tint: #blue_grey

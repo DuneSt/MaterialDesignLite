@@ -1,3 +1,3 @@
 defaults
 lightGreen
-	^ self tint: #lightGreen
+	^ self tint: #light_green

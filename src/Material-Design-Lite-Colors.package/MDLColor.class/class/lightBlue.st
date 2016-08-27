@@ -1,3 +1,3 @@
 defaults
 lightBlue
-	^ self tint: #lightBlue
+	^ self tint: #light_blue

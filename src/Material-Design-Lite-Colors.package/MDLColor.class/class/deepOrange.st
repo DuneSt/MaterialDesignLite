@@ -1,3 +1,3 @@
 defaults
 deepOrange
-	^ self tint: #deepOrange
+	^ self tint: #deep_orange

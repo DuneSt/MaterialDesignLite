@@ -1,3 +1,3 @@
 defaults
 deepPurple
-	^ self tint: #deepPurple
+	^ self tint: #deep_purple
