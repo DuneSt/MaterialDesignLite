@@ -22,4 +22,7 @@ style
     color: #fff;
   }
 
+ .mdl-snackbar { 
+	 z-index: 99999999;
+ }
 '
