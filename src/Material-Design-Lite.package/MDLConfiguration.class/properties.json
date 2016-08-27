@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Example",
+	"classinstvars" : [
+		"server",
+		"application" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLConfiguration",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

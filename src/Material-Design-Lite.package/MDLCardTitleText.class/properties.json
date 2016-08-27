@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/21/2015 14:20",
+	"instvars" : [
+		"level" ],
+	"name" : "MDLCardTitleText",
+	"pools" : [
+		 ],
+	"super" : "MDLCardInnerDiv",
+	"type" : "normal" }
