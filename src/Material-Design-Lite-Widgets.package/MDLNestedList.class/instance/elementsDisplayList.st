@@ -8,7 +8,8 @@ elementsDisplayList
 			self elements
 				indexOf: self selectedEntity
 				ifAbsent: [ self elements detectIndex: [ :element | self isIncludingSelectedChildren: element ] ] ]
-				on: MessageNotUnderstood
+				on: NotFound
 				do: [ 1 ]) - (self listMaxSize / 2) max: 1.
+				self flag: #check. "Before we catched MessageNotUnderstood but I think this was a mistake. I changed it for NotFound, we need to check if this is correct."
 			overflow := 0 max: start + self listMaxSize - self elements size.
 			self elements copyFrom: start - overflow to: start + self listMaxSize - 1 - overflow ]
