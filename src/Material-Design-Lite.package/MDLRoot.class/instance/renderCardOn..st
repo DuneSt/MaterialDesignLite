@@ -17,6 +17,7 @@ renderCardOn: html
   }
 </style>
 '.
+
 	html
 		mdlCell: [ 
 			html

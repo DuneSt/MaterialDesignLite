@@ -7,14 +7,12 @@ renderContentOn: html
 		self renderGridPanelOn: html.
 		self renderHeaderNavigationPanelOn: html.
 		self renderFooterPanelOn: html.
-		"self renderTabsPanelOn: html.
 		self renderButtonsPanelOn: html.
 		self renderTablesPanelOn: html.
 		self renderFormsPanelOn: html.
 		self renderDropdownMenuPanelOn: html.
 		self renderTooltipsPanelOn: html.
-		self renderInconsPanelOn: html."
-		
+		self renderIconsPanelOn: html.
 	]
 
 	

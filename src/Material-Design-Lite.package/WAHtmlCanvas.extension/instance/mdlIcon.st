@@ -1,3 +1,5 @@
 *Material-Design-Lite
 mdlIcon
-	^ self brush: MDLIcon new 
+	"Return a MDL glyph icon"
+
+	^self brush: MDLIcon new
