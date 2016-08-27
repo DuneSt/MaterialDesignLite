@@ -7,6 +7,7 @@ SystemOrganization addCategory: 'Material-Design-Lite-Components-Footer'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Forms'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-IconToggle'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Layout'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-List'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Loading'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Nav'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Snackbar'!
