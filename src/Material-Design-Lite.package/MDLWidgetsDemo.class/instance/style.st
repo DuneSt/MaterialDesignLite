@@ -23,4 +23,17 @@ style
   	 background: #fafafa;
   	 position: relative;
  }
+
+ th a {
+	font-family: ''Roboto'', sans-serif;
+	color: rgb(138,138,138);
+   font-size: 12px;
+   text-decoration: none;
+ }
+
+ td a { 
+	font-family: ''Roboto'', sans-serif;
+	color: rgb(222,222,222);
+   font-size: 13px;
+ }
 '
