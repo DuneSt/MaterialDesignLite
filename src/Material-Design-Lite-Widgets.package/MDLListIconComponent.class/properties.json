@@ -11,5 +11,5 @@
 	"name" : "MDLListIconComponent",
 	"pools" : [
 		 ],
-	"super" : "SYNComponent",
+	"super" : "WAComponent",
 	"type" : "normal" }
