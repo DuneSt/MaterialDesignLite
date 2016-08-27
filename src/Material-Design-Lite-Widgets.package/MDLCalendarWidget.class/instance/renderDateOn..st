@@ -5,11 +5,11 @@ renderDateOn: html
 		tablet: 6
 		phone: 2
 		with: [ self
-				renderButtonNamed: calendar currentDate monthName
+				renderAnchorNamed: calendar currentDate monthName
 				renderingMethod: #renderMonthesOn:
 				on: html.
 			html space.
 			self
-				renderButtonNamed: calendar currentDate year greaseString
+				renderAnchorNamed: calendar currentDate year greaseString
 				renderingMethod: #renderYearsOn:
 				on: html ]

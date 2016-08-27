@@ -10,7 +10,7 @@ renderButtonWithIcon: anIcon action: aSymbol on: html
 						callback: [ self perform: aSymbol ];
 						onComplete:
 							((html jQuery id: calendarId) load
-								html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
+								html: [ :ajaxHtml | self renderCalendarCardOn: ajaxHtml ]));
 				icon;
 				rippleEffect;
 				style: 'color: rgba(0,0,0,0.7)';

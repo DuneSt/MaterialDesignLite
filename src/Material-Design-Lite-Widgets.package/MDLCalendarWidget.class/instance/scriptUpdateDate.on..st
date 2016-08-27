@@ -5,7 +5,7 @@ scriptUpdateDate: aDate on: html
 			(html jQuery ajax
 				callback: [ self updateCalendarDayWith: aDate ];
 				onComplete:
-					((html jQuery id: calendarId) load html: [ :ajaxHtml | self renderCalendarOn: html ]));
+					((html jQuery id: calendarId) load html: [ :ajaxHtml | self renderCalendarCardOn: html ]));
 		add: ((html jQuery: '.active') removeClass: 'active');
 		add: (html jQuery this addClass: 'active');
 		yourself

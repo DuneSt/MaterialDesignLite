@@ -1,5 +1,5 @@
 rendering
-renderCalendarOn: html
+renderCalendarCardOn: html
 	html
 		render:
 			(MDLCardWidget new

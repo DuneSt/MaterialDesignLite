@@ -1,5 +1,5 @@
 private-rendering
-renderButtonNamed: aString renderingMethod: aSymbol on: html
+renderAnchorNamed: aString renderingMethod: aSymbol on: html
 	html mdlButton
 		rippleEffect;
 		onClick:
