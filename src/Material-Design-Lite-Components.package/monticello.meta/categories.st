@@ -6,3 +6,4 @@ SystemOrganization addCategory: 'Material-Design-Lite-Components-Forms'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Layout'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Nav'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Tables'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Tooltips'!

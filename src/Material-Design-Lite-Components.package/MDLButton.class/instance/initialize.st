@@ -3,4 +3,3 @@ initialize
 	super initialize.
 	self class: 'mdl-button'.
 	self class: 'mdl-js-button'.
-	hasConflictualOptions := false

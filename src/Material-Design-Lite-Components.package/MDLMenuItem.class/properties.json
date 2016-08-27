@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "KevinLanvin 7/21/2015 14:19",
+	"commentStamp" : "KevinLanvin 7/22/2015 17:21",
 	"instvars" : [
 		 ],
-	"name" : "MDLButton",
+	"name" : "MDLMenuItem",
 	"pools" : [
 		 ],
-	"super" : "WAAnchorTag",
+	"super" : "WATagBrush",
 	"type" : "normal" }
