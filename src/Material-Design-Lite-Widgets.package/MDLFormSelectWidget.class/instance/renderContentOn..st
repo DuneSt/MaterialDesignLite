@@ -6,6 +6,6 @@ renderContentOn: html
 	menuId := html nextId.
 	self renderHiddenInput: html withId: hiddenInputId.
 	self renderButtonOn: html withId: buttonId.
-	self renderMenuOn: html withId: menuId buttonId: buttonId.
 	self renderTooltipOn: html forId: buttonId.
+	self renderMenuOn: html withId: menuId buttonId: buttonId.
 	html script: (self generateJavascriptForButtonId: buttonId menuId: menuId hiddenInputId: hiddenInputId)

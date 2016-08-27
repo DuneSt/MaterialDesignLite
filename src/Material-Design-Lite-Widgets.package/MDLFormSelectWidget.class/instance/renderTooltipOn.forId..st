@@ -3,6 +3,6 @@ renderTooltipOn: html forId: buttonId
 	self description
 		ifNotNilDo: [ :descr | 
 			html mdlTooltip
-				for: 'menuButton' , buttonId;
+				for: buttonId;
 				large;
 				with: [ html text: descr ] ]
