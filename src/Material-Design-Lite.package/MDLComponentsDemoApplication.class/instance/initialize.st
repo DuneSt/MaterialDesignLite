@@ -1,9 +1,10 @@
 initialization
 initialize
 	super initialize.
-	self defaultScreens
+	self screens: (self class defaultScreenClasses collect: [ :aScreenClass | aScreenClass new ]).
+	self screens
 		do: [ :each | 
 			each addDecoration: (MDLScreenLayout newWithLayout: self initializeLayout).
-			each addDecoration: (MDLScreenFooter newWithFooter: self initializeFooter).
-			self addScreen: each ].
-	activeScreen := screens first
+			each addDecoration: (MDLScreenFooter newWithFooter: self initializeFooter) ].
+	activeScreen := screens first.
+	self colors: 'light_green-deep_orange'

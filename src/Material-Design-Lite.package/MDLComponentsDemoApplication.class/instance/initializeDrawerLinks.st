@@ -1,6 +1,8 @@
 initialization
 initializeDrawerLinks
-	|dico |
-	dico := Dictionary new.
-	self defaultScreens do: [ :aScreen | dico at: aScreen title put: [ self activeScreen: aScreen ] ].
-	^ Array with: dico
+	^ screens
+		collect: [ :aScreen | 
+			MDLNavigationLinkWithIconComponent new
+				callback: [ self activeScreen: aScreen ];
+				icon: aScreen icon;
+				label: aScreen title ]

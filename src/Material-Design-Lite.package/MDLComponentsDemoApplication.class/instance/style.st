@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 style
 	^super style , '::-webkit-scrollbar { 
 		display: none; 
@@ -7,6 +7,9 @@ style
 		font-weight: 700;
 	}
 	
+	.mdl-layout__drawer { 
+		background-color: white
+	 }
 	pre {
 		background-color: #eee;
 		padding: 10px;

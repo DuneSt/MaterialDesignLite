@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Example-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLDemoLibrary",
+	"pools" : [
+		 ],
+	"super" : "WAFileLibrary",
+	"type" : "normal" }
