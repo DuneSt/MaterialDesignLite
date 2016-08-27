@@ -1,15 +1,12 @@
 as yet unclassified
-for: buttonId
-	self id: buttonId, '-dialog'.
+openButtonClass: class
+   self id ifNil: [ self id: class, '-dialog' ].
 	self script: (JSStream on: 
 		'var dialog = document.querySelector(''#', self id, ''');
-       var showDialogButton = document.querySelector(''#', buttonId,''');
+       var showDialogButton = document.querySelector(''.', class,''');
        if (! dialog.showModal) {
          dialogPolyfill.registerDialog(dialog);
        }
        showDialogButton.addEventListener(''click'', function() {
          dialog.showModal();
-       });
-       dialog.querySelector(''.close'').addEventListener(''click'', function() {
-         dialog.close();
        });')
