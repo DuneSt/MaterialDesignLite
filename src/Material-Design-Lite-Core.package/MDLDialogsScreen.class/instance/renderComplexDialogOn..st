@@ -1,32 +1,20 @@
-rendering
+code
 renderComplexDialogOn: html
 	| idButtonOpen idButtonClose |
-	idButtonOpen := 'mdl_demo_dialog_open'.
-	idButtonClose := 'mdl_demo_dialog_close'.
-	html div
-		class: 'examples';
-		with: [ 
-					html mdlButton
-						id: idButtonOpen;
-						raised;
-						rippleEffect;
-						with: 'Show dialog'.
-					html paragraph: 'Dialog with buttons' ].
+	html mdlButton
+		id: (idButtonOpen := 'mdl_demo_dialog_open');
+		raised;
+		rippleEffect;
+		with: 'Show dialog'.
+		
 	html mdlDialog
 		openButtonId: idButtonOpen;
-		closeButtonId: idButtonClose;
+		closeButtonId: (idButtonClose := 'mdl_demo_dialog_close');
 		with: [ 
-					html mdlDialogTitle: 'Good job !'.
-					html mdlDialogContent: [ html paragraph with: 'You have not managed to click the button' ].
-					html
-						mdlDialogActions: [ 
-							html mdlButton: 'Agree'.
-							html mdlButton
-								id: idButtonClose;
-								with: 'Disagree' ] ].
-	html
-		preformatted: [ 
-			html code
-				class: 'smalltalk';
-				with:
-						self complexDialogCode ]
+			html mdlDialogTitle: 'Good job !'.
+			html mdlDialogContent: [ html paragraph: 'You have not managed to click the button' ].
+			html mdlDialogActions: [
+				html mdlButton: 'Agree'.
+				html mdlButton
+					id: idButtonClose;
+					with: 'Disagree' ] ]

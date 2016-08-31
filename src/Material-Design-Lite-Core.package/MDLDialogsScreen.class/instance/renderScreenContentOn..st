@@ -1,6 +1,4 @@
 rendering
 renderScreenContentOn: html
-	self renderSimpleDialogOn: html.
-	html break.
-	html break.
-	self renderComplexDialogOn: html
+	self render: self simpleDialog withCardSizeOf: 4 on: html.
+	self render: self complexDialog withCardSizeOf: 4 on: html
