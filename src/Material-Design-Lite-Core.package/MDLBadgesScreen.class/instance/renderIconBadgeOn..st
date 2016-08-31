@@ -1,6 +1,6 @@
 code
 renderIconBadgeOn: html
 	html mdlIconBadge
-		dataBadge: '♥';
+		dataBadge: (Character codePoint: 9829) asString;
 		overlap;
 		with: 'account_box'
