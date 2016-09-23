@@ -1,3 +1,4 @@
+accessing
 projectClass
 	self flag: #clean.	"This is a hack that need to be remove after the default version of Metacello includes Cypress suport."
 	^ (Smalltalk hasClassNamed: 'MetacelloCypressBaselineProject')
