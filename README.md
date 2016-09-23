@@ -81,4 +81,6 @@ You can find multiple examples when the application will be installed at the url
 
 (Change the port if you do not use port 8080)
 
+You can find a demo at: [eph-b922e2d9.swarm.pharocloud.com](eph-b922e2d9.swarm.pharocloud.com)
+
     	
