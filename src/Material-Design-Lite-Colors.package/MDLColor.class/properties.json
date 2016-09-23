@@ -1,9 +1,9 @@
 {
 	"category" : "Material-Design-Lite-Colors",
 	"classinstvars" : [
-		 ],
-	"classvars" : [
 		"colors" ],
+	"classvars" : [
+		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"tint",
