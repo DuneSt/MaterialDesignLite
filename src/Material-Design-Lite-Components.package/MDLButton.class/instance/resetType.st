@@ -1,3 +1,0 @@
-options
-resetType
-	type := 'button'
