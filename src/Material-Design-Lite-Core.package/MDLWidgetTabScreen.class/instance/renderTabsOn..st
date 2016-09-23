@@ -1,5 +1,5 @@
-rendering
-renderContentOn: html
+code
+renderTabsOn: html
 	html
 		render:
 			(MDLTabWidget new

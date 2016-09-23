@@ -1,5 +1,5 @@
-rendering
-renderContentOn: html
+code
+renderCalendarOn: html
 	html
 		render:
 			(MDLCalendarWidget new

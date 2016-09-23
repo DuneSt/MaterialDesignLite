@@ -1,8 +1,7 @@
-accessing
-renderContentOn: html
+code
+renderSelectOn: html
 	html
-		form: [ 
-			html
+		form: [ html
 				render:
 					(MDLSelectWidget
 						possibilities: #(1 2 3 4 5 5)
@@ -10,7 +9,7 @@ renderContentOn: html
 						labelBlock: [ :number | 
 							number = 5
 								ifTrue: [ '0' ]
-								ifFalse: [ (number - 1) asString ] ]
+								ifFalse: [ (number - 1) greaseString ] ]
 						callback: [ :input | 
 							Transcript
 								<< input;

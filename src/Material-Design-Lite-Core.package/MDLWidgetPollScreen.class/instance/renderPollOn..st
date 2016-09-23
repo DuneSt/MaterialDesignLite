@@ -1,5 +1,5 @@
-rendering
-renderContentOn: html
+code
+renderPollOn: html
 	html
 		render:
 			(MDLCardWidget new
