@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "KevinLanvin 6/21/2016 11:49",
 	"instvars" : [
-		"navigation",
 		"activeScreen" ],
 	"name" : "MDLComponentsDemoApplication",
 	"pools" : [
