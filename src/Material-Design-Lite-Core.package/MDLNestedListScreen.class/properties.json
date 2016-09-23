@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Core-Example-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MDLNestedListScreen",
+	"pools" : [
+		 ],
+	"super" : "MDLDemoScreen",
+	"type" : "normal" }
