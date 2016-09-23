@@ -5,7 +5,7 @@ renderSortedTableOn: html
 		with: [ html
 				render:
 					(MDLSortableTable new
-						header: {'Class' . 'SuperClass' . 'Nubmer of subclasses'};
+						header: {'Class' . 'SuperClass' . 'Number of subclasses'};
 						rows: [ WAObject allSubclasses
 								collect: [ :class | 
 									{class printString.
