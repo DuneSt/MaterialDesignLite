@@ -4,10 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "<historical>",
+	"commentStamp" : "CyrilFerlicot 9/23/2016 12:38",
 	"instvars" : [
 		 ],
-	"name" : "MDLNestedListScreen",
+	"name" : "MDLWidgetSortedTableScreen",
 	"pools" : [
 		 ],
 	"super" : "MDLDemoScreen",

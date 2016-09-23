@@ -6,4 +6,5 @@ widgetScreenClasses
 	MDLWidgetPollScreen.
 	MDLWidgetSelectScreen.
 	MDLWidgetTabScreen.
-	MDLNestedListScreen}
+	MDLWidgetNestedListScreen.
+	MDLWidgetSortedTableScreen }
