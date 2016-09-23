@@ -1,5 +1,5 @@
 accessing
-codeOf: aSymbole
+codeOf: aSymbol
 	"I take a method selector I contains and return his source code without the declaration."
 
 	^ String streamContents: [:stream |
