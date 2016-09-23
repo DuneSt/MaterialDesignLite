@@ -6,4 +6,4 @@ renderImageChipOn: html
 					html mdlChipImage
 						url: (MDLDemoLibrary urlOf: 'chipImageJpg');
 						altText: 'Profile image'.
-					html text: 'Example Chip' ]
+					html mdlChipText: 'Example Chip' ]

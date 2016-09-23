@@ -1,3 +1,3 @@
 list api
 chipIcon
-	self class: 'mdl-chip__icon'
+	self class: #'mdl-chip__contact'

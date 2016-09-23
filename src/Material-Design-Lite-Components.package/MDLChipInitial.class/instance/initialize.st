@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	self class: #'mdl-chip__icon'
+	self class: #'mdl-chip__contact mdl-color-text--white'

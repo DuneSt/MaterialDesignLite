@@ -2,4 +2,4 @@ code
 renderAjaxRemovableChipOn: html
 	html mdlChip
 		ajaxDeleteCallback: [ 'Component deleted' crLog ] successHook: 'alert("Deleted")'; "successHook is optional."
-		with: 'Example Chip'
+		with: [ html mdlChipText: 'Example Chip' ]

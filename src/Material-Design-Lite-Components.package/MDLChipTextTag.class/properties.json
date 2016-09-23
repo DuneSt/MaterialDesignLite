@@ -7,7 +7,7 @@
 	"commentStamp" : "CyrilFerlicot 9/23/2016 13:56",
 	"instvars" : [
 		 ],
-	"name" : "MDLChipTag",
+	"name" : "MDLChipTextTag",
 	"pools" : [
 		 ],
 	"super" : "WATagBrush",

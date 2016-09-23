@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	self class: #'mdl-chip__contact'
+	self class: #'mdl-chip__text'

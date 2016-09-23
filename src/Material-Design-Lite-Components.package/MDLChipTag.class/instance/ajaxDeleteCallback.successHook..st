@@ -9,6 +9,6 @@ ajaxDeleteCallback: aNiladicValuable successHook: aString
 								context: (JSStream on: 'this');
 								onSuccess: '$(this).parent().remove();' , aString;
 								onError: 'location.reload()');
-				class: #'mdl-chip__deleteIcon';
-				with: #cancel ]
+				class: #'mdl-chip__action';
+				with: [ html mdlIcon: #cancel ] ]
 		callback: aNiladicValuable

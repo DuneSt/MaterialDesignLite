@@ -6,4 +6,4 @@ renderContactChipOn: html
 					html mdlChipContact
 						hexColor: '009587';
 						with: 'C'.
-					html text: 'Example Chip' ]
+					html mdlChipText: 'Example Chip' ]

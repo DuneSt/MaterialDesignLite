@@ -4,8 +4,6 @@ deleteCallback: aNiladicValuable
 		addDeleteWithAppendBlock: [ :html | 
 			html anchor
 				callback: aNiladicValuable;
-				with: [ 
-							html mdlIcon
-								class: #'mdl-chip__deleteIcon';
-								with: #cancel ] ]
+				class: #'mdl-chip__action';
+				with: [ html mdlIcon: #cancel ] ]
 		callback: aNiladicValuable

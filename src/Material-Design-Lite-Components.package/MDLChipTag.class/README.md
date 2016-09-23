@@ -22,56 +22,51 @@ Examples
 ------------------
 
 	"A simple Chip"
-	html mdlChip: 'Example Chip'.
+	html mdlChip: [ html mdlChipText: 'Example Chip' ].
 	
 	"A Chip with a deleteIcon"
 	html mdlChip
-		deleteCallback: [ self deleteSelectedComponent ];
-		with: 'Example Chip'.
+		deleteCallback: [ 'Component deleted' crLog ];
+		with: [ html mdlChipText: 'Example Chip' ].
 	
 	"A Chip with a ajax deleteIcon"
 	html mdlChip
-		ajaxDeleteCallback: [ self deleteSelectedComponent ];
-		with: 'Example Chip'.
+		ajaxDeleteCallback: [ 'Component deleted' crLog ] successHook: 'alert("Deleted")'; "successHook is optional."
+		with: [ html mdlChipText: 'Example Chip' ].
 	
 	"A Chip with a MDLIcon"
 	html mdlChip
-		deleteCallback: [ self deleteSelectedComponent ];
+		deleteCallback: [ 'Component deleted' crLog ];
 		with: [ 
 					html mdlIcon
 						chipIcon;
 						with: #accessibility.
-					html text: 'Example Chip' ].
+					html mdlChipText: 'Example Chip' ].
 		
 	"A Chip with an image"
 	html mdlChip
-		deleteCallback: [ self deleteSelectedComponent ];
+		deleteCallback: [ 'Component deleted' crLog ];
 		with: [ 
 					html mdlChipImage
-						url: 'https://lh4.googleusercontent.com/-ToY4At__mZ4/AAAAAAAAAAI/AAAAAAAAAF0/Ah1JqF_XDcc/photo.jpg?sz=128';
+						url: (MDLDemoLibrary urlOf: 'chipImageJpg');
 						altText: 'Profile image'.
-					html text: 'Example Chip' ].
+					html mdlChipText: 'Example Chip' ].
 		
 	"A Chip with an initial and an hard coded color"
 	html mdlChip
-		deleteCallback: [ self deleteSelectedComponent ];
+		deleteCallback: [ 'Component deleted' crLog ];
 		with: [ 
-					html mdlChipInitial
+					html mdlChipContact
 						hexColor: '009587';
 						with: 'C'.
-					html text: 'Example Chip' ].
+					html mdlChipText: 'Example Chip' ].
 		
 	"A Chip with an initial and a color"
 	html mdlChip
-		deleteCallback: [ self deleteSelectedComponent ];
+		deleteCallback: [ 'Component deleted' crLog ];
 		with: [ 
-					html mdlChipInitial
+					html mdlChipContact
 						color: (MDLColor tint: #red code: '200');
 						with: 'CF'.
-					html text: 'Example Chip' ]
+					html mdlChipText: 'Example Chip' ]
  
-Internal Representation and Key Implementation Points.
---------------------
-
-    Instance Variables
-	removeUrl:		<aWAUrl>	The URL of the callback to remove the chip

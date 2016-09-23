@@ -6,4 +6,4 @@ renderContactColorChipOn: html
 					html mdlChipContact
 						color: (MDLColor tint: #red code: '200');
 						with: 'CF'.
-					html text: 'Example Chip' ]
+					html mdlChipText: 'Example Chip' ]

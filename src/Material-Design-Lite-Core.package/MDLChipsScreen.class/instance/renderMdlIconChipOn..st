@@ -6,4 +6,4 @@ renderMdlIconChipOn: html
 					html mdlIcon
 						chipIcon;
 						with: #accessibility.
-					html text: 'Example Chip' ]
+					html mdlChipText: 'Example Chip' ]

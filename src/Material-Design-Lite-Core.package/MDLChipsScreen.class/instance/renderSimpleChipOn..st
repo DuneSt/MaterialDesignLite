@@ -1,3 +1,3 @@
 code
 renderSimpleChipOn: html
-	html mdlChip: 'Example Chip'
+	html mdlChip: [ html mdlChipText: 'Example Chip' ]
