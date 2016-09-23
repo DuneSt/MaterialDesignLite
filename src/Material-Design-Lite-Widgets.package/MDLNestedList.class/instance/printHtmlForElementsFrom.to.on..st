@@ -7,14 +7,14 @@ printHtmlForElementsFrom: start to: end on: stream
 				rootClass: WAHtmlRoot;
 				fullDocument: false;
 				render: [ :htmlDyn | 
-							(start <= self elements size and: [ end >= 1 ])
+							(start <= self filteredElements size and: [ end >= 1 ])
 								ifTrue: [ 
-									self elements
+									self filteredElements
 										from: (start max: 1)
-										to: (end min: self elements size)
+										to: (end min: self filteredElements size)
 										do: [ :anElement | 
 											self
 												renderListTree: (self obtainTreeFor: anElement)
-												index: (self elements indexOf: anElement)
+												index: (self filteredElements indexOf: anElement)
 												indentedBy: 1
 												on: htmlDyn ] ] ])

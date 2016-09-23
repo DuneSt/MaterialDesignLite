@@ -7,13 +7,16 @@
 	"commentStamp" : "CyrilFerlciot 5/18/2016 01:05",
 	"instvars" : [
 		"elements",
+		"filteredElements",
 		"format",
 		"actionBlock",
 		"selectedEntity",
 		"helpBlock",
 		"iconBlock",
 		"childrenBlock",
-		"dragAndDropBlock" ],
+		"dragAndDropBlock",
+		"displayResearchField",
+		"displayResearchFilter" ],
 	"name" : "MDLNestedList",
 	"pools" : [
 		 ],

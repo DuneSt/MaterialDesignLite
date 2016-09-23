@@ -1,3 +1,3 @@
 accessing
 format
-	^ format
+	^ format ifNil: [ #asString ]

@@ -1,12 +1,12 @@
 javascript
-expendableJsScript: url cbId: cbId clickCbId: clickCb
+expendableJsScript 
 	^ 'function expandCollapse(element) {
 			$(element.closest(''li'')).toggleClass(''expanded'');
   			$(element.closest(''li'')).children(''ul'').toggle(''medium'');
 			$(element.closest(''li'')).toggleClass(''collapsed'');
   	}
-
-  function post(path, parameters) {
+	
+	function post(path, parameters) {
     var form = $(''<form></form>'');
 
     form.attr("method", "post");
@@ -29,55 +29,33 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
 	}
 	
 	function goTo(anElementId){
-		post("' , url asString , '",{' , clickCb
-		,
-			':anElementId});
+	   var tmp={};
+	   tmp[self.dataset.clickcb]= anElementId;
+		post(listContainer.dataset.url,tmp);
 	}
- 
-	function loadBefore(start, end){
-		$.ajax({
-       url : "' , url asString
-		,
-			'",
-       type : ''POST'',
-		 data : { ' , cbId asString
-		,
-			' : start+":"+end },
-       success : function(html_code, statut){
-			$(''.expList'').prepend(html_code);
-			var list = $(''.expList'')[0];           
-			while(list.length > ' , self listMaxSize asString
-		,
-			'){
-				$(''.listContainer'')[0].scrollTop = $(''.listContainer'')[0].scrollTop + $(list.lastChild).height();
-				list.removeChild(list.lastChild);
-				
-			}
-       },
-		error : function(){
-			location.reload();
-		}
-    });
+	
+	function loadBefore(start, end, listContainer){
+		load(start, end, listContainer, "last");
+	}
+	
+	function loadAfter(start, end, listContainer){
+		load(start, end, listContainer, "first");
 	}
 
-	function loadAfter(start, end){
+	function load(start, end, listContainer, lastOrFirstToDelete){
+	   dataObj = { };
+	   dataObj[listContainer.dataset.cbid] = start+":"+end;
 		$.ajax({
-       url : "' , url asString
-		,
-			'",
-       type : ''POST'',
-		 data : { ' , cbId asString
-		,
-			' : start+":"+end },
+       url : listContainer.dataset.url,
+       type : "POST",
+		 data : dataObj,
        success : function(html_code, statut){
-			$(''.expList'').append(html_code);
-			var list = $(''.expList'')[0];           
-			while(list.length > ' , self listMaxSize asString
-		,
-			'){
-				$(''.listContainer'')[0].scrollTop = $(''.listContainer'')[0].scrollTop - $(list.firstChild).height();
-				list.removeChild(list.firstChild);
-				
+          console.log(statut,"html_code",html_code);
+			var list = $(".expList").append(html_code)[0];           
+			while(list.length > listContainer.dataset.listmaxsize){
+				childToDelete= $(list.children).lastOrFirstToDelete()[0];
+				listContainer.scrollTop = listContainer.scrollTop -childToDelete.height();
+				childToDelete.remove();
 			}
        },
 		error : function(){
@@ -97,29 +75,24 @@ expendableJsScript: url cbId: cbId clickCbId: clickCb
 	}
 
 	function defineExpandable(){
-		lastIndexAsked = ' , (self elements indexOf: self selectedEntity ifAbsent: 1) asString
-		,
-			';
 	
 		$(''.listContainer'').scroll(function(e){
 			if(0.1>(e.currentTarget.scrollTop) / e.currentTarget.scrollHeight){
 				var tempLastIndex = obtainFirstIndex(e.currentTarget);
-				if(tempLastIndex < lastIndexAsked){ 
+				if(tempLastIndex < e.currentTarget.dataset.lastindexasked){ 
 					//this test is to avoid asking multiple time to the server
-					lastIndexAsked = tempLastIndex;
-					loadBefore(lastIndexAsked-' , self listElementsDynamicalLoadingStep asString
-		,
-			',lastIndexAsked-1);
+					e.currentTarget.dataset.lastindexasked = tempLastIndex;
+					loadBefore(parseInt(e.currentTarget.dataset.lastindexasked)- parseInt(e.currentTarget.dataset.loadingstep)
+					    ,parseInt(e.currentTarget.dataset.lastindexasked)-1, e.currentTarget);
 				}
 			}
 			if(0.9<(e.currentTarget.scrollTop +$(e.currentTarget).height()) / e.currentTarget.scrollHeight){
 				var tempLastIndex = obtainLastIndex(e.currentTarget);
-				if(tempLastIndex > lastIndexAsked){ 
+				if(tempLastIndex > e.currentTarget.dataset.lastindexasked){ 
 					//this test is to avoid asking multiple time to the server
-					lastIndexAsked = tempLastIndex;
-					loadAfter(lastIndexAsked+1, lastIndexAsked+' , self listElementsDynamicalLoadingStep asString
-		,
-			');
+					e.currentTarget.dataset.lastindexasked = tempLastIndex;
+					loadAfter(parseInt(e.currentTarget.dataset.lastindexasked)+1, parseInt(e.currentTarget.dataset.lastindexasked)+ parseInt(e.currentTarget.dataset.loadingstep)
+		                 , e.currentTarget);
 				}
 			}
 			
