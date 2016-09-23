@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Colors",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"colors" ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"tint",
+		"code" ],
+	"name" : "MDLColor",
+	"pools" : [
+		 ],
+	"super" : "Color",
+	"type" : "normal" }

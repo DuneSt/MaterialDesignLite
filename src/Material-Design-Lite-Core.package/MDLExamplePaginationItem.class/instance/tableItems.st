@@ -1,0 +1,4 @@
+accessing
+tableItems
+	^ {firstName.
+	lastName}

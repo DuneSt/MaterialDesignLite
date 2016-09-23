@@ -1,0 +1,1 @@
+I'm representing sliders components screen

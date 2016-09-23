@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLSwitchWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }

@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Cards",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/7/2016 11:16",
+	"instvars" : [
+		"componentOrBlocks",
+		"bordered" ],
+	"name" : "MDLCardActionsWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLHighLevelWidget",
+	"type" : "normal" }

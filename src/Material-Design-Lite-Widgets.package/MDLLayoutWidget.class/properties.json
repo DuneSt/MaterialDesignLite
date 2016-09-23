@@ -1,0 +1,19 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Header",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"title",
+		"icon",
+		"headerSection",
+		"drawerSection",
+		"contentBlock",
+		"brush" ],
+	"name" : "MDLLayoutWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }

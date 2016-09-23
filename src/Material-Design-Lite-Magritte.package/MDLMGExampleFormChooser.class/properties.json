@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Magritte-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"layoutStyle",
+		"validationMessageStyle" ],
+	"name" : "MDLMGExampleFormChooser",
+	"pools" : [
+		 ],
+	"super" : "GRObject",
+	"type" : "normal" }

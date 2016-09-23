@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Tables",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLTableCell",
+	"pools" : [
+		 ],
+	"super" : "WATableDataTag",
+	"type" : "normal" }

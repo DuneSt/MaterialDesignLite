@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Footer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 5/7/2016 16:44",
+	"instvars" : [
+		 ],
+	"name" : "MDLMiniFooter",
+	"pools" : [
+		 ],
+	"super" : "WATagBrush",
+	"type" : "normal" }

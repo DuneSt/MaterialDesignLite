@@ -1,0 +1,16 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Pagination",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/14/2016 11:37",
+	"instvars" : [
+		"searchLabel",
+		"paginationWidgetId",
+		"testingBlock" ],
+	"name" : "MDLPaginationWithSearchBarWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLPaginationWidget",
+	"type" : "normal" }

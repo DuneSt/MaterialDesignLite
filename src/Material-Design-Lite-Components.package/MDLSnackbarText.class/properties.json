@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Snackbar",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLSnackbarText",
+	"pools" : [
+		 ],
+	"super" : "MDLDivTag",
+	"type" : "normal" }

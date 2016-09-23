@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-IconToggle",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLIconToggleLabel",
+	"pools" : [
+		 ],
+	"super" : "WATagBrush",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/22/2015 13:32",
+	"instvars" : [
+		 ],
+	"name" : "MDLLogo",
+	"pools" : [
+		 ],
+	"super" : "MDLDivTag",
+	"type" : "normal" }

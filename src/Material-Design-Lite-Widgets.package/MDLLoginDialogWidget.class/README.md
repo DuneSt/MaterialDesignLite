@@ -1,0 +1,1 @@
+I represent the login widget but I am display in a dialog

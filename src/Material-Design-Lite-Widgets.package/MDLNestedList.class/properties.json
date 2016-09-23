@@ -1,0 +1,24 @@
+{
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlciot 5/18/2016 01:05",
+	"instvars" : [
+		"elements",
+		"filteredElements",
+		"format",
+		"actionBlock",
+		"selectedEntity",
+		"helpBlock",
+		"iconBlock",
+		"childrenBlock",
+		"dragAndDropBlock",
+		"displayResearchField",
+		"displayResearchFilter" ],
+	"name" : "MDLNestedList",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }

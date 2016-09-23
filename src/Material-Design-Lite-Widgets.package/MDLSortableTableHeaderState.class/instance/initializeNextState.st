@@ -1,0 +1,3 @@
+initialization
+initializeNextState
+	self subclassResponsibility

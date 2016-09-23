@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLListItemSecondaryAction",
+	"pools" : [
+		 ],
+	"super" : "WAAnchorTag",
+	"type" : "normal" }

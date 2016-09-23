@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLClickableIconContainer",
+	"pools" : [
+		 ],
+	"super" : "WALabelTag",
+	"type" : "normal" }

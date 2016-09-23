@@ -1,0 +1,20 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Form",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/17/2016 15:06",
+	"instvars" : [
+		"label",
+		"brush",
+		"isExpandable",
+		"isFloatingLabel",
+		"patternErrorMessage",
+		"brushProperties",
+		"errorMessage" ],
+	"name" : "MDLTextFieldWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLHighLevelWidget",
+	"type" : "normal" }

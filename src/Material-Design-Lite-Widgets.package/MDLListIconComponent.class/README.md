@@ -1,0 +1,1 @@
+I am a simple component to display a MDL icon with an help text. My main purpose is to serve in a MDLNestedList to display a MDL icon.

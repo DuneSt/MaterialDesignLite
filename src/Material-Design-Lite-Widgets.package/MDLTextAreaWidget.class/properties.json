@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Form",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 7/19/2016 16:47",
+	"instvars" : [
+		 ],
+	"name" : "MDLTextAreaWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLTextFieldWidget",
+	"type" : "normal" }

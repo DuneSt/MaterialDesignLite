@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Footer",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 5/11/2016 10:41",
+	"instvars" : [
+		"leftSection",
+		"rightSection" ],
+	"name" : "MDLSmallFooter",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }

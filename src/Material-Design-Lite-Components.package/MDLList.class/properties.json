@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLList",
+	"pools" : [
+		 ],
+	"super" : "WAUnorderedListTag",
+	"type" : "normal" }

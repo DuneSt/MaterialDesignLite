@@ -1,0 +1,21 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Pagination",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/13/2016 15:02",
+	"instvars" : [
+		"headings",
+		"groups",
+		"currentPage",
+		"pageSize",
+		"tableBodyId",
+		"arrowsId",
+		"items",
+		"displayBlock" ],
+	"name" : "MDLPaginationWidget",
+	"pools" : [
+		 ],
+	"super" : "MDLHighLevelWidget",
+	"type" : "normal" }

@@ -1,0 +1,1 @@
+Small status descriptors for UI elements with a icon.

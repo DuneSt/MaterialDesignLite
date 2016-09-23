@@ -1,0 +1,3 @@
+options
+beBordered
+	bordered := true

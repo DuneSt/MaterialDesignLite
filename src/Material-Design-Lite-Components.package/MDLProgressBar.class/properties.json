@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Loading",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "OlivierAuverlot 7/23/2015 08:42",
+	"instvars" : [
+		 ],
+	"name" : "MDLProgressBar",
+	"pools" : [
+		 ],
+	"super" : "MDLDivTag",
+	"type" : "normal" }

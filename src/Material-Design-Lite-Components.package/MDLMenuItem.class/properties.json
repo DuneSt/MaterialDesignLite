@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Buttons",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/22/2015 17:21",
+	"instvars" : [
+		 ],
+	"name" : "MDLMenuItem",
+	"pools" : [
+		 ],
+	"super" : "WATagBrush",
+	"type" : "normal" }

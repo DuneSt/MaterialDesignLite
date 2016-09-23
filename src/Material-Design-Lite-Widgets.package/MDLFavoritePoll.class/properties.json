@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Poll",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 7/12/2016 15:22",
+	"instvars" : [
+		 ],
+	"name" : "MDLFavoritePoll",
+	"pools" : [
+		 ],
+	"super" : "MDLThumbsPoll",
+	"type" : "normal" }

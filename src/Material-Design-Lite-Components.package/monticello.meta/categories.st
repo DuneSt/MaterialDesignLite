@@ -1,0 +1,16 @@
+SystemOrganization addCategory: #'Material-Design-Lite-Components'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Badge'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Buttons'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Cards'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Chips'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Dialog'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Footer'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Forms'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-IconToggle'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Layout'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-List'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Loading'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Nav'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Snackbar'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Tables'!
+SystemOrganization addCategory: 'Material-Design-Lite-Components-Tooltips'!

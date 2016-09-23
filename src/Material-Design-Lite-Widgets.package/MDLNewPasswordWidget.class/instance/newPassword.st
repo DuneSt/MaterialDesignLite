@@ -1,0 +1,3 @@
+accessing
+newPassword
+	^ newPassword

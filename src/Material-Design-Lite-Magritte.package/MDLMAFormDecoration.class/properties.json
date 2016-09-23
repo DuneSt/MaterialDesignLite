@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Magritte-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "ThomasHeniart 6/6/2016 19:28",
+	"instvars" : [
+		"title" ],
+	"name" : "MDLMAFormDecoration",
+	"pools" : [
+		 ],
+	"super" : "MAFormDecoration",
+	"type" : "normal" }

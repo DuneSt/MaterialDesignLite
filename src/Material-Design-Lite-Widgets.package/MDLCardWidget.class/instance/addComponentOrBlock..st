@@ -1,0 +1,3 @@
+adding
+addComponentOrBlock: aComponentOrBlock
+	componentOrBlocks add: aComponentOrBlock

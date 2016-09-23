@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "ManifestMaterialDesignLiteWidgets",
+	"pools" : [
+		 ],
+	"super" : "PackageManifest",
+	"type" : "normal" }

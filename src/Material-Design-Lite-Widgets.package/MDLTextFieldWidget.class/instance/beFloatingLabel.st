@@ -1,0 +1,3 @@
+options
+beFloatingLabel
+	isFloatingLabel := true

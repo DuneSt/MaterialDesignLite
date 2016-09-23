@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlciot 5/18/2016 10:14",
+	"instvars" : [
+		"label",
+		"helpText" ],
+	"name" : "MDLListIconComponent",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }

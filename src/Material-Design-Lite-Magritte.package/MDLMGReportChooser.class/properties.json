@@ -1,0 +1,17 @@
+{
+	"category" : "Material-Design-Lite-Magritte-Examples",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"bordered",
+		"stiped",
+		"condensed",
+		"showBatchFirstLast" ],
+	"name" : "MDLMGReportChooser",
+	"pools" : [
+		 ],
+	"super" : "GRObject",
+	"type" : "normal" }

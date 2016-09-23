@@ -1,0 +1,23 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Table",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 8/2/2016 10:43",
+	"instvars" : [
+		"title",
+		"header",
+		"rows",
+		"elementsToShow",
+		"unsortedRows",
+		"position",
+		"rowsPerPagePossibilities",
+		"selectable",
+		"id",
+		"ajaxOnCompleteHook" ],
+	"name" : "MDLSortableTable",
+	"pools" : [
+		 ],
+	"super" : "WAComponent",
+	"type" : "normal" }

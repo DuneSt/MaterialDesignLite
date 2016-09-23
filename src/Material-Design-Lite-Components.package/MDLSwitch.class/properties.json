@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Forms",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/23/2015 10:55",
+	"instvars" : [
+		 ],
+	"name" : "MDLSwitch",
+	"pools" : [
+		 ],
+	"super" : "WACheckboxTag",
+	"type" : "normal" }

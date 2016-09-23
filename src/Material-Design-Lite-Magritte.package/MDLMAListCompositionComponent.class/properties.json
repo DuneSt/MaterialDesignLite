@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Magritte-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLMAListCompositionComponent",
+	"pools" : [
+		 ],
+	"super" : "MAListCompositonComponent",
+	"type" : "normal" }

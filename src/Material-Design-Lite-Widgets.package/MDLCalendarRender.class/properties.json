@@ -1,0 +1,15 @@
+{
+	"category" : "Material-Design-Lite-Widgets-Calendar",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 2/17/2016 16:16",
+	"instvars" : [
+		"daysList",
+		"calendar" ],
+	"name" : "MDLCalendarRender",
+	"pools" : [
+		 ],
+	"super" : "MDLWidget",
+	"type" : "normal" }

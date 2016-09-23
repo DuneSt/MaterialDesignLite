@@ -1,0 +1,1 @@
+I am a widget for password change

@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Layout",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "KevinLanvin 7/21/2015 14:54",
+	"instvars" : [
+		 ],
+	"name" : "MDLLayoutContent",
+	"pools" : [
+		 ],
+	"super" : "WATagBrush",
+	"type" : "normal" }

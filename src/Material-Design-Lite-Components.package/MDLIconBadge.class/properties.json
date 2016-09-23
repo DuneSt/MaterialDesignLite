@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Badge",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "OlivierAuverlot 7/22/2015 19:26",
+	"instvars" : [
+		 ],
+	"name" : "MDLIconBadge",
+	"pools" : [
+		 ],
+	"super" : "MDLBadge",
+	"type" : "normal" }
