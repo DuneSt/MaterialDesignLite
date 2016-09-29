@@ -13,9 +13,6 @@ openButtonId: id
 			document.querySelector(''.backdrop'').addEventListener(''click'', function() \{
 				dialog.close();
 		 	});
-			dialog.querySelector(''.close'').addEventListener(''click'', function() \{
-				dialog.close();
-    		});
 			document.querySelector(''._dialog_overlay'').style.display = "none";
        });
 		})()' format: {self id.  id}))
