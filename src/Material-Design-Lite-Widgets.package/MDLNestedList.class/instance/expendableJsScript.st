@@ -29,9 +29,10 @@ expendableJsScript
 	}
 	
 	function goTo(anElementId){
-	   var tmp={};
-	   tmp[self.dataset.clickcb]= anElementId;
-		post(listContainer.dataset.url,tmp);
+	   list = $(".listContainer")[0];
+	   tmp= {  };
+	   tmp[list.dataset.lclickcb]=anElementId;
+		post(list.dataset.url,tmp);
 	}
 	
 	function loadBefore(start, end, listContainer){
