@@ -3,7 +3,7 @@ SmalltalkCISpec {
     SCIMetacelloLoadSpec {
       #baseline : 'MaterialDesignLite',
       #directory : 'src',
-      #platforms : [ #pharo ]
+      #platforms : [ #squeak, #pharo ]
     }
   ]
 }
