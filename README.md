@@ -13,7 +13,7 @@ This project have as first goal to bind the google's Material Design Lite projec
 
 ## Install MDL Seaside
 
-To install MaterialDesignLite on your Pharo image you can just execute the following script:
+To install MaterialDesignLite on your Pharo image you can just execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00).
 
     Metacello new
     	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'master' path: 'src';
