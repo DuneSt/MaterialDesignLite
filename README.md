@@ -94,6 +94,6 @@ Gofer it
   load.
 ``
 
-To open one, just do a `ZnWorkspace open`.
+To open one, just do a `ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'.
   
   
