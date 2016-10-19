@@ -13,7 +13,7 @@ This project have as first goal to bind the google's Material Design Lite projec
 
 ## Install MDL Seaside
 
-To install MaterialDesignLite on your Pharo image you can just execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00).
+To install MaterialDesignLite on your Pharo image you can just execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00). See ``ZnWorkspace`` section for installing a ZnWorkspace if you so want.
 
     Metacello new
     	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'master' path: 'src';
@@ -83,4 +83,17 @@ You can find multiple examples when the application will be installed at the url
 
 You can find a demo at: [http://eph-b922e2d9.swarm.pharocloud.com](http://eph-b922e2d9.swarm.pharocloud.com)
 
-    	
+##ZnWorkspace
+
+If you look at a cloud workspace page, you'll see it mentions a `ZnWorkspace`. This is how you can load it up.
+
+``
+Gofer it
+  squeaksource: 'ZincHTTPComponents';
+  package: 'Zinc-WWS-Client';
+  load.
+``
+
+To open one, just do a `ZnWorkspace open`.
+  
+  
