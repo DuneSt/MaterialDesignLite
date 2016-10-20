@@ -1,6 +1,6 @@
 accessing
 projectClass
-	self flag: #clean.	"This is a hack that need to be remove after the default version of Metacello includes Cypress suport."
+	self flag: #clean.	"This is a hack that need to be removed after the default version of Metacello includes Cypress suport."
 	^ [ #MetacelloCypressBaselineProject asClass ]
 		on: NotFound
 		do: [ Metacello new
