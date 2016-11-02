@@ -25,7 +25,7 @@ To add MaterialDesignLite Seaside to your baseline just add this:
 
     spec
     	baseline: 'MaterialDesignLite'
-    	with: [ spec repository: 'github://jecisc/MaterialDesignLite:master/src' ]
+    	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:master/src' ]
     	
 Note that you can replace the #master by another branch as #development or a tag as #v1.0.0.
 
