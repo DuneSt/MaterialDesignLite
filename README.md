@@ -7,7 +7,7 @@ Master: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?bra
 Master: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni/branch/master?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite/branch/master) | Latest commit: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite)
 
 
-This project have as first goal to bind the google's Material Design Lite project to seaside and as second goal to build widgets on top of Material Design to help Seaside developers to create fast web application with flat design. 
+This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help Seaside developers in creating fast web application with flat design. 
 
 # Documentation
 
@@ -29,7 +29,7 @@ To add MaterialDesignLite Seaside to your baseline just add this:
     	
 Note that you can replace the #master by another branch as #development or a tag as #v1.0.0.
 
-## Getting start
+## Getting started
 
 We use as a base the files product by Google's Material Design Lite. To have a working Material Design Seaside application we need to add those files. 
 Most of them can be easily added via a file library but one file need to be explicitely added because this file change depending on the colors you wish for your application.
@@ -80,6 +80,8 @@ You can find the possible colors into the class MDLColor class.
 You can find multiple examples when the application will be installed at the url: [http://localhost:8080/MDLComponentsDemoApplication](http://localhost:8080/MDLComponentsDemoApplication)
 
 (Change the port if you do not use port 8080)
+
+_this demo is apparently down for some reason_
 
 You can find a demo at: [http://eph-b922e2d9.swarm.pharocloud.com](http://eph-b922e2d9.swarm.pharocloud.com)
 
