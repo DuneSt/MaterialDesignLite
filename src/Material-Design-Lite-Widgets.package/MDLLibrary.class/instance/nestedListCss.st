@@ -1,15 +1,48 @@
 list
 nestedListCss
-	^ 'body{
+	^ '
+.nestedList{
 	height: 100%;
+    width: 100%;
+	background-color: #FFF;
+}
+
+.nestedList li > ul {
+    background-color: white;
+}
+
+.nestedList .listResearchField{
+	width: 100%;
+	text-align: center;
+	height: 46px;
+}
+
+.nestedList .listResearchField .mdl-textfield{
+	position: relative;
+	width: calc(100% - 20px);
+	padding: 10px 0;
+}
+
+.nestedList .listResearchField .mdl-textfield__label{
+	top: 14px;
+}
+
+.nestedList .listResearchField .mdl-textfield__label:after{
+	bottom: 10px;
+}
+
+.nestedList .listContent{
+	height: 100%;
+}
+
+.nestedList .listContent.withSearch{
+	height: calc(100% - 46px);
 }
 	
 .listContainer{
-	border-right: 1px solid rgb(217, 217, 217);
 	height: 100%;
 	width: 100%;
    overflow: hidden;
-	background-color: #FFF;
 }
 
 .listContainer:hover{
@@ -20,16 +53,20 @@ nestedListCss
 	padding-left: 0;
 }
 
-
- 
 .listContainer a{
-	font-size: 16px;
-	font-weight: inherit;
 	color: rgba(0, 0, 0, 0.87);
 	text-decoration: none;
-	display: block;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	align-items: center;
 	white-space: nowrap;
 	cursor: pointer;
+	flex-grow: 1;
+	width: 0;
+}
+
+.nestedList .listContent.withSearch .expList{
+	margin: 0;
 }
 
 .expList .itemContener.isSelected {
@@ -44,6 +81,13 @@ nestedListCss
 .expList ul, .expList li {
     transform: translate3d(0px, 0px, 0px);
     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    width: 100%;
+    line-height: 0;
+}
+
+.expList .itemContener {
+    display: flex;
+	align-items: center;
 }
 
 .expList .itemContener:hover {
@@ -51,8 +95,9 @@ nestedListCss
 }
 
 .expList li .item{
-	line-height: 40px;
 	vertical-align: middle;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .expList i{
@@ -68,14 +113,16 @@ nestedListCss
     margin: 0 10px;
 }
 
-.expList .mdl-tooltip--large {
+.nestedList .mdl-tooltip--large {
     position: absolute;
-    top: 0px !important;
-    left: 150px !important;
+    top: 100% !important;
+    left: 10px !important;
     margin-left: 0 !important;
 }
 
-
+.expList > li:last-child {
+    margin-bottom: 60px;
+}
 
 .listContainer::-webkit-scrollbar {
     display: none;
@@ -106,13 +153,42 @@ nestedListCss
 .expList .icon{
     width: 40px;
 	height: 40px;
-	float: right;
 	cursor: pointer;
-   
-	padding-left: 15px;
-	position: absolute;
-   right: 5px;
-   top: 0;
 } 
+
+/**remove if we found why componentHandler.upgradeElement() andcomponentHandler.upgradeDom() does not work*/
+.expList span.item:hover + .mdl-tooltip.mdl-tooltip {
+	-webkit-animation: pulse 200ms cubic-bezier(0,0,.2,1)forwards;
+	animation: pulse 200ms cubic-bezier(0,0,.2,1)forwards;
+}
+.nestedList .mdl-tooltip {
+	white-space: initial;
+}
+
+/**TODO: REMOVE THIS LATER. SEE: https://github.com/DuneSt/MaterialDesignLite/issues/31*/
+.expList li:hover {
+    position: relative;
+    z-index: 1000;
+}
+
+/** STYLES **/
+
+.nestedList.standard .listContainer a{
+	font-size: 16px;
+	font-weight: inherit;
+}
+
+.nestedList.standard .expList li .item{
+	line-height: 48px;
+}
+
+.nestedList.compact .listContainer a{
+	font-size: 13px;
+	font-weight: inherit;
+}
+
+.nestedList.compact .expList li .item{
+	line-height: 40px;
+}
 
 '

@@ -1,4 +1,4 @@
-scoll
+scroll
 defineScrollCallbackOn: aDiv
 	^ aDiv
 		storeCallback:

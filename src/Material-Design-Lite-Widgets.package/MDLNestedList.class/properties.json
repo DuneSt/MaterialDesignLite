@@ -16,7 +16,8 @@
 		"childrenBlock",
 		"dragAndDropBlock",
 		"displayResearchField",
-		"displayResearchFilter" ],
+		"displayResearchFilter",
+		"listStyle" ],
 	"name" : "MDLNestedList",
 	"pools" : [
 		 ],
