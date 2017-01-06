@@ -2,7 +2,7 @@ code
 renderComplexDialogOn: html
 	| idButtonOpen idButtonClose |
 	html mdlButton
-		id: (idButtonOpen := 'mdl_demo_dialog_open');
+		openDialogWithId: (idButtonOpen := 'mdl_demo_dialog_open'); "This will not generate an id on the button and allow you to have multiple buttons to open the same dialog."
 		raised;
 		rippleEffect;
 		with: 'Show dialog'.
