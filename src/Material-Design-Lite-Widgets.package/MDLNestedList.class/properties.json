@@ -10,6 +10,7 @@
 		"filteredElements",
 		"format",
 		"actionBlock",
+		"isJsAction",
 		"selectedEntity",
 		"helpBlock",
 		"iconBlock",
