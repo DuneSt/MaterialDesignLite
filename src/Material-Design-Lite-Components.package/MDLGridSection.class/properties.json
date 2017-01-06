@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Components-Layout",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MDLGridSection",
+	"pools" : [
+		 ],
+	"super" : "WATagBrush",
+	"type" : "normal" }

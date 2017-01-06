@@ -1,7 +1,9 @@
 code
 renderNestedListOn: html
+	| divId |
+	divId := html nextId.
 	html div
-		style: 'text-align: left';
+		style: 'text-align: left; display:flex;';
 		with: [ html
 				render:
 					((MDLNestedList
@@ -11,4 +13,8 @@ renderNestedListOn: html
 						ifTrue: [ classOrMethod methods ]
 						ifFalse: [ #() ] ])
 						format: #name;
-						withResearchField) ]
+						helpBlock: #comment;
+						withResearchField;
+						onClickJs:
+								[ :entity | (html jQuery id: divId) load html: [ :ajaxHtml | self renderNestedListOn: ajaxHtml ] ]).
+			html div id: divId ]
