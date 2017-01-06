@@ -1,3 +1,3 @@
 rendering
 hasDraggableItems
-	^ true
+	^ self dragAndDropBlock notNil

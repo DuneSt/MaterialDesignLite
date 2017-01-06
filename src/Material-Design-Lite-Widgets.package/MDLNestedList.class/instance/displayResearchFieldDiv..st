@@ -11,8 +11,7 @@ displayResearchFieldDiv: html
     position: relative;
     width: calc(100% - 20px);';
 				with: [ 
-							html mdlTextFieldContainer
-								with: [ 
+							html mdlTextFieldContainer: [ 
 									html mdlTextFieldLabel
 										for: fieldId;
 										style: 'position: absolute;';
