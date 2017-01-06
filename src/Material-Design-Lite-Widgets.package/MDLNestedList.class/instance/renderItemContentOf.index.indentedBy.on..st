@@ -21,4 +21,5 @@ renderItemContentOf: aNode index: anIndex indentedBy: anInteger on: html
 						index: anIndex
 						inDiv: div
 						indentedBy: anInteger
-						on: html ]
+						on: html.
+					self renderRightIconOf: aNode element on: html ]

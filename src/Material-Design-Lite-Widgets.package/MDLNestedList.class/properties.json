@@ -15,6 +15,7 @@
 		"selectedEntity",
 		"helpBlock",
 		"iconBlock",
+		"rightIconBlock",
 		"childrenBlock",
 		"dragAndDropBlock",
 		"displayResearchField",
