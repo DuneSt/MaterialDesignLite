@@ -1,0 +1,3 @@
+rendering
+hasCustomizationForEntry
+	^ self entryCustomizationHook notNil
