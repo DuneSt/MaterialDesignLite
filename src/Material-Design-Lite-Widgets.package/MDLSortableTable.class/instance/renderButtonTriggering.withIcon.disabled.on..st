@@ -1,6 +1,7 @@
 rendering
 renderButtonTriggering: aMethod withIcon: aSymbol disabled: isDisabled on: html
 	html mdlButton
+		bePush;
 		colored;
 		icon;
 		disabled: isDisabled;

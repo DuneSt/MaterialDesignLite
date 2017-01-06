@@ -15,7 +15,8 @@
 		"rowsPerPagePossibilities",
 		"selectable",
 		"id",
-		"ajaxOnCompleteHook" ],
+		"ajaxOnCompleteHook",
+		"tableStyle" ],
 	"name" : "MDLSortableTable",
 	"pools" : [
 		 ],
