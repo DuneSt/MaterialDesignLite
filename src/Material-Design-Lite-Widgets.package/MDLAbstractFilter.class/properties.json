@@ -1,0 +1,14 @@
+{
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 11/24/2016 10:21",
+	"instvars" : [
+		 ],
+	"name" : "MDLAbstractFilter",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,21 +1,17 @@
 researchField
 displayResearchFieldDiv: html
-	| fieldId |
-	self flag: #TODO. "Should not put style information here, should be on another css file"
-	fieldId := 'researchFieldId' , html nextId asString.
 	self displayResearchField
 		ifTrue: [ 
+			| fieldId |
+			fieldId := 'researchFieldId' , html nextId asString.
 			html div
 				class: #listResearchField;
-				style: 'left: 10px;
-    position: relative;
-    width: calc(100% - 20px);';
 				with: [ 
-							html mdlTextFieldContainer: [ 
+							html
+								mdlTextFieldContainer: [ 
 									html mdlTextFieldLabel
 										for: fieldId;
-										style: 'position: absolute;';
-										with: 'Research'.
+										with: 'Search'.
 									self flag: #TODO.	"Use id instead of class"
 									html mdlTextFieldInput
 										id: fieldId;
@@ -23,5 +19,8 @@ displayResearchFieldDiv: html
 										value: self displayResearchFilter;
 										onChange:
 												(html jQuery ajax
-														callback: [ :filter | self displayResearchFilter: filter ] value: (JSStream on: 'event.target.value');
-														onComplete: ((html jQuery: '.listContainer') load html: [ :htm | self renderListOn: htm ])) ] ] ]
+														callback: [ :filt | self displayResearchFilter: filt ] value: (JSStream on: 'event.target.value');
+														onComplete:
+																((html jQuery: '#' , (self idFor: #listContainer)) parent load
+																		html: [ :htm | self renderListOn: htm ];
+																		onComplete: 'scrollToSelection();defineExpandable();')) ] ] ]
