@@ -3,7 +3,8 @@ renderNestedListOn: html
 	| divId |
 	divId := html nextId.
 	html div
-		style: 'text-align: left; display:flex;';
+		style: 'text-align: left; display:flex;height: 600px; background-color: #CFD8DC;';
+		class: 'mdl-shadow--2dp';
 		with: [ html
 				render:
 					((MDLNestedList
