@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Buttons",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLAnchorButton",
-	"pools" : [
-		 ],
 	"super" : "WAAnchorTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Buttons",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLAnchorButton",
+	"type" : "normal"
+}

@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-IconToggle",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLIconToggleContainer",
-	"pools" : [
-		 ],
 	"super" : "WALabelTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-IconToggle",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLIconToggleContainer",
+	"type" : "normal"
+}

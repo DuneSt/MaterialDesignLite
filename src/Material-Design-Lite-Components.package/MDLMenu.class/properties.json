@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Buttons",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/22/2015 17:14",
-	"instvars" : [
-		 ],
-	"name" : "MDLMenu",
-	"pools" : [
-		 ],
 	"super" : "WAUnorderedListTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Buttons",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLMenu",
+	"type" : "normal"
+}

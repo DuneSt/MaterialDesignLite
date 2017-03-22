@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Chips",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "CyrilFerlicot 9/23/2016 13:56",
-	"instvars" : [
-		 ],
-	"name" : "MDLChipTag",
-	"pools" : [
-		 ],
 	"super" : "WATagBrush",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Chips",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLChipTag",
+	"type" : "normal"
+}

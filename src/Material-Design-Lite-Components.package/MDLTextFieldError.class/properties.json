@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Forms",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/22/2015 16:26",
-	"instvars" : [
-		 ],
-	"name" : "MDLTextFieldError",
-	"pools" : [
-		 ],
 	"super" : "WATagBrush",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Forms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLTextFieldError",
+	"type" : "normal"
+}

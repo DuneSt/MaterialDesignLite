@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Layout",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/21/2015 14:58",
-	"instvars" : [
-		 ],
-	"name" : "MDLLayoutTabBar",
-	"pools" : [
-		 ],
 	"super" : "MDLDivTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Layout",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLLayoutTabBar",
+	"type" : "normal"
+}

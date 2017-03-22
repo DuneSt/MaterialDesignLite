@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Snackbar",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLSnackbarAction",
-	"pools" : [
-		 ],
 	"super" : "WAButtonTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Snackbar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSnackbarAction",
+	"type" : "normal"
+}

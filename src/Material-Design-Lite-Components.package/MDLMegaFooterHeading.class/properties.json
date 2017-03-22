@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Footer",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/22/2015 10:47",
-	"instvars" : [
-		 ],
-	"name" : "MDLMegaFooterHeading",
-	"pools" : [
-		 ],
 	"super" : "WAHeadingTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Footer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLMegaFooterHeading",
+	"type" : "normal"
+}

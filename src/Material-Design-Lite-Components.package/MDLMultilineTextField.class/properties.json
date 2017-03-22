@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Forms",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/23/2015 11:26",
-	"instvars" : [
-		 ],
-	"name" : "MDLMultilineTextField",
-	"pools" : [
-		 ],
 	"super" : "WATextAreaTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Forms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLMultilineTextField",
+	"type" : "normal"
+}

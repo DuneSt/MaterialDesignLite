@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Tables",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/22/2015 13:32",
-	"instvars" : [
-		 ],
-	"name" : "MDLTable",
-	"pools" : [
-		 ],
 	"super" : "WATableTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Tables",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLTable",
+	"type" : "normal"
+}

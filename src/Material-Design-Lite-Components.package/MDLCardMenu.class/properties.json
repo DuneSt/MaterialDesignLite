@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Cards",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLCardMenu",
-	"pools" : [
-		 ],
 	"super" : "MDLCardInnerDiv",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Cards",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLCardMenu",
+	"type" : "normal"
+}

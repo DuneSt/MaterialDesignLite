@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Forms",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/6/2016 18:58",
-	"instvars" : [
-		 ],
-	"name" : "MDLTextArea",
-	"pools" : [
-		 ],
 	"super" : "WATextAreaTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Forms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLTextArea",
+	"type" : "normal"
+}

@@ -1,16 +1,15 @@
 {
-	"category" : "Material-Design-Lite-Components-Cards",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/21/2015 14:19",
+	"super" : "MDLDivTag",
+	"category" : "Material-Design-Lite-Components-Cards",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"links",
 		"title",
-		"beCollapsible" ],
+		"beCollapsible"
+	],
 	"name" : "MDLCardTag",
-	"pools" : [
-		 ],
-	"super" : "MDLDivTag",
-	"type" : "normal" }
+	"type" : "normal"
+}

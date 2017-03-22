@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Footer",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/22/2015 11:12",
-	"instvars" : [
-		 ],
-	"name" : "MDLMegaFooterLinkList",
-	"pools" : [
-		 ],
 	"super" : "WAUnorderedListTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Footer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLMegaFooterLinkList",
+	"type" : "normal"
+}
