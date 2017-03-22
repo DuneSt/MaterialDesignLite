@@ -1,3 +1,3 @@
 options
 onKeyUp: anObject
-	brushProperties at: #onKeyUp: put: (Array with: anObject)
+	self propertiesAt: #onKeyUp: put: (Array with: anObject)

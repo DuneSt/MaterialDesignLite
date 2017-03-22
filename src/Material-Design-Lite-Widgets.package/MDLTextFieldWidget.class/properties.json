@@ -11,7 +11,6 @@
 		"isExpandable",
 		"isFloatingLabel",
 		"patternErrorMessage",
-		"brushProperties",
 		"errorMessage"
 	],
 	"name" : "MDLTextFieldWidget",

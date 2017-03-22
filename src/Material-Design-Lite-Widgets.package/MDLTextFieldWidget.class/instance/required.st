@@ -1,3 +1,3 @@
 options
 required
-	brushProperties at: #required put: Array new
+	self propertiesAt: #required put: Array new
