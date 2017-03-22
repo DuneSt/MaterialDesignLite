@@ -1,16 +1,15 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Calendar",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "MerwanOuddane 4/11/2016 17:21",
+	"super" : "Object",
+	"category" : "Material-Design-Lite-Widgets-Calendar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"currentDate",
 		"firstDayOfWeekIndex",
-		"yearsInterval" ],
+		"yearsInterval"
+	],
 	"name" : "MDLCalendar",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

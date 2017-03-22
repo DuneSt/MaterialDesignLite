@@ -1,16 +1,15 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Table",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "Material-Design-Lite-Widgets-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"element",
 		"currentState",
-		"unsortedState" ],
+		"unsortedState"
+	],
 	"name" : "MDLSortableTableHeader",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

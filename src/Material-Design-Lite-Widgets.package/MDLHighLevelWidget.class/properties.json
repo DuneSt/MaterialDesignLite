@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/7/2016 10:28",
-	"instvars" : [
-		"properties" ],
-	"name" : "MDLHighLevelWidget",
-	"pools" : [
-		 ],
 	"super" : "MDLWidget",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"properties"
+	],
+	"name" : "MDLHighLevelWidget",
+	"type" : "normal"
+}

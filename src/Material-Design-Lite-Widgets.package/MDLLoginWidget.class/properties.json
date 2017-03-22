@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Cards",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 7/11/2016 11:13",
+	"super" : "MDLHighLevelWidget",
+	"category" : "Material-Design-Lite-Widgets-Cards",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"titleLabel",
 		"titleLevel",
@@ -15,9 +15,8 @@
 		"submitLabel",
 		"callback",
 		"cancelLabel",
-		"cancelCallback" ],
+		"cancelCallback"
+	],
 	"name" : "MDLLoginWidget",
-	"pools" : [
-		 ],
-	"super" : "MDLHighLevelWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

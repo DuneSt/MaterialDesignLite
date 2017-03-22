@@ -12,5 +12,7 @@ renderContentOn: html
 						renderArrowIconFor: fieldId on: html;
 						renderLabelFor: fieldId on: html;
 						renderPossibilitiesFor: fieldId withMap: labelMap on: html;
-						renderTooltipFor: fieldId on: html ].
+						renderTooltipFor: fieldId on: html.
+					labelMap
+						keysAndValuesDo: [ :label :object | self renderMenuTooltipFor: object at: (self idForMenuItemLabelled: label inSelectWith: fieldId) on: html ] ].
 	html script: (self selectInitJsScriptFor: fieldContainerId)

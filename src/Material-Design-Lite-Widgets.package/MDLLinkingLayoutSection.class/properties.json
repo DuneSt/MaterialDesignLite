@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Header",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"links" ],
-	"name" : "MDLLinkingLayoutSection",
-	"pools" : [
-		 ],
 	"super" : "MDLAbstractLayoutSection",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Header",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"links"
+	],
+	"name" : "MDLLinkingLayoutSection",
+	"type" : "normal"
+}

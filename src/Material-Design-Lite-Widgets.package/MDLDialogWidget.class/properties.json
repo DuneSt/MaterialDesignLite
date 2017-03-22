@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Dialog",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/14/2016 15:06",
+	"super" : "MDLWidget",
+	"category" : "Material-Design-Lite-Widgets-Dialog",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"title",
 		"content",
@@ -12,9 +12,8 @@
 		"buttonName",
 		"closeButtonName",
 		"buttonBrush",
-		"dialogBrush" ],
+		"dialogBrush"
+	],
 	"name" : "MDLDialogWidget",
-	"pools" : [
-		 ],
-	"super" : "MDLWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "CyrilFerlicot 1/6/2017 21:58",
+	"super" : "MDLWidget",
+	"category" : "Material-Design-Lite-Widgets-Form",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"choosingText",
 		"labelBlock",
@@ -14,9 +14,9 @@
 		"description",
 		"sortBlock",
 		"autoSubmit",
-		"customizationBlock" ],
+		"customizationBlock",
+		"entryTooltip"
+	],
 	"name" : "MDLSelectWidget",
-	"pools" : [
-		 ],
-	"super" : "MDLWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

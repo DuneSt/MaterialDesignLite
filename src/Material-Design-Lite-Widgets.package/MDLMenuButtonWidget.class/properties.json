@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GuillaumeLarcheveque 12/23/2015 16:23",
+	"super" : "MDLWidget",
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"choosingText",
 		"textBlock",
@@ -12,9 +12,8 @@
 		"objectsPossibilities",
 		"description",
 		"action",
-		"sortBlock" ],
+		"sortBlock"
+	],
 	"name" : "MDLMenuButtonWidget",
-	"pools" : [
-		 ],
-	"super" : "MDLWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

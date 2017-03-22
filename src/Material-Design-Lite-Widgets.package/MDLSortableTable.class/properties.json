@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Table",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "CyrilFerlicot 8/2/2016 10:43",
+	"super" : "WAComponent",
+	"category" : "Material-Design-Lite-Widgets-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"title",
 		"header",
@@ -16,9 +16,8 @@
 		"selectable",
 		"id",
 		"ajaxOnCompleteHook",
-		"tableStyle" ],
+		"tableStyle"
+	],
 	"name" : "MDLSortableTable",
-	"pools" : [
-		 ],
-	"super" : "WAComponent",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets-List",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "CyrilFerlciot 5/18/2016 01:05",
+	"super" : "MDLWidget",
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"elements",
 		"entryCustomizationHook",
@@ -21,9 +21,8 @@
 		"displayResearchField",
 		"displayResearchFilter",
 		"filter",
-		"listStyle" ],
+		"listStyle"
+	],
 	"name" : "MDLNestedList",
-	"pools" : [
-		 ],
-	"super" : "MDLWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

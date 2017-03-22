@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Pagination",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/13/2016 15:02",
+	"super" : "MDLHighLevelWidget",
+	"category" : "Material-Design-Lite-Widgets-Pagination",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"headings",
 		"groups",
@@ -13,9 +13,8 @@
 		"tableBodyId",
 		"arrowsId",
 		"items",
-		"displayBlock" ],
+		"displayBlock"
+	],
 	"name" : "MDLPaginationWidget",
-	"pools" : [
-		 ],
-	"super" : "MDLHighLevelWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}
