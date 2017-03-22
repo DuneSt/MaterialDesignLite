@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Core-Example-Components",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 6/21/2016 11:50",
-	"instvars" : [
-		 ],
-	"name" : "MDLDemoLibrary",
-	"pools" : [
-		 ],
 	"super" : "WAFileLibrary",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Core-Example-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLDemoLibrary",
+	"type" : "normal"
+}

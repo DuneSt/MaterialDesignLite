@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Core-Example-Components",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/8/2016 10:10",
-	"instvars" : [
-		 ],
-	"name" : "MDLWidgetCardScreen",
-	"pools" : [
-		 ],
 	"super" : "MDLDemoScreen",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Core-Example-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLWidgetCardScreen",
+	"type" : "normal"
+}
