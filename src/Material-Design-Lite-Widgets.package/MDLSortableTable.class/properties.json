@@ -16,7 +16,8 @@
 		"selectable",
 		"id",
 		"ajaxOnCompleteHook",
-		"tableStyle"
+		"tableStyle",
+		"rowsCache"
 	],
 	"name" : "MDLSortableTable",
 	"type" : "normal"

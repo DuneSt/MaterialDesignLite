@@ -7,6 +7,6 @@ renderPagesInfoOn: html
 					s
 						<< position;
 						<< ' - ';
-						<< (position + elementsToShow - 1);
+						<< self indexOfLastRowToShow;
 						<< '  of ';
-						<< self rows size ])
+						<< rowsCache size ])

@@ -1,3 +1,3 @@
 testing
 shouldDisplayPagination
-	^ self rowsPerPagePossibilities min < self rows size
+	^ self rowsPerPagePossibilities min < rowsCache size
