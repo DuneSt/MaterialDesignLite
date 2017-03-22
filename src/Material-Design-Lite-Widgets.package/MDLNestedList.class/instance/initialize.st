@@ -1,4 +1,10 @@
-as yet unclassified
+initialization
 initialize
 	super initialize.
-	self displayResearchField: false
+	self
+		listMaxSize: 150;
+		displayResearchField: false;
+		isJsAction: false;
+		listStyle: #standard;
+		filterInsensitiveBeginsWith;
+		onLoadHook: 'componentHandler.upgradeDom();'

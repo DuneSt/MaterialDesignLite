@@ -1,3 +1,3 @@
 options
 readonly: aBoolean
-	brushProperties at: #readonly: put: aBoolean
+	self propertiesAt: #readonly: put: aBoolean

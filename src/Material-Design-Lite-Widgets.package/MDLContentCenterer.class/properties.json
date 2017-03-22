@@ -1,17 +1,16 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "MerwanOuddane 5/11/2016 01:14",
+	"super" : "WAComponent",
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"component",
 		"desktopSize",
 		"tabletSize",
-		"phoneSize" ],
+		"phoneSize"
+	],
 	"name" : "MDLContentCenterer",
-	"pools" : [
-		 ],
-	"super" : "WAComponent",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+I am a nested list filter keeping only elements whose name includes the pattern of the user. BUT! If the pattern contains a "*" or a "#", I uses a regex fiter.

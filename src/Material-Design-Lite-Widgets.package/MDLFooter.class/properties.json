@@ -1,17 +1,16 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Footer",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 5/10/2016 18:54",
+	"super" : "MDLWidget",
+	"category" : "Material-Design-Lite-Widgets-Footer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"topLeftSection",
 		"topRightSection",
 		"middleSection",
-		"bottomSection" ],
+		"bottomSection"
+	],
 	"name" : "MDLFooter",
-	"pools" : [
-		 ],
-	"super" : "MDLWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 listMaxSize
-	^ 200
+	^ listMaxSize

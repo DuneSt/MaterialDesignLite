@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Dialog",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLDialogContent",
-	"pools" : [
-		 ],
 	"super" : "MDLDivTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Dialog",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLDialogContent",
+	"type" : "normal"
+}

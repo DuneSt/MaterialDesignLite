@@ -1,15 +1,14 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Poll",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/10/2016 11:34",
+	"super" : "GRObject",
+	"category" : "Material-Design-Lite-Widgets-Poll",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"positiveCount",
-		"negativeCount" ],
+		"negativeCount"
+	],
 	"name" : "MDLPoll",
-	"pools" : [
-		 ],
-	"super" : "GRObject",
-	"type" : "normal" }
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
 accessing
 onClick: anObject
-	properties at: #onClick: put: anObject
+	self propertiesAt: #onClick: put: anObject

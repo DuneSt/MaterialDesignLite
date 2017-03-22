@@ -1,3 +1,3 @@
-rendering
+testing
 hasDraggableItems
-	^ true
+	^ self dragAndDropBlock notNil

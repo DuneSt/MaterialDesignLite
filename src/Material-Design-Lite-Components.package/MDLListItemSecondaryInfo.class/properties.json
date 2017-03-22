@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-List",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLListItemSecondaryInfo",
-	"pools" : [
-		 ],
 	"super" : "WATagBrush",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-List",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLListItemSecondaryInfo",
+	"type" : "normal"
+}

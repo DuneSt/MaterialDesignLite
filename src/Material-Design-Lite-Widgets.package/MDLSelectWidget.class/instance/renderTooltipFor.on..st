@@ -5,4 +5,7 @@ renderTooltipFor: anId on: html
 	html mdlTooltip
 		for: anId;
 		large;
-		with: self description
+		with:
+				(self description isBlock
+						ifTrue: [ self description value: html ]
+						ifFalse: [ self description ])

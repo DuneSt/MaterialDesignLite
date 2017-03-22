@@ -8,4 +8,5 @@ renderPossibilitiesFor: anId withMap: aLabelMap on: html
 						do: [ :label | 
 							html listItem
 								class: #'mdl-menu__item';
+								id: (self idForMenuItemLabelled: label inSelectWith: anId);
 								with: label ] ]

@@ -1,5 +1,9 @@
 rendering
 renderTableContentOn: html
+	"We cache the rows because it is possible that the user give a block to execute."
+
+	rowsCache := self rows.
+	self ensureCurrentPageIsVisible.
 	self title
 		ifNotNil: [ 
 			html mdlCardTitle
@@ -8,8 +12,9 @@ renderTableContentOn: html
 	(selectable
 		ifTrue: [ html mdlTable selectable ]
 		ifFalse: [ html mdlTable ])
-		style: 'width: 100%; border: none';
+		style: 'width: 100%; border: none;';
 		with: [ 
 					self renderHeaderOn: html.
 					self renderRowsOn: html ].
-	self renderFooterPaginationOn: html
+	self shouldDisplayPagination
+		ifTrue: [ self renderFooterPaginationOn: html ]

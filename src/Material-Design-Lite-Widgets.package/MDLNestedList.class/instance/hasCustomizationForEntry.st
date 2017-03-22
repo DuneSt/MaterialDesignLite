@@ -1,0 +1,3 @@
+testing
+hasCustomizationForEntry
+	^ self entryCustomizationHook notNil

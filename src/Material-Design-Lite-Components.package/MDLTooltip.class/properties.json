@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Tooltips",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLTooltip",
-	"pools" : [
-		 ],
 	"super" : "WATagBrush",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Tooltips",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLTooltip",
+	"type" : "normal"
+}

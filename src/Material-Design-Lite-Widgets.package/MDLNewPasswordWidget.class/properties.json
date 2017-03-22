@@ -1,10 +1,10 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/27/2016 13:47",
+	"super" : "MDLHighLevelWidget",
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"currentPassword",
 		"newPassword",
@@ -16,9 +16,8 @@
 		"notMatchingPasswordsBlock",
 		"rightOldPassword",
 		"pattern",
-		"errorMessage" ],
+		"errorMessage"
+	],
 	"name" : "MDLNewPasswordWidget",
-	"pools" : [
-		 ],
-	"super" : "MDLHighLevelWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

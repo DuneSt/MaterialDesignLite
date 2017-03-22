@@ -1,15 +1,14 @@
 {
-	"category" : "Material-Design-Lite-Widgets",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "WAComponent",
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"id",
-		"value" ],
+		"value"
+	],
 	"name" : "MDLWidget",
-	"pools" : [
-		 ],
-	"super" : "WAComponent",
-	"type" : "normal" }
+	"type" : "normal"
+}

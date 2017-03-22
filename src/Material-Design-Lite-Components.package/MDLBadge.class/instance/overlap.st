@@ -1,3 +1,3 @@
-as yet unclassified
+options
 overlap
 	self class: 'mdl-badge--overlap'

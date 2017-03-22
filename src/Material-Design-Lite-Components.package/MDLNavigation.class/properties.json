@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Nav",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 7/21/2015 15:00",
-	"instvars" : [
-		 ],
-	"name" : "MDLNavigation",
-	"pools" : [
-		 ],
 	"super" : "WATagBrush",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Nav",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLNavigation",
+	"type" : "normal"
+}

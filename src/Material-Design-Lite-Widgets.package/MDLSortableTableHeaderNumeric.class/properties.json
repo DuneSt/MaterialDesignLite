@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Table",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLSortableTableHeaderNumeric",
-	"pools" : [
-		 ],
 	"super" : "MDLSortableTableHeader",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSortableTableHeaderNumeric",
+	"type" : "normal"
+}

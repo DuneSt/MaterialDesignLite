@@ -1,9 +1,10 @@
 code
 renderSelectOn: html
 	html
-		form: [ html
+		form: [ 
+			html
 				render:
-					(MDLSelectWidget
+					((MDLSelectWidget
 						possibilities: #(1 2 3 4 5 5)
 						inputLabel: 'Select Your Number'
 						labelBlock: [ :number | 
@@ -16,7 +17,9 @@ renderSelectOn: html
 								cr ]
 						selectedObject: 3
 						tooltip: 'description'
-						sortBlock: [ :a :b | a <= b ]).
+						sortBlock: [ :a :b | a <= b ])
+						entryTooltip: [ :number | 'Choose number: ' , number asString ];
+						yourself).
 			html break.
 			html mdlButton
 				accentColor;

@@ -1,11 +1,14 @@
 rendering
 renderContentOn: html
+	self ensureId: html.
 	html div
+		id: (self idFor: #nestedList);
 		class: #nestedList;
+		class: self listStyle;
 		with: [ 
-					self flag: #TODO.	"put style in css"
-					self displayResearchFieldDiv: html.
+					self renderFilterFieldOn: html.
 					html div
+						id: (self idFor: #listContent);
 						class: #listContent;
-						style: 'height: 500px;';
+						class: #withSearch if: self displayResearchField;
 						with: [ self renderListOn: html ] ]

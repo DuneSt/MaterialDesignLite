@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLDivTag",
+	"category" : "Material-Design-Lite-Components-Forms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSliderContainer",
+	"type" : "normal"
+}

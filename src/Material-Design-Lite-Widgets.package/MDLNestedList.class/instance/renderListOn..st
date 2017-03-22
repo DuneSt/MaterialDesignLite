@@ -1,14 +1,10 @@
 rendering
 renderListOn: html
-	| div scrollCb clickCb |
-	div := html div class: #listContainer.
-	scrollCb := self defineScrollCallbackOn: div.
-	clickCb := self defineClickCallbackOn: div.
-	self
-		setDataForCallBack: div
-		html: html
-		scrollCb: scrollCb
-		clickCb: clickCb.
+	| div |
+	div := html div
+		id: (self idFor: #listContainer);
+		class: #listContainer.
+	self setDataForCallBackFor: div html: html.
 	div
 		with: [ 
 			| elementsToDisplay firstElementIndex |
@@ -16,6 +12,7 @@ renderListOn: html
 			firstElementIndex := self filteredElements
 				indexOf: (elementsToDisplay ifEmpty: [ nil ] ifNotEmpty: [ :coll | coll first ]).
 			html unorderedList
+				id: (self idFor: #expList);
 				class: #expList;
 				with: [ 
 							elementsToDisplay
@@ -25,5 +22,4 @@ renderListOn: html
 										index: index + firstElementIndex - 1
 										indentedBy: 1
 										on: html ] ] ].
-	html script: self expendableJsScript.
 	self draggableMechanism: html forDiv: div

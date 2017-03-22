@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Calendar",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/14/2016 15:26",
-	"instvars" : [
-		 ],
-	"name" : "MDLCalendarCardWidget",
-	"pools" : [
-		 ],
 	"super" : "MDLCalendarWidget",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Calendar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLCalendarCardWidget",
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
 options
 onClick: anObject
-	brushProperties at: #onClick: put: (Array with: anObject)
+	self propertiesAt: #onClick: put: (Array with: anObject)

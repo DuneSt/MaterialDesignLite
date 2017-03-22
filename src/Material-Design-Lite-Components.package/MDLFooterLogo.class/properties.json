@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Footer",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 5/7/2016 16:45",
-	"instvars" : [
-		 ],
-	"name" : "MDLFooterLogo",
-	"pools" : [
-		 ],
 	"super" : "MDLDivTag",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Footer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLFooterLogo",
+	"type" : "normal"
+}

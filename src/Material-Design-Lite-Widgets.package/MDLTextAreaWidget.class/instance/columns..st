@@ -1,3 +1,3 @@
 options
 columns: aNumber
-	brushProperties at: #columns: put: (Array with: aNumber)
+	self propertiesAt: #columns: put: (Array with: aNumber)

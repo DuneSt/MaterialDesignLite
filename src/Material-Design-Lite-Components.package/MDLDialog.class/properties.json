@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components-Dialog",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "MerwanOuddane 3/23/2016 12:04",
-	"instvars" : [
-		 ],
-	"name" : "MDLDialog",
-	"pools" : [
-		 ],
 	"super" : "WATagBrush",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components-Dialog",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLDialog",
+	"type" : "normal"
+}

@@ -1,3 +1,3 @@
 options
 rows: aNumber
-	brushProperties at: #rows: put: (Array with: aNumber)
+	self propertiesAt: #rows: put: (Array with: aNumber)

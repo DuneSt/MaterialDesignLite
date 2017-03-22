@@ -1,5 +1,5 @@
 *Material-Design-Lite-Components
 mdlCheckboxLabel: aText
-	^ (self brush: MDLCheckboxLabel  new)
-	with: aText;
-	yourself 
+	^ self mdlCheckboxLabel
+		with: aText;
+		yourself

@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Core-Example-Components",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "MDLWidgetNestedListScreen",
-	"pools" : [
-		 ],
 	"super" : "MDLDemoScreen",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Core-Example-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLWidgetNestedListScreen",
+	"type" : "normal"
+}

@@ -1,16 +1,15 @@
 {
-	"category" : "Material-Design-Lite-Core-Example-Components",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 6/20/2016 11:31",
+	"super" : "MDLAbstractHeaderSection",
+	"category" : "Material-Design-Lite-Core-Example-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"app",
 		"tabs",
-		"activeTab" ],
+		"activeTab"
+	],
 	"name" : "MDLTitleHeaderSection",
-	"pools" : [
-		 ],
-	"super" : "MDLAbstractHeaderSection",
-	"type" : "normal" }
+	"type" : "normal"
+}

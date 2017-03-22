@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Core-Example-Components",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "KevinLanvin 6/21/2016 11:49",
-	"instvars" : [
-		"activeScreen" ],
-	"name" : "MDLComponentsDemoApplication",
-	"pools" : [
-		 ],
 	"super" : "MDLApplication",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Core-Example-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"activeScreen"
+	],
+	"name" : "MDLComponentsDemoApplication",
+	"type" : "normal"
+}

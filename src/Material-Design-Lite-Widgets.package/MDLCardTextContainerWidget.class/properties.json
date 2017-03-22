@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Cards",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/7/2016 11:08",
-	"instvars" : [
-		"content" ],
-	"name" : "MDLCardTextContainerWidget",
-	"pools" : [
-		 ],
 	"super" : "MDLHighLevelWidget",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Cards",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"content"
+	],
+	"name" : "MDLCardTextContainerWidget",
+	"type" : "normal"
+}

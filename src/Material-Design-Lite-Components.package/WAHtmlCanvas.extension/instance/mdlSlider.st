@@ -1,3 +1,3 @@
 *Material-Design-Lite-Components
 mdlSlider
-	^ self brush: MDLSlider  new 
+	^ self brush: MDLSlider new

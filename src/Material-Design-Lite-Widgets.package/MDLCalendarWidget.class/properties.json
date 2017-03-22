@@ -1,17 +1,16 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Calendar",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "ThomasHeniart 6/8/2016 10:55",
+	"super" : "MDLHighLevelWidget",
+	"category" : "Material-Design-Lite-Widgets-Calendar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"daysList",
 		"calendar",
 		"calendarId",
-		"callback" ],
+		"callback"
+	],
 	"name" : "MDLCalendarWidget",
-	"pools" : [
-		 ],
-	"super" : "MDLHighLevelWidget",
-	"type" : "normal" }
+	"type" : "normal"
+}

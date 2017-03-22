@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Components",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "obi 4/2/2008 22:48",
-	"instvars" : [
-		 ],
-	"name" : "MDLDivTag",
-	"pools" : [
-		 ],
 	"super" : "WATagBrush",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLDivTag",
+	"type" : "normal"
+}

@@ -1,4 +1,4 @@
 actions
 nextPosition
-	position + elementsToShow < self rows size
+	position + elementsToShow < rowsCache size
 		ifTrue: [ self position: position + elementsToShow ]

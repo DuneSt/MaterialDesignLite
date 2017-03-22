@@ -1,17 +1,16 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Util",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "GuillaumeLarcheveque 6/14/2016 11:18",
+	"super" : "Object",
+	"category" : "Material-Design-Lite-Widgets-Util",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"element",
 		"children",
 		"selectedBranch",
-		"selectedElement" ],
+		"selectedElement"
+	],
 	"name" : "MDLNestedListTreeNode",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

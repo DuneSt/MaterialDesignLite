@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Footer",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLFooterNilSection",
-	"pools" : [
-		 ],
 	"super" : "MDLFooterAbstractSection",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Footer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLFooterNilSection",
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Core-Applications",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"footer" ],
-	"name" : "MDLScreenFooter",
-	"pools" : [
-		 ],
 	"super" : "WADecoration",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Core-Applications",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"footer"
+	],
+	"name" : "MDLScreenFooter",
+	"type" : "normal"
+}

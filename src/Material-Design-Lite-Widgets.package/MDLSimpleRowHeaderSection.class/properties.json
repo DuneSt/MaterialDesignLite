@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Header",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLSimpleRowHeaderSection",
-	"pools" : [
-		 ],
 	"super" : "MDLAbstractHeaderSection",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Header",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSimpleRowHeaderSection",
+	"type" : "normal"
+}

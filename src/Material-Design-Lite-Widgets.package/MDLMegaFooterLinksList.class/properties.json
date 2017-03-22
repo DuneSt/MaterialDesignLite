@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Footer",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLMegaFooterLinksList",
-	"pools" : [
-		 ],
 	"super" : "MDLAbstractFooterLinksList",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Footer",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLMegaFooterLinksList",
+	"type" : "normal"
+}
