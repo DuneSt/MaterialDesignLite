@@ -1,3 +1,3 @@
 accessing
-propertiesAt: aSymbol put: anObject
-	
+propertiesAt: aString put: anObject
+	self properties at: aString put: anObject
