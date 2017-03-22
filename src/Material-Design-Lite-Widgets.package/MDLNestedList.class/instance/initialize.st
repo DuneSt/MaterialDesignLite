@@ -1,7 +1,10 @@
 initialization
 initialize
 	super initialize.
-	self displayResearchField: false.
-	self isJsAction: false.
-	self listStyle: #standard.
-	self filterBeginsWith
+	self
+		listMaxSize: 150;
+		displayResearchField: false;
+		isJsAction: false;
+		listStyle: #standard;
+		filterInsensitiveBeginsWith;
+		onLoadHook: 'componentHandler.upgradeDom();'

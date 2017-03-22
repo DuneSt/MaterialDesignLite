@@ -1,3 +1,3 @@
-rendering
+testing
 hasCustomizationForEntry
 	^ self entryCustomizationHook notNil

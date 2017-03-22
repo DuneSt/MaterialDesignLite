@@ -1,10 +1,9 @@
 rendering
 renderItemContentOf: aNode index: anIndex indentedBy: anInteger on: html
-	| anId div |
-	anId := html nextId.
+	| div |
 	div := html div class: #itemContener.
 	self hasCustomizationForEntry
-		ifTrue: [ self entryCustomizationHook value: div value: aNode element ].
+		ifTrue: [ self entryCustomizationHook mdlCull: div cull: aNode element ].
 	div
 		attributeAt: 'draggable' put: 'true';
 		attributeAt: 'onDragOver'
@@ -17,7 +16,6 @@ renderItemContentOf: aNode index: anIndex indentedBy: anInteger on: html
 					self renderIconOf: aNode element on: html.
 					self
 						renderAnchor: aNode
-						withId: anId
 						index: anIndex
 						inDiv: div
 						indentedBy: anInteger

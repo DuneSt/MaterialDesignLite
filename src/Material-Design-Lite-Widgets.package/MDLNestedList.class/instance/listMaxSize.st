@@ -1,3 +1,3 @@
 accessing
 listMaxSize
-	^ 200
+	^ listMaxSize

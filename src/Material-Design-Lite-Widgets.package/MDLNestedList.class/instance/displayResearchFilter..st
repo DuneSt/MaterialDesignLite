@@ -6,5 +6,7 @@ displayResearchFilter: aFilter
 			filteredElements := #() ]
 		ifNotEmpty: [ 
 			displayResearchFilter := aFilter.
-			filteredElements := self elements
-				select: [ :element | self filter isMatching: (self format value: element) with: self displayResearchFilter ] ]
+			filteredElements := self filter
+				selectMatchingFrom: self elements
+				format: self format
+				with: self displayResearchFilter ]

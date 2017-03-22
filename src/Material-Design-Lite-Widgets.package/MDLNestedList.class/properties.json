@@ -21,7 +21,9 @@
 		"displayResearchField",
 		"displayResearchFilter",
 		"filter",
-		"listStyle"
+		"listStyle",
+		"onLoadHook",
+		"listMaxSize"
 	],
 	"name" : "MDLNestedList",
 	"type" : "normal"

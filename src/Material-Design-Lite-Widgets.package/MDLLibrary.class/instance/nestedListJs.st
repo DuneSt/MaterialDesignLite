@@ -6,43 +6,28 @@ nestedListJs
  */
 function expandCollapse(element) {
     var li = $(element).closest("li");
+    var listContainer = li.closest(".listContainer");
+    if(li.children("ul").length == 0){
+        activateSpinnerOf(listContainer.closest(".nestedList").find(".listResearchField"));
+        var dataObj = {};
+        dataObj[listContainer[0].dataset.childrencbid] = li.attr("index");
+        $.ajax({
+            url: listContainer[0].dataset.url,
+            type: "POST",
+            data: dataObj,
+            success: function (html_code) {
+                li.append(html_code);
+	             eval(listContainer[0].dataset.onloadhook);
+                desactivateSpinnerOf(listContainer.closest(".nestedList").find(".listResearchField"));
+            },
+            error: function () {
+                location.reload();
+            }
+        })
+    }
     li.toggleClass("expanded");
     li.children("ul").toggle("medium");
     li.toggleClass("collapsed");
-}
-
-function post(path, parameters) {
-    var form = $("<form></form>");
-
-    form.attr("method", "post");
-    form.attr("action", path);
-
-    $.each(parameters, function (key, value) {
-        var field = $("<input>");
-
-        field.attr("type", "hidden");
-        field.attr("name", key);
-        field.attr("value", value);
-
-        form.append(field);
-    });
-
-    // The form needs to be a part of the document in
-    // order for us to be able to submit it.
-    $(document.body).append(form);
-    form.submit();
-}
-
-/**
- * This method is called when a user click on an element of the list and notify the server that an element was selected.
- *
- * @param event The click event.
- */
-function goTo(event) {
-    var list = $(event.target).closest(".listContainer")[0];
-    var tmp = {};
-    tmp[list.dataset.lclickcb] = $(event.target).closest("li").attr("index");
-    post(list.dataset.url, tmp);
 }
 
 function loadBefore(start, end, listContainer) {
@@ -62,6 +47,7 @@ function loadAfter(start, end, listContainer) {
  * @param shouldDeleteLast A boolean saying if we should delete the first or the last elements.
  */
 function load(start, end, listContainer, shouldDeleteLast) {
+    activateSpinnerOf($(listContainer).closest(".nestedList").find(".listResearchField"));
     var dataObj = {};
     dataObj[listContainer.dataset.cbid] = start + ":" + end;
     $.ajax({
@@ -96,6 +82,8 @@ function load(start, end, listContainer, shouldDeleteLast) {
             }
             listContainer.appendChild(list);
             listContainer.scrollTop = scrolling;
+            eval(listContainer.dataset.onloadhook);
+            desactivateSpinnerOf($(listContainer).closest(".nestedList").find(".listResearchField"));
         },
         error: function () {
             location.reload();
@@ -119,10 +107,11 @@ function obtainFirstIndex(listContainer) {
 function defineExpandable() {
 
     $(".listContainer").scroll(function (e) {
-			// If we have less elements in the list than the max we can show, just do nothing.
-         if(e.currentTarget.dataset.listmaxsize == e.currentTarget.getElementsByClassName("expList")[0].children.length) {
+        // If we have less elements in the list than the max we can show, just do nothing.
+        if (e.currentTarget.dataset.listmaxsize == e.currentTarget.getElementsByClassName("expList")[0].children.length) {
+
             var tempLastIndex;
-            if (0.2 > (e.currentTarget.scrollTop) / e.currentTarget.scrollHeight) {
+            if (0.2 > (e.currentTarget.scrollTop) / e.currentTarget.scrollHeight && e.currentTarget.getElementsByClassName("expList")[0].children[0].getAttribute("index") != "1") {
                 tempLastIndex = obtainFirstIndex(e.currentTarget);
                 if (tempLastIndex < e.currentTarget.dataset.lastindexasked) {
                     //this test is to avoid asking multiple time to the server
@@ -153,19 +142,40 @@ function scrollToSelection() {
  * @param aSelectedNode The node to scroll to.
  */
 function scrollTo(index, aSelectedNode) {
-    var selection = $(aSelectedNode.parentNode);
-    var children = $(selection.closest(".expList")).children();
-    var dec = 0;
-    while ($(children).index(selection) == -1) {
-        selection = selection.parent();
-    }
-    for (var i = 0; i < $(children).index(selection); i++) {
-        dec += $(children[i]).height();
-    }
-    selection.closest(".listContainer")[0].scrollTop = dec;
+    var scrollTo = $(aSelectedNode).parentsUntil(".listContainer", "li").last();
+    var container = $(scrollTo.closest(".listContainer"));
+    container.animate({scrollTop: scrollTo.offset().top - container.offset().top + container.scrollTop()}, 100);
+}
+
+/**
+ * This function allow to activate the spinner in the research bar when there is one.
+ * @param aListResearchField the research field of the list.
+ */
+function activateSpinnerOf(aListResearchField) {
+    aListResearchField.find(".mdl-spinner").addClass("is-active");
+}
+
+/**
+ * This function allow to remove the spinner in the research bar when there is one.
+ * @param aListResearchField the research field of the list.
+ */
+function desactivateSpinnerOf(aListResearchField) {
+    aListResearchField.find(".mdl-spinner").removeClass("is-active");
+}
+
+function initSearchFields() {
+    $(".listResearchField").find("input").change(function () {
+        activateSpinnerOf($(this).parents(".listResearchField"));
+    });
+}
+
+function stopSpinnerOf(researchDivId) {
+    desactivateSpinnerOf($("#" + researchDivId).parents(".listResearchField"));
 }
 
 window.addEventListener("load", function () {
     scrollToSelection();
     defineExpandable();
-});'
+    initSearchFields();
+});
+'

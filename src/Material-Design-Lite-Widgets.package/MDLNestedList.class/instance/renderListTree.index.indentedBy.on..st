@@ -11,8 +11,10 @@ renderListTree: aTree index: index indentedBy: indentation on: html
 						index: index
 						indentedBy: indentation
 						on: html.
-					self
-						renderSublistOf: aTree children
-						parentIndex: index
-						indentedBy: indentation
-						on: html ]
+					aTree selectedBranch
+						ifTrue: [ 
+							self
+								renderSublistOf: aTree children
+								parentIndex: index
+								indentedBy: indentation
+								on: html ] ]

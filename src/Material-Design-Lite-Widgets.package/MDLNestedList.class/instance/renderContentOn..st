@@ -6,7 +6,7 @@ renderContentOn: html
 		class: #nestedList;
 		class: self listStyle;
 		with: [ 
-					self displayResearchFieldDiv: html.
+					self renderFilterFieldOn: html.
 					html div
 						id: (self idFor: #listContent);
 						class: #listContent;
