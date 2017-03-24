@@ -16,8 +16,14 @@ install:
   - '%CYG_EXE% -dgnqNO -R "%CYG_ROOT%" -s "%CYG_MIRROR%" -l "%CYG_CACHE%" -P unzip'
   - ps: Start-FileDownload "https://github.com/hpi-swa/smalltalkCI/archive/master.zip" "C:\smalltalkCI.zip"
   - 7z x C:\smalltalkCI.zip -oC:\ -y > NULL
+  - appveyor DownloadFile http://selenium-release.storage.googleapis.com/3.3/selenium-server-standalone-3.3.1.jar
+  - appveyor DownloadFile https://chromedriver.storage.googleapis.com/2.28/chromedriver_win32.zip
+  - 7z x chromedriver_win32.zip -y >nul
 
 build: false
+
+before_test:
+  - ps: Start-Process java -ArgumentList '-Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-3.3.1.jar'
 
 test_script:
   - '%CYG_BASH% -lc "cd $APPVEYOR_BUILD_FOLDER; exec 0</dev/null; $SCI_RUN"'

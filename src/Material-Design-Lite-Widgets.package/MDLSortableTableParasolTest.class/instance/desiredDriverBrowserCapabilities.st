@@ -1,0 +1,3 @@
+running
+desiredDriverBrowserCapabilities
+	^ BPDesiredCapabilities chrome

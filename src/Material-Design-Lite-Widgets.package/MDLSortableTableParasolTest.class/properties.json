@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "BPSeasideWebDriverTestCase",
+	"category" : "Material-Design-Lite-Widgets-Table",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSortableTableParasolTest",
+	"type" : "normal"
+}
