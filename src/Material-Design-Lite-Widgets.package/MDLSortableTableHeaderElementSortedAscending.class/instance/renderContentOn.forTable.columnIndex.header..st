@@ -3,9 +3,9 @@ renderContentOn: html forTable: table columnIndex: i header: header
 	(header headingCellOn: html)
 		sortedAscending;
 		onClick:
-				(html jQuery ajax
-						callback: [ 
-									table sortDescendingAtRow: i.
-									header goToNextState ];
-						onSuccess: (table ajaxUpdateScriptFrom: html));
+			(self
+				onClickScriptForTable: table
+				columnIndex: i
+				header: header
+				from: html);
 		with: header element

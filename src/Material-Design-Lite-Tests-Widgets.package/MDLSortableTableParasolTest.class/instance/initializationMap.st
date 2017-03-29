@@ -1,12 +1,6 @@
 hook
 initializationMap
 	^ Dictionary new
-		at: #testTableWithOnePageHasEnoughtRows
-			put: [ :table | 
-			table
-				rows: [ (1 to: 8)
-						collect: [ :e | 
-							{e.
-							e asString.
-							(e * 2)} ] ] ];
+		at: #testTableWithOnePageHasEnoughtRows put: [ :table | self setFewRowsTo: table ];
+		at: #testSortColumn put: [ :table | self setSortDatasTo: table ];
 		yourself

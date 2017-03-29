@@ -1,0 +1,3 @@
+initialization
+defaultNextState
+	^ MDLSortableTableHeaderElementUnsorted new

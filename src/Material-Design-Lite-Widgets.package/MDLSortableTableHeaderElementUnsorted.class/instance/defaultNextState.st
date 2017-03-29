@@ -1,0 +1,3 @@
+initialization
+defaultNextState
+	^ MDLSortableTableHeaderElementSortedDescending new

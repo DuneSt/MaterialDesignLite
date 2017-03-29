@@ -1,3 +1,3 @@
 initialization
-initializeNextState
+defaultNextState
 	self subclassResponsibility

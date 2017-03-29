@@ -5,6 +5,7 @@ renderButtonTriggering: aMethod withIcon: aSymbol disabled: isDisabled on: html
 		colored;
 		icon;
 		disabled: isDisabled;
+		class: aMethod; "This class is here to help with functional testing."
 		onClick:
 				(html jQuery ajax
 						callback: [ self perform: aMethod ];
