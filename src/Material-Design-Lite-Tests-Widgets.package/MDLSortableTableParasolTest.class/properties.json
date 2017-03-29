@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "BPSeasideWebDriverTestCase",
-	"category" : "Material-Design-Lite-Widgets-Table",
+	"category" : "Material-Design-Lite-Tests-Widgets",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
