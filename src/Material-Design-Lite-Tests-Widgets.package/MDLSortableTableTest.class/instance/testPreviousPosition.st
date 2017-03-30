@@ -1,5 +1,5 @@
 tests
-testPreviousPage
+testPreviousPosition
 	(driver findElementByClassName: 'nextPosition') click.
 
 	"We first check the value of the first cell of the table"

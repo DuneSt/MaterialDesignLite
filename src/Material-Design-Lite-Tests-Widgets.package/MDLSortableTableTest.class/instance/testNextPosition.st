@@ -1,5 +1,5 @@
 tests
-testNextPage
+testNextPosition
 	"We first check the value of the first cell of the table"
 	self assert: self contentOfFirstCell equals: 1 asString.
 

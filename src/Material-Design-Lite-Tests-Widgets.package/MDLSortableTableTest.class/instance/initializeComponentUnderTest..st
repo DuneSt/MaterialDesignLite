@@ -2,7 +2,7 @@ hook
 initializeComponentUnderTest: aComponent
 	aComponent
 		header: {'Number' . 'Number As String' . 'Number * 2'};
-		rows: [ (1 to: 100)
+		rows: [ (1 to: 1000)
 				collect: [ :each | 
 					{each.
 					each asString.
