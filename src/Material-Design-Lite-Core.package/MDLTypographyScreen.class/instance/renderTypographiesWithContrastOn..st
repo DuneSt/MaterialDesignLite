@@ -10,4 +10,4 @@ renderTypographiesWithContrastOn: html
 					html div
 						style: 'margin: 10px 0;';
 						perform: selector;
-						with: each asLowercase ] ]
+						with: each asLowercase capitalized ] ]
