@@ -48,7 +48,7 @@ Internal Representation and Key Implementation Points.
 	autoSubmit:  		<aBoolean>		If true, the form will be submit when the user select a value
 	callback:			<aBlock>		A callback to execute on the form submit. It will take as parameter the selected object.
 	choosingText:		<aString>		The label of the select input.
-	customizationBlock:	<aBlock>		An optional block to customize the text field of the select widget. It will take the mdl brush as parameter.
+	customizationBlock:	<aBlock>		An optional block to customize the text field of the select widget. It will take the mdl brush as parameter and the html canvas.
 	description:			<aString>		An optional tooltip for the input.
 	labelBlock:			<aBlock>		A block taking in parameter an object and returning a label to show in the input.
 	possibilities:			<aCollection>	The list of possibilities.
