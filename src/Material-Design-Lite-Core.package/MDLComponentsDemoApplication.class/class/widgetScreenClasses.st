@@ -1,7 +1,8 @@
-as yet unclassified
+accessing
 widgetScreenClasses
 	^ {MDLWidgetCalendarScreen.
 	MDLWidgetCardScreen.
+	MDLWidgetMenuButtonScreen.
 	MDLWidgetPaginationScreen.
 	MDLWidgetPollScreen.
 	MDLWidgetSelectScreen.
