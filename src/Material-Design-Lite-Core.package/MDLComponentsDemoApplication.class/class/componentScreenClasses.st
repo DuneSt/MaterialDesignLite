@@ -14,4 +14,5 @@ componentScreenClasses
 	MDLTogglesScreen.
 	MDLTablesScreen.
 	MDLTextFieldsScreen.
-	MDLTooltipsScreen}
+	MDLTooltipsScreen.
+	MDLTypographyScreen}
