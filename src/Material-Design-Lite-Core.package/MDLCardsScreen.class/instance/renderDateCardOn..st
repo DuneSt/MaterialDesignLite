@@ -2,7 +2,7 @@ code
 renderDateCardOn: html
 	html mdlCard
 		shadow: 2;
-		class: 'mdl-typography--text-left';
+		mdlTypographyTextLeft;
 		style: 'margin: auto; width: 256px; height: 256px;  background: #3E4EB8;';
 		with: [ 
 			html mdlCardTitle
@@ -27,7 +27,8 @@ renderDateCardOn: html
 				with: [ html mdlButton
 						colored;
 						rippleEffect;
-						style: 'font-weight: bold; color: #fff';
+						mdlTypographyFontBold;
+						style: 'color: #fff';
 						with: 'Add to calendar'.
 					html mdlLayoutSpacer.
 					html mdlIcon

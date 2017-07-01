@@ -2,7 +2,7 @@ code
 renderWideCardOn: html
 	html mdlCard
 		shadow: 2;
-		class: 'mdl-typography--text-left';
+		mdlTypographyTextLeft;
 		style: 'margin: 20px auto; width: 512px';
 		with: [ 
 			
@@ -18,7 +18,7 @@ renderWideCardOn: html
 				with: [ html mdlButton
 						colored;
 						rippleEffect;
-						style: 'font-weight : bold';
+						mdlTypographyFontBold;
 						with: 'Get Started' ].
 					
 			html mdlCardMenu
