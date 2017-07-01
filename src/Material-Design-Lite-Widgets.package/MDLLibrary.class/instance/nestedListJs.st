@@ -134,7 +134,7 @@ function defineExpandable() {
 }
 
 function scrollToSelection() {
-    $("div.isSelected").each(scrollTo);
+    $($("div.isSelected").get().reverse()).each(scrollTo); //In case there is two selected in the same list, go to the first one in last
 }
 
 /**
@@ -173,9 +173,13 @@ function stopSpinnerOf(researchDivId) {
     desactivateSpinnerOf($("#" + researchDivId).parents(".listResearchField"));
 }
 
-window.addEventListener("load", function () {
+function initNestedList(){
     scrollToSelection();
     defineExpandable();
     initSearchFields();
+}
+
+window.addEventListener("load", function () {
+    initNestedList();
 });
 '
