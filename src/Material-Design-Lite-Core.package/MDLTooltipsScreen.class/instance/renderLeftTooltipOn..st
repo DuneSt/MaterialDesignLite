@@ -1,4 +1,4 @@
-rendering
+code
 renderLeftTooltipOn: html
 	html mdlIcon
 		id: html nextId;

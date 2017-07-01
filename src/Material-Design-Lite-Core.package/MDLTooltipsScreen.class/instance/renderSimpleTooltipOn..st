@@ -1,4 +1,4 @@
-rendering
+code
 renderSimpleTooltipOn: html
 	html mdlIcon
 		id: html nextId;
