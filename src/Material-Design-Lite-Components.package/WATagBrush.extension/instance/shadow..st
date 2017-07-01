@@ -1,4 +1,4 @@
-*Material-Design-Lite-Core
+*Material-Design-Lite-Components
 shadow: aNumber
 	"aNumber must be between 2 and 24"
 
