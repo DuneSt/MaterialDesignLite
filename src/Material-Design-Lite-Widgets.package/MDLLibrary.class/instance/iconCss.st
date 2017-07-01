@@ -7,7 +7,7 @@ iconCss
   src: url(' , (self urlOf: 'MaterialIconsRegularEot') asString , ');
   src: local(''Material Icons''), 
 		 local(''MaterialIcons-Regular''), 
-		 url(' , (self urlOf: 'mdlWoff2') asString , ') format(''woff2''),
+		 url(' , (self urlOf: 'MaterialIconsRegularWoff2') asString , ') format(''woff2''),
 		 url(' , (self urlOf: 'MaterialIconsRegularWoff') asString , ') format(''woff''),
 		 url(' , (self urlOf: 'MaterialIconsRegularTtf') asString , ') format(''truetype'');		
 }
@@ -35,5 +35,4 @@ iconCss
 
   /* Support for IE. */
   font-feature-settings: ''liga'';
-}
-'
+}'

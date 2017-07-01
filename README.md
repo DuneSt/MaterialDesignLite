@@ -1,13 +1,13 @@
 # MaterialDesignLite
 
-####Linux/OSX builds
+#### Linux/OSX builds
 Master: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=master)](https://travis-ci.org/DuneSt/MaterialDesignLite)| Development: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=development)](https://travis-ci.org/DuneSt/MaterialDesignLite)
 
-####Windows builds
+#### Windows builds
 Master: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni/branch/master?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite/branch/master) | Latest commit: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite)
 
 
-This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help Seaside developers in creating fast web application with flat design. 
+This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help Seaside developers in creating fast web application with flat design.
 
 # Documentation
 
@@ -21,20 +21,20 @@ To install MaterialDesignLite on your Pharo image you can just execute the follo
     	onWarningLog;
     	load
 
-To add MaterialDesignLite Seaside to your baseline just add this: 
+To add MaterialDesignLite Seaside to your baseline just add this:
 
     spec
     	baseline: 'MaterialDesignLite'
     	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:master/src' ]
-    	
+
 Note that you can replace the #master by another branch as #development or a tag as #v1.0.0.
 
 ## Getting started
 
-We use as a base the files product by Google's Material Design Lite. To have a working Material Design Seaside application we need to add those files. 
+We use as a base the files product by Google's Material Design Lite. To have a working Material Design Seaside application we need to add those files.
 Most of them can be easily added via a file library but one file need to be explicitely added because this file change depending on the colors you wish for your application.
 
-For now MDL Seaside is based on version 1.2.1 of Google's Material Design Lite.
+For now MDL Seaside is based on version 1.3.0 of Google's Material Design Lite.
 
 ### Add the right libraries and file
 
@@ -43,14 +43,14 @@ To use MaterialDesign you will need to add JQuery and Material Design library to
 	(WAAdmin register: self asApplicationAt: 'myApplication')
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: MDLLibrary
-		
+
 Then you will need to add the css file with the colors. To do so, you will have two options:
  * Add it to your file library
- * Add it in your #updateRoot: 
+ * Add it in your #updateRoot:
 
 You can find the files on [https://getmdl.io/customize/index.html](https://getmdl.io/customize/index.html)
 
-They are in the form of: https://storage.googleapis.com/code.getmdl.io/1.2.1/material.XXX-YYY.min.css
+They are in the form of: https://storage.googleapis.com/code.getmdl.io/1.3.0/material.XXX-YYY.min.css
 
 Where 	    
  * XXX = primary color
@@ -61,7 +61,7 @@ Where
     MyApplication>>updateRoot: anHtmlRoot
 	    super updateRoot: anHtmlRoot.
 	    anHtmlRoot beHtml5.
-	    anHtmlRoot stylesheet url: (WAUrl absolute: 'https://storage.googleapis.com/code.getmdl.io/1.2.1/material.XXX-YYY.min.css').
+	    anHtmlRoot stylesheet url: (WAUrl absolute: 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.XXX-YYY.min.css').
 
 
 ### Subclassing MDLApplication
@@ -72,9 +72,9 @@ MDLApplication is a class to help you to start an application easily. It will ke
 Since MaterialDesignLite works with a primary color and an accent color you will need to set them. To do so you will need to add this to your #initialize method:
 
     self primaryColor: MDLColor indigo secondaryColor: MDLColor pink
-    
+
 You can find the possible colors into the class MDLColor class.
-	
+
 ## Examples
 
 You can find multiple examples when the application will be installed at the url: [http://localhost:8080/MDLComponentsDemoApplication](http://localhost:8080/MDLComponentsDemoApplication)
@@ -85,7 +85,7 @@ _this demo is apparently down for some reason_
 
 You can find a demo at: [http://eph-b922e2d9.swarm.pharocloud.com](http://eph-b922e2d9.swarm.pharocloud.com)
 
-##ZnWorkspace
+## ZnWorkspace
 
 If you look at a cloud workspace page, you'll see it mentions a `ZnWorkspace`. This is how you can load it up.
 
@@ -96,10 +96,14 @@ Gofer it
   load.
 ``
 
-To open one, just do a 
+To open one, just do a
 ``ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'``
+
+# Latest supported Dependencies
+
+- [Material Icons v3.0.1](https://github.com/google/material-design-icons/releases/tag/3.0.1)
+- [Material Design Lite v1.3.0](https://github.com/google/material-design-lite/releases/tag/v1.3.0)
 
 # Under the hood
 
 Understanding what is going on under the hood is always useful. Have a look at (http://www.tutorialspark.com/Google_MaterialDesignLite_Tutorials/index.php) for a tutorial.
-  
