@@ -6,6 +6,7 @@ SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Footer'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Form'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Header'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-List'!
+SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Loading'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Pagination'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Poll'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Tab'!

@@ -1,1 +1,1 @@
-I represent Loading components screen.
+I represent loading components screen.

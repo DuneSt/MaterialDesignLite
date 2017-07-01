@@ -5,6 +5,7 @@ widgetScreenClasses
 	MDLWidgetMenuButtonScreen.
 	MDLWidgetPaginationScreen.
 	MDLWidgetPollScreen.
+	MDLWidgetProgressBarScreen.
 	MDLWidgetSelectScreen.
 	MDLWidgetTabScreen.
 	MDLWidgetNestedListScreen.
