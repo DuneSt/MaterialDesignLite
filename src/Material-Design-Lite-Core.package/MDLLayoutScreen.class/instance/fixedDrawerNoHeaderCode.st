@@ -4,4 +4,5 @@ fixedDrawerNoHeaderCode
 	fixedDrawer; with: [ 
 		html mdlLayoutDrawer: [ 
 			html mdlLayoutTitle: ''Title''.
-			html mdlNavigation: [ 1 to: 5 do: [ :i | html mdlNavigationLink: ''Link'' ] ] ] ]'
+			html mdlNavigation: [ html mdlNavigationLink beCurrent; with: ''Link''.
+				1 to: 4 do: [ :i | html mdlNavigationLink: ''Link'' ] ] ] ]'
