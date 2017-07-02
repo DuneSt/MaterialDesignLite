@@ -138,7 +138,7 @@ nestedListCss
 }
 
 .expList .expanded .icon{
-    background: url(' , (self urlOf: 'arrowUpPng') asString , ') no-repeat center center;
+    background: url(/files/MDLLibrary/arrowUp.png) no-repeat center center;
 }
 
 .expList .collapsed ul{
@@ -146,7 +146,7 @@ nestedListCss
 }
 
 .expList .collapsed .icon{ 
-	background: url(' , (self urlOf: 'arrowDownPng') asString , ') no-repeat center center; 
+	background: url(/files/MDLLibrary/arrowDown.png) no-repeat center center; 
 }
 
 .expList .icon{
