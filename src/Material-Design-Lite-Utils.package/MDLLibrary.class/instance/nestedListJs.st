@@ -1,4 +1,4 @@
-list
+javascript
 nestedListJs
 	^ '/**
  * This function toggle the expand/collapse of an item of the list.

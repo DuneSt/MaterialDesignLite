@@ -1,4 +1,4 @@
-select
+javascript
 getmdlselectJs
 	^ '
 "use strict";

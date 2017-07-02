@@ -1,4 +1,4 @@
-uploaded
+css
 paginationWidgetCss
 	^ '
 .mdl-pagination-widget {

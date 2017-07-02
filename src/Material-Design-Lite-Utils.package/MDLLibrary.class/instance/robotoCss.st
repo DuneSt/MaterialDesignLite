@@ -1,4 +1,4 @@
-font - roboto
+fonts
 robotoCss
 	^ '/* cyrillic-ext */
 @font-face {

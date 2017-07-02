@@ -1,4 +1,4 @@
-uploaded
+css
 calendarWidgetCss
 	^ '
 

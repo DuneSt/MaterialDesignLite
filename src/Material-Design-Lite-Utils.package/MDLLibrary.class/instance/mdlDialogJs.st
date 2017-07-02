@@ -1,4 +1,4 @@
-mdl
+javascript
 mdlDialogJs
 	^ 'function newDialog(id) {
     var dialog = $("#" + id);
