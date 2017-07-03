@@ -150,6 +150,9 @@ $mdlLibraryURL: ''/files/MDLLibrary/''
   -webkit-align-items: $position
   align-items: $position
 
+=user-select($property: auto)
+  +css3(user-select, $property)
+  
 =clearfix
   &:before, &:after
     content: ""
