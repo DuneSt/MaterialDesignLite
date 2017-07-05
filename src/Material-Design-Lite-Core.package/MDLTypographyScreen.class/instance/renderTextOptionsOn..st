@@ -3,7 +3,7 @@ renderTextOptionsOn: html
 	html div
 		mdlTypographyTextJustify;
 		mdlTypographyBody1;
-		with: [ #('left' 'right' 'justify' 'nowrap' 'lowercase' 'uppercase' 'capitalize')
+		with: [ #('left' 'right' 'center' 'justify' 'nowrap' 'lowercase' 'uppercase' 'capitalize')
 				do: [ :each | 
 					| selector |
 					selector := ('mdlTypographyText' , each capitalized) asSymbol.	"For example `#mdlTypographyTextLeft`"
