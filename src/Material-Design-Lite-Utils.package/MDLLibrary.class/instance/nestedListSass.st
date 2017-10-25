@@ -94,12 +94,6 @@ nestedListSass
           text-overflow: ellipsis
           overflow: hidden
 
-        i
-          color: #757575
-          margin: 0 4px
-          padding-right: 16px
-          vertical-align: middle
-
         img
           +box(24px)
           margin: 0 10px

@@ -9,7 +9,7 @@ renderComplexTextFielOn: html
 		html mdlLayoutSpacer.
 		html mdlCell: [ 
 			html mdlTextFieldContainer expandable; with: [ 
-				html mdlButton asLabel;icon; for: 'expandable-textfield'; with: [ html mdlIcon: 'search' ].
+				html mdlButton labelIcon; for: 'expandable-textfield'; with: [ html mdlIcon: 'search' ].
 				html mdlTextFieldExpandableHolder: [ 
 					html mdlTextFieldInput id: 'expandable-textfield'; type: 'text'.
 					html mdlTextFieldLabel for: 'expandable-textfield'; with: 'Expandable Input'
