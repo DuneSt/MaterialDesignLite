@@ -1,3 +1,3 @@
 private
 actionWith: anObject
-	self action value: anObject
+	self action ifNotNil: [ :block | block value: anObject]

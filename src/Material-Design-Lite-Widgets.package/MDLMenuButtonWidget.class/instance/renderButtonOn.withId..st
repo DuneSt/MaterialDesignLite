@@ -4,9 +4,7 @@ renderButtonOn: html withId: buttonId
 		id: 'menuButton' , buttonId;
 		class: 'menuButtonWidgetButton mdl-button mdl-js-button menuButtonWidgetButton';
 		disabled: self objectsPossibilities isEmpty;
-		with: [ html
-				text:
-					(self selectedObject
-						ifNil: [ self choosingText ]
-						ifNotNil: [ :anObject | self labelFor: anObject ]).
+		with: [ self selectedObject
+				ifNil: [ self renderButtonContentOn: html ]
+				ifNotNil: [ :anObject | html text: (self labelFor: anObject) ].
 			html mdlIcon: 'arrow_drop_down' ]

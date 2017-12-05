@@ -19,10 +19,10 @@ Internal Representation and Key Implementation Points.
 --------------------
 
     Instance Variables
-	action:					<aBlock> 		Callback taking the selected element as parameter
-	choosingText:			<aString>		The of the button
-	description:				<aString>		Tooltip to show on the button
-	objectsPossibilities:		<aCollection>	Collection of object to select  from
-	selectedObject:			<anObject>		Selected object by default
-	sortBlock:				<aBlock>		A block to sort the elements of the menu
-	textBlock:				<aBlock>		A block taking a possible object as parameter and returning a string to display on the menu
+	action:					<aBlock> 			Callback taking the selected element as parameter
+	buttonContent:			<aStringOrBlock>		The content of the button. Can be a string or a block. The block takes an html canvas as parameter
+	description:				<aString>			Tooltip to show on the button
+	objectsPossibilities:		<aCollection>		Collection of object to select  from
+	selectedObject:			<anObject>			Selected object by default
+	sortBlock:				<aBlock>			A block to sort the elements of the menu
+	textBlock:				<aBlock>			A block taking a possible object as parameter and returning a string to display on the menu

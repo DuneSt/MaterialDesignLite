@@ -1,18 +1,18 @@
 {
-	"commentStamp" : "CyrilFerlicot 7/1/2017 13:11",
+	"commentStamp" : "CyrilFerlicot 12/5/2017 23:43",
 	"super" : "MDLWidget",
 	"category" : "Material-Design-Lite-Widgets",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"choosingText",
 		"textBlock",
 		"selectedObject",
 		"objectsPossibilities",
 		"description",
 		"action",
-		"sortBlock"
+		"sortBlock",
+		"buttonContent"
 	],
 	"name" : "MDLMenuButtonWidget",
 	"type" : "normal"
