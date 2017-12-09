@@ -38,4 +38,15 @@ function addOpenEvent(dialog, element){
 
 function setVerticalPositionOf(element) {
     element.css("top", ($(window).height() - element.height()) / 2)
+}
+
+
+//Root dialog
+MaterialDesignLite = {};
+
+MaterialDesignLite.openRootDialog = function() {
+	var dialog = document.getElementById("root-dialog");
+	if ($("dialog").attr("open") == null) {
+        dialog.showModal();
+	}
 }'
