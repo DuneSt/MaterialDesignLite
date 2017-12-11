@@ -2,6 +2,6 @@
 onClickUpdateRootDialogWith: aBlock
 	self
 		onClick:
-			((canvas jQuery id: SYNComponent rootDialogId) load
+			((canvas jQuery id: MDLDialog rootDialogId) load
 				html: aBlock;
 				onComplete: MDLDialog jsInitializeRootDialog)
