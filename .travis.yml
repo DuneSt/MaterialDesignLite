@@ -9,3 +9,7 @@ smalltalk:
   - Pharo-7.0
   - Pharo-6.1
   - Pharo-5.0
+  
+matrix:
+  allow_failures:
+    - smalltalk: Pharo-7.0
