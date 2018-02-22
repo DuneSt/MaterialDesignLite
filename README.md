@@ -15,17 +15,21 @@ This project has as first goal to bind the Google's Material Design Lite project
 
 To install MaterialDesignLite on your Pharo image you can just execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00). See ``ZnWorkspace`` section for installing a ZnWorkspace if you so want.
 
+```Smalltalk
     Metacello new
     	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'master' path: 'src';
     	baseline: 'MaterialDesignLite';
     	onWarningLog;
     	load
+```
 
 To add MaterialDesignLite Seaside to your baseline just add this:
 
+```Smalltalk
     spec
     	baseline: 'MaterialDesignLite'
     	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:master/src' ]
+```
 
 Note that you can replace the #master by another branch as #development or a tag as #v1.0.0.
 
@@ -40,9 +44,11 @@ For now MDL Seaside is based on version 1.3.0 of Google's Material Design Lite.
 
 To use MaterialDesign you will need to add JQuery and Material Design library to your application:
 
+```Smalltalk
 	(WAAdmin register: self asApplicationAt: 'myApplication')
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: MDLLibrary
+```
 
 Then you will need to add the css file with the colors. To do so, you will have two options:
  * Add it to your file library
@@ -58,11 +64,12 @@ Where
 
 #### Add the css file in the updateRoot of your application:
 
+```Smalltalk
     MyApplication>>updateRoot: anHtmlRoot
 	    super updateRoot: anHtmlRoot.
 	    anHtmlRoot beHtml5.
 	    anHtmlRoot stylesheet url: (WAUrl absolute: 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.XXX-YYY.min.css').
-
+```
 
 ### Subclassing MDLApplication
 
@@ -71,7 +78,9 @@ MDLApplication is a class to help you to start an application easily. It will ke
 
 Since MaterialDesignLite works with a primary color and an accent color you will need to set them. To do so you will need to add this to your #initialize method:
 
+```Smalltalk
     self primaryColor: MDLColor indigo secondaryColor: MDLColor pink
+```
 
 You can find the possible colors into the class MDLColor class.
 
@@ -87,15 +96,17 @@ You can find a demo at: [http://eph-b922e2d9.swarm.pharocloud.com/MDLComponentsD
 
 If you look at a cloud workspace page, you'll see it mentions a `ZnWorkspace`. This is how you can load it up.
 
-``
+```Smalltalk
 Gofer it
   squeaksource: 'ZincHTTPComponents';
   package: 'Zinc-WWS-Client';
   load.
-``
+```
 
 To open one, just do a
-``ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'``
+```Smalltalk
+ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
+```
 
 # Latest supported Dependencies
 
