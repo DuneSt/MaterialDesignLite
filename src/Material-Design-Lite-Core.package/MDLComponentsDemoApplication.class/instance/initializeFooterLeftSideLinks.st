@@ -4,5 +4,5 @@ initializeFooterLeftSideLinks
 		->
 			(Dictionary new
 				at: 'Pharo' put: [ 'http://pharo.org/' ];
-				at: 'MDL project' put: [ 'http://smalltalkhub.com/#!/~KevinLanvin/MaterialDesignLite' ];
+				at: 'MDL project' put: [ 'https://github.com/DuneSt/MaterialDesignLite' ];
 				yourself)
