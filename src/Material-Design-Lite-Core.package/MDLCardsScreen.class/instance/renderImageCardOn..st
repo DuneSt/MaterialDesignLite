@@ -9,5 +9,5 @@ renderImageCardOn: html
 				style: 'height: 52px; padding: 16px; background: rgba(0,0,0,0.2)';
 				with: [ html span
 						mdlTypographyFontBold;
-						style: 'color: #fff;  font-size: 14px';
+						style: 'color: #fff; font-size: 14px';
 						with: 'Image.jpg' ] ]
