@@ -81,9 +81,7 @@ You can find multiple examples when the application will be installed at the url
 
 (Change the port if you do not use port 8080)
 
-_this demo is apparently down for some reason_
-
-You can find a demo at: [http://eph-b922e2d9.swarm.pharocloud.com](http://eph-b922e2d9.swarm.pharocloud.com)
+You can find a demo at: [https://mdl.ferlicot.fr/](https://mdl.ferlicot.fr/)
 
 ##ZnWorkspace
 
