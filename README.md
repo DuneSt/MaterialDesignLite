@@ -90,7 +90,7 @@ You can find multiple examples when the application will be installed at the url
 
 (Change the port if you do not use port 8080)
 
-You can find a demo at: [http://eph-b922e2d9.swarm.pharocloud.com/MDLComponentsDemoApplication](http://eph-b922e2d9.swarm.pharocloud.com/MDLComponentsDemoApplication)
+You can find a demo at: [https://mdl.ferlicot.fr/](https://mdl.ferlicot.fr/)
 
 ## ZnWorkspace
 
