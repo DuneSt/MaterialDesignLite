@@ -9,6 +9,23 @@ Master: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92j
 
 This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help Seaside developers in creating fast web application with flat design.
 
+- [MaterialDesignLite](#materialdesignlite)
+      - [Linux/OSX builds](#linux-osx-builds)
+      - [Windows builds](#windows-builds)
+- [Documentation](#documentation)
+  * [Version management](#version-management)
+  * [Install MDL Seaside](#install-mdl-seaside)
+  * [Getting started](#getting-started)
+    + [Add the right libraries and file](#add-the-right-libraries-and-file)
+      - [Add the css file in the updateRoot of your application:](#add-the-css-file-in-the-updateroot-of-your-application-)
+    + [Subclassing MDLApplication](#subclassing-mdlapplication)
+  * [Examples](#examples)
+  * [ZnWorkspace](#znworkspace)
+  * [Latest supported Dependencies](#latest-supported-dependencies)
+  * [Smalltalk versions compatibility](#smalltalk-versions-compatibility)
+  * [Under the hood](#under-the-hood)
+  * [Contact](#contact)
+
 # Documentation
 
 ## Version management 
