@@ -125,6 +125,12 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 - [Material Icons v3.0.1](https://github.com/google/material-design-icons/releases/tag/3.0.1)
 - [Material Design Lite v1.3.0](https://github.com/google/material-design-lite/releases/tag/v1.3.0)
 
+## Smalltalk versions compatibility
+
+| MDL version 	| Compatible Pharo versions 	|
+|-------------	|---------------------------	|
+| 1.x.x       	| Pharo 50, 60, 61          	|
+
 ## Under the hood
 
 Understanding what is going on under the hood is always useful. Have a look at (http://www.tutorialspark.com/Google_MaterialDesignLite_Tutorials/index.php) for a tutorial.
