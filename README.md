@@ -11,6 +11,18 @@ This project has as first goal to bind the Google's Material Design Lite project
 
 # Documentation
 
+## Version management 
+
+This project use semantic versionning to define the releases. This mean that each stable release of the project will get associate a version number of the form `vX.Y.Z`. 
+
+- **X** define the major version number
+- **Y** define the minor version number 
+- **Z** define the patch version number
+
+When a release contains only bug fixes, the patch number increase. When the release contains new features backward compatibles, the minor version increase. When the release contains breaking changes, the major version increase. 
+
+Thus, it should be safe to depend on a fixed major version and moving minor version of this project.
+
 ## Install MDL Seaside
 
 To install MaterialDesignLite on your Pharo image you can just execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00). See ``ZnWorkspace`` section for installing a ZnWorkspace if you so want.
