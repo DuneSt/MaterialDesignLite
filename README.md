@@ -120,11 +120,15 @@ To open one, just do a
 ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 ```
 
-# Latest supported Dependencies
+## Latest supported Dependencies
 
 - [Material Icons v3.0.1](https://github.com/google/material-design-icons/releases/tag/3.0.1)
 - [Material Design Lite v1.3.0](https://github.com/google/material-design-lite/releases/tag/v1.3.0)
 
-# Under the hood
+## Under the hood
 
 Understanding what is going on under the hood is always useful. Have a look at (http://www.tutorialspark.com/Google_MaterialDesignLite_Tutorials/index.php) for a tutorial.
+
+## Contact
+
+If you have any question or problem do not hesitate to open an issue or contact cyril (a) ferlicot.me 
