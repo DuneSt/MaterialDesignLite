@@ -7,11 +7,8 @@ Master: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?bra
 Master: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni/branch/master?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite/branch/master) | Latest commit: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite)
 
 
-This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help Seaside developers in creating fast web application with flat design.
+This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help [Seaside](https://github.com/SeasideSt/Seaside)) developers in creating fast web application with flat design. For a tutorial on Seaside check [http://book.seaside.st](http://book.seaside.st).
 
-- [MaterialDesignLite](#materialdesignlite)
-      - [Linux/OSX builds](#linux-osx-builds)
-      - [Windows builds](#windows-builds)
 - [Documentation](#documentation)
   * [Version management](#version-management)
   * [Install MDL Seaside](#install-mdl-seaside)
