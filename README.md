@@ -114,7 +114,7 @@ You can find the possible colors into the class MDLColor class.
 
 You can find multiple examples when the application will be installed at the url: [http://localhost:8080/MDLComponentsDemoApplication](http://localhost:8080/MDLComponentsDemoApplication)
 
-(Change the port if you do not use port 8080)
+When you install in a plain Pharo image you need to start the seaside server first by opening `World menu > Tools > Seaside Control Panel` and adding and starting an appropropriate `ZnZincServerAdaptor`. If you do not use port 8080, change the port in the URL.
 
 You can find a demo at: [https://mdl.ferlicot.fr/](https://mdl.ferlicot.fr/)
 
