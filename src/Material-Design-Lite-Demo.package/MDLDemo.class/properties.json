@@ -1,13 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "WADecoration",
-	"category" : "Material-Design-Lite-Core",
+	"super" : "MDLDemoComponent",
+	"category" : "Material-Design-Lite-Demo-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
+		"header",
 		"footer"
 	],
-	"name" : "MDLScreenFooter",
+	"name" : "MDLDemo",
 	"type" : "normal"
 }

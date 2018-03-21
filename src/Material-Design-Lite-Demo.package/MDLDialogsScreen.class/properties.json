@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "KevinLanvin 6/21/2016 11:45",
+	"super" : "MDLDemoScreen",
+	"category" : "Material-Design-Lite-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLDialogsScreen",
+	"type" : "normal"
+}

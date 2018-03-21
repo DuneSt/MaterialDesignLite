@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "ThomasHeniart 6/16/2016 10:14",
+	"super" : "GRObject",
+	"category" : "Material-Design-Lite-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"firstName",
+		"lastName"
+	],
+	"name" : "MDLExamplePaginationItem",
+	"type" : "normal"
+}

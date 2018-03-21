@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "KevinLanvin 5/2/2016 16:25",
+	"commentStamp" : "",
 	"super" : "WAComponent",
-	"category" : "Material-Design-Lite-Core",
+	"category" : "Material-Design-Lite-Demo",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "MDLScreen",
+	"name" : "MDLVersionComponent",
 	"type" : "normal"
 }

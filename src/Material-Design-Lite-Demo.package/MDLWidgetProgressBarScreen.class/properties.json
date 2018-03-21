@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 7/1/2017 14:16",
+	"super" : "MDLDemoScreen",
+	"category" : "Material-Design-Lite-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLWidgetProgressBarScreen",
+	"type" : "normal"
+}
