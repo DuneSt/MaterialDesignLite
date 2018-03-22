@@ -3,14 +3,17 @@ renderContentOn: html
 	html mdlLayoutHeader
 		waterfall;
 		with: [ html
-				mdlLayoutHeaderRow: [ html mdlNavigationLink
-						callback: [ "Just refresh" ];
+				mdlLayoutHeaderRow: [ "Just refresh"
+					"Add browser title"
+					html mdlNavigationLink
+						callback: [  ];
 						with: [ html
 								mdlLayoutTitle: [ html image url: (MDLDemoLibrary urlOf: 'componentsPng').
 									html text: '    Material Design Lite for Seaside' ] ].
-					self flag: #todo.	"Add browser title"
+					self flag: #todo.
 					html mdlLayoutSpacer.
-					html render: MDLVersionComponent new ].
+					html render: MDLVersionComponent new.
+					self renderForkMeOnGithubOn: html ].
 			html
 				mdlLayoutTabBar: [ self possiblePages
 						do: [ :aClass | 
