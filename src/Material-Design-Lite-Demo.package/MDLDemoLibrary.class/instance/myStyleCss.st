@@ -112,10 +112,6 @@ myStyleCss
 		background-color: white
 	 }
 	
-	.mdl-cell { 
-		text-align: center;
-	}
-	
 	pre {
 		margin: 0px -32px;
 		background-color: #eee;

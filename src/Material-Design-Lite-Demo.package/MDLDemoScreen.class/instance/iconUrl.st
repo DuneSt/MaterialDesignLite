@@ -1,3 +1,3 @@
 accessing
 iconUrl
-	^ MDLDemoLibrary urlOf: self icon
+	^ self class iconUrl

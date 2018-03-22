@@ -5,8 +5,12 @@ renderContentOn: html
 		with: [ html
 				mdlLayoutHeaderRow: [ html mdlNavigationLink
 						callback: [ "Just refresh" ];
-						with: [ html mdlLayoutTitle: 'Material Design Lite for Seaside' ].
-					self flag: #todo	"Add browser title" ].
+						with: [ html
+								mdlLayoutTitle: [ html image url: (MDLDemoLibrary urlOf: 'componentsPng').
+									html text: '    Material Design Lite for Seaside' ] ].
+					self flag: #todo.	"Add browser title"
+					html mdlLayoutSpacer.
+					html render: MDLVersionComponent new ].
 			html
 				mdlLayoutTabBar: [ self possiblePages
 						do: [ :aClass | 

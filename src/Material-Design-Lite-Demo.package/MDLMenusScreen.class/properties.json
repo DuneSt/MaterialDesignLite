@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "KevinLanvin 6/17/2016 11:26",
-	"super" : "MDLDemoScreen",
+	"super" : "MDLComponentDemo",
 	"category" : "Material-Design-Lite-Demo",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -1,4 +1,9 @@
 rendering
 renderContentOn: html
-	html aside shadow: 4.
-	html tag: 'main'
+	html aside
+		class: 'mdl-components__nav';
+		shadow: 4;
+		with: [ html render: self defaultList ].
+	(html tag: 'main')
+		class: 'mdl-components__pages';
+		with: [ html render: self selectedScreen ]

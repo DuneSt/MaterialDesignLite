@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "MDLDemoScreen",
+	"super" : "MDLWidgetDemo",
 	"category" : "Material-Design-Lite-Demo",
 	"classinstvars" : [ ],
 	"pools" : [ ],
