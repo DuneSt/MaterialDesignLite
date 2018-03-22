@@ -9,9 +9,8 @@ renderContentOn: html
 					self flag: #todo	"Add browser title" ].
 			html
 				mdlLayoutTabBar: [ self possiblePages
-						keysAndValuesDo: [ :aLabel :aCallback | 
-							self flag: #todo.	"We should not store the active tab here. We should ask to the root component."
+						do: [ :aClass | 
 							html mdlLayoutTab
-								callback: aCallback;
-								isActiveIf: aLabel = activeTab;
-								with: aLabel ] ] ]
+								callback: [ self displayInstanceOf: aClass ];
+								isActiveIf: aClass = self rootComponent componentToDisplay class;
+								with: aClass pageName ] ] ]

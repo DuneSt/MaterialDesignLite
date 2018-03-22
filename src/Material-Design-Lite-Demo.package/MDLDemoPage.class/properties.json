@@ -5,12 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"header",
-		"footer",
-		"componentToDisplay",
-		"componentInstances"
-	],
-	"name" : "MDLDemo",
+	"instvars" : [ ],
+	"name" : "MDLDemoPage",
 	"type" : "normal"
 }

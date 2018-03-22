@@ -1,0 +1,3 @@
+accessing
+pageName
+	^ self subclassResponsibility
