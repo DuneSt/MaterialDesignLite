@@ -1,3 +1,3 @@
 rendering
 renderContentOn: html
-	html text: '	Version ' , MDLComponentsDemoApplication version
+	html text: '	Version ' , MDLDemo version

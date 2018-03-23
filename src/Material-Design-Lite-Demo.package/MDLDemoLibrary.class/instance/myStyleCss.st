@@ -113,7 +113,7 @@ myStyleCss
 	 }
 	
 	pre {
-		margin: 0px -32px;
+		margin: 0px -16px;
 		background-color: #eee;
 		color: rgb(0,0,0);
 		padding: 5px 20px;
