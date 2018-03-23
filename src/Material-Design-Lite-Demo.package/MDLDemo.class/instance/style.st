@@ -139,6 +139,37 @@ style
 	background-color: white;
 }
 
+.renderLowerLeftMenuOn .container, .renderLowerRightMenuOn .container, .renderTopLeftMenuOn .container, .renderTopRightMenuOn .container {
+    position: relative;
+    width: 200px;
+}
+
+.renderLowerLeftMenuOn .background, .renderLowerRightMenuOn .background, .renderTopLeftMenuOn .background, .renderTopRightMenuOn .background {
+    background: white;
+    height: 148px;
+    width: 100%;
+}
+
+.renderLowerLeftMenuOn .bar, .renderLowerRightMenuOn .bar, .renderTopLeftMenuOn .bar, .renderTopRightMenuOn .bar {
+    box-sizing: border-box;
+    background: #3F51B5;
+    color: white;
+    width: 100%;
+    padding: 16px;
+}
+
+.renderLowerRightMenuOn .bar, .renderTopRightMenuOn .bar {
+    position: relative;
+    height: 64px;
+}
+
+.renderLowerRightMenuOn .wrapper, .renderTopRightMenuOn .wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    right: 16px;
+  }
+
+
 
 /* LISTS */
 
