@@ -1,15 +1,6 @@
-rendering
+demos
 renderSimpleListOn: html
-	html div
-		class: 'centered-content';
-		class: 'examples';
+	html mdlList
+		style: 'width: 300px';
 		with: [ 
-					html
-						mdlList: [ #('Bryan Cranston' 'Aaron Paul' 'Bob Odenkirk') do: [ :name | html mdlListItem: [ html mdlListPrimaryContent: name ] ] ].
-					html paragraph: 'Simple List' ].
-	html
-		preformatted: [ 
-			html code
-				class: 'smalltalk';
-				with:
-						self simpleListCode ]
+			#('Bryan Cranston' 'Aaron Paul' 'Bob Odenkirk') do: [ :name | html mdlListItem: [ html mdlListPrimaryContent: name ] ] ]

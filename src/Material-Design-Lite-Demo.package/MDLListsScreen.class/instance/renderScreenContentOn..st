@@ -1,8 +1,9 @@
 rendering
 renderScreenContentOn: html
-	self renderSimpleListOn: html.
-	self renderIconsListOn: html.
-	self renderAvatarActionsListOn: html.
-	self renderAvatarControlsListOn: html.
-	self renderTwoLineListOn: html.
-	self renderThreeLineListOn: html
+	self
+		render: self simpleList on: html;
+		render: self iconsList on: html;
+		render: self avatarActionsList on: html;
+		render: self avatarControlsList on: html;
+		render: self twoLineList on: html;
+		render: self threeLineList on: html

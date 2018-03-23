@@ -1,4 +1,4 @@
-code
+demos
 renderRaisedDisabledButtonCodeOn: html
 	html mdlButton
 		raised;

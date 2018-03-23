@@ -1,9 +1,9 @@
-code
+demos
 renderDateCardOn: html
 	html mdlCard
 		shadow: 2;
 		mdlTypographyTextLeft;
-		style: 'margin: auto; width: 256px; height: 256px;  background: #3E4EB8;';
+		style: 'width: 256px; height: 256px;  background: #3E4EB8;';
 		with: [ 
 			html mdlCardTitle
 				style: 'align-items: flex-start; color: #fff';
@@ -16,6 +16,7 @@ renderDateCardOn: html
 							html text: 'May 25, 2016'.
 							html break.
 							html text: '7-11pm' ] ].
+					
 			html mdlCardActions
 				border;
 				style:

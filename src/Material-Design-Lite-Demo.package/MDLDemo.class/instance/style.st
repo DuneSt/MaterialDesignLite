@@ -26,8 +26,7 @@ style
     min-height: 1000px;
 }
 
-.mdl-components .component-title {
-    margin-top: 30px;
+.mdl-components .docs-toc, .mdl-components .component-title {
     margin-bottom: 60px;
     margin-left: 32px;
 }
@@ -56,10 +55,31 @@ style
     margin-bottom: 84px;
 }
 
+.snippet-group ul { 
+    list-style-type: none;
+    font-size: 13px;
+}
+
 .snippet-group .snippet-header {
     display: table;
     border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
+}
+
+.mdl-components .snippet-group.is-full-width .snippet-demo-padding {
+    width: 0;
+    padding: 8px;
+    margin: 0;
+}
+
+.mdl-components  .snippet-group.is-full-width .snippet-demos > .snippet-demo {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mdl-components  .snippet-group.is-full-width .snippet-demo-container {
     width: 100%;
 }
 
@@ -109,6 +129,14 @@ style
 .snippet-group .snippet-code {
     position: relative;
     overflow: hidden;
+}
+
+.renderTransparentHeaderOn, .renderFixedDrawerNoHeaderOn, .renderFixedHeaderOn, .renderFixedHeaderAndDrawerOn, .renderScrollingHeaderOn, .renderWaterfallHeaderOn, .renderScrollableTabsOn, .renderFixedTabsOn { 
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    position: relative;
+    height: 300px;
+	background-color: white;
 }
 
 

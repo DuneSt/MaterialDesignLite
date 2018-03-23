@@ -1,4 +1,4 @@
-code
+demos
 renderNumberTextBadgeOn: html
 	html mdlBadge
 		dataBadge: '4';

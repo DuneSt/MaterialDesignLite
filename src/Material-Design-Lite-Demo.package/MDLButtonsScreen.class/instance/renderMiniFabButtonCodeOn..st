@@ -1,4 +1,4 @@
-code
+demos
 renderMiniFabButtonCodeOn: html
 	html mdlButton
 		fab;

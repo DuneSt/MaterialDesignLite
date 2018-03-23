@@ -1,4 +1,4 @@
-as yet unclassified
+initialization
 initialize
 	super initialize.
 	self class: 'mdl-layout__tab-bar'

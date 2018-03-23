@@ -1,4 +1,4 @@
-code
+demos
 renderColoredAccentRippleEffectButtonCodeOn: html
 	html mdlButton
 		raised;

@@ -1,4 +1,4 @@
-code
+demos
 renderRaisedRippleEffectButtonCodeOn: html
 	html mdlButton
 		raised;

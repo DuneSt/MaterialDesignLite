@@ -1,4 +1,4 @@
-code
+demos
 renderRemovableChipOn: html
 	html mdlChip
 		deleteCallback: [ 'Component deleted' crLog ];

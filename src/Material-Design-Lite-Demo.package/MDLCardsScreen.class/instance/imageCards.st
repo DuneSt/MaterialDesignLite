@@ -1,3 +1,6 @@
-accessing
+sections
 imageCards
-	^ OrderedDictionary with: 'Image' -> #renderImageCardOn: with: 'Event' -> #renderDateCardOn:
+	^ OrderedDictionary new
+		add: 'Image' -> #renderImageCardOn:;
+		add: 'Event' -> #renderDateCardOn:;
+		yourself

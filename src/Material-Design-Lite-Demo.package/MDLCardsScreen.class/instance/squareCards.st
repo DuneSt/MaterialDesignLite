@@ -1,3 +1,5 @@
-accessing
+sections
 squareCards
-	^ OrderedDictionary with: 'Square' -> #renderSquareCardOn:
+	^ OrderedDictionary new
+		add: 'Square' -> #renderSquareCardOn:;
+		yourself

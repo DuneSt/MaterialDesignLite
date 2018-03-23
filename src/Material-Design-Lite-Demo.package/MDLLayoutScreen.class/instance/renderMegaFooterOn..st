@@ -1,41 +1,21 @@
-rendering
+demos
 renderMegaFooterOn: html
-	html mdlFooter class: 'examples'; style: 'margin-bottom:20px;'; with: [ 
-		html mdlFooterMiddleSection: [ 
-			html mdlFooterDropdownSection: [ 
-				html mdlFooterHeadingCheckbox.
-				html mdlFooterHeading: 'Features'.
-				html mdlFooterLinkList: [ 
-					html listItem: [ html anchor: 'About' ].
-					html listItem: [ html anchor: 'Terms' ].
-					html listItem: [ html anchor: 'Partners' ].
-					html listItem: [ html anchor: 'Updates' ] ] ].
-			html mdlFooterDropdownSection: [ 
-				html mdlFooterHeadingCheckbox.
-				html mdlFooterHeading: 'Details'.
-				html mdlFooterLinkList: [ 
-					html listItem: [ html anchor: 'Specs' ].
-					html listItem: [ html anchor: 'Tools' ].
-					html listItem: [ html anchor: 'Ressources' ] ] ].
-			html mdlFooterDropdownSection: [ 
-				html mdlFooterHeadingCheckbox.
-				html mdlFooterHeading: 'Technology'.
-				html mdlFooterLinkList: [ 
-					html listItem: [ html anchor: 'How it works' ].
-					html listItem: [ html anchor: 'Patterns' ].
-					html listItem: [ html anchor: 'Usage' ].
-					html listItem: [ html anchor: 'Products' ].
-					html listItem: [ html anchor: 'Contracts' ] ] ].
-			html mdlFooterDropdownSection: [ 
-				html mdlFooterHeadingCheckbox.
-				html mdlFooterHeading: 'FAQ'.
-				html mdlFooterLinkList: [ 
-					html listItem: [ html anchor: 'Questions' ].
-					html listItem: [ html anchor: 'Answers' ].
-					html listItem: [ html anchor: 'Contact us' ] ] ] ].
-		html mdlFooterBottomSection: [ 
-			html mdlLogo: 'Title'.
-			html mdlFooterLinkList: [ 
-				html listItem: [ html anchor: 'Help' ].
-				html listItem: [ html anchor: 'Privacy & Terms' ] ] ] ].
-	html preformatted with: [ html code class: 'smalltalk'; with: self megaFooterCode ]
+	| sections |
+	sections := OrderedDictionary
+		with: 'Features'	-> #('About' 'Terms' 'Partners' 'Updates')
+		with: 'Details' 	-> #('Specs' 'Tools' 'Ressources')
+		with: 'Technology'	-> #('How it works' 'Patterns' 'Usage' 'Products' 'Contracts')
+		with: 'FAQ' 		-> #('Questions' 'Answers' 'Contact us').
+	html
+		mdlFooter: [ html
+				mdlFooterMiddleSection: [ sections
+						keysAndValuesDo: [ :title :members | 
+							html
+								mdlFooterDropdownSection: [ html mdlFooterHeadingCheckbox.
+									html mdlFooterHeading: title.
+									html mdlFooterLinkList: [ members do: [ :label | html listItem: [ html anchor: label ] ] ] ] ] ].
+			html
+				mdlFooterBottomSection: [ html mdlLogo: 'Title'.
+					html
+						mdlFooterLinkList: [ html listItem: [ html anchor: 'Help' ].
+							html listItem: [ html anchor: 'Privacy & Terms' ] ] ] ]

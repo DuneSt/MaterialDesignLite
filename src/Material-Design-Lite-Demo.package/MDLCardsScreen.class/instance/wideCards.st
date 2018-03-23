@@ -1,3 +1,5 @@
-accessing
+sections
 wideCards
-	^ OrderedDictionary with: 'Wide' -> #renderWideCardOn:
+	^ OrderedDictionary new
+		add: 'Wide' -> #renderWideCardOn:;
+		yourself

@@ -1,4 +1,4 @@
-code
+demos
 renderFabRippleEffectButtonCodeOn: html
 	html mdlButton
 		fab;

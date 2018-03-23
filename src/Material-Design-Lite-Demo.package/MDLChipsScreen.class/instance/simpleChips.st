@@ -1,4 +1,4 @@
-accessing
+sections
 simpleChips
 	^ OrderedDictionary new
 		add: 'Simple Chip' -> #renderSimpleChipOn:;

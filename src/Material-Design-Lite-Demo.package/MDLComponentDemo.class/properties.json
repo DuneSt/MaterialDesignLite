@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "MDLDemoScreen",
-	"category" : "Material-Design-Lite-Demo",
+	"category" : "Material-Design-Lite-Demo-Components",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

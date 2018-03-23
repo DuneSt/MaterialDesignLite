@@ -1,4 +1,4 @@
-code
+demos
 renderFlatDisabledButtonCodeOn: html
 	html mdlButton
 		disabled;

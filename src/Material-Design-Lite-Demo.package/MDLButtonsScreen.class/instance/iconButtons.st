@@ -1,4 +1,4 @@
-accessing
+sections
 iconButtons
 	^ OrderedDictionary new
 		add: 'Icon button' -> #renderIconButtonCodeOn:;

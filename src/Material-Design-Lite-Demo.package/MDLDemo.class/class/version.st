@@ -1,3 +1,3 @@
 versions
 version
-	^ '1.1.0'
+	^ 'development (from 1.1.0)'

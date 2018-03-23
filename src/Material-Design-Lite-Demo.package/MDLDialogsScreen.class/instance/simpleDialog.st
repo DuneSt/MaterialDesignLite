@@ -1,3 +1,5 @@
-accessing
+sections
 simpleDialog
-	^ OrderedDictionary with: 'Simple Dialog' -> #renderSimpleDialogOn:
+	^ OrderedDictionary new
+		add: 'Simple Dialog' -> #renderSimpleDialogOn:;
+		yourself

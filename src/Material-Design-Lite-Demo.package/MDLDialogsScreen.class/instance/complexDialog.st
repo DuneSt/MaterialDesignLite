@@ -1,3 +1,5 @@
-accessing
+sections
 complexDialog
-	^ OrderedDictionary with: 'Dialog with buttons' -> #renderComplexDialogOn:
+	^ OrderedDictionary new
+		add: 'Dialog with buttons' -> #renderComplexDialogOn:;
+		yourself

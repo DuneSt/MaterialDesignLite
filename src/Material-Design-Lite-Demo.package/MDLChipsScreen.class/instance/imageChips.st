@@ -1,4 +1,4 @@
-accessing
+sections
 imageChips
 	^ OrderedDictionary new
 		add: 'Iconned Chip' -> #renderMdlIconChipOn:;

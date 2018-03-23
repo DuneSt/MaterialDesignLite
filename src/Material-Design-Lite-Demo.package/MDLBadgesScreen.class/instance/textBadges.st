@@ -1,4 +1,4 @@
-accessing
+sections
 textBadges
 	^ OrderedDictionary new
 		add: 'Number' -> #renderNumberTextBadgeOn:;

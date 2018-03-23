@@ -1,4 +1,4 @@
-accessing
+sections
 raisedButtons
 	^ OrderedDictionary new
 		add: 'Plain raised' -> #renderRaisedButtonCodeOn:;

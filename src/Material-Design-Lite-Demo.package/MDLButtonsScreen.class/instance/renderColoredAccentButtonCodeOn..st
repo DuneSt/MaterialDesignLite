@@ -1,4 +1,4 @@
-code
+demos
 renderColoredAccentButtonCodeOn: html
 	html mdlButton
 		raised;

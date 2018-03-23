@@ -1,4 +1,4 @@
-code
+demos
 renderFlatRippleEffectButtonCodeOn: html
 	html mdlButton
 		rippleEffect;

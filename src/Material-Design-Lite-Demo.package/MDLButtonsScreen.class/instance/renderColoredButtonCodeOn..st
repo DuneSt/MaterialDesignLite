@@ -1,4 +1,4 @@
-code
+demos
 renderColoredButtonCodeOn: html
 	html mdlButton
 		raised;

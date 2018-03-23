@@ -1,9 +1,10 @@
 rendering
 renderScreenContentOn: html
-	self render: self fabColoredButtons withCardSizeOf: 2 on: html.
-	self render: self fabButtons withCardSizeOf: 2 on: html.
-	self render: self raisedButtons withCardSizeOf: 2 on: html.
-	self render: self coloredButtons withCardSizeOf: 2 on: html.
-	self render: self flatButtons withCardSizeOf: 2 on: html.
-	self render: self iconButtons withCardSizeOf: 2 on: html.
-	self render: self miniFabButtons withCardSizeOf: 2 on: html
+	self
+		render: self fabColoredButtons on: html;
+		render: self fabButtons on: html;
+		render: self raisedButtons on: html;
+		render: self coloredButtons on: html;
+		render: self flatButtons on: html;
+		render: self iconButtons on: html;
+		render: self miniFabButtons on: html

@@ -1,4 +1,4 @@
-accessing
+sections
 fabButtons
 	^ OrderedDictionary new
 		add: 'Plain FAB' -> #renderFabButtonCodeOn:;

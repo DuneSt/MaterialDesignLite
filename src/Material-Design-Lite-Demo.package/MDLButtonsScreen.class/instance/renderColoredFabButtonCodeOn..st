@@ -1,4 +1,4 @@
-code
+demos
 renderColoredFabButtonCodeOn: html
 	html mdlButton
 		fab;

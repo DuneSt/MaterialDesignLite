@@ -1,4 +1,4 @@
-accessing
+sections
 coloredButtons
 	^ OrderedDictionary new
 		add: 'Colored button' -> #renderColoredButtonCodeOn:;

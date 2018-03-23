@@ -1,4 +1,4 @@
-accessing
+sections
 miniFabButtons
 	^ OrderedDictionary new
 		add: 'Mini FAB' -> #renderMiniFabButtonCodeOn:;

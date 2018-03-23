@@ -1,4 +1,4 @@
-accessing
+sections
 fabColoredButtons
 	^ OrderedDictionary new
 		add: 'Colored FAB' -> #renderColoredFabButtonCodeOn:;

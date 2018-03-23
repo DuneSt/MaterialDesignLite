@@ -1,4 +1,4 @@
-code
+demos
 renderIconColoredButtonCodeOn: html
 	html mdlButton
 		primaryColor;

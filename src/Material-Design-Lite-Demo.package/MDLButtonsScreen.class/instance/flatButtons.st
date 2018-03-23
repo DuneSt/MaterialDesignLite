@@ -1,4 +1,4 @@
-accessing
+sections
 flatButtons
 	^ OrderedDictionary new
 		add: 'Flat button' -> #renderFlatButtonCodeOn:;
