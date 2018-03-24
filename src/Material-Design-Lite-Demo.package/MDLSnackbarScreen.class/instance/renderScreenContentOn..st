@@ -1,4 +1,5 @@
 rendering
 renderScreenContentOn: html
-	self renderSnackbarOn: html.
-	self renderToastOn: html
+	self
+		render: self snackbar on: html;
+		render: self toast on: html

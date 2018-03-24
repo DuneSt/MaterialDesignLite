@@ -1,4 +1,4 @@
-accessing
+sections
 positionedTooltips
 	^ OrderedDictionary new
 		add: 'Top' -> #renderTopTooltipOn:;

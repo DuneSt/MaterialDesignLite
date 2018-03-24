@@ -1,6 +1,5 @@
 rendering
 renderScreenContentOn: html
-	self renderDefaultSliderOn: html.
-	self renderSliderWithDefaultValueOn: html.
-	self renderSliderDisabledOn: html.
-	self render: self complexeSlider withCardSizeOf: 4 on: html
+	self render: self simpleSliders on: html.
+	html small: 'Warning: Showing bonds might not work on all browsers.'.
+	self render: self advanceSlider on: html

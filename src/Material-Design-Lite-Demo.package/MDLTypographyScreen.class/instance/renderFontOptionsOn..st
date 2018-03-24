@@ -1,8 +1,9 @@
-code
+demos
 renderFontOptionsOn: html
 	html div
 		mdlTypographyTextJustify;
 		mdlTypographyBody2;
+		style: 'width: 400px;';
 		with: [ #('thin' 'light' 'regular' 'medium' 'bold' 'black')
 				do: [ :each | 
 					| selector |

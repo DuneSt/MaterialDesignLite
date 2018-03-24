@@ -1,8 +1,8 @@
-code
+demos
 renderBackgroundColorOptionsOn: html
 	html div
 		mdlTypographyTextJustify;
-		style: 'color: white';
+		style: 'color: white; width: 400px;';
 		with:
 				[ #('primary' 'primary-Dark' 'accent')
 				do: [ :each | 

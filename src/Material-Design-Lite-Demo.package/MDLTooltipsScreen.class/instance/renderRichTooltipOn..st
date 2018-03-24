@@ -1,4 +1,4 @@
-code
+demos
 renderRichTooltipOn: html
 	html mdlIcon
 		id: html nextId;

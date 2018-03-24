@@ -1,4 +1,4 @@
-accessing
+sections
 simpleTooltips
 	^ OrderedDictionary new
 		add: 'Simple' -> #renderSimpleTooltipOn:;

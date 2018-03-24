@@ -1,4 +1,4 @@
-code
+demos
 renderTextOptionsOn: html
 	html div
 		mdlTypographyTextJustify;

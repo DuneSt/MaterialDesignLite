@@ -1,3 +1,3 @@
 rendering
 renderScreenContentOn: html
-	self renderSimpleTableOn: html
+	self render: self dataTable on: html

@@ -1,4 +1,4 @@
-code
+demos
 renderLargeTooltipOn: html
 	html mdlIcon
 		id: html nextId;

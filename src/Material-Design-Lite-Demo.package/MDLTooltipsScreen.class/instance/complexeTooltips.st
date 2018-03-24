@@ -1,4 +1,4 @@
-accessing
+sections
 complexeTooltips
 	^ OrderedDictionary new
 		add: 'Rich' -> #renderRichTooltipOn:;

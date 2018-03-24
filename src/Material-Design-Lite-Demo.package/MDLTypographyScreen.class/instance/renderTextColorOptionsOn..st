@@ -1,4 +1,4 @@
-code
+demos
 renderTextColorOptionsOn: html
 	html div
 		mdlTypographyTextJustify;

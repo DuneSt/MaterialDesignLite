@@ -169,6 +169,11 @@ style
     right: 16px;
   }
 
+.renderDefaultSliderOn, .renderAdvenceSliderOn, .renderDisabledSliderOn, .renderStartingValueSliderOn { 
+    width: 30vw;
+    max-width: 260px;
+}
+
 
 
 /* LISTS */

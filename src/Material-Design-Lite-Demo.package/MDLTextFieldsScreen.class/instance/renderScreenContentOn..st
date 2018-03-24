@@ -1,5 +1,6 @@
 rendering
 renderScreenContentOn: html
-	self renderSimpleTextFieldOn: html.
-	self renderFloatingLabelTextFieldOn: html.
-	self renderComplexTextFielOn: html
+	self
+		render: self simpleTextFields on: html;
+		render: self floatingLabelTextFields on: html;
+		render: self specialTextFields on: html

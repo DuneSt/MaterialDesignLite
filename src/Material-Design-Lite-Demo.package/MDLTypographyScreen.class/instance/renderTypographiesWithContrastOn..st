@@ -1,4 +1,4 @@
-code
+demos
 renderTypographiesWithContrastOn: html
 	html div
 		mdlTypographyTextJustify;

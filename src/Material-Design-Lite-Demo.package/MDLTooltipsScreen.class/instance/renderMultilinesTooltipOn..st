@@ -1,4 +1,4 @@
-code
+demos
 renderMultilinesTooltipOn: html
 	html mdlIcon
 		id: html nextId;
