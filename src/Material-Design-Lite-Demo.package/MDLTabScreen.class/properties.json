@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "ThomasHeniart 6/16/2016 13:24",
 	"super" : "MDLWidgetDemo",
-	"category" : "Material-Design-Lite-Demo",
+	"category" : "Material-Design-Lite-Demo-Widgets",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "MDLWidgetTabScreen",
+	"name" : "MDLTabScreen",
 	"type" : "normal"
 }

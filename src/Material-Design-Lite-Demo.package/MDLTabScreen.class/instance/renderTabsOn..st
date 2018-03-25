@@ -1,4 +1,4 @@
-code
+demos
 renderTabsOn: html
 	html
 		render:
