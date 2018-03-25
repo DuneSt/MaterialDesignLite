@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "CyrilFerlicot 7/1/2017 12:52",
 	"super" : "MDLWidgetDemo",
-	"category" : "Material-Design-Lite-Demo",
+	"category" : "Material-Design-Lite-Demo-Widgets",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "MDLWidgetMenuButtonScreen",
+	"instvars" : [
+		"selectedUser"
+	],
+	"name" : "MDLMenuButtonScreen",
 	"type" : "normal"
 }

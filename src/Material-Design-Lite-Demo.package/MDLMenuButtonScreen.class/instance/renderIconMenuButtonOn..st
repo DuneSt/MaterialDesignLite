@@ -1,4 +1,4 @@
-code
+demos
 renderIconMenuButtonOn: html
 	html
 		render:
