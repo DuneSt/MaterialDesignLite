@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WASession",
+	"category" : "Material-Design-Lite-Demo-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"rootComponent"
+	],
+	"name" : "MDLDemoSession",
+	"type" : "normal"
+}

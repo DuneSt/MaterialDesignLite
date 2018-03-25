@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "KevinLanvin 6/20/2016 11:31",
 	"super" : "MDLAbstractHeaderSection",
-	"category" : "Material-Design-Lite-Core-Example-Components",
+	"category" : "Material-Design-Lite-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

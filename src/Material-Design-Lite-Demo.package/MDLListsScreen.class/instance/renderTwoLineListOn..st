@@ -1,0 +1,41 @@
+demos
+renderTwoLineListOn: html
+	html mdlList
+		style: 'width: 300px';
+		with: [ html mdlListItem
+				twoLine;
+				with: [ html
+						mdlListPrimaryContent: [ html mdlIcon
+								listItemAvatar;
+								with: #person.
+							html text: 'Bryan Cranston'.
+							html mdlListItemSubTitle: 'Appears in 62 Episodes' ].
+					html
+						mdlListSecondaryContent: [ html mdlListItemSecondaryInfo: 'Actor'.
+							html mdlListItemSecondaryAction
+								url: '#';
+								with: [ html mdlIcon: #star ] ] ].
+			html mdlListItem
+				twoLine;
+				with: [ html
+						mdlListPrimaryContent: [ html mdlIcon
+								listItemAvatar;
+								with: #person.
+							html text: 'Aaron Paul'.
+							html mdlListItemSubTitle: 'Appears in 62 Episodes' ].
+					html
+						mdlListSecondaryContent: [ html mdlListItemSecondaryAction
+								url: '#';
+								with: [ html mdlIcon: #star ] ] ].
+			html mdlListItem
+				twoLine;
+				with: [ html
+						mdlListPrimaryContent: [ html mdlIcon
+								listItemAvatar;
+								with: #person.
+							html text: 'Bob Odenkirk'.
+							html mdlListItemSubTitle: 'Appears in 62 Episodes' ].
+					html
+						mdlListSecondaryContent: [ html mdlListItemSecondaryAction
+								url: '#';
+								with: [ html mdlIcon: #star ] ] ] ]

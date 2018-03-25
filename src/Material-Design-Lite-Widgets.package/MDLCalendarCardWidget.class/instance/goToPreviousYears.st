@@ -1,3 +1,0 @@
-private
-goToPreviousYears
-	calendar previousYears

@@ -15,6 +15,7 @@ baseline: spec
 			spec
 				package: 'Material-Design-Lite-Components' with: [ spec requires: #('MaterialColors') ];
 				package: 'Material-Design-Lite-Core' with: [ spec requires: #('Material-Design-Lite-Utils' 'Material-Design-Lite-Components' 'Material-Design-Lite-Widgets') ];
+				package: 'Material-Design-Lite-Demo' with: [ spec requires: #('Material-Design-Lite-Core') ];
 				package: 'Material-Design-Lite-Magritte' with: [ spec requires: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components') ];
 				package: 'Material-Design-Lite-Widgets' with: [ spec requires: #('Material-Design-Lite-Components') ];
 				package: 'Material-Design-Lite-Utils' with: [ spec requires: #('Seaside3' 'FileLibraryHelper') ];
@@ -26,4 +27,6 @@ baseline: spec
 				group: 'all' with: #('default' 'Magritte');
 				group: 'colors' with: #('MaterialColors');
 				group: 'extensions' with: #('Material-Design-Lite-Extensions');
-				group: 'default' with: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' 'Material-Design-Lite-Core' 'Material-Design-Lite-Utils') ]
+				group: 'core' with: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' 'Material-Design-Lite-Core' 'Material-Design-Lite-Utils');
+				group: 'default' with: #('core' 'demo');
+				group: 'demo' with: #('Material-Design-Lite-Demo') ]

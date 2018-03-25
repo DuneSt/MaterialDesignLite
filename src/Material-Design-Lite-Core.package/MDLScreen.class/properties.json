@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "KevinLanvin 5/2/2016 16:25",
 	"super" : "WAComponent",
-	"category" : "Material-Design-Lite-Core-Applications",
+	"category" : "Material-Design-Lite-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

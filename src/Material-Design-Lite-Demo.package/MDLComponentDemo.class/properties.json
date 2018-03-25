@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLDemoScreen",
+	"category" : "Material-Design-Lite-Demo-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLComponentDemo",
+	"type" : "normal"
+}

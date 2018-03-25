@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WAComponent",
+	"category" : "Material-Design-Lite-Demo-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isRepresentingClass"
+	],
+	"name" : "MDLNestedListIconExampleComponent",
+	"type" : "normal"
+}

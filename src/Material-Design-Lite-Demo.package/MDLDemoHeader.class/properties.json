@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLDemoComponent",
+	"category" : "Material-Design-Lite-Demo-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"activeTab"
+	],
+	"name" : "MDLDemoHeader",
+	"type" : "normal"
+}

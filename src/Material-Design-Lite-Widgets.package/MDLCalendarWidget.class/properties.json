@@ -9,7 +9,8 @@
 		"daysList",
 		"calendar",
 		"calendarId",
-		"callback"
+		"callback",
+		"onCompleteScript"
 	],
 	"name" : "MDLCalendarWidget",
 	"type" : "normal"

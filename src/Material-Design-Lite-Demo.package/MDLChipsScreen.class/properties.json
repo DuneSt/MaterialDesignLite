@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 7/19/2016 13:18",
+	"super" : "MDLComponentDemo",
+	"category" : "Material-Design-Lite-Demo-Components",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLChipsScreen",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MDLWidgetDemo",
+	"category" : "Material-Design-Lite-Demo-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedElement"
+	],
+	"name" : "MDLNestedListScreen",
+	"type" : "normal"
+}

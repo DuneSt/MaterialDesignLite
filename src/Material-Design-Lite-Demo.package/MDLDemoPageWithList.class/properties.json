@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLDemoPage",
+	"category" : "Material-Design-Lite-Demo-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list",
+		"selectedScreen"
+	],
+	"name" : "MDLDemoPageWithList",
+	"type" : "normal"
+}

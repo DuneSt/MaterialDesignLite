@@ -1,13 +1,9 @@
 private-rendering
 displayDate: aDate on: html
 	html mdlButton
-		class:
-			(aDate = calendar currentDate
-				ifTrue: [ 'active' ]);
-		class:
-			(aDate month = calendar currentDate month
-				ifFalse: [ 'disabled' ]);
+		class: 'active' if: aDate = calendar currentDate;
+		class: 'disabled' if: aDate month ~= calendar currentDate month;
 		rippleEffect;
 		icon;
-		onClick: (self scriptUpdateDate: aDate on: html);
+		onClick: (self jsUpdateDate: aDate on: html);
 		with: aDate dayOfMonth greaseString
