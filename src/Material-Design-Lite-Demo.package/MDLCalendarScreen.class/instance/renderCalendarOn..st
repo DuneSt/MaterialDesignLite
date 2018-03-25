@@ -1,7 +1,6 @@
 demos
 renderCalendarOn: html
 	html div
-		shadow: 2;
 		style: 'background-color: white;';
 		with: [ html
 				render:
