@@ -9,6 +9,6 @@ renderMonthesOn: html
 						class:
 							(aString = calendar currentDate monthName
 								ifTrue: [ 'active' ]);
-						onClick: (self scriptGoToMonth: (Month indexOfMonth: aString) on: html);
+						onClick: (self jsGoToMonth: (Month indexOfMonth: aString) on: html);
 						desktopSize: 4;
 						with: aString ] ]
