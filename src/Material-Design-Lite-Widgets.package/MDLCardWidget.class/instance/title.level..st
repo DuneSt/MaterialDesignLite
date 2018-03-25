@@ -1,3 +1,3 @@
 adding
 title: aString level: aNumber
-	self addComponentOrBlock: (MDLCardTitle newWithTitle: aString level: aNumber)
+	self title: aString level: aNumber class: ''
