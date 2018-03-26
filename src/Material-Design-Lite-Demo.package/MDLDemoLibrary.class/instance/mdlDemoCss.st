@@ -1,6 +1,59 @@
 uploaded
 mdlDemoCss
-	^ '
+	^ '.mdl-doc{
+    width: 100%;
+}
+
+.mdl-doc section{
+    padding: 50px 100px;
+    text-align: justify;
+}
+
+.mdl-doc a {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.mdl-illustration { 
+    height: 300px;
+    margin: auto;
+}
+
+.mdl-doc pre {
+    margin: 0;
+}
+
+.mdl-doc dl {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+	
+.mdl-doc dl dt {
+    text-align: right;
+    vertical-align: top;
+    display: inline-table;
+    margin-right: 24px;
+    line-height: 2em;
+}
+
+.mdl-doc dl dd {
+    line-height: 2em;
+    vertical-align: top;
+    width: 700px;
+    margin: 0 0 0 24px;
+}
+	
 .hljs {
   display: block;
   overflow-x: auto;
@@ -272,7 +325,7 @@ pre:hover {
     overflow: hidden;
 }
 
-.snippet-group .snippet-code code:hover::before {
+code:hover::before {
     display:inline-block;
     content:''Click to copy'';
     color:rgba(0,0,0,.5);
@@ -285,19 +338,19 @@ pre:hover {
     padding: 3px 24px;
 }
 
-.snippet-group .snippet-code code:active::before {
+code:active::before {
     content:'''';
     padding: 3px 24px;
 }
 
-.snippet-group .snippet-code code.copied::before {
+code.copied::before {
     content:''Copied'';
     color:rgba(255,255,255,.5);
     background-color:rgba(0,0,0,.6);
     padding: 3px 24px;
 }
 
-.snippet-group .snippet-code code.nosupport::before {
+code.nosupport::before {
     content:"Browser not supported :''(";
     color:rgba(255,255,255,.5);
     background-color:rgba(0,0,0,.6);

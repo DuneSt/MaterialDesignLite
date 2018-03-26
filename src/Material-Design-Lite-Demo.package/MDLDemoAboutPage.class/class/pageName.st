@@ -1,3 +1,3 @@
 accessing
 pageName
-	^ 'Widgets demo'
+	^ 'About'

@@ -1,3 +1,3 @@
 accessing
 pagesToDisplay
-	^ self allSubclasses reject: #isAbstract
+	^ (self allSubclasses reject: #isAbstract) sorted: [ :a :b | a priority < b priority ]

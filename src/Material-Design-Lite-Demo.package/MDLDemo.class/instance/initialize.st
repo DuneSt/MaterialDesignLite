@@ -5,4 +5,4 @@ initialize
 	self footer: self defaultFooter.
 	self session rootComponent: self.
 	self componentInstances: Dictionary new.
-	self displayInstanceOf: MDLComponentsDemoPage
+	self displayInstanceOf: MDLDemoPage pagesToDisplay first
