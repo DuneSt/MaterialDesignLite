@@ -1,5 +1,5 @@
 uploaded
-myStyleCss
+mdlDemoCss
 	^ '
 .hljs {
   display: block;
@@ -98,6 +98,8 @@ pre {
     background-color: #eee;
     color: rgb(0,0,0);
     padding: 5px 20px;
+    position: relative;
+    cursor: copy;
 }
 	
 pre:hover { 
@@ -268,6 +270,38 @@ pre:hover {
 .snippet-group .snippet-code {
     position: relative;
     overflow: hidden;
+}
+
+.snippet-group .snippet-code code:hover::before {
+    display:inline-block;
+    content:''Click to copy'';
+    color:rgba(0,0,0,.5);
+    font-size:13px;
+    background-color:rgba(0,0,0,.1);
+    border-top-left-radius:5px;
+    position:absolute;
+    right:0;
+    bottom:0;
+    padding: 3px 24px;
+}
+
+.snippet-group .snippet-code code:active::before {
+    content:'''';
+    padding: 3px 24px;
+}
+
+.snippet-group .snippet-code code.copied::before {
+    content:''Copied'';
+    color:rgba(255,255,255,.5);
+    background-color:rgba(0,0,0,.6);
+    padding: 3px 24px;
+}
+
+.snippet-group .snippet-code code.nosupport::before {
+    content:"Browser not supported :''(";
+    color:rgba(255,255,255,.5);
+    background-color:rgba(0,0,0,.6);
+    padding: 3px 24px;
 }
 
 .renderTransparentHeaderOn, .renderFixedDrawerNoHeaderOn, .renderFixedHeaderOn, .renderFixedHeaderAndDrawerOn, .renderScrollingHeaderOn, .renderWaterfallHeaderOn, .renderScrollableTabsOn, .renderFixedTabsOn { 

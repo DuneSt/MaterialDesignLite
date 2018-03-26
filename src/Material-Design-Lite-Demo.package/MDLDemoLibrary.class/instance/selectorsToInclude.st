@@ -1,3 +1,3 @@
 accessing
 selectorsToInclude
-	^ #(#myStyleCss #highlightpackJs)
+	^ #(#mdlDemoCss #mdlDemoJs #highlightpackJs)
