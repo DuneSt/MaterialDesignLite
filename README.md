@@ -1,4 +1,4 @@
-# MaterialDesignLite
+# MaterialDesignLite for Seaside <img src="https://raw.githubusercontent.com/DuneSt/MaterialDesignLite/development/resources/logos/logoFull.png" width="50">
 
 #### Linux/OSX builds
 Master: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=master)](https://travis-ci.org/DuneSt/MaterialDesignLite)| Development: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=development)](https://travis-ci.org/DuneSt/MaterialDesignLite)
