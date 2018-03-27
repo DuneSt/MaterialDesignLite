@@ -1,0 +1,3 @@
+components
+setTab2RightPanel
+	self rightPanel: MDLExampleRightPanel2 new

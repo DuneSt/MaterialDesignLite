@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLExtensionsDemo",
+	"category" : "Material-Design-Lite-Demo-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLLeftPanelScreen",
+	"type" : "normal"
+}

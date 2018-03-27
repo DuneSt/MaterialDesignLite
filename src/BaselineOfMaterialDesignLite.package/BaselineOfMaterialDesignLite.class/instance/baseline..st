@@ -14,12 +14,12 @@ baseline: spec
 			"Packages"
 			spec
 				package: 'Material-Design-Lite-Components' with: [ spec requires: #('MaterialColors') ];
-				package: 'Material-Design-Lite-Core' with: [ spec requires: #('Material-Design-Lite-Utils' 'Material-Design-Lite-Components' 'Material-Design-Lite-Widgets') ];
+				package: 'Material-Design-Lite-Core' with: [ spec requires: #('Material-Design-Lite-Utils' 'Material-Design-Lite-Components' 'Material-Design-Lite-Widgets' 'Material-Design-Lite-Extensions') ];
 				package: 'Material-Design-Lite-Demo' with: [ spec requires: #('Material-Design-Lite-Core') ];
 				package: 'Material-Design-Lite-Magritte' with: [ spec requires: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components') ];
 				package: 'Material-Design-Lite-Widgets' with: [ spec requires: #('Material-Design-Lite-Components') ];
 				package: 'Material-Design-Lite-Utils' with: [ spec requires: #('Seaside3' 'FileLibraryHelper') ];
-				package: 'Material-Design-Lite-Extensions' with: [ spec requires: #('default') ].
+				package: 'Material-Design-Lite-Extensions' with: [ spec requires: #('Material-Design-Lite-Utils') ].
 				
 			"Groups"
 			spec

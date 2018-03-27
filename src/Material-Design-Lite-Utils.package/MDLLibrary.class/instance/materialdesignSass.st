@@ -9,4 +9,5 @@ materialdesignSass
 @import "paginationWidget"
 @import "chips"
 @import "buttonMenuWidget"
+@import "panels"
 '

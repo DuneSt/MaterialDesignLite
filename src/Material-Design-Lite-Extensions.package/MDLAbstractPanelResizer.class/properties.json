@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/27/2018 15:12",
+	"super" : "WAComponent",
+	"category" : "Material-Design-Lite-Extensions-Panels",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLAbstractPanelResizer",
+	"type" : "normal"
+}

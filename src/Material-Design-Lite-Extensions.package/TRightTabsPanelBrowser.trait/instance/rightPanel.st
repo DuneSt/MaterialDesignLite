@@ -1,0 +1,3 @@
+accessing
+rightPanel
+	^ self explicitRequirement

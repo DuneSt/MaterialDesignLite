@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/27/2018 16:09",
+	"super" : "WAComponent",
+	"category" : "Material-Design-Lite-Extensions-Panels",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"buttons"
+	],
+	"name" : "MDLVerticalToolbar",
+	"type" : "normal"
+}
