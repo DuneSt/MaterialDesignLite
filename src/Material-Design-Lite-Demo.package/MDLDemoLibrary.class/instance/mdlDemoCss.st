@@ -1,4 +1,4 @@
-uploaded
+demo
 mdlDemoCss
 	^ '.mdl-doc{
     width: 100%;

@@ -1,4 +1,4 @@
-uploaded
+demo
 mdlDemoJs
 	^ 'function MDLSeasideDemo() {
   ''use strict'';
