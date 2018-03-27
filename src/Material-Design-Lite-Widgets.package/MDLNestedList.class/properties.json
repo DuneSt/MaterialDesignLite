@@ -23,7 +23,8 @@
 		"filter",
 		"listStyle",
 		"onLoadHook",
-		"listMaxSize"
+		"listMaxSize",
+		"childrenSortBlock"
 	],
 	"name" : "MDLNestedList",
 	"type" : "normal"
