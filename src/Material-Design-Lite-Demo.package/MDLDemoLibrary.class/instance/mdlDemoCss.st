@@ -3,6 +3,15 @@ mdlDemoCss
 	^ 'html, body{
 	font-family: ''Roboto'',''Helvetica'',''Arial'', sans-serif !important;	
 }
+
+.mdl-layout.is-small-screen .mdl-layout__header-row{
+	display: none;
+}
+
+.mdl-layout.is-small-screen .mdl-layout__header{
+	display: flex;
+	min-height: 48px;
+}
 	
 .mdl-doc{
     width: 100%;
