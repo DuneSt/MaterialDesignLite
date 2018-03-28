@@ -1,3 +1,3 @@
 accessing
 pageName
-	^ 'Components demo'
+	^ 'Components'

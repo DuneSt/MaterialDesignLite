@@ -5,6 +5,11 @@ defaultList
 		listStyle: #demo;
 		format: #title;
 		helpBlock: #description;
-		actionBlock: [ :screen | self selectedScreen: screen new ];
+		actionBlock: [ :screen | 
+			self
+				selectedScreen:
+					(self selectedScreen class = screen
+						ifTrue: [ nil ]
+						ifFalse: [ screen new ]) ];
 		selectedEntity: self selectedScreen class;
 		yourself

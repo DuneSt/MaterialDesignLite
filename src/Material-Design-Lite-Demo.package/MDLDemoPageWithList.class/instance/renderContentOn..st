@@ -8,4 +8,4 @@ renderContentOn: html
 				leftPanelResizer ].
 	(html tag: 'main')
 		class: 'mdl-components__pages';
-		with: [ html render: self selectedScreen ]
+		with: [ self renderPageContentOn: html ]

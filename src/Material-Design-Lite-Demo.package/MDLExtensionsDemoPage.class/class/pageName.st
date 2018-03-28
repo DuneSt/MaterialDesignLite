@@ -1,3 +1,3 @@
 accessing
 pageName
-	^ 'Extensions demo'
+	^ 'Extensions'

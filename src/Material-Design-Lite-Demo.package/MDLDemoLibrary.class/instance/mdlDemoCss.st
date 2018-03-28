@@ -12,6 +12,24 @@ mdlDemoCss
 	display: flex;
 	min-height: 48px;
 }
+
+.mdl-components__page-index{
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 64px;
+}
+
+.mdl-components-img {
+    position: absolute;
+    margin-top: 24px;
+    left: 40px;
+    height: 90%;
+    width: 90%;
+    max-height: 600px;
+    background: url(''' , (self urlOf: 'compsBackgroundPng') asString
+		,
+			''') no-repeat top left/contain;
+}
 	
 .mdl-doc{
     width: 100%;
