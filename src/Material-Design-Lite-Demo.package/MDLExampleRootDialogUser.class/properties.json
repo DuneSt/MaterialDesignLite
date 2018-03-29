@@ -1,0 +1,13 @@
+{
+	"classtraitcomposition" : "TWithRootDialogComponent classTrait",
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLExampleRootDialogUser",
+	"commentStamp" : "",
+	"super" : "WAComponent",
+	"traitcomposition" : "TWithRootDialogComponent",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Material-Design-Lite-Demo-Utils"
+}

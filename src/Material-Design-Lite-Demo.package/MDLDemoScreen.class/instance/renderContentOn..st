@@ -5,6 +5,7 @@ renderContentOn: html
 		with: [ html
 				mdlCell: [ html div
 						class: 'component-title';
+						mdlTypographyTextJustify;
 						with: [ html heading
 								level3;
 								with: self title.
