@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/29/2018 11:54",
+	"super" : "MDLAbstractFilter",
+	"category" : "Material-Design-Lite-Widgets-List",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSubstringFilter",
+	"type" : "normal"
+}

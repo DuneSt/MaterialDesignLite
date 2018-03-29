@@ -1,0 +1,1 @@
+I am a nested list filter keeping only elements whose name includes  the pattern passed by the user.
