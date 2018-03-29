@@ -6,9 +6,7 @@ renderMonthesOn: html
 				do: [ :aString | 
 					html mdlCell
 						class: 'month-cell';
-						class:
-							(aString = calendar currentDate monthName
-								ifTrue: [ 'active' ]);
+						class: 'active' if: aString = calendar currentDate monthName;
 						onClick: (self jsGoToMonth: (Month indexOfMonth: aString) on: html);
 						desktopSize: 4;
 						with: aString ] ]

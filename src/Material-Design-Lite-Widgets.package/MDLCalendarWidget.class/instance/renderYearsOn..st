@@ -7,14 +7,10 @@ renderYearsOn: html
 				do: [ :aYear | 
 					html mdlCell
 						class: 'year-cell';
-						class:
-							(aYear = calendar currentDate year
-								ifTrue: [ 'active' ]);
+						class: 'active' if: aYear = calendar currentDate year;
 						onClick:
 							(html jQuery ajax
 								callback: [ calendar goToYear: aYear ];
-								onComplete:
-									((html jQuery id: calendarId) load
-										html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
+								onComplete: ((html jQuery id: calendarId) load html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
 						desktopSize: 4;
 						with: aYear greaseString ] ]
