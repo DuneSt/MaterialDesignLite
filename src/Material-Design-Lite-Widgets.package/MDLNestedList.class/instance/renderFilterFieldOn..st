@@ -18,5 +18,5 @@ renderFilterFieldOn: html
 								onComplete:
 									((html jQuery: '#' , (self idFor: #listContainer)) parent load
 										html: [ :htm | self renderListOn: htm ];
-										onComplete: ('scrollToSelection();defineExpandable();stopSpinnerOf("' , (self idFor: #researchFieldId) , '")') js)) ].
+										onComplete: (self jsOnLoadHook , ('scrollToSelection();defineExpandable();stopSpinnerOf("' , (self idFor: #researchFieldId) , '")') js))) ].
 			html mdlSpinner singleColor ]
