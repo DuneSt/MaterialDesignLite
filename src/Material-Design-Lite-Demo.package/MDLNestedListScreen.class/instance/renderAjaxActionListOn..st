@@ -17,6 +17,8 @@ renderAjaxActionListOn: html
 				beCompact;
 				onLoadHook: ((html jQuery id: divId) load html: [ :ajaxHtml | ajaxHtml text: 'Ajax hook executed at ' , DateAndTime now printString ]);
 				onClickJs: [ :entity | (html jQuery id: divId2) load html: [ :ajaxHtml | ajaxHtml text: 'Selected: ' , entity printString ] ];
+				withResearchField;
+				filterSubstring;
 				yourself).
 	html div mdlTextColorPrimary; id: divId.
 	html div mdlTextColorAccent; id: divId2
