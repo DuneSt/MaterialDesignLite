@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "CyrilFerlicot 3/30/2018 16:35",
 	"super" : "WAComponent",
-	"category" : "Material-Design-Lite-Components",
+	"category" : "Material-Design-Lite-Widgets",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

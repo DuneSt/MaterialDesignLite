@@ -1,5 +1,3 @@
-I am a component to create a MDL chip.
-
 Description
 -------------------
 

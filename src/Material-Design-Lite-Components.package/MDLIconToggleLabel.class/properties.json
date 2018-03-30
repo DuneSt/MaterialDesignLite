@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "CyrilFerlicot 3/30/2018 17:20",
 	"super" : "WATagBrush",
-	"category" : "Material-Design-Lite-Components-IconToggle",
+	"category" : "Material-Design-Lite-Components-Forms",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

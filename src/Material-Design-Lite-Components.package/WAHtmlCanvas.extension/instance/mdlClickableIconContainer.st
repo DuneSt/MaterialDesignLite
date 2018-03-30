@@ -1,3 +1,3 @@
 *Material-Design-Lite-Components
 mdlClickableIconContainer
-	^ self brush: MDLClickableIconContainer  new 
+	^ self brush: MDLClickableIconContainer new 

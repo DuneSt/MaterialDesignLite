@@ -1,3 +1,3 @@
 options
-disable
+disabled
 	self attributeAt: 'disabled' put: 'true'

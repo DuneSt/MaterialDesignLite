@@ -1,6 +1,10 @@
+Description
+--------------------
+
 I am a simple tag to display an initial on a mdl chip.
 
-Examples:
+Example
+--------------------
 
 	"A Chip with an initial and an hard coded color"
 	html mdlChip

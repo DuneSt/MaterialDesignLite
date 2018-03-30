@@ -1,1 +1,4 @@
-I'm an Icon for mdl layouts
+IDescription
+--------------------
+
+I am a brush to create an icon for mdl layouts.

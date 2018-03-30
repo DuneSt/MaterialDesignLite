@@ -1,6 +1,10 @@
+Description
+--------------------
+
 I am a tag to display an image on a mdl chip.
 
-Example:
+Example
+--------------------
 
 	"A Chip with an image"
 	html mdlChip

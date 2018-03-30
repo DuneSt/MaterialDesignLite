@@ -1,7 +1,7 @@
 Description
 --------------------
 
-I am a brush to create actions inside  a card.
+I am a brush to create a card title div.
 
 Example
 --------------------
