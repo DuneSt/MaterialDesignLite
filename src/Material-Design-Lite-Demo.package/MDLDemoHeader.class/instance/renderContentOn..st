@@ -11,7 +11,7 @@ renderContentOn: html
 										url: (MDLDemoLibrary urlOf: 'logoSvg').
 									html text: '    Material Design Lite for Seaside' ] ].
 					html mdlLayoutSpacer.
-					html render: MDLVersionComponent new.
+					html text: '	Version ' , self version.
 					self renderForkMeOnGithubOn: html ].
 			html
 				mdlLayoutTabBar: [ self possiblePages

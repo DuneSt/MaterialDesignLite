@@ -14,9 +14,9 @@ Example
 			render:
 				(MDLVerticalToolbar
 					buttons:
-						{(MDLFoldButton for: '#code-analyzer-info' callback: 'setTimeout(function(){console.log("callback");for(var i in visus){visus[i].visu.resize().center()}},800)')
+						{(MDLFoldButton for: '#my-browser-info' callback: 'setTimeout(function(){console.log("callback");for(var i in visus){visus[i].visu.resize().center()}},800)')
 						.
-						(MDLFoldButton for: '#code-analyzer-info' callback: 'setTimeout(function(){console.log("callback");for(var i in visus){visus[i].visu.resize().center()}},800)')}).
+						(MDLFoldButton for: '#my-browser-info' callback: 'setTimeout(function(){console.log("callback");for(var i in visus){visus[i].visu.resize().center()}},800)')}).
  
 Internal Representation and Key Implementation Points.
 --------------------

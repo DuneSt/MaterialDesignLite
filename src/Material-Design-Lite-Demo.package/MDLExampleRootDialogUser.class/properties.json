@@ -3,7 +3,7 @@
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "MDLExampleRootDialogUser",
-	"commentStamp" : "",
+	"commentStamp" : "CyrilFerlicot 3/31/2018 01:54",
 	"super" : "WAComponent",
 	"traitcomposition" : "TWithRootDialogComponent",
 	"type" : "normal",

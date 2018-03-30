@@ -15,7 +15,7 @@ Example
 	MDLPanelSwitcherButton
 		text: 'Tags'
 		tooltip: 'Show the Tag panel'
-		panelId: #'code-analyzer-right-panel'
+		panelId: #'my-browser-right-panel'
 		actionBlock: [ :r | 
 			self setTagPanel.
 			self renderRightPanelOn: r ]
