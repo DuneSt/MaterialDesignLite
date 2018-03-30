@@ -1,3 +1,3 @@
 accessing
 icon
-	^'compTypoPng'
+	^ 'compTypoPng'
