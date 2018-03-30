@@ -90,9 +90,11 @@ nestedListSass
 
 
         li .item
+          +flexGrow
           vertical-align: middle
           text-overflow: ellipsis
           overflow: hidden
+
 
         img
           +box(24px)
