@@ -22,7 +22,7 @@
 * **Add premade typographies**. Comes with a demo ([0c29dca](https://github.com/DuneSt/MaterialDesignLite/commit/0c29dcab373948c5a510d3d632950f2297ec789c))
 * **Implement methods to use the primary and accent color with text and backgrounds**. Comes with a demo ([e39667d](https://github.com/DuneSt/MaterialDesignLite/commit/e39667dd625b2689f3c9a290df26c911cc91fd7a))
 * **MDLSelectWidget>>customizationBlock should take the canvas as second parameter** ([f4ad7c9](https://github.com/DuneSt/MaterialDesignLite/commit/f4ad7c98b2276b0412c1e4bc4cb8d215c8929503))
-* **Chips: Highlight lightly the background of the icons ** ([639f105](https://github.com/DuneSt/MaterialDesignLite/commit/639f10597a851810040c7fc4680a42fa1df85488))
+* **Chips: Highlight lightly the background of the icons** ([639f105](https://github.com/DuneSt/MaterialDesignLite/commit/639f10597a851810040c7fc4680a42fa1df85488))
 * **Missing beCurrent on MDLNavigationLink** ([488da0c](https://github.com/DuneSt/MaterialDesignLite/commit/488da0cda00eda5941abae829bcaf7a78169a581))
 * **Simplify the creation of icon button** ([9b88f32](https://github.com/DuneSt/MaterialDesignLite/commit/9b88f322ceca2d94b7f4bf0b348b913ecaaa663e))
 * **Add sugar to MDLButton to create a label icon button** ([a49797b](https://github.com/DuneSt/MaterialDesignLite/commit/a49797b230f5caca7aea11fa5f3cdb548c7f1277))
