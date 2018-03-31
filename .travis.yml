@@ -11,5 +11,6 @@ smalltalk:
   - Pharo-5.0
   
 matrix:
+  fast_finish: true
   allow_failures:
     - smalltalk: Pharo-7.0
