@@ -69,6 +69,12 @@ mdlDemoCss
     -ms-flex-align: stretch;
     align-items: stretch;
 }
+
+.mdl-layout.is-small-screen .mdl-doc dl {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 	
 .mdl-doc dl dt {
     text-align: right;
@@ -83,6 +89,16 @@ mdlDemoCss
     vertical-align: top;
     width: 700px;
     margin: 0 0 0 24px;
+}
+
+.mdl-layout.is-small-screen .mdl-doc dd, .mdl-layout.is-small-screen .mdl-doc dt {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.mdl-layout.is-small-screen .mdl-doc dt {
+    text-align: left;
 }
 	
 .hljs {
