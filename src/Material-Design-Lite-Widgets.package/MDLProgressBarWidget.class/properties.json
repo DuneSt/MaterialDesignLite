@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "CyrilFerlicot 7/1/2017 14:45",
+	"super" : "MDLWidget",
+	"category" : "Material-Design-Lite-Widgets-Loading",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"progressionBlock",
+		"refreshTime",
+		"hyde"
+	],
+	"name" : "MDLProgressBarWidget",
+	"type" : "normal"
+}

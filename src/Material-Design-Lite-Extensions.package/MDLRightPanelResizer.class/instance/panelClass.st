@@ -1,0 +1,3 @@
+accessing
+panelClass
+	^ #'resizer-right'

@@ -6,7 +6,6 @@ SystemOrganization addCategory: 'Material-Design-Lite-Components-Chips'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Dialog'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Footer'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Forms'!
-SystemOrganization addCategory: 'Material-Design-Lite-Components-IconToggle'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Layout'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-List'!
 SystemOrganization addCategory: 'Material-Design-Lite-Components-Loading'!

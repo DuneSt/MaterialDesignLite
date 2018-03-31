@@ -1,0 +1,3 @@
+demos
+renderIndeterminateProgressBarOn: html
+	html mdlProgressBar indeterminate

@@ -1,0 +1,1 @@
+I am a screen to show how to use a MDLProgressBarWidget

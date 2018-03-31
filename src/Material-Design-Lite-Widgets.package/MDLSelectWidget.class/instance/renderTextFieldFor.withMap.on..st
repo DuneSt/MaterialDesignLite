@@ -10,4 +10,4 @@ renderTextFieldFor: anId withMap: aLabelMap on: html
 		callback: [ :input | self callback ifNotNil: [ :cb | cb value: (aLabelMap at: input) ] ];
 		onChange: 'submit()' if: self autoSubmit;
 		type: 'text'.
-	self customizationBlock ifNotNil: [ :bl | bl value: textField ]
+	self customizationBlock ifNotNil: [ :bl | bl mdlCull: textField cull: html ]

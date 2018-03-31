@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "",
+	"commentStamp" : "CyrilFerlicot 3/31/2018 01:21",
 	"super" : "WADecoration",
-	"category" : "Material-Design-Lite-Core-Applications",
+	"category" : "Material-Design-Lite-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

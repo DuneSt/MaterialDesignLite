@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "ThomasHeniart 6/8/2016 10:26",
+	"super" : "MDLWidgetDemo",
+	"category" : "Material-Design-Lite-Demo-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selectedDay"
+	],
+	"name" : "MDLCalendarScreen",
+	"type" : "normal"
+}

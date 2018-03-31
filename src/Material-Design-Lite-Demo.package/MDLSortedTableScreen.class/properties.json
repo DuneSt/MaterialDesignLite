@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 9/23/2016 12:38",
+	"super" : "MDLWidgetDemo",
+	"category" : "Material-Design-Lite-Demo-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSortedTableScreen",
+	"type" : "normal"
+}

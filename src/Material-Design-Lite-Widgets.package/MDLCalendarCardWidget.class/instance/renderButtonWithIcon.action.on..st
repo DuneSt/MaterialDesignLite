@@ -8,7 +8,7 @@ renderButtonWithIcon: anIcon action: aSymbol on: html
 				onClick:
 					(html jQuery ajax
 						callback: [ self perform: aSymbol ];
-						onComplete: (self onCompleteScriptOn: html));
+						onComplete: (self jsOnCompleteScriptOn: html));
 				icon;
 				rippleEffect;
 				style: 'color: rgba(0,0,0,0.7)';

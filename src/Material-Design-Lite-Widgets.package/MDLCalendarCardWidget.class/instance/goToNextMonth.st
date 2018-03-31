@@ -1,3 +1,0 @@
-private
-goToNextMonth
-	calendar nextMonth

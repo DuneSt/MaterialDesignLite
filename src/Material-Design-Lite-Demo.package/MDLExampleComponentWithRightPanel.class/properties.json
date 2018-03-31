@@ -1,0 +1,16 @@
+{
+	"classtraitcomposition" : "TRightTabsPanelBrowser classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"toolbar",
+		"rightPanel"
+	],
+	"name" : "MDLExampleComponentWithRightPanel",
+	"commentStamp" : "CyrilFerlicot 3/31/2018 01:49",
+	"super" : "WAComponent",
+	"traitcomposition" : "TRightTabsPanelBrowser",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Material-Design-Lite-Demo-Utils"
+}

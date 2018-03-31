@@ -1,16 +1,10 @@
 private-rendering
 displayDate: aDate on: html
 	html mdlButton
-		class:
-			((aDate = Date today and: [ aDate ~= calendar currentDate ])
-				ifTrue: [ 'mdl-color-text--primary' ]);
-		class:
-			(aDate = calendar currentDate
-				ifTrue: [ 'mdl-color-text--primary-contrast mdl-color--primary' ]);
-		class:
-			(aDate month = calendar currentDate month
-				ifFalse: [ 'disabled' ]);
+		class: 'mdl-color-text--primary' if: (aDate = Date today and: [ aDate ~= calendar currentDate ]);
+		class: 'mdl-color-text--primary-contrast mdl-color--primary' if: aDate = calendar currentDate;
+		class: 'disabled' if: aDate month ~= calendar currentDate month;
 		rippleEffect;
 		icon;
-		onClick: (self scriptUpdateDate: aDate on: html);
+		onClick: (self jsUpdateDate: aDate on: html);
 		with: aDate dayOfMonth greaseString

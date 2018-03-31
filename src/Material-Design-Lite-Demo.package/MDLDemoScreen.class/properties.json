@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/31/2018 01:37",
+	"super" : "MDLScreen",
+	"category" : "Material-Design-Lite-Demo-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLDemoScreen",
+	"type" : "normal"
+}

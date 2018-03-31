@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/31/2018 01:51",
+	"super" : "MDLExampleComponentWithRightPanel",
+	"category" : "Material-Design-Lite-Demo-Utils",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLExampleComponentWithRightPanelFolded",
+	"type" : "normal"
+}

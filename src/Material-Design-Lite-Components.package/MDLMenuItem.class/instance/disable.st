@@ -1,3 +1,3 @@
-as yet unclassified
+options
 disable
 	self attributeAt: 'disabled' put: 'true'

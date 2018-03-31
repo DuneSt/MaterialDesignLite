@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "OlivierAuverlot 7/23/2015 09:01",
+	"commentStamp" : "CyrilFerlicot 3/30/2018 17:20",
 	"super" : "WACheckboxTag",
-	"category" : "Material-Design-Lite-Components-IconToggle",
+	"category" : "Material-Design-Lite-Components-Forms",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/31/2018 01:24",
+	"super" : "MDLDemoScreen",
+	"category" : "Material-Design-Lite-Demo-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLWidgetDemo",
+	"type" : "normal"
+}

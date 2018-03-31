@@ -1,3 +1,0 @@
-private
-monthesNames
-	^ Date monthNames

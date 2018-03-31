@@ -4,11 +4,11 @@ ajaxDeleteCallback: aNiladicValuable successHook: aString
 		addDeleteWithAppendBlock: [ :html | 
 			html mdlIcon
 				onClick:
-						(canvas jQuery ajax
-								callback: aNiladicValuable;
-								context: (JSStream on: 'this');
-								onSuccess: '$(this).parent().remove();' , aString;
-								onError: 'location.reload()');
+					(canvas jQuery ajax
+						callback: aNiladicValuable;
+						context: 'this' js;
+						onSuccess: '$(this).parent().remove();' , aString;
+						onError: 'location.reload()');
 				class: #'mdl-chip__action';
 				with: [ html mdlIcon: #cancel ] ]
 		callback: aNiladicValuable

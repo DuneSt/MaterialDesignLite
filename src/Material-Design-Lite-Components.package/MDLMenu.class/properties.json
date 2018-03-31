@@ -1,7 +1,7 @@
 {
-	"commentStamp" : "KevinLanvin 7/22/2015 17:14",
+	"commentStamp" : "CyrilFerlicot 3/30/2018 17:15",
 	"super" : "WAUnorderedListTag",
-	"category" : "Material-Design-Lite-Components-Buttons",
+	"category" : "Material-Design-Lite-Components-Nav",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

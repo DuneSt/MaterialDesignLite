@@ -1,1 +1,4 @@
-I'm a Card Subtitle
+Description
+--------------------
+
+I am a brush to create a subtitle to a card.

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/30/2018 17:04",
+	"super" : "MDLCardInnerDiv",
+	"category" : "Material-Design-Lite-Components-Cards",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLCardTitleContainer",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "CyrilFerlicot 3/30/2018 16:25",
+	"super" : "WAComponent",
+	"category" : "Material-Design-Lite-Widgets",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"iconName"
+	],
+	"name" : "MDLIconComponent",
+	"type" : "normal"
+}
