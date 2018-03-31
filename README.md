@@ -57,7 +57,7 @@ To add MaterialDesignLite Seaside to your baseline just add this:
     	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:master/src' ]
 ```
 
-Note that you can replace the #master by another branch as #development or a tag as #v1.0.0.
+Note that you can replace the #master by another branch as #development or a tag as #v1.0.0, #v1.? or #v1.2.? .
 
 ## Getting started
 
@@ -112,9 +112,7 @@ You can find the possible colors into the class MDLColor class.
 
 ## Examples
 
-You can find multiple examples when the application will be installed at the url: [http://localhost:8080/MDLComponentsDemoApplication](http://localhost:8080/MDLComponentsDemoApplication)
-
-/!\ In the current development branch the demo changed and is now at [http://localhost:8080/MDLDemo](http://localhost:8080/MDLDemo)
+You can find multiple examples when the application will be installed at the url: [http://localhost:8080/MDLDemo](http://localhost:8080/MDLDemo)
 
 When you install in a plain Pharo image you need to start the seaside server first by opening `World menu > Tools > Seaside Control Panel` and adding and starting an appropropriate `ZnZincServerAdaptor`. If you do not use port 8080, change the port in the URL.
 
