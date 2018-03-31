@@ -53,6 +53,7 @@
 
 ## Infrastructure
 
+* **Move to github's seaside repository instead of the SmalltalkHub one** ([4a357a6](https://github.com/DuneSt/MaterialDesignLite/commit/4a357a6258ad9dff1d4d712f5f8ad3d332fa504d#diff-7080a63bcb9fb44414421f7eb51b11b3))
 * **Move the CSS to SASS** ([7176646](https://github.com/DuneSt/MaterialDesignLite/commit/717664681b55de93e9ad9cc4de5d44207f954e91))
 * **Add branch and version management description de README.md and CONTRIBUTING.md** ([ba968ba](https://github.com/DuneSt/MaterialDesignLite/commit/ba968ba4cce766df6d24f8e960e6f262feb26816))
 * **Add Pharo versions supported in the Readme** ([09072f8](https://github.com/DuneSt/MaterialDesignLite/commit/09072f8973c9b18af439de25cfba9be95001575b))
