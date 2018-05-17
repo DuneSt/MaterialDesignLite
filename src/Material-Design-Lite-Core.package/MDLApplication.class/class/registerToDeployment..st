@@ -1,10 +1,7 @@
 instance creation
 registerToDeployment: aName
-	| app |
-	WAAdmin applicationDefaults removeParent: WADevelopmentConfiguration instance.
-	app := WAAdmin register: self asApplicationAt: aName.
-	app
+	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].
+	^ (WAAdmin register: self asApplicationAt: aName)
 		addLibrary: JQDeploymentLibrary;
-		addLibrary: JQUiDeploymentLibrary;
-		addLibrary: MDLLibrary.
-	^ app
+		addLibrary: MDLLibrary;
+		yourself
