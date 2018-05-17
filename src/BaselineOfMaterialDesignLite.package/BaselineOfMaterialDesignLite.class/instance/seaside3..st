@@ -2,4 +2,6 @@ dependencies
 seaside3: spec
 	spec
 		baseline: 'Seaside3'
-		with: [ spec repository: 'github://SeasideSt/Seaside/repository' ]
+		with: [ spec
+				loads: #('Core' 'JQuery');
+				repository: 'github://SeasideSt/Seaside/repository' ]
