@@ -1,3 +1,3 @@
-brick-properties
+options
 border
 	self class: 'mdl-card--border'

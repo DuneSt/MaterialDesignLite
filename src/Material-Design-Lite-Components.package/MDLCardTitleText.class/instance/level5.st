@@ -1,3 +1,3 @@
 convenience
 level5
-	level := 5
+	self level: 5

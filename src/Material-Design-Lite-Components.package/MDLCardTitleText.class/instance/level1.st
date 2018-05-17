@@ -1,3 +1,3 @@
 convenience
 level1
-	level := 1
+	self level: 1

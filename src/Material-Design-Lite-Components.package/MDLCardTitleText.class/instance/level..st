@@ -1,3 +1,3 @@
 accessing
 level: anInteger
-	level := (anInteger max: 1) min: 6
+	level := anInteger min: 6 max: 1
