@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "MDLBadgeTest",
+	"name" : "MDLIconBadgeTest",
 	"type" : "normal"
 }
