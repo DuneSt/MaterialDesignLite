@@ -1,5 +1,6 @@
 demos
-renderColoredButtonCodeOn: html
+renderRaisedColoredButtonCodeOn: html
 	html mdlButton
+		raised;
 		primaryColor;
 		with: 'Button'

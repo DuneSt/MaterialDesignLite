@@ -1,6 +1,7 @@
 demos
-renderColoredButtonCodeOn: html
+renderRaisedColoredAccentButtonCodeOn: html
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
-		primaryColor;
+		raised;
+		accentColor;
 		with: 'Button'
