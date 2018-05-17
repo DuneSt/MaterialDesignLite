@@ -6,6 +6,9 @@ Master: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?bra
 #### Windows builds
 Master: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni/branch/master?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite/branch/master) | Latest commit: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite)
 
+Coverage:
+
+[![Coverage Status](https://coveralls.io/repos/github/DuneSt/MaterialDesignLite/badge.svg)](https://coveralls.io/github/DuneSt/MaterialDesignLite)
 
 This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help [Seaside](https://github.com/SeasideSt/Seaside)) developers in creating fast web application with flat design. For a tutorial on Seaside check [http://book.seaside.st](http://book.seaside.st).
 
