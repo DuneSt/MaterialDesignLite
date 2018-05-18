@@ -8,7 +8,7 @@ SmalltalkCISpec {
   ],  
   #testing : {
     #coverage : {
-      #packages : [ 'Material-Design-Lite.*' ]
+      #packages : [ 'Material-Design-Lite-Components', 'Material-Design-Lite-Core', 'Material-Design-Lite-Extensions', 'Material-Design-Lite-Widgets' ]
     }
   }
 }
