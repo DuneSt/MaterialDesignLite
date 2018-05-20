@@ -18,7 +18,11 @@ renderScreenContentOn: html
 		class: 'section-title';
 		id: 'grid-layout';
 		with: 'GRID'.
-	self render: self gridLayout fullWidth: true on: html.
+	self
+		render: self gridLayout fullWidth: true on: html;
+		render: self hideDesktopCells fullWidth: true on: html;
+		render: self hideTabletCells fullWidth: true on: html;
+		render: self hidePhoneCells fullWidth: true on: html.
 	html heading level5
 		class: 'section-title';
 		id: 'tabs-layout';
