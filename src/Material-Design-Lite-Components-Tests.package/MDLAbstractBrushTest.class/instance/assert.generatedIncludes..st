@@ -1,3 +1,6 @@
 asserting
 assert: aBlock generatedIncludes: aString
-	self executeWithMockContext: [ self assert: ((WAHtmlCanvas builder render: aBlock) includesSubstring: aString) ]
+	self
+		executeWithMockContext: [ | actual |
+			actual := WAHtmlCanvas builder render: aBlock.
+			self assert: (actual includesSubstring: aString) description: actual , ' should includes ' , aString ]

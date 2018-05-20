@@ -1,4 +1,4 @@
-accessing
+options
 hexColor: aString
 	self
 		style:
