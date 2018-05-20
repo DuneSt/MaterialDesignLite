@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "CyrilFerlicot 3/30/2018 17:21",
 	"super" : "MDLDivTag",
-	"category" : "Material-Design-Lite-Components-Core",
+	"category" : "Material-Design-Lite-Components-Loading",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

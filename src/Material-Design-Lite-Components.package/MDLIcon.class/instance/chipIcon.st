@@ -1,3 +1,3 @@
-list api
+options
 chipIcon
 	self beChipDecoration

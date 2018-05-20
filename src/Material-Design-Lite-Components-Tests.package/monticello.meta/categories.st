@@ -6,4 +6,7 @@ SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Card'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Chips'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Layouts'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Manifest'!
-temOrganization addCategory: #'Material-Design-Lite-Components-Tests-Manifest'!
+mOrganization addCategory: #'Material-Design-Lite-Components-Tests-Footer'!
+SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Forms'!
+SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Layouts'!
+SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Manifest'!

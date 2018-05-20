@@ -13,5 +13,5 @@ SystemOrganization addCategory: #'Material-Design-Lite-Components-Nav'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Snackbar'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tables'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tooltips'!
-stemOrganization addCategory: #'Material-Design-Lite-Components-Tables'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tooltips'!
+emOrganization addCategory: #'Material-Design-Lite-Components-Tooltips'!
