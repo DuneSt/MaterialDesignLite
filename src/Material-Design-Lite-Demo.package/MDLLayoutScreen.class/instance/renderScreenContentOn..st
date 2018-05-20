@@ -20,6 +20,7 @@ renderScreenContentOn: html
 		with: 'GRID'.
 	self
 		render: self gridLayout fullWidth: true on: html;
+		render: self cellOffset fullWidth: true on: html;
 		render: self cellPositions fullWidth: true on: html;
 		render: self hideDesktopCells fullWidth: true on: html;
 		render: self hideTabletCells fullWidth: true on: html;
