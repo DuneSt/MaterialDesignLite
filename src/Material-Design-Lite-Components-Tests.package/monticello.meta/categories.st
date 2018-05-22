@@ -12,3 +12,4 @@ SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Layouts'
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-List'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Manifest'!
 SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-Nav'!
+SystemOrganization addCategory: #'Material-Design-Lite-Components-Tests-loading'!
