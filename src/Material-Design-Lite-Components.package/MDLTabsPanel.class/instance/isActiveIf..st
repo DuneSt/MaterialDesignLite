@@ -1,3 +1,3 @@
 options
 isActiveIf: aBoolean
-	self class: 'is-active' if: aBoolean
+	aBoolean ifTrue: [ self isActive ]
