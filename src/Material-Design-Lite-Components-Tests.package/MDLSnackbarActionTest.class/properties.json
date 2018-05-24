@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractBrushTest",
+	"category" : "Material-Design-Lite-Components-Tests-Snackbar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLSnackbarActionTest",
+	"type" : "normal"
+}

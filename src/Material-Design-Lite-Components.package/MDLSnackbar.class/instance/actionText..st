@@ -1,3 +1,3 @@
 accessing
-actionText: anObject
-	actionText := anObject
+actionText: aString
+	actionText := aString
