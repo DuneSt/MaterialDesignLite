@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "Material-Design-Lite-Widgets-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list"
+	],
+	"name" : "MDLNestedListTest",
+	"type" : "normal"
+}

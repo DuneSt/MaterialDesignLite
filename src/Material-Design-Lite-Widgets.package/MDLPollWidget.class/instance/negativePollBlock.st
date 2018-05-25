@@ -1,3 +1,0 @@
-private
-negativePollBlock
-	^ [ poll increaseNegativeCount ]
