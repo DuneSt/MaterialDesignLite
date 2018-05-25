@@ -13,3 +13,4 @@ SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Tab'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Table'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Tests'!
 SystemOrganization addCategory: 'Material-Design-Lite-Widgets-Util'!
+e-Widgets-Util'!

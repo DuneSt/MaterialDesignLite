@@ -3,5 +3,7 @@
 	"traitcomposition" : "TWithRootDialogComponent",
 	"classtraitcomposition" : "TWithRootDialogComponent classTrait",
 	"category" : "Material-Design-Lite-Extensions-RootDialog",
-	"name" : "TRootDialogRenderer"
+	"classinstvars" : [ ],
+	"name" : "TRootDialogRenderer",
+	"instvars" : [ ]
 }
