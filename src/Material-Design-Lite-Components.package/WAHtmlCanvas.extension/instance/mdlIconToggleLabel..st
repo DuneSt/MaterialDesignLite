@@ -1,5 +1,5 @@
 *Material-Design-Lite-Components
 mdlIconToggleLabel: aText
-	^ (self brush: MDLIconToggleLabel new)
+	^ self mdlIconToggleLabel
 	with: aText;
 	yourself 

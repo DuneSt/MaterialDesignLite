@@ -1,3 +1,3 @@
-instance creation
+initialization
 for: anId
 	self attributeAt: 'for' put: anId

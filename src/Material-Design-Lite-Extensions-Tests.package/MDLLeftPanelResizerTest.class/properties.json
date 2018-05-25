@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractSeasideTestCase",
+	"category" : "Material-Design-Lite-Extensions-Tests-Panels",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLLeftPanelResizerTest",
+	"type" : "normal"
+}

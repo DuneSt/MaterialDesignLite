@@ -5,11 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"links",
-		"title",
-		"beCollapsible"
-	],
+	"instvars" : [ ],
 	"name" : "MDLCardTag",
 	"type" : "normal"
 }

@@ -1,0 +1,3 @@
+tests
+testBorder
+	self subclassResponsibility

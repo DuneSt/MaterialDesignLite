@@ -5,5 +5,10 @@ SmalltalkCISpec {
       #directory : 'src',
       #platforms : [ #pharo ]
     }
-  ]
+  ],  
+  #testing : {
+    #coverage : {
+      #packages : [ 'Material-Design-Lite-Components', 'Material-Design-Lite-Core', 'Material-Design-Lite-Extensions', 'Material-Design-Lite-Widgets' ]
+    }
+  }
 }

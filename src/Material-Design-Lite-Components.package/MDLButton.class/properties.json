@@ -1,13 +1,15 @@
 {
-	"commentStamp" : "CyrilFerlicot 3/30/2018 16:01",
-	"super" : "WAButtonTag",
-	"category" : "Material-Design-Lite-Components-Buttons",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TMDLButton classTrait",
 	"classvars" : [ ],
 	"instvars" : [
 		"tag"
 	],
 	"name" : "MDLButton",
-	"type" : "normal"
+	"commentStamp" : "CyrilFerlicot 3/30/2018 16:01",
+	"super" : "WAButtonTag",
+	"traitcomposition" : "TMDLButton",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Material-Design-Lite-Components-Buttons"
 }

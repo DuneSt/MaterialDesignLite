@@ -1,3 +1,3 @@
 accessing
-poll: anObject
-	poll := anObject
+poll: aPoll
+	model := aPoll

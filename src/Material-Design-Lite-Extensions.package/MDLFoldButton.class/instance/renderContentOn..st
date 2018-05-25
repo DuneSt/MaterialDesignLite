@@ -16,4 +16,4 @@ renderContentOn: html
 		for: html lastId;
 		with: 'Toggle right panel'.
 	self isFolded
-		ifTrue: [ html document addLoadScript: ('document.getElementById("' , self divId allButFirst , '").style.width="0";' , self onCompleteScript) js ]
+		ifTrue: [ html document addLoadScript: ('document.getElementById(''' , self divId allButFirst , ''').style.width=''0'';' , self onCompleteScript) js ]

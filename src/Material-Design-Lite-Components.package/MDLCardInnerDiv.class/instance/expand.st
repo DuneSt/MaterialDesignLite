@@ -1,3 +1,3 @@
-brick-properties
+options
 expand
 	self class: 'mdl-card--expand'

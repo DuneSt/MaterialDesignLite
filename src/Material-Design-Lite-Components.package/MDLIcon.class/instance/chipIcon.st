@@ -1,3 +1,3 @@
-list api
+options
 chipIcon
-	self class: #'mdl-chip__contact'
+	self beChipDecoration

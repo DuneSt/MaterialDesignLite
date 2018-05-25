@@ -2,7 +2,7 @@ public api
 ajaxDeleteCallback: aNiladicValuable successHook: aString
 	self
 		addDeleteWithAppendBlock: [ :html | 
-			html mdlIcon
+			html span
 				onClick:
 					(canvas jQuery ajax
 						callback: aNiladicValuable;

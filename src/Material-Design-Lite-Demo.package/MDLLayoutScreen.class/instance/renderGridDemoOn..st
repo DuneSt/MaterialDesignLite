@@ -1,7 +1,8 @@
 demos
 renderGridDemoOn: html
-	html
-		mdlGrid: [ 1 to: 12 do: [ :i | 
+	html mdlGrid
+		shadow: 2;
+		with: [ 1 to: 12 do: [ :i | 
 				html mdlCell
 					class: 'grid-cell-demo';
 					size: 1;
@@ -31,4 +32,13 @@ renderGridDemoOn: html
 				class: 'grid-cell-demo';
 				size: 2;
 				phoneSize: 4;
-				with: '2 (4 phone)' ]
+				with: '2 (4 phone)' ].
+	html break.
+	html mdlGrid
+		noSpacing;
+		shadow: 2;
+		with: [ 1 to: 12 do: [ :i | 
+				html mdlCell
+					class: 'grid-cell-demo';
+					size: 1;
+					with: 1 ] ]
