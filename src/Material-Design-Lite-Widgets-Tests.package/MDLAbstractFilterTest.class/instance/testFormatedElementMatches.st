@@ -1,0 +1,3 @@
+tests
+testFormatedElementMatches
+	self subclassResponsibility
