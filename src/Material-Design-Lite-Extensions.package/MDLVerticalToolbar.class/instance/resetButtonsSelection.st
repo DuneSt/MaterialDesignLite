@@ -1,3 +1,3 @@
 action
-resetButtonSelection
+resetButtonsSelection
 	self buttons do: [ :each | each isSelected: false ]
