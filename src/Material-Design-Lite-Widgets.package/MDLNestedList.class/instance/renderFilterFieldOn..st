@@ -1,7 +1,7 @@
 researchField
 renderFilterFieldOn: html
-	self displayResearchField
-		ifFalse: [ ^ self ].
+	self displayResearchField ifFalse: [ ^ self ].
+	
 	html div
 		class: #listResearchField;
 		with: [ html
