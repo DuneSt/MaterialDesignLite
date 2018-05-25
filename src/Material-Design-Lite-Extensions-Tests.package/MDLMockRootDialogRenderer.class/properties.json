@@ -1,0 +1,15 @@
+{
+	"classtraitcomposition" : "TRootDialogRenderer classTrait",
+	"classvars" : [ ],
+	"instvars" : [
+		"buttons"
+	],
+	"name" : "MDLMockRootDialogRenderer",
+	"commentStamp" : "",
+	"super" : "WAComponent",
+	"traitcomposition" : "TRootDialogRenderer",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Material-Design-Lite-Extensions-Tests"
+}

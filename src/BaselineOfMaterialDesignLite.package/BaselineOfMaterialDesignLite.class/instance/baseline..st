@@ -21,7 +21,8 @@ baseline: spec
 				package: 'Material-Design-Lite-Widgets' with: [ spec requires: #('Material-Design-Lite-Components') ];
 				package: 'Material-Design-Lite-Widgets-Tests' with: [ spec requires: #('Material-Design-Lite-Widgets') ];
 				package: 'Material-Design-Lite-Utils' with: [ spec requires: #('Seaside3' 'FileLibraryHelper') ];
-				package: 'Material-Design-Lite-Extensions' with: [ spec requires: #('Material-Design-Lite-Utils') ].
+				package: 'Material-Design-Lite-Extensions' with: [ spec requires: #('Material-Design-Lite-Utils') ];
+				package: 'Material-Design-Lite-Extensions-Tests' with: [ spec requires: #('Material-Design-Lite-Extensions') ].
 				
 			"Groups"
 			spec
@@ -32,4 +33,4 @@ baseline: spec
 				group: 'core' with: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' 'Material-Design-Lite-Core' 'Material-Design-Lite-Utils');
 				group: 'default' with: #('core' 'tests' 'demo');
 				group: 'demo' with: #('Material-Design-Lite-Demo');
-				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests') ]
+				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests' 'Material-Design-Lite-Extensions-Tests') ]
