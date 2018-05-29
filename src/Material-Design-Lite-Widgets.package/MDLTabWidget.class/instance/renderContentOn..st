@@ -1,17 +1,20 @@
 rendering
 renderContentOn: html
-	html
-		mdlTabs: [ html
+	self ensureId: html.
+	html mdlTabs
+		id: self id;
+		with: [ | tabIds |
+			tabIds := Dictionary new.
+			html
 				mdlTabBar: [ tabs
-						keysAndValuesDo: [ :aString :aDictionary | 
-							aDictionary at: #id put: html nextId.
+						keysAndValuesDo: [ :label :tabContent | 
 							html mdlTab
-								url: '#' , (aDictionary at: #id);
-								isActiveIf: (tabs indexOfKey: aString) = 1;
-								with: aString ] ].
+								url: '#' , (tabIds at: tabContent ifAbsentPut: [ html nextId ]);
+								isActiveIf: (tabs indexOfKey: label) = 1;
+								with: label ] ].
 			tabs
-				keysAndValuesDo: [ :aString :aDictionary | 
+				keysAndValuesDo: [ :label :tabContent | 
 					html mdlTabsPanel
-						id: (aDictionary at: #id);
-						isActiveIf: (tabs indexOfKey: aString) = 1;
-						with: (aDictionary at: #object) ] ]
+						id: (tabIds at: tabContent);
+						isActiveIf: (tabs indexOfKey: label) = 1;
+						with: tabContent ] ]
