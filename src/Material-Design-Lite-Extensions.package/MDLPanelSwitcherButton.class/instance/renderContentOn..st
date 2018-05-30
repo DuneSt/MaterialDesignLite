@@ -16,6 +16,6 @@ renderContentOn: html
 									self owner resetButtonsSelection.
 									self select.
 									self actionBlock value: r ];
-								onComplete: self onCompleteJs);
+								onComplete: self jsOnComplete);
 				with: self text ].
 	self renderTooltipFor: html lastId on: html
