@@ -1,3 +1,3 @@
-as yet unclassified
+adding/removing
 removeScreen: aScreen
 	^ self screens remove: aScreen 
