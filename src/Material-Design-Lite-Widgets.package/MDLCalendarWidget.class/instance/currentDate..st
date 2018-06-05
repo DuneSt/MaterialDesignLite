@@ -1,3 +1,3 @@
 accessing
 currentDate: aDate
-	calendar currentDate: aDate
+	self calendar currentDate: aDate

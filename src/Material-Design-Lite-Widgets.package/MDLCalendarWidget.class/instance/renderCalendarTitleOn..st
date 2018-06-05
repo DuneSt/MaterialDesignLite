@@ -5,4 +5,4 @@ renderCalendarTitleOn: html
 		class: 'mdl-calendar__title mdl-color-text--primary-contrast';
 		with: [ html heading
 				level3;
-				with: self calendarCurrentDateString ]
+				with: self calendar printDateForHeader ]

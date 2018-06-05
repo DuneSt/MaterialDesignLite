@@ -10,9 +10,6 @@ calendarSass
     font-size: 14px
     margin: 10px
 
-  .mdl-calendar__mini-day
-    color: rgba(0,0,0,0.8)
-
   .disabled
     color: rgba(0, 0, 0, 0.4)
 

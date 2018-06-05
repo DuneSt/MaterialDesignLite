@@ -2,5 +2,5 @@ javascript
 jsUpdateDate: aDate on: html
 	^ html jQuery ajax
 		callback: [ callback value: aDate.
-			self updateCalendarDayWith: aDate ];
+			self currentDate: aDate ];
 		onComplete: (self jsOnCompleteScriptOn: html)

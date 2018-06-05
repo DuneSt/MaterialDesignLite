@@ -1,3 +1,3 @@
 accessing
-firstDayOfWeekIndex: anObject
-	firstDayOfWeekIndex := anObject
+firstDayOfWeekIndex: anInteger
+	firstDayOfWeekIndex := anInteger

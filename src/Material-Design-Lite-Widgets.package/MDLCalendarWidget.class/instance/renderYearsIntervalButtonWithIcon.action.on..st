@@ -9,7 +9,7 @@ renderYearsIntervalButtonWithIcon: anIcon action: aSymbol on: html
 					(html jQuery ajax
 						callback: [ self perform: aSymbol ];
 						onComplete:
-							(((html jQuery id: calendarId) find: '.mdl-card__supporting-text') load
+							(((html jQuery id: self id) find: '.mdl-card__supporting-text') load
 								html: [ :ajaxHtml | self renderYearsOn: ajaxHtml ]));
 				icon;
 				rippleEffect;

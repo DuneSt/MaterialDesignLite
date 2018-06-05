@@ -1,5 +1,6 @@
 rendering
 renderContentOn: html
+	self ensureId: html.
 	html div
-		id: (calendarId := html nextId);
+		id: self id;
 		with: [ self renderCalendarOn: html ]
