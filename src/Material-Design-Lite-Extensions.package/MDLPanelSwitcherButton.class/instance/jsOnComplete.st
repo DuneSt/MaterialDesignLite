@@ -1,3 +1,3 @@
 javascript
 jsOnComplete
-	^ self onCompleteJs ifNotNil: #js
+	^  self onCompleteJs ifNotNil: [ :script | script js ]
