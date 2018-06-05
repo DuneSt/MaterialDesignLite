@@ -7,9 +7,6 @@ renderMonthesOn: html
 					html mdlCell
 						class: 'month-cell';
 						class: 'active' if: aString = self currentDate monthName;
-						onClick:
-							(html jQuery ajax
-								callback: [ self calendar goToMonth: (Month indexOfMonth: aString) ];
-								onComplete: ((html jQuery id: self id) load html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
+						onClick: (self jsGoToMonth: (Month indexOfMonth: aString) on: html);
 						desktopSize: 4;
 						with: aString ] ]

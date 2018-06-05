@@ -5,6 +5,7 @@ calendarSass
 .mdl-calendar
   padding: 0
   margin: 0
+  min-width: 330px
 
   .mdl-button--icon
     font-size: 14px
@@ -26,7 +27,7 @@ calendarSass
   button.disabled
     color: rgba(0, 0, 0, 0.4)
 
-.mdl-calendar-widget .mdl-cell.year-cell, .mdl-cell.month-cell
+.mdl-cell.year-cell, .mdl-cell.month-cell
   cursor: pointer
   border-radius: 10px
   background-color: rgba(0, 0, 0, 0.2)
