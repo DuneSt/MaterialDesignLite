@@ -1,5 +1,5 @@
 *Material-Design-Lite-Components
-mdlChipContact: aBlock.
+mdlChipContact: aBlock
 	^ self mdlChipContact
 		with: aBlock;
 		yourself
