@@ -1,3 +1,3 @@
 accessing
 cells: aCollection
-	element := aCollection
+	cells := aCollection

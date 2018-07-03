@@ -1,3 +1,3 @@
 options
 hidden
-	self hyde: true
+	self hide: true
