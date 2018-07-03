@@ -1,7 +1,7 @@
 rendering
-renderButtonOn: html withId: buttonId
+renderButtonOn: html
 	html div
-		id: 'menuButton' , buttonId;
+		id: self id;
 		class: 'menuButtonWidgetButton mdl-button mdl-js-button menuButtonWidgetButton';
 		disabled: self objectsPossibilities isEmpty;
 		with: [ self selectedObject

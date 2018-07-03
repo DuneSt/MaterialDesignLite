@@ -8,8 +8,8 @@ SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Header'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-List'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Loading'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Manifest'!
+SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Menu'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Pagination'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Poll'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Tab'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Table'!
-SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Util'!
