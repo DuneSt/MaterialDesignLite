@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "CyrilFerlicot 8/27/2016 19:45",
-	"super" : "BaselineOf",
 	"category" : "BaselineOfMaterialDesignLite",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "CyrilFerlicot 8/27/2016 19:45",
+	"instvars" : [
+		 ],
 	"name" : "BaselineOfMaterialDesignLite",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }

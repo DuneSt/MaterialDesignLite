@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #BaselineOfMaterialDesignLite!
+SystemOrganization addCategory: #'BaselineOfMaterialDesignLite'!
