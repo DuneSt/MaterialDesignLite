@@ -1,3 +1,3 @@
-state handling
-defaultState
+accessing
+defaultNextState
 	^ MDLSortableTableHeaderElementUnsorted

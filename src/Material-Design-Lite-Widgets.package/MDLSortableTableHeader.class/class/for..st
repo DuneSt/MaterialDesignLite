@@ -1,3 +1,3 @@
 instance creation
 for: element
-	^ self new element: element
+	^ self new cells: element
