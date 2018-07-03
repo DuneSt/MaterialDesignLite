@@ -34,4 +34,15 @@ baseline: spec
 				group: 'core' with: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' 'Material-Design-Lite-Core' 'Material-Design-Lite-Utils');
 				group: 'default' with: #('core' 'tests' 'demo');
 				group: 'demo' with: #('Material-Design-Lite-Demo');
-				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests' 'Material-Design-Lite-Extensions-Tests' 'Material-Design-Lite-Core-Tests') ]
+				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests' 'Material-Design-Lite-Extensions-Tests' 'Material-Design-Lite-Core-Tests') ].
+	spec 
+    for: #'gemstone'
+    do: [   spec
+        package: 'PackageManifest'
+        with: [ spec repository:  'http://smalltalkhub.com/mc/pdebruic/PackageManifest/main' ].
+      spec
+        package: 'OrderedDictionary'
+        with: [ spec repository: 'http://smalltalkhub.com/mc/pdebruic/OrderedDictionary/main' ].
+      spec
+        package: 'Material-Design-Lite-Components'
+        with: [ spec requires: #('PackageManifest' 'OrderedDictionary') ] ] 

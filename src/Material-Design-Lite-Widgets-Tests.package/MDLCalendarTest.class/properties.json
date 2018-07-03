@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "TestCase",
 	"category" : "Material-Design-Lite-Widgets-Tests-Calendar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"calendar"
-	],
+		"calendar" ],
 	"name" : "MDLCalendarTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

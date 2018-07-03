@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "MDLAbstractSeasideTestCase",
 	"category" : "Material-Design-Lite-Widgets-Tests-Tab",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "MDLTabsWidgetTest",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MDLAbstractSeasideTestCase",
+	"type" : "normal" }
