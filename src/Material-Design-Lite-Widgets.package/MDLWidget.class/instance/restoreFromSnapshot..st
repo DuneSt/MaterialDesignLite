@@ -1,4 +1,4 @@
-as yet unclassified
+actions
 restoreFromSnapshot: anObject
 	| oldId |
 	oldId := self id.

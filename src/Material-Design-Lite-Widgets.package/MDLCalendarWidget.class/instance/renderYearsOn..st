@@ -1,7 +1,7 @@
 private-rendering
 renderYearsOn: html
 	html mdlGrid
-		style: 'text-align: center';
+		mdlTypographyTextCenter;
 		with: [ self renderYearsHeaderOn: html.
 			self calendar yearsInterval
 				do: [ :aYear | 

@@ -1,7 +1,7 @@
 rendering
-renderMenuOn: html withId: buttonId
+renderMenuOn: html
 	html mdlMenu
 		bottomLeft;
-		for: 'menuButton' , buttonId;
+		for: self id;
 		class: 'menuButtonWidgetMenu';
 		with: [ self objectsPossibilitiesWithLabel do: [ :anAssociation | self renderMenuItemOn: html withAssociation: anAssociation ] ]

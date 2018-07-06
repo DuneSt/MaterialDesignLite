@@ -1,7 +1,7 @@
 demos
 renderCalendarOn: html
 	html div
-		style: 'background-color: white;';
+		style: 'background-color: white;border: 1px grey solid;';
 		with:
 			(MDLCalendarWidget new
 				callback: [ :day | selectedDay := day ];

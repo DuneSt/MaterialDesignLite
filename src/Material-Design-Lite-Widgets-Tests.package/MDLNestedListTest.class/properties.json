@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "TestCase",
+	"super" : "MDLAbstractSeasideTestCase",
 	"category" : "Material-Design-Lite-Widgets-Tests-List",
 	"classinstvars" : [ ],
 	"pools" : [ ],

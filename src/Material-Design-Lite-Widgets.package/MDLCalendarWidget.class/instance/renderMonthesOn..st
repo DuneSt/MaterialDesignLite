@@ -1,7 +1,7 @@
 private-rendering
 renderMonthesOn: html
 	html mdlGrid
-		style: 'text-align: center';
+		mdlTypographyTextCenter;
 		with: [ Date monthNames
 				do: [ :aString | 
 					html mdlCell

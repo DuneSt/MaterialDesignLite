@@ -6,9 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"element",
 		"currentState",
-		"unsortedState"
+		"unsortedState",
+		"cells"
 	],
 	"name" : "MDLSortableTableHeader",
 	"type" : "normal"
