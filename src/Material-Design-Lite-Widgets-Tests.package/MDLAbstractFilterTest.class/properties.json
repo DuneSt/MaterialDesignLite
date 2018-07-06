@@ -1,14 +1,11 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Tests-List",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MDLAbstractFilterTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Tests-List",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLAbstractFilterTest",
+	"type" : "normal"
+}

@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Tests-List",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"list" ],
-	"name" : "MDLNestedListTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Tests-List",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"list"
+	],
+	"name" : "MDLNestedListTest",
+	"type" : "normal"
+}

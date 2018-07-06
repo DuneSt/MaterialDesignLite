@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Tests-Calendar",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"calendar" ],
-	"name" : "MDLCalendarWidgetTest",
-	"pools" : [
-		 ],
 	"super" : "MDLAbstractSeasideTestCase",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Tests-Calendar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"calendar"
+	],
+	"name" : "MDLCalendarWidgetTest",
+	"type" : "normal"
+}

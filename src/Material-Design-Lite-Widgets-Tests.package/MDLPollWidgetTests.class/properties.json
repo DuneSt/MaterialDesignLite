@@ -1,14 +1,13 @@
 {
-	"category" : "Material-Design-Lite-Widgets-Tests-Poll",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"pollWidget" ],
-	"name" : "MDLPollWidgetTests",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "Material-Design-Lite-Widgets-Tests-Poll",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pollWidget"
+	],
+	"name" : "MDLPollWidgetTests",
+	"type" : "normal"
+}
