@@ -30,6 +30,10 @@ mdlDemoCss
 		,
 			''') no-repeat top left/contain;
 }
+
+.mdl-demo-warning{
+    color: rgba(255,152,0 ,1);
+}
 	
 .mdl-doc{
     width: 100%;

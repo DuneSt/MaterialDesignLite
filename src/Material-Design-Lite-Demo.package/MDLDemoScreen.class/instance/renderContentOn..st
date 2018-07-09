@@ -9,6 +9,7 @@ renderContentOn: html
 						with: [ html heading
 								level3;
 								with: self title.
-							html paragraph: self description ].
+							html paragraph: self description.
+							self renderWarningMessageOn: html ].
 					self renderScreenContentOn: html ]
 				size: 12 ]

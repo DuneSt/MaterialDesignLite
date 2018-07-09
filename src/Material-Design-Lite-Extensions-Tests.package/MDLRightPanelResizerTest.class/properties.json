@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "MDLRightanelResizerTest",
+	"name" : "MDLRightPanelResizerTest",
 	"type" : "normal"
 }
