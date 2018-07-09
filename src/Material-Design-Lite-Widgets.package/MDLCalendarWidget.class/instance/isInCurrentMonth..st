@@ -1,3 +1,3 @@
 testing
 isInCurrentMonth: aDate
-	^ aDate month = self currentDate month
+	^ aDate asMonth = self currentDate asMonth
