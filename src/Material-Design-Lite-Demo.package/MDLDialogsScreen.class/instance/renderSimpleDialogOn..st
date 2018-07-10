@@ -2,6 +2,7 @@ demos
 renderSimpleDialogOn: html
 	html mdlButton
 		id: html nextId;
+		bePush;
 		raised;
 		rippleEffect;
 		with: 'Show second dialog'.
