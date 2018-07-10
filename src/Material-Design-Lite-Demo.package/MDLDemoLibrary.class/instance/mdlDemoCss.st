@@ -82,6 +82,7 @@ mdlDemoCss
     display: inline-table;
     margin-right: 24px;
     line-height: 2em;
+    min-width: 100px;
 }
 
 .mdl-doc dl dd {
@@ -466,5 +467,19 @@ code.nosupport::before {
 
 .nestedList.demo .listContainer a .item { 
     line-height: 60px;
+}
+
+.nestedList .listContent .listContainer .expList li:nth-child(2n) {
+    background-color: rgba(245,245,245 ,1);
+}
+
+.nestedList .listContent .listContainer .expList li .mdl-list-icon { 
+    flex-grow: 0;
+    width: 46px;
+    padding: 0 10px 0 0;
+}
+
+.nestedList .listContent .listContainer .expList li .mdl-list-icon img { 
+    margin: 0;
 }
 '
