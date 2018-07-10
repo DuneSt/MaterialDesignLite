@@ -1,3 +1,4 @@
 *Material-Design-Lite-Components
 mdlMultilineTextField
-	^ self brush: MDLMultilineTextField new 
+	self deprecated: 'Uses #mdlTextArea' transformWith: '`@receiver mdlMultilineTextField' -> '`@receiver mdlTextArea'.
+	^ self mdlTextArea

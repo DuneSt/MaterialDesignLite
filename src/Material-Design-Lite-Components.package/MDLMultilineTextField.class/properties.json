@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "CyrilFerlicot 3/30/2018 17:19",
-	"super" : "WATextAreaTag",
+	"super" : "MDLTextArea",
 	"category" : "Material-Design-Lite-Components-Forms",
 	"classinstvars" : [ ],
 	"pools" : [ ],
