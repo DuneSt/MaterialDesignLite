@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractSeasideTestCase",
+	"category" : "Material-Design-Lite-Widgets-Tests-Cards",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"card"
+	],
+	"name" : "MDLCardWidgetTests",
+	"type" : "normal"
+}

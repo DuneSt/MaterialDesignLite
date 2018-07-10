@@ -1,3 +1,15 @@
 adding
 accentColorTitle: aString class: anotherString
-	self title: aString class: 'mdl-color--accent mdl-color-text--accent-contrast ' , anotherString
+	| classes |
+	classes := String
+		streamContents: [ :stream | 
+			stream
+				nextPutAll: 'mdl-color--accent';
+				space;
+				nextPutAll: 'mdl-color-text--accent-contrast'.
+			anotherString
+				ifNotEmpty: [ :string | 
+					stream
+						space;
+						nextPutAll: string ] ].
+	self title: aString class: classes
