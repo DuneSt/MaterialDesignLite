@@ -9,3 +9,4 @@ SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Tests-Menu'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Tests-Poll'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Tests-Tab'!
 SystemOrganization addCategory: #'Material-Design-Lite-Widgets-Tests-Table'!
+ystemOrganization addCategory: #'Material-Design-Lite-Widgets-Tests-Table'!
