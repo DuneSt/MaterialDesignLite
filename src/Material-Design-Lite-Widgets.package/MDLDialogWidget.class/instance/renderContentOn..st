@@ -1,22 +1,22 @@
 rendering
 renderContentOn: html
-	| openButtonId closeButtonId |
-	closeButtonId := html nextId.
-	(html brush: buttonBrush)
-		id: (openButtonId := html nextId);
+	| closeButtonId |
+	self ensureId: html.
+	(html brush: self buttonBrush)
+		id: self id;
+		bePush;
 		raised;
 		rippleEffect;
-		with: buttonName.
-	(html brush: dialogBrush)
+		with: self buttonName.
+	(html brush: self dialogBrush)
 		id: html nextId;
-		openButtonId: openButtonId;
-		closeButtonId: closeButtonId;
-		with: [ 
-					title ifNotNil: [ html mdlDialogTitle: title ].
-					html mdlDialogContent: content.
-					html
-						mdlDialogActions: [ 
-							actions ifNotNil: [ html render: actions ].
-							html mdlButton
-								id: closeButtonId;
-								with: closeButtonName ] ]
+		openButtonId: self id;
+		closeButtonId: (closeButtonId := html nextId);
+		with: [ self title ifNotNil: [ :t | html mdlDialogTitle: t ].
+			html mdlDialogContent: self content.
+			html
+				mdlDialogActions: [ self actions ifNotNil: [ :acts | html render: acts ].
+					html mdlButton
+						id: closeButtonId;
+						bePush;
+						with: self closeButtonName ] ]

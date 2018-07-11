@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractSeasideTestCase",
+	"category" : "Material-Design-Lite-Widgets-Tests-Form",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"select"
+	],
+	"name" : "MDLSelectWidgetTests",
+	"type" : "normal"
+}
