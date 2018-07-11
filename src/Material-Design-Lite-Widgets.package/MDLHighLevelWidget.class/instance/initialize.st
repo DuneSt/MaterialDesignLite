@@ -1,4 +1,4 @@
 initialization
 initialize
 	super initialize.
-	properties := Dictionary new
+	properties := OrderedDictionary new
