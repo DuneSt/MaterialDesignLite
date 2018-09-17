@@ -2,7 +2,7 @@ baseline
 gemStone: spec
 	spec
 		for: #gemstone
-		do: [ spec baseline: 'OrderedDictionary' with: [ spec repository: 'github://GsDevKit/GsDevKit:v1.x.x/src' ].
+		do: [ spec baseline: 'OrderedDictionary' with: [ spec repository: 'github://GsDevKit/OrderedDictionary:v1.x.x/src' ].
 			spec
 				package: 'PackageManifest' with: [ spec repository: 'http://smalltalkhub.com/mc/pdebruic/PackageManifest/main' ];
 				package: 'Material-Design-Lite-GemStone' with: [ spec requires: 'Material-Design-Lite-Components' ];
