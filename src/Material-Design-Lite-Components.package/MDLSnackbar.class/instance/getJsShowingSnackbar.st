@@ -3,18 +3,18 @@ getJsShowingSnackbar
 	^ String
 		streamContents: [ :s | 
 			s
-				<< 'var snackbarContainer=document.querySelector("#';
-				<< self id;
-				<< '");var data={};data.message="';
-				<< (self message ifNil: [ '' ]);
-				<< '";data.timeout=';
-				<< self timeout asString;
-				<< $;.
+				nextPutAll: 'var snackbarContainer=document.querySelector("#';
+				nextPutAll: self id;
+				nextPutAll: '");var data={};data.message="';
+				nextPutAll: (self message ifNil: [ '' ]);
+				nextPutAll: '";data.timeout=';
+				nextPutAll: self timeout asString;
+				nextPut: $;.
 			action
 				ifNotNil: [ s
-						<< 'data.actionText="';
-						<< (self actionText ifNil: [ 'Action' ]);
-						<< '";var handler=function(event){';
-						<< self action;
-						<< '};data.actionHandler=handler;' ].
-			s << 'snackbarContainer.MaterialSnackbar.showSnackbar(data);' ]
+						nextPutAll: 'data.actionText="';
+						nextPutAll: (self actionText ifNil: [ 'Action' ]);
+						nextPutAll: '";var handler=function(event){';
+						nextPutAll: self action;
+						nextPutAll: '};data.actionHandler=handler;' ].
+			s nextPutAll: 'snackbarContainer.MaterialSnackbar.showSnackbar(data);' ]

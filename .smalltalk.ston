@@ -2,8 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'MaterialDesignLite',
-      #directory : 'src',
-      #platforms : [ #pharo ]
+      #directory : 'src'
     }
   ],  
   #testing : {

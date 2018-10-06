@@ -5,8 +5,8 @@ renderPagesInfoOn: html
 			(String
 				streamContents: [ :s | 
 					s
-						<< position;
-						<< ' - ';
-						<< self indexOfLastRowToShow;
-						<< '  of ';
-						<< rowsCache size ])
+						print: position;
+						nextPutAll: ' - ';
+						print: self indexOfLastRowToShow;
+						nextPutAll: ' of ';
+						print: rowsCache size ])
