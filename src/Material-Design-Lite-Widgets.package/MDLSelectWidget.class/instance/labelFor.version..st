@@ -2,9 +2,9 @@ labelMap - generation
 labelFor: anElem version: anInteger
 	^ String
 		streamContents: [ :s | 
-			s << (self labelFor: anElem).
+			s nextPutAll: (self labelFor: anElem).
 			anInteger = 0
-				ifFalse: [ 
-					s << ' ('.
-					s << anInteger.
-					s << $) ] ]
+				ifFalse: [ s
+						nextPutAll: ' (';
+						print: anInteger;
+						nextPut: $) ] ]

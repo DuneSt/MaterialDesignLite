@@ -1,6 +1,6 @@
 printing
 printOn: aStream
 	super printOn: aStream.
-	aStream << $[.
+	aStream nextPut: $[.
 	element printOn: aStream.
-	aStream << $]
+	aStream nextPut: $]
