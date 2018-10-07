@@ -10,7 +10,7 @@ Coverage:
 
 [![Coverage Status](https://coveralls.io/repos/github/DuneSt/MaterialDesignLite/badge.svg)](https://coveralls.io/github/DuneSt/MaterialDesignLite)
 
-This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help [Seaside](https://github.com/SeasideSt/Seaside)) developers in creating fast web application with flat design. For a tutorial on Seaside check [http://book.seaside.st](http://book.seaside.st).
+This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help [Seaside](https://github.com/SeasideSt/Seaside) developers in creating fast web application with flat design. For a tutorial on Seaside check [http://book.seaside.st](http://book.seaside.st).
 
 - [Documentation](#documentation)
   * [Version management](#version-management)
@@ -148,6 +148,7 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 |-------------	|---------------------------	|---------------------------	|
 | 1.1.x       	| Pharo 50, 60, 61				| None							|
 | 1.2.x       	| Pharo 50, 60, 61				| None							|
+| 1.3.x       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
 | Dev       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
 
 (*) *This version of Gemstone is tested. Older versions might work but we did not tested it.*
