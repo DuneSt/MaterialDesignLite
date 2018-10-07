@@ -148,6 +148,7 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 |-------------	|---------------------------	|---------------------------	|
 | 1.1.x       	| Pharo 50, 60, 61				| None							|
 | 1.2.x       	| Pharo 50, 60, 61				| None							|
+| 1.3.x       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
 | Dev       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
 
 (*) *This version of Gemstone is tested. Older versions might work but we did not tested it.*

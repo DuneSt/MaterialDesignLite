@@ -1,13 +1,8 @@
-TO ADD BEFORE RELEASE:
-- Date of the release
-- Number of tests (in Infrastructure part)
-- Other commit of Gemstone compatibility when it will be ready
-
-# [v1.3.0](https://github.com/DuneSt/MaterialDesignLite/compare/v1.2.0...v1.3.0) (2018-??-??)
+# [v1.3.0](https://github.com/DuneSt/MaterialDesignLite/compare/v1.2.0...v1.3.0) (2018-10-07)
 
 ## Features
 
-* **Add compatibility for Gemstone smalltalk** ([b83d742](https://github.com/DuneSt/MaterialDesignLite/commit/b83d742ebd2472efac31fa140df60cecc4c7eac1)) and ???
+* **Add compatibility for Gemstone smalltalk** ([b83d742](https://github.com/DuneSt/MaterialDesignLite/commit/b83d742ebd2472efac31fa140df60cecc4c7eac1)) and ([622dbdb](https://github.com/DuneSt/MaterialDesignLite/commit/622dbdbaf55476826baf84aebbc85eb07f4ae2cd))
 * **MDLCell should implement an offset feature** ([0ae17ef](https://github.com/DuneSt/MaterialDesignLite/commit/0ae17ef7781c0891958ba6b26223ab55110a09cc))
 * **MDLCell should allow to rorder the cells depending on the layout (desktop/tablet/phone)** ([a8e77dd](https://github.com/DuneSt/MaterialDesignLite/commit/a8e77dd68e8f82e36a12b334fbd7a0a81d04924b))
 
@@ -42,7 +37,7 @@ TO ADD BEFORE RELEASE:
 ## Infrastructure
 
 * **Improve code coverage.** This release increased the code coverage from 3% to 61%
-* **Add tests.** The number of tests increased from 8 to ???
+* **Add tests.** The number of tests increased from 8 to 485
 * **Add Coverall to CI** ([5a37a85](https://github.com/DuneSt/MaterialDesignLite/commit/5a37a85b4dd6c6aa2032f1abe59d38708831db13))
 * **Add Demo about not raised colored buttons** ([7a55891](https://github.com/DuneSt/MaterialDesignLite/commit/7a55891b30ab23c37793a99b441617618ad19afb))
 
