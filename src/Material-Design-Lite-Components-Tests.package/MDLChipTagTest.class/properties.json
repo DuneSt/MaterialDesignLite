@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MDLAbstractBrushTest",
+	"category" : "Material-Design-Lite-Components-Tests-Chips",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLChipTagTest",
+	"type" : "normal"
+}

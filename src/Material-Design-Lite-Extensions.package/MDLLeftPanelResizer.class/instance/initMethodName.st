@@ -1,3 +1,3 @@
 accessing
 initMethodName
-	^ 'initLeftResizer();'
+	^ 'initLeftResizer()'

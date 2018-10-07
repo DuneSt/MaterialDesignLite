@@ -1,3 +1,3 @@
-accessing
+options
 select
 	self isSelected: true

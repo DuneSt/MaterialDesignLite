@@ -1,6 +1,6 @@
 rendering
 renderContentOn: html
+	self ensureId: html.
 	html div
-		id: (pollWidgetId := html nextId);
-		with:
-				[ self renderPollButtonsOn: html ]
+		id: self id;
+		with: [ self renderPollButtonsOn: html ]

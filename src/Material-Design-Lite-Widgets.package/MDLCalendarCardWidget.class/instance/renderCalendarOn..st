@@ -4,7 +4,8 @@ renderCalendarOn: html
 		render:
 			(MDLCardWidget new
 				shadow: 2;
+				class: 'mdl-calendar-widget';
 				addProperties: properties;
-				primaryColorTitle: self calendarCurrentDateString;
+				primaryColorTitle: self calendar printDateForHeader;
 				addTextContainer: [ self renderCalendarContentOn: html ];
 				yourself)

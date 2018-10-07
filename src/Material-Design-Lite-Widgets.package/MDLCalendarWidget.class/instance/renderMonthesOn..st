@@ -1,15 +1,12 @@
 private-rendering
 renderMonthesOn: html
 	html mdlGrid
-		style: 'text-align: center';
-		with: [ self monthesNames
+		mdlTypographyTextCenter;
+		with: [ Date monthNames
 				do: [ :aString | 
 					html mdlCell
 						class: 'month-cell';
-						class: 'active' if: aString = calendar currentDate monthName;
-						onClick:
-							(html jQuery ajax
-								callback: [ calendar goToMonth: (Month indexOfMonth: aString) ];
-								onComplete: ((html jQuery id: calendarId) load html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
+						class: 'active' if: aString = self currentDate monthName;
+						onClick: (self jsGoToMonth: (Month indexOfMonth: aString) on: html);
 						desktopSize: 4;
 						with: aString ] ]

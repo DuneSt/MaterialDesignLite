@@ -2,19 +2,19 @@ computing weeks
 daysForWeek: i
 	"Return an array of 7 days for the desired week"
 	| dayCount  firstWeekday previousDayCount previousMonthDays  lastDayofPreviousWeek |
-	(i < 1 | i > 6) ifTrue: [ Error signal: 'Wrong week index' ].
-	dayCount := currentDate month daysInMonth .
+	i < 1 | (i > 6) ifTrue: [ Error signal: 'Wrong week index' ].
+	dayCount := currentDate asMonth daysInMonth .
 	firstWeekday := Date firstWeekdayOfMonth: currentDate monthIndex year: currentDate year.
-	previousDayCount := currentDate month previous daysInMonth.
+	previousDayCount := currentDate asMonth previous daysInMonth.
 	 
-	(i = 1) ifTrue: [  
+	i = 1 ifTrue: [  
 		"If this month's first day is the first day in the representation, 
 		the first line is the last week from last month"
-		firstWeekday = firstDayOfWeekIndex 
+		firstWeekday = self firstDayOfWeekIndex 
 			ifTrue: [ ^ (previousDayCount - 6 to: previousDayCount) asArray].
 		
 		"Otherwise, its a mix of last month and this month"
-		previousMonthDays := (firstWeekday - firstDayOfWeekIndex to: 1 by: -1) collect: [:each | previousDayCount - each + 1].
+		previousMonthDays := (firstWeekday - self firstDayOfWeekIndex to: 1 by: -1) collect: [:each | previousDayCount - each + 1].
 		^ previousMonthDays, (1 to: 7 - previousMonthDays size) asArray
 	].
 		

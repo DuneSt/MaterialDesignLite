@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractBrushTest",
+	"category" : "Material-Design-Lite-Components-Tests-Card",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLCardTagTest",
+	"type" : "normal"
+}

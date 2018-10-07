@@ -1,11 +1,13 @@
 {
-	"commentStamp" : "CyrilFerlicot 3/30/2018 15:53",
-	"super" : "WAAnchorTag",
-	"category" : "Material-Design-Lite-Components-Buttons",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classtraitcomposition" : "TMDLButton classTrait",
 	"classvars" : [ ],
 	"instvars" : [ ],
 	"name" : "MDLAnchorButton",
-	"type" : "normal"
+	"commentStamp" : "CyrilFerlicot 3/30/2018 15:53",
+	"super" : "WAAnchorTag",
+	"traitcomposition" : "TMDLButton",
+	"type" : "normal",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"category" : "Material-Design-Lite-Components-Buttons"
 }

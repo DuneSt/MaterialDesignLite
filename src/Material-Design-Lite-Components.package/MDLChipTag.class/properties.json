@@ -5,7 +5,9 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"hasContactTag"
+	],
 	"name" : "MDLChipTag",
 	"type" : "normal"
 }

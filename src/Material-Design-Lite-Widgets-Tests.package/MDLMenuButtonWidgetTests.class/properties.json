@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractSeasideTestCase",
+	"category" : "Material-Design-Lite-Widgets-Tests-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"menu"
+	],
+	"name" : "MDLMenuButtonWidgetTests",
+	"type" : "normal"
+}

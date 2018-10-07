@@ -1,0 +1,3 @@
+adding
+addNegativeVote
+	model increaseNegativeCount

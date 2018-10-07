@@ -1,4 +1,80 @@
+# [v1.3.0](https://github.com/DuneSt/MaterialDesignLite/compare/v1.2.0...v1.3.0) (2018-10-07)
+
+## Features
+
+* **Add compatibility for Gemstone smalltalk** ([b83d742](https://github.com/DuneSt/MaterialDesignLite/commit/b83d742ebd2472efac31fa140df60cecc4c7eac1)) and ([622dbdb](https://github.com/DuneSt/MaterialDesignLite/commit/622dbdbaf55476826baf84aebbc85eb07f4ae2cd))
+* **MDLCell should implement an offset feature** ([0ae17ef](https://github.com/DuneSt/MaterialDesignLite/commit/0ae17ef7781c0891958ba6b26223ab55110a09cc))
+* **MDLCell should allow to rorder the cells depending on the layout (desktop/tablet/phone)** ([a8e77dd](https://github.com/DuneSt/MaterialDesignLite/commit/a8e77dd68e8f82e36a12b334fbd7a0a81d04924b))
+
+## Gemstone
+
+* **Add OrderedDictionary to Gemstone compatibility package** ([b83d742](https://github.com/DuneSt/MaterialDesignLite/commit/b83d742ebd2472efac31fa140df60cecc4c7eac1))
+* **GemStone expects Blocks for ifNotNil: and friends. What does this code do?** ([b83d742](https://github.com/DuneSt/MaterialDesignLite/commit/b83d742ebd2472efac31fa140df60cecc4c7eac1))
+
+## Bug Fixes
+
+* **Closing button of MDLDialogWidget should not be of submit type but of button type** ([9d54da1](https://github.com/DuneSt/MaterialDesignLite/commit/9d54da1136fe2f46d03fe2191c7fa2e7c7b7d37e))
+* **MDLMenuButtonWidget should use the ID system of MDLWidget** ([8ad61b9](https://github.com/DuneSt/MaterialDesignLite/commit/8ad61b988dfe116d082c9fef829083f1b9d6c9a0))
+* **MDLCalendar should use the id system of MDLWidget instead of recreating one** ([01e1f61](https://github.com/DuneSt/MaterialDesignLite/commit/01e1f61d3fac2f529131ba8957c7425b249818fc))
+* **Month and year selection does not work on MDLCalendarWidget** ([dc915cd](https://github.com/DuneSt/MaterialDesignLite/commit/dc915cd522c4ee66c88d0c566282d230a738fa4c))
+* **First snackbar demo is broken** ([9497c65](https://github.com/DuneSt/MaterialDesignLite/commit/9497c65bf111cff63d45ebb2bbd399f50be7c4c2))
+
+## Cleaning
+
+* **Deprecate #mdlMultilineTextField since we already have #mdlTextArea which is the common name in HTML5** ([ef1e0a6](https://github.com/DuneSt/MaterialDesignLite/commit/ef1e0a6acf0968ac8d4f02e4dd86daad57f66008))
+* **Deprecate MDLCheckboxWidget since it does not brings anything more than the brushes** ([0630493](https://github.com/DuneSt/MaterialDesignLite/commit/0630493baa6c322a8916bfe29769c0ad17b3a568))
+* **Typo in MDLProgressBarWidget, #hyde should be #hide** ([a362b33](https://github.com/DuneSt/MaterialDesignLite/commit/a362b3316ba6a140966bf9b51b6904725c610c6d))
+* **Remove dependency to Morphic (#detectIndex:)** ([ab02a1f](https://github.com/DuneSt/MaterialDesignLite/commit/ab02a1ff1a0883008c0596de464ec8ea3f644856))
+* **MDLCardTitleText should not be able to respond to #borde or #expand** ([7f2e2cf](https://github.com/DuneSt/MaterialDesignLite/commit/7f2e2cf043962c2b3b0c99703a332b672a780d72))
+* **Remove dependency to JQueryUI** ([9ed3a6f](https://github.com/DuneSt/MaterialDesignLite/commit/9ed3a6f20455a09bee1ea69171dc6d42ff5c8c41))
+* **Remove duplication between MDLButton and MDLAnchorButton** ([99b3266](https://github.com/DuneSt/MaterialDesignLite/commit/99b3266b4f123f28478720c44bf865802cddb506))
+* **MDLCardTag has unused variables** ([431d7d1](https://github.com/DuneSt/MaterialDesignLite/commit/431d7d1cc132636c0df7852d0eaa842606e3b215))
+* **MDLCardMenu should not be able to respond to #borde or #expand** ([b59094d](https://github.com/DuneSt/MaterialDesignLite/commit/b59094d1f0ca9302653f9c6f05a420aae7df357e))
+* **Remove dependency to Seaside-Development** ([89fa553](https://github.com/DuneSt/MaterialDesignLite/commit/89fa553e6c5cf32e73ddf0caad581bee27a630cf))
+* **Deprecate useless MDLFooterLogo since we already have MDLLogo** ([fa7d7985](https://github.com/DuneSt/MaterialDesignLite/commit/fa7d7985269880ed5577c1efb25d783721d0d2e0))
+* **Remove duplication between MDLIconToggleLabel and MDLIcon>>#toggle** ([fa7d798](https://github.com/DuneSt/MaterialDesignLite/commit/fa7d7985269880ed5577c1efb25d783721d0d2e0))
+
+## Infrastructure
+
+* **Improve code coverage.** This release increased the code coverage from 3% to 61%
+* **Add tests.** The number of tests increased from 8 to 485
+* **Add Coverall to CI** ([5a37a85](https://github.com/DuneSt/MaterialDesignLite/commit/5a37a85b4dd6c6aa2032f1abe59d38708831db13))
+* **Add Demo about not raised colored buttons** ([7a55891](https://github.com/DuneSt/MaterialDesignLite/commit/7a55891b30ab23c37793a99b441617618ad19afb))
+
+## Demo
+
+* **Add demo on Elevation** ([f9a387c](https://github.com/DuneSt/MaterialDesignLite/commit/f9a387c3fb51db402ae7fccda8f57ef9df651c32))
+* **UX: ** Icons in list should be clickable ([43e3187](https://github.com/DuneSt/MaterialDesignLite/commit/43e3187ae5624f4c6fae0a27dd4016d0c230d80f))
+* **UX: ** Improve global UX of the demo ([43e3187](https://github.com/DuneSt/MaterialDesignLite/commit/43e3187ae5624f4c6fae0a27dd4016d0c230d80f))
+* **Add demo about MDLBadge>>noBackaground** ([f097d8f](https://github.com/DuneSt/MaterialDesignLite/commit/f097d8f49f0bdd8dfc28751d3e80d3d4dfb1bf77))
+* **Add demo to explicit MDLBadge>>overlap option** ([f097d8f](https://github.com/DuneSt/MaterialDesignLite/commit/f097d8f49f0bdd8dfc28751d3e80d3d4dfb1bf77))
+* **Add demo about MDLCell>>#hideDesktop/#hideTablet/#hidePhone** ([aabc92b](https://github.com/DuneSt/MaterialDesignLite/commit/aabc92b5d644e683d718dbf929fa52689b6c3fc5))
+* **Add demo about MDLCell>>#stretch/#bottom/#top/#middle** ([250a4b2](https://github.com/DuneSt/MaterialDesignLite/commit/250a4b2d7d3a1eda522f5bb80bf15bf4d93c1a70))
+
 # [v1.2.0](https://github.com/DuneSt/MaterialDesignLite/compare/v1.1.0...v1.2.0) (2018-03-31)
+
+## Features
+
+* **Add an extension to create resizable left panels to the application** ([2a8da98](https://github.com/DuneSt/MaterialDesignLite/commit/2a8da986db0d7fc47107b563b3546d5a57f84e50))
+* **Add an extension to ease the use of dialogs: the Root Dialog** ([3d4d18e](https://github.com/DuneSt/MaterialDesignLite/commit/3d4d18eb9015bd2e28d12123545c13b71f11a95a))
+* **Add an extension to create a right resizable panel with tabs** ([2a8da98](https://github.com/DuneSt/MaterialDesignLite/commit/2a8da986db0d7fc47107b563b3546d5a57f84e50))
+* **Implement a Progress bar widget to update the progress bar via some server calls** ([2fe79aa](https://github.com/DuneSt/MaterialDesignLite/commit/2fe79aae08dd73e48a82caf707984fb42ccab6da))
+* **Add premade typographies**. Comes with a demo ([0c29dca](https://github.com/DuneSt/MaterialDesignLite/commit/0c29dcab373948c5a510d3d632950f2297ec789c))
+* **Implement methods to use the primary and accent color with text and backgrounds**. Comes with a demo ([e39667d](https://github.com/DuneSt/MaterialDesignLite/commit/e39667dd625b2689f3c9a290df26c911cc91fd7a))
+* **MDLSelectWidget>>customizationBlock should take the canvas as second parameter** ([f4ad7c9](https://github.com/DuneSt/MaterialDesignLite/commit/f4ad7c98b2276b0412c1e4bc4cb8d215c8929503))
+* **Chips: Highlight lightly the background of the icons** ([639f105](https://github.com/DuneSt/MaterialDesignLite/commit/639f10597a851810040c7fc4680a42fa1df85488))
+* **Missing beCurrent on MDLNavigationLink** ([488da0c](https://github.com/DuneSt/MaterialDesignLite/commit/488da0cda00eda5941abae829bcaf7a78169a581))
+* **Simplify the creation of icon button** ([9b88f32](https://github.com/DuneSt/MaterialDesignLite/commit/9b88f322ceca2d94b7f4bf0b348b913ecaaa663e))
+* **Add sugar to MDLButton to create a label icon button** ([a49797b](https://github.com/DuneSt/MaterialDesignLite/commit/a49797b230f5caca7aea11fa5f3cdb548c7f1277))
+* **MDLMenuButtonWidget should allow custom content in the button** ([46281d2](https://github.com/DuneSt/MaterialDesignLite/commit/46281d20536da8e84b3002eaecc71dd7f48decc2))
+* **Add MDLGrid>>noSpacing option** ([d4ea697](https://github.com/DuneSt/MaterialDesignLite/commit/d4ea6979266070cb6ece5bc36dc4634815a38dc6))
+* **Add MDLTabsTabBar>>rippleEffect** ([a92f72d](https://github.com/DuneSt/MaterialDesignLite/commit/a92f72dabbde7f5034ee23e6dc668488948fd6d3))
+* **Add MDLLayoutTabBar>>rippleEffect** ([a92f72d](https://github.com/DuneSt/MaterialDesignLite/commit/a92f72dabbde7f5034ee23e6dc668488948fd6d3))
+* **Add MDLLayoutTab>>isActiveIf: conveniance method** ([04d0c55](https://github.com/DuneSt/MaterialDesignLite/commit/04d0c55f2883a05c23b8880e1b31cbccf93316a4))
+* **Add MDLLayoutTabPanel>>isActiveIf: conveniance method** ([a92f72d](https://github.com/DuneSt/MaterialDesignLite/commit/a92f72dabbde7f5034ee23e6dc668488948fd6d3))
+* **MDLCardWidget: Add the possibility to have a header with the application's primary or accent color** ([986de88](https://github.com/DuneSt/MaterialDesignLite/commit/986de88a42040bac076006f1cf015e503ae86f8b))
+* **NestedList: Add an option to sort children** ([bbf1572](https://github.com/DuneSt/MaterialDesignLite/commit/bbf157209291a15437d7449fbc1366c4f2e8ef31))
+* **NestedList: Add case sensitive and insensitive substring filters** ([0680006](https://github.com/DuneSt/MaterialDesignLite/commit/0680006d965401fd424ce7809615c8891c412dae))
 
 ## Bug Fixes
 
@@ -12,29 +88,6 @@
 * **NestedList filtering should launch the #onLoadHook after displaying the result** ([40cf46e](https://github.com/DuneSt/MaterialDesignLite/commit/40cf46ebae34db3dd8be0f145e9c05f9c6a2df47))
 * **MDLCalendar: Card calendar hard code colors instead of using primary color** ([226f62a](https://github.com/DuneSt/MaterialDesignLite/commit/226f62a564824a72e2843b7f450f3b23b6e33316))
 * **NestedList: It is hard to click on elements with short names in nested list** ([478ef33](https://github.com/DuneSt/MaterialDesignLite/commit/478ef33a36e98772082cc4bc21dcdec41fec1b68))
-
-## Features
-
-* **Add an extension to create resizable left panels to the application** ([2a8da98](https://github.com/DuneSt/MaterialDesignLite/commit/2a8da986db0d7fc47107b563b3546d5a57f84e50))
-* **Add an extension to ease the use of dialogs: the Root Dialog** ([3d4d18e](https://github.com/DuneSt/MaterialDesignLite/commit/3d4d18eb9015bd2e28d12123545c13b71f11a95a))
-* **Add an extension to create a right resizable panel with tabs** ([2a8da98](https://github.com/DuneSt/MaterialDesignLite/commit/2a8da986db0d7fc47107b563b3546d5a57f84e50))
-* **Implement a Progress bar widget to update the progress bar via some server calls** ([2fe79aa](https://github.com/DuneSt/MaterialDesignLite/commit/2fe79aae08dd73e48a82caf707984fb42ccab6da))
-* **Add premade typographies**. Comes with a demo ([0c29dca](https://github.com/DuneSt/MaterialDesignLite/commit/0c29dcab373948c5a510d3d632950f2297ec789c))
-* **Implement methods to use the primary and accent color with text and backgrounds**. Comes with a demo ([e39667d](https://github.com/DuneSt/MaterialDesignLite/commit/e39667dd625b2689f3c9a290df26c911cc91fd7a))
-* **MDLSelectWidget>>customizationBlock should take the canvas as second parameter** ([f4ad7c9](https://github.com/DuneSt/MaterialDesignLite/commit/f4ad7c98b2276b0412c1e4bc4cb8d215c8929503))
-* **Chips: Highlight lightly the background of the icons ** ([639f105](https://github.com/DuneSt/MaterialDesignLite/commit/639f10597a851810040c7fc4680a42fa1df85488))
-* **Missing beCurrent on MDLNavigationLink** ([488da0c](https://github.com/DuneSt/MaterialDesignLite/commit/488da0cda00eda5941abae829bcaf7a78169a581))
-* **Simplify the creation of icon button** ([9b88f32](https://github.com/DuneSt/MaterialDesignLite/commit/9b88f322ceca2d94b7f4bf0b348b913ecaaa663e))
-* **Add sugar to MDLButton to create a label icon button** ([a49797b](https://github.com/DuneSt/MaterialDesignLite/commit/a49797b230f5caca7aea11fa5f3cdb548c7f1277))
-* **MDLMenuButtonWidget should allow custom content in the button** ([46281d2](https://github.com/DuneSt/MaterialDesignLite/commit/46281d20536da8e84b3002eaecc71dd7f48decc2))
-* **Add MDLGrid>>noSpacing option** ([d4ea697](https://github.com/DuneSt/MaterialDesignLite/commit/d4ea6979266070cb6ece5bc36dc4634815a38dc6))
-* **Add MDLTabsTabBar>>rippleEffect** ([a92f72d](https://github.com/DuneSt/MaterialDesignLite/commit/a92f72dabbde7f5034ee23e6dc668488948fd6d3))
-* **Add MDLLayoutTabBar>>rippleEffect** ([a92f72d](https://github.com/DuneSt/MaterialDesignLite/commit/a92f72dabbde7f5034ee23e6dc668488948fd6d3))
-* **Add MDLLayoutTab>>isActiveIf: conveniance method** ([04d0c55](https://github.com/DuneSt/MaterialDesignLite/commit/04d0c55f2883a05c23b8880e1b31cbccf93316a4))
-* **Add MDLLayoutTabPanel>>isActiveIf: conveniance method** ([a92f72d](https://github.com/DuneSt/MaterialDesignLite/commit/a92f72dabbde7f5034ee23e6dc668488948fd6d3))
-* **MDLCardWidget: Add the possibility to have a header with the application's primary or accent color** ([986de88](https://github.com/DuneSt/MaterialDesignLite/commit/986de88a42040bac076006f1cf015e503ae86f8b))
-* **NestedList: Add an option to sort children** ([bbf1572](https://github.com/DuneSt/MaterialDesignLite/commit/bbf157209291a15437d7449fbc1366c4f2e8ef31))
-* **NestedList: Add case sensitive and insensitive substring filters** ([0680006](https://github.com/DuneSt/MaterialDesignLite/commit/0680006d965401fd424ce7809615c8891c412dae))
 
 ## Performances
 

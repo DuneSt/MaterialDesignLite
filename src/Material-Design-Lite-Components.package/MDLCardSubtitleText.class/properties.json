@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "CyrilFerlicot 3/30/2018 17:06",
-	"super" : "MDLCardInnerDiv",
+	"super" : "MDLDivTag",
 	"category" : "Material-Design-Lite-Components-Cards",
 	"classinstvars" : [ ],
 	"pools" : [ ],

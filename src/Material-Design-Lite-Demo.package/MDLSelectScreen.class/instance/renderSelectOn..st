@@ -13,7 +13,7 @@ renderSelectOn: html
 								ifFalse: [ (number - 1) greaseString ] ]
 						callback: [ :input | 
 							Transcript
-								<< input;
+								show: input;
 								cr ]
 						selectedObject: 3
 						tooltip: 'description'

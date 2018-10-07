@@ -3,6 +3,13 @@ Description
 
 I am a brush to create a MDL cell. A cell should always be used inside a Grid.
 
+Cells defines some options:
+- Possibility to define the size depending on the screen kind (desktop, tablet, phone)
+- Possibility to add an offset depending on the screen kind
+- Possibility to reorder the cells depending on the screen kind
+- Possibility to vertically align the cell at the top, middle or bottom (or stretch it)
+- Hide the cell on some screen kinds
+
 Example
 --------------------
 

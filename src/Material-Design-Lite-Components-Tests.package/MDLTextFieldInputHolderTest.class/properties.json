@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractBrushTest",
+	"category" : "Material-Design-Lite-Components-Tests-Forms",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLTextFieldInputHolderTest",
+	"type" : "normal"
+}

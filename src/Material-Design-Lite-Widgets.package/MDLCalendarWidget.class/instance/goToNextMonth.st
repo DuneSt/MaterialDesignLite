@@ -1,3 +1,3 @@
 private
 goToNextMonth
-	calendar nextMonth
+	self calendar nextMonth

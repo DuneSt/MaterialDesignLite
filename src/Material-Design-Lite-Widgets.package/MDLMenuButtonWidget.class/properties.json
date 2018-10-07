@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "CyrilFerlicot 12/5/2017 23:43",
 	"super" : "MDLWidget",
-	"category" : "Material-Design-Lite-Widgets",
+	"category" : "Material-Design-Lite-Widgets-Menu",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,3 +1,3 @@
 *Material-Design-Lite-Components
 mdlCardTitle
-	^ self brush: MDLCardTitleContainer  new 
+	^ self brush: MDLCardTitleContainer new

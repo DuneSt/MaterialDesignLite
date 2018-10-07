@@ -6,6 +6,6 @@ renderTooltipFor: anId on: html
 		for: anId;
 		large;
 		with:
-				(self description isBlock
-						ifTrue: [ self description value: html ]
-						ifFalse: [ self description ])
+			(self description isBlock
+				ifTrue: [ self description value: html ]
+				ifFalse: [ self description ])

@@ -1,5 +1,5 @@
 javascript
 jsOnCompleteScriptOn: html
-	^ (html jQuery id: calendarId) load
+	^ (html jQuery id: self id) load
 		html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ];
-		onComplete: (self onCompleteScript ifNil: [ '' ])
+		onComplete: self jsOnCompleteScript

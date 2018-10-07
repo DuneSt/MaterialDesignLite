@@ -1,0 +1,3 @@
+tests
+testExpand
+	self subclassResponsibility

@@ -12,9 +12,9 @@ renderYearsHeaderOn: html
 			(String
 				streamContents: [ :aStream | 
 					aStream
-						nextPutAll: calendar yearsInterval first greaseString;
+						nextPutAll: self calendar yearsInterval first greaseString;
 						nextPutAll: ' - ';
-						nextPutAll: calendar yearsInterval last greaseString ]).
+						nextPutAll: self calendar yearsInterval last greaseString ]).
 	self
 		renderYearsIntervalButtonWithIcon: 'navigate_next'
 		action: #goToNextYears

@@ -1,3 +1,3 @@
 accessing
-timeout: anObject
-	timeout := anObject
+timeout: anInteger
+	timeout := anInteger

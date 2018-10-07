@@ -1,3 +1,3 @@
 private
 goToPreviousYears
-	calendar previousYears
+	self calendar previousYears

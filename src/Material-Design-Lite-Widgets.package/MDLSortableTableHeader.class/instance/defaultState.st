@@ -1,3 +1,0 @@
-state handling
-defaultState
-	^ MDLSortableTableHeaderElementUnsorted

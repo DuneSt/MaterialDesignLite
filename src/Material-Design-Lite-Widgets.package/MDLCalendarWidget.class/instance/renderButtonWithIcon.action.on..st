@@ -9,9 +9,8 @@ renderButtonWithIcon: anIcon action: aSymbol on: html
 					(html jQuery ajax
 						callback: [ self perform: aSymbol ];
 						onComplete:
-							((html jQuery id: calendarId) load
+							((html jQuery id: self id) load
 								html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ]));
-				icon;
 				rippleEffect;
 				style: 'color: rgba(0,0,0,0.7)';
-				with: [ html mdlIcon: anIcon ] ]
+				icon: anIcon ]

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MDLAbstractBrushTest",
+	"category" : "Material-Design-Lite-Components-Tests-Layouts",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MDLLayoutTitleTest",
+	"type" : "normal"
+}

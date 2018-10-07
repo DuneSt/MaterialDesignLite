@@ -1,3 +1,3 @@
 private
 goToNextYears
-	calendar nextYears
+	self calendar nextYears

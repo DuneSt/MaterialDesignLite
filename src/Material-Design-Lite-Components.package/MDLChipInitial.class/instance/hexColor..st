@@ -1,10 +1,10 @@
-accessing
+options
 hexColor: aString
 	self
 		style:
 			(String
 				streamContents: [ :s | 
-					s << 'background-color: '.
-					(aString first = $#)
-						ifFalse: [ s << $# ].
-					s << aString ])
+					s nextPutAll: 'background-color: '.
+					aString first = $#
+						ifFalse: [ s nextPut: $# ].
+					s nextPutAll: aString ])
