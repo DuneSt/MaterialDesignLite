@@ -100,6 +100,19 @@ Where
 	    anHtmlRoot stylesheet url: (WAUrl absolute: 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.XXX-YYY.min.css').
 ```
 
+### Add specific style for extensions
+
+In order to make the extentions work properly, you should define some colors specific rules for your application in your css. To do so, just define:
+
+```CSS
+    .mdl-pagination__current{
+        box-shadow: inset 0px -4px 0px 0px #XXXXXX !important;
+    }
+```
+
+Where `XXXXXX` is the hex code of the accent color of your MDL application. 
+To find your code you can select the #500 color in the following page: [https://www.materialui.co/colors](https://www.materialui.co/colors) 
+
 ### Subclassing MDLApplication
 
 Another simple way to start with MDL is to subclass MDLApplication to create your root component.
@@ -149,7 +162,7 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 | 1.1.x       	| Pharo 50, 60, 61				| None							|
 | 1.2.x       	| Pharo 50, 60, 61				| None							|
 | 1.3.x       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
-| Dev       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
+| Dev       	| Pharo 50, 60, 61,	70			| 								|
 
 (*) *This version of Gemstone is tested. Older versions might work but we did not tested it.*
 (**) *The compatibility is not total. MaterialDesignLite uses Pharo's Traits to provide the users composables components. Thus, if the Gemstone users wants to use those components they will have to flatten themself the Traits in their Seaside application*

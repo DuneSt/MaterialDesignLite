@@ -44,4 +44,20 @@ renderStartDescriptionOn: html
 											'MyApplication>>updateRoot: anHtmlRoot
 	    super updateRoot: anHtmlRoot.
 	    anHtmlRoot beHtml5.
-	    anHtmlRoot stylesheet url: (WAUrl absolute: ''https://storage.googleapis.com/code.getmdl.io/1.3.0/material.XXX-YYY.min.css'').' ] ] ] ]
+	    anHtmlRoot stylesheet url: (WAUrl absolute: ''https://storage.googleapis.com/code.getmdl.io/1.3.0/material.XXX-YYY.min.css'').' ].
+							html paragraph: 'One last step is to define some specific rules in your CSS to make extensions work properly. You should add:'.
+							html
+								preformatted: [ html code
+										class: 'css';
+										with:
+											'    .mdl-pagination__current{
+        box-shadow: inset 0px -4px 0px 0px #XXXXXX !important;
+    }' ].
+							html
+								paragraph: [ html
+										text:
+											'Where `XXXXXX` is the hex code of the accent color of your MDL application. 
+To find your code you can select the #500 color in the following page: '.
+									html anchor
+										url: 'https://www.materialui.co/colors';
+										with: 'https://www.materialui.co/colors' ] ] ] ]
