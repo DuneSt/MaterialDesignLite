@@ -1,3 +1,3 @@
 accessing
 adjacentsPagesToShow
-	^ adjacentsPagesToShow ifNil: [ adjacentsPagesToShow := 2 ]
+	^ adjacentsPagesToShow ifNil: [ adjacentsPagesToShow := self defaultNumberOfAdjacentsPagesToShow ]
