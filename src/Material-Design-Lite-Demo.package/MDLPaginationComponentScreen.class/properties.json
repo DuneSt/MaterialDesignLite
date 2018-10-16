@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "CyrilFerlicot 10/15/2018 00:42",
+	"super" : "MDLExtensionsDemo",
+	"category" : "Material-Design-Lite-Demo-Extensions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"paginationWidget",
+		"paginationWidget2"
+	],
+	"name" : "MDLPaginationComponentScreen",
+	"type" : "normal"
+}

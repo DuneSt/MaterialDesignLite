@@ -10,6 +10,7 @@ materialdesignSass
 @import "chips"
 @import "buttonMenuWidget"
 @import "panels"
+@import "pagination"
 
 a.mdl-button--fab
   line-height: 56px

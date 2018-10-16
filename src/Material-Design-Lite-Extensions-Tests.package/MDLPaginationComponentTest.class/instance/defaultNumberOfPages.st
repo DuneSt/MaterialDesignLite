@@ -1,0 +1,3 @@
+helpers
+defaultNumberOfPages
+	^ 20

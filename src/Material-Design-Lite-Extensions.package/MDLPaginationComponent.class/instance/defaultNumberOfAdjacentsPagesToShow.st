@@ -1,0 +1,3 @@
+accessing
+defaultNumberOfAdjacentsPagesToShow
+	^ self class defaultNumberOfAdjacentsPagesToShow

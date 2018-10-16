@@ -5,9 +5,8 @@ renderButtonTriggering: aMethod withIcon: aSymbol disabled: isDisabled on: html
 		colored;
 		icon;
 		disabled: isDisabled;
-		onClick:
-				(html jQuery ajax
-						callback: [ self perform: aMethod ];
-						onSuccess: (self ajaxUpdateScriptFrom: html))
+		onClick: [ html jQuery ajax
+				callback: [ self perform: aMethod ];
+				onSuccess: (self ajaxUpdateScriptFrom: html) ]
 			if: isDisabled not;
 		with: [ html mdlIcon: aSymbol ]
