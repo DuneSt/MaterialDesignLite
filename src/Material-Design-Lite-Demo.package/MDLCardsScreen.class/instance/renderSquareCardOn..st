@@ -5,7 +5,7 @@ renderSquareCardOn: html
 		mdlTypographyTextLeft;
 		style: 'width: 320px; height: 320px';
 		with: [ 
-			html mdlCardTitle
+			html mdlCardTitleContainer
 				expand;
 				style: 'color: #fff;background: url(''' , (MDLDemoLibrary urlOf: #dogPng) asString , ''') bottom right 15% no-repeat #46B6AC;';
 				with: [ html mdlCardTitleText: 'Update' level: 2 ].

@@ -6,7 +6,7 @@ renderTableContentOn: html
 	self ensureCurrentPageIsVisible.
 	self title
 		ifNotNil: [ 
-			html mdlCardTitle
+			html mdlCardTitleContainer
 				style: 'padding-left: 24px;';
 				with: [ html mdlCardTitleText: self title level: 2 ] ].
 	(selectable
