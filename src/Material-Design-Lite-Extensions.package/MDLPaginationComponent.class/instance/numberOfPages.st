@@ -1,0 +1,3 @@
+accessing
+numberOfPages
+	^ numberOfPages value
