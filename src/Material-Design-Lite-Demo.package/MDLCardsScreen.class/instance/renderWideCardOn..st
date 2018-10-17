@@ -5,7 +5,7 @@ renderWideCardOn: html
 		mdlTypographyTextLeft;
 		style: 'width: 512px';
 		with: [ 
-			html mdlCardTitle
+			html mdlCardTitleContainer
 				style: 'height: 176px; background: url(''' , (MDLDemoLibrary urlOf: #welcomecardJpg) asString , ''') center / cover; color: #fff';
 				with: [ html mdlCardTitleText: 'Welcome' ].
 				

@@ -1,3 +1,3 @@
 accessing
 title
-	^ 'Calendar'
+	^ 'Date Picker'

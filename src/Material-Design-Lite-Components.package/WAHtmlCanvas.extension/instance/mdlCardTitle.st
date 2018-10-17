@@ -1,3 +1,4 @@
 *Material-Design-Lite-Components
 mdlCardTitle
-	^ self brush: MDLCardTitleContainer new
+	self deprecated: 'Use #mdlCardTitleContainer instead.' transformWith: '`@receiver mdlCardTitle' -> '`@receiver mdlCardTitleContainer'.
+	^ self mdlCardTitleContainer

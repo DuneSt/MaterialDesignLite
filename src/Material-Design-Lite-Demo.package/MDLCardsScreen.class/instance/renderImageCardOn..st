@@ -5,7 +5,7 @@ renderImageCardOn: html
 		mdlTypographyTextLeft;
 		style: 'width: 256px; height: 256px; background: url(''' , (MDLDemoLibrary urlOf: #imagecardJpg) asString , ''') center / cover';
 		with: [ 
-			html mdlCardTitle expand.
+			html mdlCardTitleContainer expand.
 			
 			html mdlCardActions
 				style: 'height: 52px; padding: 16px; background: rgba(0,0,0,0.2)';
