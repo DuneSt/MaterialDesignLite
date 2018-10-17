@@ -1,4 +1,4 @@
 running
 setUp
 	super setUp.
-	calendar := MDLCalendarWidget new
+	calendar := MDLDatePicker new

@@ -1,5 +1,5 @@
 rendering
 renderScreenContentOn: html
 	self
-		render: self calendar on: html;
-		render: self calendarCard on: html
+		render: self datePicker on: html;
+		render: self flatDatePicker on: html

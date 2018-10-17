@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "CyrilFerlicot 10/17/2018 23:26",
-	"super" : "MDLDatePicker",
+	"commentStamp" : "CyrilFerlicot 10/17/2018 23:24",
+	"super" : "MDLFlatDatePicker",
 	"category" : "Material-Design-Lite-Widgets-Calendar",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "MDLCalendarCardWidget",
+	"name" : "MDLDatePicker",
 	"type" : "normal"
 }

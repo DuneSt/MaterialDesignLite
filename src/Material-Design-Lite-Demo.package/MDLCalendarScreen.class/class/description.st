@@ -1,3 +1,3 @@
 accessing
 description
-	^ 'A calendar in Material Design style'
+	^ 'A calendar in Material Design style to pick a date'

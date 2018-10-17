@@ -1,1 +1,1 @@
-Widget to basically display a calendar with MDL style
+Please use MDLFlatDatePicker instead.

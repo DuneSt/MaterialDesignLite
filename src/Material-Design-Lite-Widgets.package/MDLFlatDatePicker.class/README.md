@@ -1,0 +1,1 @@
+I am a component displaying a calendar to let the user pick a date.
