@@ -1,8 +1,8 @@
 demos
-renderCalendarCardOn: html
+renderDatePickerOn: html
 	html
 		render:
-			(MDLCalendarCardWidget new
+			(MDLDatePicker new
 				callback: [ :day | selectedDay := day ];
 				currentDate: selectedDay;
 				onCompleteScript: ((html jQuery id: 'selectedDay2') load html: [ :r | 

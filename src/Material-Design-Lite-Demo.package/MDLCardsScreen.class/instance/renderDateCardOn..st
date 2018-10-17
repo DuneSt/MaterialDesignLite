@@ -5,7 +5,7 @@ renderDateCardOn: html
 		mdlTypographyTextLeft;
 		style: 'width: 256px; height: 256px;  background: #3E4EB8;';
 		with: [ 
-			html mdlCardTitle
+			html mdlCardTitleContainer
 				style: 'align-items: flex-start; color: #fff';
 				expand;
 				with: [ html mdlCardTitleText

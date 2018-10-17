@@ -1,9 +1,9 @@
 demos
-renderCalendarOn: html
+renderFlatDatePickerOn: html
 	html div
 		style: 'background-color: white;border: 1px grey solid;';
 		with:
-			(MDLCalendarWidget new
+			(MDLFlatDatePicker new
 				callback: [ :day | selectedDay := day ];
 				currentDate: selectedDay;
 				onCompleteScript: ((html jQuery id: 'selectedDay') load html: [ :r | 

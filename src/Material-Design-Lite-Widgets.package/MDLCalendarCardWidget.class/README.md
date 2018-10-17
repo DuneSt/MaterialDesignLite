@@ -1,1 +1,1 @@
-Calendar widget in a card
+Please use MDLDatePicker instead.

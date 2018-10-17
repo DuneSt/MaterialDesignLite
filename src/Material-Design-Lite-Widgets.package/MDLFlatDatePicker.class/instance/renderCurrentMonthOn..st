@@ -5,7 +5,7 @@ renderCurrentMonthOn: html
 		tablet: 6
 		phone: 2
 		with: [ self
-				renderButtonNamed: self currentDate monthName
+				renderButtonNamed: self currentDate monthAbbreviation
 				renderingMethod: #renderMonthesOn:
 				on: html.
 			html space.
