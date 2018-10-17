@@ -1,3 +1,7 @@
+# [v1.3.1](https://github.com/DuneSt/MaterialDesignLite/compare/v1.3.0...v1.3.1) (2018-10-18)
+
+* This release brings a lot of deprecation in prevision of the next major release.
+
 # [v1.3.0](https://github.com/DuneSt/MaterialDesignLite/compare/v1.2.0...v1.3.0) (2018-10-07)
 
 ## Features
