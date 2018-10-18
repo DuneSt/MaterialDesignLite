@@ -1,3 +1,0 @@
-accessing
-isFolded
-	^ isFolded

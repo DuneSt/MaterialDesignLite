@@ -1,3 +1,0 @@
-accessing
-filterInsensitiveSubstring
-	self filter: MDLInsensitiveSubstringFilter

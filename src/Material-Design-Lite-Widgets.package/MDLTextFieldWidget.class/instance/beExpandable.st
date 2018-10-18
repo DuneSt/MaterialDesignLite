@@ -1,3 +1,0 @@
-options
-beExpandable
-	isExpandable := true

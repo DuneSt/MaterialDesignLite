@@ -1,1 +1,0 @@
-I'm representing snackbar component screen

@@ -1,1 +1,0 @@
-High level widget to render a card

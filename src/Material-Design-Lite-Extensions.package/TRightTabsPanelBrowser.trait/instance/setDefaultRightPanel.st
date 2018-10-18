@@ -1,3 +1,0 @@
-components
-setDefaultRightPanel
-	self explicitRequirement

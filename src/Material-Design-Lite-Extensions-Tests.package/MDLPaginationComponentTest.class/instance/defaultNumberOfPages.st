@@ -1,3 +1,0 @@
-helpers
-defaultNumberOfPages
-	^ 20

@@ -1,3 +1,0 @@
-printing
-optionsSelectedString
-	^ layoutStyle, ', ', validationMessageStyle

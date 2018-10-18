@@ -1,3 +1,0 @@
-researchField
-withResearchField
-	self displayResearchField: true

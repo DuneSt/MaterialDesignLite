@@ -1,3 +1,0 @@
-accessing
-defaultNumberOfAdjacentsPagesToShow
-	^ 2

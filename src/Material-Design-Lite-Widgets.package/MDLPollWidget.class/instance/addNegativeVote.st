@@ -1,3 +1,0 @@
-adding
-addNegativeVote
-	model increaseNegativeCount

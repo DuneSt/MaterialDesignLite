@@ -1,1 +1,0 @@
-I am nested list demonstration panel

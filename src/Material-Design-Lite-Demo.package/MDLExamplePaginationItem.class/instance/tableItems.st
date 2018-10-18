@@ -1,4 +1,0 @@
-accessing
-tableItems
-	^ {firstName.
-	lastName}

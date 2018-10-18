@@ -1,3 +1,0 @@
-accessing
-showBatchFirstLast
-	^ showBatchFirstLast
