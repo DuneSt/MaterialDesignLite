@@ -1,3 +1,0 @@
-components
-defaultToolbar
-	^ self explicitRequirement

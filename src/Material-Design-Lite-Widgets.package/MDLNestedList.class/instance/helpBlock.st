@@ -1,3 +1,0 @@
-accessing
-helpBlock
-	^ helpBlock

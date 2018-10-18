@@ -1,1 +1,0 @@
-I am a nested list filter keeping only elements whose name begins with the pattern passed by the user in an insensitive way.

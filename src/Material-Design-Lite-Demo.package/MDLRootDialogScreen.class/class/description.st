@@ -1,3 +1,0 @@
-accessing
-description
-	^ 'This extension provides Traits to ease the use of MDL dialogs. The principle is to add an empty dialog at the root of the application, then open it through methods available on any Seaside brush and render the content via ajax. One Trait needs to be used on the root component of the web application to add an empty hidden dialog. A second Trait needs to be used by the components wanting to open a dialog and provide the necessary methods to open the root dialog and to fill its content with ajax.'

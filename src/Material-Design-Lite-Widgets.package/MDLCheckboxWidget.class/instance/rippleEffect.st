@@ -1,3 +1,0 @@
-accessing
-rippleEffect
-	rippleEffect := true

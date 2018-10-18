@@ -1,1 +1,0 @@
-I represent a simple widget to use mdlTable

@@ -1,3 +1,0 @@
-accessing
-screens
-	^ MDLExtensionsDemo subclasses

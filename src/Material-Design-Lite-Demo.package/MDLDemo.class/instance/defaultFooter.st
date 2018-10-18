@@ -1,3 +1,0 @@
-components
-defaultFooter
-	^ MDLDemoFooter new

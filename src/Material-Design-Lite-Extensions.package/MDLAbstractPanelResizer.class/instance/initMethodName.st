@@ -1,3 +1,0 @@
-accessing
-initMethodName
-	^ self subclassResponsibility

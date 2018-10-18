@@ -8,15 +8,12 @@ os:
 smalltalk:
   - Pharo-7.0
   - Pharo-6.1
-  - Pharo-5.0
 #- GemStone-3.4.1
   
 matrix:
   fast_finish: true
-  allow_failures:
-    - smalltalk: Pharo-7.0
-    
+  
 # This make Gemstone builds 3x faster
-cache:
-  directories:
-    - $SMALLTALK_CI_CACHE
+#cache:
+#  directories:
+#    - $SMALLTALK_CI_CACHE

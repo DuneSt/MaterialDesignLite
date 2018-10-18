@@ -1,1 +1,0 @@
-Widget for text container

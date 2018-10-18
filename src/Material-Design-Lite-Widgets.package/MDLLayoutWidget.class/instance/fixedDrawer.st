@@ -1,3 +1,0 @@
-options
-fixedDrawer
-	^ brush fixedDrawer 

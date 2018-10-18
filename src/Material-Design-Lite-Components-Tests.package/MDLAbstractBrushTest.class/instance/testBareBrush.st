@@ -1,3 +1,0 @@
-tests
-testBareBrush
-	self subclassResponsibility

@@ -1,3 +1,0 @@
-tests
-testFormatedElementMatches
-	self subclassResponsibility

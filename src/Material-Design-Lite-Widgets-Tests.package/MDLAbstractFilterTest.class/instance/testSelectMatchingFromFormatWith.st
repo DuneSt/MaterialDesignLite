@@ -1,3 +1,0 @@
-tests
-testSelectMatchingFromFormatWith
-	self subclassResponsibility

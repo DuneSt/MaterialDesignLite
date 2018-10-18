@@ -1,3 +1,0 @@
-accessing
-panelClass
-	^ #'resizer-right'
