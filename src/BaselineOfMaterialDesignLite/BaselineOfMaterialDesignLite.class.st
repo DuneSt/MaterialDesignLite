@@ -7,26 +7,6 @@ Class {
 	#category : 'BaselineOfMaterialDesignLite'
 }
 
-{ #category : #loading }
-BaselineOfMaterialDesignLite class >> loadOnGemStone [
-	"
-
-eval `BaselineOfMaterialDesignLite loadOnGemStone`
-
-"
-
-	<script>
-	(Smalltalk hasClassNamed: 'GsDeployer')
-		ifTrue: [ (Smalltalk classNamed: 'GsDeployer')
-				perform: #deploy:
-				with: [ Metacello new
-						repository: 'filetree:///opt/git/MaterialDesignLite/src';
-						baseline: 'MaterialDesignLite';
-						onConflict: [ :ex | ex allow ];
-						onLock: [ :ex | ex honor ];
-						load ] ]
-]
-
 { #category : #baseline }
 BaselineOfMaterialDesignLite >> baseline: spec [
 	<baseline>
@@ -58,14 +38,11 @@ BaselineOfMaterialDesignLite >> baseline: spec [
 			spec
 				group: 'Magritte' with: #('Material-Design-Lite-Magritte');
 				group: 'all' with: #('default' 'Magritte');
-				group: 'colors' with: #('MaterialColors');
 				group: 'extensions' with: #('Material-Design-Lite-Extensions');
 				group: 'core' with: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' 'Material-Design-Lite-Core' 'Material-Design-Lite-Utils');
 				group: 'default' with: #('core' 'tests' 'demo');
 				group: 'demo' with: #('Material-Design-Lite-Demo');
-				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests' 'Material-Design-Lite-Extensions-Tests' 'Material-Design-Lite-Core-Tests') ].
-			
-	self gemStone: spec
+				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests' 'Material-Design-Lite-Extensions-Tests' 'Material-Design-Lite-Core-Tests') ]
 ]
 
 { #category : #dependencies }
@@ -75,19 +52,6 @@ BaselineOfMaterialDesignLite >> fileLibraryHelper: spec [
 	spec
 		baseline: 'FileLibraryHelper'
 		with: [ spec repository: 'github://jecisc/FileLibraryHelper/src' ]
-]
-
-{ #category : #baseline }
-BaselineOfMaterialDesignLite >> gemStone: spec [
-	spec
-		for: #gemstone
-		do: [ spec baseline: 'OrderedDictionary' with: [ spec repository: 'github://GsDevKit/OrderedDictionary:v1.x.x/src' ].
-			spec
-				package: 'PackageManifest' with: [ spec repository: 'http://smalltalkhub.com/mc/pdebruic/PackageManifest/main' ];
-				package: 'Material-Design-Lite-GemStone' with: [ spec requires: 'Material-Design-Lite-Components' ];
-				package: 'Material-Design-Lite-Extensions' with: [ spec requires: #('PackageManifest') ];
-				package: 'Material-Design-Lite-Components' with: [ spec requires: #('PackageManifest' 'OrderedDictionary') ];
-				package: 'Material-Design-Lite-Components' with: [ spec includes: 'Material-Design-Lite-GemStone' ] ]
 ]
 
 { #category : #dependencies }
