@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'layout'
 	],
-	#category : 'Material-Design-Lite-Core'
+	#category : #'Material-Design-Lite-Core'
 }
 
 { #category : #'instance creation' }

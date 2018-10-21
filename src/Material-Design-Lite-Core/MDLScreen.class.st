@@ -8,5 +8,5 @@ Use MDLFooterScreenDecorator to add a footer.
 Class {
 	#name : #MDLScreen,
 	#superclass : #WAComponent,
-	#category : 'Material-Design-Lite-Core'
+	#category : #'Material-Design-Lite-Core'
 }

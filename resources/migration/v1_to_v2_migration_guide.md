@@ -39,3 +39,8 @@ The method `MDLMenuItem>>disable` is now removed. You can use the method `disabl
 
 `MDLGridSection` is now removed from MDL for Seaside. To replace it you can directly call the method `beGrid` on a section brush.
  
+## MDLApplication>>applicationName is now removed
+
+It was possible before to set a variabel `#applicationName` in a MDLApplication. But this name was used nowhere in the abstract class. It is now removed. If you wish to get this variable in your application you can just create a new variable in you subclass.
+ 
+

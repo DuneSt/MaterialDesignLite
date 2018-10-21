@@ -18,11 +18,10 @@ Class {
 	#name : #MDLApplication,
 	#superclass : #WAComponent,
 	#instVars : [
-		'applicationName',
 		'screens',
 		'colors'
 	],
-	#category : 'Material-Design-Lite-Core'
+	#category : #'Material-Design-Lite-Core'
 }
 
 { #category : #testing }
@@ -51,18 +50,6 @@ MDLApplication class >> registerToDevelopment: aName [
 { #category : #'adding/removing' }
 MDLApplication >> addScreen: aScreen [
 	^ self screens add: aScreen 
-]
-
-{ #category : #accessing }
-MDLApplication >> applicationName [
-	self deprecated: 'This is not used in MDL application. Please implement your own variable if you need this'.
-	^ applicationName
-]
-
-{ #category : #accessing }
-MDLApplication >> applicationName: aName [
-	self deprecated: 'This is not used in MDL application. Please implement your own variable if you need this'.
-	applicationName := aName
 ]
 
 { #category : #accessing }
