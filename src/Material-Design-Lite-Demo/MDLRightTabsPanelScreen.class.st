@@ -7,7 +7,7 @@ Screen to render resizable right panel with tabs examples.
 Class {
 	#name : #MDLRightTabsPanelScreen,
 	#superclass : #MDLExtensionsDemo,
-	#category : 'Material-Design-Lite-Demo-Extensions'
+	#category : #'Material-Design-Lite-Demo-Extensions'
 }
 
 { #category : #accessing }

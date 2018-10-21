@@ -26,7 +26,7 @@ Class {
 		'tableStyle',
 		'rowsCache'
 	],
-	#category : 'Material-Design-Lite-Widgets-Table'
+	#category : #'Material-Design-Lite-Widgets-Table'
 }
 
 { #category : #accessing }

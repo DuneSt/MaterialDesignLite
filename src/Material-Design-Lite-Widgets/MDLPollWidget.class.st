@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'model'
 	],
-	#category : 'Material-Design-Lite-Widgets-Poll'
+	#category : #'Material-Design-Lite-Widgets-Poll'
 }
 
 { #category : #'instance creation' }

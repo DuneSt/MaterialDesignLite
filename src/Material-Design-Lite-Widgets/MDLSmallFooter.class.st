@@ -10,7 +10,7 @@ Class {
 		'leftSection',
 		'rightSection'
 	],
-	#category : 'Material-Design-Lite-Widgets-Footer'
+	#category : #'Material-Design-Lite-Widgets-Footer'
 }
 
 { #category : #initialization }

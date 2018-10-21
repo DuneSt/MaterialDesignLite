@@ -11,7 +11,7 @@ Class {
 		'list',
 		'selectedScreen'
 	],
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #testing }

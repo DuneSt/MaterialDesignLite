@@ -7,7 +7,7 @@ I am a screen presenting the elevations properties of MDL.
 Class {
 	#name : #MDLElevationScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
 
 { #category : #accessing }

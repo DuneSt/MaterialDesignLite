@@ -23,7 +23,7 @@ Class {
 		'componentToDisplay',
 		'componentInstances'
 	],
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #testing }

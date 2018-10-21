@@ -7,7 +7,7 @@ Utility component to illustrate the right panel extension.
 Class {
 	#name : #MDLExampleRightPanel2,
 	#superclass : #WAComponent,
-	#category : 'Material-Design-Lite-Demo-Utils'
+	#category : #'Material-Design-Lite-Demo-Utils'
 }
 
 { #category : #rendering }

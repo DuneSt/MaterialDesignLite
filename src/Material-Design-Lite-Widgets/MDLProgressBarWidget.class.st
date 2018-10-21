@@ -31,7 +31,7 @@ Class {
 		'refreshTime',
 		'hide'
 	],
-	#category : 'Material-Design-Lite-Widgets-Loading'
+	#category : #'Material-Design-Lite-Widgets-Loading'
 }
 
 { #category : #'instance creation' }

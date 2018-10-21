@@ -7,7 +7,7 @@ Screen to render root dialog examples.
 Class {
 	#name : #MDLRootDialogScreen,
 	#superclass : #MDLExtensionsDemo,
-	#category : 'Material-Design-Lite-Demo-Extensions'
+	#category : #'Material-Design-Lite-Demo-Extensions'
 }
 
 { #category : #accessing }

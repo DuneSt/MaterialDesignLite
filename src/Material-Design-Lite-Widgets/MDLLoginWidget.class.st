@@ -18,7 +18,7 @@ Class {
 		'cancelLabel',
 		'cancelCallback'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : #'Material-Design-Lite-Widgets'
 }
 
 { #category : #accessing }

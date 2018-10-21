@@ -7,5 +7,5 @@ I am an abstract class whose sole goal is to group widgets demos as my subclasse
 Class {
 	#name : #MDLWidgetDemo,
 	#superclass : #MDLDemoScreen,
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }

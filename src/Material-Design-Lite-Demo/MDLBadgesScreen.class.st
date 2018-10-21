@@ -7,7 +7,7 @@ There are 2 different kinds of badges:  text or icon badges.
 Class {
 	#name : #MDLBadgesScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
 
 { #category : #accessing }

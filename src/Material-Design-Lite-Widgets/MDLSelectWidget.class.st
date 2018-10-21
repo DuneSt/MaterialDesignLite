@@ -79,7 +79,7 @@ Class {
 		'customizationBlock',
 		'entryTooltip'
 	],
-	#category : 'Material-Design-Lite-Widgets-Form'
+	#category : #'Material-Design-Lite-Widgets-Form'
 }
 
 { #category : #'instance creation' }

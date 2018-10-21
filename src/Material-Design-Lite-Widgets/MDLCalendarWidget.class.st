@@ -4,7 +4,7 @@ Please use MDLFlatDatePicker instead.
 Class {
 	#name : #MDLCalendarWidget,
 	#superclass : #MDLFlatDatePicker,
-	#category : 'Material-Design-Lite-Widgets-Calendar'
+	#category : #'Material-Design-Lite-Widgets-Calendar'
 }
 
 { #category : #deprecation }

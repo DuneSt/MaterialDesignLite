@@ -10,7 +10,7 @@ Class {
 		'positiveCount',
 		'negativeCount'
 	],
-	#category : 'Material-Design-Lite-Widgets-Poll'
+	#category : #'Material-Design-Lite-Widgets-Poll'
 }
 
 { #category : #accessing }

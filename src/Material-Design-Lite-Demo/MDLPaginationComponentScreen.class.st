@@ -11,7 +11,7 @@ Class {
 		'paginationWidget',
 		'paginationWidget2'
 	],
-	#category : 'Material-Design-Lite-Demo-Extensions'
+	#category : #'Material-Design-Lite-Demo-Extensions'
 }
 
 { #category : #accessing }

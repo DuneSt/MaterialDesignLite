@@ -7,7 +7,7 @@ I am an abstract component. My subclasses represent the main content of the MDLD
 Class {
 	#name : #MDLDemoPage,
 	#superclass : #MDLDemoComponent,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #testing }

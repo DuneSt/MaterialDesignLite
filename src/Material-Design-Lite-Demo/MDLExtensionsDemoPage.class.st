@@ -7,7 +7,7 @@ Page containing all the MDL for seaside extensions examples.
 Class {
 	#name : #MDLExtensionsDemoPage,
 	#superclass : #MDLDemoPageWithList,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

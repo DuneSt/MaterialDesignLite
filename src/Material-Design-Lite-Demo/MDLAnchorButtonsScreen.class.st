@@ -7,7 +7,7 @@ I'm the screen representing the anchor buttons
 Class {
 	#name : #MDLAnchorButtonsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
 
 { #category : #sections }

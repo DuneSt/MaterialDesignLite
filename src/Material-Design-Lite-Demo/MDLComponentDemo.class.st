@@ -7,5 +7,5 @@ I am an abstract class whose sole goal is to group components demos as my subcla
 Class {
 	#name : #MDLComponentDemo,
 	#superclass : #MDLDemoScreen,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }

@@ -5,7 +5,7 @@ You can use all methods of MDLTextFieldWidget on me.
 Class {
 	#name : #MDLTextAreaWidget,
 	#superclass : #MDLTextFieldWidget,
-	#category : 'Material-Design-Lite-Widgets-Form'
+	#category : #'Material-Design-Lite-Widgets-Form'
 }
 
 { #category : #options }

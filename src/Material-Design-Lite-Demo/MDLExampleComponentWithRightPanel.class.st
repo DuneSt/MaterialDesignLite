@@ -22,7 +22,7 @@ Class {
 		'toolbar',
 		'rightPanel'
 	],
-	#category : 'Material-Design-Lite-Demo-Utils'
+	#category : #'Material-Design-Lite-Demo-Utils'
 }
 
 { #category : #accessing }

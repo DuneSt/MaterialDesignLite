@@ -9,7 +9,7 @@ I provide some conveniance methods to be used during the redering of the demo.
 Class {
 	#name : #MDLDemoComponent,
 	#superclass : #WAComponent,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #convenience }

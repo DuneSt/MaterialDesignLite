@@ -4,7 +4,7 @@ Please use MDLDatePicker instead.
 Class {
 	#name : #MDLCalendarCardWidget,
 	#superclass : #MDLDatePicker,
-	#category : 'Material-Design-Lite-Widgets-Calendar'
+	#category : #'Material-Design-Lite-Widgets-Calendar'
 }
 
 { #category : #deprecation }

@@ -7,7 +7,7 @@ Screen to render resizable left panels examples.
 Class {
 	#name : #MDLLeftPanelScreen,
 	#superclass : #MDLExtensionsDemo,
-	#category : 'Material-Design-Lite-Demo-Extensions'
+	#category : #'Material-Design-Lite-Demo-Extensions'
 }
 
 { #category : #accessing }
