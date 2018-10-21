@@ -31,7 +31,7 @@ Example
 Class {
 	#name : #MDLMenu,
 	#superclass : #WAUnorderedListTag,
-	#category : 'Material-Design-Lite-Components-Nav'
+	#category : #'Material-Design-Lite-Components-Nav'
 }
 
 { #category : #options }

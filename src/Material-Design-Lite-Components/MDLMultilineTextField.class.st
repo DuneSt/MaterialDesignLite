@@ -7,7 +7,7 @@ The Material Design Lite (MDL) text field component is an enhanced version of th
 Class {
 	#name : #MDLMultilineTextField,
 	#superclass : #MDLTextArea,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #deprecation }

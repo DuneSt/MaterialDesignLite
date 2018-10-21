@@ -6,7 +6,7 @@ I am a Trait defining the possible options for Material Design button like brush
 "
 Trait {
 	#name : #TMDLButton,
-	#category : 'Material-Design-Lite-Components-Buttons'
+	#category : #'Material-Design-Lite-Components-Buttons'
 }
 
 { #category : #options }

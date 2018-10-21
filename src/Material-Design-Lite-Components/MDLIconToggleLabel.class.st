@@ -18,7 +18,7 @@ Example
 Class {
 	#name : #MDLIconToggleLabel,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #deprecation }

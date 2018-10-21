@@ -20,7 +20,7 @@ Example
 Class {
 	#name : #MDLSnackbarAction,
 	#superclass : #WAButtonTag,
-	#category : 'Material-Design-Lite-Components-Snackbar'
+	#category : #'Material-Design-Lite-Components-Snackbar'
 }
 
 { #category : #initialization }

@@ -30,7 +30,7 @@ Example
 Class {
 	#name : #MDLMegaFooterHeading,
 	#superclass : #WAHeadingTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

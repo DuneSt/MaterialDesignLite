@@ -7,7 +7,7 @@ I am a brush to create a logo inside a footer.
 Class {
 	#name : #MDLFooterLogo,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #deprecation }

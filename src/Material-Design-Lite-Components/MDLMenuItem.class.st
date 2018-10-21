@@ -31,7 +31,7 @@ Example
 Class {
 	#name : #MDLMenuItem,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Nav'
+	#category : #'Material-Design-Lite-Components-Nav'
 }
 
 { #category : #options }

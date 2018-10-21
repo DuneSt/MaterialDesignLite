@@ -31,7 +31,7 @@ Example
 Class {
 	#name : #MDLTabsTab,
 	#superclass : #WAAnchorTag,
-	#category : 'Material-Design-Lite-Components-Nav'
+	#category : #'Material-Design-Lite-Components-Nav'
 }
 
 { #category : #initialization }

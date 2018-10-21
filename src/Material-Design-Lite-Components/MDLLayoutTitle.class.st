@@ -25,7 +25,7 @@ Example
 Class {
 	#name : #MDLLayoutTitle,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Layout'
+	#category : #'Material-Design-Lite-Components-Layout'
 }
 
 { #category : #initialization }

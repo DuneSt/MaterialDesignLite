@@ -22,7 +22,7 @@ Example
 Class {
 	#name : #MDLDialog,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Dialog'
+	#category : #'Material-Design-Lite-Components-Dialog'
 }
 
 { #category : #'javascript generation' }

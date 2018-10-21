@@ -30,7 +30,7 @@ Example
 Class {
 	#name : #MDLMegaFooterTopSection,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

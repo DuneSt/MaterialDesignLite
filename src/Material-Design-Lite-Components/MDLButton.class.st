@@ -21,7 +21,7 @@ Class {
 	#instVars : [
 		'tag'
 	],
-	#category : 'Material-Design-Lite-Components-Buttons'
+	#category : #'Material-Design-Lite-Components-Buttons'
 }
 
 { #category : #converting }

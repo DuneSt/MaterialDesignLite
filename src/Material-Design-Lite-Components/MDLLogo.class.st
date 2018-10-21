@@ -7,7 +7,7 @@ I am a brush to create a MDL logo.
 Class {
 	#name : #MDLLogo,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

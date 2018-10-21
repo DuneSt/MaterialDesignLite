@@ -23,3 +23,12 @@ Two renaming happened on the date picker present in MDL widgets in order to use 
 
 The behavior of those components is still the same as before.
 
+
+## WATagBrush>>#mdlCardTitle is now named #mdlCardTitleContainer
+
+Two methods around the MDL card titles were renamed to be coherent with the naming convention of MDL.
+
+- `WATagBrush>>#mdlCardTitle` is now `WATagBrush>>#mdlCardTitleContainer`
+- `WATagBrush>>#mdlCardTitle:` is now `WATagBrush>>#mdlCardTitleContainer:`
+
+ 

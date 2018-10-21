@@ -7,7 +7,7 @@ I am a brush to create a medias in a card.
 Class {
 	#name : #MDLCardMedia,
 	#superclass : #MDLCardInnerDiv,
-	#category : 'Material-Design-Lite-Components-Cards'
+	#category : #'Material-Design-Lite-Components-Cards'
 }
 
 { #category : #initialization }

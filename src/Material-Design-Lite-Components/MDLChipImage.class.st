@@ -19,7 +19,7 @@ Example
 Class {
 	#name : #MDLChipImage,
 	#superclass : #WAImageTag,
-	#category : 'Material-Design-Lite-Components-Chips'
+	#category : #'Material-Design-Lite-Components-Chips'
 }
 
 { #category : #public }

@@ -7,7 +7,7 @@ I am a brush to create an icon for mdl layouts.
 Class {
 	#name : #MDLLayoutIcon,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Layout'
+	#category : #'Material-Design-Lite-Components-Layout'
 }
 
 { #category : #initialization }

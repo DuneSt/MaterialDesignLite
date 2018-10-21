@@ -19,7 +19,7 @@ Example
 Class {
 	#name : #MDLSwitchLabel,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

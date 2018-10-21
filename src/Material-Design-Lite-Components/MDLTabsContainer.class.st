@@ -31,7 +31,7 @@ Example
 Class {
 	#name : #MDLTabsContainer,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Nav'
+	#category : #'Material-Design-Lite-Components-Nav'
 }
 
 { #category : #initialization }

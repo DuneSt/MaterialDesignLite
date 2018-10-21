@@ -16,7 +16,7 @@ Example
 Class {
 	#name : #MDLIconBadge,
 	#superclass : #MDLBadge,
-	#category : 'Material-Design-Lite-Components-Badge'
+	#category : #'Material-Design-Lite-Components-Badge'
 }
 
 { #category : #'initialize-release' }

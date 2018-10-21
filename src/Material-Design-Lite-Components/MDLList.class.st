@@ -24,7 +24,7 @@ Example
 Class {
 	#name : #MDLList,
 	#superclass : #WAUnorderedListTag,
-	#category : 'Material-Design-Lite-Components-List'
+	#category : #'Material-Design-Lite-Components-List'
 }
 
 { #category : #initialization }

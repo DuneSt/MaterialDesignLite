@@ -22,7 +22,7 @@ Example
 Class {
 	#name : #MDLDialogTitle,
 	#superclass : #WAHeadingTag,
-	#category : 'Material-Design-Lite-Components-Dialog'
+	#category : #'Material-Design-Lite-Components-Dialog'
 }
 
 { #category : #initialization }

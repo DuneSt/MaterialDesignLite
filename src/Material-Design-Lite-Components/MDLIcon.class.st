@@ -8,7 +8,7 @@ Material design system icons are simple, modern, friendly, and sometimes quirky.
 Class {
 	#name : #MDLIcon,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Core'
+	#category : #'Material-Design-Lite-Components-Core'
 }
 
 { #category : #options }

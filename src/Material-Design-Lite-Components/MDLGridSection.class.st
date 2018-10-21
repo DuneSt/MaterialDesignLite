@@ -43,7 +43,7 @@ Example
 Class {
 	#name : #MDLGridSection,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Layout'
+	#category : #'Material-Design-Lite-Components-Layout'
 }
 
 { #category : #deprecation }

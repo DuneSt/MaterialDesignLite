@@ -102,18 +102,6 @@ WAHtmlCanvas >> mdlCardTextContainer: aBlock [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlCardTitle [
-	self deprecated: 'Use #mdlCardTitleContainer instead.' transformWith: '`@receiver mdlCardTitle' -> '`@receiver mdlCardTitleContainer'.
-	^ self mdlCardTitleContainer
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlCardTitle: aBlock [
-	self deprecated: 'Use #mdlCardTitleContainer: instead.' transformWith: '`@receiver mdlCardTitle: `@statements' -> '`@receiver mdlCardTitleContainer: `@statements'.
-	^ self mdlCardTitleContainer: aBlock
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlCardTitleContainer [
 	^ self brush: MDLCardTitleContainer new
 ]

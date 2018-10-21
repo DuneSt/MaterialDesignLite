@@ -18,7 +18,7 @@ Example
 Class {
 	#name : #MDLIconToggleContainer,
 	#superclass : #WALabelTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #'initialize-release' }

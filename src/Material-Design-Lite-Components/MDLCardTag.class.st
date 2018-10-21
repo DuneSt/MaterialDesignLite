@@ -24,7 +24,7 @@ Example
 Class {
 	#name : #MDLCardTag,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Cards'
+	#category : #'Material-Design-Lite-Components-Cards'
 }
 
 { #category : #initialization }

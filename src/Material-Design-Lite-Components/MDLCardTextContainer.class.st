@@ -36,7 +36,7 @@ Example
 Class {
 	#name : #MDLCardTextContainer,
 	#superclass : #MDLCardInnerDiv,
-	#category : 'Material-Design-Lite-Components-Cards'
+	#category : #'Material-Design-Lite-Components-Cards'
 }
 
 { #category : #initialization }

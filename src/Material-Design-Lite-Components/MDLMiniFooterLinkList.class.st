@@ -17,7 +17,7 @@ Example
 Class {
 	#name : #MDLMiniFooterLinkList,
 	#superclass : #WAUnorderedListTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

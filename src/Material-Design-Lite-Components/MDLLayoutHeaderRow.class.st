@@ -25,7 +25,7 @@ Example
 Class {
 	#name : #MDLLayoutHeaderRow,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Layout'
+	#category : #'Material-Design-Lite-Components-Layout'
 }
 
 { #category : #initialization }

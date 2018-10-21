@@ -29,7 +29,7 @@ Example
 Class {
 	#name : #MDLLayoutTabPanel,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Layout'
+	#category : #'Material-Design-Lite-Components-Layout'
 }
 
 { #category : #initialization }
