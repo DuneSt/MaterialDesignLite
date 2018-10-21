@@ -42,5 +42,10 @@ The method `MDLMenuItem>>disable` is now removed. You can use the method `disabl
 ## MDLApplication>>applicationName is now removed
 
 It was possible before to set a variabel `#applicationName` in a MDLApplication. But this name was used nowhere in the abstract class. It is now removed. If you wish to get this variable in your application you can just create a new variable in you subclass.
- 
+
+## MDLFooterLogo is now removed
+
+The class `MDLFooterLogo` is now removed since it is a duplication of `MDLLogo`. This change should not impact the users since they should use brushes instead of referencing the class directly.
+
+
 
