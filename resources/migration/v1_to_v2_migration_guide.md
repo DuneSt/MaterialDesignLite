@@ -57,3 +57,6 @@ Is it now removed in favor of direct use of checkbox brushes as shown in the dem
 
 The class `MDLIconToggleLabel` is now removed. It can be replace by the usage of a `MDLIcon` with the `toggle` option. 
 
+## Removal of MDLMultilineTextField
+
+The class `MDLMultilineTextField` is now removed. It can be replaced by `MDLTextArea` that is the equivalent with a name closer to HTML5 standard.
