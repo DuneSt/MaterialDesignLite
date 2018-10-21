@@ -30,7 +30,7 @@ Example
 Class {
 	#name : #MDLMegaFooterHeadingCheckBox,
 	#superclass : #WACheckboxTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

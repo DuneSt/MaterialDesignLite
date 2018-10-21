@@ -17,7 +17,7 @@ Class {
 	#instVars : [
 		'rootComponent'
 	],
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

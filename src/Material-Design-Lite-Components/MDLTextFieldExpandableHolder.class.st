@@ -23,7 +23,7 @@ Example
 Class {
 	#name : #MDLTextFieldExpandableHolder,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

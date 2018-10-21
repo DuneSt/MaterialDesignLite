@@ -30,7 +30,7 @@ Example
 Class {
 	#name : #MDLMegaFooterLinkList,
 	#superclass : #WAUnorderedListTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

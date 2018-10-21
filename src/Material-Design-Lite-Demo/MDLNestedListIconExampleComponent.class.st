@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'isRepresentingClass'
 	],
-	#category : 'Material-Design-Lite-Demo-Utils'
+	#category : #'Material-Design-Lite-Demo-Utils'
 }
 
 { #category : #'instance creation' }

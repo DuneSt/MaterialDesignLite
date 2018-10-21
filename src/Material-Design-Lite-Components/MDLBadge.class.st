@@ -15,7 +15,7 @@ Example
 Class {
 	#name : #MDLBadge,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Badge'
+	#category : #'Material-Design-Lite-Components-Badge'
 }
 
 { #category : #options }

@@ -10,7 +10,7 @@ Public API and Key Messages
 Class {
 	#name : #MDLAbstractFilter,
 	#superclass : #Object,
-	#category : 'Material-Design-Lite-Widgets-List'
+	#category : #'Material-Design-Lite-Widgets-List'
 }
 
 { #category : #accessing }

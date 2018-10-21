@@ -7,7 +7,7 @@ Page containing all the MDL for seaside components examples.
 Class {
 	#name : #MDLComponentsDemoPage,
 	#superclass : #MDLDemoPageWithList,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

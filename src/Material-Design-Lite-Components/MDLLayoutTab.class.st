@@ -29,7 +29,7 @@ Example
 Class {
 	#name : #MDLLayoutTab,
 	#superclass : #WAAnchorTag,
-	#category : 'Material-Design-Lite-Components-Layout'
+	#category : #'Material-Design-Lite-Components-Layout'
 }
 
 { #category : #initialization }

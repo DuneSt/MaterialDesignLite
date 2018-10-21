@@ -20,7 +20,7 @@ Example
 Class {
 	#name : #MDLSnackbarText,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Snackbar'
+	#category : #'Material-Design-Lite-Components-Snackbar'
 }
 
 { #category : #initialization }

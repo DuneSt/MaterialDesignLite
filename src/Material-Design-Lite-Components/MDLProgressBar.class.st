@@ -13,7 +13,7 @@ Example
 Class {
 	#name : #MDLProgressBar,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Loading'
+	#category : #'Material-Design-Lite-Components-Loading'
 }
 
 { #category : #options }

@@ -64,18 +64,6 @@ MDLCardWidget >> addTextContainer: anObject class: cssClasses [
 		addComponentOrBlock: (MDLCardTextContainerWidget newWithContent: anObject class: cssClasses)
 ]
 
-{ #category : #adding }
-MDLCardWidget >> addTitle: aString level: aNumber [
-	self deprecated: 'Use #title:level: instead'.
-	self title: aString level: aNumber
-]
-
-{ #category : #adding }
-MDLCardWidget >> addTitle: aString level: aNumber class: cssClasses [
-	self deprecated: 'Use #title:level:class: instead'.
-	self title: aString level: aNumber class: cssClasses
-]
-
 { #category : #accessing }
 MDLCardWidget >> cardActions [
 	^ cardActions

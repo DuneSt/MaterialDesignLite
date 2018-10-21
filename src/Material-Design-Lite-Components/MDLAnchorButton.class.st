@@ -20,7 +20,7 @@ Class {
 	#superclass : #WAAnchorTag,
 	#traits : 'TMDLButton',
 	#classTraits : 'TMDLButton classTrait',
-	#category : 'Material-Design-Lite-Components-Buttons'
+	#category : #'Material-Design-Lite-Components-Buttons'
 }
 
 { #category : #initialization }

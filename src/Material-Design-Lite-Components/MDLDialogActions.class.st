@@ -29,7 +29,7 @@ Example
 Class {
 	#name : #MDLDialogActions,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Dialog'
+	#category : #'Material-Design-Lite-Components-Dialog'
 }
 
 { #category : #options }

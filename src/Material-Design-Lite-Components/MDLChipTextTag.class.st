@@ -7,7 +7,7 @@ I am just some text inside a MDLChip.
 Class {
 	#name : #MDLChipTextTag,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Chips'
+	#category : #'Material-Design-Lite-Components-Chips'
 }
 
 { #category : #initialization }

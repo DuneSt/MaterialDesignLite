@@ -17,7 +17,7 @@ Example
 Class {
 	#name : #MDLMiniFooterSocialButton,
 	#superclass : #WAButtonTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

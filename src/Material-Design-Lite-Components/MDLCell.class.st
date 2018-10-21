@@ -50,7 +50,7 @@ Example
 Class {
 	#name : #MDLCell,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Layout'
+	#category : #'Material-Design-Lite-Components-Layout'
 }
 
 { #category : #'options - positionning' }

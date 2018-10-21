@@ -66,7 +66,7 @@ Class {
 		'listMaxSize',
 		'childrenSortBlock'
 	],
-	#category : 'Material-Design-Lite-Widgets-List'
+	#category : #'Material-Design-Lite-Widgets-List'
 }
 
 { #category : #'instance creation' }

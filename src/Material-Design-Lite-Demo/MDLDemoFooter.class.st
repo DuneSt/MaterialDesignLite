@@ -7,7 +7,7 @@ A footer for the MDL for seaside demo with all the useful links.
 Class {
 	#name : #MDLDemoFooter,
 	#superclass : #MDLDemoComponent,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

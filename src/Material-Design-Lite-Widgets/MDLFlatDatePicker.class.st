@@ -10,7 +10,7 @@ Class {
 		'callback',
 		'onCompleteScript'
 	],
-	#category : 'Material-Design-Lite-Widgets-Calendar'
+	#category : #'Material-Design-Lite-Widgets-Calendar'
 }
 
 { #category : #accessing }

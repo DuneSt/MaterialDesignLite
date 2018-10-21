@@ -17,7 +17,7 @@ Example
 Class {
 	#name : #MDLMiniFooterLeftSection,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Footer'
+	#category : #'Material-Design-Lite-Components-Footer'
 }
 
 { #category : #initialization }

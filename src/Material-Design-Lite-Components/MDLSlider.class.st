@@ -15,7 +15,7 @@ Example
 Class {
 	#name : #MDLSlider,
 	#superclass : #WARangeInputTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

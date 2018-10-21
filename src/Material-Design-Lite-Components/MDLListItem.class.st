@@ -24,7 +24,7 @@ Example
 Class {
 	#name : #MDLListItem,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-List'
+	#category : #'Material-Design-Lite-Components-List'
 }
 
 { #category : #initialization }

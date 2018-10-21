@@ -25,7 +25,7 @@ Example
 Class {
 	#name : #MDLNavigationLink,
 	#superclass : #WAAnchorTag,
-	#category : 'Material-Design-Lite-Components-Nav'
+	#category : #'Material-Design-Lite-Components-Nav'
 }
 
 { #category : #options }

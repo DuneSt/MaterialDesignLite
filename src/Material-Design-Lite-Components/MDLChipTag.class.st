@@ -77,7 +77,7 @@ Class {
 	#instVars : [
 		'hasContactTag'
 	],
-	#category : 'Material-Design-Lite-Components-Chips'
+	#category : #'Material-Design-Lite-Components-Chips'
 }
 
 { #category : #private }

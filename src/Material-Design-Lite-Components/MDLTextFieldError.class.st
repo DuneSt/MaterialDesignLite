@@ -20,7 +20,7 @@ Example
 Class {
 	#name : #MDLTextFieldError,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

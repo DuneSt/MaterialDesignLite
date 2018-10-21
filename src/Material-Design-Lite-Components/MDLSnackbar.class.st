@@ -33,7 +33,7 @@ Class {
 		'actionText',
 		'action'
 	],
-	#category : 'Material-Design-Lite-Components-Snackbar'
+	#category : #'Material-Design-Lite-Components-Snackbar'
 }
 
 { #category : #accessing }

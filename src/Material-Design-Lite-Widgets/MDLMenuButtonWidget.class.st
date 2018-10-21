@@ -41,7 +41,7 @@ Class {
 		'sortBlock',
 		'buttonContent'
 	],
-	#category : 'Material-Design-Lite-Widgets-Menu'
+	#category : #'Material-Design-Lite-Widgets-Menu'
 }
 
 { #category : #'instance creation' }

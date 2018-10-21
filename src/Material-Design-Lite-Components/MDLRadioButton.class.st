@@ -20,7 +20,7 @@ Example
 Class {
 	#name : #MDLRadioButton,
 	#superclass : #WARadioButtonTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

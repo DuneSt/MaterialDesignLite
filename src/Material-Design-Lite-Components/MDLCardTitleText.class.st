@@ -30,7 +30,7 @@ Example
 Class {
 	#name : #MDLCardTitleText,
 	#superclass : #WAHeadingTag,
-	#category : 'Material-Design-Lite-Components-Cards'
+	#category : #'Material-Design-Lite-Components-Cards'
 }
 
 { #category : #initialization }

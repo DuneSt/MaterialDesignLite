@@ -16,7 +16,7 @@ Example
 Class {
 	#name : #MDLTextFieldInput,
 	#superclass : #WAFormInputTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

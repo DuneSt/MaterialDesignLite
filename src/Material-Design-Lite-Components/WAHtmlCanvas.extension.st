@@ -102,18 +102,6 @@ WAHtmlCanvas >> mdlCardTextContainer: aBlock [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlCardTitle [
-	self deprecated: 'Use #mdlCardTitleContainer instead.' transformWith: '`@receiver mdlCardTitle' -> '`@receiver mdlCardTitleContainer'.
-	^ self mdlCardTitleContainer
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlCardTitle: aBlock [
-	self deprecated: 'Use #mdlCardTitleContainer: instead.' transformWith: '`@receiver mdlCardTitle: `@statements' -> '`@receiver mdlCardTitleContainer: `@statements'.
-	^ self mdlCardTitleContainer: aBlock
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlCardTitleContainer [
 	^ self brush: MDLCardTitleContainer new
 ]
@@ -257,14 +245,6 @@ WAHtmlCanvas >> mdlChipContact: aBlock [
 { #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlChipImage [
 	^ self brush: MDLChipImage new
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlChipImage: aBlock [
-	self deprecated: 'Chip image should not have a content but an URL instead. Remove it in the next majore version.'.
-	^ self mdlChipImage
-		with: aBlock;
-		yourself
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
@@ -480,20 +460,6 @@ WAHtmlCanvas >> mdlGrid [
 { #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlGrid: aBlock [
 	^ self mdlGrid
-		with: aBlock;
-		yourself
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlGridSection [
-	self deprecated: 'Use #beGrid on a section brush'.
-	^ self brush: MDLGridSection new 
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlGridSection:  aBlock [
-	self deprecated: 'Use #beGrid of a section brush'.
-	^ self mdlGridSection
 		with: aBlock;
 		yourself
 ]
@@ -899,22 +865,6 @@ WAHtmlCanvas >> mdlMiniFooterSocialButton: aBlock [
 	^ self mdlMiniFooterSocialButton
 		with: aBlock;
 		yourself
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlMultilineTextField [
-	(self isOnGemstone or: [ SystemVersion current major < 6 ])
-		ifTrue: [ self deprecated: 'Uses #mdlTextArea' ]
-		ifFalse: [ self deprecated: 'Uses #mdlTextArea' transformWith: '`@receiver mdlMultilineTextField' -> '`@receiver mdlTextArea' ].
-	^ self mdlTextArea
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlMultilineTextField: text [
-	(self isOnGemstone or: [ SystemVersion current major < 6 ])
-		ifTrue: [ self deprecated: 'Uses #mdlTextArea:' ]
-		ifFalse: [ self deprecated: 'Uses #mdlTextArea:' transformWith: '`@receiver mdlMultilineTextField: `@statements1' -> '`@receiver mdlTextArea: `@statements1' ].
-	^ self mdlTextArea: text
 ]
 
 { #category : #'*Material-Design-Lite-Components' }

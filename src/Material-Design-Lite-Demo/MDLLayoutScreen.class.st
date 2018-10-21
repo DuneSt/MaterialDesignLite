@@ -6,7 +6,7 @@ See Navigation, Tabs, Footer and Grid sections for more informations
 Class {
 	#name : #MDLLayoutScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
 
 { #category : #accessing }

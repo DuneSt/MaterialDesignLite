@@ -7,7 +7,7 @@ Illustrate the use of the resizable right panel that is by default folded.
 Class {
 	#name : #MDLExampleComponentWithRightPanelFolded,
 	#superclass : #MDLExampleComponentWithRightPanel,
-	#category : 'Material-Design-Lite-Demo-Utils'
+	#category : #'Material-Design-Lite-Demo-Utils'
 }
 
 { #category : #accessing }

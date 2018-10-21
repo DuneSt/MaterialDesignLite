@@ -25,7 +25,7 @@ Example
 Class {
 	#name : #MDLNavigation,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Nav'
+	#category : #'Material-Design-Lite-Components-Nav'
 }
 
 { #category : #initialization }

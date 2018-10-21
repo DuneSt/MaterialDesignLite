@@ -29,7 +29,7 @@ Example
 Class {
 	#name : #MDLChipInitial,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Chips'
+	#category : #'Material-Design-Lite-Components-Chips'
 }
 
 { #category : #options }

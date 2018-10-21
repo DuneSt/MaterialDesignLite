@@ -10,7 +10,7 @@ Class {
 	#instVars : [
 		'iconName'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : #'Material-Design-Lite-Widgets'
 }
 
 { #category : #accessing }

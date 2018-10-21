@@ -18,7 +18,7 @@ Example
 Class {
 	#name : #MDLTooltip,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Tooltips'
+	#category : #'Material-Design-Lite-Components-Tooltips'
 }
 
 { #category : #options }

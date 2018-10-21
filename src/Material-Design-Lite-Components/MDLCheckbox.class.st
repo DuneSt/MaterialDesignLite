@@ -18,7 +18,7 @@ Example
 Class {
 	#name : #MDLCheckbox,
 	#superclass : #WACheckboxTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

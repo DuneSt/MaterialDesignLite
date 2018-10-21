@@ -7,7 +7,7 @@ Page containing all the MDL for seaside widgets examples.
 Class {
 	#name : #MDLWidgetsDemoPage,
 	#superclass : #MDLDemoPageWithList,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

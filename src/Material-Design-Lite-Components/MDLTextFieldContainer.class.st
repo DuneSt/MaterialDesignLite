@@ -16,7 +16,7 @@ Example
 Class {
 	#name : #MDLTextFieldContainer,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #options }

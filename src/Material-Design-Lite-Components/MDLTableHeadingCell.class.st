@@ -27,7 +27,7 @@ Example
 Class {
 	#name : #MDLTableHeadingCell,
 	#superclass : #WATableHeadingTag,
-	#category : 'Material-Design-Lite-Components-Tables'
+	#category : #'Material-Design-Lite-Components-Tables'
 }
 
 { #category : #initialization }

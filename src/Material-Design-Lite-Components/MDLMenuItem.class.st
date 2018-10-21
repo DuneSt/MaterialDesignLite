@@ -31,14 +31,8 @@ Example
 Class {
 	#name : #MDLMenuItem,
 	#superclass : #WATagBrush,
-	#category : 'Material-Design-Lite-Components-Nav'
+	#category : #'Material-Design-Lite-Components-Nav'
 }
-
-{ #category : #options }
-MDLMenuItem >> disable [
-	self deprecated: 'Use #disabled instead' transformWith: '`@receiver disable' -> '`@receiver disabled'.
-	self disabled
-]
 
 { #category : #options }
 MDLMenuItem >> disabled [

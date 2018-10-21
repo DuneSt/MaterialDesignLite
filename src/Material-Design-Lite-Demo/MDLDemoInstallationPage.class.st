@@ -7,7 +7,7 @@ A simble page explaining how to start using MDL for Seaside.
 Class {
 	#name : #MDLDemoInstallationPage,
 	#superclass : #MDLDemoPage,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

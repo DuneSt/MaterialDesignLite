@@ -18,7 +18,7 @@ Example
 Class {
 	#name : #MDLTextArea,
 	#superclass : #WATextAreaTag,
-	#category : 'Material-Design-Lite-Components-Forms'
+	#category : #'Material-Design-Lite-Components-Forms'
 }
 
 { #category : #initialization }

@@ -9,7 +9,7 @@ Class {
 	#superclass : #WAComponent,
 	#traits : 'TWithRootDialogComponent',
 	#classTraits : 'TWithRootDialogComponent classTrait',
-	#category : 'Material-Design-Lite-Demo-Utils'
+	#category : #'Material-Design-Lite-Demo-Utils'
 }
 
 { #category : #rendering }

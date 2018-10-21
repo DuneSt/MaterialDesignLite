@@ -12,7 +12,7 @@ Class {
 		'selectedBranch',
 		'selectedElement'
 	],
-	#category : 'Material-Design-Lite-Widgets-List'
+	#category : #'Material-Design-Lite-Widgets-List'
 }
 
 { #category : #'instance creation' }

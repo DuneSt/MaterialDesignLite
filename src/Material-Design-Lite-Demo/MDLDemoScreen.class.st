@@ -11,7 +11,7 @@ Title, Description and Icon must be implemented in subclasses.
 Class {
 	#name : #MDLDemoScreen,
 	#superclass : #MDLScreen,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

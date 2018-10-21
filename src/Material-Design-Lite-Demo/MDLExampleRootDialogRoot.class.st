@@ -9,7 +9,7 @@ Class {
 	#superclass : #WAComponent,
 	#traits : 'TRootDialogRenderer',
 	#classTraits : 'TRootDialogRenderer classTrait',
-	#category : 'Material-Design-Lite-Demo-Utils'
+	#category : #'Material-Design-Lite-Demo-Utils'
 }
 
 { #category : #rendering }

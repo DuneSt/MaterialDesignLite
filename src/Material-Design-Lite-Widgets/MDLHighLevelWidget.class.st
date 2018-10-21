@@ -9,7 +9,7 @@ Class {
 	#instVars : [
 		'properties'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : #'Material-Design-Lite-Widgets'
 }
 
 { #category : #accessing }

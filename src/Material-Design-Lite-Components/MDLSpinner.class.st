@@ -12,7 +12,7 @@ Example
 Class {
 	#name : #MDLSpinner,
 	#superclass : #MDLDivTag,
-	#category : 'Material-Design-Lite-Components-Loading'
+	#category : #'Material-Design-Lite-Components-Loading'
 }
 
 { #category : #options }

@@ -19,7 +19,7 @@ Class {
 		'middleSection',
 		'bottomSection'
 	],
-	#category : 'Material-Design-Lite-Widgets-Footer'
+	#category : #'Material-Design-Lite-Widgets-Footer'
 }
 
 { #category : #'public api' }

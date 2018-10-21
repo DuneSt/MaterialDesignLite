@@ -79,7 +79,7 @@ Class {
 		'customizationBlock',
 		'entryTooltip'
 	],
-	#category : 'Material-Design-Lite-Widgets-Form'
+	#category : #'Material-Design-Lite-Widgets-Form'
 }
 
 { #category : #'instance creation' }
@@ -193,14 +193,6 @@ MDLSelectWidget >> customizationBlock [
 { #category : #accessing }
 MDLSelectWidget >> customizationBlock: anObject [
 	customizationBlock := anObject
-]
-
-{ #category : #'public api' }
-MDLSelectWidget >> defaultSorting [
-	self
-		deprecated:
-			'This is a bad name because default means the it is activate by default, but this is not. Use #standardSorting instead.'.
-	self standardSorting
 ]
 
 { #category : #accessing }

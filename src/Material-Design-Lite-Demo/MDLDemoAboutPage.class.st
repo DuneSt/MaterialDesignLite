@@ -7,7 +7,7 @@ A simple page describing what is MDL for Seaside.
 Class {
 	#name : #MDLDemoAboutPage,
 	#superclass : #MDLDemoPage,
-	#category : 'Material-Design-Lite-Demo-Core'
+	#category : #'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #accessing }

@@ -4,7 +4,7 @@ I am a date picker embebded in a MDLCard for a better display.
 Class {
 	#name : #MDLDatePicker,
 	#superclass : #MDLFlatDatePicker,
-	#category : 'Material-Design-Lite-Widgets-Calendar'
+	#category : #'Material-Design-Lite-Widgets-Calendar'
 }
 
 { #category : #accessing }
