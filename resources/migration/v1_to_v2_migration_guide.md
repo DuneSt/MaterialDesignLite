@@ -47,5 +47,9 @@ It was possible before to set a variabel `#applicationName` in a MDLApplication.
 
 The class `MDLFooterLogo` is now removed since it is a duplication of `MDLLogo`. This change should not impact the users since they should use brushes instead of referencing the class directly.
 
+## Removal of MDLCheckboxWidget
 
+`MDLCheckboxWidget` was an attempt to make the usage of checkboxes easier with MDL for Seaside. In the end it was not simpler than using brushes directly and was missing features. 
+
+Is it now removed in favor of direct use of checkbox brushes as shown in the demo.
 
