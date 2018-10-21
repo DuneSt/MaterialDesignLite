@@ -69,7 +69,7 @@ BaselineOfMaterialDesignLite >> magritte: spec [
 BaselineOfMaterialDesignLite >> materialColors: spec [
 	spec
 		baseline: 'MaterialColors'
-		with: [ spec repository: 'github://DuneSt/MaterialColors:v1.x.x/src' ]
+		with: [ spec repository: 'github://DuneSt/MaterialColors:v2.x.x/src' ]
 ]
 
 { #category : #accessing }
