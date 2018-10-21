@@ -35,4 +35,7 @@ Two methods around the MDL card titles were renamed to be coherent with the nami
 
 The method `MDLMenuItem>>disable` is now removed. You can use the method `disabled` that is more coherent with Seaside API.
 
+## MDLGridSection is now removed
+
+`MDLGridSection` is now removed from MDL for Seaside. To replace it you can directly call the method `beGrid` on a section brush.
  

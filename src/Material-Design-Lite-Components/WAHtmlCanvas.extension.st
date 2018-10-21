@@ -473,20 +473,6 @@ WAHtmlCanvas >> mdlGrid: aBlock [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlGridSection [
-	self deprecated: 'Use #beGrid on a section brush'.
-	^ self brush: MDLGridSection new 
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlGridSection:  aBlock [
-	self deprecated: 'Use #beGrid of a section brush'.
-	^ self mdlGridSection
-		with: aBlock;
-		yourself
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlIcon [
 	"Return a MDL glyph icon"
 
