@@ -60,3 +60,9 @@ The class `MDLIconToggleLabel` is now removed. It can be replace by the usage of
 ## Removal of MDLMultilineTextField
 
 The class `MDLMultilineTextField` is now removed. It can be replaced by `MDLTextArea` that is the equivalent with a name closer to HTML5 standard.
+
+## Cleaning of MDLCardWidget API
+
+Some methods are now renamed in `MDLCardWidget` :
+- `addTitle:level:` is now `title:level:`
+- `addTitle:level:class:` is now `title:level:class:`
