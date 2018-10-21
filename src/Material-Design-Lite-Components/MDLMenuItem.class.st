@@ -35,12 +35,6 @@ Class {
 }
 
 { #category : #options }
-MDLMenuItem >> disable [
-	self deprecated: 'Use #disabled instead' transformWith: '`@receiver disable' -> '`@receiver disabled'.
-	self disabled
-]
-
-{ #category : #options }
 MDLMenuItem >> disabled [
 	self attributeAt: 'disabled' put: 'true'
 ]

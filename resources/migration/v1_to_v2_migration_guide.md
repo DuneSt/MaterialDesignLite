@@ -31,4 +31,8 @@ Two methods around the MDL card titles were renamed to be coherent with the nami
 - `WATagBrush>>#mdlCardTitle` is now `WATagBrush>>#mdlCardTitleContainer`
 - `WATagBrush>>#mdlCardTitle:` is now `WATagBrush>>#mdlCardTitleContainer:`
 
+## MDLMenuItem>>disable is now removed
+
+The method `MDLMenuItem>>disable` is now removed. You can use the method `disabled` that is more coherent with Seaside API.
+
  
