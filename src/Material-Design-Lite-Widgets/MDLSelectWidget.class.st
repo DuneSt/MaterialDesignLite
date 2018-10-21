@@ -195,14 +195,6 @@ MDLSelectWidget >> customizationBlock: anObject [
 	customizationBlock := anObject
 ]
 
-{ #category : #'public api' }
-MDLSelectWidget >> defaultSorting [
-	self
-		deprecated:
-			'This is a bad name because default means the it is activate by default, but this is not. Use #standardSorting instead.'.
-	self standardSorting
-]
-
 { #category : #accessing }
 MDLSelectWidget >> defaultValueBasedOn: aLabelMap [
 	(self selectedObject isNil and: [ self possibilities isEmpty ]) ifTrue: [ ^ nil ].

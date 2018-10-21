@@ -41,18 +41,6 @@ MDLSortableTableHeader >> currentState: anObject [
 	currentState := anObject
 ]
 
-{ #category : #accessing }
-MDLSortableTableHeader >> element [
-	self deprecated: 'Uses #cells instead' transformWith: '`@receiver element' -> '`@receiver cells'.
-	^ self cells
-]
-
-{ #category : #accessing }
-MDLSortableTableHeader >> element: aCollection [
-	self deprecated: 'Uses #cells: instead' transformWith: '`@receiver element: `@statements1' -> '`@receiver cells: `@statements1'.
-	^ self cells: aCollection
-]
-
 { #category : #'state handling' }
 MDLSortableTableHeader >> goToNextState [
 	self currentState: self currentState nextState

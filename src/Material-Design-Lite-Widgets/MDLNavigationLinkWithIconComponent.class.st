@@ -26,12 +26,6 @@ MDLNavigationLinkWithIconComponent >> icon [
 ]
 
 { #category : #accessing }
-MDLNavigationLinkWithIconComponent >> icon: anObject [
-	self deprecated: 'Should be removed, use #iconUrl: instead'.
-	icon := anObject
-]
-
-{ #category : #accessing }
 MDLNavigationLinkWithIconComponent >> iconUrl: anObject [
 	iconUrl := anObject
 ]

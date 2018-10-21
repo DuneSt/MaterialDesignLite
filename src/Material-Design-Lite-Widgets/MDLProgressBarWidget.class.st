@@ -64,18 +64,6 @@ MDLProgressBarWidget >> hide: aBoolean [
 	hide := aBoolean
 ]
 
-{ #category : #accessing }
-MDLProgressBarWidget >> hyde [
-	self deprecated: 'Uses #hide instead' transformWith: '`@receiver hyde' -> '`@receiver hide'.
-	^ self hide
-]
-
-{ #category : #accessing }
-MDLProgressBarWidget >> hyde: aBoolean [
-	self deprecated: 'Uses #hide: instead' transformWith: '`@receiver hyde: `@statements1' -> '`@receiver hide: `@statements1'.
-	^ self hide: aBoolean
-]
-
 { #category : #initialization }
 MDLProgressBarWidget >> initialize [
 	super initialize.

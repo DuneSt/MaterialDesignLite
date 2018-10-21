@@ -66,3 +66,19 @@ The class `MDLMultilineTextField` is now removed. It can be replaced by `MDLText
 Some methods are now renamed in `MDLCardWidget` :
 - `addTitle:level:` is now `title:level:`
 - `addTitle:level:class:` is now `title:level:class:`
+
+## MDLSelectWidget>>defaultSorting is now removed
+
+`MDLSelectWidget>>defaultSorting` is now removed in favor of `standardSorting`.
+
+## MDLNavigationLinkWithIconComponent>>icon: is removed
+
+`MDLNavigationLinkWithIconComponent>>icon:` is removed in favor of `iconURL:`.
+
+## MDLProgressBar API cleaning
+
+In the MDLProgressBar some methods were renamed:
+- `hyde` to `hide`
+- `hyde:` to `'hide:`
+
+  

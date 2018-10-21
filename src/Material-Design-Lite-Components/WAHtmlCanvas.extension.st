@@ -248,14 +248,6 @@ WAHtmlCanvas >> mdlChipImage [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlChipImage: aBlock [
-	self deprecated: 'Chip image should not have a content but an URL instead. Remove it in the next majore version.'.
-	^ self mdlChipImage
-		with: aBlock;
-		yourself
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlChipText [
 	^ self brush: MDLChipTextTag new 
 ]
@@ -873,22 +865,6 @@ WAHtmlCanvas >> mdlMiniFooterSocialButton: aBlock [
 	^ self mdlMiniFooterSocialButton
 		with: aBlock;
 		yourself
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlMultilineTextField [
-	(self isOnGemstone or: [ SystemVersion current major < 6 ])
-		ifTrue: [ self deprecated: 'Uses #mdlTextArea' ]
-		ifFalse: [ self deprecated: 'Uses #mdlTextArea' transformWith: '`@receiver mdlMultilineTextField' -> '`@receiver mdlTextArea' ].
-	^ self mdlTextArea
-]
-
-{ #category : #'*Material-Design-Lite-Components' }
-WAHtmlCanvas >> mdlMultilineTextField: text [
-	(self isOnGemstone or: [ SystemVersion current major < 6 ])
-		ifTrue: [ self deprecated: 'Uses #mdlTextArea:' ]
-		ifFalse: [ self deprecated: 'Uses #mdlTextArea:' transformWith: '`@receiver mdlMultilineTextField: `@statements1' -> '`@receiver mdlTextArea: `@statements1' ].
-	^ self mdlTextArea: text
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
