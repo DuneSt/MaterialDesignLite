@@ -53,3 +53,7 @@ The class `MDLFooterLogo` is now removed since it is a duplication of `MDLLogo`.
 
 Is it now removed in favor of direct use of checkbox brushes as shown in the demo.
 
+## Removal of MDLIconToggleLabel
+
+The class `MDLIconToggleLabel` is now removed. It can be replace by the usage of a `MDLIcon` with the `toggle` option. 
+
