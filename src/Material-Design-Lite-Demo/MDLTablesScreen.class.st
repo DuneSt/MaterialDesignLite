@@ -38,15 +38,17 @@ MDLTablesScreen >> renderDataTableOn: html [
 		selectable;
 		with: [ html
 				tableHead: [ html
-						tableRow: [ html mdlTableHeading: 'Material'.
-							html tableHeading: 'Quantity'.
-							html tableHeading: 'Price' ] ].
+						tableRow: [ html mdlTableHeading
+								nonNumerical;
+								with: 'Material'.
+							html mdlTableHeading: 'Quantity'.
+							html mdlTableHeading: 'Price' ] ].
 			html
 				tableBody: [ datas
 						keysAndValuesDo: [ :title :members | 
 							html
-								tableRow: [ html mdlTableCell: title.
-									members do: [ :data | html tableData: data ] ] ] ] ]
+								tableRow: [ html mdlTableCell nonNumerical; with: title.
+									members do: [ :data | html mdlTableCell: data ] ] ] ] ]
 ]
 
 { #category : #rendering }

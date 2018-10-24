@@ -33,7 +33,7 @@ MDLSortedTableScreen >> renderSortedTableOn: html [
 		style: 'width: 800px;';
 		with:
 			(MDLSortableTable new
-				header: {'Class' . 'SuperClass' . 'Number of subclasses'};
+				header: {'Class' . 'SuperClass' . (MDLSortableTableHeaderNumeric for: 'Number of subclasses')};
 				rows: [ WAObject allSubclasses
 						collect: [ :class | 
 							{class printString.

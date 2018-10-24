@@ -6,12 +6,12 @@ Class {
 
 { #category : #rendering }
 MDLSortableTableHeaderNumeric >> headingCellOn: html [
-	^ html tableHeading
+	^ html mdlTableHeading
 		style: 'cursor: pointer;';
 		yourself
 ]
 
 { #category : #rendering }
 MDLSortableTableHeaderNumeric >> tableCellOn: html [
-	^ html tableData
+	^ html mdlTableCell
 ]

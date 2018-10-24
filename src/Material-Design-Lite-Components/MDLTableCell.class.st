@@ -30,8 +30,7 @@ Class {
 	#category : #'Material-Design-Lite-Components-Tables'
 }
 
-{ #category : #initialization }
-MDLTableCell >> initialize [
-	super initialize.
+{ #category : #options }
+MDLTableCell >> nonNumerical [
 	self class: 'mdl-data-table__cell--non-numeric'
 ]

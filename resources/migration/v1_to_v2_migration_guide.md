@@ -23,6 +23,50 @@ Two renaming happened on the date picker present in MDL widgets in order to use 
 
 The behavior of those components is still the same as before.
 
+## MDLTableCell and MDLTableCellHeading are now numerical by default
+
+In the version on of MDL for Seaside, the mdl cells and mdl table cells were non-numerical by default. Because of this we needed to use basic html cells for numerical ones. 
+
+Now cells are numerical by default and there is an option `#nonNumerical` that can be used. 
+
+This snippet from v1.x.x:
+
+```Smalltalk
+html
+	mdlTable: [ html
+		tableHead: [ html
+			tableRow: [ html mdlTableHeading: 'Material'.
+			html tableHeading: 'Quantity'.
+			html tableHeading: 'Price' ] ].
+	html
+		tableBody: [ html
+			tableRow: [ html mdlTableCell: 'Acrylic (Transparent)'.
+			html tableData: '25'.
+			html tableData: '$2.90' ] ] ]
+``` 
+
+Should now be:
+
+
+```Smalltalk
+html
+	mdlTable: [ html
+		tableHead: [ html
+			tableRow: [ html mdlTableHeading
+				nonNumerical;
+				with: 'Material'.
+			html mdlTableHeading: 'Quantity'.
+			html mdlTableHeading: 'Price' ] ].
+	html
+		tableBody: [ html
+			tableRow: [ html mdlTableCell
+				nonNumerical;
+				with: 'Acrylic (Transparent)'.
+			html mdlTableCell: '25'.
+			html mdlTableCell: '$2.90' ] ] ]
+``` 
+
+
 
 ## WATagBrush>>#mdlCardTitle is now named #mdlCardTitleContainer
 

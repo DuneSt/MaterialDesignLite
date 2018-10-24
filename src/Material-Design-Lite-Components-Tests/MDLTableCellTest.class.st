@@ -6,10 +6,15 @@ Class {
 
 { #category : #tests }
 MDLTableCellTest >> testBareBrush [
-	self assert: [ :html | html mdlTableCell ] generates: '<td class="mdl-data-table__cell--non-numeric"></td>'
+	self assert: [ :html | html mdlTableCell ] generates: '<td></td>'
+]
+
+{ #category : #tests }
+MDLTableCellTest >> testNonNumerical [
+	self assert: [ :html | html mdlTableCell nonNumerical ] generates: '<td class="mdl-data-table__cell--non-numeric"></td>'
 ]
 
 { #category : #tests }
 MDLTableCellTest >> testWithContent [
-	self assert: [ :html | html mdlTableCell: 'test' ] generates: '<td class="mdl-data-table__cell--non-numeric">test</td>'
+	self assert: [ :html | html mdlTableCell: 'test' ] generates: '<td>test</td>'
 ]

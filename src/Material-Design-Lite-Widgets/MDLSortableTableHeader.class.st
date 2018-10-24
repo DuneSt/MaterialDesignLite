@@ -49,6 +49,7 @@ MDLSortableTableHeader >> goToNextState [
 { #category : #rendering }
 MDLSortableTableHeader >> headingCellOn: html [
 	^ html mdlTableHeading
+		nonNumerical;
 		style: 'cursor: pointer;';
 		yourself
 ]
@@ -70,7 +71,7 @@ MDLSortableTableHeader >> renderContentOn: aRenderer forTable: table columnIndex
 
 { #category : #rendering }
 MDLSortableTableHeader >> tableCellOn: html [
-	^ html mdlTableCell
+	^ html mdlTableCell nonNumerical
 ]
 
 { #category : #sorting }
