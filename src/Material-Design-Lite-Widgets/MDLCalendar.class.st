@@ -90,26 +90,6 @@ MDLCalendar >> initialize [
 	self firstDayOfWeekIndex: 1
 ]
 
-{ #category : #accessing }
-MDLCalendar >> nextMonth [
-	currentDate := currentDate onNextMonth
-]
-
-{ #category : #accessing }
-MDLCalendar >> nextYears [
-	yearsInterval := yearsInterval + 9
-]
-
-{ #category : #accessing }
-MDLCalendar >> previousMonth [
-	currentDate := currentDate onPreviousMonth
-]
-
-{ #category : #accessing }
-MDLCalendar >> previousYears [
-	yearsInterval := yearsInterval - 9
-]
-
 { #category : #printing }
 MDLCalendar >> printDateForHeader [
 	^ String
@@ -120,6 +100,26 @@ MDLCalendar >> printDateForHeader [
 				nextPutAll: self currentDate monthAbbreviation;
 				space;
 				print: self currentDate dayOfMonth ]
+]
+
+{ #category : #accessing }
+MDLCalendar >> selectNextMonth [
+	currentDate := currentDate onNextMonth
+]
+
+{ #category : #accessing }
+MDLCalendar >> selectNextYears [
+	yearsInterval := yearsInterval + 9
+]
+
+{ #category : #accessing }
+MDLCalendar >> selectPreviousMonth [
+	currentDate := currentDate onPreviousMonth
+]
+
+{ #category : #accessing }
+MDLCalendar >> selectPreviousYears [
+	yearsInterval := yearsInterval - 9
 ]
 
 { #category : #accessing }

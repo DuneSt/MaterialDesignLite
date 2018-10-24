@@ -69,22 +69,22 @@ MDLFlatDatePicker >> goToMonth: anObject [
 
 { #category : #private }
 MDLFlatDatePicker >> goToNextMonth [
-	self calendar nextMonth
+	self calendar selectNextMonth
 ]
 
 { #category : #private }
 MDLFlatDatePicker >> goToNextYears [
-	self calendar nextYears
+	self calendar selectNextYears
 ]
 
 { #category : #private }
 MDLFlatDatePicker >> goToPreviousMonth [
-	self calendar previousMonth
+	self calendar selectPreviousMonth
 ]
 
 { #category : #private }
 MDLFlatDatePicker >> goToPreviousYears [
-	self calendar previousYears
+	self calendar selectPreviousYears
 ]
 
 { #category : #initialization }

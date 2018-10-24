@@ -83,22 +83,6 @@ MDLCalendarTest >> testIntervalSetCurrentDateModifyInterval [
 ]
 
 { #category : #tests }
-MDLCalendarTest >> testNextMonth [
-	calendar currentDate: (Date year: 2016 month: 4 day: 10).
-	calendar nextMonth.
-	self assert: calendar currentDate asMonth equals: (Month month: 5 year: 2016).
-	self assert: calendar currentDate equals: (Date year: 2016 month: 5 day: 10)
-]
-
-{ #category : #tests }
-MDLCalendarTest >> testPreviousMonth [
-	calendar currentDate: (Date year: 2016 month: 4 day: 10).
-	calendar previousMonth.
-	self assert: calendar currentDate asMonth equals: (Month month: 3 year: 2016).
-	self assert: calendar currentDate equals: (Date year: 2016 month: 3 day: 10)
-]
-
-{ #category : #tests }
 MDLCalendarTest >> testPrintDateForHeader [
 	calendar currentDate: (Date year: 2018 month: 6 day: 5).
 	self assert: calendar printDateForHeader equals: 'Tue, Jun 5'.
@@ -106,4 +90,20 @@ MDLCalendarTest >> testPrintDateForHeader [
 	self assert: calendar printDateForHeader equals: 'Mon, Jun 4'.
 	calendar currentDate: (Date year: 2018 month: 8 day: 8).
 	self assert: calendar printDateForHeader equals: 'Wed, Aug 8'
+]
+
+{ #category : #tests }
+MDLCalendarTest >> testSelectNextMonth [
+	calendar currentDate: (Date year: 2016 month: 4 day: 10).
+	calendar selectNextMonth.
+	self assert: calendar currentDate asMonth equals: (Month month: 5 year: 2016).
+	self assert: calendar currentDate equals: (Date year: 2016 month: 5 day: 10)
+]
+
+{ #category : #tests }
+MDLCalendarTest >> testSelectPreviousMonth [
+	calendar currentDate: (Date year: 2016 month: 4 day: 10).
+	calendar selectPreviousMonth.
+	self assert: calendar currentDate asMonth equals: (Month month: 3 year: 2016).
+	self assert: calendar currentDate equals: (Date year: 2016 month: 3 day: 10)
 ]
