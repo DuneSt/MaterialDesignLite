@@ -1,3 +1,7 @@
+# [v1.3.2](https://github.com/DuneSt/MaterialDesignLite/compare/v1.3.1...v1.3.2) (2018-11-22)
+
+* Loads another seaside group for Squeak ([0d6ffd8](https://github.com/DuneSt/MaterialDesignLite/commit/0d6ffd8fe7830ec0cc27e4a1a028f3fd626fd9de))
+
 # [v1.3.1](https://github.com/DuneSt/MaterialDesignLite/compare/v1.3.0...v1.3.1) (2018-10-18)
 
 * This release brings a lot of deprecation in prevision of the next major release.
