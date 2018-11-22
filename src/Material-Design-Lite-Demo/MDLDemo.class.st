@@ -49,7 +49,7 @@ MDLDemo class >> initializeAs: aString [
 
 { #category : #versions }
 MDLDemo class >> version [
-	^ 'development (from v1.3.0)'
+	^ 'development (from v1.3.2)'
 ]
 
 { #category : #hooks }
