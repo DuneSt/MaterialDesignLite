@@ -6,7 +6,6 @@ baseline: spec
 		do: [
 			"Dependencies"
 			self
-				seaside3: spec;
 				fileLibraryHelper: spec;
 				materialColors: spec;
 				magritte: spec.	
@@ -36,4 +35,8 @@ baseline: spec
 				group: 'demo' with: #('Material-Design-Lite-Demo');
 				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests' 'Material-Design-Lite-Extensions-Tests' 'Material-Design-Lite-Core-Tests') ].
 			
-	self gemStone: spec
+	spec for: #(pharo gemstone) do: [ self seaside3: spec ].
+
+	self
+		gemStone: spec;
+		squeak: spec
