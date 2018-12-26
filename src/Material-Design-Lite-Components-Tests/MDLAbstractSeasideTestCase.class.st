@@ -40,5 +40,5 @@ MDLAbstractSeasideTestCase >> deny: aBlock generatedIncludes: aString [
 
 { #category : #asserting }
 MDLAbstractSeasideTestCase >> executeWithMockContext: aBlock [
-	WACurrentRequestContext use: (WARequestContext request: WARequest new response: WABufferedResponse new) during: [ aBlock value ]
+	WACurrentRequestContext use: MDLMockRequestContext new during: [ aBlock value ]
 ]

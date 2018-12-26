@@ -6,7 +6,7 @@ Class {
 
 { #category : #tests }
 MDLMegaFooterHeadingCheckBoxTest >> testBareBrush [
-	self assert: [ :html | html mdlFooterHeadingCheckbox ] generates: '<input class="mdl-mega-footer__heading-checkbox" checked="checked" type="checkbox"/>'
+	self assert: [ :html | html mdlFooterHeadingCheckbox ] generates: '<input class="mdl-mega-footer__heading-checkbox" checked type="checkbox"/>'
 ]
 
 { #category : #tests }
