@@ -13,5 +13,12 @@ Class {
 { #category : #'world-menu' }
 MaterialDesignLite class >> mainMenuCommandOn: aBuilder [
 	<worldMenu>
-	(aBuilder item: #MaterialDesignLite) order: 20
+	(aBuilder item: #MaterialDesignLite)
+		order: 20;
+		icon: (self mdlIcon scaledToSize: 16@16)
+]
+
+{ #category : #'as yet unclassified' }
+MaterialDesignLite class >> mdlIcon [
+	^ PNGReadWriter formFromStream: MDLLibrary default logoPng readStream
 ]
