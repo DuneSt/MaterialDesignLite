@@ -47,9 +47,41 @@ MDLDemo class >> initializeAs: aString [
 		yourself
 ]
 
+{ #category : #'world menu' }
+MDLDemo class >> menuCommandOn: aBuilder [
+	<worldMenu>
+	(aBuilder item: #'Open demo in default browser')
+		order: 2;
+		iconName: #nautilus;
+		parent: #MaterialDesignLite;
+		help: 'Open the demo in the default web browser';
+		action: [ self open ].
+]
+
+{ #category : #'instance creation' }
+MDLDemo class >> open [
+	<script>
+	| port url |
+	WAServerManager default adaptors
+		ifEmpty: [ (ZnZincServerAdaptor port: (port := 8085)) start ]
+		ifNotEmpty: [ :adaptors | 
+			adaptors
+				detect: #isRunning
+				ifFound: [ :anAdaptor | port := anAdaptor server port ]
+				ifNone: [ (ZnZincServerAdaptor port: (port := 8085)) start ] ].
+	url := 'http://localhost:' , port asString , '/MDLDemo'.
+	self flag: #pharo6.
+	SystemVersion current major < 7
+		ifTrue: [ self class environment
+				at: #OSProcess
+				ifPresent: [ :class | class command: 'open ' , url ]
+				ifAbsent: [ self inform: 'Open ' , url , ' or install OSProcess.' ] ]
+		ifFalse: [ WebBrowser openOn: url ]
+]
+
 { #category : #versions }
 MDLDemo class >> version [
-	^ 'development (from v1.3.2)'
+	^ 'development (from v1.3.3)'
 ]
 
 { #category : #hooks }
