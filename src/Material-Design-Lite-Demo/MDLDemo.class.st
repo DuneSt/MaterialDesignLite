@@ -146,6 +146,27 @@ MDLDemo >> header: anObject [
 	header := anObject
 ]
 
+{ #category : #hooks }
+MDLDemo >> initialRequest: aRequest [
+	| consumer pageName |
+	super initialRequest: aRequest.
+	consumer := self requestContext consumer.
+	
+	"If we are at end, nothing to manage"
+	consumer atEnd ifTrue: [ ^ self ].
+	
+	pageName := consumer peek.
+	
+	"Try to find a page corresponding"
+	self header possiblePages
+		detect: [ :each | each pathName = pageName ]
+		ifFound: [ :class | 
+			self displayInstanceOf: class.
+
+			"If we find a page, we pop the subpart of the path corresponding to the page."
+			consumer next ]
+]
+
 { #category : #initialization }
 MDLDemo >> initialize [
 	super initialize.
@@ -217,6 +238,12 @@ MDLDemo >> updateTabIconRoot: anHtmlRoot [
 	anHtmlRoot meta
 		name: 'theme-color';
 		content: '#ffffff'
+]
+
+{ #category : #updating }
+MDLDemo >> updateUrl: aUrl [
+	super updateUrl: aUrl.
+	aUrl addToPath: (self componentToDisplay pathName)
 ]
 
 { #category : #accessing }
