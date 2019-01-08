@@ -96,17 +96,6 @@ MDLSortableTable >> initialize [
 	selectable := false
 ]
 
-{ #category : #accessing }
-MDLSortableTable >> itemsByPageSelectionComponent [
-	^ (MDLMenuButtonWidget
-		possibilities: rowsPerPagePossibilities
-		label: #asString
-		action: [ :o | self elementsToShow: o ]
-		choosingText: self elementsToShow asString)
-		sortBlock: [ :a :b | a key asInteger <= b key asInteger ];
-		yourself
-]
-
 { #category : #actions }
 MDLSortableTable >> nextPosition [
 	position + elementsToShow < rowsCache size
@@ -149,9 +138,9 @@ MDLSortableTable >> renderButtonTriggering: aMethod withIcon: aSymbol disabled: 
 
 { #category : #rendering }
 MDLSortableTable >> renderContentOn: html [
-	html
-		mdlGrid: [ 
-			html mdlCard
+	html mdlGrid
+		class: 'mdl-sorted-table';
+		with: [ html mdlCard
 				shadow: 2;
 				style: 'width: 100%; overflow: initial;';
 				class: self tableStyle if: self tableStyle isNotNil;
@@ -162,13 +151,13 @@ MDLSortableTable >> renderContentOn: html [
 { #category : #rendering }
 MDLSortableTable >> renderFooterPaginationOn: html [
 	html mdlCardTextContainer
-		style: 'width: calc(100% - 32px);';
+		class: 'mdl-sorted-table__footer';
 		with: [ 
 					html div
 						mdlTypographyTextRight;
 						with: [ 
 									html text: 'Rows per page: '.
-									html render: self itemsByPageSelectionComponent.
+									self renderItemsByPageSelectionComponentOn: html.
 									self renderPagesInfoOn: html.
 									self
 										renderButtonTriggering: #previousPosition
@@ -186,6 +175,20 @@ MDLSortableTable >> renderFooterPaginationOn: html [
 MDLSortableTable >> renderHeaderOn: html [
 	html
 		tableHead: [ html tableRow: [ header doWithIndex: [ :head :i | head renderContentOn: html forTable: self columnIndex: i ] ] ]
+]
+
+{ #category : #accessing }
+MDLSortableTable >> renderItemsByPageSelectionComponentOn: html [
+	html
+		render:
+			(MDLSelectWidget new
+				labelBlock: #asString;
+				possibilities: rowsPerPagePossibilities;
+				callback: [ :o | self elementsToShow: o ];
+				selectedObject: self elementsToShow;
+				sortBlock: [ :a :b | a asInteger <= b asInteger ];
+				customizationBlock: [ :textField :renderer | textField onChange: (html jQuery ajax serializeThis onComplete: (self ajaxUpdateScriptFrom: html)) ];
+				yourself)
 ]
 
 { #category : #rendering }

@@ -374,6 +374,7 @@ MDLSelectWidget >> renderTextFieldFor: anId withMap: aLabelMap on: html [
 		disabled: self possibilities isEmpty;
 		readonly: true;
 		tabIndex: '-1';
+		noAutocomplete;
 		callback: [ :input | self callback ifNotNil: [ :cb | cb value: (aLabelMap at: input) ] ];
 		onChange: 'submit()' if: self autoSubmit;
 		type: 'text'.
