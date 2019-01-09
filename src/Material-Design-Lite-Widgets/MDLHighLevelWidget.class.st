@@ -1,7 +1,7 @@
 "
 I represent an abstract class for high level widgets.
 
-Interesting point is that I have properties through a Dictionary which allow me to add some behaviours
+Interesting point is that I have properties through a Dictionary which allow me to add some behaviours. My properties should have a selector as key and an array of parameters as value.
 "
 Class {
 	#name : #MDLHighLevelWidget,
@@ -19,36 +19,43 @@ MDLHighLevelWidget >> addProperties: aDictionary [
 
 { #category : #actions }
 MDLHighLevelWidget >> addPropertiesToBrush: aBrush [
-	properties
-		keysAndValuesDo: [ :aSymbol :property | aBrush perform: aSymbol with: property ]
+	self properties keysAndValuesDo: [ :aSymbol :arguments | aBrush perform: aSymbol withArguments: arguments ]
 ]
 
 { #category : #accessing }
 MDLHighLevelWidget >> class: aString [
 	| stringToAdd |
-	aString isEmptyOrNil
-		ifTrue: [ ^ self ].
-	properties
-		at: #class:
+	aString isEmptyOrNil ifTrue: [ ^ self ].
+
+	stringToAdd := self
+		propertiesAt: #class:
 		ifPresent: [ :oldClasses | 
 			stringToAdd := String
 				streamContents: [ :aStream | 
 					aStream
-						nextPutAll: oldClasses;
-						nextPut: Character cr;
+						nextPutAll: oldClasses anyOne;
+						space;
 						nextPutAll: aString ] ]
-		ifAbsent: [ stringToAdd := aString ].
-	properties at: #class: put: stringToAdd
+		ifAbsent: [ aString ].
+
+	self propertiesAt: #class: put: (Array with: stringToAdd)
+]
+
+{ #category : #accessing }
+MDLHighLevelWidget >> htmlClass [
+	"htmlClass because it can cause problems to have a #class method in objects."
+
+	^ self propertiesAt: #class ifPresent: [ :array | array anyOne ] ifAbsent: [ nil ]
 ]
 
 { #category : #accessing }
 MDLHighLevelWidget >> id [
-	^ properties at: #id: ifAbsent: [ nil ]
+	^ self propertiesAt: #id: ifPresent: [ :array | array anyOne ] ifAbsent: [ nil ]
 ]
 
 { #category : #accessing }
 MDLHighLevelWidget >> id: aString [
-	properties at: #id: put: aString
+	self propertiesAt: #id: put: (Array with: aString)
 ]
 
 { #category : #initialization }
@@ -59,7 +66,7 @@ MDLHighLevelWidget >> initialize [
 
 { #category : #accessing }
 MDLHighLevelWidget >> onClick: anObject [
-	self propertiesAt: #onClick: put: anObject
+	self propertiesAt: #onClick: put: (Array with: anObject)
 ]
 
 { #category : #accessing }
@@ -68,22 +75,40 @@ MDLHighLevelWidget >> properties [
 ]
 
 { #category : #accessing }
-MDLHighLevelWidget >> propertiesAt: aString put: anObject [
-	self properties at: aString put: anObject
+MDLHighLevelWidget >> propertiesAt: aString [
+	^ self properties at: aString
+]
+
+{ #category : #accessing }
+MDLHighLevelWidget >> propertiesAt: aString ifAbsent: aBlock [
+	^ self properties at: aString ifAbsent: aBlock
+]
+
+{ #category : #accessing }
+MDLHighLevelWidget >> propertiesAt: aString ifPresent: aBlock ifAbsent: anotherBlock [
+	^ self properties at: aString ifPresent: aBlock ifAbsent: anotherBlock
+]
+
+{ #category : #accessing }
+MDLHighLevelWidget >> propertiesAt: aString put: anArray [
+	self properties at: aString put: anArray
 ]
 
 { #category : #accessing }
 MDLHighLevelWidget >> style: aString [
 	| stringToAdd |
-	properties
-		at: #style:
+	aString isEmptyOrNil ifTrue: [ ^ self ].
+
+	stringToAdd := self
+		propertiesAt: #style:
 		ifPresent: [ :oldStyle | 
-			stringToAdd := String
+			String
 				streamContents: [ :aStream | 
 					aStream
-						nextPutAll: oldStyle;
-						nextPut: Character cr;
+						nextPutAll: oldStyle anyOne;
+						space;
 						nextPutAll: aString ] ]
-		ifAbsent: [ stringToAdd := aString ].
-	properties at: #style: put: stringToAdd
+		ifAbsent: [ aString ].
+
+	self propertiesAt: #style: put: stringToAdd
 ]
