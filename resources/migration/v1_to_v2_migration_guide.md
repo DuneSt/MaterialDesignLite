@@ -2,11 +2,13 @@
 
 The version v2.0.0 of Material Design Lite contains breaking changes. This guide is here to ease the migration of projects to this new version. 
 
-*Note that most of the replacement for removed classes/methods are already present in v1.3.0 to ease the transition.*
+> Note that most of the replacement for removed classes/methods are already present in v1.3.0 to ease the transition.
 
 One of the main change is that v2.0.0 is now in **Tonel** format instead of **FileTree**. This means that support for Gemstone stops at v1 until Tonel is working out of the box in Gemstone.
 
 > Note that does not mean we cannot do anymore bugfix or add new features for Gemstone. In case someone using Gemstone needs a new feature or bugfix, we can create a new minor or patch version to the version 1 even after the v2 release. Just open an issue explaining your need. What will not happen is an automatic backport of all new features to v1.
+
+Be also careful, a new installation step is needed to fully exploit all feature of the v2. [See here](https://github.com/DuneSt/MaterialDesignLite#add-specific-style-for-extensions).
 
 - [Migration guide of Material Design Lite for Seaside V1 to V2](#migration-guide-of-material-design-lite-for-seaside-v1-to-v2)
   * [Removal of the `color` group](#removal-of-the-color-group)
