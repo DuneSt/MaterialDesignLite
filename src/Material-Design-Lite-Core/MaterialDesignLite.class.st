@@ -18,7 +18,7 @@ MaterialDesignLite class >> mainMenuCommandOn: aBuilder [
 		icon: (self mdlIcon scaledToSize: 16@16)
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #accessing }
 MaterialDesignLite class >> mdlIcon [
 	^ PNGReadWriter formFromStream: MDLLibrary default logoPng readStream
 ]

@@ -26,6 +26,18 @@ MDLDemoPage class >> pagesToDisplay [
 ]
 
 { #category : #accessing }
+MDLDemoPage class >> pathName [
+	"Use to define the URL name"
+
+	^ self pageName copyWithout: $  
+]
+
+{ #category : #accessing }
 MDLDemoPage class >> priority [
 	^ self subclassResponsibility
+]
+
+{ #category : #accessing }
+MDLDemoPage >> pathName [
+	^ self class pathName
 ]
