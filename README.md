@@ -12,6 +12,8 @@ Coverage:
 
 This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help [Seaside](https://github.com/SeasideSt/Seaside) developers in creating fast web application with flat design. For a tutorial on Seaside check [http://book.seaside.st](http://book.seaside.st).
 
+A migration guide from v1 to v2 can be found [here](resources/migration/v1_to_v2_migration_guide.md).
+
 - [Documentation](#documentation)
   * [Version management](#version-management)
   * [Install MDL Seaside](#install-mdl-seaside)
