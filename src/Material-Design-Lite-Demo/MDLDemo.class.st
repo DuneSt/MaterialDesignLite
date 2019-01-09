@@ -155,7 +155,7 @@ MDLDemo >> initialRequest: aRequest [
 	"If we are at end, nothing to manage"
 	consumer atEnd ifTrue: [ ^ self ].
 	
-	pageName := consumer peek.
+	pageName := consumer peek asLowercase. "Do not make URLs case sensitive in that case"
 	
 	"Try to find a page corresponding"
 	self header possiblePages
