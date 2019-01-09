@@ -122,7 +122,7 @@ MDLCardWidget >> renderInnerWidgetsOn: html [
 MDLCardWidget >> shadow: aNumber [
 	"aNumber must be between 2 and 24"
 
-	properties at: #shadow: put: aNumber
+	self propertiesAt: #shadow: put: (Array with: aNumber)
 ]
 
 { #category : #adding }

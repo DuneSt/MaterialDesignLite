@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'component'
 	],
-	#category : 'Material-Design-Lite-Extensions-Tests'
+	#category : #'Material-Design-Lite-Extensions-Tests-Pagination'
 }
 
 { #category : #helpers }

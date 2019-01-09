@@ -14,7 +14,7 @@ MDLLoginCardWidget >> renderContentOn: html [
 			(MDLCardWidget new
 				shadow: 2;
 				class: 'mdl-card__login-widget';
-				class: (properties at: #class: ifPresent: [ :aString | aString ] ifAbsent: [ '' ]);
+				class: self htmlClass;
 				title: titleLabel level: titleLevel;
 				addTextContainer: [ :canvas | super renderContentOn: canvas ];
 				yourself)

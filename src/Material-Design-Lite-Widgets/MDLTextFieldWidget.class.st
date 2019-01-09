@@ -39,16 +39,6 @@ MDLTextFieldWidget class >> labeled: aString callback: aBlock floatingLabel: aBo
 		yourself
 ]
 
-{ #category : #actions }
-MDLTextFieldWidget >> addPropertiesToBrush: aBrush [
-	self flag: #thisIsBad.	"This is bad because if a simgle argument should be a collection this will broke. The solution is that ALL widgets should have properties as an array of arguments. This will change the API of the widget thus it should be done for the V2 of MDL."
-	properties
-		keysAndValuesDo: [ :aSymbol :property | 
-			property isArray
-				ifTrue: [ aBrush perform: aSymbol withArguments: property ]
-				ifFalse: [ aBrush perform: aSymbol with: property ] ]
-]
-
 { #category : #options }
 MDLTextFieldWidget >> beExpandable [
 	isExpandable := true
@@ -122,11 +112,6 @@ MDLTextFieldWidget >> onChange: anObject [
 ]
 
 { #category : #options }
-MDLTextFieldWidget >> onClick: anObject [
-	self propertiesAt: #onClick: put: (Array with: anObject)
-]
-
-{ #category : #options }
 MDLTextFieldWidget >> onEnter: anObject [
 	self propertiesAt: #onEnter: put: (Array with: anObject)
 ]
@@ -156,7 +141,7 @@ MDLTextFieldWidget >> pattern: aPattern errorMessage: aString [
 
 { #category : #options }
 MDLTextFieldWidget >> readonly: aBoolean [
-	self propertiesAt: #readonly: put: aBoolean
+	self propertiesAt: #readonly: put: (Array with: aBoolean)
 ]
 
 { #category : #rendering }
