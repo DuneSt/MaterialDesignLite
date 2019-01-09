@@ -36,6 +36,32 @@ MDLDemoPageWithList >> defaultList [
 		yourself
 ]
 
+{ #category : #testing }
+MDLDemoPageWithList >> hasScreenSelected [
+	^ self selectedScreen isNotNil
+]
+
+{ #category : #hooks }
+MDLDemoPageWithList >> initialRequest: aRequest [
+	| consumer pageName |
+	super initialRequest: aRequest.
+	consumer := self requestContext consumer.
+	
+	"If we are at end, nothing to manage"
+	consumer atEnd ifTrue: [ ^ self ].
+	
+	pageName := consumer peek asLowercase. "Do not make URLs case sensitive in that case"
+	
+	"Try to find a page corresponding"
+	self sortedScreens
+		detect: [ :each | each pathName asLowercase = pageName ]
+		ifFound: [ :class | 
+			self select: class.
+
+			"If we find a page, we pop the subpart of the path corresponding to the page."
+			consumer next ]
+]
+
 { #category : #initialization }
 MDLDemoPageWithList >> initialize [
 	super initialize.
@@ -113,4 +139,10 @@ MDLDemoPageWithList >> selectedScreen: aScreen [
 { #category : #accessing }
 MDLDemoPageWithList >> sortedScreens [
 	^ self screens sorted: [ :a :b | a title < b title ]
+]
+
+{ #category : #updating }
+MDLDemoPageWithList >> updateUrl: aUrl [
+	super updateUrl: aUrl.
+	self selectedScreen ifNotNil: [ :screen | aUrl addToPath: screen pathName ]
 ]

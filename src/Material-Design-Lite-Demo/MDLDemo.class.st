@@ -159,7 +159,7 @@ MDLDemo >> initialRequest: aRequest [
 	
 	"Try to find a page corresponding"
 	self header possiblePages
-		detect: [ :each | each pathName = pageName ]
+		detect: [ :each | each pathName asLowercase = pageName ]
 		ifFound: [ :class | 
 			self displayInstanceOf: class.
 

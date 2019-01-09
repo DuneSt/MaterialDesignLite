@@ -32,6 +32,11 @@ MDLDemoScreen class >> iconUrl [
 ]
 
 { #category : #accessing }
+MDLDemoScreen class >> pathName [
+	^ self title copyWithout: $ 
+]
+
+{ #category : #accessing }
 MDLDemoScreen class >> title [
 	"I should return the title of the component screen."
 
@@ -41,6 +46,11 @@ MDLDemoScreen class >> title [
 { #category : #accessing }
 MDLDemoScreen >> description [
 	^ self class description
+]
+
+{ #category : #accessing }
+MDLDemoScreen >> pathName [
+	^ self class pathName
 ]
 
 { #category : #rendering }

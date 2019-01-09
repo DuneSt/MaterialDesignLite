@@ -29,7 +29,7 @@ MDLDemoPage class >> pagesToDisplay [
 MDLDemoPage class >> pathName [
 	"Use to define the URL name"
 
-	^ (self pageName copyWithout: $ ) asLowercase 
+	^ self pageName copyWithout: $  
 ]
 
 { #category : #accessing }
