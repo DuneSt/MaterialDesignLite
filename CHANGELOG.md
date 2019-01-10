@@ -1,3 +1,47 @@
+# [v2.0.0](https://github.com/DuneSt/MaterialDesignLite/compare/v1.3.3...v2.0.0) (2010-01-10)
+
+## BREAKING CHANGES
+
+> A migration guide from v1 to v2 can be found [here](resources/migration/v1_to_v2_migration_guide.md).
+
+* MDLHighLevelWidget properties should be coherent ([ef2585d](https://github.com/DuneSt/MaterialDesignLite/commit/ef2585da7b5455792b7cff29021c9ef2fcc8ccd5))
+* Table cells should be non numerical be default. ([97155c9](https://github.com/DuneSt/MaterialDesignLite/commit/97155c9235936c687c353201e31d9ff9c50233df))
+* Clean MDLCardWidget API ([5ed5b25](https://github.com/DuneSt/MaterialDesignLite/commit/5ed5b2594c1b9b38b56d0f85277e292938cf997f))
+* Remove MDLMultilineTextField ([20d3a84](https://github.com/DuneSt/MaterialDesignLite/commit/20d3a84eb6116644bb7019da6d7001524488918f))
+* Remove MDLIconToggleLabel ([fa58a71](https://github.com/DuneSt/MaterialDesignLite/commit/fa58a71d65e15508391662c53e60dc6f35bc1586))
+* Remove MDLCheckboxWidget ([bc3a710](https://github.com/DuneSt/MaterialDesignLite/commit/bc3a710de68a6017f92e38cb71bd08d83cf1b64c))
+* Remove MDLFooterLogo ([1798fed](https://github.com/DuneSt/MaterialDesignLite/commit/1798fed1c7d9d254dfdbe14ea651fbf1c64d21fb))
+* Remove MDLApplication>>#applicationName ([1864e53](https://github.com/DuneSt/MaterialDesignLite/commit/1864e539221a16833cc08d95dc94e01ddbb85816))
+* Remove MDLGridSection ([88e3138](https://github.com/DuneSt/MaterialDesignLite/commit/88e31384f175f3cf580f416458662021c71a924a))
+* Remove MDLMenuItem>>disable ([bb652fc](https://github.com/DuneSt/MaterialDesignLite/commit/bb652fcb51f84b3430a3ad22e80194fca9cea564))
+* Remove #mdlCardTitle and #mdlCardTitle: ([948ea25](https://github.com/DuneSt/MaterialDesignLite/commit/948ea25585c9e6187983d47ffa3e5b90c92d60ac))
+* Remove useless calendars ([544f61d](https://github.com/DuneSt/MaterialDesignLite/commit/544f61db07e5671fca0a86be54e195b724002175))
+* Remove MDLPaginationWidget ([0711a6c](https://github.com/DuneSt/MaterialDesignLite/commit/0711a6c9f82e876e2fd89c9d777c35b3edae2e25))
+* Cleaning for v2.0.0 ([dc84fe1](https://github.com/DuneSt/MaterialDesignLite/commit/dc84fe140a9ae39665cc5ace2bb26aa48c96c91c))
+* More cleaning ([cfeb445](https://github.com/DuneSt/MaterialDesignLite/commit/cfeb445b699588cd6862653a5f0d429f34815e29))
+
+## Features
+
+* Use ajax in MDLSortableTable when we change the number of elements by page. ([01f3bfb](https://github.com/DuneSt/MaterialDesignLite/commit/01f3bfbc86af56008ed979393086e2d583b20006))
+* New extension: Pagination widget ([ecb253e](https://github.com/DuneSt/MaterialDesignLite/commit/ecb253e7e880b51962b2b7b8f8f7cedc8c411fc2))
+
+## Bug fixes
+
+* Fix tests after new Seaside release ([cb3698d](https://github.com/DuneSt/MaterialDesignLite/commit/cb3698d3bc22044fe743ed88c27b6c78d06cb858))
+
+## Cleaning
+
+* Use more explicit names in date picker implementation. ([33f73fc](https://github.com/DuneSt/MaterialDesignLite/commit/33f73fc44f538290534737cf35c2f98ecb889ab1))
+
+## Infrastructure
+
+* Add migration guide ([284ffa7](https://github.com/DuneSt/MaterialDesignLite/commit/284ffa7cb82b30a325b61d2b7103f65a45a8c1b6))
+* Add URL management in demos to be able to send link of specific pages or exmaples ([874f466](https://github.com/DuneSt/MaterialDesignLite/commit/874f4661e33c6033e6e7b992e6bb429fb8a61e*))
+* Add demo on select widget and ajax. ([79e12d5](https://github.com/DuneSt/MaterialDesignLite/commit/79e12d5a2713511f92e29b1b0040b5a33401905f))
+* Add world menu command to open demo. ([2bd203c](https://github.com/DuneSt/MaterialDesignLite/commit/2bd203cd0411faadbbd9d9d87b5824985bbe9e09))
+* Update dependency to MaterialColor 2.x.x ([79ea3c0](https://github.com/DuneSt/MaterialDesignLite/commit/79ea3c01c7439dfd6e8eace82ca9cb141e4c4807))
+* Migrate sources to Tonel ([d0de59f](https://github.com/DuneSt/MaterialDesignLite/commit/d0de59fedb6b4d67252cf3f0e5e30e8e4306fb73))
+
 # [v1.3.3](https://github.com/DuneSt/MaterialDesignLite/compare/v1.3.2...v1.3.3) (2018-12-26)
 
 * Seaside 3.3 compatibility ([86b8a7](https://github.com/DuneSt/MaterialDesignLite/commit/86b8a72676603836342b291a43bc5ce600307c88))
