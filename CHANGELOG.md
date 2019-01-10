@@ -2,7 +2,7 @@
 
 # [v2.0.0](https://github.com/DuneSt/MaterialDesignLite/compare/v1.3.3...v2.0.0) (2010-01-10)
 
-## BREAKING CHANGES
+## BREAKING CHANGES
 
 > A migration guide from v1 to v2 can be found [here](resources/migration/v1_to_v2_migration_guide.md).
 
