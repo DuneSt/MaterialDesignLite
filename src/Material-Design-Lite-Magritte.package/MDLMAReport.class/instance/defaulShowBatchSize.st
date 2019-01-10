@@ -1,3 +1,0 @@
-accessing
-defaulShowBatchSize
-	^ true

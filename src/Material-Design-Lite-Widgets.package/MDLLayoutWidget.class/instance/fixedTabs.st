@@ -1,3 +1,0 @@
-options
-fixedTabs
-	^ brush fixedTabs 

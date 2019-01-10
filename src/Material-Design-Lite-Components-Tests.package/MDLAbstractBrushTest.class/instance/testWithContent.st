@@ -1,3 +1,0 @@
-tests
-testWithContent
-	self subclassResponsibility

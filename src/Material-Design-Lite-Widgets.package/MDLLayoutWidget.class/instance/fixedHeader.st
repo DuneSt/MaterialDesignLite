@@ -1,3 +1,0 @@
-options
-fixedHeader
-	^ brush fixedHeader 

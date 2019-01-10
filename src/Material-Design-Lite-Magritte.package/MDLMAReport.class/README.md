@@ -1,1 +1,0 @@
-I am the magritte decorator for the report, you have to include MDLMAReport >> #cssStylesheet to your project in order to have a working table header

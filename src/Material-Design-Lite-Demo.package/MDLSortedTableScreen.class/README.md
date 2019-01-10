@@ -1,1 +1,0 @@
-Screen to render MDLSortedTable examples

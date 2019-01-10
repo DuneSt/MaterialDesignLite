@@ -1,1 +1,0 @@
-Magritte textInput component for a MAStringDescription

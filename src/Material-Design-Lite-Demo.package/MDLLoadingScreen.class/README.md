@@ -1,1 +1,0 @@
-I represent loading components screen.

@@ -1,3 +1,0 @@
-accessing
-filterInsensitiveBeginsWith
-	self filter: MDLInsensitiveBeginsWithFilter

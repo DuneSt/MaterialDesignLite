@@ -1,1 +1,0 @@
-firstDayOfWeekIndex is the index of the first day of the week in the representation, 7 being saturday and 1 sunday

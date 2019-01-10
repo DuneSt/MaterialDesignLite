@@ -1,3 +1,0 @@
-options
-noDesktopDrawerButton
-	^ brush noDesktopDrawerButton 

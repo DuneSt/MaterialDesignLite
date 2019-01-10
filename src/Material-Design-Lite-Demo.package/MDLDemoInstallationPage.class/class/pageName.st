@@ -1,3 +1,0 @@
-accessing
-pageName
-	^ 'Getting started'

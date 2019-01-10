@@ -1,3 +1,0 @@
-accessing
-filterPseudoRegex
-	self filter: MDLPseudoRegexFilter

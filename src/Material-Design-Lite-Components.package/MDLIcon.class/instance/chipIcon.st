@@ -1,3 +1,0 @@
-options
-chipIcon
-	self beChipDecoration

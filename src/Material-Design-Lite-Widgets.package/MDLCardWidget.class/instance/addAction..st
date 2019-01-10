@@ -1,3 +1,0 @@
-adding
-addAction: aComponentOrBlock
-	self cardActions addComponentOrBlock: aComponentOrBlock

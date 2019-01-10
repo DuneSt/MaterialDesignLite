@@ -1,3 +1,0 @@
-adding
-addPositiveVote
-	model increasePositiveCount

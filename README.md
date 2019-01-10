@@ -12,6 +12,8 @@ Coverage:
 
 This project has as first goal to bind the Google's Material Design Lite project to Seaside and as second goal to build widgets on top of Material Design to help [Seaside](https://github.com/SeasideSt/Seaside) developers in creating fast web application with flat design. For a tutorial on Seaside check [http://book.seaside.st](http://book.seaside.st).
 
+A migration guide from v1 to v2 can be found [here](resources/migration/v1_to_v2_migration_guide.md).
+
 - [Documentation](#documentation)
   * [Version management](#version-management)
   * [Install MDL Seaside](#install-mdl-seaside)
@@ -46,7 +48,7 @@ To install MaterialDesignLite on your Pharo image you can just execute the follo
 
 ```Smalltalk
     Metacello new
-    	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'master' path: 'src';
+    	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'v2.x.x' path: 'src';
     	baseline: 'MaterialDesignLite';
     	onWarningLog;
     	load
@@ -57,7 +59,7 @@ To add MaterialDesignLite Seaside to your baseline just add this:
 ```Smalltalk
     spec
     	baseline: 'MaterialDesignLite'
-    	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:master/src' ]
+    	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v2.x.x/src' ]
 ```
 
 Note that you can replace the #master by another branch as #development or a tag as #v1.0.0, #v1.? or #v1.2.? .
@@ -100,6 +102,19 @@ Where
 	    anHtmlRoot stylesheet url: (WAUrl absolute: 'https://storage.googleapis.com/code.getmdl.io/1.3.0/material.XXX-YYY.min.css').
 ```
 
+### Add specific style for extensions
+
+In order to make the extentions work properly, you should define some colors specific rules for your application in your css. To do so, just define:
+
+```CSS
+    .mdl-pagination__current{
+        box-shadow: inset 0px -4px 0px 0px #XXXXXX !important;
+    }
+```
+
+Where `XXXXXX` is the hex code of the accent color of your MDL application. 
+To find your code you can select the #500 color in the following page: [https://www.materialui.co/colors](https://www.materialui.co/colors) 
+
 ### Subclassing MDLApplication
 
 Another simple way to start with MDL is to subclass MDLApplication to create your root component.
@@ -118,6 +133,8 @@ You can find the possible colors into the class MDLColor class.
 You can find multiple examples when the application will be installed at the url: [http://localhost:8080/MDLDemo](http://localhost:8080/MDLDemo)
 
 When you install in a plain Pharo image you need to start the seaside server first by opening `World menu > Tools > Seaside Control Panel` and adding and starting an appropropriate `ZnZincServerAdaptor`. If you do not use port 8080, change the port in the URL.
+
+Since v2 you can also open the demo from the menu bar under `MaterialDesignLite`.
 
 You can find a demo at: [https://mdl.ferlicot.fr/](https://mdl.ferlicot.fr/)
 
@@ -149,7 +166,8 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 | 1.1.x       	| Pharo 50, 60, 61				| None							|
 | 1.2.x       	| Pharo 50, 60, 61				| None							|
 | 1.3.x       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
-| Dev       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
+| 2.x.x       	| Pharo 61, 70					| None							|
+| Dev       	| Pharo 61, 70					| None							|
 
 (*) *This version of Gemstone is tested. Older versions might work but we did not tested it.*
 (**) *The compatibility is not total. MaterialDesignLite uses Pharo's Traits to provide the users composables components. Thus, if the Gemstone users wants to use those components they will have to flatten themself the Traits in their Seaside application*

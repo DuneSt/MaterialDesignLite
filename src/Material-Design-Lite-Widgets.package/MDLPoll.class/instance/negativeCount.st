@@ -1,3 +1,0 @@
-accessing
-negativeCount
-	^ negativeCount

@@ -1,3 +1,0 @@
-tests
-testIsInitializedWithUnsortedState
-	self assert: MDLSortableTableHeader new currentState class equals: MDLSortableTableHeaderElementUnsorted

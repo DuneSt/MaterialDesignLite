@@ -1,3 +1,0 @@
-accessing
-onCompleteScript
-	^ onCompleteScript

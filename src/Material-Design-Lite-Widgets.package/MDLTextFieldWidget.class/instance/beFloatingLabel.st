@@ -1,3 +1,0 @@
-options
-beFloatingLabel
-	isFloatingLabel := true

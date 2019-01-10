@@ -1,1 +1,0 @@
-A MDLCalendarTest is a test class for testing the behavior of MDLCalendar

@@ -1,3 +1,0 @@
-accessing
-possiblePages
-	^ MDLDemoPage pagesToDisplay

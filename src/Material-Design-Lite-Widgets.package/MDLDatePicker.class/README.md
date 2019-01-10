@@ -1,1 +1,0 @@
-I am a date picker embebded in a MDLCard for a better display.

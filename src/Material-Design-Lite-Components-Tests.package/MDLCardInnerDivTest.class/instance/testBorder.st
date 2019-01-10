@@ -1,3 +1,0 @@
-tests
-testBorder
-	self subclassResponsibility

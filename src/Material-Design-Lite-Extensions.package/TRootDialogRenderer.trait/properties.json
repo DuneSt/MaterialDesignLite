@@ -1,9 +1,0 @@
-{
-	"commentStamp" : "CyrilFerlicot 12/7/2017 16:49",
-	"traitcomposition" : "TWithRootDialogComponent",
-	"classtraitcomposition" : "TWithRootDialogComponent classTrait",
-	"category" : "Material-Design-Lite-Extensions-RootDialog",
-	"classinstvars" : [ ],
-	"name" : "TRootDialogRenderer",
-	"instvars" : [ ]
-}
