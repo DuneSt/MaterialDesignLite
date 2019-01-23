@@ -4,7 +4,7 @@ I am a baseline of MaterialDesignLite. Read more at: https://github.com/DuneSt/M
 Class {
 	#name : #BaselineOfMaterialDesignLite,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfMaterialDesignLite'
+	#category : #BaselineOfMaterialDesignLite
 }
 
 { #category : #baseline }
@@ -57,12 +57,10 @@ BaselineOfMaterialDesignLite >> fileLibraryHelper: spec [
 { #category : #dependencies }
 BaselineOfMaterialDesignLite >> magritte: spec [
 	spec
-		project: 'Magritte3'
+		baseline: 'Magritte'
 		with: [ spec
-				className: #ConfigurationOfMagritte3;
-				versionString: #'release3';
 				loads: #('Seaside');
-				repository: 'http://smalltalkhub.com/mc/Magritte/Magritte3/main/' ]
+				repository: 'github://magritte-metamodel/magritte:v3.5.4/source' ]
 ]
 
 { #category : #dependencies }
