@@ -59,7 +59,7 @@ BaselineOfMaterialDesignLite >> magritte: spec [
 	spec
 		project: 'Magritte3'
 		with: [ spec
-				className: 'BaselineOfMagritte';
+				className: 'Magritte';
 				loads: #('Seaside');
 				repository: 'github://magritte-metamodel/magritte:v3.5.4/source' ]
 ]
