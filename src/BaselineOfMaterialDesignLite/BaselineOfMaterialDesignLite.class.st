@@ -27,7 +27,7 @@ BaselineOfMaterialDesignLite >> baseline: spec [
 				package: 'Material-Design-Lite-Core' with: [ spec requires: #('Material-Design-Lite-Utils' 'Material-Design-Lite-Components' 'Material-Design-Lite-Widgets' 'Material-Design-Lite-Extensions') ];
 				package: 'Material-Design-Lite-Core-Tests' with: [ spec requires: #('Material-Design-Lite-Core' 'Material-Design-Lite-Components-Tests') ];
 				package: 'Material-Design-Lite-Demo' with: [ spec requires: #('Material-Design-Lite-Core') ];
-				package: 'Material-Design-Lite-Magritte' with: [ spec requires: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components') ];
+				package: 'Material-Design-Lite-Magritte' with: [ spec requires: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' 'Magritte3') ];
 				package: 'Material-Design-Lite-Widgets' with: [ spec requires: #('Material-Design-Lite-Components') ];
 				package: 'Material-Design-Lite-Widgets-Tests' with: [ spec requires: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components-Tests') ];
 				package: 'Material-Design-Lite-Utils' with: [ spec requires: #('Seaside3' 'FileLibraryHelper') ];
@@ -57,8 +57,9 @@ BaselineOfMaterialDesignLite >> fileLibraryHelper: spec [
 { #category : #dependencies }
 BaselineOfMaterialDesignLite >> magritte: spec [
 	spec
-		baseline: 'Magritte'
+		project: 'Magritte3'
 		with: [ spec
+				className: 'BaselineOfMagritte';
 				loads: #('Seaside');
 				repository: 'github://magritte-metamodel/magritte:v3.5.4/source' ]
 ]
