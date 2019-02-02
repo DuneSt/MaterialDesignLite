@@ -24,6 +24,36 @@ MDLMenuButtonWidgetTests >> testButtonContents [
 ]
 
 { #category : #tests }
+MDLMenuButtonWidgetTests >> testDefaultDescriptionPositionAtBottom [
+	self assert: menu descriptionPosition equals: #bottom
+]
+
+{ #category : #tests }
+MDLMenuButtonWidgetTests >> testDescriptionAtBottom [
+	menu descriptionAtBottom.
+	
+	self assert: menu descriptionPosition equals: #bottom
+]
+
+{ #category : #tests }
+MDLMenuButtonWidgetTests >> testDescriptionAtLeft [
+	menu descriptionAtLeft.
+	self assert: menu descriptionPosition equals: #left
+]
+
+{ #category : #tests }
+MDLMenuButtonWidgetTests >> testDescriptionAtRight [
+	menu descriptionAtRight.
+	self assert: menu descriptionPosition equals: #right
+]
+
+{ #category : #tests }
+MDLMenuButtonWidgetTests >> testDescriptionAtTop [
+	menu descriptionAtTop.
+	self assert: menu descriptionPosition equals: #top
+]
+
+{ #category : #tests }
 MDLMenuButtonWidgetTests >> testLabelFor [
 	menu textBlock: nil.
 	self assert: (menu labelFor: 3) equals: '3'.

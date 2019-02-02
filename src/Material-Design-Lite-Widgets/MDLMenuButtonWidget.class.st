@@ -39,7 +39,8 @@ Class {
 		'description',
 		'action',
 		'sortBlock',
-		'buttonContent'
+		'buttonContent',
+		'descriptionPosition'
 	],
 	#category : #'Material-Design-Lite-Widgets-Menu'
 }
@@ -134,6 +135,40 @@ MDLMenuButtonWidget >> description: anObject [
 	description := anObject
 ]
 
+{ #category : #options }
+MDLMenuButtonWidget >> descriptionAtBottom [
+	"Sets the description of the menu at its bottom."
+	self descriptionPosition: #bottom
+]
+
+{ #category : #options }
+MDLMenuButtonWidget >> descriptionAtLeft [
+	"Sets the description of the menu at its left."
+	self descriptionPosition: #left
+]
+
+{ #category : #options }
+MDLMenuButtonWidget >> descriptionAtRight [
+	"Sets the description of the menu at its right."
+	self descriptionPosition: #right
+]
+
+{ #category : #options }
+MDLMenuButtonWidget >> descriptionAtTop [
+	"Sets the description of the menu at its top."
+	self descriptionPosition: #top
+]
+
+{ #category : #accessing }
+MDLMenuButtonWidget >> descriptionPosition [
+	^ descriptionPosition ifNil: [ descriptionPosition := #bottom ]
+]
+
+{ #category : #accessing }
+MDLMenuButtonWidget >> descriptionPosition: anObject [
+	descriptionPosition := anObject
+]
+
 { #category : #private }
 MDLMenuButtonWidget >> labelFor: anObject [
 	^ self textBlock ifNil: [ anObject asString ] ifNotNil: [ :tb | tb cull: anObject ]
@@ -206,6 +241,7 @@ MDLMenuButtonWidget >> renderTooltipOn: html [
 	html mdlTooltip
 		for: self id;
 		large;
+		position: self descriptionPosition;
 		with: self description
 ]
 
