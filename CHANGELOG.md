@@ -1,5 +1,16 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v1.3.2...HEAD-->
 
+
+# [v2.1.0](https://github.com/DuneSt/MaterialDesignLite/compare/v2.0.1...v2.1.0) (2019-02-07)
+
+## Feature
+
+* Allow to set tooltip position on MDLMenuButtonWidget ([244a38a](https://github.com/DuneSt/MaterialDesignLite/commit/244a38a1f69bd37c94febe044661ab7b17fd677d))
+
+## Infastructure
+
+* Enable Pharo 8 on CI with allowed fasilures ([c93b7a3](https://github.com/DuneSt/MaterialDesignLite/commit/c93b7a3e302fd0b615f3c1c7f7f7ea3f5b9ac870))
+
 # [v2.0.1](https://github.com/DuneSt/MaterialDesignLite/compare/v2.0.0...v2.0.1) (2019-01-24)
 
 ## Infastructure
