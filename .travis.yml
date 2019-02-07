@@ -6,12 +6,15 @@ os:
 #- osx
 
 smalltalk:
-  - Pharo-7.0
-  - Pharo-6.1
+  - Pharo64-8.0
+  - Pharo64-7.0
+  - Pharo64-6.1
 #- GemStone-3.4.1
   
 matrix:
   fast_finish: true
+  allow_failures:
+    - smalltalk: Pharo64-8.0
   
 # This make Gemstone builds 3x faster
 #cache:
