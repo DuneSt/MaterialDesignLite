@@ -38,7 +38,9 @@ MDLMenuButtonWidgetTests >> testDescriptionAtBottom [
 { #category : #tests }
 MDLMenuButtonWidgetTests >> testDescriptionAtLeft [
 	menu descriptionAtLeft.
-	self assert: menu descriptionPosition equals: #left
+	menu description: 'Description'.
+	self assert: menu descriptionPosition equals: #left.
+	self assert: [ :html | html render: menu ] generatedIncludes: 'mdl-tooltip--left'
 ]
 
 { #category : #tests }
