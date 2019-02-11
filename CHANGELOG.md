@@ -1,6 +1,12 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v1.3.2...HEAD-->
 
 
+# [v2.1.1](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.0...v2.1.1) (2019-02-11)
+
+## Bug fix
+
+* Fix broken `all` group in Baseline ([cb6db74](https://github.com/DuneSt/MaterialDesignLite/commit/cb6db7476faa70a86d32d8be394d61a25bcc01cd))
+
 # [v2.1.0](https://github.com/DuneSt/MaterialDesignLite/compare/v2.0.1...v2.1.0) (2019-02-07)
 
 ## Feature

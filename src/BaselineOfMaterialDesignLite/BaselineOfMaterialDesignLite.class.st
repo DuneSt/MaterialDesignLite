@@ -36,7 +36,7 @@ BaselineOfMaterialDesignLite >> baseline: spec [
 			
 			"Groups"
 			spec
-				group: 'all' with: #('default' 'Magritte');
+				group: 'all' with: #('default' 'magritte');
 				group: 'extensions' with: #('Material-Design-Lite-Extensions');
 				group: 'core' with: #('Material-Design-Lite-Widgets' 'Material-Design-Lite-Components' 'Material-Design-Lite-Core' 'Material-Design-Lite-Utils');
 				group: 'default' with: #('core' 'tests' 'demo');
