@@ -65,7 +65,7 @@ To add MaterialDesignLite Seaside to your baseline just add this:
 
 ```Smalltalk
     Metacello new
-    	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'v1.3.x' path: 'src';
+    	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'v1.x.x' path: 'src';
     	baseline: 'MaterialDesignLite';
     	onWarningLog;
     	load
