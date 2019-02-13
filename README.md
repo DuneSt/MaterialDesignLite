@@ -76,7 +76,7 @@ To add MaterialDesignLite Seaside to your baseline just add this:
 ```Smalltalk
     spec
     	baseline: 'MaterialDesignLite'
-    	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.3.x/src' ]
+    	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ]
 ```
 
 
