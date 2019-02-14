@@ -43,7 +43,7 @@ When a release contains only bug fixes, the patch number increase. When the rele
 Thus, it should be safe to depend on a fixed major version and moving minor version of this project.
 
 ## Install MDL Seaside
-
+### In Pharo
 To install MaterialDesignLite on your Pharo image you can just execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00). See ``ZnWorkspace`` section for installing a ZnWorkspace if you so want.
 
 ```Smalltalk
@@ -61,6 +61,24 @@ To add MaterialDesignLite Seaside to your baseline just add this:
     	baseline: 'MaterialDesignLite'
     	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v2.x.x/src' ]
 ```
+### In GemStone
+
+```Smalltalk
+    Metacello new
+    	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'v1.x.x' path: 'src';
+    	baseline: 'MaterialDesignLite';
+    	onWarningLog;
+    	load
+```
+
+To add MaterialDesignLite Seaside to your baseline just add this:
+
+```Smalltalk
+    spec
+    	baseline: 'MaterialDesignLite'
+    	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ]
+```
+
 
 Note that you can replace the #master by another branch as #development or a tag as #v1.0.0, #v1.? or #v1.2.? .
 
