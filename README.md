@@ -63,6 +63,8 @@ To add MaterialDesignLite Seaside to your baseline just add this:
 ```
 ### In GemStone
 
+Gemstone is only supported on v1 of the project. This does not mean no fix or feature can be added to it. We can still release new patch and feature version if asked.
+
 ```Smalltalk
     Metacello new
     	githubUser: 'DuneSt' project: 'MaterialDesignLite' commitish: 'v1.x.x' path: 'src';
