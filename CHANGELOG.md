@@ -1,5 +1,11 @@
-<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v1.3.2...HEAD-->
+<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H)) v1.3.2...HEAD --grep="Merge "-->
 
+
+# [v2.1.2](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.1...v2.1.2) (2019-02-28)
+
+## Bug fix
+
+* Fix failing test (testDisplayDateOn) ([848315](https://github.com/DuneSt/MaterialDesignLite/commit/8483153286c64fb6cc1e127d9f71c19582c789d4))
 
 # [v2.1.1](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.0...v2.1.1) (2019-02-11)
 
