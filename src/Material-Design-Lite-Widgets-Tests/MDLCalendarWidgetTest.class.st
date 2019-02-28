@@ -28,6 +28,8 @@ MDLCalendarWidgetTest >> testDisplayDateOn [
 	self assert: [ :html | calendar displayDate: tommorrow on: html ] generatedIncludes: 'mdl-color-text--primary-contrast mdl-color--primary'.
 	
 	self deny: [ :html | calendar displayDate: tommorrow on: html ] generatedIncludes: 'disabled'.
+	
+	calendar currentDate: today.
 	self assert: [ :html | calendar displayDate: nextMonth on: html ] generatedIncludes: 'disabled'
 ]
 
