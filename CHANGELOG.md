@@ -1,5 +1,9 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H)) v1.3.2...HEAD --grep="Merge "-->
+# [v2.1.3](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.2...v2.1.3) (2019-03-09)
 
+## Infrastructure
+
+* Fix version of FileLibraryHelper to v1.x.x ([808cffb](https://github.com/DuneSt/MaterialDesignLite/commit/808cffbf5a03c7f0fe5bfe84213239afaa43b971))
 
 # [v2.1.2](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.1...v2.1.2) (2019-02-28)
 
