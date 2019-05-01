@@ -161,9 +161,9 @@ MDLPaginationComponent >> pageSelectionComponent [
 			String
 				streamContents: [ :s | 
 					s
-						<< int;
+						print: int;
 						<< ' of ';
-						<< self numberOfPages ] ]
+						print: self numberOfPages ] ]
 		callback: [ :int | self currentPage: int ]
 		selectedObject: self currentPage)
 		beAutoSubmit;
