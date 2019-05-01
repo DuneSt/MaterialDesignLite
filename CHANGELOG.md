@@ -1,4 +1,10 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H)) v1.3.2...HEAD --grep="Merge "-->
+# [v2.1.4](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.3...v2.1.4) (2019-05-01)
+
+## Bug fix
+
+* Pagination component is broken in Pharo 8 ([3a9447c](https://github.com/DuneSt/MaterialDesignLite/commit/3a9447cea43beed161016c3966bca73233dd13a9))
+
 # [v2.1.3](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.2...v2.1.3) (2019-03-09)
 
 ## Infrastructure
