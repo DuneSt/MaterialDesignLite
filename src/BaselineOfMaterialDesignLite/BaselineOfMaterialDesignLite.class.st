@@ -84,7 +84,7 @@ BaselineOfMaterialDesignLite >> seaside3: spec [
 		baseline: 'Seaside3'
 		with: [ spec
 				loads: #('Core' 'JQuery' 'Zinc');
-				repository: 'github://SeasideSt/Seaside/repository' ]
+				repository: 'github://SeasideSt/Seaside:v3.3.x/repository' ]
 ]
 
 { #category : #dependencies }
