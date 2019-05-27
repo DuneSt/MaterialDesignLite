@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLAnchorButtonTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Buttons'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Buttons'
 }
 
 { #category : #tests }

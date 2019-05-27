@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLLayoutTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Layouts'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Layouts'
 }
 
 { #category : #tests }

@@ -1,6 +1,6 @@
 Class {
 	#name : #MDLDatePickerTest,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'calendar'
 	],

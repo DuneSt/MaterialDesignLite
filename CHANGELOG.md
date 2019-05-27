@@ -1,4 +1,11 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H)) v1.3.2...HEAD --grep="Merge "-->
+# [v2.1.5](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.4...v2.1.5) (2019-05-28)
+
+## Infrastructure
+
+* Extract testing infrastructure to external project ([b72293a](https://github.com/DuneSt/MaterialDesignLite/commit/b72293a44f2b257787a6bea31bd79d0c2b3326fb))
+* Fix Seaside version to v3.3.x  ([172a7a8](https://github.com/DuneSt/MaterialDesignLite/commit/172a7a89593408deb532855968bcbe282ea94110))
+
 # [v2.1.4](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.3...v2.1.4) (2019-05-01)
 
 ## Bug fix

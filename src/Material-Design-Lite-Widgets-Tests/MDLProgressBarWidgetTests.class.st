@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLProgressBarWidgetTests,
-	#superclass : #MDLAbstractSeasideTestCase,
-	#category : 'Material-Design-Lite-Widgets-Tests-Loading'
+	#superclass : #SGTAbstractSeasideTestCase,
+	#category : #'Material-Design-Lite-Widgets-Tests-Loading'
 }
 
 { #category : #tests }

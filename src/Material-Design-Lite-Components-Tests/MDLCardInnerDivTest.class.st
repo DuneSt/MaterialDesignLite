@@ -3,8 +3,8 @@ A MDLCardInnerDivTest is a test class for testing the behavior of MDLCardInnerDi
 "
 Class {
 	#name : #MDLCardInnerDivTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Card'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Card'
 }
 
 { #category : #testing }

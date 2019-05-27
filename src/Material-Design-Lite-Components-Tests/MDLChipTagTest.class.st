@@ -3,8 +3,8 @@ A MDLChipTagTest is a test class for testing the behavior of MDLChipTag
 "
 Class {
 	#name : #MDLChipTagTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Chips'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Chips'
 }
 
 { #category : #tests }
