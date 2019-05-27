@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLSnackbarTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Snackbar'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Snackbar'
 }
 
 { #category : #tests }

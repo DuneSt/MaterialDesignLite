@@ -18,12 +18,13 @@ BaselineOfMaterialDesignLite >> baseline: spec [
 				seaside3: spec;
 				fileLibraryHelper: spec;
 				materialColors: spec;
-				magritte: spec.	
+				magritte: spec;
+				seasideGenerationTester: spec.	
 			
 			"Packages"
 			spec
 				package: 'Material-Design-Lite-Components' with: [ spec requires: #('MaterialColors' 'Seaside3') ];
-				package: 'Material-Design-Lite-Components-Tests' with: [ spec requires: #('Material-Design-Lite-Components') ];
+				package: 'Material-Design-Lite-Components-Tests' with: [ spec requires: #('Material-Design-Lite-Components' 'SeasideGenerationTester') ];
 				package: 'Material-Design-Lite-Core' with: [ spec requires: #('Material-Design-Lite-Utils' 'Material-Design-Lite-Components' 'Material-Design-Lite-Widgets' 'Material-Design-Lite-Extensions') ];
 				package: 'Material-Design-Lite-Core-Tests' with: [ spec requires: #('Material-Design-Lite-Core' 'Material-Design-Lite-Components-Tests') ];
 				package: 'Material-Design-Lite-Widgets' with: [ spec requires: #('Material-Design-Lite-Components') ];
@@ -84,4 +85,9 @@ BaselineOfMaterialDesignLite >> seaside3: spec [
 		with: [ spec
 				loads: #('Core' 'JQuery' 'Zinc');
 				repository: 'github://SeasideSt/Seaside/repository' ]
+]
+
+{ #category : #dependencies }
+BaselineOfMaterialDesignLite >> seasideGenerationTester: spec [
+	spec baseline: 'SeasideGenerationTester' with: [ spec repository: 'github://DuneSt/SeasideGenerationTester:v1.x.x/src' ]
 ]

@@ -1,10 +1,10 @@
 Class {
 	#name : #MDLSelectWidgetTests,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'select'
 	],
-	#category : 'Material-Design-Lite-Widgets-Tests-Form'
+	#category : #'Material-Design-Lite-Widgets-Tests-Form'
 }
 
 { #category : #helpers }

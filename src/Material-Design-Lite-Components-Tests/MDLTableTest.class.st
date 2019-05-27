@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLTableTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Tables'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Tables'
 }
 
 { #category : #tests }

@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLTabsWidgetTest,
-	#superclass : #MDLAbstractSeasideTestCase,
-	#category : 'Material-Design-Lite-Widgets-Tests-Tab'
+	#superclass : #SGTAbstractSeasideTestCase,
+	#category : #'Material-Design-Lite-Widgets-Tests-Tab'
 }
 
 { #category : #tests }

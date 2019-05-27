@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLListItemSecondaryInfoTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-List'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-List'
 }
 
 { #category : #tests }

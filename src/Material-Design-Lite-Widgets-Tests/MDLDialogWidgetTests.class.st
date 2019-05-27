@@ -1,10 +1,10 @@
 Class {
 	#name : #MDLDialogWidgetTests,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'dialog'
 	],
-	#category : 'Material-Design-Lite-Widgets-Tests-Dialog'
+	#category : #'Material-Design-Lite-Widgets-Tests-Dialog'
 }
 
 { #category : #running }

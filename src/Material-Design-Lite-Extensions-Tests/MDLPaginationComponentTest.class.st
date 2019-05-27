@@ -1,6 +1,6 @@
 Class {
 	#name : #MDLPaginationComponentTest,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'component'
 	],

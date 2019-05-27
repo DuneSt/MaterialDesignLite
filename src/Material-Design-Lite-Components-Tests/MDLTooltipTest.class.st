@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLTooltipTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Tooltips'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Tooltips'
 }
 
 { #category : #tests }

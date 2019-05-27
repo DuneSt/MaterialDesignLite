@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLDialogActionsTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Dialog'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Dialog'
 }
 
 { #category : #tests }

@@ -1,10 +1,10 @@
 Class {
 	#name : #MDLNestedListTest,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'list'
 	],
-	#category : 'Material-Design-Lite-Widgets-Tests-List'
+	#category : #'Material-Design-Lite-Widgets-Tests-List'
 }
 
 { #category : #helpers }

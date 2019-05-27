@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLChipImageTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Chips'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Chips'
 }
 
 { #category : #tests }
