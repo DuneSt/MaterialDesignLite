@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLTRootDialogRendererTest,
-	#superclass : #MDLAbstractSeasideTestCase,
-	#category : 'Material-Design-Lite-Extensions-Tests-RootDialog'
+	#superclass : #SGTAbstractSeasideTestCase,
+	#category : #'Material-Design-Lite-Extensions-Tests-RootDialog'
 }
 
 { #category : #tests }

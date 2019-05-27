@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLMegaFooterBottomSectionTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Footer'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Footer'
 }
 
 { #category : #tests }

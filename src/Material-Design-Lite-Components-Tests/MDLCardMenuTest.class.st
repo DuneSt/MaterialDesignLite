@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLCardMenuTest,
-	#superclass : #MDLAbstractBrushTest,
-	#category : 'Material-Design-Lite-Components-Tests-Card'
+	#superclass : #SGTAbstractBrushTest,
+	#category : #'Material-Design-Lite-Components-Tests-Card'
 }
 
 { #category : #tests }

@@ -1,10 +1,10 @@
 Class {
 	#name : #MDLApplicationTest,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'app'
 	],
-	#category : 'Material-Design-Lite-Core-Tests'
+	#category : #'Material-Design-Lite-Core-Tests'
 }
 
 { #category : #running }

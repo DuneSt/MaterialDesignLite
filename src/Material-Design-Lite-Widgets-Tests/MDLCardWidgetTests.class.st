@@ -1,10 +1,10 @@
 Class {
 	#name : #MDLCardWidgetTests,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'card'
 	],
-	#category : 'Material-Design-Lite-Widgets-Tests-Cards'
+	#category : #'Material-Design-Lite-Widgets-Tests-Cards'
 }
 
 { #category : #running }

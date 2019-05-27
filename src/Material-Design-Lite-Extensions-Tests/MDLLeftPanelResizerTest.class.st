@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLLeftPanelResizerTest,
-	#superclass : #MDLAbstractSeasideTestCase,
-	#category : 'Material-Design-Lite-Extensions-Tests-Panels'
+	#superclass : #SGTAbstractSeasideTestCase,
+	#category : #'Material-Design-Lite-Extensions-Tests-Panels'
 }
 
 { #category : #tests }

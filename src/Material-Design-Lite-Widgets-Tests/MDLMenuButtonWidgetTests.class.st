@@ -1,10 +1,10 @@
 Class {
 	#name : #MDLMenuButtonWidgetTests,
-	#superclass : #MDLAbstractSeasideTestCase,
+	#superclass : #SGTAbstractSeasideTestCase,
 	#instVars : [
 		'menu'
 	],
-	#category : 'Material-Design-Lite-Widgets-Tests-Menu'
+	#category : #'Material-Design-Lite-Widgets-Tests-Menu'
 }
 
 { #category : #running }
