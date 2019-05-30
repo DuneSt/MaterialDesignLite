@@ -31,6 +31,7 @@ MDLDemoFooter >> renderContentOn: html [
 									html
 										listItem: [ html anchor
 												url: url;
+												target: '_blank';
 												with: label ] ] ] ].
 			html mdlMiniFooterRightSection: [ html mdlMiniFooterLinkList: [ html listItem: [ html text: 'Contact: Cyril Ferlicot-Deblecque (cyril (a) ferlicot.me)' ] ] ] ]
 ]

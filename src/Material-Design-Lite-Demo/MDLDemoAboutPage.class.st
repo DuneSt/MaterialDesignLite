@@ -37,6 +37,7 @@ MDLDemoAboutPage >> renderContentOn: html [
 			html image
 				class: 'mdl-illustration';
 				url: (MDLDemoLibrary urlOf: 'motionPng').
+			self renderMoreDescriptionOn: html.
 			html section beCell: 12 ]
 ]
 
@@ -53,6 +54,7 @@ MDLDemoAboutPage >> renderMDDescriptionOn: html [
 											'Material Design Lite (MDL) is a library of components for web developers based on Google''s Material Design Philosophy: "A visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science." Understanding the goals and principles of Material Design is critical to the proper use of the Material Design Lite components. If you have not yet read the '.
 									html anchor
 										url: 'https://material.io/guidelines/material-design/';
+										target: '_blank';
 										with: 'Material Design Introduction'.
 									html text: ' you should do so before attempting to use the components.' ] ] ] ]
 ]
@@ -71,8 +73,30 @@ MDLDemoAboutPage >> renderMDLDescriptionOn: html [
 								paragraph: [ html text: 'This project is built on top of '.
 									html anchor
 										url: 'https://getmdl.io/index.html';
+										target: '_blank';
 										with: 'Material Design Lite'.
 									html text: ' implementation from Google.' ] ] ] ]
+]
+
+{ #category : #rendering }
+MDLDemoAboutPage >> renderMoreDescriptionOn: html [
+	html section
+		beCell: 12;
+		with: [ html
+				definitionList: [ html definitionTerm: 'More'.
+					html
+						definitionData: [ html
+								paragraph: [ html text: 'A port of MDL for Seaside to '.
+									html anchor
+										url: 'https://www.object-arts.com';
+										target: '_blank';
+										with: 'Dolphin Smalltalk'.
+									html text: ' has been made and can be found at: '.
+									html break.
+									html anchor
+										url: 'https://github.com/rko281/MaterialDesignLite';
+										target: '_blank';
+										with: 'https://github.com/rko281/MaterialDesignLite' ] ] ] ]
 ]
 
 { #category : #rendering }
@@ -85,6 +109,7 @@ MDLDemoAboutPage >> renderSeasideDescriptionOn: html [
 						definitionData: [ html
 								paragraph: [ html anchor
 										url: 'https://github.com/SeasideSt/Seaside';
+										target: '_blank';
 										with: 'Seaside'.
 									html
 										text:

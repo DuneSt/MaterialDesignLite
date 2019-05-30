@@ -1,4 +1,10 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H)) v1.3.2...HEAD --grep="Merge "-->
+# [v2.1.6](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.5...v2.1.6) (2019-05-31)
+
+## Infrastructure
+
+* Add link to Dolphin port ([d904b36](https://github.com/DuneSt/MaterialDesignLite/commit/d904b366ac96074540a359c400022f51293e57b1))
+
 # [v2.1.5](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.4...v2.1.5) (2019-05-28)
 
 ## Infrastructure
