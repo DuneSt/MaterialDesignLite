@@ -25,6 +25,7 @@ A migration guide from v1 to v2 can be found [here](resources/migration/v1_to_v2
   * [ZnWorkspace](#znworkspace)
   * [Latest supported Dependencies](#latest-supported-dependencies)
   * [Smalltalk versions compatibility](#smalltalk-versions-compatibility)
+  * [Ports](#ports)
   * [Under the hood](#under-the-hood)
   * [Contact](#contact)
 
@@ -32,19 +33,19 @@ A migration guide from v1 to v2 can be found [here](resources/migration/v1_to_v2
 
 ## Version management 
 
-This project use semantic versionning to define the releases. This mean that each stable release of the project will get associate a version number of the form `vX.Y.Z`. 
+This project use semantic versioning to define the releases. This means that each stable release of the project will be assigned a version number of the form `vX.Y.Z`. 
 
-- **X** define the major version number
-- **Y** define the minor version number 
-- **Z** define the patch version number
+- **X** defines the major version number
+- **Y** defines the minor version number 
+- **Z** defines the patch version number
 
-When a release contains only bug fixes, the patch number increase. When the release contains new features backward compatibles, the minor version increase. When the release contains breaking changes, the major version increase. 
+When a release contains only bug fixes, the patch number increases. When the release contains new features that are backward compatible, the minor version increases. When the release contains breaking changes, the major version increases. 
 
 Thus, it should be safe to depend on a fixed major version and moving minor version of this project.
 
 ## Install MDL Seaside
 ### In Pharo
-To install MaterialDesignLite on your Pharo image you can just execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00). See ``ZnWorkspace`` section for installing a ZnWorkspace if you so want.
+To install MaterialDesignLite on your Pharo image, execute the following script:  [Spotter Cloud Workspace Url](http://ws.stfx.eu/1JIZRQS7OI00). See ``ZnWorkspace`` section for installing a ZnWorkspace if you so want.
 
 ```Smalltalk
     Metacello new
@@ -54,12 +55,14 @@ To install MaterialDesignLite on your Pharo image you can just execute the follo
     	load
 ```
 
-To add MaterialDesignLite Seaside to your baseline just add this:
+To add MaterialDesignLite Seaside to your baseline:
 
 ```Smalltalk
     spec
     	baseline: 'MaterialDesignLite'
     	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v2.x.x/src' ]
+
+Note that you can replace the #master by another branch such as #development or a tag such as #v2.0.0, #v2.? or #v2.1.? .
 ```
 ### In GemStone
 
@@ -81,8 +84,7 @@ To add MaterialDesignLite Seaside to your baseline just add this:
     	with: [ spec repository: 'github://DuneSt/MaterialDesignLite:v1.x.x/src' ]
 ```
 
-
-Note that you can replace the #master by another branch as #development or a tag as #v1.0.0, #v1.? or #v1.2.? .
+Note that you can replace the #master by another branch such as #development or a tag such as #v1.0.0, #v1.? or #v1.2.? .
 
 ## Getting started
 
@@ -192,10 +194,15 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 (*) *This version of Gemstone is tested. Older versions might work but we did not tested it.*
 (**) *The compatibility is not total. MaterialDesignLite uses Pharo's Traits to provide the users composables components. Thus, if the Gemstone users wants to use those components they will have to flatten themself the Traits in their Seaside application*
 
+## Ports
+
+A port of MDL for Seaside to [Dolphin Smalltalk](https://www.object-arts.com/) has been made and can be found at:
+* [https://github.com/rko281/MaterialDesignLite](https://github.com/rko281/MaterialDesignLite)
+
 ## Under the hood
 
 Understanding what is going on under the hood is always useful. Have a look at (http://www.tutorialspark.com/Google_MaterialDesignLite_Tutorials/index.php) for a tutorial.
 
 ## Contact
 
-If you have any question or problem do not hesitate to open an issue or contact cyril (a) ferlicot.me 
+If you have any questions or problems do not hesitate to open an issue or contact cyril (a) ferlicot.me 
