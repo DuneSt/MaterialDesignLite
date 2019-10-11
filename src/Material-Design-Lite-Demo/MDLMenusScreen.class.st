@@ -4,12 +4,12 @@ I'm representing the menu components screen
 Class {
 	#name : #MDLMenusScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
 
 { #category : #accessing }
 MDLMenusScreen class >> description [
-	^ 'Lists of clickable actions.'
+	^ 'Lists of clickable actions. Those menus are anchored to elements and can have their anchor point specified.'
 ]
 
 { #category : #accessing }

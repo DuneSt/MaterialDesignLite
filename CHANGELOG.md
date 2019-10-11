@@ -1,4 +1,13 @@
-<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H)) v1.3.2...HEAD --grep="Merge "-->
+<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.1.7...HEAD --grep="Merge pull"-->
+
+# [v2.1.7](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.6...v2.1.7) (2019-10-11)
+
+## Infrastructure
+
+* Update Seaside dependency to 3.4.x ([3fa632d](https://github.com/DuneSt/MaterialDesignLite/commit/3fa632dfac21f1ab69d1e644dce75c9e20c08883))
+* Remove appveyor from checks ([cb442d3](https://github.com/DuneSt/MaterialDesignLite/commit/cb442d39dd51e68f9d25b76a056d74dede0cfbdf))
+* Add more description to menu demo ([d33a3bd](https://github.com/DuneSt/MaterialDesignLite/commit/d33a3bd74989a31c1d3e212c603c725acd25b8c3))
+
 # [v2.1.6](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.5...v2.1.6) (2019-05-31)
 
 ## Infrastructure
