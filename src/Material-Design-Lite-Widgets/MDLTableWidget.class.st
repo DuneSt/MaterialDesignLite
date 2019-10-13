@@ -24,6 +24,11 @@ MDLTableWidget >> addAjaxButtonColumnNamed: aString iconName: iconName onClick: 
 ]
 
 { #category : #adding }
+MDLTableWidget >> addAjaxButtonColumnWithIconName: iconName onClick: onClickBlock [
+	self addAjaxButtonColumnNamed: '' iconName: iconName onClick: onClickBlock tooltip: nil
+]
+
+{ #category : #adding }
 MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClick: onClickBlock [
 	self addButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: nil
 ]
@@ -36,6 +41,11 @@ MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClick: onCl
 							onClickBlock: onClickBlock;
 							tooltip: tooltip;
 							yourself)
+]
+
+{ #category : #adding }
+MDLTableWidget >> addButtonColumnWithIconName: iconName onClick: onClickBlock [
+	self addButtonColumnNamed: '' iconName: iconName onClick: onClickBlock tooltip: nil
 ]
 
 { #category : #adding }
