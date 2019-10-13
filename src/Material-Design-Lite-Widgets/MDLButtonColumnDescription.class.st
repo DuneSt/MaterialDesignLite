@@ -30,6 +30,13 @@ MDLButtonColumnDescription >> iconName: anObject [
 	iconName := anObject
 ]
 
+{ #category : #initialization }
+MDLButtonColumnDescription >> initialize [
+	super initialize.
+	"Initialize with a behaviour that does nothing."
+	self onClickBlock: [  ]
+]
+
 { #category : #accessing }
 MDLButtonColumnDescription >> onClickBlock [
 	^ onClickBlock

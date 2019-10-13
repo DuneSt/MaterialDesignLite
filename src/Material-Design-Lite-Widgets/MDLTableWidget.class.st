@@ -90,6 +90,7 @@ MDLTableWidget >> columnDescriptions [
 MDLTableWidget >> initialize [
 	super initialize.
 	columnDescriptions := OrderedCollection new.
+	collection := #()
 ]
 
 { #category : #rendering }

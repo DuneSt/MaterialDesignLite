@@ -9,6 +9,13 @@ Class {
 	#category : #'Material-Design-Lite-Widgets-Table'
 }
 
+{ #category : #initialization }
+MDLAjaxButtonColumnDescription >> initialize [
+	super initialize.
+	"Initialize with a behaviour that does nothing."
+	self onClickBlock: [ :html :rowObject | html jQuery noop ]
+]
+
 { #category : #rendering }
 MDLAjaxButtonColumnDescription >> render: row on: html [
 	| buttonId |
