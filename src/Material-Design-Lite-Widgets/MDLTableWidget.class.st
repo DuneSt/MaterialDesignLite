@@ -1,3 +1,10 @@
+"
+I am table widget which aims to provide a high-level API to generate MDL tables.
+
+I work by providing myself a #collection which just needs to be iterable (i.e. understand #do:) and a list of column descriptions.
+
+I provide a nice API to add colum descriptions (see my 'adding' protocol).
+"
 Class {
 	#name : #MDLTableWidget,
 	#superclass : #WAComponent,

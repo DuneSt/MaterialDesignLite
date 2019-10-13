@@ -1,3 +1,6 @@
+"
+Screen to render MDLTableWidget examples
+"
 Class {
 	#name : #MDLTableWidgetScreen,
 	#superclass : #MDLWidgetDemo,
