@@ -32,7 +32,9 @@ MDLTableWidgetScreen >> renderTableWidgetOn: html [
 			(MDLTableWidget new
 				addNumericColumnNamed: 'Integer' evaluated: [ :x | x ];
 				addStringColumnNamed: 'String with commas' evaluated: [ :x | x asStringWithCommas ];
-				collection: (1000 to: 10000 by: 1000);
+				addButtonColumnNamed: 'Action' iconName: 'explore' onClickBlock: [ :htmlCanvas :x |
+					htmlCanvas jQuery noop ] tooltip: 'coucou';
+				collection: (1000 to: 5000 by: 1000);
 				yourself)
 ]
 

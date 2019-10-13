@@ -9,6 +9,25 @@ Class {
 }
 
 { #category : #adding }
+MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClickBlock: onClickBlock [
+	self addColumn: (MDLButtonColumnDescription new
+							title: aString;
+							iconName: iconName;
+							onClickBlock: onClickBlock;
+							yourself)
+]
+
+{ #category : #adding }
+MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClickBlock: onClickBlock tooltip: tooltip [
+	self addColumn: (MDLButtonColumnDescription new
+							title: aString;
+							iconName: iconName;
+							onClickBlock: onClickBlock;
+							tooltip: tooltip;
+							yourself)
+]
+
+{ #category : #adding }
 MDLTableWidget >> addColumn: aColumnDescription [
 	columnDescriptions add: aColumnDescription
 ]

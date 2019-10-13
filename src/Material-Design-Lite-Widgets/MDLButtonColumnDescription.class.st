@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'onClickBlock',
 		'iconName',
-		'toolTip'
+		'tooltip'
 	],
 	#category : #'Material-Design-Lite-Widgets-Table'
 }
@@ -31,21 +31,20 @@ MDLButtonColumnDescription >> onClickBlock: anObject [
 
 { #category : #rendering }
 MDLButtonColumnDescription >> render: row on: html [
-	| id |
+	| buttonId |
 	html mdlTableCell
-		style: 'width: 1px;'; flag: #TODO;
 		with: [ 
 			html mdlButton
-				id: (id := 'button-',(self generateIdUsing: html));
+				id: (buttonId := (self generateIdUsing: html));
 				onClick: (self onClickBlock value: html value: row);
 				labelIcon: self iconName ].
 	
-	self toolTip ifNil: [ ^ self ].
+	self tooltip ifNil: [ ^ self ].
 	
 	
 	html mdlTooltip
-		for: id;
-		with: [ html text: self toolTip ]
+		for: buttonId;
+		with: [ html text: self tooltip ]
 ]
 
 { #category : #rendering }
@@ -56,11 +55,11 @@ MDLButtonColumnDescription >> renderHeadingOn: html [
 ]
 
 { #category : #accessing }
-MDLButtonColumnDescription >> toolTip [
-	^ toolTip
+MDLButtonColumnDescription >> tooltip [
+	^ tooltip
 ]
 
 { #category : #accessing }
-MDLButtonColumnDescription >> toolTip: anObject [
-	toolTip := anObject
+MDLButtonColumnDescription >> tooltip: anObject [
+	tooltip := anObject
 ]

@@ -7,7 +7,7 @@ Class {
 { #category : #rendering }
 MDLStringColumnDescription >> render: row on: html [
 	html mdlTableCell
-		id: 'cell-',(self generateIdUsing: html);
+		id: (self generateIdUsing: html);
 		nonNumerical;
 		with: (self evaluation value: row)
 ]
