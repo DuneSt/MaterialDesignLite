@@ -21,6 +21,7 @@ MDLStringColumnDescription >> render: row on: html [
 { #category : #rendering }
 MDLStringColumnDescription >> renderHeadingOn: html [
 	(super renderHeadingOn: html)
+		class: 'mdl-table-widget__cell--string';
 		nonNumerical;
 		with: self title.
 ]

@@ -63,6 +63,7 @@ MDLButtonColumnDescription >> render: row on: html [
 { #category : #rendering }
 MDLButtonColumnDescription >> renderHeadingOn: html [
 	(super renderHeadingOn: html)
+		class: 'mdl-table-widget__cell--button';
 		nonNumerical;
 		with: self title.
 ]

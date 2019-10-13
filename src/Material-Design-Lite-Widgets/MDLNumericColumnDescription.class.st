@@ -20,5 +20,6 @@ MDLNumericColumnDescription >> render: row on: html [
 { #category : #rendering }
 MDLNumericColumnDescription >> renderHeadingOn: html [
 	(super renderHeadingOn: html)
+		class: 'mdl-table-widget__cell--numeric';
 		with: self title.
 ]
