@@ -32,8 +32,13 @@ MDLTableWidgetScreen >> renderTableWidgetOn: html [
 			(MDLTableWidget new
 				addNumericColumnNamed: 'Integer' evaluated: [ :x | x ];
 				addStringColumnNamed: 'String with commas' evaluated: [ :x | x asStringWithCommas ];
-				addButtonColumnNamed: 'Action' iconName: 'explore' onClickBlock: [ :htmlCanvas :x |
-					htmlCanvas jQuery noop ] tooltip: 'coucou';
+				addAjaxButtonColumnNamed: '' iconName: 'explore' onClick: [ :htmlCanvas :x |
+					htmlCanvas jQuery noop ] tooltip: 'Explore integer related to the row.';
+				addButtonColumnNamed: '' iconName: 'delete' onClick: [ :x |
+					Transcript
+						show: x;
+						show: 'deleted in callback.';
+						cr ] tooltip: 'Delete integer in callback.';
 				collection: (1000 to: 5000 by: 1000);
 				yourself)
 ]

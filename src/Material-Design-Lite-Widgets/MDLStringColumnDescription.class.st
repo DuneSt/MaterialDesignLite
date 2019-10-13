@@ -1,3 +1,8 @@
+"
+I model a string column.
+
+My values are of kind string. Because of that, I align the title of the column on the left side.
+"
 Class {
 	#name : #MDLStringColumnDescription,
 	#superclass : #MDLTableColumnDescription,
@@ -8,6 +13,7 @@ Class {
 MDLStringColumnDescription >> render: row on: html [
 	html mdlTableCell
 		id: (self generateIdUsing: html);
+		class: 'mdl-table-widget__cell--string';
 		nonNumerical;
 		with: (self evaluation value: row)
 ]

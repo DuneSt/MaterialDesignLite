@@ -1,3 +1,13 @@
+"
+I am an abstract super class to model the description of a column for a MDLTableWidget.
+
+I hold my:
+- #title which is the string to display as column name
+- #idBlock which is the block that I use to generate an id. This block takes an argument which is the html canvas.
+- #evaluation which is the block that I use to get the content of a cell concerning myself by providing it a row object.
+
+My subclasses model concrete column description check them for concrete examples.
+"
 Class {
 	#name : #MDLTableColumnDescription,
 	#superclass : #Object,
@@ -49,7 +59,7 @@ MDLTableColumnDescription >> render: row on: html [
 MDLTableColumnDescription >> renderHeadingOn: html [
 	| heading |
 	heading := html mdlTableHeading
-		id: 'head-',(self generateIdUsing: html);
+		id: (self generateIdUsing: html);
 		yourself.
 	
 	^ heading

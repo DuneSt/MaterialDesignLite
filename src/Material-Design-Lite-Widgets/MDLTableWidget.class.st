@@ -9,16 +9,27 @@ Class {
 }
 
 { #category : #adding }
-MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClickBlock: onClickBlock [
-	self addColumn: (MDLButtonColumnDescription new
+MDLTableWidget >> addAjaxButtonColumnNamed: aString iconName: iconName onClick: onClickBlock [
+	self addAjaxButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: nil
+]
+
+{ #category : #adding }
+MDLTableWidget >> addAjaxButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: tooltip [
+	self addColumn: (MDLAjaxButtonColumnDescription new
 							title: aString;
 							iconName: iconName;
 							onClickBlock: onClickBlock;
+							tooltip: tooltip;
 							yourself)
 ]
 
 { #category : #adding }
-MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClickBlock: onClickBlock tooltip: tooltip [
+MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClick: onClickBlock [
+	self addButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: nil
+]
+
+{ #category : #adding }
+MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: tooltip [
 	self addColumn: (MDLButtonColumnDescription new
 							title: aString;
 							iconName: iconName;
@@ -71,7 +82,11 @@ MDLTableWidget >> initialize [
 
 { #category : #rendering }
 MDLTableWidget >> renderContentOn: html [
-	self renderTableOn: html
+	html mdlTable
+		class: 'mdl-table-widget';
+		with: [
+			self renderTableHeadOn: html.
+			self renderTableBodyOn: html ]
 ]
 
 { #category : #rendering }
@@ -90,12 +105,4 @@ MDLTableWidget >> renderTableHeadOn: html [
 		html tableRow: [ 
 			self columnDescriptions do: [ :column |
 				column renderHeadingOn: html ] ] ]
-]
-
-{ #category : #rendering }
-MDLTableWidget >> renderTableOn: html [
-	html mdlTable
-		with: [
-			self renderTableHeadOn: html.
-			self renderTableBodyOn: html ]
 ]

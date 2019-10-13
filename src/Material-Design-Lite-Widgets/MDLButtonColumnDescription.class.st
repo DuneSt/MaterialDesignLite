@@ -1,3 +1,14 @@
+"
+I model a button column.
+
+I add a button to each row which should perform an action concerning the row.
+
+I perform my action in a callback which means that the page is refreshed when a button is clicked.
+
+My #onClickBlock has a single argument: the row on which the action should be applied.
+
+A #tooltip can bet set to display useful information to user about the purpose of my buttons.
+"
 Class {
 	#name : #MDLButtonColumnDescription,
 	#superclass : #MDLTableColumnDescription,
@@ -33,18 +44,13 @@ MDLButtonColumnDescription >> onClickBlock: anObject [
 MDLButtonColumnDescription >> render: row on: html [
 	| buttonId |
 	html mdlTableCell
-		with: [ 
-			html mdlButton
-				id: (buttonId := (self generateIdUsing: html));
-				onClick: (self onClickBlock value: html value: row);
-				labelIcon: self iconName ].
+		class: 'mdl-table-widget__cell--button';
+		with: [ html mdlAnchorButton
+				id: (buttonId := self generateIdUsing: html);
+				callback: [ self onClickBlock value: row ];
+				icon: self iconName ].
 	
-	self tooltip ifNil: [ ^ self ].
-	
-	
-	html mdlTooltip
-		for: buttonId;
-		with: [ html text: self tooltip ]
+	self renderTooltipFor: buttonId on: html
 ]
 
 { #category : #rendering }
@@ -52,6 +58,14 @@ MDLButtonColumnDescription >> renderHeadingOn: html [
 	(super renderHeadingOn: html)
 		nonNumerical;
 		with: self title.
+]
+
+{ #category : #rendering }
+MDLButtonColumnDescription >> renderTooltipFor: buttonId on: html [
+	self tooltip ifNil: [ ^ self ].
+	html mdlTooltip
+		for: buttonId;
+		with: [ html text: self tooltip ]
 ]
 
 { #category : #accessing }
