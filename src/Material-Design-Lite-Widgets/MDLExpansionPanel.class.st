@@ -9,7 +9,8 @@ Class {
 		'expandIcon',
 		'foldIcon',
 		'onExpandBlock',
-		'onFoldBlock'
+		'onFoldBlock',
+		'shadow'
 	],
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
@@ -73,6 +74,7 @@ MDLExpansionPanel >> initialize [
 	self
 		title: '';
 		description: '';
+		shadow: 2;
 		isExpanded: false;
 		expandIcon: 'expand_more';
 		foldIcon: 'expand_less';
@@ -115,7 +117,7 @@ MDLExpansionPanel >> renderContentOn: html [
 	self ensureId: html.
 	html mdlGrid
 		id: self id;
-		shadow: 2;
+		shadow: self shadow;
 		with: [ html div
 				class: 'mdl-expansion-panel__header';
 				style: 'width: 100%;';flag: #TODO;"Move to stylesheet."
@@ -149,6 +151,16 @@ MDLExpansionPanel >> renderContentOn: html [
 										with: [ html mdlCell
 												size: 12;
 												with: [ self expandedBlock value: html ] ] ] ] ]
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> shadow [
+	^ shadow
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> shadow: anObject [
+	shadow := anObject
 ]
 
 { #category : #accessing }
