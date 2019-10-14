@@ -5,7 +5,11 @@ Class {
 		'title',
 		'description',
 		'expandedBlock',
-		'isExpanded'
+		'isExpanded',
+		'expandIcon',
+		'foldIcon',
+		'onExpandBlock',
+		'onFoldBlock'
 	],
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
@@ -21,6 +25,16 @@ MDLExpansionPanel >> description: anObject [
 ]
 
 { #category : #accessing }
+MDLExpansionPanel >> expandIcon [
+	^ expandIcon
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> expandIcon: anObject [
+	expandIcon := anObject
+]
+
+{ #category : #accessing }
 MDLExpansionPanel >> expandedBlock [
 	^ expandedBlock
 ]
@@ -33,14 +47,29 @@ MDLExpansionPanel >> expandedBlock: anObject [
 { #category : #accessing }
 MDLExpansionPanel >> expansionIcon [
 	^ self isExpanded
-		ifTrue: [ 'expand_less' ]
-		ifFalse: [ 'expand_more' ]
+		ifTrue: [ self foldIcon ]
+		ifFalse: [ self expandIcon ]
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> foldIcon [
+	^ foldIcon
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> foldIcon: anObject [
+	foldIcon := anObject
 ]
 
 { #category : #initialization }
 MDLExpansionPanel >> initialize [
 	super initialize.
-	self isExpanded: false
+	self
+		isExpanded: false;
+		expandIcon: 'expand_more';
+		foldIcon: 'expand_less';
+		onFoldBlock: [ :htmlCanvas | htmlCanvas jQuery noop ];
+		onExpandBlock: [ :htmlCanvas | htmlCanvas jQuery noop ]
 ]
 
 { #category : #accessing }
@@ -53,27 +82,45 @@ MDLExpansionPanel >> isExpanded: anObject [
 	isExpanded := anObject
 ]
 
+{ #category : #accessing }
+MDLExpansionPanel >> onExpandBlock [
+	^ onExpandBlock
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> onExpandBlock: anObject [
+	onExpandBlock := anObject
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> onFoldBlock [
+	^ onFoldBlock
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> onFoldBlock: anObject [
+	onFoldBlock := anObject
+]
+
 { #category : #rendering }
 MDLExpansionPanel >> renderContentOn: html [
 	self ensureId: html.
-	
 	html mdlGrid
 		id: self id;
 		shadow: 2;
 		with: [ html div
 				class: 'mdl-expansion-panel__header';
-				style: 'width: 100%;'; flag: #TODO; "Move to stylesheet."
-				onClick: ((html jQuery id: self id) parent load
-								html: [ :ajaxHtmlCanvas |
-									self toggleExpansion.
-									ajaxHtmlCanvas render: self ]);
+				style: 'width: 100%;';flag: #TODO;"Move to stylesheet."
+					onClick: (self toggleAjaxScriptOn: html);
 				with: [ html mdlGrid
 						with: [ html mdlCell
 								size: 5;
 								with: [ html div
 										class: 'mdl-expansion-panel__title';
-										style: 'font-weight: bold;'; flag: #TODO; "Move to stylesheet."
-										with: self title ].
+										style: 'font-weight: bold;';
+										flag: #TODO;
+										"Move to stylesheet."
+											with: self title ].
 							html mdlCell
 								size: 5;
 								with: [ html div
@@ -81,18 +128,19 @@ MDLExpansionPanel >> renderContentOn: html [
 										with: self description ].
 							html mdlCell
 								size: 2;
-								with: [ 
-									html mdlIcon
+								with: [ html mdlIcon
 										class: 'mdl-expansion-panel__icon';
-										style: 'float: right;'; flag: #TODO; "Move to stylesheet."
-										with: self expansionIcon ] ].
+										style: 'float: right;';
+										flag: #TODO;
+										"Move to stylesheet."
+											with: self expansionIcon ] ] ].
 					html div
 						class: 'mdl-expansion-panel__content';
 						with: [ self isExpanded
 								ifTrue: [ html mdlGrid
 										with: [ html mdlCell
 												size: 12;
-												with: [ self expandedBlock value: html ] ] ] ] ] ]
+												with: [ self expandedBlock value: html ] ] ] ] ]
 ]
 
 { #category : #accessing }
@@ -103,6 +151,22 @@ MDLExpansionPanel >> title [
 { #category : #accessing }
 MDLExpansionPanel >> title: anObject [
 	title := anObject
+]
+
+{ #category : #rendering }
+MDLExpansionPanel >> toggleAjaxScriptOn: html [
+	^ html jQuery
+		script: [ :jsScript | 
+			self isExpanded
+				ifTrue: [ jsScript << (self onFoldBlock value: html) ]
+				ifFalse: [ jsScript << (self onExpandBlock value: html) ].
+			jsScript << (html jQuery id: self id) parent load
+				html: [ :ajaxHtmlCanvas | 
+					self toggleExpansion.
+					ajaxHtmlCanvas render: self ];
+				onComplete:
+					('componentHandler.upgradeElements($("#{1}"));'
+						format: {self id asString}) js ]
 ]
 
 { #category : #toggling }

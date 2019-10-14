@@ -20,30 +20,54 @@ MDLExpansionPanelScreen class >> title [
 	^ 'Expansion Panel'
 ]
 
-{ #category : #'as yet unclassified' }
-MDLExpansionPanelScreen >> expansionPanel [
+{ #category : #demos }
+MDLExpansionPanelScreen >> basicExpansionPanel [
 	^ OrderedDictionary new
-		add: 'Expansion panel' -> #renderExpansionPanelOn:;
+		add: 'Basic expansion panel initially folded' -> #renderBasicExpansionPanelFoldedOn:;
+		add: 'Basic expansion panel initially expanded' -> #renderBasicExpansionPanelExpandedOn:;
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
-MDLExpansionPanelScreen >> renderExpansionPanelOn: html [
+{ #category : #demos }
+MDLExpansionPanelScreen >> renderBasicExpansionPanelExpandedOn: html [
 	html div
-		style: 'width: 800px';
+		style: 'width: 400px';
 		with: [ html
 				render:
 					(MDLExpansionPanel new
 						title: 'Personal data';
-						description: 'Type your name and age';
+						description: 'Type your name';
 						expandedBlock: [ :htmlCanvas |
-							htmlCanvas text: 'hello' ];
+							html
+								mdlTextFieldContainer: [ html mdlTextFieldLabel
+										for: html nextId;
+										with: 'e.g. John Doe'.
+									html mdlTextFieldInput id: html lastId ]. ];
 						isExpanded: true;
+						yourself) ]
+]
+
+{ #category : #demos }
+MDLExpansionPanelScreen >> renderBasicExpansionPanelFoldedOn: html [
+	html div
+		style: 'width: 400px';
+		with: [ html
+				render:
+					(MDLExpansionPanel new
+						title: 'Personal data';
+						description: 'Type your name';
+						expandedBlock: [ :htmlCanvas | 
+							html
+								mdlTextFieldContainer: [ html mdlTextFieldLabel
+										for: html nextId;
+										with: 'e.g. John Doe'.
+									html mdlTextFieldInput id: html lastId ]. ];
+						isExpanded: false;
 						yourself) ]
 ]
 
 { #category : #rendering }
 MDLExpansionPanelScreen >> renderScreenContentOn: html [
 	self
-		render: self expansionPanel on: html
+		render: self basicExpansionPanel on: html
 ]
