@@ -71,11 +71,13 @@ MDLExpansionPanel >> icon: aString [
 MDLExpansionPanel >> initialize [
 	super initialize.
 	self
+		title: '';
+		description: '';
 		isExpanded: false;
 		expandIcon: 'expand_more';
 		foldIcon: 'expand_less';
-		onFoldBlock: [ :htmlCanvas | htmlCanvas jQuery noop ];
-		onExpandBlock: [ :htmlCanvas | htmlCanvas jQuery noop ]
+		onFoldBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ];
+		onExpandBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ]
 ]
 
 { #category : #accessing }
@@ -164,8 +166,8 @@ MDLExpansionPanel >> toggleAjaxScriptOn: html [
 	^ html jQuery
 		script: [ :jsScript | 
 			self isExpanded
-				ifTrue: [ jsScript << (self onFoldBlock value: html) ]
-				ifFalse: [ jsScript << (self onExpandBlock value: html) ].
+				ifFalse: [ jsScript << (self onFoldBlock value: self value: html) ]
+				ifTrue: [ jsScript << (self onExpandBlock value: self value: html) ].
 			jsScript << (html jQuery id: self id) parent load
 				html: [ :ajaxHtmlCanvas | 
 					self toggleExpansion.

@@ -37,6 +37,13 @@ MDLExpansionPanelScreen >> customIconsExpansionPanel [
 ]
 
 { #category : #demos }
+MDLExpansionPanelScreen >> expansionPanelWithActions [
+	^ OrderedDictionary new
+		add: 'Expansion panel performing actions on fold / expand.' -> #renderExpansionPanelWithActionsOnExpandFoldOn:;
+		yourself
+]
+
+{ #category : #demos }
 MDLExpansionPanelScreen >> renderBasicExpansionPanelExpandedOn: html [
 	html div
 		style: 'width: 400px';
@@ -71,6 +78,25 @@ MDLExpansionPanelScreen >> renderBasicExpansionPanelFoldedOn: html [
 										with: 'e.g. John Doe'.
 									html mdlTextFieldInput id: html lastId ]. ];
 						isExpanded: false;
+						yourself) ]
+]
+
+{ #category : #demos }
+MDLExpansionPanelScreen >> renderExpansionPanelWithActionsOnExpandFoldOn: html [
+	html div
+		style: 'width: 800px';
+		with: [ html
+				render:
+					(MDLExpansionPanel new
+						title: 'Self-aware expansion panel';
+						expandedBlock: [ :htmlCanvas |
+							html text: 'Content for self-aware expansion panel' ];
+						onExpandBlock: [ :expansionPanel :htmlBrush |
+							expansionPanel description: 'I know I am expanded.'.
+							htmlBrush jQuery noop ];
+						onFoldBlock: [ :expansionPanel :htmlBrush |
+							expansionPanel description: 'I know I am folded.'.
+							htmlBrush jQuery noop ];
 						yourself) ]
 ]
 
@@ -117,5 +143,6 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithCustomSameIconOn: html [
 MDLExpansionPanelScreen >> renderScreenContentOn: html [
 	self
 		render: self basicExpansionPanel on: html;
-		render: self customIconsExpansionPanel on: html
+		render: self customIconsExpansionPanel on: html;
+		render: self expansionPanelWithActions on: html
 ]
