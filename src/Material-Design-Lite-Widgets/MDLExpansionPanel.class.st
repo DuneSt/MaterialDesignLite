@@ -92,6 +92,11 @@ MDLExpansionPanel >> isExpanded: anObject [
 	isExpanded := anObject
 ]
 
+{ #category : #rendering }
+MDLExpansionPanel >> isFolded [
+	^ self isExpanded not
+]
+
 { #category : #accessing }
 MDLExpansionPanel >> onExpandBlock [
 	^ onExpandBlock
@@ -115,42 +120,31 @@ MDLExpansionPanel >> onFoldBlock: anObject [
 { #category : #rendering }
 MDLExpansionPanel >> renderContentOn: html [
 	self ensureId: html.
-	html mdlGrid
+	html div
 		id: self id;
 		shadow: self shadow;
+		class: 'mdl-expansion-panel';
+		class: 'isFolded' if: self isFolded;
 		with: [ html div
+				id: html nextId;
 				class: 'mdl-expansion-panel__header';
-				style: 'width: 100%;';flag: #TODO;"Move to stylesheet."
-					onClick: (self toggleAjaxScriptOn: html);
-				with: [ html mdlGrid
-						with: [ html mdlCell
-								size: 5;
-								with: [ html div
-										class: 'mdl-expansion-panel__title';
-										style: 'font-weight: bold;';
-										flag: #TODO;
-										"Move to stylesheet."
-											with: self title ].
-							html mdlCell
-								size: 5;
-								with: [ html div
-										class: 'mdl-expansion-panel__description';
-										with: self description ].
-							html mdlCell
-								size: 2;
-								with: [ html mdlIcon
-										class: 'mdl-expansion-panel__icon';
-										style: 'float: right;';
-										flag: #TODO;
-										"Move to stylesheet."
-											with: self expansionIcon ] ] ].
+				onClick: (self toggleAjaxScriptOn: html);
+				with: [ html div
+						class: 'mdl-expansion-panel__header-title';
+						with: self title.
 					html div
-						class: 'mdl-expansion-panel__content';
-						with: [ self isExpanded
-								ifTrue: [ html mdlGrid
-										with: [ html mdlCell
-												size: 12;
-												with: [ self expandedBlock value: html ] ] ] ] ]
+						class: 'mdl-expansion-panel__header-description';
+						with: self description.
+					html mdlIcon
+						class: 'mdl-expansion-panel__header-icon';
+						with: self expansionIcon ].
+			html div
+				class: 'mdl-expansion-panel__content';
+				with: [ self isExpanded
+						ifTrue: [ html mdlGrid
+								with: [ html mdlCell
+										size: 12;
+										with: [ self expandedBlock value: html ] ] ] ] ]
 ]
 
 { #category : #accessing }
