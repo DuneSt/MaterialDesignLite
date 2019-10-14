@@ -29,6 +29,13 @@ MDLExpansionPanelScreen >> basicExpansionPanel [
 ]
 
 { #category : #demos }
+MDLExpansionPanelScreen >> customIconsExpansionPanel [
+	^ OrderedDictionary new
+		add: 'Expansion panel with custom icons' -> #renderExpansionPanelWithCustomIconsOn:;
+		yourself
+]
+
+{ #category : #demos }
 MDLExpansionPanelScreen >> renderBasicExpansionPanelExpandedOn: html [
 	html div
 		style: 'width: 400px';
@@ -66,8 +73,29 @@ MDLExpansionPanelScreen >> renderBasicExpansionPanelFoldedOn: html [
 						yourself) ]
 ]
 
+{ #category : #demos }
+MDLExpansionPanelScreen >> renderExpansionPanelWithCustomIconsOn: html [
+	html div
+		style: 'width: 400px';
+		with: [ html
+				render:
+					(MDLExpansionPanel new
+						title: 'Personal data';
+						description: 'Type your name';
+						expandedBlock: [ :htmlCanvas |
+							html
+								mdlTextFieldContainer: [ html mdlTextFieldLabel
+										for: html nextId;
+										with: 'e.g. John Doe'.
+									html mdlTextFieldInput id: html lastId ]. ];
+						foldIcon: 'account_box';
+						expandIcon: 'account_circle';
+						yourself) ]
+]
+
 { #category : #rendering }
 MDLExpansionPanelScreen >> renderScreenContentOn: html [
 	self
-		render: self basicExpansionPanel on: html
+		render: self basicExpansionPanel on: html;
+		render: self customIconsExpansionPanel on: html
 ]
