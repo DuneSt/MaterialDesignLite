@@ -31,7 +31,8 @@ MDLExpansionPanelScreen >> basicExpansionPanel [
 { #category : #demos }
 MDLExpansionPanelScreen >> customIconsExpansionPanel [
 	^ OrderedDictionary new
-		add: 'Expansion panel with custom icons' -> #renderExpansionPanelWithCustomIconsOn:;
+		add: 'Expansion panel with different custom icons for fold and expand.' -> #renderExpansionPanelWithCustomIconsOn:;
+		add: 'Expansion panel with same custom icon for fold and expand.' -> #renderExpansionPanelWithCustomSameIconOn:;
 		yourself
 ]
 
@@ -90,6 +91,25 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithCustomIconsOn: html [
 									html mdlTextFieldInput id: html lastId ]. ];
 						foldIcon: 'account_box';
 						expandIcon: 'account_circle';
+						yourself) ]
+]
+
+{ #category : #demos }
+MDLExpansionPanelScreen >> renderExpansionPanelWithCustomSameIconOn: html [
+	html div
+		style: 'width: 400px';
+		with: [ html
+				render:
+					(MDLExpansionPanel new
+						title: 'Personal data';
+						description: 'Type your name';
+						expandedBlock: [ :htmlCanvas |
+							html
+								mdlTextFieldContainer: [ html mdlTextFieldLabel
+										for: html nextId;
+										with: 'e.g. John Doe'.
+									html mdlTextFieldInput id: html lastId ]. ];
+						icon: 'face';
 						yourself) ]
 ]
 

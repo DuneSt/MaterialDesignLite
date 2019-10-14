@@ -61,6 +61,12 @@ MDLExpansionPanel >> foldIcon: anObject [
 	foldIcon := anObject
 ]
 
+{ #category : #accessing }
+MDLExpansionPanel >> icon: aString [
+	self foldIcon: aString.
+	self expandIcon: aString
+]
+
 { #category : #initialization }
 MDLExpansionPanel >> initialize [
 	super initialize.
