@@ -113,21 +113,31 @@ MDLExpansionPanel >> renderContentOn: html [
 		shadow: self shadow;
 		class: 'mdl-expansion-panel';
 		class: 'isFolded' if: self isFolded;
+		with: [ self renderExpansionPanelHeader: html.
+			self renderExpansionPanelContent: html ]
+]
+
+{ #category : #rendering }
+MDLExpansionPanel >> renderExpansionPanelContent: html [
+	^ html div
+		class: 'mdl-expansion-panel__content';
+		with: [ self expansionStrategy renderExpansionPanel: self contentOn: html ]
+]
+
+{ #category : #rendering }
+MDLExpansionPanel >> renderExpansionPanelHeader: html [
+	html div
+		class: 'mdl-expansion-panel__header';
+		onClick: (self expansionStrategy toggleScriptOn: html for: self);
 		with: [ html div
-				class: 'mdl-expansion-panel__header';
-				onClick: (self expansionStrategy toggleScriptOn: html for: self);
-				with: [ html div
-						class: 'mdl-expansion-panel__header-title';
-						with: self title.
-					html div
-						class: 'mdl-expansion-panel__header-description';
-						with: self description.
-					html mdlIcon
-						class: 'mdl-expansion-panel__header-icon';
-						with: self expansionIcon ].
+				class: 'mdl-expansion-panel__header-title';
+				with: self title.
 			html div
-				class: 'mdl-expansion-panel__content';
-				with: [ self expansionStrategy renderExpansionPanel: self contentOn: html ] ]
+				class: 'mdl-expansion-panel__header-description';
+				with: self description.
+			html mdlIcon
+				class: 'mdl-expansion-panel__header-icon';
+				with: self expansionIcon ]
 ]
 
 { #category : #accessing }
