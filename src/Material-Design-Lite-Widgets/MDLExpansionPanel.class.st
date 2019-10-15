@@ -125,7 +125,9 @@ MDLExpansionPanel >> renderContentOn: html [
 					html mdlIcon
 						class: 'mdl-expansion-panel__header-icon';
 						with: self expansionIcon ].
-			self expansionStrategy renderExpansionPanel: self contentOn: html ]
+			html div
+				class: 'mdl-expansion-panel__content';
+				with: [ self expansionStrategy renderExpansionPanel: self contentOn: html ] ]
 ]
 
 { #category : #accessing }

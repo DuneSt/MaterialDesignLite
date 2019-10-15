@@ -6,12 +6,10 @@ Class {
 
 { #category : #rendering }
 MDLDisplayNoneExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
-	html div
-		class: 'mdl-expansion-panel__content';
-		with: [ html mdlGrid
-				with: [ html mdlCell
-						size: 12;
-						with: [ anExpansionPanel expandedBlock value: html ] ] ]
+	html mdlGrid
+		with: [ html mdlCell
+				size: 12;
+				with: [ anExpansionPanel expandedBlock value: html ] ]
 ]
 
 { #category : #javascript }

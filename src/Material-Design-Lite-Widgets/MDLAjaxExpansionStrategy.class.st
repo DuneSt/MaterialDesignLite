@@ -38,13 +38,11 @@ MDLAjaxExpansionStrategy >> onFoldBlock: anObject [
 
 { #category : #rendering }
 MDLAjaxExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
-	html div
-		class: 'mdl-expansion-panel__content';
-		with: [ anExpansionPanel isExpanded
-				ifTrue: [ html mdlGrid
-						with: [ html mdlCell
-								size: 12;
-								with: [ anExpansionPanel expandedBlock value: html ] ] ] ]
+	anExpansionPanel isExpanded
+		ifTrue: [ html mdlGrid
+				with: [ html mdlCell
+						size: 12;
+						with: [ anExpansionPanel expandedBlock value: html ] ] ]
 ]
 
 { #category : #javascript }
