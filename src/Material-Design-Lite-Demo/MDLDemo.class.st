@@ -200,10 +200,6 @@ MDLDemo >> style [
 	
 	.mdl-table-widget{
 		width: 100%;
-	}
-	
-	.mdl-table-widget__cell--button{
-		width: 1px;
 	}'
 ]
 

@@ -104,7 +104,9 @@ MDLTableWidget >> renderContentOn: html [
 
 { #category : #rendering }
 MDLTableWidget >> renderTableBodyOn: html [
-	html tableBody: [ 
+	html tableBody
+		class: 'mdl-table-widget__body';
+		with: [ 
 		self collection do: [ :row | 
 			html tableRow: [ 
 				self columnDescriptions do: [ :columnDescription |
@@ -114,6 +116,7 @@ MDLTableWidget >> renderTableBodyOn: html [
 { #category : #rendering }
 MDLTableWidget >> renderTableHeadOn: html [
 	html tableHead
+		class: 'mdl-table-widget__head';
 		with: [ 
 		html tableRow: [ 
 			self columnDescriptions do: [ :column |
