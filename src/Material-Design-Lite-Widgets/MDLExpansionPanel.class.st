@@ -178,22 +178,6 @@ MDLExpansionPanel >> title: anObject [
 	title := anObject
 ]
 
-{ #category : #rendering }
-MDLExpansionPanel >> toggleAjaxScriptOn: html [
-	^ html jQuery
-		script: [ :jsScript | 
-			self isExpanded
-				ifFalse: [ jsScript << (self onFoldBlock value: self value: html) ]
-				ifTrue: [ jsScript << (self onExpandBlock value: self value: html) ].
-			jsScript << (html jQuery id: self id) parent load
-				html: [ :ajaxHtmlCanvas | 
-					self toggleExpansion.
-					ajaxHtmlCanvas render: self ];
-				onComplete:
-					('componentHandler.upgradeElements($("#{1}"));'
-						format: {self id asString}) js ]
-]
-
 { #category : #toggling }
 MDLExpansionPanel >> toggleExpansion [
 	self isExpanded: self isExpanded not
