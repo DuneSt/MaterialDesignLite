@@ -46,13 +46,13 @@ MDLAjaxExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: ht
 ]
 
 { #category : #javascript }
-MDLAjaxExpansionStrategy >> toggleScriptOn: html for: anExpansionPanel [
-	^ html jQuery
+MDLAjaxExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
+	^ htmlCanvas jQuery
 		script: [ :jsScript | 
 			anExpansionPanel isExpanded
-				ifFalse: [ jsScript << (self onFoldBlock value: anExpansionPanel value: html) ]
-				ifTrue: [ jsScript << (self onExpandBlock value: anExpansionPanel value: html) ].
-			jsScript << (html jQuery id: anExpansionPanel id) parent load
+				ifFalse: [ jsScript << (self onFoldBlock value: anExpansionPanel value: htmlCanvas) ]
+				ifTrue: [ jsScript << (self onExpandBlock value: anExpansionPanel value: htmlCanvas) ].
+			jsScript << (htmlCanvas jQuery id: anExpansionPanel id) parent load
 				html: [ :ajaxHtmlCanvas | 
 					anExpansionPanel toggleExpansion.
 					ajaxHtmlCanvas render: anExpansionPanel ];

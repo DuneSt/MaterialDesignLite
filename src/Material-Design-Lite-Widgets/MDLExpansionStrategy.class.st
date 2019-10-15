@@ -10,6 +10,6 @@ MDLExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 ]
 
 { #category : #javascript }
-MDLExpansionStrategy >> toggleScriptOn: html for: anExpansionPanel [
+MDLExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
 	^ self subclassResponsibility
 ]

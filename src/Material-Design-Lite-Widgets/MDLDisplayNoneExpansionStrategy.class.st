@@ -13,10 +13,10 @@ MDLDisplayNoneExpansionStrategy >> renderExpansionPanel: anExpansionPanel conten
 ]
 
 { #category : #javascript }
-MDLDisplayNoneExpansionStrategy >> toggleScriptOn: html for: anExpansionPanel [
-	^ html jQuery
+MDLDisplayNoneExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
+	^ htmlCanvas jQuery
 		script: [ :jsScript |
-			jsScript << ((html jQuery id: anExpansionPanel id) toggleClass: 'isFolded').
+			jsScript << ((htmlCanvas jQuery id: anExpansionPanel id) toggleClass: 'isFolded').
 			anExpansionPanel expandIcon ~= anExpansionPanel foldIcon
 				ifTrue: [
 			jsScript << ('if($("#{id}").hasClass("isFolded"))\{
