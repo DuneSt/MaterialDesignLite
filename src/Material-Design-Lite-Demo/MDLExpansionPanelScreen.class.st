@@ -1,3 +1,6 @@
+"
+Demo screen for the MDLExpansionPanel.
+"
 Class {
 	#name : #MDLExpansionPanelScreen,
 	#superclass : #MDLWidgetDemo,
