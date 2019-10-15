@@ -1,3 +1,16 @@
+"
+I am an expansion panel.
+
+Basically, I have a title, a description, an icon and I can be folded or expanded to show additional information.
+
+Though I provide default icons, one can set a different icon for when I am fold (#foldIcon:) or when I am expanded (#expandIcon:).
+
+One can set my initial state via #isExpanded: or #isFolded:.
+
+I can use different expansion strategies via #useDisplayNoneExpansionStrategy, #useAjaxExpansionStrategy. #useLazyExpansionStrategy.
+See MDLExpansionStrategy subclasses for documentation about them.
+My default strategy is MDLDisplayNoneStrategy.
+"
 Class {
 	#name : #MDLExpansionPanel,
 	#superclass : #MDLWidget,
@@ -103,6 +116,11 @@ MDLExpansionPanel >> isExpanded: anObject [
 { #category : #rendering }
 MDLExpansionPanel >> isFolded [
 	^ self isExpanded not
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> isFolded: aBoolean [
+	self isExpanded: aBoolean not
 ]
 
 { #category : #rendering }
