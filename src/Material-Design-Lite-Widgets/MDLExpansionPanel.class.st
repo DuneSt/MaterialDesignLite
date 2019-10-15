@@ -10,10 +10,17 @@ Class {
 		'foldIcon',
 		'onExpandBlock',
 		'onFoldBlock',
-		'shadow'
+		'shadow',
+		'expansionStrategy'
 	],
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
+
+{ #category : #accessing }
+MDLExpansionPanel >> defaultExpansionStrategy [
+	self flag: #TODO. "Should be MDLDisplayNoneExpansion strategy."
+	^ MDLDisplayNoneExpansionStrategy new
+]
 
 { #category : #accessing }
 MDLExpansionPanel >> description [
@@ -53,6 +60,16 @@ MDLExpansionPanel >> expansionIcon [
 ]
 
 { #category : #accessing }
+MDLExpansionPanel >> expansionStrategy [
+	^ expansionStrategy
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> expansionStrategy: anObject [
+	expansionStrategy := anObject
+]
+
+{ #category : #accessing }
 MDLExpansionPanel >> foldIcon [
 	^ foldIcon
 ]
@@ -79,7 +96,8 @@ MDLExpansionPanel >> initialize [
 		expandIcon: 'expand_more';
 		foldIcon: 'expand_less';
 		onFoldBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ];
-		onExpandBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ]
+		onExpandBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ];
+		expansionStrategy: self defaultExpansionStrategy
 ]
 
 { #category : #accessing }
@@ -128,7 +146,7 @@ MDLExpansionPanel >> renderContentOn: html [
 		with: [ html div
 				id: html nextId;
 				class: 'mdl-expansion-panel__header';
-				onClick: (self toggleAjaxScriptOn: html);
+				onClick: (self expansionStrategy toggleScriptOn: html for: self);
 				with: [ html div
 						class: 'mdl-expansion-panel__header-title';
 						with: self title.
@@ -138,13 +156,7 @@ MDLExpansionPanel >> renderContentOn: html [
 					html mdlIcon
 						class: 'mdl-expansion-panel__header-icon';
 						with: self expansionIcon ].
-			html div
-				class: 'mdl-expansion-panel__content';
-				with: [ self isExpanded
-						ifTrue: [ html mdlGrid
-								with: [ html mdlCell
-										size: 12;
-										with: [ self expandedBlock value: html ] ] ] ] ]
+			self expansionStrategy renderExpansionPanel: self contentOn: html ]
 ]
 
 { #category : #accessing }
