@@ -1,11 +1,16 @@
+"
+I am an expansion strategy that uses CSS properties to hide the expansion panel content when it should not be shown.
+
+I also use a little of javascript to update the icon according to the state of the panel.
+"
 Class {
-	#name : #MDLDisplayNoneExpansionStrategy,
+	#name : #MDLHideExpansionStrategy,
 	#superclass : #MDLExpansionStrategy,
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
 
 { #category : #rendering }
-MDLDisplayNoneExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
+MDLHideExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 	html mdlGrid
 		with: [ html mdlCell
 				size: 12;
@@ -13,7 +18,7 @@ MDLDisplayNoneExpansionStrategy >> renderExpansionPanel: anExpansionPanel conten
 ]
 
 { #category : #javascript }
-MDLDisplayNoneExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
+MDLHideExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
 	^ htmlCanvas jQuery
 		script: [ :jsScript |
 			jsScript << ((htmlCanvas jQuery id: anExpansionPanel id) toggleClass: 'isFolded').

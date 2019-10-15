@@ -1,3 +1,9 @@
+"
+I am display strategy that uses AJAX to reload the entire MDLExpansionPanel each time the toggle button is clicked.
+
+Because of my behaviour, one can define an action to execute on server side either when I expand (#onExpandBlock:) or when I fold (#onFoldBlock:).
+These actions can eventually modify the state of the expansion panel as the full widget is reload via AJAX.
+"
 Class {
 	#name : #MDLAjaxExpansionStrategy,
 	#superclass : #MDLExpansionStrategy,

@@ -100,7 +100,7 @@ MDLExpansionPanel >> initialize [
 		isExpanded: false;
 		expandIcon: 'expand_more';
 		foldIcon: 'expand_less';
-		useDisplayNoneExpansionStrategy
+		useHideExpansionStrategy
 ]
 
 { #category : #accessing }
@@ -213,9 +213,9 @@ MDLExpansionPanel >> useAjaxExpansionStrategyOnExpand: onExpandBlock onFold: onF
 ]
 
 { #category : #configuring }
-MDLExpansionPanel >> useDisplayNoneExpansionStrategy [
+MDLExpansionPanel >> useHideExpansionStrategy [
 	"Default strategy."
-	self expansionStrategy: MDLDisplayNoneExpansionStrategy new
+	self expansionStrategy: MDLHideExpansionStrategy new
 ]
 
 { #category : #configuring }

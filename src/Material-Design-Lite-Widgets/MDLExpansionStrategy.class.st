@@ -1,3 +1,6 @@
+"
+I am an abstract expansion strategy, I define the minimal API such strategy should implement.
+"
 Class {
 	#name : #MDLExpansionStrategy,
 	#superclass : #Object,
