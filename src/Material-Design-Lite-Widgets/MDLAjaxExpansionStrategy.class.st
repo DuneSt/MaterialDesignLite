@@ -16,6 +16,11 @@ MDLAjaxExpansionStrategy >> initialize [
 		onExpandBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ]
 ]
 
+{ #category : #testing }
+MDLAjaxExpansionStrategy >> isAjaxExpansionStrategy [
+	^ true
+]
+
 { #category : #accessing }
 MDLAjaxExpansionStrategy >> onExpandBlock [
 	^ onExpandBlock

@@ -4,6 +4,11 @@ Class {
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
 
+{ #category : #testing }
+MDLExpansionStrategy >> isAjaxExpansionStrategy [
+	^ false
+]
+
 { #category : #rendering }
 MDLExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 	self subclassResponsibility

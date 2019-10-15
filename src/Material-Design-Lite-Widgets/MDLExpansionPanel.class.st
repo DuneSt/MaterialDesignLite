@@ -199,3 +199,8 @@ MDLExpansionPanel >> useDisplayNoneExpansionStrategy [
 	"Default strategy."
 	self expansionStrategy: MDLDisplayNoneExpansionStrategy new
 ]
+
+{ #category : #configuring }
+MDLExpansionPanel >> useLazyExpansionStrategy [
+	self expansionStrategy: MDLLazyExpansionStrategy new
+]

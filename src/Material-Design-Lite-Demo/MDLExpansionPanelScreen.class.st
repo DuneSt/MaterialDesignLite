@@ -44,6 +44,14 @@ MDLExpansionPanelScreen >> expansionPanelWithActions [
 ]
 
 { #category : #demos }
+MDLExpansionPanelScreen >> expansionPanelWithStrategy [
+	^ OrderedDictionary new
+		add: 'Expansion panel loading lazily its content initially folded.' -> #renderExpansionPanelWithLazyStrategyOn:;
+		add: 'Expansion panel loading lazily its content initially expanded.' -> #renderExpansionPanelWithLazyStrategyInitiallyExpandedOn:;
+		yourself
+]
+
+{ #category : #demos }
 MDLExpansionPanelScreen >> renderBasicExpansionPanelExpandedOn: html [
 	html div
 		style: 'width: 400px';
@@ -139,10 +147,50 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithCustomSameIconOn: html [
 						yourself) ]
 ]
 
+{ #category : #demos }
+MDLExpansionPanelScreen >> renderExpansionPanelWithLazyStrategyInitiallyExpandedOn: html [
+	html div
+		style: 'width: 400px';
+		with: [ html
+				render:
+					(MDLExpansionPanel new
+						title: 'Personal data';
+						description: 'Type your name';
+						useLazyExpansionStrategy;
+						expandedBlock: [ :htmlCanvas |
+							html
+								mdlTextFieldContainer: [ html mdlTextFieldLabel
+										for: html nextId;
+										with: 'e.g. John Doe'.
+									html mdlTextFieldInput id: html lastId ] ];
+						isExpanded: true;
+						yourself) ]
+]
+
+{ #category : #demos }
+MDLExpansionPanelScreen >> renderExpansionPanelWithLazyStrategyOn: html [
+	html div
+		style: 'width: 400px';
+		with: [ html
+				render:
+					(MDLExpansionPanel new
+						title: 'Personal data';
+						description: 'Type your name';
+						useLazyExpansionStrategy;
+						expandedBlock: [ :htmlCanvas |
+							html
+								mdlTextFieldContainer: [ html mdlTextFieldLabel
+										for: html nextId;
+										with: 'e.g. John Doe'.
+									html mdlTextFieldInput id: html lastId ] ];
+						yourself) ]
+]
+
 { #category : #rendering }
 MDLExpansionPanelScreen >> renderScreenContentOn: html [
 	self
 		render: self basicExpansionPanel on: html;
 		render: self customIconsExpansionPanel on: html;
+		render: self expansionPanelWithStrategy on: html;
 		render: self expansionPanelWithActions on: html
 ]
