@@ -144,7 +144,6 @@ MDLExpansionPanel >> renderContentOn: html [
 		class: 'mdl-expansion-panel';
 		class: 'isFolded' if: self isFolded;
 		with: [ html div
-				id: html nextId;
 				class: 'mdl-expansion-panel__header';
 				onClick: (self expansionStrategy toggleScriptOn: html for: self);
 				with: [ html div
