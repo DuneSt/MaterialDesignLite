@@ -91,10 +91,10 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithActionsOnExpandFoldOn: html [
 						title: 'Self-aware expansion panel';
 						expandedBlock: [ :htmlCanvas |
 							html text: 'Content for self-aware expansion panel' ];
-						onExpandBlock: [ :expansionPanel :htmlBrush |
+						useAjaxExpansionStrategyOnExpand: [ :expansionPanel :htmlBrush |
 							expansionPanel description: 'I know I am expanded.'.
-							htmlBrush jQuery noop ];
-						onFoldBlock: [ :expansionPanel :htmlBrush |
+							htmlBrush jQuery noop ]
+						onFold: [ :expansionPanel :htmlBrush |
 							expansionPanel description: 'I know I am folded.'.
 							htmlBrush jQuery noop ];
 						yourself) ]

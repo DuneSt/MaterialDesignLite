@@ -1,8 +1,40 @@
 Class {
 	#name : #MDLAjaxExpansionStrategy,
 	#superclass : #MDLExpansionStrategy,
+	#instVars : [
+		'onFoldBlock',
+		'onExpandBlock'
+	],
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
+
+{ #category : #initialization }
+MDLAjaxExpansionStrategy >> initialize [
+	super initialize.
+	self
+		onFoldBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ];
+		onExpandBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ]
+]
+
+{ #category : #accessing }
+MDLAjaxExpansionStrategy >> onExpandBlock [
+	^ onExpandBlock
+]
+
+{ #category : #accessing }
+MDLAjaxExpansionStrategy >> onExpandBlock: anObject [
+	onExpandBlock := anObject
+]
+
+{ #category : #accessing }
+MDLAjaxExpansionStrategy >> onFoldBlock [
+	^ onFoldBlock
+]
+
+{ #category : #accessing }
+MDLAjaxExpansionStrategy >> onFoldBlock: anObject [
+	onFoldBlock := anObject
+]
 
 { #category : #rendering }
 MDLAjaxExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
@@ -20,8 +52,8 @@ MDLAjaxExpansionStrategy >> toggleScriptOn: html for: anExpansionPanel [
 	^ html jQuery
 		script: [ :jsScript | 
 			anExpansionPanel isExpanded
-				ifFalse: [ jsScript << (anExpansionPanel onFoldBlock value: anExpansionPanel value: html) ]
-				ifTrue: [ jsScript << (anExpansionPanel onExpandBlock value: anExpansionPanel value: html) ].
+				ifFalse: [ jsScript << (self onFoldBlock value: anExpansionPanel value: html) ]
+				ifTrue: [ jsScript << (self onExpandBlock value: anExpansionPanel value: html) ].
 			jsScript << (html jQuery id: anExpansionPanel id) parent load
 				html: [ :ajaxHtmlCanvas | 
 					anExpansionPanel toggleExpansion.

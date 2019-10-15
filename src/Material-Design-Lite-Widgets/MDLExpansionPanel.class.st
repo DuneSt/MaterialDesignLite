@@ -8,19 +8,11 @@ Class {
 		'isExpanded',
 		'expandIcon',
 		'foldIcon',
-		'onExpandBlock',
-		'onFoldBlock',
 		'shadow',
 		'expansionStrategy'
 	],
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
-
-{ #category : #accessing }
-MDLExpansionPanel >> defaultExpansionStrategy [
-	self flag: #TODO. "Should be MDLDisplayNoneExpansion strategy."
-	^ MDLDisplayNoneExpansionStrategy new
-]
 
 { #category : #accessing }
 MDLExpansionPanel >> description [
@@ -95,9 +87,7 @@ MDLExpansionPanel >> initialize [
 		isExpanded: false;
 		expandIcon: 'expand_more';
 		foldIcon: 'expand_less';
-		onFoldBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ];
-		onExpandBlock: [ :expansionPanel :htmlCanvas | htmlCanvas jQuery noop ];
-		expansionStrategy: self defaultExpansionStrategy
+		useDisplayNoneExpansionStrategy
 ]
 
 { #category : #accessing }
@@ -113,26 +103,6 @@ MDLExpansionPanel >> isExpanded: anObject [
 { #category : #rendering }
 MDLExpansionPanel >> isFolded [
 	^ self isExpanded not
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> onExpandBlock [
-	^ onExpandBlock
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> onExpandBlock: anObject [
-	onExpandBlock := anObject
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> onFoldBlock [
-	^ onFoldBlock
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> onFoldBlock: anObject [
-	onFoldBlock := anObject
 ]
 
 { #category : #rendering }
@@ -197,4 +167,23 @@ MDLExpansionPanel >> toggleAjaxScriptOn: html [
 { #category : #toggling }
 MDLExpansionPanel >> toggleExpansion [
 	self isExpanded: self isExpanded not
+]
+
+{ #category : #configuring }
+MDLExpansionPanel >> useAjaxExpansionStrategy [
+	self expansionStrategy: MDLAjaxExpansionStrategy new
+]
+
+{ #category : #configuring }
+MDLExpansionPanel >> useAjaxExpansionStrategyOnExpand: onExpandBlock onFold: onFoldBlock [
+	self expansionStrategy: (MDLAjaxExpansionStrategy new
+									onExpandBlock: onExpandBlock;
+									onFoldBlock: onFoldBlock;
+									yourself)
+]
+
+{ #category : #configuring }
+MDLExpansionPanel >> useDisplayNoneExpansionStrategy [
+	"Default strategy."
+	self expansionStrategy: MDLDisplayNoneExpansionStrategy new
 ]
