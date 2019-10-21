@@ -651,6 +651,10 @@ code.nosupport::before {
     max-width: 260px;
 }
 
+.mdl-components__pages .mdl-expansion-panel__header-title { 
+	color: black;
+}
+
 
 
 /* LISTS */
