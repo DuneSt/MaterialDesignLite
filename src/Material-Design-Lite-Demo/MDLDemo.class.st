@@ -196,11 +196,7 @@ MDLDemo >> renderContentOn: html [
 MDLDemo >> style [
 	^ '.mdl-pagination__current{
         box-shadow: inset 0px -4px 0px 0px #E91E63 !important;
-    }
-	
-	.mdl-table-widget{
-		width: 100%;
-	}'
+    }'
 ]
 
 { #category : #updating }

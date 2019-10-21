@@ -29,18 +29,22 @@ MDLTableWidgetScreen >> renderScreenContentOn: html [
 
 { #category : #accessing }
 MDLTableWidgetScreen >> renderTableWidgetOn: html [
-	html div
-		style: 'width: 800px;';
-		with:
+	html
+		render:
 			(MDLTableWidget new
 				addNumericColumnNamed: 'Integer' evaluated: [ :x | x ];
 				addStringColumnNamed: 'String with commas' evaluated: [ :x | x asStringWithCommas ];
-				addAjaxButtonColumnWithIconName: 'explore' onClick: [ :htmlCanvas :x |
-					htmlCanvas jQuery noop ] tooltip: 'Explore integer related to the row.';
-				addButtonColumnWithIconName: 'delete' onClick: [ :x |
+				addStringColumnNamed: 'As words' evaluated: [ :x | x asWords capitalized ];
+				addAjaxButtonColumnWithIconName: 'explore'
+					onClick: [ :htmlCanvas :x | htmlCanvas javascript alert: 'Explore ' , x asString ]
+					tooltip: 'Explore integer related to the row.';
+				addButtonColumnWithIconName: 'delete'
+					onClick: [ :x | 
 					Transcript
-						show: x; show: ' deleted in callback.';
-						cr ] tooltip: 'Delete integer in callback.';
+						show: x;
+						show: ' deleted in callback.';
+						cr ]
+					tooltip: 'Delete integer in callback.';
 				collection: (1000 to: 5000 by: 1000);
 				yourself)
 ]
