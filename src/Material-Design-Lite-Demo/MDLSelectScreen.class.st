@@ -1,5 +1,5 @@
 "
-Screen to render MDLSelectWidget examples
+A widget to emulate a select input in MDL style.
 "
 Class {
 	#name : #MDLSelectScreen,
@@ -7,13 +7,8 @@ Class {
 	#instVars : [
 		'selectedEntity'
 	],
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLSelectScreen class >> description [
-	^ 'A widget to emulate a select input in MDL style.'
-]
 
 { #category : #accessing }
 MDLSelectScreen class >> icon [

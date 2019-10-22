@@ -1,19 +1,11 @@
 "
-Description
---------------------
-
-I am a screen presenting the elevations properties of MDL.
+Elevation is the relative depth, or distance, between two surfaces along the z-axis.
 "
 Class {
 	#name : #MDLElevationScreen,
 	#superclass : #MDLComponentDemo,
 	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLElevationScreen class >> description [
-	^ 'Elevation is the relative depth, or distance, between two surfaces along the z-axis.'
-]
 
 { #category : #accessing }
 MDLElevationScreen class >> icon [

@@ -1,5 +1,5 @@
 "
-Demo screen for the MDLExpansionPanel.
+Implementation of expansion panel for MDL.
 "
 Class {
 	#name : #MDLExpansionPanelScreen,
@@ -8,14 +8,8 @@ Class {
 }
 
 { #category : #accessing }
-MDLExpansionPanelScreen class >> description [
-	^ 'Implementation of expansion panel for MDL.'
-]
-
-{ #category : #accessing }
 MDLExpansionPanelScreen class >> icon [
-	self flag: #TODO. "Choose better icon"
-	^ #compmenusPng
+	^ #compexpansionPng
 ]
 
 { #category : #accessing }

@@ -1,5 +1,5 @@
 "
-Screen to render MDLCalendarWidget examples
+A calendar in Material Design style to pick a date
 "
 Class {
 	#name : #MDLCalendarScreen,
@@ -7,13 +7,8 @@ Class {
 	#instVars : [
 		'selectedDay'
 	],
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLCalendarScreen class >> description [
-	^ 'A calendar in Material Design style to pick a date'
-]
 
 { #category : #accessing }
 MDLCalendarScreen class >> icon [

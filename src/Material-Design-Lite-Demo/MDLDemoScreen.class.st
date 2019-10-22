@@ -16,9 +16,7 @@ Class {
 
 { #category : #accessing }
 MDLDemoScreen class >> description [
-	"I should return a String that is the global description of the component."
-	
-	^ self subclassResponsibility
+	^ self comment
 ]
 
 { #category : #accessing }

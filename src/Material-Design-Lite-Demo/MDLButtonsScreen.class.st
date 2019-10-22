@@ -1,16 +1,11 @@
 "
-I'm the screen representing the buttons.
+Variations on Material Design buttons.
 "
 Class {
 	#name : #MDLButtonsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #sections }
-MDLButtonsScreen class >> description [
-	^ 'Variations on Material Design buttons.'
-]
 
 { #category : #accessing }
 MDLButtonsScreen class >> icon [

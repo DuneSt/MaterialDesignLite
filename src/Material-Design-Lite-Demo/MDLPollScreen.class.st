@@ -1,16 +1,11 @@
 "
-Screen to render MDLPollWidget examples
+A simple poll widget.
 "
 Class {
 	#name : #MDLPollScreen,
 	#superclass : #MDLWidgetDemo,
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLPollScreen class >> description [
-	^ 'A simple poll widget.'
-]
 
 { #category : #accessing }
 MDLPollScreen class >> icon [
