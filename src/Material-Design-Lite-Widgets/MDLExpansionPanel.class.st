@@ -126,35 +126,30 @@ MDLExpansionPanel >> isFolded: aBoolean [
 { #category : #rendering }
 MDLExpansionPanel >> renderContentOn: html [
 	self ensureId: html.
-	html div
+	html mdlExpansionPanel
 		id: self id;
 		shadow: self shadow;
-		class: 'mdl-expansion-panel';
-		class: 'isFolded' if: self isFolded;
+		foldIf: self isFolded;
 		with: [ self renderExpansionPanelHeader: html.
 			self renderExpansionPanelContent: html ]
 ]
 
 { #category : #rendering }
 MDLExpansionPanel >> renderExpansionPanelContent: html [
-	^ html div
-		class: 'mdl-expansion-panel__content';
+	^ html mdlExpansionPanelContent
 		with: [ self expansionStrategy renderExpansionPanel: self contentOn: html ]
 ]
 
 { #category : #rendering }
 MDLExpansionPanel >> renderExpansionPanelHeader: html [
-	html div
-		class: 'mdl-expansion-panel__header';
+	html mdlExpansionPanelHeader
 		onClick: (self expansionStrategy toggleScriptOn: html for: self);
-		with: [ html div
-				class: 'mdl-expansion-panel__header-title';
+		with: [ 
+			html mdlExpansionPanelHeaderTitle
 				with: self title.
-			html div
-				class: 'mdl-expansion-panel__header-description';
+			html mdlExpansionPanelHeaderDescription
 				with: self description.
-			html mdlIcon
-				class: 'mdl-expansion-panel__header-icon';
+			html mdlExpansionPanelHeaderIcon
 				with: self expansionIcon ]
 ]
 

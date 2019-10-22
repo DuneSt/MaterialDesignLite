@@ -11,10 +11,7 @@ Class {
 
 { #category : #rendering }
 MDLHideExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
-	html mdlGrid
-		with: [ html mdlCell
-				size: 12;
-				with: [ anExpansionPanel expandedBlock value: html ] ]
+	anExpansionPanel expandedBlock value: html
 ]
 
 { #category : #javascript }

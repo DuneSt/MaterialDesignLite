@@ -318,6 +318,72 @@ WAHtmlCanvas >> mdlDiv: aBlock [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanel [
+	^ self brush: MDLExpansionPanelTag new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanel: aBlock [
+	^ self mdlExpansionPanel
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelContent [
+	^ self brush: MDLExpansionPanelContent new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelContent: aBlock [
+	^ self mdlExpansionPanelContent
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeader [
+	^ self brush: MDLExpansionPanelHeader new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeader: aBlock [
+	^ self mdlExpansionPanelHeader
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderDescription [
+	^ self brush: MDLExpansionPanelHeaderDescription new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderDescription: aBlock [
+	^ self mdlExpansionPanelHeaderDescription
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderIcon [
+	^ self brush: MDLExpansionPanelHeaderIcon new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderIcon: aBlock [
+	^ self mdlExpansionPanelHeaderIcon
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderTitle [
+	^ self brush: MDLExpansionPanelHeaderTitle new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderTitle: aBlock [
+	^ self mdlExpansionPanelHeaderTitle
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlFooter [
 	^ self brush: MDLMegaFooter new 
 ]

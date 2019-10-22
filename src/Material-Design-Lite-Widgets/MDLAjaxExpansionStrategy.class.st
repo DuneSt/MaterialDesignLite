@@ -50,10 +50,7 @@ MDLAjaxExpansionStrategy >> onFoldBlock: anObject [
 { #category : #rendering }
 MDLAjaxExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 	anExpansionPanel isExpanded
-		ifTrue: [ html mdlGrid
-				with: [ html mdlCell
-						size: 12;
-						with: [ anExpansionPanel expandedBlock value: html ] ] ]
+		ifTrue: [ anExpansionPanel expandedBlock value: html ]
 ]
 
 { #category : #javascript }
