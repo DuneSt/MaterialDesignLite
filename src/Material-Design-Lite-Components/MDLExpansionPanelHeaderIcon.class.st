@@ -1,3 +1,9 @@
+"
+Description
+--------------------
+
+I am a brush to create the icon for a MDL Expansion Panel Header.
+"
 Class {
 	#name : #MDLExpansionPanelHeaderIcon,
 	#superclass : #MDLIcon,

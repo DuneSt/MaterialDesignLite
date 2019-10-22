@@ -1,3 +1,9 @@
+"
+Description
+--------------------
+
+I am a brush to create a MDL Expansion Panels.
+"
 Class {
 	#name : #MDLExpansionPanelTag,
 	#superclass : #MDLDivTag,
