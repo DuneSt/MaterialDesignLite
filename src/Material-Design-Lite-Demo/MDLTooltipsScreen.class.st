@@ -1,16 +1,11 @@
 "
-I am representing tooltips screen
+Useful informations on hover.
 "
 Class {
 	#name : #MDLTooltipsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLTooltipsScreen class >> description [
-	^ 'Useful informations on hover.'
-]
 
 { #category : #accessing }
 MDLTooltipsScreen class >> icon [

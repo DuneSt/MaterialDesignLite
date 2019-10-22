@@ -1,16 +1,11 @@
 "
-I am representing text field screen.
+Textual input components.
 "
 Class {
 	#name : #MDLTextFieldsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLTextFieldsScreen class >> description [
-	^ 'Textual input components.'
-]
 
 { #category : #accessing }
 MDLTextFieldsScreen class >> icon [

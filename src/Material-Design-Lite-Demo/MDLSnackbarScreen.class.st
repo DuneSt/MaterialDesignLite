@@ -1,16 +1,11 @@
 "
-I'm representing snackbar component screen
+Transient popup notifications.
 "
 Class {
 	#name : #MDLSnackbarScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLSnackbarScreen class >> description [
-	^ 'Transient popup notifications.'
-]
 
 { #category : #accessing }
 MDLSnackbarScreen class >> icon [

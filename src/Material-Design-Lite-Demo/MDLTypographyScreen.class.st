@@ -1,16 +1,11 @@
 "
-I am a demo screen to show how to use Typography elements
+Predefined typographies
 "
 Class {
 	#name : #MDLTypographyScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLTypographyScreen class >> description [
-	^ 'Predefined typographies'
-]
 
 { #category : #accessing }
 MDLTypographyScreen class >> icon [

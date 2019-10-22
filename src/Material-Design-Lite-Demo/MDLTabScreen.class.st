@@ -1,16 +1,11 @@
 "
-Screen to render MDLTabWidget examples
+A tab widget.
 "
 Class {
 	#name : #MDLTabScreen,
 	#superclass : #MDLWidgetDemo,
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLTabScreen class >> description [
-	^ 'A tab widget.'
-]
 
 { #category : #accessing }
 MDLTabScreen class >> icon [

@@ -1,16 +1,11 @@
 "
-I am a screen to show how to use a MDLProgressBarWidget
+Indicate loading and progress states.
 "
 Class {
 	#name : #MDLProgressBarScreen,
 	#superclass : #MDLWidgetDemo,
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLProgressBarScreen class >> description [
-	^ 'Indicate loading and progress states.'
-]
 
 { #category : #accessing }
 MDLProgressBarScreen class >> icon [

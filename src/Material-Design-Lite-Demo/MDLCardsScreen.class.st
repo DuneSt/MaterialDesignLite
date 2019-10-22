@@ -1,16 +1,11 @@
 "
-I am the screen representing cards.
+Self-contained pieces of paper with data
 "
 Class {
 	#name : #MDLCardsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLCardsScreen class >> description [
-	^ 'Self-contained pieces of paper with data'
-]
 
 { #category : #accessing }
 MDLCardsScreen class >> icon [
