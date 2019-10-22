@@ -323,8 +323,20 @@ WAHtmlCanvas >> mdlExpansionPanel [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanel: aBlock [
+	^ self mdlExpansionPanel
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlExpansionPanelContent [
 	^ self brush: MDLExpansionPanelContent new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelContent: aBlock [
+	^ self mdlExpansionPanelContent
+		with: aBlock
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
@@ -333,8 +345,20 @@ WAHtmlCanvas >> mdlExpansionPanelHeader [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeader: aBlock [
+	^ self mdlExpansionPanelHeader
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlExpansionPanelHeaderDescription [
 	^ self brush: MDLExpansionPanelHeaderDescription new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderDescription: aBlock [
+	^ self mdlExpansionPanelHeaderDescription
+		with: aBlock
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
@@ -343,8 +367,20 @@ WAHtmlCanvas >> mdlExpansionPanelHeaderIcon [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderIcon: aBlock [
+	^ self mdlExpansionPanelHeaderIcon
+		with: aBlock
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlExpansionPanelHeaderTitle [
 	^ self brush: MDLExpansionPanelHeaderTitle new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderTitle: aBlock [
+	^ self mdlExpansionPanelHeaderTitle
+		with: aBlock
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
