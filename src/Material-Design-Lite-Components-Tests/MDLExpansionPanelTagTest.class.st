@@ -13,6 +13,36 @@ MDLExpansionPanelTagTest >> testBareBrush [
 ]
 
 { #category : #tests }
+MDLExpansionPanelTagTest >> testBareBrushExpanded [
+	self assert: [ :html | html mdlExpansionPanel expand ] generates: '<div class="mdl-expansion-panel"></div>'
+]
+
+{ #category : #tests }
+MDLExpansionPanelTagTest >> testBareBrushFolded [
+	self assert: [ :html | html mdlExpansionPanel fold ] generates: '<div class="mdl-expansion-panel isFolded"></div>'
+]
+
+{ #category : #tests }
+MDLExpansionPanelTagTest >> testExpandIf [
+	self assert: [ :html | html mdlExpansionPanel expandIf: false ] generates: '<div class="mdl-expansion-panel isFolded"></div>'
+]
+
+{ #category : #tests }
+MDLExpansionPanelTagTest >> testExpandIf2 [
+	self assert: [ :html | html mdlExpansionPanel expandIf: true ] generates: '<div class="mdl-expansion-panel"></div>'
+]
+
+{ #category : #tests }
+MDLExpansionPanelTagTest >> testFoldIf [
+	self assert: [ :html | html mdlExpansionPanel foldIf: true ] generates: '<div class="mdl-expansion-panel isFolded"></div>'
+]
+
+{ #category : #tests }
+MDLExpansionPanelTagTest >> testFoldIf2 [
+	self assert: [ :html | html mdlExpansionPanel foldIf: false ] generates: '<div class="mdl-expansion-panel"></div>'
+]
+
+{ #category : #tests }
 MDLExpansionPanelTagTest >> testWithContent [
 	self assert: [ :html | 
 		html mdlExpansionPanel: [
