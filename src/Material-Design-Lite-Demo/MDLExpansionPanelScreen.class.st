@@ -9,8 +9,7 @@ Class {
 
 { #category : #accessing }
 MDLExpansionPanelScreen class >> icon [
-	self flag: #TODO. "Choose better icon"
-	^ #compmenusPng
+	^ #compexpansionPng
 ]
 
 { #category : #accessing }
