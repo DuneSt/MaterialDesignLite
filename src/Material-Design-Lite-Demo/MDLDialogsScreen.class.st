@@ -1,16 +1,11 @@
 "
-I'm representing dialogs screen
+Modal windows for dedicated user input.
 "
 Class {
 	#name : #MDLDialogsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLDialogsScreen class >> description [
-	^ 'Modal windows for dedicated user input.'
-]
 
 { #category : #accessing }
 MDLDialogsScreen class >> icon [

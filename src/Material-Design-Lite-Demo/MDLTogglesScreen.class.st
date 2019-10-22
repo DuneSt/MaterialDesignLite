@@ -1,16 +1,11 @@
 "
-I'm representing Toggles screen
+Choose between states.
 "
 Class {
 	#name : #MDLTogglesScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLTogglesScreen class >> description [
-	^ 'Choose between states.'
-]
 
 { #category : #accessing }
 MDLTogglesScreen class >> icon [

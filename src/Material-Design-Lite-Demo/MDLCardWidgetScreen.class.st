@@ -1,16 +1,11 @@
 "
-Screen to render MDLCardWidget examples
+A Card widget to make easy the use of the cards.
 "
 Class {
 	#name : #MDLCardWidgetScreen,
 	#superclass : #MDLWidgetDemo,
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLCardWidgetScreen class >> description [
-	^ 'A Card widget to make easy the use of the cards.'
-]
 
 { #category : #accessing }
 MDLCardWidgetScreen class >> icon [

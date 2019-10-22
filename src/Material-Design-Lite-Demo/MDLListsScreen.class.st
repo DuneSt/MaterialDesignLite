@@ -1,16 +1,11 @@
 "
-I'm representing list screen
+Customizable scrollable lists.
 "
 Class {
 	#name : #MDLListsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLListsScreen class >> description [
-	^ 'Customizable scrollable lists.'
-]
 
 { #category : #accessing }
 MDLListsScreen class >> icon [

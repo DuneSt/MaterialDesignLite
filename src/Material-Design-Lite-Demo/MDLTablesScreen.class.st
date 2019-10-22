@@ -1,16 +1,11 @@
 "
-I'm representing the tables.
+Organize data.
 "
 Class {
 	#name : #MDLTablesScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLTablesScreen class >> description [
-	^ 'Organize data.'
-]
 
 { #category : #accessing }
 MDLTablesScreen class >> icon [

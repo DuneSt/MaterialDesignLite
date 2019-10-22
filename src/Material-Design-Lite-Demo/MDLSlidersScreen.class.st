@@ -1,16 +1,11 @@
 "
-I'm representing sliders components screen
+Selecting a value out of a range.
 "
 Class {
 	#name : #MDLSlidersScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLSlidersScreen class >> description [
-	^ 'Selecting a value out of a range.'
-]
 
 { #category : #accessing }
 MDLSlidersScreen class >> icon [

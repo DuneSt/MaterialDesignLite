@@ -1,5 +1,5 @@
 "
-I am nested list demonstration panel
+A smart list that will dynamically load in Ajax
 "
 Class {
 	#name : #MDLNestedListScreen,
@@ -7,13 +7,8 @@ Class {
 	#instVars : [
 		'selectedElement'
 	],
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLNestedListScreen class >> description [
-	^ 'A smart list that will dynamically load in Ajax'
-]
 
 { #category : #accessing }
 MDLNestedListScreen class >> icon [
