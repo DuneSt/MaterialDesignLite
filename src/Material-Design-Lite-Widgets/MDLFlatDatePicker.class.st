@@ -259,6 +259,9 @@ MDLFlatDatePicker >> renderMonthesOn: html [
 				do: [ :aString | 
 					html mdlCell
 						class: 'month-cell';
+						class: 'mdl-color-text--primary' if: aString = self currentDate monthName;
+						class: 'mdl-color-text--primary-contrast' if: aString = self currentDate monthName;
+						class: 'mdl-color--primary' if: aString = self currentDate monthName;
 						class: 'active' if: aString = self currentDate monthName;
 						onClick: (self jsGoToMonth: (Month indexOfMonth: aString) on: html);
 						desktopSize: 4;
@@ -312,9 +315,12 @@ MDLFlatDatePicker >> renderYearsOn: html [
 		mdlTypographyTextCenter;
 		with: [ self renderYearsHeaderOn: html.
 			self calendar yearsInterval
-				do: [ :aYear | 
+				do: [ :aYear |
 					html mdlCell
 						class: 'year-cell';
+						class: 'mdl-color-text--primary' if: aYear = self currentDate year;
+						class: 'mdl-color-text--primary-contrast' if: aYear = self currentDate year;
+						class: 'mdl-color--primary' if: aYear = self currentDate year;
 						class: 'active' if: aYear = self currentDate year;
 						onClick:
 							(html jQuery ajax
