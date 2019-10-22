@@ -624,18 +624,18 @@ code.nosupport::before {
 	background-color: white;
 }
 
-.renderLowerLeftMenuOn .container, .renderLowerRightMenuOn .container, .renderTopLeftMenuOn .container, .renderTopRightMenuOn .container {
+.renderLowerLeftMenuOn .container, .renderLowerRightMenuOn .container, .renderTopLeftMenuOn .container, .renderTopRightMenuOn .container, .renderMenuWithAnchorsOn .container {
     position: relative;
     width: 200px;
 }
 
-.renderLowerLeftMenuOn .background, .renderLowerRightMenuOn .background, .renderTopLeftMenuOn .background, .renderTopRightMenuOn .background {
+.renderLowerLeftMenuOn .background, .renderLowerRightMenuOn .background, .renderTopLeftMenuOn .background, .renderTopRightMenuOn .background, .renderMenuWithAnchorsOn .background {
     background: white;
     height: 148px;
     width: 100%;
 }
 
-.renderLowerLeftMenuOn .bar, .renderLowerRightMenuOn .bar, .renderTopLeftMenuOn .bar, .renderTopRightMenuOn .bar {
+.renderLowerLeftMenuOn .bar, .renderLowerRightMenuOn .bar, .renderTopLeftMenuOn .bar, .renderTopRightMenuOn .bar, .renderMenuWithAnchorsOn .bar {
     box-sizing: border-box;
     background: #3F51B5;
     color: white;
