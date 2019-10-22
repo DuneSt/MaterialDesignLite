@@ -318,6 +318,11 @@ WAHtmlCanvas >> mdlDiv: aBlock [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanel [
+	^ self brush: MDLExpansionPanelTag new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlFooter [
 	^ self brush: MDLMegaFooter new 
 ]

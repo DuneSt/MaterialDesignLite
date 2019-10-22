@@ -126,11 +126,10 @@ MDLExpansionPanel >> isFolded: aBoolean [
 { #category : #rendering }
 MDLExpansionPanel >> renderContentOn: html [
 	self ensureId: html.
-	html div
+	html mdlExpansionPanel
 		id: self id;
 		shadow: self shadow;
-		class: 'mdl-expansion-panel';
-		class: 'isFolded' if: self isFolded;
+		foldIf: self isFolded;
 		with: [ self renderExpansionPanelHeader: html.
 			self renderExpansionPanelContent: html ]
 ]
