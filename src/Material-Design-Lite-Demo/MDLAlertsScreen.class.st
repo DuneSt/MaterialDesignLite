@@ -1,7 +1,4 @@
 "
-Description
---------------------
-
 Component to display some feedback to the user.
 "
 Class {
@@ -9,11 +6,6 @@ Class {
 	#superclass : #MDLExtensionsDemo,
 	#category : #'Material-Design-Lite-Demo-Extensions'
 }
-
-{ #category : #accessing }
-MDLAlertsScreen class >> description [
-	^ 'Component to display some feedback to the user.'
-]
 
 { #category : #accessing }
 MDLAlertsScreen class >> icon [

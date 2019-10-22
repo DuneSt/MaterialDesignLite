@@ -1,19 +1,11 @@
 "
-Description
---------------------
-
-Screen to render resizable right panel with tabs examples.
+Extension to create a browser with a resizable right panel with tabs.
 "
 Class {
 	#name : #MDLRightTabsPanelScreen,
 	#superclass : #MDLExtensionsDemo,
 	#category : #'Material-Design-Lite-Demo-Extensions'
 }
-
-{ #category : #accessing }
-MDLRightTabsPanelScreen class >> description [
-	^ 'Extension to create a browser with a resizable right panel with tabs.'
-]
 
 { #category : #accessing }
 MDLRightTabsPanelScreen class >> icon [

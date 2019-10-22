@@ -1,18 +1,11 @@
 "
-I'm the screen representing different layouts
-
-See Navigation, Tabs, Footer and Grid sections for more informations
+Building blocks for constructing a page layout.
 "
 Class {
 	#name : #MDLLayoutScreen,
 	#superclass : #MDLComponentDemo,
 	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLLayoutScreen class >> description [
-	^ 'Building blocks for constructing a page layout.'
-]
 
 { #category : #accessing }
 MDLLayoutScreen class >> icon [

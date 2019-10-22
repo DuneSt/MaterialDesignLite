@@ -1,19 +1,11 @@
 "
-I am the screen representing badges.
-
-There are 2 different kinds of badges:  text or icon badges.
-
+Small status descriptors for UI elements.
 "
 Class {
 	#name : #MDLBadgesScreen,
 	#superclass : #MDLComponentDemo,
 	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLBadgesScreen class >> description [
-	^ 'Small status descriptors for UI elements.'
-]
 
 { #category : #accessing }
 MDLBadgesScreen class >> icon [

@@ -1,16 +1,11 @@
 "
-I am the screen representing chips.
+Chips represent complex entities in small blocks, such as a contact.
 "
 Class {
 	#name : #MDLChipsScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLChipsScreen class >> description [
-	^ 'Chips represent complex entities in small blocks, such as a contact.'
-]
 
 { #category : #accessing }
 MDLChipsScreen class >> icon [

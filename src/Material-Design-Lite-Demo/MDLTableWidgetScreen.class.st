@@ -1,16 +1,11 @@
 "
-Screen to render MDLTableWidget examples
+A high-level widget to generate table.
 "
 Class {
 	#name : #MDLTableWidgetScreen,
 	#superclass : #MDLWidgetDemo,
 	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLTableWidgetScreen class >> description [
-	^ 'A high-level widget to generate table.'
-]
 
 { #category : #accessing }
 MDLTableWidgetScreen class >> icon [

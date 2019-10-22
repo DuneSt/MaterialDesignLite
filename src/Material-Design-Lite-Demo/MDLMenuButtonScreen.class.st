@@ -1,5 +1,5 @@
 "
-Demo screen for the MDLMenuButtonWidget
+A widget to create a button that expand to show a menu when clicked
 "
 Class {
 	#name : #MDLMenuButtonScreen,
@@ -7,13 +7,8 @@ Class {
 	#instVars : [
 		'selectedUser'
 	],
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLMenuButtonScreen class >> description [
-	^ 'A widget to create a button that expand to show a menu when clicked'
-]
 
 { #category : #accessing }
 MDLMenuButtonScreen class >> icon [

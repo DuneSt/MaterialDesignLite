@@ -1,19 +1,11 @@
 "
-Description
---------------------
-
-I'm the screen representing the anchor buttons
+Variations on Material Design buttons like anchors.
 "
 Class {
 	#name : #MDLAnchorButtonsScreen,
 	#superclass : #MDLComponentDemo,
 	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #sections }
-MDLAnchorButtonsScreen class >> description [
-	^ 'Variations on Material Design buttons like anchors.'
-]
 
 { #category : #accessing }
 MDLAnchorButtonsScreen class >> icon [
