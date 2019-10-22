@@ -4,7 +4,7 @@ I'm representing the menu components screen
 Class {
 	#name : #MDLMenusScreen,
 	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#category : 'Material-Design-Lite-Demo-Components'
 }
 
 { #category : #accessing }
