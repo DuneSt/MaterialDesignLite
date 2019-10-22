@@ -3,9 +3,6 @@
 #### Linux/OSX builds
 Master: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=master)](https://travis-ci.org/DuneSt/MaterialDesignLite)| Development: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=development)](https://travis-ci.org/DuneSt/MaterialDesignLite)
 
-#### Windows builds
-Master: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni/branch/master?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite/branch/master) | Latest commit: [![Build status](https://ci.appveyor.com/api/projects/status/1d20eiwk92jpgfni?svg=true)](https://ci.appveyor.com/project/jecisc/materialdesignlite)
-
 Coverage:
 
 [![Coverage Status](https://coveralls.io/repos/github/DuneSt/MaterialDesignLite/badge.svg)](https://coveralls.io/github/DuneSt/MaterialDesignLite)
@@ -135,7 +132,7 @@ In order to make the extentions work properly, you should define some colors spe
 ```
 
 Where `XXXXXX` is the hex code of the accent color of your MDL application. 
-To find your code you can select the #500 color in the following page: [https://www.materialui.co/colors](https://www.materialui.co/colors) 
+To find your code you can select the #A200 color in the following page: [https://www.materialui.co/colors](https://www.materialui.co/colors) 
 
 ### Subclassing MDLApplication
 
