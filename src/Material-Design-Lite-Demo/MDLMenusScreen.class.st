@@ -25,6 +25,13 @@ MDLMenusScreen >> bottomMenus [
 		yourself
 ]
 
+{ #category : #sections }
+MDLMenusScreen >> menuWithAnchors [
+	^ OrderedDictionary new
+		add: 'Menu with anchors' -> #renderMenuWithAnchorsOn:;
+		yourself
+]
+
 { #category : #demos }
 MDLMenusScreen >> renderLowerLeftMenuOn: html [
 	html div
@@ -75,12 +82,37 @@ MDLMenusScreen >> renderLowerRightMenuOn: html [
 			html div class: 'background' ]
 ]
 
+{ #category : #demos }
+MDLMenusScreen >> renderMenuWithAnchorsOn: html [
+	html div
+		class: 'container';
+		shadow: 2;
+		with: [ html div
+				class: 'bar';
+				with: [ html mdlButton icon
+						id: #menuWithAnchors;
+						with: [ html mdlIcon: #more_vert ].
+					html mdlMenu
+						bottomLeft;
+						for: #menuWithAnchors;
+						with: [ 1 to: 5 do: [ :ind | 
+								html
+									mdlMenuItem: [ html anchor
+											callback: [ ('Action ' , ind asString) traceCr ];
+											with: 'Action ' , ind asString ] ] ] ].
+			html div class: 'background' ]
+]
+
 { #category : #rendering }
 MDLMenusScreen >> renderScreenContentOn: html [
-	html paragraph: [ html small: 'Note: The menu requires a non-static positioned parent element. Positioning options may not work properly if the menu is inside of a statically positioned node.' ].
+	html
+		paragraph: [ html
+				small:
+					'Note: The menu requires a non-static positioned parent element. Positioning options may not work properly if the menu is inside of a statically positioned node.' ].
 	self
 		render: self bottomMenus on: html;
-		render: self topMenus on: html
+		render: self topMenus on: html;
+		render: self menuWithAnchors on: html
 ]
 
 { #category : #demos }
