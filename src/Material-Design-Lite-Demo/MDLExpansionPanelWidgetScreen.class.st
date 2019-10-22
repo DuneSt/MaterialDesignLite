@@ -2,23 +2,23 @@
 Implementation of expansion panel for MDL.
 "
 Class {
-	#name : #MDLExpansionPanelScreen,
+	#name : #MDLExpansionPanelWidgetScreen,
 	#superclass : #MDLWidgetDemo,
 	#category : #'Material-Design-Lite-Demo-Widgets'
 }
 
 { #category : #accessing }
-MDLExpansionPanelScreen class >> icon [
+MDLExpansionPanelWidgetScreen class >> icon [
 	^ #compexpansionPng
 ]
 
 { #category : #accessing }
-MDLExpansionPanelScreen class >> title [
+MDLExpansionPanelWidgetScreen class >> title [
 	^ 'Expansion Panel'
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> basicExpansionPanel [
+MDLExpansionPanelWidgetScreen >> basicExpansionPanel [
 	^ OrderedDictionary new
 		add: 'Basic expansion panel initially folded' -> #renderBasicExpansionPanelFoldedOn:;
 		add: 'Basic expansion panel initially expanded' -> #renderBasicExpansionPanelExpandedOn:;
@@ -26,7 +26,7 @@ MDLExpansionPanelScreen >> basicExpansionPanel [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> customIconsExpansionPanel [
+MDLExpansionPanelWidgetScreen >> customIconsExpansionPanel [
 	^ OrderedDictionary new
 		add: 'Expansion panel with different custom icons for fold and expand.' -> #renderExpansionPanelWithCustomIconsOn:;
 		add: 'Expansion panel with same custom icon for fold and expand.' -> #renderExpansionPanelWithCustomSameIconOn:;
@@ -34,14 +34,14 @@ MDLExpansionPanelScreen >> customIconsExpansionPanel [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> expansionPanelWithActions [
+MDLExpansionPanelWidgetScreen >> expansionPanelWithActions [
 	^ OrderedDictionary new
 		add: 'Expansion panel performing actions on fold / expand.' -> #renderExpansionPanelWithActionsOnExpandFoldOn:;
 		yourself
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> expansionPanelWithStrategy [
+MDLExpansionPanelWidgetScreen >> expansionPanelWithStrategy [
 	^ OrderedDictionary new
 		add: 'Expansion panel loading lazily its content initially folded.' -> #renderExpansionPanelWithLazyStrategyOn:;
 		add: 'Expansion panel loading lazily its content initially expanded.' -> #renderExpansionPanelWithLazyStrategyInitiallyExpandedOn:;
@@ -49,7 +49,7 @@ MDLExpansionPanelScreen >> expansionPanelWithStrategy [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> renderBasicExpansionPanelExpandedOn: html [
+MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelExpandedOn: html [
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -68,7 +68,7 @@ MDLExpansionPanelScreen >> renderBasicExpansionPanelExpandedOn: html [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> renderBasicExpansionPanelFoldedOn: html [
+MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelFoldedOn: html [
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -87,7 +87,7 @@ MDLExpansionPanelScreen >> renderBasicExpansionPanelFoldedOn: html [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> renderExpansionPanelWithActionsOnExpandFoldOn: html [
+MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithActionsOnExpandFoldOn: html [
 	html div
 		style: 'width: 800px';
 		with: [ html
@@ -106,7 +106,7 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithActionsOnExpandFoldOn: html [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> renderExpansionPanelWithCustomIconsOn: html [
+MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithCustomIconsOn: html [
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -126,7 +126,7 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithCustomIconsOn: html [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> renderExpansionPanelWithCustomSameIconOn: html [
+MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithCustomSameIconOn: html [
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -145,7 +145,7 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithCustomSameIconOn: html [
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> renderExpansionPanelWithLazyStrategyInitiallyExpandedOn: html [
+MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyInitiallyExpandedOn: html [
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -165,7 +165,7 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithLazyStrategyInitiallyExpanded
 ]
 
 { #category : #demos }
-MDLExpansionPanelScreen >> renderExpansionPanelWithLazyStrategyOn: html [
+MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyOn: html [
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -184,7 +184,7 @@ MDLExpansionPanelScreen >> renderExpansionPanelWithLazyStrategyOn: html [
 ]
 
 { #category : #rendering }
-MDLExpansionPanelScreen >> renderScreenContentOn: html [
+MDLExpansionPanelWidgetScreen >> renderScreenContentOn: html [
 	self
 		render: self basicExpansionPanel on: html;
 		render: self customIconsExpansionPanel on: html;
