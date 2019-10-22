@@ -323,6 +323,31 @@ WAHtmlCanvas >> mdlExpansionPanel [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelContent [
+	^ self brush: MDLExpansionPanelContent new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeader [
+	^ self brush: MDLExpansionPanelHeader new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderDescription [
+	^ self brush: MDLExpansionPanelHeaderDescription new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderIcon [
+	^ self brush: MDLExpansionPanelHeaderIcon new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlExpansionPanelHeaderTitle [
+	^ self brush: MDLExpansionPanelHeaderTitle new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlFooter [
 	^ self brush: MDLMegaFooter new 
 ]
