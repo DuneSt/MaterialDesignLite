@@ -1,7 +1,7 @@
 Class {
 	#name : #MDLProgressBarTest,
 	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-loading'
+	#category : #'Material-Design-Lite-Components-Tests-Loading'
 }
 
 { #category : #tests }
