@@ -38,13 +38,20 @@ MDLDemo class >> initialize [
 
 { #category : #initialization }
 MDLDemo class >> initializeAs: aString [
+	| app |
 	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].
-	^ (WAAdmin register: self asApplicationAt: aString)
+	app := WAAdmin register: self asApplicationAt: aString.
+
+	app configuration
+		at: #maximumAbsoluteAge put: 0;
+		at: #maximumRelativeAge put: 7 days asSeconds.
+
+	app
 		preferenceAt: #sessionClass put: MDLDemoSession;
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: MDLLibrary;
-		addLibrary: MDLDemoLibrary;
-		yourself
+		addLibrary: MDLDemoLibrary.
+	^ app
 ]
 
 { #category : #'world menu' }
