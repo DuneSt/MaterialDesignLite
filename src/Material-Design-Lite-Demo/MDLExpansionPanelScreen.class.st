@@ -30,11 +30,20 @@ MDLExpansionPanelScreen >> renderExpansionFoldedOn: html [
 	html mdlExpansionPanel
 		shadow: 2;
 		fold;
-		with: [ html
-				mdlExpansionPanelHeader: [ 
-					html mdlExpansionPanelHeaderTitle: 'Personal data'.
-					html mdlExpansionPanelHeaderDescription: 'Type your name'.
-					html mdlIcon: 'face' ].
+		with: [ html mdlExpansionPanelHeader
+				toggleExpansionOnClick;
+				onClick: '
+	if($(this).parent().hasClass("isFolded")) {
+		$(this).find(".mdl-expansion-panel__header-icon").text("account_box");
+		$(this).find(".mdl-expansion-panel__header-description").text("I am folded");
+	}
+	else {
+		$(this).find(".mdl-expansion-panel__header-icon").text("account_circle");
+		$(this).find(".mdl-expansion-panel__header-description").text("I am unfolded");
+	}' js;
+				with: [ html mdlExpansionPanelHeaderTitle: 'Personal data'.
+					html mdlExpansionPanelHeaderDescription: 'I am folded'.
+					html mdlExpansionPanelHeaderIcon: 'account_box' ].
 			html
 				mdlExpansionPanelContent: [ html
 						mdlTextFieldContainer: [ html mdlTextFieldLabel
@@ -47,12 +56,13 @@ MDLExpansionPanelScreen >> renderExpansionFoldedOn: html [
 MDLExpansionPanelScreen >> renderExpansionOn: html [
 	html mdlExpansionPanel
 		shadow: 2;
-		expand; "Optional, this is the default."
-		with: [ html
-				mdlExpansionPanelHeader: [ 
-					html mdlExpansionPanelHeaderTitle: 'Personal data'.
+		expand;
+		"Optional, this is the default."
+			with: [ html mdlExpansionPanelHeader
+				toggleExpansionOnClick;
+				with: [ html mdlExpansionPanelHeaderTitle: 'Personal data'.
 					html mdlExpansionPanelHeaderDescription: 'Type your name'.
-					html mdlIcon: 'face' ].
+					html mdlExpansionPanelHeaderIcon ].
 			html
 				mdlExpansionPanelContent: [ html
 						mdlTextFieldContainer: [ html mdlTextFieldLabel

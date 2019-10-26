@@ -19,8 +19,6 @@ Class {
 		'description',
 		'expandedBlock',
 		'isExpanded',
-		'expandIcon',
-		'foldIcon',
 		'shadow',
 		'expansionStrategy'
 	],
@@ -38,16 +36,6 @@ MDLExpansionPanel >> description: anObject [
 ]
 
 { #category : #accessing }
-MDLExpansionPanel >> expandIcon [
-	^ expandIcon
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> expandIcon: anObject [
-	expandIcon := anObject
-]
-
-{ #category : #accessing }
 MDLExpansionPanel >> expandedBlock [
 	^ expandedBlock
 ]
@@ -55,13 +43,6 @@ MDLExpansionPanel >> expandedBlock [
 { #category : #accessing }
 MDLExpansionPanel >> expandedBlock: anObject [
 	expandedBlock := anObject
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> expansionIcon [
-	^ self isExpanded
-		ifTrue: [ self foldIcon ]
-		ifFalse: [ self expandIcon ]
 ]
 
 { #category : #accessing }
@@ -74,22 +55,6 @@ MDLExpansionPanel >> expansionStrategy: anObject [
 	expansionStrategy := anObject
 ]
 
-{ #category : #accessing }
-MDLExpansionPanel >> foldIcon [
-	^ foldIcon
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> foldIcon: anObject [
-	foldIcon := anObject
-]
-
-{ #category : #accessing }
-MDLExpansionPanel >> icon: aString [
-	self foldIcon: aString.
-	self expandIcon: aString
-]
-
 { #category : #initialization }
 MDLExpansionPanel >> initialize [
 	super initialize.
@@ -98,8 +63,6 @@ MDLExpansionPanel >> initialize [
 		description: '';
 		shadow: 2;
 		isExpanded: false;
-		expandIcon: 'expand_more';
-		foldIcon: 'expand_less';
 		useHideExpansionStrategy
 ]
 
@@ -131,26 +94,26 @@ MDLExpansionPanel >> renderContentOn: html [
 		shadow: self shadow;
 		foldIf: self isFolded;
 		with: [ self renderExpansionPanelHeader: html.
-			self renderExpansionPanelContent: html ]
+			html mdlExpansionPanelContent: [ self renderExpansionPanelContent: html ] ]
 ]
 
 { #category : #rendering }
 MDLExpansionPanel >> renderExpansionPanelContent: html [
-	^ html mdlExpansionPanelContent
-		with: [ self expansionStrategy renderExpansionPanel: self contentOn: html ]
+	self expansionStrategy renderExpansionPanel: self contentOn: html
 ]
 
 { #category : #rendering }
 MDLExpansionPanel >> renderExpansionPanelHeader: html [
-	html mdlExpansionPanelHeader
-		onClick: (self expansionStrategy toggleScriptOn: html for: self);
-		with: [ 
-			html mdlExpansionPanelHeaderTitle
-				with: self title.
-			html mdlExpansionPanelHeaderDescription
-				with: self description.
-			html mdlExpansionPanelHeaderIcon
-				with: self expansionIcon ]
+	| header |
+	header := html mdlExpansionPanelHeader
+		toggleExpansionOnClick;
+		yourself.
+	self expansionStrategy customize: header in: self on: html.
+	header
+		with: [ html
+				mdlExpansionPanelHeaderTitle: self title;
+				mdlExpansionPanelHeaderDescription: self description;
+				mdlExpansionPanelHeaderIcon ]
 ]
 
 { #category : #accessing }
@@ -181,14 +144,6 @@ MDLExpansionPanel >> toggleExpansion [
 { #category : #configuring }
 MDLExpansionPanel >> useAjaxExpansionStrategy [
 	self expansionStrategy: MDLAjaxExpansionStrategy new
-]
-
-{ #category : #configuring }
-MDLExpansionPanel >> useAjaxExpansionStrategyOnExpand: onExpandBlock onFold: onFoldBlock [
-	self expansionStrategy: (MDLAjaxExpansionStrategy new
-									onExpandBlock: onExpandBlock;
-									onFoldBlock: onFoldBlock;
-									yourself)
 ]
 
 { #category : #configuring }
