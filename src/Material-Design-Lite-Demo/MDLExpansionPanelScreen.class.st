@@ -25,6 +25,13 @@ MDLExpansionPanelScreen >> expansion [
 		yourself
 ]
 
+{ #category : #sections }
+MDLExpansionPanelScreen >> expansionMultipleDescriptions [
+	^ OrderedDictionary new
+		add: 'With multiple descriptions' -> #renderMultipleDescriptionsOn:;
+		yourself
+]
+
 { #category : #rendering }
 MDLExpansionPanelScreen >> renderExpansionFoldedOn: html [
 	html mdlExpansionPanel
@@ -56,9 +63,8 @@ MDLExpansionPanelScreen >> renderExpansionFoldedOn: html [
 MDLExpansionPanelScreen >> renderExpansionOn: html [
 	html mdlExpansionPanel
 		shadow: 2;
-		expand;
-		"Optional, this is the default."
-			with: [ html mdlExpansionPanelHeader
+		expand; "Optional, this is the default."
+		with: [ html mdlExpansionPanelHeader
 				toggleExpansionOnClick;
 				with: [ html mdlExpansionPanelHeaderTitle: 'Personal data'.
 					html mdlExpansionPanelHeaderDescription: 'Type your name'.
@@ -72,6 +78,27 @@ MDLExpansionPanelScreen >> renderExpansionOn: html [
 ]
 
 { #category : #rendering }
+MDLExpansionPanelScreen >> renderMultipleDescriptionsOn: html [
+	html mdlExpansionPanel
+		shadow: 2;
+		fold;
+		with: [ html mdlExpansionPanelHeader
+				toggleExpansionOnClick;
+				with: [ html mdlExpansionPanelHeaderTitle: 'Start and end date'.
+					html mdlExpansionPanelHeaderDescription: 'Start date: Feb 29, 2016'.
+					html mdlExpansionPanelHeaderDescription: 'End date: Not set'.
+					html mdlExpansionPanelHeaderIcon ].
+			html
+				mdlExpansionPanelContent: [ html
+						mdlTextFieldContainer: [ html mdlTextFieldLabel
+								for: html nextId;
+								with: 'e.g. John Doe'.
+							html mdlTextFieldInput id: html lastId ] ] ]
+]
+
+{ #category : #rendering }
 MDLExpansionPanelScreen >> renderScreenContentOn: html [
-	self render: self expansion on: html
+	self
+		render: self expansion on: html;
+		render: self expansionMultipleDescriptions fullWidth: true on: html
 ]

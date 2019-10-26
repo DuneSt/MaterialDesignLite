@@ -16,7 +16,7 @@ Class {
 	#superclass : #MDLWidget,
 	#instVars : [
 		'title',
-		'description',
+		'descriptions',
 		'expandedBlock',
 		'isExpanded',
 		'shadow',
@@ -26,13 +26,18 @@ Class {
 }
 
 { #category : #accessing }
-MDLExpansionPanel >> description [
-	^ description
+MDLExpansionPanel >> description: anObject [
+	self descriptions: { anObject }
 ]
 
 { #category : #accessing }
-MDLExpansionPanel >> description: anObject [
-	description := anObject
+MDLExpansionPanel >> descriptions [
+	^ descriptions
+]
+
+{ #category : #accessing }
+MDLExpansionPanel >> descriptions: aCollection [
+	descriptions := aCollection
 ]
 
 { #category : #accessing }
@@ -110,10 +115,9 @@ MDLExpansionPanel >> renderExpansionPanelHeaderOn: html [
 		yourself.
 	self expansionStrategy customize: header in: self on: html.
 	header
-		with: [ html
-				mdlExpansionPanelHeaderTitle: self title;
-				mdlExpansionPanelHeaderDescription: self description;
-				mdlExpansionPanelHeaderIcon ]
+		with: [ html mdlExpansionPanelHeaderTitle: self title.
+			self descriptions do: [ :description | html mdlExpansionPanelHeaderDescription: description ].
+			html mdlExpansionPanelHeaderIcon ]
 ]
 
 { #category : #accessing }

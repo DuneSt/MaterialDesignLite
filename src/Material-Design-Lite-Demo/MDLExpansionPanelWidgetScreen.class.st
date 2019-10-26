@@ -34,6 +34,13 @@ MDLExpansionPanelWidgetScreen >> basicExpansionPanel [
 ]
 
 { #category : #demos }
+MDLExpansionPanelWidgetScreen >> expansionMultipleDescriptions [
+	^ OrderedDictionary new
+		add: 'With multiple descriptions' -> #renderMultipleDescriptionsOn:;
+		yourself
+]
+
+{ #category : #demos }
 MDLExpansionPanelWidgetScreen >> lazyExpansionPanel [
 	^ OrderedDictionary new
 		add: 'Expansion panel loading lazily initially folded.' -> #renderExpansionPanelWithLazyStrategyOn:;
@@ -165,10 +172,28 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyOn: html [
 						yourself) ]
 ]
 
+{ #category : #demos }
+MDLExpansionPanelWidgetScreen >> renderMultipleDescriptionsOn: html [
+	html
+		render:
+			(MDLExpansionPanel new
+				title: 'Start and End dates';
+				descriptions: {'Start date: Feb 29, 2016' . 'End date: Not set'};
+				expandedBlock: [ :htmlCanvas | 
+					html
+						mdlTextFieldContainer: [ html mdlTextFieldLabel
+								for: html nextId;
+								with: 'e.g. John Doe'.
+							html mdlTextFieldInput id: html lastId ] ];
+				isExpanded: false;
+				yourself)
+]
+
 { #category : #rendering }
 MDLExpansionPanelWidgetScreen >> renderScreenContentOn: html [
 	self
 		render: self basicExpansionPanel on: html;
 		render: self lazyExpansionPanel on: html;
-		render: self ajaxExpansionPanel on: html
+		render: self ajaxExpansionPanel on: html;
+		render: self expansionMultipleDescriptions fullWidth: true on: html
 ]
