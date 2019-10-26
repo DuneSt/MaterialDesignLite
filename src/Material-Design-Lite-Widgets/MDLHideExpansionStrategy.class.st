@@ -18,7 +18,7 @@ MDLHideExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: ht
 MDLHideExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
 	^ htmlCanvas jQuery
 		script: [ :jsScript |
-			jsScript << ((htmlCanvas jQuery id: anExpansionPanel id) toggleClass: 'isFolded').
+			jsScript << 'this.parentNode.classList.toggle("isFolded")' js.
 			anExpansionPanel expandIcon ~= anExpansionPanel foldIcon
 				ifTrue: [
 			jsScript << ('if($("#{id}").hasClass("isFolded"))\{
