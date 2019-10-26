@@ -93,17 +93,17 @@ MDLExpansionPanel >> renderContentOn: html [
 		id: self id;
 		shadow: self shadow;
 		foldIf: self isFolded;
-		with: [ self renderExpansionPanelHeader: html.
-			html mdlExpansionPanelContent: [ self renderExpansionPanelContent: html ] ]
+		with: [ self renderExpansionPanelHeaderOn: html.
+			html mdlExpansionPanelContent: [ self renderExpansionPanelContentOn: html ] ]
 ]
 
 { #category : #rendering }
-MDLExpansionPanel >> renderExpansionPanelContent: html [
+MDLExpansionPanel >> renderExpansionPanelContentOn: html [
 	self expansionStrategy renderExpansionPanel: self contentOn: html
 ]
 
 { #category : #rendering }
-MDLExpansionPanel >> renderExpansionPanelHeader: html [
+MDLExpansionPanel >> renderExpansionPanelHeaderOn: html [
 	| header |
 	header := html mdlExpansionPanelHeader
 		toggleExpansionOnClick;

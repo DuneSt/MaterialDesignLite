@@ -22,7 +22,7 @@ MDLAjaxExpansionStrategy >> customize: anExpansionPanelHeader in: anExpansionPan
 				html: [ :ajaxHtmlCanvas | 
 					anExpansionPanel
 						toggleExpansion;
-						renderExpansionPanelContent: ajaxHtmlCanvas ];
+						renderExpansionPanelContentOn: ajaxHtmlCanvas ];
 				onComplete: 'componentHandler.upgradeElements(this);' js)
 ]
 
