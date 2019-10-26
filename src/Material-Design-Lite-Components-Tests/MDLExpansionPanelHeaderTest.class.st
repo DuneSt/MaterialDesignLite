@@ -13,6 +13,11 @@ MDLExpansionPanelHeaderTest >> testBareBrush [
 ]
 
 { #category : #tests }
+MDLExpansionPanelHeaderTest >> testToggleExpansionOnClick [
+	self assert: [ :html | html mdlExpansionPanelHeader toggleExpansionOnClick ] generatedIncludes: 'onclick="this'
+]
+
+{ #category : #tests }
 MDLExpansionPanelHeaderTest >> testWithContent [
 	self assert: [ :html | 
 		html mdlExpansionPanelHeader: [ 
