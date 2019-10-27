@@ -18,6 +18,14 @@ MDLExpansionPanelWidgetScreen class >> title [
 ]
 
 { #category : #demos }
+MDLExpansionPanelWidgetScreen >> ajaxExpansionPanel [
+	^ OrderedDictionary new
+		add: 'Expansion panel loading via ajax initially folded.' -> #renderExpansionPanelWithAjaxStrategyOn:;
+		add: 'Expansion panel loading via ajax initially expanded.' -> #renderExpansionPanelWithAjaxStrategyInitiallyExpandedOn:;
+		yourself
+]
+
+{ #category : #demos }
 MDLExpansionPanelWidgetScreen >> basicExpansionPanel [
 	^ OrderedDictionary new
 		add: 'Basic expansion panel initially folded' -> #renderBasicExpansionPanelFoldedOn:;
@@ -26,25 +34,17 @@ MDLExpansionPanelWidgetScreen >> basicExpansionPanel [
 ]
 
 { #category : #demos }
-MDLExpansionPanelWidgetScreen >> customIconsExpansionPanel [
+MDLExpansionPanelWidgetScreen >> expansionMultipleDescriptions [
 	^ OrderedDictionary new
-		add: 'Expansion panel with different custom icons for fold and expand.' -> #renderExpansionPanelWithCustomIconsOn:;
-		add: 'Expansion panel with same custom icon for fold and expand.' -> #renderExpansionPanelWithCustomSameIconOn:;
+		add: 'With multiple descriptions' -> #renderMultipleDescriptionsOn:;
 		yourself
 ]
 
 { #category : #demos }
-MDLExpansionPanelWidgetScreen >> expansionPanelWithActions [
+MDLExpansionPanelWidgetScreen >> lazyExpansionPanel [
 	^ OrderedDictionary new
-		add: 'Expansion panel performing actions on fold / expand.' -> #renderExpansionPanelWithActionsOnExpandFoldOn:;
-		yourself
-]
-
-{ #category : #demos }
-MDLExpansionPanelWidgetScreen >> expansionPanelWithStrategy [
-	^ OrderedDictionary new
-		add: 'Expansion panel loading lazily its content initially folded.' -> #renderExpansionPanelWithLazyStrategyOn:;
-		add: 'Expansion panel loading lazily its content initially expanded.' -> #renderExpansionPanelWithLazyStrategyInitiallyExpandedOn:;
+		add: 'Expansion panel loading lazily initially folded.' -> #renderExpansionPanelWithLazyStrategyOn:;
+		add: 'Expansion panel loading lazily initially expanded.' -> #renderExpansionPanelWithLazyStrategyInitiallyExpandedOn:;
 		yourself
 ]
 
@@ -57,12 +57,12 @@ MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelExpandedOn: html [
 					(MDLExpansionPanel new
 						title: 'Personal data';
 						description: 'Type your name';
-						expandedBlock: [ :htmlCanvas |
+						expandedBlock: [ :htmlCanvas | 
 							html
 								mdlTextFieldContainer: [ html mdlTextFieldLabel
 										for: html nextId;
 										with: 'e.g. John Doe'.
-									html mdlTextFieldInput id: html lastId ]. ];
+									html mdlTextFieldInput id: html lastId ] ];
 						isExpanded: true;
 						yourself) ]
 ]
@@ -81,32 +81,15 @@ MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelFoldedOn: html [
 								mdlTextFieldContainer: [ html mdlTextFieldLabel
 										for: html nextId;
 										with: 'e.g. John Doe'.
-									html mdlTextFieldInput id: html lastId ]. ];
+									html mdlTextFieldInput id: html lastId ] ];
 						isExpanded: false;
 						yourself) ]
 ]
 
 { #category : #demos }
-MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithActionsOnExpandFoldOn: html [
-	html div
-		style: 'width: 800px';
-		with: [ html
-				render:
-					(MDLExpansionPanel new
-						title: 'Self-aware expansion panel';
-						expandedBlock: [ :htmlCanvas |
-							html text: 'Content for self-aware expansion panel' ];
-						useAjaxExpansionStrategyOnExpand: [ :expansionPanel :htmlBrush |
-							expansionPanel description: 'I know I am expanded.'.
-							htmlBrush jQuery noop ]
-						onFold: [ :expansionPanel :htmlBrush |
-							expansionPanel description: 'I know I am folded.'.
-							htmlBrush jQuery noop ];
-						yourself) ]
-]
-
-{ #category : #demos }
-MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithCustomIconsOn: html [
+MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithAjaxStrategyInitiallyExpandedOn: html [
+	| counter |
+	counter := 0.
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -114,19 +97,23 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithCustomIconsOn: html [
 					(MDLExpansionPanel new
 						title: 'Personal data';
 						description: 'Type your name';
-						expandedBlock: [ :htmlCanvas |
+						useAjaxExpansionStrategy;
+						expandedBlock: [ :htmlCanvas | 
+							html text: 'Panel expanded ' , counter asString , ' times'.
 							html
 								mdlTextFieldContainer: [ html mdlTextFieldLabel
 										for: html nextId;
 										with: 'e.g. John Doe'.
-									html mdlTextFieldInput id: html lastId ]. ];
-						foldIcon: 'account_box';
-						expandIcon: 'account_circle';
+									html mdlTextFieldInput id: html lastId ].
+							counter := counter + 1 ];
+						isExpanded: true;
 						yourself) ]
 ]
 
 { #category : #demos }
-MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithCustomSameIconOn: html [
+MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithAjaxStrategyOn: html [
+	| counter |
+	counter := 0.
 	html div
 		style: 'width: 400px';
 		with: [ html
@@ -134,13 +121,15 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithCustomSameIconOn: html 
 					(MDLExpansionPanel new
 						title: 'Personal data';
 						description: 'Type your name';
-						expandedBlock: [ :htmlCanvas |
+						useAjaxExpansionStrategy;
+						expandedBlock: [ :htmlCanvas | 
+							counter := counter + 1.
+							html text: 'Panel expanded ' , counter asString , ' times'.
 							html
 								mdlTextFieldContainer: [ html mdlTextFieldLabel
 										for: html nextId;
 										with: 'e.g. John Doe'.
-									html mdlTextFieldInput id: html lastId ]. ];
-						icon: 'face';
+									html mdlTextFieldInput id: html lastId ] ];
 						yourself) ]
 ]
 
@@ -183,11 +172,28 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyOn: html [
 						yourself) ]
 ]
 
+{ #category : #demos }
+MDLExpansionPanelWidgetScreen >> renderMultipleDescriptionsOn: html [
+	html
+		render:
+			(MDLExpansionPanel new
+				title: 'Start and End dates';
+				descriptions: {'Start date: Feb 29, 2016' . 'End date: Not set'};
+				expandedBlock: [ :htmlCanvas | 
+					html
+						mdlTextFieldContainer: [ html mdlTextFieldLabel
+								for: html nextId;
+								with: 'e.g. John Doe'.
+							html mdlTextFieldInput id: html lastId ] ];
+				isExpanded: false;
+				yourself)
+]
+
 { #category : #rendering }
 MDLExpansionPanelWidgetScreen >> renderScreenContentOn: html [
 	self
 		render: self basicExpansionPanel on: html;
-		render: self customIconsExpansionPanel on: html;
-		render: self expansionPanelWithStrategy on: html;
-		render: self expansionPanelWithActions on: html
+		render: self lazyExpansionPanel on: html;
+		render: self ajaxExpansionPanel on: html;
+		render: self expansionMultipleDescriptions fullWidth: true on: html
 ]

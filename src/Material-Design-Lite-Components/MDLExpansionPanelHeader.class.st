@@ -15,3 +15,8 @@ MDLExpansionPanelHeader >> initialize [
 	super initialize.
 	self class: 'mdl-expansion-panel__header'
 ]
+
+{ #category : #options }
+MDLExpansionPanelHeader >> toggleExpansionOnClick [
+	self onClick: 'this.parentNode.classList.toggle("isFolded")' js
+]

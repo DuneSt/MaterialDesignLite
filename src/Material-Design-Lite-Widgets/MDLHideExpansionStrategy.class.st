@@ -9,21 +9,14 @@ Class {
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
 
+{ #category : #javascript }
+MDLHideExpansionStrategy >> customize: anExpansionPanelHeader in: anExpansionPanel on: html [
+	"Do nothing here."
+
+	
+]
+
 { #category : #rendering }
 MDLHideExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 	anExpansionPanel expandedBlock value: html
-]
-
-{ #category : #javascript }
-MDLHideExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
-	^ htmlCanvas jQuery
-		script: [ :jsScript |
-			jsScript << ((htmlCanvas jQuery id: anExpansionPanel id) toggleClass: 'isFolded').
-			anExpansionPanel expandIcon ~= anExpansionPanel foldIcon
-				ifTrue: [
-			jsScript << ('if($("#{id}").hasClass("isFolded"))\{
-  $("#{id} > .mdl-expansion-panel__header > .mdl-expansion-panel__header-icon").text("{expand_icon}");
-\} else \{
-  $("#{id} > .mdl-expansion-panel__header > .mdl-expansion-panel__header-icon").text("{fold_icon}");
-\}' format: { 'id' -> anExpansionPanel id. 'expand_icon' -> anExpansionPanel expandIcon. 'fold_icon' -> anExpansionPanel foldIcon } asDictionary) js ] ]
 ]

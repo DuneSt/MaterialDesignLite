@@ -7,6 +7,11 @@ Class {
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
 
+{ #category : #javascript }
+MDLExpansionStrategy >> customize: anExpansionPanelHeader in: anExpansionPanel on: html [
+	^ self subclassResponsibility
+]
+
 { #category : #testing }
 MDLExpansionStrategy >> isAjaxExpansionStrategy [
 	^ false
@@ -15,9 +20,4 @@ MDLExpansionStrategy >> isAjaxExpansionStrategy [
 { #category : #rendering }
 MDLExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 	self subclassResponsibility
-]
-
-{ #category : #javascript }
-MDLExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
-	^ self subclassResponsibility
 ]

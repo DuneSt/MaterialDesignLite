@@ -8,29 +8,6 @@ Class {
 }
 
 { #category : #test }
-MDLExpansionPanelTest >> testExpansionIcon [
-	| expansionPanel |
-	expansionPanel := MDLExpansionPanel new.
-	
-	expansionPanel isExpanded: false.
-	self assert: expansionPanel expansionIcon equals: expansionPanel expandIcon.
-	
-	expansionPanel isExpanded: true.
-	self assert: expansionPanel expansionIcon equals: expansionPanel foldIcon
-]
-
-{ #category : #test }
-MDLExpansionPanelTest >> testIcon [
-	| expansionPanel |
-	expansionPanel := MDLExpansionPanel new.
-	
-	expansionPanel icon: 'test'.
-	
-	self assert: expansionPanel expandIcon equals: 'test'.
-	self assert: expansionPanel expandIcon equals: expansionPanel foldIcon.
-]
-
-{ #category : #test }
 MDLExpansionPanelTest >> testIsExpanded [
 	| expansionPanel |
 	expansionPanel := MDLExpansionPanel new.
@@ -81,22 +58,6 @@ MDLExpansionPanelTest >> testUseAjaxExpansionStrategy [
 	expansionPanel useAjaxExpansionStrategy.
 	
 	self assert: expansionPanel expansionStrategy class equals: MDLAjaxExpansionStrategy
-]
-
-{ #category : #test }
-MDLExpansionPanelTest >> testUseAjaxExpansionStrategyOnExpandOnFold [
-	| expansionPanel onFoldBlock onExpandBlock |
-	expansionPanel := MDLExpansionPanel new.
-	onExpandBlock := [ :panel :htmlBrush |
-							htmlBrush jQuery noop ].
-	onFoldBlock := [ :panel :htmlBrush |
-							htmlBrush jQuery noop ].
-	
-	expansionPanel useAjaxExpansionStrategyOnExpand: onExpandBlock onFold: onFoldBlock.
-	
-	self assert: expansionPanel expansionStrategy class equals: MDLAjaxExpansionStrategy.
-	self assert: expansionPanel expansionStrategy onExpandBlock equals: onExpandBlock.
-	self assert: expansionPanel expansionStrategy onFoldBlock equals: onFoldBlock.
 ]
 
 { #category : #test }

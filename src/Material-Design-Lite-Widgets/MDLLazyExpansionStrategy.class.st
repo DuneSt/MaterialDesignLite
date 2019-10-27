@@ -16,6 +16,13 @@ Class {
 	#category : #'Material-Design-Lite-Widgets-Expansion'
 }
 
+{ #category : #javascript }
+MDLLazyExpansionStrategy >> customize: anExpansionPanelHeader in: anExpansionPanel on: html [
+	anExpansionPanel isExpanded ifTrue: [ self switchToDisplayNoneStrategy ].
+
+	^ currentStrategy customize: anExpansionPanelHeader in: anExpansionPanel on: html
+]
+
 { #category : #initialization }
 MDLLazyExpansionStrategy >> initialize [
 	super initialize.
@@ -24,24 +31,12 @@ MDLLazyExpansionStrategy >> initialize [
 
 { #category : #rendering }
 MDLLazyExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
-	anExpansionPanel isExpanded
-		ifTrue: [ self switchToDisplayNoneStrategy ].
-	currentStrategy
-		renderExpansionPanel: anExpansionPanel
-		contentOn: html.
-	currentStrategy isAjaxExpansionStrategy
-		ifTrue: [ self switchToDisplayNoneStrategy ]
+	anExpansionPanel isExpanded ifTrue: [ self switchToDisplayNoneStrategy ].
+	currentStrategy renderExpansionPanel: anExpansionPanel contentOn: html.
+	currentStrategy isAjaxExpansionStrategy ifTrue: [ self switchToDisplayNoneStrategy ]
 ]
 
 { #category : #private }
 MDLLazyExpansionStrategy >> switchToDisplayNoneStrategy [
 	currentStrategy := MDLHideExpansionStrategy new
-]
-
-{ #category : #javascript }
-MDLLazyExpansionStrategy >> toggleScriptOn: htmlCanvas for: anExpansionPanel [
-	anExpansionPanel isExpanded
-		ifTrue: [ self switchToDisplayNoneStrategy ].
-	
-	^ currentStrategy toggleScriptOn: htmlCanvas for: anExpansionPanel
 ]
