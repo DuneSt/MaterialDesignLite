@@ -213,6 +213,14 @@ MDLDemoLibrary >> mdlDemoCss [
 	font-family: ''Roboto'',''Helvetica'',''Arial'', sans-serif !important;	
 }
 
+#scrollTop { 
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+}
+
 .mdl-layout.is-small-screen .mdl-layout__header-row{
 	display: none;
 }
@@ -709,8 +717,10 @@ MDLDemoLibrary >> mdlDemoJs [
 	^ 'function MDLSeasideDemo() {
   ''use strict'';
   this.snippets = document.querySelectorAll(''code.hljs''),
-  this.init()
+  this.init(),
+  this.initScrollToTopButton()
 }
+
 MDLSeasideDemo.prototype.init = function () {
   ''use strict'';
   [
@@ -719,10 +729,12 @@ MDLSeasideDemo.prototype.init = function () {
     t.addEventListener(''mouseout'', this.onMouseOutHandler(t))
   }, this)
 },
+
 MDLSeasideDemo.prototype.CssClasses_ = {
   COPIED: ''copied'',
   NOT_SUPPORTED: ''nosupport''
 },
+
 MDLSeasideDemo.prototype.copyToClipboard = function (t) {
   ''use strict'';
   var e = window.getSelection(),
@@ -739,6 +751,7 @@ MDLSeasideDemo.prototype.copyToClipboard = function (t) {
   return e.removeAllRanges(),
   s
 },
+
 MDLSeasideDemo.prototype.onMouseClickHandler = function (t) {
   ''use strict'';
   return function () {
@@ -749,11 +762,32 @@ MDLSeasideDemo.prototype.onMouseClickHandler = function (t) {
     }
   }.bind(this)
 },
+
 MDLSeasideDemo.prototype.onMouseOutHandler = function (t) {
   ''use strict'';
   return function () {
     t.classList.remove(this.CssClasses_.COPIED)
   }.bind(this)
+},
+
+MDLSeasideDemo.prototype.initScrollToTopButton = function () { 
+	"use strict";
+	var btn = $("#scrollTop");
+	var home = $("main");
+	var startpoint = home.scrollTop() + home.height();
+  
+	home.on("scroll", function() {
+	  if(home.scrollTop() > startpoint) {
+	    btn.fadeIn("medium");
+	  } else {
+	    btn.fadeOut("medium");
+	  }
+	});
+
+	btn.click(function(){
+	  home.animate({ scrollTop: 0 }, 500);
+	  return false;
+	});
 },
 window.addEventListener(''load'', function () {
   ''use strict'';

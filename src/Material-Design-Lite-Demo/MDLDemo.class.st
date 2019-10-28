@@ -196,7 +196,13 @@ MDLDemo >> renderContentOn: html [
 								class: 'mdl-components';
 								size: 12;
 								with: [ html render: self componentToDisplay ] ].
-					html render: self footer ] ]
+					html render: self footer ].
+			html mdlButton
+				id: #scrollTop;
+				fab;
+				miniFab;
+				colored;
+				with: [ html mdlIcon: #arrow_upward ] ]
 ]
 
 { #category : #hooks }
