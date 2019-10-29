@@ -1,4 +1,25 @@
-<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.1.7...HEAD --grep="Merge pull"-->
+<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.0...HEAD --grep="Merge pull"-->
+
+# [v2.2.0](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.7...v2.2.0) (2019-10-29)
+
+## New features
+
+
+* Table widget - A component to describe the columns of a table instead of giving collection of rows ([0f40cd36](https://github.com/DuneSt/MaterialDesignLite/commit/0f40cd3675cc937f61a21cefcccf26b413afc1c7))
+* Expansion panel - As brush or widget ([7bc5485f](https://github.com/DuneSt/MaterialDesignLite/commit/7bc5485fcd3093b4f63611762ad61a9edbb9ce4d)) ([af0681f6](https://github.com/DuneSt/MaterialDesignLite/commit/af0681f6aaa8315f2ccef4db0d88a5de6b36a92f)) ([e68f6c17](https://github.com/DuneSt/MaterialDesignLite/commit/e68f6c17fa04c6c38bb83b54593451c5c4b5f822))
+* Create some predefined alerts in MDL extensions ([5c0f9005](https://github.com/DuneSt/MaterialDesignLite/commit/5c0f90056d0d72eebfd341f09f6d59b2e5f03360))
+
+## Bug fixes
+
+* Correct doc on accent color for pagination ([3898d656](https://github.com/DuneSt/MaterialDesignLite/commit/3898d6561e4e186ea17d87e4489ac1f7d3482ecf))
+* MDLCalendarWidget active month and year are not highlighted ([4306af2c](https://github.com/DuneSt/MaterialDesignLite/commit/4306af2cbf01e4b5b01cd897ae0220a190f1730d))
+
+## Infrastructure
+
+* Add go top button in demos ([87264b2f](https://github.com/DuneSt/MaterialDesignLite/commit/87264b2ffd55af3f797673de34e7d423f0cacaaf))
+* Increase session duration of demo ([08f6b70f](https://github.com/DuneSt/MaterialDesignLite/commit/08f6b70fd781a865d0df72babc5623f7dcb32cd3))
+* Improve menu demo to add anchors ([4ec06492](https://github.com/DuneSt/MaterialDesignLite/commit/4ec064920dfc19e33add30a525bd2468b2353bf2))
+* Demo Use class comments as descriptions ([3eb85414](https://github.com/DuneSt/MaterialDesignLite/commit/3eb85414523e05269f99b22759d889cc69459451))
 
 # [v2.1.7](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.6...v2.1.7) (2019-10-11)
 
