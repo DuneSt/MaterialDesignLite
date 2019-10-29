@@ -10,7 +10,7 @@ Class {
 	#category : #'Material-Design-Lite-Demo-Extensions'
 }
 
-{ #category : #accessing }
-MDLExtensionsDemo class >> icon [
-	^ 'logoSvg'
+{ #category : #testing }
+MDLExtensionsDemo class >> isAbstract [
+	^ self = MDLExtensionsDemo
 ]

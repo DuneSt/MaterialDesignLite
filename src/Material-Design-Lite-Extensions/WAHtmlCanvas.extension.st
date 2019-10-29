@@ -2,8 +2,6 @@ Extension { #name : #WAHtmlCanvas }
 
 { #category : #'*Material-Design-Lite-Extensions' }
 WAHtmlCanvas >> leftPanel [
-	"A left panel for Synectique's tools."
-
 	^ self aside
 		class: #'material-design-left-panel';
 		shadow: 2;
@@ -13,4 +11,16 @@ WAHtmlCanvas >> leftPanel [
 { #category : #'*Material-Design-Lite-Extensions' }
 WAHtmlCanvas >> leftPanelResizer [
 	self render: MDLLeftPanelResizer new
+]
+
+{ #category : #'*Material-Design-Lite-Extensions' }
+WAHtmlCanvas >> mdlAlert [
+	^ self brush: MDLAlert new
+]
+
+{ #category : #'*Material-Design-Lite-Extensions' }
+WAHtmlCanvas >> mdlAlert: aBlock [
+	^ self mdlAlert
+		with: aBlock;
+		yourself
 ]

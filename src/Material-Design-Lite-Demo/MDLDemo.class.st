@@ -38,13 +38,20 @@ MDLDemo class >> initialize [
 
 { #category : #initialization }
 MDLDemo class >> initializeAs: aString [
+	| app |
 	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].
-	^ (WAAdmin register: self asApplicationAt: aString)
+	app := WAAdmin register: self asApplicationAt: aString.
+
+	app configuration
+		at: #maximumAbsoluteAge put: 0;
+		at: #maximumRelativeAge put: 7 days asSeconds.
+
+	app
 		preferenceAt: #sessionClass put: MDLDemoSession;
 		addLibrary: JQDeploymentLibrary;
 		addLibrary: MDLLibrary;
-		addLibrary: MDLDemoLibrary;
-		yourself
+		addLibrary: MDLDemoLibrary.
+	^ app
 ]
 
 { #category : #'world menu' }
@@ -81,7 +88,7 @@ MDLDemo class >> open [
 
 { #category : #versions }
 MDLDemo class >> version [
-	^ 'v2.1.7'
+	^ 'v2.2.0'
 ]
 
 { #category : #hooks }
@@ -189,7 +196,13 @@ MDLDemo >> renderContentOn: html [
 								class: 'mdl-components';
 								size: 12;
 								with: [ html render: self componentToDisplay ] ].
-					html render: self footer ] ]
+					html render: self footer ].
+			html mdlButton
+				id: #scrollTop;
+				fab;
+				miniFab;
+				colored;
+				with: [ html mdlIcon: #arrow_upward ] ]
 ]
 
 { #category : #hooks }

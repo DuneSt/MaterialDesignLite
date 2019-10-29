@@ -62,11 +62,11 @@ MDLDemoInstallationPage >> renderInstallOn: html [
 										class: 'smalltalk';
 										with:
 											'Metacello new
-    repository: ''github://DuneSt/MaterialDesignLite:master/src'';
+    repository: ''github://DuneSt/MaterialDesignLite:v2.x.x/src'';
     baseline: ''MaterialDesignLite'';
     onWarningLog;
     load' ].
-							html paragraph: 'Note that you can replace the #master tag by another branch as #development or a tag as #v1.0.0. or a commit SHA as 718c34f.' ] ] ]
+							html paragraph: 'Note that you can replace the #v2.x.x tag by a branch as #development or a tag as #v2.0.0. or a commit SHA as 718c34f.' ] ] ]
 ]
 
 { #category : #rendering }
@@ -128,7 +128,7 @@ MDLDemoInstallationPage >> renderStartDescriptionOn: html [
 								paragraph: [ html
 										text:
 											'Where `XXXXXX` is the hex code of the accent color of your MDL application. 
-To find your code you can select the #500 color in the following page: '.
+To find your code you can select the #A200 color in the following page: '.
 									html anchor
 										url: 'https://www.materialui.co/colors';
 										with: 'https://www.materialui.co/colors' ] ] ] ]

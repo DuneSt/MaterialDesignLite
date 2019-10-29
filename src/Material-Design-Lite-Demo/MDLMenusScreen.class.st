@@ -1,16 +1,11 @@
 "
-I'm representing the menu components screen
+Lists of clickable actions. Those menus are anchored to elements and can have their anchor point specified.
 "
 Class {
 	#name : #MDLMenusScreen,
 	#superclass : #MDLComponentDemo,
 	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLMenusScreen class >> description [
-	^ 'Lists of clickable actions. Those menus are anchored to elements and can have their anchor point specified.'
-]
 
 { #category : #accessing }
 MDLMenusScreen class >> icon [
@@ -27,6 +22,13 @@ MDLMenusScreen >> bottomMenus [
 	^ OrderedDictionary new
 		add: 'Lower left' -> #renderLowerLeftMenuOn:;
 		add: 'Lower right' -> #renderLowerRightMenuOn:;
+		yourself
+]
+
+{ #category : #sections }
+MDLMenusScreen >> menuWithAnchors [
+	^ OrderedDictionary new
+		add: 'Menu with anchors' -> #renderMenuWithAnchorsOn:;
 		yourself
 ]
 
@@ -80,12 +82,37 @@ MDLMenusScreen >> renderLowerRightMenuOn: html [
 			html div class: 'background' ]
 ]
 
+{ #category : #demos }
+MDLMenusScreen >> renderMenuWithAnchorsOn: html [
+	html div
+		class: 'container';
+		shadow: 2;
+		with: [ html div
+				class: 'bar';
+				with: [ html mdlButton icon
+						id: #menuWithAnchors;
+						with: [ html mdlIcon: #more_vert ].
+					html mdlMenu
+						bottomLeft;
+						for: #menuWithAnchors;
+						with: [ 1 to: 5 do: [ :ind | 
+								html
+									mdlMenuItem: [ html anchor
+											callback: [ ('Action ' , ind asString) traceCr ];
+											with: 'Action ' , ind asString ] ] ] ].
+			html div class: 'background' ]
+]
+
 { #category : #rendering }
 MDLMenusScreen >> renderScreenContentOn: html [
-	html paragraph: [ html small: 'Note: The menu requires a non-static positioned parent element. Positioning options may not work properly if the menu is inside of a statically positioned node.' ].
+	html
+		paragraph: [ html
+				small:
+					'Note: The menu requires a non-static positioned parent element. Positioning options may not work properly if the menu is inside of a statically positioned node.' ].
 	self
 		render: self bottomMenus on: html;
-		render: self topMenus on: html
+		render: self topMenus on: html;
+		render: self menuWithAnchors on: html
 ]
 
 { #category : #demos }

@@ -1,16 +1,11 @@
 "
-Screen to render MDLSortedTable examples
+A widget to get a paginated table with a sort function.
 "
 Class {
 	#name : #MDLSortedTableScreen,
 	#superclass : #MDLWidgetDemo,
-	#category : 'Material-Design-Lite-Demo-Widgets'
+	#category : #'Material-Design-Lite-Demo-Widgets'
 }
-
-{ #category : #accessing }
-MDLSortedTableScreen class >> description [
-	^ 'A widget to get a paginated table with a sort function.'
-]
 
 { #category : #accessing }
 MDLSortedTableScreen class >> icon [

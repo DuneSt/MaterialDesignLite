@@ -9,3 +9,8 @@ Class {
 	#superclass : #MDLDemoScreen,
 	#category : #'Material-Design-Lite-Demo-Widgets'
 }
+
+{ #category : #testing }
+MDLWidgetDemo class >> isAbstract [
+	^ self = MDLWidgetDemo
+]

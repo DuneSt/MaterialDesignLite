@@ -1,19 +1,11 @@
 "
-Description
---------------------
-
-Screen to render resizable left panels examples.
+Simple component to add a resizable left panel to a browser
 "
 Class {
 	#name : #MDLLeftPanelScreen,
 	#superclass : #MDLExtensionsDemo,
 	#category : #'Material-Design-Lite-Demo-Extensions'
 }
-
-{ #category : #accessing }
-MDLLeftPanelScreen class >> description [
-	^ 'Simple component to add a resizable left panel to a browser'
-]
 
 { #category : #accessing }
 MDLLeftPanelScreen class >> icon [

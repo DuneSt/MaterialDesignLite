@@ -1,16 +1,11 @@
 "
-I represent loading components screen.
+Indicate loading and progress states.
 "
 Class {
 	#name : #MDLLoadingScreen,
 	#superclass : #MDLComponentDemo,
-	#category : 'Material-Design-Lite-Demo-Components'
+	#category : #'Material-Design-Lite-Demo-Components'
 }
-
-{ #category : #accessing }
-MDLLoadingScreen class >> description [
-	^ 'Indicate loading and progress states.'
-]
 
 { #category : #accessing }
 MDLLoadingScreen class >> icon [
