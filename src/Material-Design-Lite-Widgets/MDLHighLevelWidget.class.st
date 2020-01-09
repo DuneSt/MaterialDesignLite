@@ -110,5 +110,5 @@ MDLHighLevelWidget >> style: aString [
 						nextPutAll: aString ] ]
 		ifAbsent: [ aString ].
 
-	self propertiesAt: #style: put: stringToAdd
+	self propertiesAt: #style: put: {stringToAdd}
 ]

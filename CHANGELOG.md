@@ -1,9 +1,14 @@
-<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.0...HEAD --grep="Merge pull"-->
+<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.1...HEAD --grep="Merge pull"-->
+
+# [v2.2.1](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.0...v2.2.1) (2020-01-09)
+
+## Bug fixes
+
+* MDLHighLevelWidget #style: is broken ([057cd462](https://github.com/DuneSt/MaterialDesignLite/commit/057cd462fc0f9c7c8e69602e3237f82784dd719d))
 
 # [v2.2.0](https://github.com/DuneSt/MaterialDesignLite/compare/v2.1.7...v2.2.0) (2019-10-29)
 
 ## New features
-
 
 * Table widget - A component to describe the columns of a table instead of giving collection of rows ([0f40cd36](https://github.com/DuneSt/MaterialDesignLite/commit/0f40cd3675cc937f61a21cefcccf26b413afc1c7))
 * Expansion panel - As brush or widget ([7bc5485f](https://github.com/DuneSt/MaterialDesignLite/commit/7bc5485fcd3093b4f63611762ad61a9edbb9ce4d)) ([af0681f6](https://github.com/DuneSt/MaterialDesignLite/commit/af0681f6aaa8315f2ccef4db0d88a5de6b36a92f)) ([e68f6c17](https://github.com/DuneSt/MaterialDesignLite/commit/e68f6c17fa04c6c38bb83b54593451c5c4b5f822))
