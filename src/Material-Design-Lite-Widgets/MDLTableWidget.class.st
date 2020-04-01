@@ -73,6 +73,21 @@ MDLTableWidget >> addStringColumnNamed: aString evaluated: aBlock [
 							yourself)
 ]
 
+{ #category : #configuring }
+MDLTableWidget >> bePaginated [
+	self contentDisplayStrategy: MDLDisplayPaginatedTableContent new
+]
+
+{ #category : #configuring }
+MDLTableWidget >> bePaginatedWithRowsPerPagePossibilities: rowsPerPagePossibilities [
+	self contentDisplayStrategy: (MDLDisplayPaginatedTableContent rowsPerPagePossibilities: rowsPerPagePossibilities)
+]
+
+{ #category : #configuring }
+MDLTableWidget >> bePaginatedWithRowsPerPagePossibilities: rowsPerPagePossibilities currentRowsPerPage: currentRowsPerPage [
+	self contentDisplayStrategy: (MDLDisplayPaginatedTableContent rowsPerPagePossibilities: rowsPerPagePossibilities rowsToShow: currentRowsPerPage)
+]
+
 { #category : #accessing }
 MDLTableWidget >> collection [
 	^ collection value
@@ -102,16 +117,6 @@ MDLTableWidget >> contentDisplayStrategy: anObject [
 { #category : #configuring }
 MDLTableWidget >> displayFullTableContent [
 	self contentDisplayStrategy: MDLDisplayFullTableContent new
-]
-
-{ #category : #configuring }
-MDLTableWidget >> displayPaginatedTableContentWithRowsPerPagePossibilities: rowsPerPagePossibilities [
-	self contentDisplayStrategy: (MDLDisplayPaginatedTableContent rowsPerPagePossibilities: rowsPerPagePossibilities)
-]
-
-{ #category : #configuring }
-MDLTableWidget >> displayPaginatedTableContentWithRowsPerPagePossibilities: rowsPerPagePossibilities currentRowsPerPage: currentRowsPerPage [
-	self contentDisplayStrategy: (MDLDisplayPaginatedTableContent rowsPerPagePossibilities: rowsPerPagePossibilities rowsToShow: currentRowsPerPage)
 ]
 
 { #category : #accessing }

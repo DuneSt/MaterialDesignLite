@@ -29,7 +29,7 @@ MDLTableWidgetScreen >> renderPaginatedTableWidgetOn: html [
 					onClick: [ :htmlCanvas :x | htmlCanvas javascript alert: 'Explore ' , x asString ]
 					tooltip: 'Explore integer related to the row.';
 				collection: (1000 to: 5000 by: 100);
-				contentDisplayStrategy: MDLDisplayPaginatedTableContent new;
+				bePaginated;
 				yourself)
 ]
 
