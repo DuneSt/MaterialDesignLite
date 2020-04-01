@@ -189,6 +189,27 @@ MDLDisplayPaginatedTableContentTest >> testRenderPagesInfoOn2 [
 ]
 
 { #category : #test }
+MDLDisplayPaginatedTableContentTest >> testRowsPerPage [
+	| contentDisplayStrategy |
+	contentDisplayStrategy := MDLDisplayPaginatedTableContent new.
+	
+	self assert: contentDisplayStrategy rowsPerPage equals: contentDisplayStrategy rowsPerPagePossibilities first
+]
+
+{ #category : #test }
+MDLDisplayPaginatedTableContentTest >> testRowsPerPageRowsPerPagePossibilitiesIsEmpty [
+	| contentDisplayStrategy |
+	contentDisplayStrategy := MDLDisplayPaginatedTableContent new.
+	
+	contentDisplayStrategy rowsPerPagePossibilities: #().
+	
+	self
+		should: [ contentDisplayStrategy rowsPerPage ]
+		raise: Error
+		withExceptionDo: [ :ex | self assert: ex messageText equals: '#rowsPerPagePossibilities is empty' ]
+]
+
+{ #category : #test }
 MDLDisplayPaginatedTableContentTest >> testRowsToDisplayDo [
 	| contentDisplayStrategy table |
 	contentDisplayStrategy := MDLDisplayPaginatedTableContent new.

@@ -187,7 +187,7 @@ MDLDisplayPaginatedTableContent >> renderPagesInfoOn: html [
 
 { #category : #accessing }
 MDLDisplayPaginatedTableContent >> rowsPerPage [
-	^ rowsToShow ifNil: [ rowsToShow := self rowsPerPagePossibilities first ]
+	^ rowsToShow ifNil: [ rowsToShow := self rowsPerPagePossibilities ifNotEmpty: #first ifEmpty: [ self error: '#rowsPerPagePossibilities is empty' ] ]
 ]
 
 { #category : #accessing }
