@@ -114,13 +114,12 @@ MDLDisplayPaginatedTableContent >> renderButtonTriggering: aValuable withIcon: a
 	html mdlButton
 		bePush;
 		colored;
-		icon;
 		disabled: isDisabled;
 		onClick: [ html jQuery ajax
 				callback: [ aValuable value: self ];
 				onSuccess: (self ajaxUpdateScriptOn: html) ]
 			if: isDisabled not;
-		with: [ html mdlIcon: aSymbol ]
+		icon: aSymbol
 ]
 
 { #category : #rendering }
