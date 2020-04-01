@@ -27,8 +27,7 @@ MDLDisplayPaginatedTableContent class >> rowsPerPagePossibilities: rowsPerPagePo
 
 { #category : #'instance creation' }
 MDLDisplayPaginatedTableContent class >> rowsPerPagePossibilities: rowsPerPagePossibilities rowsToShow: rowsToShow [
-	^ self new
-		rowsPerPagePossibilities: rowsPerPagePossibilities;
+	^ (self rowsPerPagePossibilities: rowsPerPagePossibilities)
 		rowsPerPage: rowsToShow;
 		yourself
 ]
