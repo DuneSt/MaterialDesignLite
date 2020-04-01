@@ -10,7 +10,9 @@ Class {
 	#superclass : #WAComponent,
 	#instVars : [
 		'columnDescriptions',
-		'collection'
+		'collection',
+		'contentDisplayStrategy',
+		'id'
 	],
 	#category : #'Material-Design-Lite-Widgets-Table'
 }
@@ -73,7 +75,7 @@ MDLTableWidget >> addStringColumnNamed: aString evaluated: aBlock [
 
 { #category : #accessing }
 MDLTableWidget >> collection [
-	^ collection
+	^ collection value
 ]
 
 { #category : #accessing }
@@ -86,31 +88,62 @@ MDLTableWidget >> columnDescriptions [
 	^ columnDescriptions
 ]
 
+{ #category : #accessing }
+MDLTableWidget >> contentDisplayStrategy [
+	^ contentDisplayStrategy
+]
+
+{ #category : #accessing }
+MDLTableWidget >> contentDisplayStrategy: anObject [
+	contentDisplayStrategy := anObject.
+	contentDisplayStrategy tableWidget: self
+]
+
+{ #category : #configuring }
+MDLTableWidget >> displayFullTableContent [
+	self contentDisplayStrategy: MDLDisplayFullTableContent new
+]
+
+{ #category : #configuring }
+MDLTableWidget >> displayPaginatedTableContentWithRowsPerPagePossibilities: rowsPerPagePossibilities [
+	self contentDisplayStrategy: (MDLDisplayPaginatedTableContent rowsPerPagePossibilities: rowsPerPagePossibilities)
+]
+
+{ #category : #configuring }
+MDLTableWidget >> displayPaginatedTableContentWithRowsPerPagePossibilities: rowsPerPagePossibilities currentRowsPerPage: currentRowsPerPage [
+	self contentDisplayStrategy: (MDLDisplayPaginatedTableContent rowsPerPagePossibilities: rowsPerPagePossibilities rowsToShow: currentRowsPerPage)
+]
+
+{ #category : #accessing }
+MDLTableWidget >> id [
+	^ id
+]
+
 { #category : #initialization }
 MDLTableWidget >> initialize [
 	super initialize.
+	self displayFullTableContent.
 	columnDescriptions := OrderedCollection new.
 	collection := #()
 ]
 
 { #category : #rendering }
 MDLTableWidget >> renderContentOn: html [
-	html mdlTable
-		class: 'mdl-table-widget';
-		with: [
-			self renderTableHeadOn: html.
-			self renderTableBodyOn: html ]
-]
-
-{ #category : #rendering }
-MDLTableWidget >> renderTableBodyOn: html [
-	html tableBody
-		class: 'mdl-table-widget__body';
+	html mdlCard
+		shadow: 2;
+		style: 'width: 100%; overflow: initial;';
+		"class: self tableStyle if: self tableStyle isNotNil;" "TODO, see issue #302"
+		id: (id := html nextId);
 		with: [ 
-		self collection do: [ :row | 
-			html tableRow: [ 
-				self columnDescriptions do: [ :columnDescription |
-					columnDescription render: row on: html ] ] ] ]
+			html mdlTable
+				style: 'width: 100%; overflow: initial;';
+				class: 'mdl-table-widget';
+				with: [ 
+					self renderTableHeadOn: html.
+					self contentDisplayStrategy
+						renderContentOn: html ].
+		self contentDisplayStrategy
+			renderFooterOn: html ]
 ]
 
 { #category : #rendering }
