@@ -17,6 +17,22 @@ MDLTableWidgetScreen class >> title [
 	^ 'Table widget'
 ]
 
+{ #category : #accessing }
+MDLTableWidgetScreen >> renderPaginatedTableWidgetOn: html [
+	html
+		render:
+			(MDLTableWidget new
+				addNumericColumnNamed: 'Integer' evaluated: [ :x | x ];
+				addStringColumnNamed: 'String with commas' evaluated: [ :x | x asStringWithCommas ];
+				addStringColumnNamed: 'As words' evaluated: [ :x | x asWords capitalized ];
+				addAjaxButtonColumnWithIconName: 'explore'
+					onClick: [ :htmlCanvas :x | htmlCanvas javascript alert: 'Explore ' , x asString ]
+					tooltip: 'Explore integer related to the row.';
+				collection: (1000 to: 5000 by: 100);
+				contentDisplayStrategy: MDLDisplayPaginatedTableContent new;
+				yourself)
+]
+
 { #category : #rendering }
 MDLTableWidgetScreen >> renderScreenContentOn: html [
 	self render: self table on: html
@@ -48,5 +64,6 @@ MDLTableWidgetScreen >> renderTableWidgetOn: html [
 MDLTableWidgetScreen >> table [
 	^ OrderedDictionary new
 		add: 'Table Widget' -> #renderTableWidgetOn:;
+		add: 'Paginated table widget' -> #renderPaginatedTableWidgetOn:;
 		yourself
 ]
