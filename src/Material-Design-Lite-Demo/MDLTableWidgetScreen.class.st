@@ -22,7 +22,7 @@ MDLTableWidgetScreen >> renderPaginatedTableWidgetOn: html [
 	html
 		render:
 			(MDLTableWidget new
-				addNumericColumnNamed: 'Integer' evaluated: [ :x | x ];
+				addNumericColumnNamed: 'Integer' evaluated: #yourself;
 				addStringColumnNamed: 'String with commas' evaluated: [ :x | x asStringWithCommas ];
 				addStringColumnNamed: 'As words' evaluated: [ :x | x asWords capitalized ];
 				addAjaxButtonColumnWithIconName: 'explore'
