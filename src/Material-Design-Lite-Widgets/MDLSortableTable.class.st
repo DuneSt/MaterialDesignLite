@@ -142,7 +142,7 @@ MDLSortableTable >> renderContentOn: html [
 		class: 'mdl-sorted-table';
 		with: [ html mdlCard
 				shadow: 2;
-				style: 'width: 100%; overflow: initial;';
+				class: 'mdl-sorted-table__wrapper';
 				class: self tableStyle if: self tableStyle isNotNil;
 				id: (id := html nextId);
 				with: [ self renderTableContentOn: html ] ]
@@ -229,20 +229,13 @@ MDLSortableTable >> renderTableContentOn: html [
 
 	rowsCache := self rows.
 	self ensureCurrentPageIsVisible.
-	self title
-		ifNotNil: [ 
-			html mdlCardTitleContainer
-				style: 'padding-left: 24px;';
-				with: [ html mdlCardTitleText: self title level: 2 ] ].
+	self title ifNotNil: [ :t | html mdlCardTitleContainer: [ html mdlCardTitleText: t level: 2 ] ].
 	(selectable
 		ifTrue: [ html mdlTable selectable ]
 		ifFalse: [ html mdlTable ])
-		style: 'width: 100%; border: none;';
-		with: [ 
-					self renderHeaderOn: html.
-					self renderRowsOn: html ].
-	self shouldDisplayPagination
-		ifTrue: [ self renderFooterPaginationOn: html ]
+		with: [ self renderHeaderOn: html.
+			self renderRowsOn: html ].
+	self shouldDisplayPagination ifTrue: [ self renderFooterPaginationOn: html ]
 ]
 
 { #category : #accessing }
