@@ -1,5 +1,11 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.1...HEAD --grep="Merge pull"-->
 
+# [v2.2.2](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.1...v2.2.2) (2020-07-28)
+
+## Cleanup
+
+* Move SortedTable css to css file ([d46dc194](https://github.com/DuneSt/MaterialDesignLite/commit/d46dc194796f602e277b1d769448f9494bdb3554))
+
 # [v2.2.1](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.0...v2.2.1) (2020-01-09)
 
 ## Bug fixes
