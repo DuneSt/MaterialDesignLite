@@ -1,4 +1,10 @@
-<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.1...HEAD --grep="Merge pull"-->
+<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.3...HEAD --grep="Merge pull"-->
+
+# [v2.2.3](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.2...v2.2.3) (2020-07-29)
+
+## Enhancements
+
+* Make huge sortable tables scrollable ([16ee8245](https://github.com/DuneSt/MaterialDesignLite/commit/16ee8245df6a80987bef9d302fe730f5f664ab81))
 
 # [v2.2.2](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.1...v2.2.2) (2020-07-28)
 
