@@ -229,12 +229,14 @@ MDLSortableTable >> renderTableContentOn: html [
 
 	rowsCache := self rows.
 	self ensureCurrentPageIsVisible.
-	self title ifNotNil: [ :t | html mdlCardTitleContainer: [ html mdlCardTitleText: t level: 2 ] ].
-	(selectable
-		ifTrue: [ html mdlTable selectable ]
-		ifFalse: [ html mdlTable ])
-		with: [ self renderHeaderOn: html.
-			self renderRowsOn: html ].
+	html div
+		class: 'mdl-sorted-table__content';
+		with: [ self title ifNotNil: [ :t | html mdlCardTitleContainer: [ html mdlCardTitleText: t level: 2 ] ].
+			(selectable
+				ifTrue: [ html mdlTable selectable ]
+				ifFalse: [ html mdlTable ])
+				with: [ self renderHeaderOn: html.
+					self renderRowsOn: html ] ].
 	self shouldDisplayPagination ifTrue: [ self renderFooterPaginationOn: html ]
 ]
 
