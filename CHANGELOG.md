@@ -1,4 +1,10 @@
-<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.3...HEAD --grep="Merge pull"-->
+<!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.4...HEAD --grep="Merge pull"-->
+
+# [v2.2.4](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.3...v2.2.4) (2020-07-30)
+
+## Bug fixes
+
+* Fix svg icons not showing because of Seaside update ([c0a86d01](https://github.com/DuneSt/MaterialDesignLite/commit/c0a86d0152de2aa3bf12e052f7c38d46609ec53f))
 
 # [v2.2.3](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.2...v2.2.3) (2020-07-29)
 

@@ -88,7 +88,7 @@ MDLDemo class >> open [
 
 { #category : #versions }
 MDLDemo class >> version [
-	^ 'v2.2.3'
+	^ 'v2.2.4'
 ]
 
 { #category : #hooks }
