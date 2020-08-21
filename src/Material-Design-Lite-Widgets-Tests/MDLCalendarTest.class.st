@@ -101,9 +101,25 @@ MDLCalendarTest >> testSelectNextMonth [
 ]
 
 { #category : #tests }
+MDLCalendarTest >> testSelectNextYears [
+	calendar currentDate: (Date year: 2016 month: 4 day: 10).
+	calendar selectNextYears.
+	self assert: calendar yearsInterval first equals: 2021.
+	self assert: calendar yearsInterval last equals: 2029
+]
+
+{ #category : #tests }
 MDLCalendarTest >> testSelectPreviousMonth [
 	calendar currentDate: (Date year: 2016 month: 4 day: 10).
 	calendar selectPreviousMonth.
 	self assert: calendar currentDate asMonth equals: (Month month: 3 year: 2016).
 	self assert: calendar currentDate equals: (Date year: 2016 month: 3 day: 10)
+]
+
+{ #category : #tests }
+MDLCalendarTest >> testSelectPreviousYears [
+	calendar currentDate: (Date year: 2016 month: 4 day: 10).
+	calendar selectPreviousYears.
+	self assert: calendar yearsInterval first equals: 2003.
+	self assert: calendar yearsInterval last equals: 2011
 ]
