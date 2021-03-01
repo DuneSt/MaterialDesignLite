@@ -101,6 +101,15 @@ MDLTextFieldsScreen >> renderNumberTextFieldOn: html [
 			html mdlTextFieldError: 'Input is not a number !' ]
 ]
 
+{ #category : #demos }
+MDLTextFieldsScreen >> renderPasswordTextFieldOn: html [
+	html
+		mdlTextFieldContainer: [ html mdlTextFieldLabel
+				for: html nextId;
+				with: 'Password...'.
+			html mdlPasswordFieldInput id: html lastId ]
+]
+
 { #category : #rendering }
 MDLTextFieldsScreen >> renderScreenContentOn: html [
 	self
@@ -131,5 +140,6 @@ MDLTextFieldsScreen >> specialTextFields [
 	^ OrderedDictionary new
 		add: 'Multiple line' -> #renderMultiLineTextFieldOn:;
 		add: 'Expanding' -> #renderExpandingTextFieldOn:;
+		add: 'Password' -> #renderPasswordTextFieldOn:;
 		yourself
 ]
