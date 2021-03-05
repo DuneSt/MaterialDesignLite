@@ -7,6 +7,7 @@ Class {
 	#name : #MDLNestedListTreeNode,
 	#superclass : #Object,
 	#instVars : [
+		'list',
 		'element',
 		'children',
 		'selectedBranch',
@@ -16,23 +17,16 @@ Class {
 }
 
 { #category : #'instance creation' }
-MDLNestedListTreeNode class >> element: anElement children: aCollectionOfChildren selectedBranch: aBoolean selectedElement: aBooleanIfSelected [
+MDLNestedListTreeNode class >> list: aNestedList element: anElement [
 	^ self new
+		list: aNestedList;
 		element: anElement;
-		children: aCollectionOfChildren;
-		selectedBranch: aBoolean;
-		selectedElement: aBooleanIfSelected;
 		yourself
 ]
 
 { #category : #accessing }
 MDLNestedListTreeNode >> children [
-	^ children
-]
-
-{ #category : #accessing }
-MDLNestedListTreeNode >> children: anObject [
-	children := anObject
+	^ children ifNil: [ children := (self list childrenBlock value: self element) collect: [ :aChild | self list obtainTreeFor: aChild ] ]
 ]
 
 { #category : #accessing }
@@ -45,6 +39,16 @@ MDLNestedListTreeNode >> element: anObject [
 	element := anObject
 ]
 
+{ #category : #accessing }
+MDLNestedListTreeNode >> list [
+	^ list
+]
+
+{ #category : #accessing }
+MDLNestedListTreeNode >> list: anObject [
+	list := anObject
+]
+
 { #category : #printing }
 MDLNestedListTreeNode >> printOn: aStream [
 	super printOn: aStream.
@@ -55,20 +59,10 @@ MDLNestedListTreeNode >> printOn: aStream [
 
 { #category : #accessing }
 MDLNestedListTreeNode >> selectedBranch [
-	^ selectedBranch
-]
-
-{ #category : #accessing }
-MDLNestedListTreeNode >> selectedBranch: anObject [
-	selectedBranch := anObject
+	^ selectedBranch ifNil: [ selectedBranch := self children anySatisfy: [ :aChild | aChild selectedElement or: [ aChild selectedBranch ] ] ]
 ]
 
 { #category : #accessing }
 MDLNestedListTreeNode >> selectedElement [
-	^ selectedElement
-]
-
-{ #category : #accessing }
-MDLNestedListTreeNode >> selectedElement: anObject [
-	selectedElement := anObject
+	^ element = self list selectedEntity
 ]
