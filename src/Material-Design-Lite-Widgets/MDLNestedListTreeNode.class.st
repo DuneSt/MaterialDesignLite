@@ -10,8 +10,7 @@ Class {
 		'list',
 		'element',
 		'children',
-		'selectedBranch',
-		'selectedElement'
+		'selectedBranch'
 	],
 	#category : #'Material-Design-Lite-Widgets-List'
 }
