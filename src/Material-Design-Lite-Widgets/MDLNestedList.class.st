@@ -64,7 +64,8 @@ Class {
 		'listStyle',
 		'onLoadHook',
 		'listMaxSize',
-		'childrenSortBlock'
+		'childrenSortBlock',
+		'obtainedTreesCache'
 	],
 	#category : #'Material-Design-Lite-Widgets-List'
 }
@@ -452,20 +453,7 @@ MDLNestedList >> obtainElementForPath: aPath [
 
 { #category : #private }
 MDLNestedList >> obtainTreeFor: anElement [
-	^ self obtainTreeFor: anElement caches: IdentityDictionary new
-]
-
-{ #category : #private }
-MDLNestedList >> obtainTreeFor: anElement caches: obtainedTree [
-	^ obtainedTree
-		at: anElement
-		ifAbsentPut: [ | childrenNodes |
-			childrenNodes := (self childrenBlock value: anElement) collect: [ :aChild | self obtainTreeFor: aChild caches: obtainedTree ].
-			MDLNestedListTreeNode
-				element: anElement
-				children: childrenNodes
-				selectedBranch: (childrenNodes anySatisfy: [ :aChild | aChild selectedBranch or: [ aChild selectedElement ] ])
-				selectedElement: anElement = self selectedEntity ]
+	^ obtainedTreesCache at: anElement ifAbsentPut: [ MDLNestedListTreeNode list: self element: anElement ]
 ]
 
 { #category : #accessing }
@@ -566,6 +554,7 @@ MDLNestedList >> renderAnchor: aNode index: anIndex inDiv: div indentedBy: anInt
 { #category : #rendering }
 MDLNestedList >> renderContentOn: html [
 	self ensureId: html.
+	obtainedTreesCache := IdentityDictionary new. "Reset cache while loading page."
 	html div
 		id: (self idFor: #nestedList);
 		class: #nestedList;
