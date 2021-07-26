@@ -49,3 +49,12 @@ MDLTabsTab >> isActive [
 MDLTabsTab >> isActiveIf: aBoolean [
 	aBoolean ifTrue: [ self isActive ]
 ]
+
+{ #category : #accessing }
+MDLTabsTab >> url: aUrlOrString [
+
+	aUrlOrString isString ifFalse: [ ^ super url: aUrlOrString ].
+	self useBaseUrl.
+
+	url addToPath: aUrlOrString
+]
