@@ -38,7 +38,9 @@ MDLTabWidget >> renderContentOn: html [
 							html mdlTab
 								url:
 									'#' , (tabIds at: tabContent ifAbsentPut: [ html nextId ]);
-								callback: [ self selectedTabIndex: (tabs indexOfKey: label) ];
+								
+								onClick: (html jQuery ajax callback: [ 
+											 self selectedTabIndex: (tabs indexOfKey: label) ]);
 								isActiveIf: (tabs indexOfKey: label) = self selectedTabIndex;
 								with: label ] ].
 			tabs keysAndValuesDo: [ :label :tabContent | 
