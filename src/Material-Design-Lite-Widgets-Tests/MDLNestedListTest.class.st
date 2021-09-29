@@ -113,6 +113,21 @@ MDLNestedListTest >> testJsOnLoadHook [
 ]
 
 { #category : #tests }
+MDLNestedListTest >> testNotEraseOnCompleOnJSScript [
+	WAHtmlCanvas builder
+		render: [ :html | 
+			list elements: self sampleElements keys.
+			list
+				onClickJs: [ :entity | 
+					html jQuery ajax
+						serializeForm;
+						onComplete: 'console.log("this exists")' ] ].
+	self
+		assert: [ :html | html render: list ]
+		generatedIncludes: 'console.log(&quot;this exists&quot;)'
+]
+
+{ #category : #tests }
 MDLNestedListTest >> testRightIconBlockIsRenderedIfNeeded [
 	list elements: self sampleElements keys.
 	list rightIconBlock: [ :item :html | html mdlIcon: 'mood' ].
