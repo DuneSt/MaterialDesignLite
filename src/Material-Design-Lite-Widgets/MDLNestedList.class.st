@@ -472,6 +472,24 @@ MDLNestedList >> onLoadHook: anObject [
 	onLoadHook := anObject
 ]
 
+{ #category : #'as yet unclassified' }
+MDLNestedList >> overwriteOnCompleteForNode: aNode inDiv: div index: anIndex indentedBy: anInteger on: html [
+	| onClickValue selfOnComplete finalOnComplete |
+	onClickValue := self actionBlock value: aNode element.
+	selfOnComplete := (html jQuery id: div) load
+		html: [ :ajaxHtml | 
+			self
+				renderItemContentOf: aNode
+				index: anIndex
+				indentedBy: anInteger
+				on: ajaxHtml ].
+	[ finalOnComplete :=  selfOnComplete onComplete: (onClickValue options
+		at: 'complete' )]
+		on: GRError  do: [ finalOnComplete := selfOnComplete ].
+		onClickValue onComplete: finalOnComplete.
+		^ onClickValue 
+]
+
 { #category : #rendering }
 MDLNestedList >> printHtmlForElementsFrom: start to: end context: aContext on: stream [
 	self
@@ -522,31 +540,24 @@ MDLNestedList >> renderAnchor: aNode index: anIndex inDiv: div indentedBy: anInt
 	| anchor |
 	anchor := html anchor.
 	self actionBlock
-		ifNotNil: [ 
-			self isJsAction
-				ifTrue: [ 
-					anchor
+		ifNotNil: [ self isJsAction
+				ifTrue: [ anchor
 						onClick:
-							((self actionBlock value: aNode element)
-								onComplete:
-									((html jQuery id: div) load
-										html: [ :ajaxHtml | 
-											self
-												renderItemContentOf: aNode
-												index: anIndex
-												indentedBy: anInteger
-												on: ajaxHtml ])) ]
+							(self
+								overwriteOnCompleteForNode: aNode
+								inDiv: div
+								index: anIndex
+								indentedBy: anInteger
+								on: html) ]
 				ifFalse: [ anchor callback: [ self actionBlock value: aNode element ] ] ].
 	anchor
-		with: [ 
-			html span
+		with: [ html span
 				class: #item;
 				id: html nextId;
 				with: ((self format value: aNode element) ifEmpty: [ $  ]).
 			self renderHelpOf: aNode element at: html lastId on: html ].
 	aNode children
-		ifNotEmpty: [ 
-			html div
+		ifNotEmpty: [ html div
 				onClick: 'expandCollapse(this)';
 				class: #icon ]
 ]
