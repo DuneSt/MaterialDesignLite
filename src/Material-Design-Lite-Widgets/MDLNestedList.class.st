@@ -49,14 +49,7 @@ Class {
 		'elements',
 		'entryCustomizationHook',
 		'filteredElements',
-		'format',
-		'actionBlock',
-		'isJsAction',
 		'selectedEntity',
-		'helpBlock',
-		'iconBlock',
-		'rightIconBlock',
-		'childrenBlock',
 		'dragAndDropBlock',
 		'displayResearchField',
 		'displayResearchFilter',
@@ -64,8 +57,8 @@ Class {
 		'listStyle',
 		'onLoadHook',
 		'listMaxSize',
-		'childrenSortBlock',
-		'obtainedTreesCache'
+		'obtainedTreesCache',
+		'strategy'
 	],
 	#category : #'Material-Design-Lite-Widgets-List'
 }
@@ -86,7 +79,7 @@ MDLNestedList class >> elements: aCollection children: aBlockOrSymbole [
 
 { #category : #accessing }
 MDLNestedList >> actionBlock [
-	^ actionBlock
+	^ self strategy actionBlock
 ]
 
 { #category : #accessing }
@@ -95,7 +88,7 @@ MDLNestedList >> actionBlock: aBlock [
 		assert: aBlock argumentCount = 1
 		description:
 			'This block must take one argument; it will be the clicked entity in the list'.
-	actionBlock := aBlock
+	self strategy actionBlock: aBlock
 ]
 
 { #category : #private }
@@ -120,22 +113,24 @@ MDLNestedList >> children: aBlockOrSymbol [
 
 { #category : #accessing }
 MDLNestedList >> childrenBlock [
-	^ childrenBlock ifNil: [ childrenBlock := [ :item | #() ] ]
+	^ self strategy childrenBlock
+		ifNil: [ self strategy childrenBlock: [ :item | #() ].
+			self strategy childrenBlock ]
 ]
 
 { #category : #accessing }
 MDLNestedList >> childrenBlock: anObject [
-	childrenBlock := anObject
+	self strategy childrenBlock: anObject
 ]
 
 { #category : #accessing }
 MDLNestedList >> childrenSortBlock [
-	^ childrenSortBlock
+	^ self strategy childrenSortBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> childrenSortBlock: aBlock [
-	childrenSortBlock := aBlock
+	self strategy childrenSortBlock: aBlock
 ]
 
 { #category : #javascript }
@@ -327,17 +322,12 @@ MDLNestedList >> filteredElements [
 
 { #category : #accessing }
 MDLNestedList >> format [
-	^ format ifNil: [ #asString ]
+	^ self strategy format ifNil: [ #asString ]
 ]
 
 { #category : #accessing }
 MDLNestedList >> format: anObject [
-	format := anObject
-]
-
-{ #category : #testing }
-MDLNestedList >> hasCustomizationForEntry [
-	^ self entryCustomizationHook notNil
+	self strategy format: anObject
 ]
 
 { #category : #testing }
@@ -347,22 +337,22 @@ MDLNestedList >> hasDraggableItems [
 
 { #category : #accessing }
 MDLNestedList >> helpBlock [
-	^ helpBlock
+	^ self strategy helpBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> helpBlock: anObject [
-	helpBlock := anObject
+	self strategy helpBlock: anObject
 ]
 
 { #category : #accessing }
 MDLNestedList >> iconBlock [
-	^ iconBlock
+	^ self strategy iconBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> iconBlock: anObject [
-	iconBlock := anObject
+	self strategy iconBlock: anObject
 ]
 
 { #category : #private }
@@ -400,12 +390,12 @@ MDLNestedList >> isIncludingSelectedChildren: anElement [
 
 { #category : #accessing }
 MDLNestedList >> isJsAction [
-	^ isJsAction
+	^ self strategy isJsAction
 ]
 
 { #category : #accessing }
 MDLNestedList >> isJsAction: anObject [
-	isJsAction := anObject
+	self strategy isJsAction: anObject
 ]
 
 { #category : #javascript }
@@ -472,24 +462,6 @@ MDLNestedList >> onLoadHook: anObject [
 	onLoadHook := anObject
 ]
 
-{ #category : #'as yet unclassified' }
-MDLNestedList >> overwriteOnCompleteForNode: aNode inDiv: div index: anIndex indentedBy: anInteger on: html [
-	| onClickValue selfOnComplete finalOnComplete |
-	onClickValue := self actionBlock value: aNode element.
-	selfOnComplete := (html jQuery id: div) load
-		html: [ :ajaxHtml | 
-			self
-				renderItemContentOf: aNode
-				index: anIndex
-				indentedBy: anInteger
-				on: ajaxHtml ].
-	[ finalOnComplete :=  selfOnComplete onComplete: (onClickValue options
-		at: 'complete' )]
-		on: GRError  do: [ finalOnComplete := selfOnComplete ].
-		onClickValue onComplete: finalOnComplete.
-		^ onClickValue 
-]
-
 { #category : #rendering }
 MDLNestedList >> printHtmlForElementsFrom: start to: end context: aContext on: stream [
 	self
@@ -533,33 +505,6 @@ MDLNestedList >> printSublistFor: anIntervalRequest context: aContext on: stream
 				on: html ]
 		context: aContext
 		on: stream
-]
-
-{ #category : #rendering }
-MDLNestedList >> renderAnchor: aNode index: anIndex inDiv: div indentedBy: anInteger on: html [
-	| anchor |
-	anchor := html anchor.
-	self actionBlock
-		ifNotNil: [ self isJsAction
-				ifTrue: [ anchor
-						onClick:
-							(self
-								overwriteOnCompleteForNode: aNode
-								inDiv: div
-								index: anIndex
-								indentedBy: anInteger
-								on: html) ]
-				ifFalse: [ anchor callback: [ self actionBlock value: aNode element ] ] ].
-	anchor
-		with: [ html span
-				class: #item;
-				id: html nextId;
-				with: ((self format value: aNode element) ifEmpty: [ $  ]).
-			self renderHelpOf: aNode element at: html lastId on: html ].
-	aNode children
-		ifNotEmpty: [ html div
-				onClick: 'expandCollapse(this)';
-				class: #icon ]
 ]
 
 { #category : #rendering }
@@ -620,45 +565,6 @@ MDLNestedList >> renderHelpOf: anItem at: anId on: html [
 ]
 
 { #category : #rendering }
-MDLNestedList >> renderIconOf: anItem on: html [
-	self iconBlock ifNil: [ ^ self ].
-	
-	self
-		assert: (self iconBlock argumentCount between: 1 and: 2)
-		description:
-			'The icon block should have 1 or 2 arguments only. The first argument should be the item to display. If this is the only parameter the block should return a WAComponent to render. The second optional parameter will be an html canvas if you want to render directly something without passing by a component.'.
-	
-	self iconBlock argumentCount = 1
-		ifTrue: [ html render: (self iconBlock value: anItem) ]
-		ifFalse: [ self iconBlock value: anItem value: html ]
-]
-
-{ #category : #rendering }
-MDLNestedList >> renderItemContentOf: aNode index: anIndex indentedBy: anInteger on: html [
-	| div |
-	div := html div class: #itemContener.
-	self hasCustomizationForEntry
-		ifTrue: [ self entryCustomizationHook mdlCull: div cull: aNode element ].
-	div
-		attributeAt: 'draggable' put: 'true';
-		attributeAt: 'onDragOver'
-			put: 'if("' , anIndex asString , '" != event.dataTransfer.getData("sourceIndex")) {event.preventDefault();}';
-		attributeAt: 'ondrop' put: 'dropListItem(event, "' , anIndex asString , '");';
-		attributeAt: 'ondragstart' put: 'dragListItem(event,"' , anIndex asString , '")';
-		style: 'padding-left: ' , (15 * anInteger) asString , 'px;';
-		class: #isSelected if: aNode selectedElement;
-		with: [ 
-					self renderIconOf: aNode element on: html.
-					self
-						renderAnchor: aNode
-						index: anIndex
-						inDiv: div
-						indentedBy: anInteger
-						on: html.
-					self renderRightIconOf: aNode element on: html ]
-]
-
-{ #category : #rendering }
 MDLNestedList >> renderListOn: html [
 	| div |
 	div := html div
@@ -677,7 +583,7 @@ MDLNestedList >> renderListOn: html [
 				with: [ 
 							elementsToDisplay
 								doWithIndex: [ :item :index | 
-									self
+									self strategy
 										renderListTree: (self obtainTreeFor: item)
 										index: index + firstElementIndex - 1
 										indentedBy: 1
@@ -685,67 +591,14 @@ MDLNestedList >> renderListOn: html [
 	self draggableMechanism: html forDiv: div
 ]
 
-{ #category : #rendering }
-MDLNestedList >> renderListTree: aTree index: index indentedBy: indentation on: html [
-	html listItem
-		class: #expanded if: aTree selectedBranch;
-		class: #collapsed if: aTree selectedBranch not;
-		class: #hasChildren if: aTree children isNotEmpty;
-		attributeAt: #index put: index;
-		with: [ 
-					self
-						renderItemContentOf: aTree
-						index: index
-						indentedBy: indentation
-						on: html.
-					aTree selectedBranch
-						ifTrue: [ 
-							self
-								renderSublistOf: aTree children
-								parentIndex: index
-								indentedBy: indentation
-								on: html ] ]
-]
-
-{ #category : #rendering }
-MDLNestedList >> renderRightIconOf: anItem on: html [
-	self rightIconBlock ifNil: [ ^ self ].
-	
-	self
-		assert: (self rightIconBlock argumentCount between: 1 and: 2)
-		description:
-			'The icon block should have 1 or 2 arguments only. The first argument should be the item to display. If this is the only parameter the block should return a WAComponent to render. The second optional parameter will be an html canvas if you want to render directly something without passing by a component.'.
-	
-	self rightIconBlock argumentCount = 1
-		ifTrue: [ html render: (self rightIconBlock value: anItem) ]
-		ifFalse: [ self rightIconBlock value: anItem value: html ]
-]
-
-{ #category : #rendering }
-MDLNestedList >> renderSublistOf: children parentIndex: parentIndex indentedBy: anInteger on: html [
-	| sortedChildren |
-	children ifEmpty: [ ^ self ].
-	
-	sortedChildren := self childrenSortBlock ifNil: [ children ] ifNotNil: [ :sortBlock | children sorted: [ :node1 :node2 | sortBlock value: node1 element value: node2 element ] ].
-	html
-		unorderedList: [ 
-			sortedChildren
-				doWithIndex: [ :child :index | 
-					self
-						renderListTree: child
-						index: parentIndex asString, ':', index asString
-						indentedBy: anInteger + 1
-						on: html ] ]
-]
-
 { #category : #accessing }
 MDLNestedList >> rightIconBlock [
-	^ rightIconBlock
+	^ self strategy rightIconBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> rightIconBlock: anObject [
-	rightIconBlock := anObject
+	self strategy rightIconBlock: anObject
 ]
 
 { #category : #accessing }
@@ -756,6 +609,11 @@ MDLNestedList >> selectedEntity [
 { #category : #accessing }
 MDLNestedList >> selectedEntity: anObject [
 	selectedEntity := anObject
+]
+
+{ #category : #hooks }
+MDLNestedList >> setAjaxStrategy [
+	self strategy: self strategy asAjaxStrategy
 ]
 
 { #category : #javascript }
@@ -774,6 +632,17 @@ MDLNestedList >> setDataForCallBackFor: div html: html [
 MDLNestedList >> states [
 	self flag: #BECAREFUL.	"I am absolutly not sure we want to do this. I let it to try but it might be removed."
 	^ Array with: self
+]
+
+{ #category : #accessing }
+MDLNestedList >> strategy [
+	^ strategy
+		ifNil: [ strategy := MDLNestedListItemRenderAnchorStrategy new ]
+]
+
+{ #category : #accessing }
+MDLNestedList >> strategy: anObject [
+	strategy := anObject
 ]
 
 { #category : #researchField }
