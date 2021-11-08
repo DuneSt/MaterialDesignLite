@@ -33,7 +33,8 @@ MDLNestedListItemRenderAnchorStrategy >> getHtmlElementForNode: aNode inDiv: div
 								index: anIndex
 								indentedBy: anInteger
 								on: html) ]
-				ifFalse: [ anchor callback: [ self actionBlock value: aNode element ] ] ].
+				ifFalse: [ anchor
+						callback: [ self actionBlock cull: aNode element cull: html ] ] ].
 	^ anchor
 ]
 
