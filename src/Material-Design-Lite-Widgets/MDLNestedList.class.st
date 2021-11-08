@@ -85,7 +85,7 @@ MDLNestedList >> actionBlock [
 { #category : #accessing }
 MDLNestedList >> actionBlock: aBlock [
 	self
-		assert: aBlock argumentCount = 1
+		assert: aBlock argumentCount <= 2
 		description:
 			'This block must take one argument; it will be the clicked entity in the list'.
 	self strategy actionBlock: aBlock
