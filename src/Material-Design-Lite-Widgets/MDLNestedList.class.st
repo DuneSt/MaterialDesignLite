@@ -467,12 +467,11 @@ MDLNestedList >> printHtmlForElementsFrom: start to: end context: aContext on: s
 	self
 		printResultOf: [ :html | 
 			(start <= self filteredElements size and: [ end >= 1 ])
-				ifTrue: [ 
-					self filteredElements
+				ifTrue: [ self filteredElements
 						from: (start max: 1)
 						to: (end min: self filteredElements size)
 						do: [ :anElement | 
-							self
+							self strategy
 								renderListTree: (self obtainTreeFor: anElement)
 								index: (self filteredElements indexOf: anElement)
 								indentedBy: 1
@@ -498,8 +497,10 @@ MDLNestedList >> printResultOf: aBlock context: aContext on: stream [
 MDLNestedList >> printSublistFor: anIntervalRequest context: aContext on: stream [
 	self
 		printResultOf: [ :html | 
-			self
-				renderSublistOf: (self obtainTreeFor: (self obtainElementForPath: anIntervalRequest)) children
+			self strategy
+				renderSublistOf:
+					(self obtainTreeFor: (self obtainElementForPath: anIntervalRequest))
+						children
 				parentIndex: anIntervalRequest
 				indentedBy: (anIntervalRequest occurrencesOf: $:) + 1
 				on: html ]
