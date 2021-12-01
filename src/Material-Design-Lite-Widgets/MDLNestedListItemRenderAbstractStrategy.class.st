@@ -133,12 +133,17 @@ MDLNestedListItemRenderAbstractStrategy >> renderIcon: aBlock Of: anItem on: htm
 { #category : #rendering }
 MDLNestedListItemRenderAbstractStrategy >> renderItem: aNode index: anIndex inDiv: div indentedBy: anInteger on: html [
 	| htmlElement |
-	htmlElement := self getHtmlElementForNode: aNode inDiv: div index: anIndex indentedBy: anInteger on: html.
+	htmlElement := self
+		getHtmlElementForNode: aNode
+		inDiv: div
+		index: anIndex
+		indentedBy: anInteger
+		on: html.
 	htmlElement
 		with: [ html span
 				class: #item;
 				id: html nextId;
-				with: ((self format value: aNode element) ifEmpty: [ $  ]).
+				with: (((self format value: aNode element) ifNil: [ '' ]) ifEmpty: [ $  ]).
 			self renderHelpOf: aNode element at: html lastId on: html ].
 	aNode children
 		ifNotEmpty: [ html div
