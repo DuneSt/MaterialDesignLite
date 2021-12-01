@@ -4,8 +4,15 @@ I am a nested list filter keeping only elements whose name begins with the patte
 Class {
 	#name : #MDLInsensitiveBeginsWithFilter,
 	#superclass : #MDLAbstractFilter,
-	#category : 'Material-Design-Lite-Widgets-List'
+	#category : #'Material-Design-Lite-Widgets-List'
 }
+
+{ #category : #accessing }
+MDLInsensitiveBeginsWithFilter class >> applySelectMatchingOnQueryCollection: aQueryCollection with: aFormatBlock like: aPattern [
+	^ aQueryCollection wrappedQuery
+		with: aFormatBlock
+		ilike: aPattern , '%'
+]
 
 { #category : #accessing }
 MDLInsensitiveBeginsWithFilter class >> formatedElement: aString matches: aPattern [
