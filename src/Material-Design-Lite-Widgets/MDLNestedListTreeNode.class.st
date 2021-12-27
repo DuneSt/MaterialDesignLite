@@ -63,5 +63,5 @@ MDLNestedListTreeNode >> selectedBranch [
 
 { #category : #accessing }
 MDLNestedListTreeNode >> selectedElement [
-	^ element = self list selectedEntity
+	^ self list isSelectedEntity: element
 ]

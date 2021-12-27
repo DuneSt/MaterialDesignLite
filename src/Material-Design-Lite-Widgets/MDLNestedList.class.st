@@ -50,6 +50,7 @@ Class {
 		'entryCustomizationHook',
 		'filteredElements',
 		'selectedEntity',
+		'selectionStrategy',
 		'dragAndDropBlock',
 		'displayResearchField',
 		'displayResearchFilter',
@@ -362,13 +363,12 @@ MDLNestedList >> idFor: aSymbol [
 
 { #category : #accessing }
 MDLNestedList >> indexOfRootElementContainingSelectedEntity [
-	self selectedEntity ifNil: [ ^ 0 ].
-	^ self filteredElements
-		indexOf: self selectedEntity
-		ifAbsent: [ self filteredElements
-				detect: [ :element | self isIncludingSelectedChildren: element ]
-				ifFound: [ :element | self filteredElements indexOf: element ]
-				ifNone: [ "The selected element is not at all in the tree" 1 ] ]
+	^ self indexOfSelectedEntityIfNone: 0
+]
+
+{ #category : #accessing }
+MDLNestedList >> indexOfSelectedEntityIfNone: anInteger [
+	^ self selectionStrategy indexOfSelectedEntityIn: self ifNone: anInteger
 ]
 
 { #category : #initialization }
@@ -380,12 +380,13 @@ MDLNestedList >> initialize [
 		isJsAction: false;
 		listStyle: #standard;
 		filterInsensitiveBeginsWith;
-		onLoadHook: 'componentHandler.upgradeDom();'
+		onLoadHook: 'componentHandler.upgradeDom();'.
+	selectionStrategy := MDLObjectSelectionStrategy on: nil
 ]
 
 { #category : #positionning }
 MDLNestedList >> isIncludingSelectedChildren: anElement [
-	^ (self childrenBlock value: anElement) anySatisfy: [ :aChildren | aChildren = selectedEntity or: [ self isIncludingSelectedChildren: aChildren ] ]
+	^ (self childrenBlock value: anElement) anySatisfy: [ :aChildren | (self isSelectedEntity: aChildren) or: [ self isIncludingSelectedChildren: aChildren ] ]
 ]
 
 { #category : #accessing }
@@ -396,6 +397,11 @@ MDLNestedList >> isJsAction [
 { #category : #accessing }
 MDLNestedList >> isJsAction: anObject [
 	self strategy isJsAction: anObject
+]
+
+{ #category : #testing }
+MDLNestedList >> isSelectedEntity: anObject [ 
+	^ selectionStrategy isSelectedEntity: anObject
 ]
 
 { #category : #javascript }
@@ -604,12 +610,17 @@ MDLNestedList >> rightIconBlock: anObject [
 
 { #category : #accessing }
 MDLNestedList >> selectedEntity [
-	^ selectedEntity
+	^ self selectionStrategy selectedEntity
 ]
 
 { #category : #accessing }
 MDLNestedList >> selectedEntity: anObject [
-	selectedEntity := anObject
+	selectionStrategy := MDLObjectSelectionStrategy on: anObject
+]
+
+{ #category : #accessing }
+MDLNestedList >> selectionStrategy [
+	^ selectionStrategy
 ]
 
 { #category : #hooks }
@@ -624,7 +635,7 @@ MDLNestedList >> setDataForCallBackFor: div html: html [
 		attributeAt: #'data-cbId' put: (self defineScrollCallbackOn: div) asString;
 		attributeAt: #'data-childrenCbId' put: (self defineChildrenCallbackOn: div) asString;
 		attributeAt: #'data-listMaxSize' put: self listMaxSize asString;
-		attributeAt: #'data-lastIndexAsked' put: (self filteredElements indexOf: self selectedEntity ifAbsent: 1) asString;
+		attributeAt: #'data-lastIndexAsked' put: (self indexOfSelectedEntityIfNone: 1) asString;
 		attributeAt: #'data-onLoadHook' put: self jsOnLoadHook;
 		attributeAt: #'data-loadingstep' put: self listElementsDynamicalLoadingStep asString
 ]
