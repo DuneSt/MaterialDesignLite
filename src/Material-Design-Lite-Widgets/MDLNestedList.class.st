@@ -58,7 +58,8 @@ Class {
 		'onLoadHook',
 		'listMaxSize',
 		'obtainedTreesCache',
-		'strategy'
+		'strategy',
+		'shouldBeExpanded'
 	],
 	#category : #'Material-Design-Lite-Widgets-List'
 }
@@ -281,6 +282,12 @@ MDLNestedList >> entryCustomizationHook: anObject [
 ]
 
 { #category : #accessing }
+MDLNestedList >> expandAll [
+	self flag: #todo. "Later we should also have a mecanism to expand only a part of the list."
+	shouldBeExpanded := true
+]
+
+{ #category : #accessing }
 MDLNestedList >> filter [
 	^ filter
 ]
@@ -380,7 +387,8 @@ MDLNestedList >> initialize [
 		isJsAction: false;
 		listStyle: #standard;
 		filterInsensitiveBeginsWith;
-		onLoadHook: 'componentHandler.upgradeDom();'
+		onLoadHook: 'componentHandler.upgradeDom();';
+		shouldBeExpanded: false
 ]
 
 { #category : #positionning }
@@ -629,6 +637,16 @@ MDLNestedList >> setDataForCallBackFor: div html: html [
 		attributeAt: #'data-loadingstep' put: self listElementsDynamicalLoadingStep asString
 ]
 
+{ #category : #accessing }
+MDLNestedList >> shouldBeExpanded [
+	^ shouldBeExpanded
+]
+
+{ #category : #accessing }
+MDLNestedList >> shouldBeExpanded: anObject [
+	shouldBeExpanded := anObject
+]
+
 { #category : #hooks }
 MDLNestedList >> states [
 	self flag: #BECAREFUL.	"I am absolutly not sure we want to do this. I let it to try but it might be removed."
@@ -637,8 +655,7 @@ MDLNestedList >> states [
 
 { #category : #accessing }
 MDLNestedList >> strategy [
-	^ strategy
-		ifNil: [ strategy := MDLNestedListItemRenderAnchorStrategy new ]
+	^ strategy ifNil: [ strategy := MDLNestedListItemRenderAnchorStrategy for: self ]
 ]
 
 { #category : #accessing }

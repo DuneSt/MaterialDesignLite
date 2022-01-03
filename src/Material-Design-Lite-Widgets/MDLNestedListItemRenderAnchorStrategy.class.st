@@ -6,7 +6,7 @@ Class {
 
 { #category : #'as yet unclassified' }
 MDLNestedListItemRenderAnchorStrategy >> asAjaxStrategy [
-	^ MDLNestedListItemRenderAjaxStrategy new
+	^ (MDLNestedListItemRenderAjaxStrategy for: self list)
 		isJsAction: isJsAction;
 		actionBlock: actionBlock;
 		helpBlock: helpBlock;

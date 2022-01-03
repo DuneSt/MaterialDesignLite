@@ -2,6 +2,7 @@ Class {
 	#name : #MDLNestedListItemRenderAbstractStrategy,
 	#superclass : #MDLWidget,
 	#instVars : [
+		'list',
 		'isJsAction',
 		'actionBlock',
 		'helpBlock',
@@ -14,6 +15,13 @@ Class {
 	],
 	#category : #'Material-Design-Lite-Widgets-List'
 }
+
+{ #category : #'instance creation' }
+MDLNestedListItemRenderAbstractStrategy class >> for: aNestedList [
+	^ self new
+		list: aNestedList;
+		yourself
+]
 
 { #category : #accessing }
 MDLNestedListItemRenderAbstractStrategy >> actionBlock [
@@ -100,6 +108,16 @@ MDLNestedListItemRenderAbstractStrategy >> isJsAction: anObject [
 	isJsAction := anObject
 ]
 
+{ #category : #accessing }
+MDLNestedListItemRenderAbstractStrategy >> list [
+	^ list
+]
+
+{ #category : #accessing }
+MDLNestedListItemRenderAbstractStrategy >> list: anObject [
+	list := anObject
+]
+
 { #category : #rendering }
 MDLNestedListItemRenderAbstractStrategy >> renderHelpOf: anItem at: anId on: html [ 
 	| helpText |
@@ -179,23 +197,21 @@ MDLNestedListItemRenderAbstractStrategy >> renderItemContentOf: aNode index: anI
 { #category : #rendering }
 MDLNestedListItemRenderAbstractStrategy >> renderListTree: aTree index: index indentedBy: indentation on: html [
 	html listItem
-		class: #expanded if: aTree selectedBranch;
-		class: #collapsed if: aTree selectedBranch not;
+		class: #expanded if: (self shouldBeExpandedFor: aTree);
+		class: #collapsed if: (self shouldBeExpandedFor: aTree) not;
 		class: #hasChildren if: aTree children isNotEmpty;
 		attributeAt: #index put: index;
-		with: [ 
-					self
-						renderItemContentOf: aTree
-						index: index
+		with: [ self
+				renderItemContentOf: aTree
+				index: index
+				indentedBy: indentation
+				on: html.
+			(self shouldBeExpandedFor: aTree)
+				ifTrue: [ self
+						renderSublistOf: aTree children
+						parentIndex: index
 						indentedBy: indentation
-						on: html.
-					aTree selectedBranch
-						ifTrue: [ 
-							self
-								renderSublistOf: aTree children
-								parentIndex: index
-								indentedBy: indentation
-								on: html ] ]
+						on: html ] ]
 ]
 
 { #category : #rendering }
@@ -223,4 +239,9 @@ MDLNestedListItemRenderAbstractStrategy >> rightIconBlock [
 { #category : #accessing }
 MDLNestedListItemRenderAbstractStrategy >> rightIconBlock: anObject [
 	rightIconBlock := anObject
+]
+
+{ #category : #testing }
+MDLNestedListItemRenderAbstractStrategy >> shouldBeExpandedFor: aTree [
+	^ self list shouldBeExpanded or: [ aTree selectedBranch ]
 ]
