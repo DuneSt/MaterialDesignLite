@@ -21,6 +21,24 @@ MDLSelectScreen class >> title [
 ]
 
 { #category : #demos }
+MDLSelectScreen >> renderAjaxSubmitSelectOn: html [
+	html
+		form:
+			((MDLSelectWidget
+				possibilities: #(1 2 3 4 5 5)
+				inputLabel: 'Select Your Number'
+				labelBlock: [ :number | 
+					number = 5
+						ifTrue: [ '0' ]
+						ifFalse: [ (number - 1) greaseString ] ]
+				callback: [ :input | selectedEntity := input ]
+				selectedObject: selectedEntity)
+				beAjaxSubmit;
+				yourself).
+	selectedEntity ifNotNil: [ :entity |  html div mdlTextColorPrimary; with: 'Selected: ' , entity asString ]
+]
+
+{ #category : #demos }
 MDLSelectScreen >> renderAutoSubmitSelectOn: html [
 	html
 		form:
@@ -111,5 +129,6 @@ MDLSelectScreen >> select [
 MDLSelectScreen >> selectWithAjax [
 	^ OrderedDictionary new
 		add: 'Select Widget using ajax' -> #renderSelectWithAjaxOn:;
+		add: 'Select Widget using ajax(without any refresh)' -> #renderAjaxSubmitSelectOn:;
 		yourself
 ]
