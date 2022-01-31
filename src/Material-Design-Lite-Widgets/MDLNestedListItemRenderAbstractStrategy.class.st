@@ -65,7 +65,7 @@ MDLNestedListItemRenderAbstractStrategy >> entryCustomizationHook: anObject [
 
 { #category : #accessing }
 MDLNestedListItemRenderAbstractStrategy >> format [
-	^ format
+	^ format ifNil: [ #asString ]
 ]
 
 { #category : #accessing }

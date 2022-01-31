@@ -329,7 +329,7 @@ MDLNestedList >> filteredElements [
 
 { #category : #accessing }
 MDLNestedList >> format [
-	^ self strategy format ifNil: [ #asString ]
+	^ self strategy format
 ]
 
 { #category : #accessing }
