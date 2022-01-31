@@ -77,7 +77,8 @@ Class {
 		'sortBlock',
 		'autoSubmit',
 		'customizationBlock',
-		'entryTooltip'
+		'entryTooltip',
+		'ajaxSubmit'
 	],
 	#category : #'Material-Design-Lite-Widgets-Form'
 }
@@ -138,6 +139,16 @@ MDLSelectWidget >> addLabelMapEntryFor: anElem version: anInteger into: aDiction
 ]
 
 { #category : #accessing }
+MDLSelectWidget >> ajaxSubmit [
+	^ ajaxSubmit ifNil: [ ajaxSubmit := false ]
+]
+
+{ #category : #accessing }
+MDLSelectWidget >> ajaxSubmit: anObject [
+	ajaxSubmit := anObject
+]
+
+{ #category : #accessing }
 MDLSelectWidget >> autoSubmit [
 	^ autoSubmit ifNil: [ autoSubmit := false ]
 ]
@@ -148,10 +159,19 @@ MDLSelectWidget >> autoSubmit: anObject [
 ]
 
 { #category : #'public api' }
+MDLSelectWidget >> beAjaxSubmit [
+	"With this option the select widget will submit on a user selection. Do not forget to put your widget in a form."
+
+	self autoSubmit: false.
+	self ajaxSubmit: true
+]
+
+{ #category : #'public api' }
 MDLSelectWidget >> beAutoSubmit [
 	"With this option the select widget will submit on a user selection. Do not forget to put your widget in a form."
 
-	self autoSubmit: true
+	self autoSubmit: true.
+	self ajaxSubmit: false
 ]
 
 { #category : #'labelMap - generation' }
@@ -377,6 +397,7 @@ MDLSelectWidget >> renderTextFieldFor: anId withMap: aLabelMap on: html [
 		noAutocomplete;
 		callback: [ :input | self callback ifNotNil: [ :cb | cb value: (aLabelMap at: input) ] ];
 		onChange: 'submit()' if: self autoSubmit;
+		onChange: html jQuery ajax serializeThisWithHidden if: self ajaxSubmit;
 		type: 'text'.
 	self customizationBlock ifNotNil: [ :bl | bl mdlCull: textField cull: html ]
 ]

@@ -1,8 +1,5 @@
 # MaterialDesignLite for Seaside <img src="https://raw.githubusercontent.com/DuneSt/MaterialDesignLite/development/resources/logos/logoFull.png" width="50">
 
-#### Linux/OSX builds
-Master: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=master)](https://travis-ci.org/DuneSt/MaterialDesignLite)| Development: [![Build Status](https://travis-ci.org/DuneSt/MaterialDesignLite.svg?branch=development)](https://travis-ci.org/DuneSt/MaterialDesignLite)
-
 Coverage:
 
 [![Coverage Status](https://coveralls.io/repos/github/DuneSt/MaterialDesignLite/badge.svg)](https://coveralls.io/github/DuneSt/MaterialDesignLite)
@@ -185,8 +182,8 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 | 1.1.x       	| Pharo 50, 60, 61				| None							|
 | 1.2.x       	| Pharo 50, 60, 61				| None							|
 | 1.3.x       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
-| 2.x.x       	| Pharo 61, 70					| None							|
-| Dev       	| Pharo 61, 70					| None							|
+| 2.x.x       	| Pharo 61, 70, 80, 90			| None							|
+| Dev       	| Pharo 61, 70, 80, 90			| None							|
 
 (*) *This version of Gemstone is tested. Older versions might work but we did not tested it.*
 (**) *The compatibility is not total. MaterialDesignLite uses Pharo's Traits to provide the users composables components. Thus, if the Gemstone users wants to use those components they will have to flatten themself the Traits in their Seaside application*

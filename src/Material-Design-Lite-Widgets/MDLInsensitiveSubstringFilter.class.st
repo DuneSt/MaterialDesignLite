@@ -4,8 +4,15 @@ I am a nested list filter keeping only elements whose name includes  the pattern
 Class {
 	#name : #MDLInsensitiveSubstringFilter,
 	#superclass : #MDLAbstractFilter,
-	#category : 'Material-Design-Lite-Widgets-List'
+	#category : #'Material-Design-Lite-Widgets-List'
 }
+
+{ #category : #accessing }
+MDLInsensitiveSubstringFilter class >> applySelectMatchingOnQueryCollection: aQueryCollection with: aFormatBlock like: aPattern [
+	^ aQueryCollection wrappedQuery
+		with: aFormatBlock
+		iLike: '%' , aPattern asLowercase , '%'
+]
 
 { #category : #accessing }
 MDLInsensitiveSubstringFilter class >> formatedElement: aString matches: aPattern [

@@ -49,14 +49,7 @@ Class {
 		'elements',
 		'entryCustomizationHook',
 		'filteredElements',
-		'format',
-		'actionBlock',
-		'isJsAction',
 		'selectedEntity',
-		'helpBlock',
-		'iconBlock',
-		'rightIconBlock',
-		'childrenBlock',
 		'dragAndDropBlock',
 		'displayResearchField',
 		'displayResearchFilter',
@@ -64,7 +57,9 @@ Class {
 		'listStyle',
 		'onLoadHook',
 		'listMaxSize',
-		'childrenSortBlock'
+		'obtainedTreesCache',
+		'strategy',
+		'shouldBeExpanded'
 	],
 	#category : #'Material-Design-Lite-Widgets-List'
 }
@@ -85,16 +80,16 @@ MDLNestedList class >> elements: aCollection children: aBlockOrSymbole [
 
 { #category : #accessing }
 MDLNestedList >> actionBlock [
-	^ actionBlock
+	^ self strategy actionBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> actionBlock: aBlock [
 	self
-		assert: aBlock argumentCount = 1
+		assert: aBlock argumentCount <= 2
 		description:
 			'This block must take one argument; it will be the clicked entity in the list'.
-	actionBlock := aBlock
+	self strategy actionBlock: aBlock
 ]
 
 { #category : #private }
@@ -119,22 +114,24 @@ MDLNestedList >> children: aBlockOrSymbol [
 
 { #category : #accessing }
 MDLNestedList >> childrenBlock [
-	^ childrenBlock ifNil: [ childrenBlock := [ :item | #() ] ]
+	^ self strategy childrenBlock
+		ifNil: [ self strategy childrenBlock: [ :item | #() ].
+			self strategy childrenBlock ]
 ]
 
 { #category : #accessing }
 MDLNestedList >> childrenBlock: anObject [
-	childrenBlock := anObject
+	self strategy childrenBlock: anObject
 ]
 
 { #category : #accessing }
 MDLNestedList >> childrenSortBlock [
-	^ childrenSortBlock
+	^ self strategy childrenSortBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> childrenSortBlock: aBlock [
-	childrenSortBlock := aBlock
+	self strategy childrenSortBlock: aBlock
 ]
 
 { #category : #javascript }
@@ -285,6 +282,12 @@ MDLNestedList >> entryCustomizationHook: anObject [
 ]
 
 { #category : #accessing }
+MDLNestedList >> expandAll [
+	self flag: #todo. "Later we should also have a mecanism to expand only a part of the list."
+	shouldBeExpanded := true
+]
+
+{ #category : #accessing }
 MDLNestedList >> filter [
 	^ filter
 ]
@@ -326,17 +329,12 @@ MDLNestedList >> filteredElements [
 
 { #category : #accessing }
 MDLNestedList >> format [
-	^ format ifNil: [ #asString ]
+	^ self strategy format
 ]
 
 { #category : #accessing }
 MDLNestedList >> format: anObject [
-	format := anObject
-]
-
-{ #category : #testing }
-MDLNestedList >> hasCustomizationForEntry [
-	^ self entryCustomizationHook notNil
+	self strategy format: anObject
 ]
 
 { #category : #testing }
@@ -346,22 +344,22 @@ MDLNestedList >> hasDraggableItems [
 
 { #category : #accessing }
 MDLNestedList >> helpBlock [
-	^ helpBlock
+	^ self strategy helpBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> helpBlock: anObject [
-	helpBlock := anObject
+	self strategy helpBlock: anObject
 ]
 
 { #category : #accessing }
 MDLNestedList >> iconBlock [
-	^ iconBlock
+	^ self strategy iconBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> iconBlock: anObject [
-	iconBlock := anObject
+	self strategy iconBlock: anObject
 ]
 
 { #category : #private }
@@ -389,7 +387,8 @@ MDLNestedList >> initialize [
 		isJsAction: false;
 		listStyle: #standard;
 		filterInsensitiveBeginsWith;
-		onLoadHook: 'componentHandler.upgradeDom();'
+		onLoadHook: 'componentHandler.upgradeDom();';
+		shouldBeExpanded: false
 ]
 
 { #category : #positionning }
@@ -399,12 +398,12 @@ MDLNestedList >> isIncludingSelectedChildren: anElement [
 
 { #category : #accessing }
 MDLNestedList >> isJsAction [
-	^ isJsAction
+	^ self strategy isJsAction
 ]
 
 { #category : #accessing }
 MDLNestedList >> isJsAction: anObject [
-	isJsAction := anObject
+	self strategy isJsAction: anObject
 ]
 
 { #category : #javascript }
@@ -452,20 +451,7 @@ MDLNestedList >> obtainElementForPath: aPath [
 
 { #category : #private }
 MDLNestedList >> obtainTreeFor: anElement [
-	^ self obtainTreeFor: anElement caches: IdentityDictionary new
-]
-
-{ #category : #private }
-MDLNestedList >> obtainTreeFor: anElement caches: obtainedTree [
-	^ obtainedTree
-		at: anElement
-		ifAbsentPut: [ | childrenNodes |
-			childrenNodes := (self childrenBlock value: anElement) collect: [ :aChild | self obtainTreeFor: aChild caches: obtainedTree ].
-			MDLNestedListTreeNode
-				element: anElement
-				children: childrenNodes
-				selectedBranch: (childrenNodes anySatisfy: [ :aChild | aChild selectedBranch or: [ aChild selectedElement ] ])
-				selectedElement: anElement = self selectedEntity ]
+	^ obtainedTreesCache at: anElement ifAbsentPut: [ MDLNestedListTreeNode list: self element: anElement ]
 ]
 
 { #category : #accessing }
@@ -489,12 +475,11 @@ MDLNestedList >> printHtmlForElementsFrom: start to: end context: aContext on: s
 	self
 		printResultOf: [ :html | 
 			(start <= self filteredElements size and: [ end >= 1 ])
-				ifTrue: [ 
-					self filteredElements
+				ifTrue: [ self filteredElements
 						from: (start max: 1)
 						to: (end min: self filteredElements size)
 						do: [ :anElement | 
-							self
+							self strategy
 								renderListTree: (self obtainTreeFor: anElement)
 								index: (self filteredElements indexOf: anElement)
 								indentedBy: 1
@@ -520,8 +505,10 @@ MDLNestedList >> printResultOf: aBlock context: aContext on: stream [
 MDLNestedList >> printSublistFor: anIntervalRequest context: aContext on: stream [
 	self
 		printResultOf: [ :html | 
-			self
-				renderSublistOf: (self obtainTreeFor: (self obtainElementForPath: anIntervalRequest)) children
+			self strategy
+				renderSublistOf:
+					(self obtainTreeFor: (self obtainElementForPath: anIntervalRequest))
+						children
 				parentIndex: anIntervalRequest
 				indentedBy: (anIntervalRequest occurrencesOf: $:) + 1
 				on: html ]
@@ -530,42 +517,9 @@ MDLNestedList >> printSublistFor: anIntervalRequest context: aContext on: stream
 ]
 
 { #category : #rendering }
-MDLNestedList >> renderAnchor: aNode index: anIndex inDiv: div indentedBy: anInteger on: html [
-	| anchor |
-	anchor := html anchor.
-	self actionBlock
-		ifNotNil: [ 
-			self isJsAction
-				ifTrue: [ 
-					anchor
-						onClick:
-							((self actionBlock value: aNode element)
-								onComplete:
-									((html jQuery id: div) load
-										html: [ :ajaxHtml | 
-											self
-												renderItemContentOf: aNode
-												index: anIndex
-												indentedBy: anInteger
-												on: ajaxHtml ])) ]
-				ifFalse: [ anchor callback: [ self actionBlock value: aNode element ] ] ].
-	anchor
-		with: [ 
-			html span
-				class: #item;
-				id: html nextId;
-				with: ((self format value: aNode element) ifEmpty: [ $  ]).
-			self renderHelpOf: aNode element at: html lastId on: html ].
-	aNode children
-		ifNotEmpty: [ 
-			html div
-				onClick: 'expandCollapse(this)';
-				class: #icon ]
-]
-
-{ #category : #rendering }
 MDLNestedList >> renderContentOn: html [
 	self ensureId: html.
+	obtainedTreesCache := IdentityDictionary new. "Reset cache while loading page."
 	html div
 		id: (self idFor: #nestedList);
 		class: #nestedList;
@@ -620,45 +574,6 @@ MDLNestedList >> renderHelpOf: anItem at: anId on: html [
 ]
 
 { #category : #rendering }
-MDLNestedList >> renderIconOf: anItem on: html [
-	self iconBlock ifNil: [ ^ self ].
-	
-	self
-		assert: (self iconBlock argumentCount between: 1 and: 2)
-		description:
-			'The icon block should have 1 or 2 arguments only. The first argument should be the item to display. If this is the only parameter the block should return a WAComponent to render. The second optional parameter will be an html canvas if you want to render directly something without passing by a component.'.
-	
-	self iconBlock argumentCount = 1
-		ifTrue: [ html render: (self iconBlock value: anItem) ]
-		ifFalse: [ self iconBlock value: anItem value: html ]
-]
-
-{ #category : #rendering }
-MDLNestedList >> renderItemContentOf: aNode index: anIndex indentedBy: anInteger on: html [
-	| div |
-	div := html div class: #itemContener.
-	self hasCustomizationForEntry
-		ifTrue: [ self entryCustomizationHook mdlCull: div cull: aNode element ].
-	div
-		attributeAt: 'draggable' put: 'true';
-		attributeAt: 'onDragOver'
-			put: 'if("' , anIndex asString , '" != event.dataTransfer.getData("sourceIndex")) {event.preventDefault();}';
-		attributeAt: 'ondrop' put: 'dropListItem(event, "' , anIndex asString , '");';
-		attributeAt: 'ondragstart' put: 'dragListItem(event,"' , anIndex asString , '")';
-		style: 'padding-left: ' , (15 * anInteger) asString , 'px;';
-		class: #isSelected if: aNode selectedElement;
-		with: [ 
-					self renderIconOf: aNode element on: html.
-					self
-						renderAnchor: aNode
-						index: anIndex
-						inDiv: div
-						indentedBy: anInteger
-						on: html.
-					self renderRightIconOf: aNode element on: html ]
-]
-
-{ #category : #rendering }
 MDLNestedList >> renderListOn: html [
 	| div |
 	div := html div
@@ -677,7 +592,7 @@ MDLNestedList >> renderListOn: html [
 				with: [ 
 							elementsToDisplay
 								doWithIndex: [ :item :index | 
-									self
+									self strategy
 										renderListTree: (self obtainTreeFor: item)
 										index: index + firstElementIndex - 1
 										indentedBy: 1
@@ -685,67 +600,14 @@ MDLNestedList >> renderListOn: html [
 	self draggableMechanism: html forDiv: div
 ]
 
-{ #category : #rendering }
-MDLNestedList >> renderListTree: aTree index: index indentedBy: indentation on: html [
-	html listItem
-		class: #expanded if: aTree selectedBranch;
-		class: #collapsed if: aTree selectedBranch not;
-		class: #hasChildren if: aTree children isNotEmpty;
-		attributeAt: #index put: index;
-		with: [ 
-					self
-						renderItemContentOf: aTree
-						index: index
-						indentedBy: indentation
-						on: html.
-					aTree selectedBranch
-						ifTrue: [ 
-							self
-								renderSublistOf: aTree children
-								parentIndex: index
-								indentedBy: indentation
-								on: html ] ]
-]
-
-{ #category : #rendering }
-MDLNestedList >> renderRightIconOf: anItem on: html [
-	self rightIconBlock ifNil: [ ^ self ].
-	
-	self
-		assert: (self rightIconBlock argumentCount between: 1 and: 2)
-		description:
-			'The icon block should have 1 or 2 arguments only. The first argument should be the item to display. If this is the only parameter the block should return a WAComponent to render. The second optional parameter will be an html canvas if you want to render directly something without passing by a component.'.
-	
-	self rightIconBlock argumentCount = 1
-		ifTrue: [ html render: (self rightIconBlock value: anItem) ]
-		ifFalse: [ self rightIconBlock value: anItem value: html ]
-]
-
-{ #category : #rendering }
-MDLNestedList >> renderSublistOf: children parentIndex: parentIndex indentedBy: anInteger on: html [
-	| sortedChildren |
-	children ifEmpty: [ ^ self ].
-	
-	sortedChildren := self childrenSortBlock ifNil: [ children ] ifNotNil: [ :sortBlock | children sorted: [ :node1 :node2 | sortBlock value: node1 element value: node2 element ] ].
-	html
-		unorderedList: [ 
-			sortedChildren
-				doWithIndex: [ :child :index | 
-					self
-						renderListTree: child
-						index: parentIndex asString, ':', index asString
-						indentedBy: anInteger + 1
-						on: html ] ]
-]
-
 { #category : #accessing }
 MDLNestedList >> rightIconBlock [
-	^ rightIconBlock
+	^ self strategy rightIconBlock
 ]
 
 { #category : #accessing }
 MDLNestedList >> rightIconBlock: anObject [
-	rightIconBlock := anObject
+	self strategy rightIconBlock: anObject
 ]
 
 { #category : #accessing }
@@ -756,6 +618,11 @@ MDLNestedList >> selectedEntity [
 { #category : #accessing }
 MDLNestedList >> selectedEntity: anObject [
 	selectedEntity := anObject
+]
+
+{ #category : #hooks }
+MDLNestedList >> setAjaxStrategy [
+	self strategy: self strategy asAjaxStrategy
 ]
 
 { #category : #javascript }
@@ -770,10 +637,30 @@ MDLNestedList >> setDataForCallBackFor: div html: html [
 		attributeAt: #'data-loadingstep' put: self listElementsDynamicalLoadingStep asString
 ]
 
+{ #category : #accessing }
+MDLNestedList >> shouldBeExpanded [
+	^ shouldBeExpanded
+]
+
+{ #category : #accessing }
+MDLNestedList >> shouldBeExpanded: anObject [
+	shouldBeExpanded := anObject
+]
+
 { #category : #hooks }
 MDLNestedList >> states [
 	self flag: #BECAREFUL.	"I am absolutly not sure we want to do this. I let it to try but it might be removed."
 	^ Array with: self
+]
+
+{ #category : #accessing }
+MDLNestedList >> strategy [
+	^ strategy ifNil: [ strategy := MDLNestedListItemRenderAnchorStrategy for: self ]
+]
+
+{ #category : #accessing }
+MDLNestedList >> strategy: anObject [
+	strategy := anObject
 ]
 
 { #category : #researchField }

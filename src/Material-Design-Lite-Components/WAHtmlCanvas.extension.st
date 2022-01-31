@@ -958,6 +958,11 @@ WAHtmlCanvas >> mdlNavigationLink: aBlock [
 ]
 
 { #category : #'*Material-Design-Lite-Components' }
+WAHtmlCanvas >> mdlPasswordFieldInput [
+	^ self brush: MDLPasswordFieldInput new
+]
+
+{ #category : #'*Material-Design-Lite-Components' }
 WAHtmlCanvas >> mdlProgressBar [
 	^ self brush: MDLProgressBar new 
 ]
