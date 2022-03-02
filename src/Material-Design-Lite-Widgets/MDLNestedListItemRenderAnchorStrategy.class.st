@@ -22,7 +22,9 @@ MDLNestedListItemRenderAnchorStrategy >> asAjaxStrategy [
 { #category : #'as yet unclassified' }
 MDLNestedListItemRenderAnchorStrategy >> getHtmlElementForNode: aNode inDiv: div index: anIndex indentedBy: anInteger on: html [
 	| anchor |
-	anchor := html anchor.
+	anchor := html anchor
+		class: #'nested-item';
+		yourself.
 	self actionBlock
 		ifNotNil: [ self isJsAction
 				ifTrue: [ anchor

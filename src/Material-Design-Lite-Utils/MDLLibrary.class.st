@@ -158,6 +158,23 @@ if hash sass 2>/dev/null; then
 '
 ]
 
+{ #category : #css }
+MDLLibrary >> customCss [
+	^ '.nestedList .listContent .listContainer .nested-item {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    color: rgba(0, 0, 0, .87);
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    width: 0
+}'
+]
+
 { #category : #polyfill }
 MDLLibrary >> dialogpolyfillminCss [
 	^ 'dialog{position:absolute;left:0;right:0;width:-moz-fit-content;width:-webkit-fit-content;width:fit-content;height:-moz-fit-content;height:-webkit-fit-content;height:fit-content;margin:auto;border:solid;padding:1em;background:white;color:black;display:none}dialog[open]{display:block}dialog+.backdrop{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.1)}@media screen and (max-width:540px){dialog[_polyfill_modal]{top:0;width:auto;margin:1em}}._dialog_overlay{position:fixed;top:0;right:0;bottom:0;left:0}'
@@ -276,7 +293,7 @@ MDLLibrary >> iconCss [
   font-family: ''Material Icons'';
   font-style: normal;
   font-weight: 400;
-  src: url(', self urlOf: 'MaterialIconsRegular.woff2' , ') format(''woff2'');
+  src: url(/files/MDLLibrary/MaterialIconsRegular.woff2) format(''woff2'');
 }
 
 .material-icons {
@@ -1061,7 +1078,7 @@ MDLLibrary >> selectSass [
 
 { #category : #accessing }
 MDLLibrary >> selectorsToInclude [
-	^ #(#materialdesignCss #nestedListJs #mdlDialogJs #getmdlselectminJs #iconCss #materialminJs #dialogpolyfillminCss #dialogpolyfillminJs #robotoCss #panelsJs)
+	^ #(#materialdesignCss #nestedListJs #mdlDialogJs #getmdlselectminJs #iconCss #materialminJs #dialogpolyfillminCss #dialogpolyfillminJs #robotoCss #panelsJs #customCss)
 ]
 
 { #category : #sass }
