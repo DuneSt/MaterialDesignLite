@@ -4,7 +4,7 @@ I contain all the pictures and stylesheets usefull for the demo
 Class {
 	#name : #MDLDemoLibrary,
 	#superclass : #WAFileLibrary,
-	#category : #'Material-Design-Lite-Demo-Core'
+	#category : 'Material-Design-Lite-Demo-Core'
 }
 
 { #category : #actions }
