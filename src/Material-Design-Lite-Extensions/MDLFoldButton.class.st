@@ -12,7 +12,7 @@ Class {
 		'divId',
 		'isFolded'
 	],
-	#category : 'Material-Design-Lite-Extensions-Panels'
+	#category : #'Material-Design-Lite-Extensions-Panels'
 }
 
 { #category : #'instance creation' }
@@ -110,13 +110,6 @@ MDLFoldButton >> renderContentOn: html [
 		with: 'Toggle right panel'.
 	self isFolded
 		ifTrue: [ html document addLoadScript: ('document.getElementById(''' , self divId allButFirst , ''').style.width=''0'';' , self onCompleteScript) js ]
-]
-
-{ #category : #options }
-MDLFoldButton >> resetVisusOnFold [
-	self
-		onCompleteScript:
-			'setTimeout(function(){for(i=0;i<visus.length;i++)visus[i].visu.resize();for(i=0;i<visus.length;i++)visus[i].visu.fit();}, 1000)'
 ]
 
 { #category : #javascript }

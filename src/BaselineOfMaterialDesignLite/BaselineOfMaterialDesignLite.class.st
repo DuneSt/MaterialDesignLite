@@ -73,7 +73,7 @@ BaselineOfMaterialDesignLite >> magritte: spec [
 		baseline: 'Magritte'
 		with: [ spec
 				loads: #('Seaside');
-				repository: 'github://magritte-metamodel/magritte:v3.7/source' ]
+				repository: 'github://magritte-metamodel/magritte:v3.8/source' ]
 ]
 
 { #category : #dependencies }

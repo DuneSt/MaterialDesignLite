@@ -451,7 +451,17 @@ MDLNestedList >> obtainElementForPath: aPath [
 
 { #category : #private }
 MDLNestedList >> obtainTreeFor: anElement [
-	^ obtainedTreesCache at: anElement ifAbsentPut: [ MDLNestedListTreeNode list: self element: anElement ]
+	^  self obtainedTreesCache at: anElement ifAbsentPut: [ MDLNestedListTreeNode list: self element: anElement ]
+]
+
+{ #category : #accessing }
+MDLNestedList >> obtainedTreesCache [
+	^ obtainedTreesCache ifNil: [ obtainedTreesCache := IdentityDictionary new ]
+]
+
+{ #category : #accessing }
+MDLNestedList >> obtainedTreesCache: anObject [
+	obtainedTreesCache := anObject
 ]
 
 { #category : #accessing }
@@ -519,7 +529,7 @@ MDLNestedList >> printSublistFor: anIntervalRequest context: aContext on: stream
 { #category : #rendering }
 MDLNestedList >> renderContentOn: html [
 	self ensureId: html.
-	obtainedTreesCache := IdentityDictionary new. "Reset cache while loading page."
+	self obtainedTreesCache: nil. "Reset cache while loading page."
 	html div
 		id: (self idFor: #nestedList);
 		class: #nestedList;

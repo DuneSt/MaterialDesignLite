@@ -12,6 +12,7 @@ MDLNestedListItemRenderAjaxStrategy >> asAjaxStrategy [
 { #category : #'as yet unclassified' }
 MDLNestedListItemRenderAjaxStrategy >> getHtmlElementForNode: aNode inDiv: div index: anIndex indentedBy: anInteger on: html [ 
 	^ html div
+		class: #'nested-item';
 		onClick: (self actionBlock cull: aNode element cull: html)
 ]
 

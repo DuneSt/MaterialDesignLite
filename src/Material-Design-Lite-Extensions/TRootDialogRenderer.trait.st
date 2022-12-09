@@ -11,7 +11,6 @@ This trait need to be used by the root component of the application.
 Trait {
 	#name : #TRootDialogRenderer,
 	#traits : 'TWithRootDialogComponent',
-	#classTraits : 'TWithRootDialogComponent classTrait',
 	#category : 'Material-Design-Lite-Extensions-RootDialog'
 }
 
