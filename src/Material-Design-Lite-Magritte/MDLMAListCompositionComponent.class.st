@@ -1,6 +1,6 @@
 Class {
 	#name : #MDLMAListCompositionComponent,
-	#superclass : #MAListCompositonComponent,
+	#superclass : #MAListCompositionComponent,
 	#category : 'Material-Design-Lite-Magritte-Core'
 }
 
