@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        smalltalk: [ Pharo64-6.1, Pharo64-7.0, Pharo64-8.0, Pharo64-9.0, Pharo64-10 ]
+        smalltalk: [ Pharo32-6.1, Pharo32-7.0, Pharo32-8.0, Pharo64-9.0, Pharo64-10 ] #For now zeroconf lost 6, 7, 8 64bits. So I test on 32 buits :( 
     name: ${{ matrix.smalltalk }}
     steps:
       - uses: actions/checkout@v2
