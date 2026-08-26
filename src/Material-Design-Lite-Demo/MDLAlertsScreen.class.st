@@ -2,22 +2,24 @@
 Component to display some feedback to the user.
 "
 Class {
-	#name : #MDLAlertsScreen,
-	#superclass : #MDLExtensionsDemo,
-	#category : #'Material-Design-Lite-Demo-Extensions'
+	#name : 'MDLAlertsScreen',
+	#superclass : 'MDLExtensionsDemo',
+	#category : 'Material-Design-Lite-Demo-Extensions',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Extensions'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAlertsScreen class >> icon [
 	^ 'compAlertsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAlertsScreen class >> title [
 	^ 'Alerts'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAlertsScreen >> basicAlerts [
 	^ #('Default' 'Info')
 		inject: OrderedDictionary new
@@ -26,7 +28,7 @@ MDLAlertsScreen >> basicAlerts [
 			res ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAlertsScreen >> levelAlerts [
 	^ #('Danger' 'Warning' 'Success')
 		inject: OrderedDictionary new
@@ -35,7 +37,7 @@ MDLAlertsScreen >> levelAlerts [
 			res ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAlertsScreen >> renderDangerAlertOn: html [
 	html mdlAlert
 		beDanger;
@@ -48,7 +50,7 @@ MDLAlertsScreen >> renderDangerAlertOn: html [
 				with: 'This is an anchor' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAlertsScreen >> renderDefaultAlertOn: html [
 	html mdlAlert
 		beDefault;
@@ -61,7 +63,7 @@ MDLAlertsScreen >> renderDefaultAlertOn: html [
 				with: 'This is an anchor' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAlertsScreen >> renderInfoAlertOn: html [
 	html mdlAlert
 		beInfo;
@@ -74,14 +76,14 @@ MDLAlertsScreen >> renderInfoAlertOn: html [
 				with: 'This is an anchor' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAlertsScreen >> renderScreenContentOn: html [
 	self
 		render: self basicAlerts on: html;
 		render: self levelAlerts on: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAlertsScreen >> renderSuccessAlertOn: html [
 	html mdlAlert
 		beSuccess;
@@ -94,7 +96,7 @@ MDLAlertsScreen >> renderSuccessAlertOn: html [
 				with: 'This is an anchor' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAlertsScreen >> renderWarningAlertOn: html [
 	html mdlAlert
 		beWarning;

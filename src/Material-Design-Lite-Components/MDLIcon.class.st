@@ -6,38 +6,40 @@ Material design system icons are simple, modern, friendly, and sometimes quirky.
 
 "
 Class {
-	#name : #MDLIcon,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Core'
+	#name : 'MDLIcon',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Core',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Core'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLIcon >> chipIcon [
 	self beChipDecoration
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLIcon >> initialize [
 	super initialize.
 	self class: 'material-icons'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLIcon >> listItemAvatar [
 	self class: 'mdl-list__item-avatar'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLIcon >> listItemIcon [
 	self class: 'mdl-list__item-icon'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLIcon >> tag [
 	^'i'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLIcon >> toggle [
 	self class: 'mdl-icon-toggle__label'
 ]

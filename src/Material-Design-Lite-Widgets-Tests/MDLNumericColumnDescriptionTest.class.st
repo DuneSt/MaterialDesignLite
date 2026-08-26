@@ -2,12 +2,14 @@
 A MDLNumericColumnDescriptionTest is a test class for testing the behavior of MDLNumericColumnDescription
 "
 Class {
-	#name : #MDLNumericColumnDescriptionTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-Table'
+	#name : 'MDLNumericColumnDescriptionTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-Table',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Table'
 }
 
-{ #category : #test }
+{ #category : 'test' }
 MDLNumericColumnDescriptionTest >> testRenderHeadingOn [
 	|columnDescription|
 	columnDescription := MDLNumericColumnDescription new
@@ -17,7 +19,7 @@ MDLNumericColumnDescriptionTest >> testRenderHeadingOn [
 	self assert: [ :html | columnDescription renderHeadingOn: html ] generates: '<th id="id1" class="mdl-table-widget__cell--numeric">numeric</th>'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLNumericColumnDescriptionTest >> testRenderOn [
 	|columnDescription|
 	columnDescription := MDLNumericColumnDescription new

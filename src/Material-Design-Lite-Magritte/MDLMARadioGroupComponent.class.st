@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMARadioGroupComponent,
-	#superclass : #MARadioGroupComponent,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMARadioGroupComponent',
+	#superclass : 'MARadioGroupComponent',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLMARadioGroupComponent class >> isAbstract [
 	^ false
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMARadioGroupComponent >> renderEditorOn: html [
 	| group |
 	group := html radioGroup.
@@ -24,7 +26,7 @@ MDLMARadioGroupComponent >> renderEditorOn: html [
 				separatedBy: [ ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMARadioGroupComponent >> renderOption: anObject index: anInteger in: aRadioGroup on: html [
 	| optionId |
 	optionId := self optionId: anInteger.

@@ -1,6 +1,6 @@
-Extension { #name : #WABrush }
+Extension { #name : 'WABrush' }
 
-{ #category : #'*Material-Design-Lite-Components' }
+{ #category : '*Material-Design-Lite-Components' }
 WABrush >> canvas [
 	^ canvas
 ]

@@ -2,38 +2,39 @@
 I'm a custom header section used to display the title of the displayed screen in the header.
 "
 Class {
-	#name : #MDLTitleHeaderSection,
-	#superclass : #MDLAbstractHeaderSection,
+	#name : 'MDLTitleHeaderSection',
+	#superclass : 'MDLAbstractHeaderSection',
 	#instVars : [
 		'app',
 		'tabs',
 		'activeTab'
 	],
-	#category : 'Material-Design-Lite-Core'
+	#category : 'Material-Design-Lite-Core',
+	#package : 'Material-Design-Lite-Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTitleHeaderSection >> activeTab: key [
 	activeTab := key
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTitleHeaderSection >> app [
 	^ app
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTitleHeaderSection >> app: anObject [
 	app := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTitleHeaderSection >> initialize [
 	super initialize.
 	tabs := OrderedDictionary new.
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTitleHeaderSection >> renderContentOn: html [
 	(html brush: brush)
 		waterfall;
@@ -49,7 +50,7 @@ MDLTitleHeaderSection >> renderContentOn: html [
 					html mdlLayoutSpacer ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTitleHeaderSection >> tabs: tabsCollection [
 	tabs addAll: tabsCollection
 ]

@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLDialogTitleTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Dialog'
+	#name : 'MDLDialogTitleTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Dialog',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Dialog'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testBareBrush [
 	self assert: [ :html | html mdlDialogTitle ] generates: '<h4 class="mdl-dialog__title"></h4>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testLevel1 [
 	self
 		assert: [ :html | 
@@ -19,7 +21,7 @@ MDLDialogTitleTest >> testLevel1 [
 		generates: '<h1 class="mdl-dialog__title">title</h1>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testLevel2 [
 	self
 		assert: [ :html | 
@@ -29,7 +31,7 @@ MDLDialogTitleTest >> testLevel2 [
 		generates: '<h2 class="mdl-dialog__title">title</h2>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testLevel3 [
 	self
 		assert: [ :html | 
@@ -39,7 +41,7 @@ MDLDialogTitleTest >> testLevel3 [
 		generates: '<h3 class="mdl-dialog__title">title</h3>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testLevel4 [
 	self
 		assert: [ :html | 
@@ -49,7 +51,7 @@ MDLDialogTitleTest >> testLevel4 [
 		generates: '<h4 class="mdl-dialog__title">title</h4>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testLevel5 [
 	self
 		assert: [ :html | 
@@ -59,7 +61,7 @@ MDLDialogTitleTest >> testLevel5 [
 		generates: '<h5 class="mdl-dialog__title">title</h5>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testLevel6 [
 	self
 		assert: [ :html | 
@@ -69,7 +71,7 @@ MDLDialogTitleTest >> testLevel6 [
 		generates: '<h6 class="mdl-dialog__title">title</h6>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogTitleTest >> testWithContent [
 	self assert: [ :html | html mdlDialogTitle: 'title' ] generates: '<h4 class="mdl-dialog__title">title</h4>'
 ]

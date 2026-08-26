@@ -2,33 +2,35 @@
 Widget for actions
 "
 Class {
-	#name : #MDLCardActionsWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLCardActionsWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'componentOrBlocks',
 		'bordered'
 	],
-	#category : 'Material-Design-Lite-Widgets-Cards'
+	#category : 'Material-Design-Lite-Widgets-Cards',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Cards'
 }
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardActionsWidget >> addComponentOrBlock: aComponentOrBlock [
 	componentOrBlocks add: aComponentOrBlock
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLCardActionsWidget >> beBordered [
 	bordered := true
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCardActionsWidget >> initialize [
 	super initialize.
 	bordered := false.
 	componentOrBlocks := OrderedCollection new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCardActionsWidget >> renderContentOn: html [
 	| cardActions |
 	cardActions := html mdlCardActions.

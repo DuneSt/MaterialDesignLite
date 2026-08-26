@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMGReportExampleTask,
-	#superclass : #WATask,
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#name : 'MDLMGReportExampleTask',
+	#superclass : 'WATask',
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportExampleTask class >> label [
 	^ 'Magritte Report example'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLMGReportExampleTask >> createReportBasedOn: reportChooser [
 
 	| theReport |
@@ -21,7 +23,7 @@ MDLMGReportExampleTask >> createReportBasedOn: reportChooser [
 		yourself
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLMGReportExampleTask >> demoRows [
 
 	| rows |
@@ -38,7 +40,7 @@ MDLMGReportExampleTask >> demoRows [
 
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 MDLMGReportExampleTask >> go [
 	| chosenReport reportChooser |
 	reportChooser := self call: self reportChooser.
@@ -47,7 +49,7 @@ MDLMGReportExampleTask >> go [
 	self call: chosenReport
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLMGReportExampleTask >> reportChooser [
 	^ MDLMGReportChooser new 
 		asComponent addDecoration: 

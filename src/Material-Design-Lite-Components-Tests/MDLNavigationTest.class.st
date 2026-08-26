@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLNavigationTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Nav'
+	#name : 'MDLNavigationTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Nav',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Nav'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNavigationTest >> testBareBrush [
 	self assert: [ :html | html mdlNavigation ] generates: '<nav class="mdl-navigation"></nav>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNavigationTest >> testWithContent [
 	self assert: [ :html | html mdlNavigation: 'test' ] generates: '<nav class="mdl-navigation">test</nav>'
 ]

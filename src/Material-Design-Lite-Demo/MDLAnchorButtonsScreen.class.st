@@ -2,22 +2,24 @@
 Variations on Material Design buttons like anchors.
 "
 Class {
-	#name : #MDLAnchorButtonsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLAnchorButtonsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAnchorButtonsScreen class >> icon [
 	^ 'compAnchorPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAnchorButtonsScreen class >> title [
 	^ 'Anchor buttons'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> coloredButtons [
 	^ OrderedDictionary new
 		add: 'Colored button' -> #renderColoredButtonCodeOn:;
@@ -26,7 +28,7 @@ MDLAnchorButtonsScreen >> coloredButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> fabButtons [
 	^ OrderedDictionary new
 		add: 'Plain FAB' -> #renderFabButtonCodeOn:;
@@ -35,7 +37,7 @@ MDLAnchorButtonsScreen >> fabButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> fabColoredButtons [
 	^ OrderedDictionary new
 		add: 'Colored FAB' -> #renderColoredFabButtonCodeOn:;
@@ -43,7 +45,7 @@ MDLAnchorButtonsScreen >> fabColoredButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> flatButtons [
 	^ OrderedDictionary new
 		add: 'Flat button' -> #renderFlatButtonCodeOn:;
@@ -52,7 +54,7 @@ MDLAnchorButtonsScreen >> flatButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> iconButtons [
 	^ OrderedDictionary new
 		add: 'Icon button' -> #renderIconButtonCodeOn:;
@@ -60,7 +62,7 @@ MDLAnchorButtonsScreen >> iconButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> miniFabButtons [
 	^ OrderedDictionary new
 		add: 'Mini FAB' -> #renderMiniFabButtonCodeOn:;
@@ -68,7 +70,7 @@ MDLAnchorButtonsScreen >> miniFabButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> raisedButtons [
 	^ OrderedDictionary new
 		add: 'Plain raised' -> #renderRaisedButtonCodeOn:;
@@ -77,7 +79,7 @@ MDLAnchorButtonsScreen >> raisedButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLAnchorButtonsScreen >> raisedColoredButtons [
 	^ OrderedDictionary new
 		add: 'Colored button' -> #renderRaisedColoredButtonCodeOn:;
@@ -86,7 +88,7 @@ MDLAnchorButtonsScreen >> raisedColoredButtons [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderColoredAccentButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -94,7 +96,7 @@ MDLAnchorButtonsScreen >> renderColoredAccentButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderColoredAccentRippleEffectButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -103,7 +105,7 @@ MDLAnchorButtonsScreen >> renderColoredAccentRippleEffectButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderColoredButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -111,7 +113,7 @@ MDLAnchorButtonsScreen >> renderColoredButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderColoredFabButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -120,7 +122,7 @@ MDLAnchorButtonsScreen >> renderColoredFabButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderColoredFabRippleEffectButton2CodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -130,7 +132,7 @@ MDLAnchorButtonsScreen >> renderColoredFabRippleEffectButton2CodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderFabButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -138,7 +140,7 @@ MDLAnchorButtonsScreen >> renderFabButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderFabDisabledButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -147,7 +149,7 @@ MDLAnchorButtonsScreen >> renderFabDisabledButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderFabRippleEffectButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -156,14 +158,14 @@ MDLAnchorButtonsScreen >> renderFabRippleEffectButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderFlatButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderFlatDisabledButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -171,7 +173,7 @@ MDLAnchorButtonsScreen >> renderFlatDisabledButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderFlatRippleEffectButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -179,7 +181,7 @@ MDLAnchorButtonsScreen >> renderFlatRippleEffectButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderIconButtonCodeOn: html [
 	"We could also use the #icon: method"
 	html mdlAnchorButton
@@ -188,7 +190,7 @@ MDLAnchorButtonsScreen >> renderIconButtonCodeOn: html [
 		with: [ html mdlIcon: 'mood' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderIconColoredButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -196,7 +198,7 @@ MDLAnchorButtonsScreen >> renderIconColoredButtonCodeOn: html [
 		icon: 'mood'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderMiniFabButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -205,7 +207,7 @@ MDLAnchorButtonsScreen >> renderMiniFabButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderMiniFabColoredButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -215,7 +217,7 @@ MDLAnchorButtonsScreen >> renderMiniFabColoredButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderRaisedButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -223,7 +225,7 @@ MDLAnchorButtonsScreen >> renderRaisedButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderRaisedColoredAccentButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -232,7 +234,7 @@ MDLAnchorButtonsScreen >> renderRaisedColoredAccentButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderRaisedColoredAccentRippleEffectButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -242,7 +244,7 @@ MDLAnchorButtonsScreen >> renderRaisedColoredAccentRippleEffectButtonCodeOn: htm
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderRaisedColoredButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -251,7 +253,7 @@ MDLAnchorButtonsScreen >> renderRaisedColoredButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderRaisedDisabledButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -260,7 +262,7 @@ MDLAnchorButtonsScreen >> renderRaisedDisabledButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLAnchorButtonsScreen >> renderRaisedRippleEffectButtonCodeOn: html [
 	html mdlAnchorButton
 		callback: [ 'Test' crLog ];
@@ -269,7 +271,7 @@ MDLAnchorButtonsScreen >> renderRaisedRippleEffectButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAnchorButtonsScreen >> renderScreenContentOn: html [
 	self
 		render: self fabColoredButtons on: html;

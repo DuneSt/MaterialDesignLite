@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLMACheckboxComponent,
-	#superclass : #MACheckboxComponent,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMACheckboxComponent',
+	#superclass : 'MACheckboxComponent',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMACheckboxComponent >> renderEditorOn: html [
 	html mdlCheckboxContainer
 		for: self labelId;

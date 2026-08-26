@@ -1,19 +1,21 @@
 Class {
-	#name : #MDLDialogWidgetTests,
-	#superclass : #SGTAbstractSeasideTestCase,
+	#name : 'MDLDialogWidgetTests',
+	#superclass : 'SGTAbstractSeasideTestCase',
 	#instVars : [
 		'dialog'
 	],
-	#category : #'Material-Design-Lite-Widgets-Tests-Dialog'
+	#category : 'Material-Design-Lite-Widgets-Tests-Dialog',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Dialog'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 MDLDialogWidgetTests >> setUp [
 	super setUp.
 	dialog := MDLDialogWidget new
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testActions [
 	dialog actions: [ :html | html mdlButton: 'Test' ].
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<div class="mdl-dialog__actions"><button class="mdl-button mdl-js-button" type="submit">Test</button>'.
@@ -21,7 +23,7 @@ MDLDialogWidgetTests >> testActions [
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<div class="mdl-dialog__actions">This is a mock'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testButtonBrush [
 	self
 		assert: [ :html | 
@@ -35,19 +37,19 @@ MDLDialogWidgetTests >> testButtonBrush [
 		generatedIncludes: '<button class="mdl-button mdl-js-button mdl-button--colored mdl-button--raised mdl-js-ripple-effect" id="id1" type="button">Test</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testButtonName [
 	dialog buttonName: 'Test'.
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="id1" type="button">Test</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testCloseButtonName [
 	dialog closeButtonName: 'Test'.
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<button class="mdl-button mdl-js-button" id="id3" type="button">Test</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testContent [
 	dialog content: [ :html | html text: 'Test' ].
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<div class="mdl-dialog__content">Test</div>'.
@@ -55,7 +57,7 @@ MDLDialogWidgetTests >> testContent [
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<div class="mdl-dialog__content">This is a mock</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testDialogBrush [
 	self
 		assert: [ :html | 
@@ -69,17 +71,17 @@ MDLDialogWidgetTests >> testDialogBrush [
 		generatedIncludes: '<dialog class="mdl-dialog TestClass"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testDialogIsRegistered [
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<script type="text/javascript">newDialog('
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testRenderBareDialog [
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<dialog class="mdl-dialog"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDialogWidgetTests >> testTitle [
 	dialog title: 'Test'.
 	self assert: [ :html | html render: dialog ] generatedIncludes: '<h4 class="mdl-dialog__title">Test</h4>'.	

@@ -1,6 +1,6 @@
-Extension { #name : #String }
+Extension { #name : 'String' }
 
-{ #category : #'*Material-Design-Lite-Components' }
+{ #category : '*Material-Design-Lite-Components' }
 String >> js [
 	^ JSStream on: self
 ]

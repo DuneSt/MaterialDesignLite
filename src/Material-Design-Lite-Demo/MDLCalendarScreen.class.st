@@ -2,45 +2,47 @@
 A calendar in Material Design style to pick a date
 "
 Class {
-	#name : #MDLCalendarScreen,
-	#superclass : #MDLWidgetDemo,
+	#name : 'MDLCalendarScreen',
+	#superclass : 'MDLWidgetDemo',
 	#instVars : [
 		'selectedDay'
 	],
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendarScreen class >> icon [
 	^ #compcalendarPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendarScreen class >> title [
 	^ 'Date Picker'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLCalendarScreen >> datePicker [
 	^ OrderedDictionary new
 		add: 'Date picker' -> #renderDatePickerOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLCalendarScreen >> flatDatePicker [
 	^ OrderedDictionary new
 		add: 'Flat date picker' -> #renderFlatDatePickerOn:;
 		yourself
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCalendarScreen >> initialize [
 	super initialize.
 	selectedDay := Date today
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCalendarScreen >> renderDatePickerOn: html [
 	html
 		render:
@@ -58,7 +60,7 @@ MDLCalendarScreen >> renderDatePickerOn: html [
 		with: 'Selected day: ' , selectedDay asString
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCalendarScreen >> renderFlatDatePickerOn: html [
 	html div
 		style: 'background-color: white;border: 1px grey solid;';
@@ -77,7 +79,7 @@ MDLCalendarScreen >> renderFlatDatePickerOn: html [
 		with: 'Selected day: ' , selectedDay asString
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCalendarScreen >> renderScreenContentOn: html [
 	self
 		render: self datePicker on: html;

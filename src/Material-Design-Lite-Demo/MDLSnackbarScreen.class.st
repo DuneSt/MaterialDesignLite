@@ -2,29 +2,31 @@
 Transient popup notifications.
 "
 Class {
-	#name : #MDLSnackbarScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLSnackbarScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbarScreen class >> icon [
 	^ 'compsnackbarPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbarScreen class >> title [
 	^ 'Snackbar'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSnackbarScreen >> renderScreenContentOn: html [
 	self
 		render: self snackbar on: html;
 		render: self toast on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSnackbarScreen >> renderSnackbarOn: html [
 	| snackbar |
 	snackbar := html mdlSnackbar
@@ -41,7 +43,7 @@ MDLSnackbarScreen >> renderSnackbarOn: html [
 		with: 'Show snackbar'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSnackbarScreen >> renderToastOn: html [
 	| snackbar |
 	snackbar := html mdlSnackbar
@@ -54,14 +56,14 @@ MDLSnackbarScreen >> renderToastOn: html [
 		with: 'Show toast'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLSnackbarScreen >> snackbar [
 	^ OrderedDictionary new
 		add: 'Snackbar' -> #renderSnackbarOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLSnackbarScreen >> toast [
 	^ OrderedDictionary new
 		add: ' Toast' -> #renderToastOn:;

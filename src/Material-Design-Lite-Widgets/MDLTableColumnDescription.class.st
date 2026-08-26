@@ -9,53 +9,55 @@ I hold my:
 My subclasses model concrete column description check them for concrete examples.
 "
 Class {
-	#name : #MDLTableColumnDescription,
-	#superclass : #Object,
+	#name : 'MDLTableColumnDescription',
+	#superclass : 'Object',
 	#instVars : [
 		'title',
 		'evaluation',
 		'idBlock'
 	],
-	#category : #'Material-Design-Lite-Widgets-Table'
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableColumnDescription >> evaluation [
 	^ evaluation
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableColumnDescription >> evaluation: anObject [
 	evaluation := anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLTableColumnDescription >> generateIdUsing: html [
 	^ self idBlock cull: html
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableColumnDescription >> idBlock [
 	^ idBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableColumnDescription >> idBlock: anObject [
 	idBlock := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTableColumnDescription >> initialize [
 	super initialize.
 	self idBlock: [ :html | html nextId ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTableColumnDescription >> render: row on: html [
 	self subclassResponsibility
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTableColumnDescription >> renderHeadingOn: html [
 	| heading |
 	heading := html mdlTableHeading
@@ -65,12 +67,12 @@ MDLTableColumnDescription >> renderHeadingOn: html [
 	^ heading
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableColumnDescription >> title [
 	^ title
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableColumnDescription >> title: anObject [
 	title := anObject
 ]

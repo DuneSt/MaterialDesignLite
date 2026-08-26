@@ -5,12 +5,14 @@ Description
 A footer for the MDL for seaside demo with all the useful links.
 "
 Class {
-	#name : #MDLDemoFooter,
-	#superclass : #MDLDemoComponent,
-	#category : #'Material-Design-Lite-Demo-Core'
+	#name : 'MDLDemoFooter',
+	#superclass : 'MDLDemoComponent',
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoFooter >> links [
 	^ OrderedDictionary
 		with: 'Github' -> 'https://github.com/DuneSt/MaterialDesignLite'
@@ -20,7 +22,7 @@ MDLDemoFooter >> links [
 		with: 'Material Design Lite' -> 'https://getmdl.io/'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoFooter >> renderContentOn: html [
 	html
 		mdlMiniFooter: [ html

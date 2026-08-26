@@ -2,12 +2,14 @@
 I am the magritte decorator for the report, you have to include MDLMAReport >> #cssStylesheet to your project in order to have a working table header
 "
 Class {
-	#name : #MDLMAReport,
-	#superclass : #MAReport,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMAReport',
+	#superclass : 'MAReport',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #css }
+{ #category : 'css' }
 MDLMAReport class >> cssStylesheet [
 	"There is an anchor inside the table header when the column is sortable, i can't change its style, so here is a css stylesheet that has to be included in your app ..."
 	self flag: #itBothersMe.
@@ -18,33 +20,33 @@ MDLMAReport class >> cssStylesheet [
  	  }'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMAReport >> batchSizePossibilities [
 	^ properties at: #batchSizePossibilities ifAbsent: [ self defaulBatchSize ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMAReport >> batchSizePossibilities: aCollection [
 	^ properties at: #batchSizePossibilities put: aCollection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMAReport >> defaulBatchSize [
 	^#(5 10 50)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMAReport >> defaulShowBatchSize [
 	^ true
 ]
 
-{ #category : #'rendering-table' }
+{ #category : 'rendering-table' }
 MDLMAReport >> initialize [
 	super initialize.
 	self sorterStyles:	{'mdl-data-table__header--sorted-descending' .'mdl-data-table__header--sorted-ascending'}
 ]
 
-{ #category : #'rendering-batch' }
+{ #category : 'rendering-batch' }
 MDLMAReport >> renderBatchFirstOn: html [
 	self isOnFirstPage
 		ifFalse: [ 
@@ -62,7 +64,7 @@ MDLMAReport >> renderBatchFirstOn: html [
 	html space
 ]
 
-{ #category : #'rendering-batch' }
+{ #category : 'rendering-batch' }
 MDLMAReport >> renderBatchItemsOn: html [
 	| position |
 	position := self batchPage - 1 * self batchSize.
@@ -71,7 +73,7 @@ MDLMAReport >> renderBatchItemsOn: html [
 	html text: '	'
 ]
 
-{ #category : #'rendering-batch' }
+{ #category : 'rendering-batch' }
 MDLMAReport >> renderBatchLastOn: html [
 	self isOnLastPage
 		ifFalse: [ 
@@ -89,7 +91,7 @@ MDLMAReport >> renderBatchLastOn: html [
 				with: [ html mdlIcon: 'skip_next' ] ]
 ]
 
-{ #category : #'rendering-batch' }
+{ #category : 'rendering-batch' }
 MDLMAReport >> renderBatchNextOn: html [
 	self isOnLastPage
 		ifFalse: [ 
@@ -108,7 +110,7 @@ MDLMAReport >> renderBatchNextOn: html [
 	html space
 ]
 
-{ #category : #'rendering-batch' }
+{ #category : 'rendering-batch' }
 MDLMAReport >> renderBatchPreviousOn: html [
 	self isOnFirstPage
 		ifFalse: [ 
@@ -127,7 +129,7 @@ MDLMAReport >> renderBatchPreviousOn: html [
 	html space
 ]
 
-{ #category : #'rendering-table' }
+{ #category : 'rendering-table' }
 MDLMAReport >> renderBatchSizeCustomizationOn: html [
 	html text: 'Rows per page: '.
 	html
@@ -139,7 +141,7 @@ MDLMAReport >> renderBatchSizeCustomizationOn: html [
 				choosingText: self batchSize) sortBlock: [ :a :b | a key asInteger <= b key asInteger ]) yourself
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMAReport >> renderContentOn: html [
 					html mdlTable
 						style: 'width: 100%; border: none';
@@ -147,7 +149,7 @@ MDLMAReport >> renderContentOn: html [
 						with: [ self renderTableOn: html ]  
 ]
 
-{ #category : #'rendering-table' }
+{ #category : 'rendering-table' }
 MDLMAReport >> renderTableBatchOn: html [
 	self hasMoreThanOnePage ifTrue: [
 		html tableRow: [
@@ -169,20 +171,20 @@ MDLMAReport >> renderTableBatchOn: html [
 						ifTrue: [ self renderBatchLastOn: html ] ] ] ]
 ]
 
-{ #category : #'rendering-table' }
+{ #category : 'rendering-table' }
 MDLMAReport >> renderTableFootOn: html [
 		self visibleColumns do: [ :each |
 			each renderFootCellOn: html ]
 ]
 
-{ #category : #'rendering-table' }
+{ #category : 'rendering-table' }
 MDLMAReport >> renderTableHeadOn: html [
 	html tableRow: [
 		self visibleColumns do: [ :each |
 			each renderHeadCellOn: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMAReport >> renderTableOn: html [
 	self showCaption
 		ifTrue: [ self renderTableCaptionOn: html ].
@@ -209,12 +211,12 @@ MDLMAReport >> renderTableOn: html [
 			ifTrue: [ self renderTableBodyOn: html ] ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 MDLMAReport >> showBatchSize [
 	^ properties at: #showBatchSize ifAbsent: [ self defaulShowBatchSize ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 MDLMAReport >> showBatchSize: aBoolean [
 	^ properties at: #showBatchSize put: aBoolean
 ]

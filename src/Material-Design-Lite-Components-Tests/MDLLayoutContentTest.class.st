@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLLayoutContentTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Layouts'
+	#name : 'MDLLayoutContentTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Layouts',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Layouts'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLLayoutContentTest >> testBareBrush [
 	self assert: [ :html | html mdlLayoutContent ] generates: '<main class="mdl-layout__content"></main>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLLayoutContentTest >> testWithContent [
 	self assert: [ :html | html mdlLayoutContent: 'test' ] generates: '<main class="mdl-layout__content">test</main>'
 ]

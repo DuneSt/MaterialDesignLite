@@ -33,8 +33,8 @@ Internal Representation and Key Implementation Points.
 	tooltip:				<aString>	I am an optional tooltip.
 "
 Class {
-	#name : #MDLPanelSwitcherButton,
-	#superclass : #WAComponent,
+	#name : 'MDLPanelSwitcherButton',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'panelId',
 		'text',
@@ -45,10 +45,12 @@ Class {
 		'owner',
 		'isSelected'
 	],
-	#category : 'Material-Design-Lite-Extensions-Panels'
+	#category : 'Material-Design-Lite-Extensions-Panels',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'Panels'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLPanelSwitcherButton class >> text: aString tooltip: aTranslatedString panelId: anId actionBlock: aBlock [
 	^ self
 		text: aString
@@ -58,7 +60,7 @@ MDLPanelSwitcherButton class >> text: aString tooltip: aTranslatedString panelId
 		onComplete: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLPanelSwitcherButton class >> text: aString tooltip: aTranslatedString panelId: anId actionBlock: aBlock onComplete: aJSString [
 	^ self
 		text: aString
@@ -69,7 +71,7 @@ MDLPanelSwitcherButton class >> text: aString tooltip: aTranslatedString panelId
 		id: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLPanelSwitcherButton class >> text: aString tooltip: aTranslatedString panelId: anId actionBlock: aBlock onComplete: aJSString id:  anIdBis [
 	^ self new
 		text: aString;
@@ -81,78 +83,78 @@ MDLPanelSwitcherButton class >> text: aString tooltip: aTranslatedString panelId
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> actionBlock [
 	^ actionBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> actionBlock: anObject [
 	actionBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> id [
 	^ id
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> id: anObject [
 	id := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLPanelSwitcherButton >> initialize [
 	super initialize.
 	self isSelected: false
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> isSelected [
 	^ isSelected
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> isSelected: aBoolean [ 
 	isSelected := aBoolean 
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLPanelSwitcherButton >> jsOnComplete [
 	^ self onCompleteJs ifNotNil: [ :script | script js ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> onCompleteJs [
 	^ onCompleteJs
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> onCompleteJs: anObject [
 	onCompleteJs := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> owner [
 	^ owner
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> owner: aSYNVerticalToolbar [ 
 	owner := aSYNVerticalToolbar
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> panelId [
 	^ panelId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> panelId: anObject [
 	panelId := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPanelSwitcherButton >> renderContentOn: html [
 	html div
 		class: 'panel-switcher-button';
@@ -175,7 +177,7 @@ MDLPanelSwitcherButton >> renderContentOn: html [
 	self renderTooltipFor: html lastId on: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPanelSwitcherButton >> renderTooltipFor: anId on: html [
 	self tooltip ifNil: [ ^ self ].
 	
@@ -185,27 +187,27 @@ MDLPanelSwitcherButton >> renderTooltipFor: anId on: html [
 		with: self tooltip
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLPanelSwitcherButton >> select [
 	self isSelected: true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> text [
 	^ text
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> text: anObject [
 	text := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> tooltip [
 	^ tooltip
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPanelSwitcherButton >> tooltip: anObject [
 	tooltip := anObject
 ]

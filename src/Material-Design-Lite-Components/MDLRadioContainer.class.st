@@ -18,24 +18,26 @@ Example
 			html mdlRadioLabel: 'First' ]
 "
 Class {
-	#name : #MDLRadioContainer,
-	#superclass : #WALabelTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLRadioContainer',
+	#superclass : 'WALabelTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLRadioContainer >> initialize [
 	super initialize.
 	self class: 'mdl-radio'.
 	self class: 'mdl-js-radio'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLRadioContainer >> rippleEffect [
 	self class: 'mdl-js-ripple-effect'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLRadioContainer >> rippleEffectIf: aBoolean [
 	aBoolean ifTrue: [ self rippleEffect ]
 ]

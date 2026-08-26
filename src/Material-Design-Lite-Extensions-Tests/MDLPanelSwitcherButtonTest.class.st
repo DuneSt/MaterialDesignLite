@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLPanelSwitcherButtonTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Extensions-Tests-Panels'
+	#name : 'MDLPanelSwitcherButtonTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Extensions-Tests-Panels',
+	#package : 'Material-Design-Lite-Extensions-Tests',
+	#tag : 'Panels'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPanelSwitcherButtonTest >> testId [
 	self assert: [ :html | MDLPanelSwitcherButton new id: 'testId'; renderContentOn: html ] generatedIncludes: 'id="testId"'.
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPanelSwitcherButtonTest >> testJsOnComplete [
 	self
 		assert: [ :html | 
@@ -35,23 +37,23 @@ MDLPanelSwitcherButtonTest >> testJsOnComplete [
 				jsOnComplete) isKindOf: JSStream)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPanelSwitcherButtonTest >> testSelect [
 	self deny: [ :html | MDLPanelSwitcherButton new renderContentOn: html ] generatedIncludes: 'class="panel-switcher-button__content panel-switcher-selected"'.
 	self assert: [ :html | MDLPanelSwitcherButton new select; renderContentOn: html ] generatedIncludes: 'class="panel-switcher-button__content panel-switcher-selected"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPanelSwitcherButtonTest >> testTextIsGenerated [
 	self assert: [ :html | MDLPanelSwitcherButton new text: 'Option'; renderContentOn: html ] generatedIncludes: '>Option</div>'.
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPanelSwitcherButtonTest >> testTooltipNotRenderedIfNil [
 	self deny: [ :html | MDLPanelSwitcherButton new renderContentOn: html ] generatedIncludes: 'mdl-tooltip'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPanelSwitcherButtonTest >> testTooltipRendering [
 	self
 		assert: [ :html | 

@@ -14,12 +14,14 @@ Example
 			html mdlTextFieldInput id: html lastId ]
 "
 Class {
-	#name : #MDLTextFieldLabel,
-	#superclass : #WALabelTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLTextFieldLabel',
+	#superclass : 'WALabelTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTextFieldLabel >> initialize [
 	super initialize.
 	self class: 'mdl-textfield__label'

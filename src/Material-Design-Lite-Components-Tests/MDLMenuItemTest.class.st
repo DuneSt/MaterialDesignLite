@@ -1,25 +1,27 @@
 Class {
-	#name : #MDLMenuItemTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Nav'
+	#name : 'MDLMenuItemTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Nav',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Nav'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMenuItemTest >> testBareBrush [
 	self assert: [ :html | html mdlMenuItem ] generates: '<li class="mdl-menu__item"></li>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMenuItemTest >> testDisabled [
 	self assert: [ :html | html mdlMenuItem disabled ] generates: '<li class="mdl-menu__item" disabled="true"></li>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMenuItemTest >> testFullBleedDivider [
 	self assert: [ :html | html mdlMenuItem fullBleedDivider ] generates: '<li class="mdl-menu__item mdl-menu__item--full-bleed-divider"></li>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMenuItemTest >> testWithContent [
 	self assert: [ :html | html mdlMenuItem: 'test' ] generates: '<li class="mdl-menu__item">test</li>'
 ]

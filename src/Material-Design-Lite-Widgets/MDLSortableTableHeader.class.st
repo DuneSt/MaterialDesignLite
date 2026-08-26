@@ -1,52 +1,54 @@
 Class {
-	#name : #MDLSortableTableHeader,
-	#superclass : #Object,
+	#name : 'MDLSortableTableHeader',
+	#superclass : 'Object',
 	#instVars : [
 		'currentState',
 		'unsortedState',
 		'cells'
 	],
-	#category : 'Material-Design-Lite-Widgets-Table'
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLSortableTableHeader class >> for: element [
 	^ self new cells: element
 ]
 
-{ #category : #converting }
+{ #category : 'converting' }
 MDLSortableTableHeader >> asMDLSortableTableHeader [
 	^ self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeader >> cells [
 	^ cells
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeader >> cells: aCollection [
 	cells := aCollection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeader >> currentState [
 	^ currentState
 		ifNil: [ self unsort.
 			currentState ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeader >> currentState: anObject [
 	currentState := anObject
 ]
 
-{ #category : #'state handling' }
+{ #category : 'state handling' }
 MDLSortableTableHeader >> goToNextState [
 	self currentState: self currentState nextState
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeader >> headingCellOn: html [
 	^ html mdlTableHeading
 		nonNumerical;
@@ -54,13 +56,13 @@ MDLSortableTableHeader >> headingCellOn: html [
 		yourself
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSortableTableHeader >> initialize [
 	super initialize.
 	unsortedState := MDLSortableTableHeaderElementUnsorted new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeader >> renderContentOn: aRenderer forTable: table columnIndex: i [
 	self currentState 
 		renderContentOn: aRenderer 
@@ -69,22 +71,22 @@ MDLSortableTableHeader >> renderContentOn: aRenderer forTable: table columnIndex
 		header: self
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeader >> tableCellOn: html [
 	^ html mdlTableCell nonNumerical
 ]
 
-{ #category : #sorting }
+{ #category : 'sorting' }
 MDLSortableTableHeader >> unsort [
 	self currentState: self unsortedState
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeader >> unsortedState [
 	^ unsortedState
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeader >> unsortedState: anObject [
 	unsortedState := anObject
 ]

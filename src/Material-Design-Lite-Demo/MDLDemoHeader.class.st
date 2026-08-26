@@ -5,20 +5,22 @@ Description
 A header for the MDL for seaside demo with all the pages.
 "
 Class {
-	#name : #MDLDemoHeader,
-	#superclass : #MDLDemoComponent,
+	#name : 'MDLDemoHeader',
+	#superclass : 'MDLDemoComponent',
 	#instVars : [
 		'activeTab'
 	],
-	#category : #'Material-Design-Lite-Demo-Core'
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoHeader >> possiblePages [
 	^ MDLDemoPage pagesToDisplay
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoHeader >> renderContentOn: html [
 	html mdlLayoutHeader
 		waterfall;
@@ -42,7 +44,7 @@ MDLDemoHeader >> renderContentOn: html [
 								with: aClass pageName ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoHeader >> renderForkMeOnGithubOn: html [
 	html anchor
 		url: 'https://github.com/DuneSt/MaterialDesignLite';

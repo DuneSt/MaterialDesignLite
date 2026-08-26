@@ -27,23 +27,25 @@ Example
 							id: 'tab-' , int asString ] ] ]
 "
 Class {
-	#name : #MDLLayoutTabBar,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLLayoutTabBar',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayoutTabBar >> initialize [
 	super initialize.
 	self class: 'mdl-layout__tab-bar'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutTabBar >> rippleEffect [
 	self class: 'mdl-js-ripple-effect'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutTabBar >> rippleEffectIf: aBoolean [
 	aBoolean ifTrue: [ self class: 'mdl-js-ripple-effect' ]
 ]

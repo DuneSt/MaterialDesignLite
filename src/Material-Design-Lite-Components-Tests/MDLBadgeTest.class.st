@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLBadgeTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Badge'
+	#name : 'MDLBadgeTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Badge',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Badge'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBadgeTest >> testBareBrush [
 	self assert: [ :html | html mdlBadge ] generates: '<span class="mdl-badge"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBadgeTest >> testComplexe [
 	self
 		assert: [ :html | 
@@ -21,27 +23,27 @@ MDLBadgeTest >> testComplexe [
 		generates: '<span class="mdl-badge mdl-badge--overlap mdl-badge--no-background" data-badge="3">Test</span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBadgeTest >> testDataBadge [
 	self assert: [ :html | html mdlBadge dataBadge: '1' ] generates: '<span class="mdl-badge" data-badge="1"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBadgeTest >> testDataBadgeWithNumber [
 	self assert: [ :html | html mdlBadge dataBadge: 1 ] generates: '<span class="mdl-badge" data-badge="1"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBadgeTest >> testNoBackground [
 	self assert: [ :html | html mdlBadge noBackground ] generates: '<span class="mdl-badge mdl-badge--no-background"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBadgeTest >> testOverlap [
 	self assert: [ :html | html mdlBadge overlap ] generates: '<span class="mdl-badge mdl-badge--overlap"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBadgeTest >> testWithContent [
 	self
 		assert: [ :html | 

@@ -2,12 +2,14 @@
 Magritte textInput component for a MAStringDescription
 "
 Class {
-	#name : #MDLMATextInputComponent,
-	#superclass : #MATextInputComponent,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMATextInputComponent',
+	#superclass : 'MATextInputComponent',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMATextInputComponent >> renderInputOn: html [
 	| inputId |
 	inputId := self labelId.

@@ -1,17 +1,19 @@
 Class {
-	#name : #MDLListIconComponentTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-List'
+	#name : 'MDLListIconComponentTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-List',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'List'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListIconComponentTest >> testHelpText [
 	self
 		assert: [ :html | html render: (MDLListIconComponent named: 'Test' helpText: 'This is an help text') ]
 		generatedIncludes: '<span class="mdl-tooltip mdl-tooltip--large" for="id1">This is an help text</span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListIconComponentTest >> testNoHelpTextGeneratesNoTooltip [
 	self
 		deny: [ :html | 

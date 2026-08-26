@@ -41,18 +41,20 @@ Example
 				with: '2 (4 phone)' ]
 "
 Class {
-	#name : #MDLGrid,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLGrid',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLGrid >> initialize [
 	super initialize.
 	self class: 'mdl-grid'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLGrid >> noSpacing [
 	self class: 'mdl-grid--no-spacing'
 ]

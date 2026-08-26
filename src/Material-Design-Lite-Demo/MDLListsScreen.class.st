@@ -2,43 +2,45 @@
 Customizable scrollable lists.
 "
 Class {
-	#name : #MDLListsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLListsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLListsScreen class >> icon [
 		^ 'complistsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLListsScreen class >> title [
 	^ 'Lists'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLListsScreen >> avatarActionsList [
 	^ OrderedDictionary new
 		add: 'Avatars and actions ' -> #renderAvatarActionsListOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLListsScreen >> avatarControlsList [
 	^ OrderedDictionary new
 		add: 'Avatars and controls ' -> #renderAvatarControlsListOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLListsScreen >> iconsList [
 	^ OrderedDictionary new
 		add: 'Icons ' -> #renderIconsListOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLListsScreen >> renderAvatarActionsListOn: html [
 	html mdlList
 		style: 'width: 300px';
@@ -55,7 +57,7 @@ MDLListsScreen >> renderAvatarActionsListOn: html [
 								with: [ html mdlIcon: #star ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLListsScreen >> renderAvatarControlsListOn: html [
 	html mdlList
 		style: 'width: 300px';
@@ -101,7 +103,7 @@ MDLListsScreen >> renderAvatarControlsListOn: html [
 									html mdlSwitchLabel ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLListsScreen >> renderIconsListOn: html [
 	html mdlList
 		style: 'width: 300px';
@@ -115,7 +117,7 @@ MDLListsScreen >> renderIconsListOn: html [
 									html text: name ] ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLListsScreen >> renderScreenContentOn: html [
 	self
 		render: self simpleList on: html;
@@ -126,7 +128,7 @@ MDLListsScreen >> renderScreenContentOn: html [
 		render: self threeLineList on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLListsScreen >> renderSimpleListOn: html [
 	html mdlList
 		style: 'width: 300px';
@@ -134,7 +136,7 @@ MDLListsScreen >> renderSimpleListOn: html [
 			#('Bryan Cranston' 'Aaron Paul' 'Bob Odenkirk') do: [ :name | html mdlListItem: [ html mdlListPrimaryContent: name ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLListsScreen >> renderThreeLineListOn: html [
 	| actors |
 	actors := OrderedDictionary
@@ -159,7 +161,7 @@ MDLListsScreen >> renderThreeLineListOn: html [
 										with: [ html mdlIcon: #star ] ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLListsScreen >> renderTwoLineListOn: html [
 	html mdlList
 		style: 'width: 300px';
@@ -202,21 +204,21 @@ MDLListsScreen >> renderTwoLineListOn: html [
 								with: [ html mdlIcon: #star ] ] ] ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLListsScreen >> simpleList [
 	^ OrderedDictionary new
 		add: 'Simple list ' -> #renderSimpleListOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLListsScreen >> threeLineList [
 	^ OrderedDictionary new
 		add: 'Three line ' -> #renderThreeLineListOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLListsScreen >> twoLineList [
 	^ OrderedDictionary new
 		add: 'Two line ' -> #renderTwoLineListOn:;

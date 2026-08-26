@@ -29,37 +29,39 @@ Examples
 
 "
 Class {
-	#name : #MDLAlert,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Extensions-Alerts'
+	#name : 'MDLAlert',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Extensions-Alerts',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'Alerts'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLAlert >> beDanger [
 	self class: 'mdl-alert__danger'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLAlert >> beDefault [
 	self class: 'mdl-alert__default'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLAlert >> beInfo [
 	self class: 'mdl-alert__info'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLAlert >> beSuccess [
 	self class: 'mdl-alert__success'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLAlert >> beWarning [
 	self class: 'mdl-alert__warning'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLAlert >> initialize [
 	super initialize.
 	self class: 'mdl-alert'

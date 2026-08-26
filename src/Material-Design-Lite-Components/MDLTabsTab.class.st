@@ -29,23 +29,25 @@ Example
 						with: [ html unorderedList: [ members do: [ :member | html listItem: member ] ] ] ] ]
 "
 Class {
-	#name : #MDLTabsTab,
-	#superclass : #WAAnchorTag,
-	#category : #'Material-Design-Lite-Components-Nav'
+	#name : 'MDLTabsTab',
+	#superclass : 'WAAnchorTag',
+	#category : 'Material-Design-Lite-Components-Nav',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Nav'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTabsTab >> initialize [
 	super initialize.
 	self class: 'mdl-tabs__tab'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTabsTab >> isActive [
 	self class: 'is-active'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTabsTab >> isActiveIf: aBoolean [
 	aBoolean ifTrue: [ self isActive ]
 ]

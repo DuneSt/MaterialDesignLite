@@ -46,30 +46,32 @@ Internal Representation and Key Implementation Points.
 
 "
 Class {
-	#name : #MDLPaginationComponent,
-	#superclass : #MDLWidget,
+	#name : 'MDLPaginationComponent',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'currentPage',
 		'numberOfPages',
 		'adjacentsPagesToShow',
 		'updateBlock'
 	],
-	#category : 'Material-Design-Lite-Extensions-Pagination'
+	#category : 'Material-Design-Lite-Extensions-Pagination',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'Pagination'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent class >> defaultNumberOfAdjacentsPagesToShow [
 	^ 2
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLPaginationComponent class >> numberOfPages: aBlockOrInteger [
 	^ self new
 		numberOfPages: aBlockOrInteger;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLPaginationComponent class >> numberOfPages: aBlockOrInteger updateBlock: aBlock [
 	^ self new
 		numberOfPages: aBlockOrInteger;
@@ -77,23 +79,23 @@ MDLPaginationComponent class >> numberOfPages: aBlockOrInteger updateBlock: aBlo
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> adjacentsPagesToShow [
 	^ adjacentsPagesToShow ifNil: [ adjacentsPagesToShow := self defaultNumberOfAdjacentsPagesToShow ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> adjacentsPagesToShow: anInteger [
 	self assert: anInteger positive.
 	adjacentsPagesToShow := anInteger
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> currentPage [
 	^ currentPage value
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> currentPage: anInteger [
 	(anInteger between: self minPage and: self numberOfPages)
 		ifFalse: [ SubscriptOutOfBounds
@@ -104,17 +106,17 @@ MDLPaginationComponent >> currentPage: anInteger [
 	currentPage := anInteger
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> defaultNumberOfAdjacentsPagesToShow [
 	^ self class defaultNumberOfAdjacentsPagesToShow
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLPaginationComponent >> firstPage [
 	^ self currentPage: self minPage
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLPaginationComponent >> jsAjaxPageChangedCallback: callback on: html [
 	^ html jQuery ajax
 		callback: callback;
@@ -126,33 +128,33 @@ MDLPaginationComponent >> jsAjaxPageChangedCallback: callback on: html [
 					self updateBlock value: s value: html ])
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLPaginationComponent >> lastPage [
 	^ self currentPage: self numberOfPages
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> minPage [
 	^ 1 min: self numberOfPages
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLPaginationComponent >> nextPage [
 	^ self currentPage: self currentPage + 1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> numberOfPages [
 	^ numberOfPages value
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> numberOfPages: anIntegerOrBlock [
 	numberOfPages := anIntegerOrBlock.
 	self firstPage
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 MDLPaginationComponent >> pageSelectionComponent [
 	^ (MDLSelectWidget
 		possibilities: (1 to: self numberOfPages)
@@ -170,17 +172,17 @@ MDLPaginationComponent >> pageSelectionComponent [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> pagesButtonsToRender [
 	^ (self currentPage - self adjacentsPagesToShow max: 1) to: (self currentPage + self adjacentsPagesToShow min: self numberOfPages)
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLPaginationComponent >> previousPage [
 	^ self currentPage: self currentPage - 1
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderButtonWithIconNamed: aSymbol callback: aBlock disabledIf: aBoolean on: html [
 	(self updateBlock isNil and: [ aBoolean not ])
 		ifTrue: [ html mdlAnchorButton
@@ -194,7 +196,7 @@ MDLPaginationComponent >> renderButtonWithIconNamed: aSymbol callback: aBlock di
 				icon: aSymbol ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderContentOn: html [
 	self ensureId: html.
 	html div
@@ -203,7 +205,7 @@ MDLPaginationComponent >> renderContentOn: html [
 		with: [ self renderPaginationComponentOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderFirstDisabledButtonOn: html [
 	self shouldShowFirstDisabledButton ifFalse: [ ^ self ].
 
@@ -212,7 +214,7 @@ MDLPaginationComponent >> renderFirstDisabledButtonOn: html [
 		with: '…'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderLastDisabledButtonOn: html [
 	self shouldShowLastDisabledButton ifFalse: [ ^ self ].
 	
@@ -221,7 +223,7 @@ MDLPaginationComponent >> renderLastDisabledButtonOn: html [
 		with: '…'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderNextButtonsOn: html [
 	self
 		renderButtonWithIconNamed: #keyboard_arrow_right
@@ -235,7 +237,7 @@ MDLPaginationComponent >> renderNextButtonsOn: html [
 		on: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderPagesButtonsOn: html [
 	self pagesButtonsToRender
 		do: [ :int | 
@@ -251,7 +253,7 @@ MDLPaginationComponent >> renderPagesButtonsOn: html [
 						with: int ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderPaginationComponentOn: html [
 	html div
 		class: 'mdl-pagination__container';
@@ -267,7 +269,7 @@ MDLPaginationComponent >> renderPaginationComponentOn: html [
 			html form: self pageSelectionComponent ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponent >> renderPreviousButtonsOn: html [
 	self
 		renderButtonWithIconNamed: #first_page
@@ -281,22 +283,22 @@ MDLPaginationComponent >> renderPreviousButtonsOn: html [
 		on: html
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLPaginationComponent >> shouldShowFirstDisabledButton [
 	^ self currentPage > (self adjacentsPagesToShow + 1)
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLPaginationComponent >> shouldShowLastDisabledButton [
 	^ self currentPage < (self numberOfPages - self adjacentsPagesToShow max: 0)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> updateBlock [
 	^ updateBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponent >> updateBlock: aBlock [
 	self assert: aBlock numArgs = 2 description: 'The update block should take 2 parameters. The first one is a stream and the second a html canvas. '.
 

@@ -10,44 +10,46 @@ My #onClickBlock has a single argument: the row on which the action should be ap
 A #tooltip can bet set to display useful information to user about the purpose of my buttons.
 "
 Class {
-	#name : #MDLButtonColumnDescription,
-	#superclass : #MDLTableColumnDescription,
+	#name : 'MDLButtonColumnDescription',
+	#superclass : 'MDLTableColumnDescription',
 	#instVars : [
 		'onClickBlock',
 		'iconName',
 		'tooltip'
 	],
-	#category : #'Material-Design-Lite-Widgets-Table'
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonColumnDescription >> iconName [
 	^ iconName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonColumnDescription >> iconName: anObject [
 	iconName := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLButtonColumnDescription >> initialize [
 	super initialize.
 	"Initialize with a behaviour that does nothing."
 	self onClickBlock: [  ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonColumnDescription >> onClickBlock [
 	^ onClickBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonColumnDescription >> onClickBlock: anObject [
 	onClickBlock := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLButtonColumnDescription >> render: row on: html [
 	| buttonId |
 	html mdlTableCell
@@ -60,7 +62,7 @@ MDLButtonColumnDescription >> render: row on: html [
 	self renderTooltipFor: buttonId on: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLButtonColumnDescription >> renderHeadingOn: html [
 	(super renderHeadingOn: html)
 		class: 'mdl-table-widget__cell--button';
@@ -68,7 +70,7 @@ MDLButtonColumnDescription >> renderHeadingOn: html [
 		with: self title.
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLButtonColumnDescription >> renderTooltipFor: buttonId on: html [
 	self tooltip ifNil: [ ^ self ].
 	html mdlTooltip
@@ -76,12 +78,12 @@ MDLButtonColumnDescription >> renderTooltipFor: buttonId on: html [
 		with: [ html text: self tooltip ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonColumnDescription >> tooltip [
 	^ tooltip
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonColumnDescription >> tooltip: anObject [
 	tooltip := anObject
 ]

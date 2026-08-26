@@ -1,19 +1,20 @@
 Class {
-	#name : #MDLApplicationTest,
-	#superclass : #SGTAbstractSeasideTestCase,
+	#name : 'MDLApplicationTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
 	#instVars : [
 		'app'
 	],
-	#category : #'Material-Design-Lite-Core-Tests'
+	#category : 'Material-Design-Lite-Core-Tests',
+	#package : 'Material-Design-Lite-Core-Tests'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 MDLApplicationTest >> setUp [
 	super setUp.
 	app := MDLApplication new
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLApplicationTest >> testAddScreen [
 	| screen |
 	self assert: app screens size equals: 0.
@@ -23,13 +24,13 @@ MDLApplicationTest >> testAddScreen [
 	self assert: app screens anyOne equals: screen
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLApplicationTest >> testPrimaryColorSecondaryColor [
 	app primaryColor: MDLColor pink secondaryColor: MDLColor orange.
 	self assert: app colors equals: 'pink-orange'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLApplicationTest >> testRemoveScreen [
 	| screen |
 	screen := WAComponent new.

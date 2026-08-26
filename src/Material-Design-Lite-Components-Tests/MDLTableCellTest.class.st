@@ -1,20 +1,22 @@
 Class {
-	#name : #MDLTableCellTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Tables'
+	#name : 'MDLTableCellTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Tables',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Tables'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTableCellTest >> testBareBrush [
 	self assert: [ :html | html mdlTableCell ] generates: '<td></td>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTableCellTest >> testNonNumerical [
 	self assert: [ :html | html mdlTableCell nonNumerical ] generates: '<td class="mdl-data-table__cell--non-numeric"></td>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTableCellTest >> testWithContent [
 	self assert: [ :html | html mdlTableCell: 'test' ] generates: '<td>test</td>'
 ]

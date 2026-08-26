@@ -2,27 +2,29 @@
 A high-level widget to generate table.
 "
 Class {
-	#name : #MDLTableWidgetScreen,
-	#superclass : #MDLWidgetDemo,
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#name : 'MDLTableWidgetScreen',
+	#superclass : 'MDLWidgetDemo',
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableWidgetScreen class >> icon [
 	^ #comptablesPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableWidgetScreen class >> title [
 	^ 'Table widget'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTableWidgetScreen >> renderScreenContentOn: html [
 	self render: self table on: html
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableWidgetScreen >> renderTableWidgetOn: html [
 	html
 		render:
@@ -44,7 +46,7 @@ MDLTableWidgetScreen >> renderTableWidgetOn: html [
 				yourself)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableWidgetScreen >> table [
 	^ OrderedDictionary new
 		add: 'Table Widget' -> #renderTableWidgetOn:;

@@ -5,22 +5,24 @@ Description
 Component used to fold/unfold a MDLVerticalToolbar.
 "
 Class {
-	#name : #MDLFoldButton,
-	#superclass : #WAComponent,
+	#name : 'MDLFoldButton',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'onCompleteScript',
 		'divId',
 		'isFolded'
 	],
-	#category : #'Material-Design-Lite-Extensions-Panels'
+	#category : 'Material-Design-Lite-Extensions-Panels',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'Panels'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLFoldButton class >> for: aCssId [
 	^ self for: aCssId onComplete: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLFoldButton class >> for: aCssId onComplete: aScript [
 	^ self new
 		divId: aCssId;
@@ -28,70 +30,70 @@ MDLFoldButton class >> for: aCssId onComplete: aScript [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> divId [
 	^ divId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> divId: anObject [
 	divId := anObject
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLFoldButton >> fold [
 	self isFolded: true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> iconLabel [
 	^ #swap_horiz
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLFoldButton >> initialize [
 	super initialize.
 	self unfold
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> isFolded [
 	^ isFolded
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> isFolded: anObject [
 	isFolded := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> isSelected [
 	"To be polymorphic with MDLPanelSwitcherButton"
 	
 	^ false
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> isSelected: aBoolean [ 
 	"Just to be polymorph with other buttons. I do not need to keep my selection."
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> onCompleteScript [
 	^ onCompleteScript ifNil: [ onCompleteScript := '' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> onCompleteScript: anObject [
 	onCompleteScript := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFoldButton >> owner: aSYNVerticalToolbar [ 
 	"Just to be polymorph. I do nothing"
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFoldButton >> renderContentOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -112,13 +114,13 @@ MDLFoldButton >> renderContentOn: html [
 		ifTrue: [ html document addLoadScript: ('document.getElementById(''' , self divId allButFirst , ''').style.width=''0'';' , self onCompleteScript) js ]
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLFoldButton >> showAndHide [
 	^ ('$(".visualization").children().width(0);if(this.dataset.fold=="false"){this.dataset.fold="true";$(this.dataset.for)[0].style.width="0";}else{this.dataset.fold="false";$(this.dataset.for)[0].style.width="";};'
 		, self onCompleteScript) js
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLFoldButton >> unfold [
 	self isFolded: false
 ]

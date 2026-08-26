@@ -23,45 +23,47 @@ Example
 			html mdlLayoutContent: [  ] ]
 "
 Class {
-	#name : #MDLLayout,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLLayout',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayout >> fixedDrawer [
 	"This option will make the drawer visible all the time instebad of using an icon to show it."
 
 	self class: 'mdl-layout--fixed-drawer'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayout >> fixedHeader [
 	"This option will make the header visible of large and small screen. This is not about making the header visible when we scroll but about making the header visible on small screens."
 
 	self class: 'mdl-layout--fixed-header'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayout >> fixedTabs [
 	"Uses fixed tabs instead of the default scrollable tabs"
 
 	self class: 'mdl-layout--fixed-tabs'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayout >> initialize [
 	super initialize.
 	self class: 'mdl-layout'.
 	self class: 'mdl-js-layout'. 
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayout >> noDesktopDrawerButton [
 	self class: 'mdl-layout--no-desktop-drawer-button' 
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayout >> noDrawerButton [
 	self class: 'mdl-layout--no-drawer-button' 
 ]

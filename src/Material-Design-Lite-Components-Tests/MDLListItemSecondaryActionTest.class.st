@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLListItemSecondaryActionTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-List'
+	#name : 'MDLListItemSecondaryActionTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-List',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'List'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListItemSecondaryActionTest >> testBareBrush [
 	self assert: [ :html | html mdlListItemSecondaryAction ] generates: '<a class="mdl-list__item-secondary-action"></a>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListItemSecondaryActionTest >> testWithContent [
 	self assert: [ :html | html mdlListItemSecondaryAction: 'test' ] generates: '<a class="mdl-list__item-secondary-action">test</a>'
 ]

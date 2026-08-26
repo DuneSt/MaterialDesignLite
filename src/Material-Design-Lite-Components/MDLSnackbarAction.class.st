@@ -18,12 +18,14 @@ Example
 		with: 'Show toast'
 "
 Class {
-	#name : #MDLSnackbarAction,
-	#superclass : #WAButtonTag,
-	#category : #'Material-Design-Lite-Components-Snackbar'
+	#name : 'MDLSnackbarAction',
+	#superclass : 'WAButtonTag',
+	#category : 'Material-Design-Lite-Components-Snackbar',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Snackbar'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSnackbarAction >> initialize [
 	super initialize.
 	self class: 'mdl-snackbar__action'

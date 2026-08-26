@@ -2,12 +2,14 @@
 A MDLExpansionPanelTest is a test class for testing the behavior of MDLExpansionPanel
 "
 Class {
-	#name : #MDLExpansionPanelTest,
-	#superclass : #TestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-Expansion'
+	#name : 'MDLExpansionPanelTest',
+	#superclass : 'TestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-Expansion',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Expansion'
 }
 
-{ #category : #test }
+{ #category : 'test' }
 MDLExpansionPanelTest >> testIsExpanded [
 	| expansionPanel |
 	expansionPanel := MDLExpansionPanel new.
@@ -21,7 +23,7 @@ MDLExpansionPanelTest >> testIsExpanded [
 	self deny: expansionPanel isExpanded.
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLExpansionPanelTest >> testIsFolded [
 	| expansionPanel |
 	expansionPanel := MDLExpansionPanel new.
@@ -35,7 +37,7 @@ MDLExpansionPanelTest >> testIsFolded [
 	self assert: expansionPanel isFolded.
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLExpansionPanelTest >> testToggleExpansion [
 	| expansionPanel |
 	expansionPanel := MDLExpansionPanel new.
@@ -50,7 +52,7 @@ MDLExpansionPanelTest >> testToggleExpansion [
 	self assert: expansionPanel isExpanded.
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLExpansionPanelTest >> testUseAjaxExpansionStrategy [
 	| expansionPanel |
 	expansionPanel := MDLExpansionPanel new.
@@ -60,7 +62,7 @@ MDLExpansionPanelTest >> testUseAjaxExpansionStrategy [
 	self assert: expansionPanel expansionStrategy class equals: MDLAjaxExpansionStrategy
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLExpansionPanelTest >> testUseHideExpansionStrategy [
 	| expansionPanel |
 	expansionPanel := MDLExpansionPanel new.
@@ -70,7 +72,7 @@ MDLExpansionPanelTest >> testUseHideExpansionStrategy [
 	self assert: expansionPanel expansionStrategy class equals: MDLHideExpansionStrategy
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLExpansionPanelTest >> testUseLazyExpansionStrategy [
 	| expansionPanel |
 	expansionPanel := MDLExpansionPanel new.

@@ -2,16 +2,18 @@
 I represent a widget for card title
 "
 Class {
-	#name : #MDLCardTitle,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLCardTitle',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'level',
 		'title'
 	],
-	#category : 'Material-Design-Lite-Widgets-Cards'
+	#category : 'Material-Design-Lite-Widgets-Cards',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Cards'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLCardTitle class >> newWithTitle: aString level: aNumber [
 	^ self new
 		title: aString;
@@ -19,7 +21,7 @@ MDLCardTitle class >> newWithTitle: aString level: aNumber [
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLCardTitle class >> newWithTitle: aString level: aNumber class: cssClasses [
 	^ self new
 		title: aString;
@@ -28,23 +30,23 @@ MDLCardTitle class >> newWithTitle: aString level: aNumber class: cssClasses [
 		yourself
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCardTitle >> initialize [
 	super initialize.
 	level := 2.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardTitle >> level [
 	^ level
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardTitle >> level: anObject [
 	level := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCardTitle >> renderContentOn: html [
 	| brush |
 	brush := html mdlCardTitleContainer.
@@ -52,12 +54,12 @@ MDLCardTitle >> renderContentOn: html [
 	brush with: [ html mdlCardTitleText: self title level: self level ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardTitle >> title [
 	^ title
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardTitle >> title: anObject [
 	title := anObject
 ]

@@ -22,12 +22,14 @@ Example
 								with: [ html mdlIcon: #star ] ] ] ]
 "
 Class {
-	#name : #MDLList,
-	#superclass : #WAUnorderedListTag,
-	#category : #'Material-Design-Lite-Components-List'
+	#name : 'MDLList',
+	#superclass : 'WAUnorderedListTag',
+	#category : 'Material-Design-Lite-Components-List',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'List'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLList >> initialize [
 	super initialize.
 	self class: 'mdl-list'

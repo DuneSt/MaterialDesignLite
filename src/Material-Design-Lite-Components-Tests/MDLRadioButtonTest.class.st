@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLRadioButtonTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Forms'
+	#name : 'MDLRadioButtonTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Forms',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Forms'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLRadioButtonTest >> testBareBrush [
 	self assert: [ :html | html mdlRadioButton ] generates: '<input class="mdl-radio__button" type="radio"/>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLRadioButtonTest >> testWithContent [
 	"Not with this tag"
 ]

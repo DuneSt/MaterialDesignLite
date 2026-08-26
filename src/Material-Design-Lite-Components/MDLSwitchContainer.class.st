@@ -17,24 +17,26 @@ Example
 			html mdlSwitchLabel: 'On / Off' ]
 "
 Class {
-	#name : #MDLSwitchContainer,
-	#superclass : #WALabelTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLSwitchContainer',
+	#superclass : 'WALabelTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSwitchContainer >> initialize [
 	super initialize.
 	self class: 'mdl-switch'.
 	self class: 'mdl-js-switch'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLSwitchContainer >> rippleEffect [
 	self class: 'mdl-js-ripple-effect'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLSwitchContainer >> rippleEffectIf: aBoolean [
 	aBoolean ifTrue: [ self rippleEffect ]
 ]

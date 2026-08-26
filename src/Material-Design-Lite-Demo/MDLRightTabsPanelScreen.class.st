@@ -2,22 +2,24 @@
 Extension to create a browser with a resizable right panel with tabs.
 "
 Class {
-	#name : #MDLRightTabsPanelScreen,
-	#superclass : #MDLExtensionsDemo,
-	#category : #'Material-Design-Lite-Demo-Extensions'
+	#name : 'MDLRightTabsPanelScreen',
+	#superclass : 'MDLExtensionsDemo',
+	#category : 'Material-Design-Lite-Demo-Extensions',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Extensions'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLRightTabsPanelScreen class >> icon [
 	^ 'extRightPanelPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLRightTabsPanelScreen class >> title [
 	^ 'Right panel with tabs'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLRightTabsPanelScreen >> renderRightPanelFoldedOn: html [
 	"The code is not really useful here since this extension it managed by Traits.
 	
@@ -29,7 +31,7 @@ MDLRightTabsPanelScreen >> renderRightPanelFoldedOn: html [
 		with: MDLExampleComponentWithRightPanelFolded new
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLRightTabsPanelScreen >> renderRightPanelOn: html [
 	"The code is not really useful here since this extension it managed by Traits.
 	
@@ -50,28 +52,28 @@ MDLRightTabsPanelScreen >> renderRightPanelOn: html [
 		with: MDLExampleComponentWithRightPanel new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLRightTabsPanelScreen >> renderScreenContentOn: html [
 	self
 		render: self rightPanel fullWidth: true on: html;
 		render: self rightPanelFolded fullWidth: true on: html
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLRightTabsPanelScreen >> rightPanel [
 	^ OrderedDictionary new
 		add: 'Right panel resizable with tabs' -> #renderRightPanelOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLRightTabsPanelScreen >> rightPanelFolded [
 	^ OrderedDictionary new
 		add: 'Right panel folded' -> #renderRightPanelFoldedOn:;
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLRightTabsPanelScreen >> warningMessage [
 	^ 'This extension is not available in the Gemstone version of this project. This is due to the lack of Traits on Gemstone. You can reproduce it by flattening the Traits of the project in your project.'
 ]

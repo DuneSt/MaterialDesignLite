@@ -2,19 +2,21 @@
 I am a nested list filter keeping only elements whose name begins with the pattern passed by the user in an insensitive way.
 "
 Class {
-	#name : #MDLInsensitiveBeginsWithFilter,
-	#superclass : #MDLAbstractFilter,
-	#category : #'Material-Design-Lite-Widgets-List'
+	#name : 'MDLInsensitiveBeginsWithFilter',
+	#superclass : 'MDLAbstractFilter',
+	#category : 'Material-Design-Lite-Widgets-List',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'List'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLInsensitiveBeginsWithFilter class >> applySelectMatchingOnQueryCollection: aQueryCollection with: aFormatBlock like: aPattern [
 	^ aQueryCollection wrappedQuery
 		with: aFormatBlock
 		ilike: aPattern , '%'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLInsensitiveBeginsWithFilter class >> formatedElement: aString matches: aPattern [
 	^ aString asLowercase beginsWith: aPattern asLowercase
 ]

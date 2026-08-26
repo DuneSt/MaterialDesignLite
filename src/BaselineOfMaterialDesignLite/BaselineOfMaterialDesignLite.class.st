@@ -2,12 +2,13 @@
 I am a baseline of MaterialDesignLite. Read more at: https://github.com/DuneSt/MaterialDesignLite
 "
 Class {
-	#name : #BaselineOfMaterialDesignLite,
-	#superclass : #BaselineOf,
-	#category : #BaselineOfMaterialDesignLite
+	#name : 'BaselineOfMaterialDesignLite',
+	#superclass : 'BaselineOf',
+	#category : 'BaselineOfMaterialDesignLite',
+	#package : 'BaselineOfMaterialDesignLite'
 }
 
-{ #category : #baseline }
+{ #category : 'baseline' }
 BaselineOfMaterialDesignLite >> baseline: spec [
 	<baseline>
 	spec
@@ -49,7 +50,7 @@ BaselineOfMaterialDesignLite >> baseline: spec [
 				group: 'tests' with: #('Material-Design-Lite-Components-Tests' 'Material-Design-Lite-Widgets-Tests' 'Material-Design-Lite-Extensions-Tests' 'Material-Design-Lite-Core-Tests') ]
 ]
 
-{ #category : #dependencies }
+{ #category : 'dependencies' }
 BaselineOfMaterialDesignLite >> fileLibraryHelper: spec [
 	"I small project to help developers to manage the files in the FileLibrary."
 
@@ -58,7 +59,7 @@ BaselineOfMaterialDesignLite >> fileLibraryHelper: spec [
 		with: [ spec repository: 'github://jecisc/FileLibraryHelper:v1.x.x/src' ]
 ]
 
-{ #category : #dependencies }
+{ #category : 'dependencies' }
 BaselineOfMaterialDesignLite >> gitBridge: spec [
 	"I small project to help developers to manage the files in the FileLibrary."
 
@@ -67,7 +68,7 @@ BaselineOfMaterialDesignLite >> gitBridge: spec [
     	with: [ spec repository: 'github://jecisc/GitBridge:v1.x.x/src' ]
 ]
 
-{ #category : #dependencies }
+{ #category : 'dependencies' }
 BaselineOfMaterialDesignLite >> magritte: spec [
 	spec
 		baseline: 'Magritte'
@@ -76,21 +77,21 @@ BaselineOfMaterialDesignLite >> magritte: spec [
 				repository: 'github://magritte-metamodel/magritte:v3.8/source' ]
 ]
 
-{ #category : #dependencies }
+{ #category : 'dependencies' }
 BaselineOfMaterialDesignLite >> materialColors: spec [
 	spec
 		baseline: 'MaterialColors'
 		with: [ spec repository: 'github://DuneSt/MaterialColors:v2.x.x/src' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 BaselineOfMaterialDesignLite >> projectClass [
 	^ [ self class environment at: #MetacelloCypressBaselineProject ]
 		on: NotFound
 		do: [ super projectClass ]
 ]
 
-{ #category : #dependencies }
+{ #category : 'dependencies' }
 BaselineOfMaterialDesignLite >> seaside3: spec [
 	spec
 		baseline: 'Seaside3'
@@ -99,7 +100,7 @@ BaselineOfMaterialDesignLite >> seaside3: spec [
 				repository: 'github://SeasideSt/Seaside:v3.4.x/repository' ]
 ]
 
-{ #category : #dependencies }
+{ #category : 'dependencies' }
 BaselineOfMaterialDesignLite >> seasideGenerationTester: spec [
 	spec baseline: 'SeasideGenerationTester' with: [ spec repository: 'github://DuneSt/SeasideGenerationTester:v1.x.x/src' ]
 ]

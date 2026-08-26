@@ -28,18 +28,20 @@ Example
 							html listItem: [ html anchor: 'Privacy & Terms' ] ] ] ]
 "
 Class {
-	#name : #MDLMegaFooter,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Footer'
+	#name : 'MDLMegaFooter',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Footer',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Footer'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLMegaFooter >> initialize [
 	super initialize.
 	self class: 'mdl-mega-footer'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMegaFooter >> tag [
 	^ 'footer'
 ]

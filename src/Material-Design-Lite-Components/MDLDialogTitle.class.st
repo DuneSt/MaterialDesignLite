@@ -20,12 +20,14 @@ Example
 			html mdlDialogContent: [ html paragraph: 'You managed to open the dialog' ] ]
 "
 Class {
-	#name : #MDLDialogTitle,
-	#superclass : #WAHeadingTag,
-	#category : #'Material-Design-Lite-Components-Dialog'
+	#name : 'MDLDialogTitle',
+	#superclass : 'WAHeadingTag',
+	#category : 'Material-Design-Lite-Components-Dialog',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Dialog'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLDialogTitle >> initialize [
 	super initialize.
 	self level: 4.

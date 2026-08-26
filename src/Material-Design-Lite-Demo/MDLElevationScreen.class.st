@@ -2,29 +2,31 @@
 Elevation is the relative depth, or distance, between two surfaces along the z-axis.
 "
 Class {
-	#name : #MDLElevationScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLElevationScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLElevationScreen class >> icon [
 	^ 'elevationPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLElevationScreen class >> title [
 	^ 'Elevation'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLElevationScreen >> elevations [
 	^ OrderedDictionary new
 		add: 'Elevations' -> #renderElevationsOn:;
 		yourself
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLElevationScreen >> renderElevationsOn: html [
 	html
 		mdlGrid: [ #(0 2 3 4 6 8 16 24)
@@ -36,7 +38,7 @@ MDLElevationScreen >> renderElevationsOn: html [
 						with: elevation asString , 'dp' ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLElevationScreen >> renderScreenContentOn: html [
 	self render: self elevations fullWidth: true on: html
 ]

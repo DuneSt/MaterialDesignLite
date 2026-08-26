@@ -1,18 +1,20 @@
 Class {
-	#name : #MDLFooterComponentsSection,
-	#superclass : #MDLFooterAbstractSection,
+	#name : 'MDLFooterComponentsSection',
+	#superclass : 'MDLFooterAbstractSection',
 	#instVars : [
 		'components'
 	],
-	#category : 'Material-Design-Lite-Widgets-Footer'
+	#category : 'Material-Design-Lite-Widgets-Footer',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Footer'
 }
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLFooterComponentsSection >> addComponents: aComponentsCollection [
 	components := aComponentsCollection 
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFooterComponentsSection >> renderSectionOn: html [
 	components do: [ :aComponent | html render: aComponent ]
 ]

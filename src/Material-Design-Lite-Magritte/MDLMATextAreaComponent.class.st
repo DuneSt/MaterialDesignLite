@@ -2,12 +2,14 @@
 MDL component class for a MAMemoDescription
 "
 Class {
-	#name : #MDLMATextAreaComponent,
-	#superclass : #MATextAreaComponent,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMATextAreaComponent',
+	#superclass : 'MATextAreaComponent',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMATextAreaComponent >> renderEditorOn: html [
 	| inputId |
 	inputId := self labelId.

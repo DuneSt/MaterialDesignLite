@@ -2,22 +2,24 @@
 Choose between states.
 "
 Class {
-	#name : #MDLTogglesScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLTogglesScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTogglesScreen class >> icon [
 	^ 'comptogglesPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTogglesScreen class >> title [
 	^ 'Toggles'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTogglesScreen >> checkbox [
 	^ OrderedDictionary new
 		add: 'Check on' -> #renderCheckOnOn:;
@@ -25,7 +27,7 @@ MDLTogglesScreen >> checkbox [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTogglesScreen >> iconToggle [
 	^ OrderedDictionary new
 		add: 'Icon on' -> #renderIconOnOn:;
@@ -33,7 +35,7 @@ MDLTogglesScreen >> iconToggle [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTogglesScreen >> radioButton [
 	^ OrderedDictionary new
 		add: 'Radio on' -> #renderRadioOnOn:;
@@ -42,7 +44,7 @@ MDLTogglesScreen >> radioButton [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderCheckOffOn: html [
 	html mdlCheckboxContainer
 		rippleEffect;
@@ -53,7 +55,7 @@ MDLTogglesScreen >> renderCheckOffOn: html [
 			html mdlCheckboxLabel: 'Checkbox' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderCheckOnOn: html [
 	html mdlCheckboxContainer
 		rippleEffect;
@@ -64,7 +66,7 @@ MDLTogglesScreen >> renderCheckOnOn: html [
 			html mdlCheckboxLabel: 'Checkbox' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderIconOffOn: html [
 	html mdlIconToggleContainer
 		rippleEffect;
@@ -73,7 +75,7 @@ MDLTogglesScreen >> renderIconOffOn: html [
 			html mdlIconToggleLabel: 'format_italic' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderIconOnOn: html [
 	html mdlIconToggleContainer
 		rippleEffect;
@@ -84,7 +86,7 @@ MDLTogglesScreen >> renderIconOnOn: html [
 			html mdlIconToggleLabel: 'format_bold' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderRadioFullOn: html [
 	html div
 		style: 'display: inline-block; width: 150px;';
@@ -104,7 +106,7 @@ MDLTogglesScreen >> renderRadioFullOn: html [
 										html text: boolean asString capitalized , '   ' ] ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderRadioOffOn: html [
 	html mdlRadioContainer
 		rippleEffect;
@@ -116,7 +118,7 @@ MDLTogglesScreen >> renderRadioOffOn: html [
 			html mdlRadioLabel: 'Second' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderRadioOnOn: html [
 	html mdlRadioContainer
 		rippleEffect;
@@ -129,7 +131,7 @@ MDLTogglesScreen >> renderRadioOnOn: html [
 			html mdlRadioLabel: 'First' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTogglesScreen >> renderScreenContentOn: html [
 	self renderTocOn: html.
 	html heading
@@ -158,7 +160,7 @@ MDLTogglesScreen >> renderScreenContentOn: html [
 	self render: self switch on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderSwitchOffOn: html [
 	html mdlSwitchContainer
 		rippleEffect;
@@ -168,7 +170,7 @@ MDLTogglesScreen >> renderSwitchOffOn: html [
 			html mdlSwitchLabel: 'On / Off' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTogglesScreen >> renderSwitchOnOn: html [
 	html mdlSwitchContainer
 		rippleEffect;
@@ -180,7 +182,7 @@ MDLTogglesScreen >> renderSwitchOnOn: html [
 			html mdlSwitchLabel: 'On / Off' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTogglesScreen >> sections [
 	^ OrderedDictionary
 		with: '#checkbox-toggle' -> 'Checkbox'
@@ -189,7 +191,7 @@ MDLTogglesScreen >> sections [
 		with: '#switch-toggle' -> 'Switch'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTogglesScreen >> switch [
 	^ OrderedDictionary new
 		add: 'Switch on' -> #renderSwitchOnOn:;

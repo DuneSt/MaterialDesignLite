@@ -2,8 +2,8 @@
 I am a widget for password change
 "
 Class {
-	#name : #MDLNewPasswordWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLNewPasswordWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'currentPassword',
 		'newPassword',
@@ -17,40 +17,41 @@ Class {
 		'pattern',
 		'errorMessage'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> badPasswordBlock [
 	^ badPasswordBlock ifNil: [ self error: 'Bad password' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> badPasswordBlock: anObject [
 	badPasswordBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> confirmPasswordLabel [
 	^ confirmPasswordLabel ifNil: [ newPasswordLabel := 'Confirm password' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> confirmPasswordLabel: anObject [
 	confirmPasswordLabel := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> currentPassword [
 	^ currentPassword
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> currentPassword: anObject [
 	currentPassword := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLNewPasswordWidget >> initialize [
 	super initialize.
 	rightOldPassword := false.
@@ -58,63 +59,63 @@ MDLNewPasswordWidget >> initialize [
 	errorMessage := ''
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> newPassword [
 	^ newPassword
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> newPassword: anObject [
 	newPassword := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> newPasswordLabel [
 	^ newPasswordLabel ifNil: [ newPasswordLabel := 'New password' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> newPasswordLabel: anObject [
 	^ newPasswordLabel := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> notMatchingPasswordsBlock [
 	^ notMatchingPasswordsBlock ifNil: [ self error: 'Passwords don''t match' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> notMatchingPasswordsBlock: anObject [
 	notMatchingPasswordsBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> oldPasswordLabel [
 	^ oldPasswordLabel ifNil: [ oldPasswordLabel := 'Current password' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> oldPasswordLabel: anObject [
 	^ oldPasswordLabel := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> onSuccessBlock [
 	^ onSuccessBlock ifNil: [ ^ [  ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNewPasswordWidget >> onSuccessBlock: anObject [
 	onSuccessBlock := anObject
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLNewPasswordWidget >> pattern: aPattern errorMessage: aString [
 	pattern := aPattern.
 	errorMessage := aString
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNewPasswordWidget >> renderContentOn: html [
 	html
 		render:

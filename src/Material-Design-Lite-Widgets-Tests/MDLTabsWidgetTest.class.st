@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLTabsWidgetTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-Tab'
+	#name : 'MDLTabsWidgetTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-Tab',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Tab'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTabsWidgetTest >> testAddTabNamedContent [
 	self
 		assert: [ :html | 
@@ -16,12 +18,12 @@ MDLTabsWidgetTest >> testAddTabNamedContent [
 		generatedIncludesAll: #('<a class="mdl-tabs__tab is-active"' 'href="#id2">Tab label</a>' '<div class="mdl-tabs__panel is-active" id="id2">Tab content</div>')
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTabsWidgetTest >> testEmptyWidget [
 	self assert: [ :html | html render: MDLTabWidget new ] generates: '<div class="mdl-tabs mdl-js-tabs" id="id1"><div class="mdl-tabs__tab-bar"></div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTabsWidgetTest >> testId [
 	self
 		assert: [ :html | 
@@ -33,7 +35,7 @@ MDLTabsWidgetTest >> testId [
 		generatedIncludes: 'id="ThisIsAnIdTest"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTabsWidgetTest >> testWithTwoTabs [
 	self
 		assert: [ :html | 

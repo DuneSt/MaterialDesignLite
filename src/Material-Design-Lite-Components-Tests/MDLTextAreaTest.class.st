@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLTextAreaTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Forms'
+	#name : 'MDLTextAreaTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Forms',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Forms'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextAreaTest >> testBareBrush [
 	self assert: [ :html | html mdlTextArea ] generates: '<textarea rows="auto" cols="auto" class="mdl-textfield__input"></textarea>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextAreaTest >> testWithContent [
 	self assert: [ :html | html mdlTextArea: 'test' ] generates: '<textarea rows="auto" cols="auto" class="mdl-textfield__input">test</textarea>'
 ]

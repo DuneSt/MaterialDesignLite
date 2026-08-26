@@ -14,30 +14,32 @@ To use it you need to:
 - Call #renderRightPanelOn: during the rendering phase of the component.
 "
 Class {
-	#name : #MDLExampleComponentWithRightPanel,
-	#superclass : #WAComponent,
+	#name : 'MDLExampleComponentWithRightPanel',
+	#superclass : 'WAComponent',
 	#traits : 'TRightTabsPanelBrowser',
 	#classTraits : 'TRightTabsPanelBrowser classTrait',
 	#instVars : [
 		'toolbar',
 		'rightPanel'
 	],
-	#category : #'Material-Design-Lite-Demo-Utils'
+	#category : 'Material-Design-Lite-Demo-Utils',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Utils'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExampleComponentWithRightPanel >> browserClass [
 	"I should return an html class specific to the browser to prefix generated ids and classes for the HTML."
 
 	^ 'mdl-extension-example'
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 MDLExampleComponentWithRightPanel >> defaultFoldButton [
 	^ MDLFoldButton for: '#' , self rightPanelId
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 MDLExampleComponentWithRightPanel >> defaultToolbar [
 	^ MDLVerticalToolbar
 		buttons:
@@ -46,44 +48,44 @@ MDLExampleComponentWithRightPanel >> defaultToolbar [
 			(self switcherButton: 'Tab2' perform: #setTab2RightPanel)}
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLExampleComponentWithRightPanel >> initialize [
 	super initialize.
 	self initializeRightPanel
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExampleComponentWithRightPanel >> renderContentOn: html [
 	html div style: 'flex-grow: 1;'.
 	self renderRightPanelOn: html
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExampleComponentWithRightPanel >> rightPanel [
 	^ rightPanel
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExampleComponentWithRightPanel >> rightPanel: aComponent [
 	rightPanel := aComponent
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 MDLExampleComponentWithRightPanel >> setDefaultRightPanel [
 	self rightPanel: MDLExampleRightPanel1 new
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 MDLExampleComponentWithRightPanel >> setTab2RightPanel [
 	self rightPanel: MDLExampleRightPanel2 new
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExampleComponentWithRightPanel >> toolbar [
 	^ toolbar
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExampleComponentWithRightPanel >> toolbar: aComponent [
 	toolbar := aComponent
 ]

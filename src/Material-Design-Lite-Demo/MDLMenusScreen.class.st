@@ -2,22 +2,24 @@
 Lists of clickable actions. Those menus are anchored to elements and can have their anchor point specified.
 "
 Class {
-	#name : #MDLMenusScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLMenusScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenusScreen class >> icon [
 		^'compmenusPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenusScreen class >> title [
 	^ 'Menus'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLMenusScreen >> bottomMenus [
 	^ OrderedDictionary new
 		add: 'Lower left' -> #renderLowerLeftMenuOn:;
@@ -25,14 +27,14 @@ MDLMenusScreen >> bottomMenus [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLMenusScreen >> menuWithAnchors [
 	^ OrderedDictionary new
 		add: 'Menu with anchors' -> #renderMenuWithAnchorsOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLMenusScreen >> renderLowerLeftMenuOn: html [
 	html div
 		class: 'container';
@@ -56,7 +58,7 @@ MDLMenusScreen >> renderLowerLeftMenuOn: html [
 			html div class: 'background' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLMenusScreen >> renderLowerRightMenuOn: html [
 	html div
 		class: 'container';
@@ -82,7 +84,7 @@ MDLMenusScreen >> renderLowerRightMenuOn: html [
 			html div class: 'background' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLMenusScreen >> renderMenuWithAnchorsOn: html [
 	html div
 		class: 'container';
@@ -103,7 +105,7 @@ MDLMenusScreen >> renderMenuWithAnchorsOn: html [
 			html div class: 'background' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenusScreen >> renderScreenContentOn: html [
 	html
 		paragraph: [ html
@@ -115,7 +117,7 @@ MDLMenusScreen >> renderScreenContentOn: html [
 		render: self menuWithAnchors on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLMenusScreen >> renderTopLeftMenuOn: html [
 	html div
 		class: 'container';
@@ -139,7 +141,7 @@ MDLMenusScreen >> renderTopLeftMenuOn: html [
 							html mdlMenuItem: 'Yet Another Action' ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLMenusScreen >> renderTopRightMenuOn: html [
 	html div
 		class: 'container';
@@ -165,7 +167,7 @@ MDLMenusScreen >> renderTopRightMenuOn: html [
 									html mdlMenuItem: 'Yet Another Action' ] ] ] ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLMenusScreen >> topMenus [
 	^ OrderedDictionary new
 		add: 'Top left' -> #renderTopLeftMenuOn:;

@@ -22,12 +22,14 @@ Example
 						with: 'Image.jpg' ] ]
 "
 Class {
-	#name : #MDLCardTag,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Cards'
+	#name : 'MDLCardTag',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Cards',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Cards'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCardTag >> initialize [
 	super initialize.
 	self class: 'mdl-card'

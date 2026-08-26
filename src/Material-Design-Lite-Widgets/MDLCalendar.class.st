@@ -2,28 +2,30 @@
 firstDayOfWeekIndex is the index of the first day of the week in the representation, 7 being saturday and 1 sunday
 "
 Class {
-	#name : #MDLCalendar,
-	#superclass : #Object,
+	#name : 'MDLCalendar',
+	#superclass : 'Object',
 	#instVars : [
 		'currentDate',
 		'firstDayOfWeekIndex',
 		'yearsInterval'
 	],
-	#category : 'Material-Design-Lite-Widgets-Calendar'
+	#category : 'Material-Design-Lite-Widgets-Calendar',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Calendar'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> currentDate [
 	^ currentDate
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> currentDate: anObject [
 	yearsInterval := anObject year - 4 to: anObject year + 4.
 	currentDate := anObject
 ]
 
-{ #category : #'computing weeks' }
+{ #category : 'computing weeks' }
 MDLCalendar >> daysForWeek: i [
 	"Return an array of 7 days for the desired week"
 	| dayCount  firstWeekday previousDayCount previousMonthDays  lastDayofPreviousWeek |
@@ -60,36 +62,36 @@ MDLCalendar >> daysForWeek: i [
 		]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> firstDayOfWeekIndex [
 	^ firstDayOfWeekIndex
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> firstDayOfWeekIndex: anInteger [
 	firstDayOfWeekIndex := anInteger
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> goToMonth: anIndex [
 	| oldIndex |
 	oldIndex := currentDate monthIndex.
 	self currentDate: (currentDate addMonths: anIndex - oldIndex)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> goToYear: aNumber [
 	self currentDate: (currentDate addMonths: (aNumber - currentDate year) * 12)
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCalendar >> initialize [
 	super initialize.
 	self currentDate: Date today.
 	self firstDayOfWeekIndex: 1
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 MDLCalendar >> printDateForHeader [
 	^ String
 		streamContents: [ :s | 
@@ -101,27 +103,27 @@ MDLCalendar >> printDateForHeader [
 				print: self currentDate dayOfMonth ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> selectNextMonth [
 	currentDate := currentDate onNextMonth
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> selectNextYears [
 	yearsInterval := yearsInterval + 9
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> selectPreviousMonth [
 	currentDate := currentDate onPreviousMonth
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> selectPreviousYears [
 	yearsInterval := yearsInterval - 9
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCalendar >> yearsInterval [
 	"This will be removed. In the calendar we let the user select the year by displaying year 9 by 9. 4 before the current year, 4 after the current year by default.
 	

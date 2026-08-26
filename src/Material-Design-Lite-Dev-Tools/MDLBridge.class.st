@@ -1,15 +1,16 @@
 Class {
-	#name : #MDLBridge,
-	#superclass : #GitBridge,
-	#category : #'Material-Design-Lite-Dev-Tools'
+	#name : 'MDLBridge',
+	#superclass : 'GitBridge',
+	#category : 'Material-Design-Lite-Dev-Tools',
+	#package : 'Material-Design-Lite-Dev-Tools'
 }
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 MDLBridge class >> initialize [
 	SessionManager default registerSystemClassNamed: self name
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLBridge class >> resources [
 	^ self root / 'resources'
 ]

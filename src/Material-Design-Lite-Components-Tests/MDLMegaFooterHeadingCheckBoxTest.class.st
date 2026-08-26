@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMegaFooterHeadingCheckBoxTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Footer'
+	#name : 'MDLMegaFooterHeadingCheckBoxTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Footer',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Footer'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingCheckBoxTest >> testBareBrush [
 	self assert: [ :html | html mdlFooterHeadingCheckbox ] generates: '<input class="mdl-mega-footer__heading-checkbox" checked type="checkbox"/>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingCheckBoxTest >> testWithContent [
 	"Not possible to add a content"
 ]

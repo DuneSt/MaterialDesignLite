@@ -65,8 +65,8 @@ I act as a select by in fact this is just a trick. In reality I am just an text 
 To use the callback I keep a temporary dictionary of all the labels and the associated objects. I should ALWAYS have only one object by label. In case the label block return an existing label, I will add a  `(X)` to the label where X is the number of occurences. 
 "
 Class {
-	#name : #MDLSelectWidget,
-	#superclass : #MDLWidget,
+	#name : 'MDLSelectWidget',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'choosingText',
 		'labelBlock',
@@ -80,10 +80,12 @@ Class {
 		'entryTooltip',
 		'ajaxSubmit'
 	],
-	#category : #'Material-Design-Lite-Widgets-Form'
+	#category : 'Material-Design-Lite-Widgets-Form',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Form'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLabelBlock callback: aBlock [
 	^ self
 		possibilities: aColl
@@ -93,7 +95,7 @@ MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLa
 		selectedObject: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLabelBlock callback: aBlock selectedObject: anObject [
 	^ self
 		possibilities: aColl
@@ -104,7 +106,7 @@ MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLa
 		tooltip: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLabelBlock callback: aBlock selectedObject: anObject tooltip: aString [
 	^ self
 		possibilities: aColl
@@ -116,7 +118,7 @@ MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLa
 		sortBlock: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLabelBlock callback: aBlock selectedObject: anObject tooltip: aString sortBlock: aSortBlock [
 	^ self new
 		choosingText: aLabel;
@@ -129,7 +131,7 @@ MDLSelectWidget class >> possibilities: aColl inputLabel: aLabel labelBlock: aLa
 		yourself
 ]
 
-{ #category : #'labelMap - generation' }
+{ #category : 'labelMap - generation' }
 MDLSelectWidget >> addLabelMapEntryFor: anElem version: anInteger into: aDictionary [
 	| label |
 	label := self labelFor: anElem version: anInteger.
@@ -138,27 +140,27 @@ MDLSelectWidget >> addLabelMapEntryFor: anElem version: anInteger into: aDiction
 	^ aDictionary
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> ajaxSubmit [
 	^ ajaxSubmit ifNil: [ ajaxSubmit := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> ajaxSubmit: anObject [
 	ajaxSubmit := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> autoSubmit [
 	^ autoSubmit ifNil: [ autoSubmit := false ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> autoSubmit: anObject [
 	autoSubmit := anObject
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> beAjaxSubmit [
 	"With this option the select widget will submit on a user selection. Do not forget to put your widget in a form."
 
@@ -166,7 +168,7 @@ MDLSelectWidget >> beAjaxSubmit [
 	self ajaxSubmit: true
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> beAutoSubmit [
 	"With this option the select widget will submit on a user selection. Do not forget to put your widget in a form."
 
@@ -174,48 +176,48 @@ MDLSelectWidget >> beAutoSubmit [
 	self ajaxSubmit: false
 ]
 
-{ #category : #'labelMap - generation' }
+{ #category : 'labelMap - generation' }
 MDLSelectWidget >> buildLabelMap [
 	^ self possibilities
 		inject: OrderedDictionary new
 		into: [ :dico :elem | self addLabelMapEntryFor: elem version: 0 into: dico ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> callback [
 	^ callback
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> callback: aBlockOrSymbol [
 	"Callback to execute on the form submit."
 
 	callback := aBlockOrSymbol
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> choosingText [
 	^ choosingText
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> choosingText: aString [
 	"The label of the select input."
 
 	choosingText := aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> customizationBlock [
 	^ customizationBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> customizationBlock: anObject [
 	customizationBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> defaultValueBasedOn: aLabelMap [
 	(self selectedObject isNil and: [ self possibilities isEmpty ]) ifTrue: [ ^ nil ].
 	
@@ -224,34 +226,34 @@ MDLSelectWidget >> defaultValueBasedOn: aLabelMap [
 		ifAbsent: [ self error: 'The selected object is not in the possibilities collection.' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> description [
 	^ description
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> description: aString [
 	"An optional tooltip for the input."
 
 	description := aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> entryTooltip [
 	^ entryTooltip
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> entryTooltip: aBlockOrSymbol [
 	entryTooltip := aBlockOrSymbol
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLSelectWidget >> idForMenuItemLabelled: aLabel inSelectWith: anId [
 	^ anId , 'entry' , aLabel
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSelectWidget >> initialize [
 	super initialize.
 	
@@ -259,31 +261,31 @@ MDLSelectWidget >> initialize [
 	possibilities := #()
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLSelectWidget >> jsSelectInitialization [
 	^ 'getmdlSelect.init("#' , self id , '");'
 	" this ->'document.addEventListener('DOMNodeInserted', function (ev) { componentHandler.upgradeDom(); }, false);' must never add. It's bad pratice. 
 	Launch yourself componentHandler.upgradeDom() OR add ONLY ONE TIME at the document this eventListener"
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> labelBlock [
 	^ labelBlock
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> labelBlock: aBlockOrSymbol [
 	"A block taking in parameter an object and returning a label to show in the input."
 
 	labelBlock := aBlockOrSymbol
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> labelFor: anObject [
 	^ self labelBlock ifNil: [ anObject asString ] ifNotNil: [ :blk | blk value: anObject ]
 ]
 
-{ #category : #'labelMap - generation' }
+{ #category : 'labelMap - generation' }
 MDLSelectWidget >> labelFor: anElem version: anInteger [
 	^ String
 		streamContents: [ :s | 
@@ -295,33 +297,33 @@ MDLSelectWidget >> labelFor: anElem version: anInteger [
 						nextPut: $) ] ]
 ]
 
-{ #category : #'public api - seaside compatibility' }
+{ #category : 'public api - seaside compatibility' }
 MDLSelectWidget >> labels: aBlockOrSymbol [
 	"This method is here to match at least a minimum with the seaside select API."
 
 	self labelBlock: aBlockOrSymbol
 ]
 
-{ #category : #'public api - seaside compatibility' }
+{ #category : 'public api - seaside compatibility' }
 MDLSelectWidget >> list: aCollection [
 	"This method is here to match at least a minimum with the seaside select API."
 
 	self possibilities: aCollection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> possibilities [
 	^ possibilities
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> possibilities: aCollection [
 	"The list of possibilities."
 
 	possibilities := aCollection
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectWidget >> renderArrowIconFor: anId on: html [
 	html label
 		for: anId;
@@ -330,7 +332,7 @@ MDLSelectWidget >> renderArrowIconFor: anId on: html [
 				with: #keyboard_arrow_down ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectWidget >> renderContentOn: html [
 	self ensureId: html.
 	html mdlTextFieldContainer
@@ -348,7 +350,7 @@ MDLSelectWidget >> renderContentOn: html [
 	html script: self jsSelectInitialization
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectWidget >> renderLabelFor: anId on: html [
 	self choosingText isEmptyOrNil ifTrue: [ ^ self ].
 	
@@ -357,7 +359,7 @@ MDLSelectWidget >> renderLabelFor: anId on: html [
 		with: self choosingText
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectWidget >> renderMenuTooltipFor: anItem at: anId on: html [
 	| helpText |
 	(self entryTooltip isNil or: [ self entryTooltip argumentCount = 1 and: [ (helpText := self entryTooltip value: anItem) isEmptyOrNil ] ]) ifTrue: [ ^ self ].
@@ -371,7 +373,7 @@ MDLSelectWidget >> renderMenuTooltipFor: anItem at: anId on: html [
 						ifFalse: [ self entryTooltip mdlCull: anItem cull: html ])
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectWidget >> renderPossibilitiesFor: anId withMap: aLabelMap on: html [
 	aLabelMap ifEmpty: [ ^ self ].
 	
@@ -385,7 +387,7 @@ MDLSelectWidget >> renderPossibilitiesFor: anId withMap: aLabelMap on: html [
 						with: label ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectWidget >> renderTextFieldFor: anId withMap: aLabelMap on: html [
 	| textField |
 	(textField := html mdlTextFieldInput)
@@ -402,7 +404,7 @@ MDLSelectWidget >> renderTextFieldFor: anId withMap: aLabelMap on: html [
 	self customizationBlock ifNotNil: [ :bl | bl mdlCull: textField cull: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectWidget >> renderTooltipFor: anId on: html [
 	self description ifNil: [ ^ self ].
 	
@@ -415,38 +417,38 @@ MDLSelectWidget >> renderTooltipFor: anId on: html [
 				ifFalse: [ self description ])
 ]
 
-{ #category : #'public api - seaside compatibility' }
+{ #category : 'public api - seaside compatibility' }
 MDLSelectWidget >> selected: anObject [
 	"This method is here to match at least a minimum with the seaside select API."
 
 	self selectedObject: anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> selectedObject [
 	^ selectedObject value
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> selectedObject: anObject [
 	"An optional object to select by default."
 
 	selectedObject := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectWidget >> sortBlock [
 	^ sortBlock
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> sortBlock: aBlock [
 	"An optional block to sort the objects."
 
 	sortBlock := aBlock
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLSelectWidget >> standardSorting [
 	"Use the default #<= on the objects values directly."
 

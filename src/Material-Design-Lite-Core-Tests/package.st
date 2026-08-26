@@ -1,1 +1,1 @@
-Package { #name : #'Material-Design-Lite-Core-Tests' }
+Package { #name : 'Material-Design-Lite-Core-Tests' }

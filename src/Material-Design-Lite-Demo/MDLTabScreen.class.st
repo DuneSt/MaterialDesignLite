@@ -2,27 +2,29 @@
 A tab widget.
 "
 Class {
-	#name : #MDLTabScreen,
-	#superclass : #MDLWidgetDemo,
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#name : 'MDLTabScreen',
+	#superclass : 'MDLWidgetDemo',
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTabScreen class >> icon [
 	^ #complayoutPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTabScreen class >> title [
 	^ 'Tabs'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTabScreen >> renderScreenContentOn: html [
 	self render: self tabs on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTabScreen >> renderTabsOn: html [
 	html
 		render:
@@ -32,7 +34,7 @@ MDLTabScreen >> renderTabsOn: html [
 				yourself)
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTabScreen >> tabs [
 	^ OrderedDictionary new
 		add: 'Tab Widget' -> #renderTabsOn:;

@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLSnackbarTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Snackbar'
+	#name : 'MDLSnackbarTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Snackbar',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Snackbar'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testAction [
 	self
 		assert: [ :html | 
@@ -16,7 +18,7 @@ MDLSnackbarTest >> testAction [
 		generatedIncludes: 'function(event){console.log(''test'')};'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testActionText [
 	self
 		assert: [ :html | 
@@ -29,7 +31,7 @@ MDLSnackbarTest >> testActionText [
 		generatedIncludes: 'Button name'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testActionTextNotDisplayedIfNoAction [
 	"If there is no action, we should not have a the action name in the result."
 	
@@ -43,12 +45,12 @@ MDLSnackbarTest >> testActionTextNotDisplayedIfNoAction [
 		generatedIncludes: 'Button name'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testBareBrush [
 	self assert: [ :html | html mdlSnackbar ] generates: '<div class="mdl-js-snackbar mdl-snackbar" id="id1"><div class="mdl-snackbar__text"></div><button class="mdl-snackbar__action" type="submit"></button></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testMessage [
 	self
 		assert: [ :html | 
@@ -60,7 +62,7 @@ MDLSnackbarTest >> testMessage [
 		generatedIncludes: 'Message for the user'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testSnackbarButtonFor [
 	self
 		assert: [ :html | html mdlSnackbarButtonFor: html mdlSnackbar ]
@@ -68,7 +70,7 @@ MDLSnackbarTest >> testSnackbarButtonFor [
 			#('<div class="mdl-js-snackbar mdl-snackbar" id="id1"><div class="mdl-snackbar__text"></div><button class="mdl-snackbar__action" type="submit"></button></div>' '<button class="mdl-button mdl-js-button"' 'snackbarContainer.MaterialSnackbar.showSnackbar(data)' '</button>')
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testTimeout [
 	self
 		assert: [ :html | 
@@ -80,7 +82,7 @@ MDLSnackbarTest >> testTimeout [
 		generatedIncludes: '14390'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSnackbarTest >> testWithContent [
 	"Not with the snackbars."
 ]

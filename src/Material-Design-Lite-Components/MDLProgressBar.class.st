@@ -11,17 +11,19 @@ Example
 	html script: 'setInterval(function(){document.querySelector(''#progressBar'').MaterialProgress.setProgress(100/60* (new Date()).getSeconds());}, 1000);' js
 "
 Class {
-	#name : #MDLProgressBar,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Loading'
+	#name : 'MDLProgressBar',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Loading',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Loading'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLProgressBar >> indeterminate [
 	self class: 'mdl-progress__indeterminate'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLProgressBar >> initialize [
 	super initialize.
 	self class: 'mdl-progress'.

@@ -5,16 +5,18 @@ Because of my behaviour, one can define an action to execute on server side eith
 These actions can eventually modify the state of the expansion panel as the full widget is reload via AJAX.
 "
 Class {
-	#name : #MDLAjaxExpansionStrategy,
-	#superclass : #MDLExpansionStrategy,
+	#name : 'MDLAjaxExpansionStrategy',
+	#superclass : 'MDLExpansionStrategy',
 	#instVars : [
 		'onFoldBlock',
 		'onExpandBlock'
 	],
-	#category : #'Material-Design-Lite-Widgets-Expansion'
+	#category : 'Material-Design-Lite-Widgets-Expansion',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Expansion'
 }
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLAjaxExpansionStrategy >> customize: anExpansionPanelHeader in: anExpansionPanel on: html [
 	anExpansionPanelHeader
 		onClick:
@@ -26,12 +28,12 @@ MDLAjaxExpansionStrategy >> customize: anExpansionPanelHeader in: anExpansionPan
 				onComplete: 'componentHandler.upgradeElements(this);' js)
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLAjaxExpansionStrategy >> isAjaxExpansionStrategy [
 	^ true
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAjaxExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 	anExpansionPanel isExpanded
 		ifTrue: [ anExpansionPanel expandedBlock value: html ]

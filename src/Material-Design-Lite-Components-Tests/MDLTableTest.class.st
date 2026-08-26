@@ -1,20 +1,22 @@
 Class {
-	#name : #MDLTableTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Tables'
+	#name : 'MDLTableTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Tables',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Tables'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTableTest >> testBareBrush [
 	self assert: [ :html | html mdlTable ] generates: '<table class="mdl-data-table mdl-js-data-table"></table>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTableTest >> testSelectable [
 	self assert: [ :html | html mdlTable selectable ] generates: '<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable"></table>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTableTest >> testWithContent [
 	self assert: [ :html | html mdlTable: 'test' ] generates: '<table class="mdl-data-table mdl-js-data-table">test</table>'
 ]

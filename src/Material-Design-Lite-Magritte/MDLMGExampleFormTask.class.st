@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMGExampleFormTask,
-	#superclass : #WATask,
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#name : 'MDLMGExampleFormTask',
+	#superclass : 'WATask',
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormTask class >> label [
 	^ 'Magritte Form example'
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLMGExampleFormTask >> createFormBasedOn: formChooser [
 	| theForm |
 	theForm := MDLMGExampleFormDescription new asComponent.
@@ -31,14 +33,14 @@ MDLMGExampleFormTask >> createFormBasedOn: formChooser [
 	^ theForm
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLMGExampleFormTask >> formChooser [
 	^ MDLMGExampleFormChooser new asComponent
 		addDecoration: (MDLMAFormDecoration buttons: (Array with: #save -> 'Create a new form'));
 		yourself
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 MDLMGExampleFormTask >> go [
 	| chosenForm formChooser chosenFormAnswer |
 	formChooser := self call: self formChooser.

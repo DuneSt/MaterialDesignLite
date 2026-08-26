@@ -9,32 +9,34 @@ This system help to manage dialogs inside a MDL application. The principle is to
 This trait need to be used by components wanting to open/close/manage the dialog. 
 "
 Trait {
-	#name : #TWithRootDialogComponent,
-	#category : 'Material-Design-Lite-Extensions-RootDialog'
+	#name : 'TWithRootDialogComponent',
+	#category : 'Material-Design-Lite-Extensions-RootDialog',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'RootDialog'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TWithRootDialogComponent classSide >> rootDialogCloseId [
 	"I am the id to put on a button to close the root dialog"
 
 	^ MDLDialog rootDialogCloseId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TWithRootDialogComponent classSide >> rootDialogId [
 	"I am the id of the root dialog."
 
 	^ MDLDialog rootDialogId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TWithRootDialogComponent classSide >> rootDialogOpenId [
 	"I am the Id to put on a button in order to open the root dialog."
 
 	^ MDLDialog rootDialogOpenId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TWithRootDialogComponent >> rootDialogCloseId [
 	"I am the id to put on a button to close the root dialog.
 	This is static information available on class side"
@@ -42,7 +44,7 @@ TWithRootDialogComponent >> rootDialogCloseId [
 	^ self class rootDialogCloseId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TWithRootDialogComponent >> rootDialogId [
 	"I am the id of the root dialog.
 	This is static information available on class side"
@@ -50,7 +52,7 @@ TWithRootDialogComponent >> rootDialogId [
 	^ self class rootDialogId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TWithRootDialogComponent >> rootDialogOpenId [
 	"I am the Id to put on a button in order to open the root dialog."
 

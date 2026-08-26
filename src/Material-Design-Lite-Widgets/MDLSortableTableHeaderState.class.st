@@ -1,43 +1,45 @@
 Class {
-	#name : #MDLSortableTableHeaderState,
-	#superclass : #Object,
+	#name : 'MDLSortableTableHeaderState',
+	#superclass : 'Object',
 	#instVars : [
 		'nextState'
 	],
-	#category : 'Material-Design-Lite-Widgets-Table'
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeaderState class >> defaultNextState [
 	^ self subclassResponsibility
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLSortableTableHeaderState class >> for: element [
 	^ self new element: element
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeaderState >> defaultNextState [
 	^ self class defaultNextState
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSortableTableHeaderState >> initializeNextState [
 	self nextState: (self defaultNextState new nextState: (self defaultNextState defaultNextState new nextState: self))
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeaderState >> nextState [
 	^ nextState ifNil: [ self initializeNextState. nextState ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeaderState >> nextState: anObject [
 	nextState := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeaderState >> renderContentOn: html forTable: table columnIndex: i header: header [
 	self subclassResponsibility 
 ]

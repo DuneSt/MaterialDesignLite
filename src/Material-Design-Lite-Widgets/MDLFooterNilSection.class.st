@@ -1,20 +1,22 @@
 Class {
-	#name : #MDLFooterNilSection,
-	#superclass : #MDLFooterAbstractSection,
-	#category : 'Material-Design-Lite-Widgets-Footer'
+	#name : 'MDLFooterNilSection',
+	#superclass : 'MDLFooterAbstractSection',
+	#category : 'Material-Design-Lite-Widgets-Footer',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Footer'
 }
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLFooterNilSection >> addLinks: someLinks [
 	self shouldNotImplement 
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLFooterNilSection >> isNilSection [
 	^ true
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLFooterNilSection >> renderSectionOn: html [
 	"do nothing"
 ]

@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLMAListCompositionComponent,
-	#superclass : #MAListCompositionComponent,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMAListCompositionComponent',
+	#superclass : 'MAListCompositionComponent',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #'rendering-parts' }
+{ #category : 'rendering-parts' }
 MDLMAListCompositionComponent >> renderEditorAvailableOn: html [
 	html mdlCell: [ 
 		html select
@@ -15,7 +17,7 @@ MDLMAListCompositionComponent >> renderEditorAvailableOn: html [
 			labels: [ :value | self labelForOption: value ] ] size: 4
 ]
 
-{ #category : #'rendering-buttons' }
+{ #category : 'rendering-buttons' }
 MDLMAListCompositionComponent >> renderEditorButtonAddOn: html [
 	html mdlButton
 		beSubmit;
@@ -28,7 +30,7 @@ MDLMAListCompositionComponent >> renderEditorButtonAddOn: html [
 		with: [ html mdlIcon: 'backward' ]
 ]
 
-{ #category : #'rendering-buttons' }
+{ #category : 'rendering-buttons' }
 MDLMAListCompositionComponent >> renderEditorButtonOrderOn: html [
 	html mdlButton
 		beSubmit;
@@ -41,7 +43,7 @@ MDLMAListCompositionComponent >> renderEditorButtonOrderOn: html [
 		with: [ html mdlIcon: 'expand_more']
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMAListCompositionComponent >> renderEditorOn: html [
 	self flag: #TODO.
 		html table id: self labelId; with: [
@@ -57,7 +59,7 @@ MDLMAListCompositionComponent >> renderEditorOn: html [
 					with: [ self renderEditorButtonOrderOn: html ] ] ] ].
 ]
 
-{ #category : #'rendering-parts' }
+{ #category : 'rendering-parts' }
 MDLMAListCompositionComponent >> renderEditorSelectedOn: html [
 	html 
 		mdlCell: [ 

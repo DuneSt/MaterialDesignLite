@@ -2,40 +2,42 @@
 The pagination widget allow the user to easily paginate some content on his page. You can either use it to just manage the pages then use the #currentPage to manage your page on the refresh or pass a block that will have the responsibility to update your page with some ajax.
 "
 Class {
-	#name : #MDLPaginationComponentScreen,
-	#superclass : #MDLExtensionsDemo,
+	#name : 'MDLPaginationComponentScreen',
+	#superclass : 'MDLExtensionsDemo',
 	#instVars : [
 		'paginationWidget',
 		'paginationWidget2'
 	],
-	#category : #'Material-Design-Lite-Demo-Extensions'
+	#category : 'Material-Design-Lite-Demo-Extensions',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Extensions'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponentScreen class >> icon [
 	^ 'paginationPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPaginationComponentScreen class >> title [
 	^ 'Pagination'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLPaginationComponentScreen >> ajaxPagination [
 	^ OrderedDictionary new
 		add: 'Ajax Pagination Widget' -> #renderAjaxPaginationOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLPaginationComponentScreen >> pagination [
 	^ OrderedDictionary new
 		add: 'Pagination Widget' -> #renderPaginationOn:;
 		yourself
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponentScreen >> renderAjaxPaginationOn: html [
 	| myColl renderBlock |
 	myColl := 201 to: 640.
@@ -61,7 +63,7 @@ MDLPaginationComponentScreen >> renderAjaxPaginationOn: html [
 			html render: paginationWidget2 ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponentScreen >> renderPaginationOn: html [
 	| myColl |
 	myColl := 201 to: 640.
@@ -81,7 +83,7 @@ MDLPaginationComponentScreen >> renderPaginationOn: html [
 			html render: paginationWidget ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPaginationComponentScreen >> renderScreenContentOn: html [
 	self
 		render: self pagination fullWidth: true on: html;

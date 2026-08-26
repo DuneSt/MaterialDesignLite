@@ -17,12 +17,14 @@ Example
 			html mdlSwitchLabel: 'On / Off' ]
 "
 Class {
-	#name : #MDLSwitch,
-	#superclass : #WACheckboxTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLSwitch',
+	#superclass : 'WACheckboxTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSwitch >> initialize [
 	super initialize.
 	self class: 'mdl-switch__input'

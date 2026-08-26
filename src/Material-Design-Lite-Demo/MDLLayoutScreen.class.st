@@ -2,113 +2,115 @@
 Building blocks for constructing a page layout.
 "
 Class {
-	#name : #MDLLayoutScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLLayoutScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutScreen class >> icon [
 	^ 'complayoutPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutScreen class >> title [
 	^ 'Layout'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> cellOffset [
 	^ OrderedDictionary new
 		add: 'Cell offset' -> #renderCellOffsetDemoOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> cellOrder [
 	^ OrderedDictionary new
 		add: 'Cell order' -> #renderCellOrderDemoOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> cellPositions [ 
 	^ OrderedDictionary new
 		add: 'Cell positions' -> #renderCellPositionsDemoOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> fixedDrawerNoHeader [
 	^ OrderedDictionary new
 		add: 'Fixed drawer, no header ' -> #renderFixedDrawerNoHeaderOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> fixedHeader [
 	^ OrderedDictionary new
 		add: 'Fixed header ' -> #renderFixedHeaderOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> fixedHeaderAndDrawer [
 	^ OrderedDictionary new
 		add: 'Fixed header and drawer' -> #renderFixedHeaderAndDrawerOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> fixedTabs [ 
 	^ OrderedDictionary new
 		add: 'Fixed tabs' -> #renderFixedTabsOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> gridLayout [ 
 	^ OrderedDictionary new
 		add: 'Responsive grid' -> #renderGridDemoOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> hideDesktopCells [ 
 	^ OrderedDictionary new
 		add: 'Hide Desktop' -> #renderHideDesktopDemoOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> hidePhoneCells [ 
 	^ OrderedDictionary new
 		add: 'Hide Phone' -> #renderHidePhoneDemoOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> hideTabletCells [ 
 	^ OrderedDictionary new
 		add: 'Hide Tablet' -> #renderHideTabletDemoOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> megaFooter [
 	^ OrderedDictionary new
 		add: 'Mega footer ' -> #renderMegaFooterOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> miniFooter [
 	^ OrderedDictionary new
 		add: 'Mini footer ' -> #renderMiniFooterOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderCellOffsetDemoOn: html [
 	html mdlGrid
 		shadow: 2;
@@ -128,7 +130,7 @@ MDLLayoutScreen >> renderCellOffsetDemoOn: html [
 				with: 'Offset' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderCellOrderDemoOn: html [
 	html mdlGrid
 		shadow: 2;
@@ -168,7 +170,7 @@ MDLLayoutScreen >> renderCellOrderDemoOn: html [
 				with: 'D (D: 1|T: 1|P: 1)' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderCellPositionsDemoOn: html [
 	html mdlGrid
 		shadow: 2;
@@ -195,7 +197,7 @@ MDLLayoutScreen >> renderCellPositionsDemoOn: html [
 				with: 'Stretch' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderFixedDrawerNoHeaderOn: html [
 	html mdlLayout
 		fixedDrawer;
@@ -208,7 +210,7 @@ MDLLayoutScreen >> renderFixedDrawerNoHeaderOn: html [
 							1 to: 4 do: [ :i | html mdlNavigationLink: 'Link' ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderFixedHeaderAndDrawerOn: html [
 	html mdlLayout
 		fixedDrawer;
@@ -226,7 +228,7 @@ MDLLayoutScreen >> renderFixedHeaderAndDrawerOn: html [
 									with: 'Link' ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderFixedHeaderOn: html [
 	html mdlLayout
 		fixedHeader;
@@ -244,7 +246,7 @@ MDLLayoutScreen >> renderFixedHeaderOn: html [
 									with: 'Link' ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderFixedTabsOn: html [
 	html mdlLayout
 		fixedHeader;
@@ -266,7 +268,7 @@ MDLLayoutScreen >> renderFixedTabsOn: html [
 							id: 'tab-' , int asString ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderGridDemoOn: html [
 	html mdlGrid
 		shadow: 2;
@@ -312,7 +314,7 @@ MDLLayoutScreen >> renderGridDemoOn: html [
 					with: 1 ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderHideDesktopDemoOn: html [
 	html
 		mdlGrid: [ html mdlCell
@@ -326,7 +328,7 @@ MDLLayoutScreen >> renderHideDesktopDemoOn: html [
 				with: 'Always show' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderHidePhoneDemoOn: html [
 	html
 		mdlGrid: [ html mdlCell
@@ -340,7 +342,7 @@ MDLLayoutScreen >> renderHidePhoneDemoOn: html [
 				with: 'Always show' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderHideTabletDemoOn: html [
 	html
 		mdlGrid: [ html mdlCell
@@ -354,7 +356,7 @@ MDLLayoutScreen >> renderHideTabletDemoOn: html [
 				with: 'Always show' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderMegaFooterOn: html [
 	| sections |
 	sections := OrderedDictionary
@@ -377,7 +379,7 @@ MDLLayoutScreen >> renderMegaFooterOn: html [
 							html listItem: [ html anchor: 'Privacy & Terms' ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderMiniFooterOn: html [
 	html
 		mdlMiniFooter: [ html
@@ -387,7 +389,7 @@ MDLLayoutScreen >> renderMiniFooterOn: html [
 							html listItem: [ html anchor: 'Privacy & Terms' ] ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLayoutScreen >> renderScreenContentOn: html [
 	self renderTocOn: html.
 	html heading level5
@@ -429,7 +431,7 @@ MDLLayoutScreen >> renderScreenContentOn: html [
 		render: self miniFooter fullWidth: true on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderScrollableTabsOn: html [
 	html mdlLayout
 		fixedHeader;
@@ -451,7 +453,7 @@ MDLLayoutScreen >> renderScrollableTabsOn: html [
 							id: 'tab-' , int asString ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderScrollingHeaderOn: html [
 	html mdlLayout
 		with: [ html mdlLayoutHeader
@@ -474,7 +476,7 @@ MDLLayoutScreen >> renderScrollingHeaderOn: html [
 						with: [  ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderTabsOn: html [
 	| famillies |
 	famillies := OrderedDictionary
@@ -498,7 +500,7 @@ MDLLayoutScreen >> renderTabsOn: html [
 						with: [ html unorderedList: [ members do: [ :member | html listItem: member ] ] ] ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderTransparentHeaderOn: html [
 	html mdlLayout
 		style: 'background: url(''' , (MDLDemoLibrary urlOf: #transparentJpg) asString , ''') center / cover;';
@@ -516,7 +518,7 @@ MDLLayoutScreen >> renderTransparentHeaderOn: html [
 			html mdlLayoutContent: [  ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLayoutScreen >> renderWaterfallHeaderOn: html [
 	html mdlLayout
 		with: [ html mdlLayoutHeader
@@ -547,21 +549,21 @@ MDLLayoutScreen >> renderWaterfallHeaderOn: html [
 						with: [  ] ] ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> scrollableTabs [ 
 	^ OrderedDictionary new
 		add: 'Scrollable tabs' -> #renderScrollableTabsOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> scrollingHeader [
 	^ OrderedDictionary new
 		add: 'Scrolling header ' -> #renderScrollingHeaderOn:;
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutScreen >> sections [
 	^ OrderedDictionary
 		with: '#navigation-layout' -> 'Navigation layouts'
@@ -570,21 +572,21 @@ MDLLayoutScreen >> sections [
 		with: '#footer-layout' -> 'Footer'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> tabs [ 
 	^ OrderedDictionary new
 		add: 'Content tabs' -> #renderTabsOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> transparentHeader [
 	^ OrderedDictionary new
 		add: 'Transparent header' -> #renderTransparentHeaderOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLayoutScreen >> waterfallHeader [
 	^ OrderedDictionary new
 		add: 'Waterfall header' -> #renderWaterfallHeaderOn:;

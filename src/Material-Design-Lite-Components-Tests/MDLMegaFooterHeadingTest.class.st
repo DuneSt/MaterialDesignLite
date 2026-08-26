@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMegaFooterHeadingTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Footer'
+	#name : 'MDLMegaFooterHeadingTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Footer',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Footer'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testBareBrush [
 	self assert: [ :html | html mdlFooterHeading ] generates: '<h1 class="mdl-mega-footer__heading"></h1>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testLevel1 [
 	self
 		assert: [ :html | 
@@ -19,7 +21,7 @@ MDLMegaFooterHeadingTest >> testLevel1 [
 		generates: '<h1 class="mdl-mega-footer__heading">title</h1>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testLevel2 [
 	self
 		assert: [ :html | 
@@ -29,7 +31,7 @@ MDLMegaFooterHeadingTest >> testLevel2 [
 		generates: '<h2 class="mdl-mega-footer__heading">title</h2>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testLevel3 [
 	self
 		assert: [ :html | 
@@ -39,7 +41,7 @@ MDLMegaFooterHeadingTest >> testLevel3 [
 		generates: '<h3 class="mdl-mega-footer__heading">title</h3>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testLevel4 [
 	self
 		assert: [ :html | 
@@ -49,7 +51,7 @@ MDLMegaFooterHeadingTest >> testLevel4 [
 		generates: '<h4 class="mdl-mega-footer__heading">title</h4>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testLevel5 [
 	self
 		assert: [ :html | 
@@ -59,7 +61,7 @@ MDLMegaFooterHeadingTest >> testLevel5 [
 		generates: '<h5 class="mdl-mega-footer__heading">title</h5>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testLevel6 [
 	self
 		assert: [ :html | 
@@ -69,7 +71,7 @@ MDLMegaFooterHeadingTest >> testLevel6 [
 		generates: '<h6 class="mdl-mega-footer__heading">title</h6>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterHeadingTest >> testWithContent [
 	self assert: [ :html | html mdlFooterHeading: 'title' ] generates: '<h1 class="mdl-mega-footer__heading">title</h1>'
 ]

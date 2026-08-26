@@ -2,19 +2,21 @@
 I am a nested list filter keeping only elements whose name includes  the pattern passed by the user, non case sensitive.
 "
 Class {
-	#name : #MDLInsensitiveSubstringFilter,
-	#superclass : #MDLAbstractFilter,
-	#category : #'Material-Design-Lite-Widgets-List'
+	#name : 'MDLInsensitiveSubstringFilter',
+	#superclass : 'MDLAbstractFilter',
+	#category : 'Material-Design-Lite-Widgets-List',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'List'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLInsensitiveSubstringFilter class >> applySelectMatchingOnQueryCollection: aQueryCollection with: aFormatBlock like: aPattern [
 	^ aQueryCollection wrappedQuery
 		with: aFormatBlock
 		iLike: '%' , aPattern asLowercase , '%'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLInsensitiveSubstringFilter class >> formatedElement: aString matches: aPattern [
 	^ aString asLowercase includesSubstring: aPattern asLowercase
 ]

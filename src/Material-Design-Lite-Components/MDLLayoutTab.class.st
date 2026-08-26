@@ -27,23 +27,25 @@ Example
 							id: 'tab-' , int asString ] ] ]
 "
 Class {
-	#name : #MDLLayoutTab,
-	#superclass : #WAAnchorTag,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLLayoutTab',
+	#superclass : 'WAAnchorTag',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayoutTab >> initialize [
 	super initialize.
 	self class: 'mdl-layout__tab'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutTab >> isActive [
 	self class: 'is-active'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutTab >> isActiveIf: aBoolean [
 	aBoolean
 		ifTrue: [ self isActive ]
