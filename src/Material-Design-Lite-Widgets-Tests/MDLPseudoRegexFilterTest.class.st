@@ -1,21 +1,23 @@
 Class {
-	#name : #MDLPseudoRegexFilterTest,
-	#superclass : #MDLAbstractFilterTest,
-	#category : 'Material-Design-Lite-Widgets-Tests-List'
+	#name : 'MDLPseudoRegexFilterTest',
+	#superclass : 'MDLAbstractFilterTest',
+	#category : 'Material-Design-Lite-Widgets-Tests-List',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'List'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLPseudoRegexFilterTest >> actualClass [
 	^ MDLPseudoRegexFilter
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPseudoRegexFilterTest >> testAdaptPattern [
 	self assert: (self actualClass adaptPattern: 'test') equals: '.*test.*'.
 	self assert: (self actualClass adaptPattern: 'tes*t') equals: 'tes.*t'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPseudoRegexFilterTest >> testFormatedElementMatches [
 	self assert: (self actualClass formatedElement: 'test' matches: 'test.*' asRegexIgnoringCase).
 	self assert: (self actualClass formatedElement: 'Test' matches: 'test.*' asRegexIgnoringCase).
@@ -23,7 +25,7 @@ MDLPseudoRegexFilterTest >> testFormatedElementMatches [
 	self deny: (self actualClass formatedElement: 'anothertest' matches: 'test.*' asRegexIgnoringCase)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPseudoRegexFilterTest >> testSelectMatchingFromFormatWith [
 	self
 		assertCollection:

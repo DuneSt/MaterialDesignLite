@@ -43,8 +43,8 @@ Internal Representation and Key Implementation Points.
 	iconBlock:		<aBlockOrSymbol>	A block thet return an optional SYNListIconComponent for a line of the list
 "
 Class {
-	#name : #MDLNestedList,
-	#superclass : #MDLWidget,
+	#name : 'MDLNestedList',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'elements',
 		'entryCustomizationHook',
@@ -61,29 +61,31 @@ Class {
 		'strategy',
 		'shouldBeExpanded'
 	],
-	#category : #'Material-Design-Lite-Widgets-List'
+	#category : 'Material-Design-Lite-Widgets-List',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'List'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLNestedList class >> elements: aCollection [
 	^ self new
 		elements: aCollection;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLNestedList class >> elements: aCollection children: aBlockOrSymbole [
 	^ (self elements: aCollection)
 		childrenBlock: aBlockOrSymbole;
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> actionBlock [
 	^ self strategy actionBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> actionBlock: aBlock [
 	self
 		assert: aBlock argumentCount <= 2
@@ -92,49 +94,49 @@ MDLNestedList >> actionBlock: aBlock [
 	self strategy actionBlock: aBlock
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLNestedList >> at: anInteger ifPresent: aBlockClosure [ 
 	aBlockClosure value: (self filteredElements at: anInteger)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> beCompact [
 	self listStyle: #compact
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> beStandard [
 	self listStyle: #standard
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> children: aBlockOrSymbol [
 	self childrenBlock: aBlockOrSymbol
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> childrenBlock [
 	^ self strategy childrenBlock
 		ifNil: [ self strategy childrenBlock: [ :item | #() ].
 			self strategy childrenBlock ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> childrenBlock: anObject [
 	self strategy childrenBlock: anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> childrenSortBlock [
 	^ self strategy childrenSortBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> childrenSortBlock: aBlock [
 	self strategy childrenSortBlock: aBlock
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLNestedList >> defineChildrenCallbackOn: aDiv [
 	^ aDiv
 		storeCallback:
@@ -152,7 +154,7 @@ MDLNestedList >> defineChildrenCallbackOn: aDiv [
 										stream) ] ])
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLNestedList >> defineScrollCallbackOn: aDiv [
 	^ aDiv
 		storeCallback:
@@ -173,22 +175,22 @@ MDLNestedList >> defineScrollCallbackOn: aDiv [
 										stream) ] ])
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> displayResearchField [
 	^ displayResearchField
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> displayResearchField: aBoolean [
 	displayResearchField := aBoolean 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> displayResearchFilter [
 	^ displayResearchFilter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> displayResearchFilter: aFilter [
 	aFilter
 		ifEmpty: [ 
@@ -202,17 +204,17 @@ MDLNestedList >> displayResearchFilter: aFilter [
 				with: self displayResearchFilter ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> dragAndDropBlock [
 	^ dragAndDropBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> dragAndDropBlock: anObject [
 	dragAndDropBlock := anObject
 ]
 
-{ #category : #draggable }
+{ #category : 'draggable' }
 MDLNestedList >> draggableMechanism: html forDiv: div [
 	self hasDraggableItems
 		ifTrue: [ 
@@ -232,7 +234,7 @@ MDLNestedList >> draggableMechanism: html forDiv: div [
 												value: (self obtainElementForPath: dragValues second) ]))) ]
 ]
 
-{ #category : #draggable }
+{ #category : 'draggable' }
 MDLNestedList >> draggableScript:url cb: draggableCb [
 	^ 'function dragListItem(ev, index) {
     ev.dataTransfer.setData("sourceIndex", index);
@@ -249,19 +251,19 @@ function dropListItem(ev, index){
 }'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> elements [
 	^ elements value
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> elements: anObject [
 	elements := anObject.
 	"reinitialize the filter when list change"
 	self displayResearchFilter: ''
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> elementsDisplayList [
 	| start overflow |
 	^ self filteredElements size <= self listMaxSize
@@ -271,103 +273,103 @@ MDLNestedList >> elementsDisplayList [
 			self filteredElements copyFrom: start - overflow to: start + self listMaxSize - 1 - overflow ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> entryCustomizationHook [
 	^ entryCustomizationHook
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> entryCustomizationHook: anObject [
 	entryCustomizationHook := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> expandAll [
 	self flag: #todo. "Later we should also have a mecanism to expand only a part of the list."
 	shouldBeExpanded := true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filter [
 	^ filter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filter: anObject [
 	filter := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filterInsensitiveBeginsWith [
 	self filter: MDLInsensitiveBeginsWithFilter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filterInsensitiveSubstring [
 	self filter: MDLInsensitiveSubstringFilter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filterPseudoRegex [
 	self filter: MDLPseudoRegexFilter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filterSensitiveBeginsWith [
 	self filter: MDLBeginsWithFilter 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filterSubstring [
 	self filter: MDLSubstringFilter
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> filteredElements [
 	^ self displayResearchFilter ifNil: [ self elements ] ifNotNil: [ filteredElements ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> format [
 	^ self strategy format
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> format: anObject [
 	self strategy format: anObject
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLNestedList >> hasDraggableItems [
 	^ self dragAndDropBlock notNil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> helpBlock [
 	^ self strategy helpBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> helpBlock: anObject [
 	self strategy helpBlock: anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> iconBlock [
 	^ self strategy iconBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> iconBlock: anObject [
 	self strategy iconBlock: anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLNestedList >> idFor: aSymbol [
 	^ aSymbol, self id
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> indexOfRootElementContainingSelectedEntity [
 	self selectedEntity ifNil: [ ^ 0 ].
 	^ self filteredElements
@@ -378,7 +380,7 @@ MDLNestedList >> indexOfRootElementContainingSelectedEntity [
 				ifNone: [ "The selected element is not at all in the tree" 1 ] ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLNestedList >> initialize [
 	super initialize.
 	self
@@ -391,53 +393,53 @@ MDLNestedList >> initialize [
 		shouldBeExpanded: false
 ]
 
-{ #category : #positionning }
+{ #category : 'positionning' }
 MDLNestedList >> isIncludingSelectedChildren: anElement [
 	^ (self childrenBlock value: anElement) anySatisfy: [ :aChildren | aChildren = selectedEntity or: [ self isIncludingSelectedChildren: aChildren ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> isJsAction [
 	^ self strategy isJsAction
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> isJsAction: anObject [
 	self strategy isJsAction: anObject
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLNestedList >> jsOnLoadHook [
 	^ self onLoadHook js
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> listElementsDynamicalLoadingStep [
 	"It is the number of elements asked in ajax to the server when user scroll"
 	^ self listMaxSize / 5
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> listMaxSize [
 	^ listMaxSize
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> listMaxSize: anObject [
 	listMaxSize := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> listStyle [
 	^ listStyle
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> listStyle: anObject [
 	listStyle := anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLNestedList >> obtainElementForPath: aPath [
 	| path |
 	path := $: split: aPath.
@@ -449,38 +451,38 @@ MDLNestedList >> obtainElementForPath: aPath [
 			self childrenSortBlock ifNil: [ res ] ifNotNil: [ :sortBlock | res sorted: sortBlock ] ]) at: path last asNumber
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLNestedList >> obtainTreeFor: anElement [
 	^  self obtainedTreesCache at: anElement ifAbsentPut: [ MDLNestedListTreeNode list: self element: anElement ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> obtainedTreesCache [
 	^ obtainedTreesCache ifNil: [ obtainedTreesCache := IdentityDictionary new ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> obtainedTreesCache: anObject [
 	obtainedTreesCache := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> onClickJs: anActionBlock [
 	self actionBlock: anActionBlock.
 	self isJsAction: true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> onLoadHook [
 	^ onLoadHook
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> onLoadHook: anObject [
 	onLoadHook := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedList >> printHtmlForElementsFrom: start to: end context: aContext on: stream [
 	self
 		printResultOf: [ :html | 
@@ -498,7 +500,7 @@ MDLNestedList >> printHtmlForElementsFrom: start to: end context: aContext on: s
 		on: stream
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedList >> printResultOf: aBlock context: aContext on: stream [
 	| document |
 	document := (WAHtmlDocument on: stream codec: GRNullCodec new)
@@ -511,7 +513,7 @@ MDLNestedList >> printResultOf: aBlock context: aContext on: stream [
 	document scriptGenerator closeOn: document
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedList >> printSublistFor: anIntervalRequest context: aContext on: stream [
 	self
 		printResultOf: [ :html | 
@@ -526,7 +528,7 @@ MDLNestedList >> printSublistFor: anIntervalRequest context: aContext on: stream
 		on: stream
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedList >> renderContentOn: html [
 	self ensureId: html.
 	self obtainedTreesCache: nil. "Reset cache while loading page."
@@ -543,7 +545,7 @@ MDLNestedList >> renderContentOn: html [
 						with: [ self renderListOn: html ] ]
 ]
 
-{ #category : #researchField }
+{ #category : 'researchField' }
 MDLNestedList >> renderFilterFieldOn: html [
 	self displayResearchField ifFalse: [ ^ self ].
 	
@@ -567,7 +569,7 @@ MDLNestedList >> renderFilterFieldOn: html [
 			html mdlSpinner singleColor ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedList >> renderHelpOf: anItem at: anId on: html [
 	| helpText |
 	(self helpBlock isNil
@@ -583,7 +585,7 @@ MDLNestedList >> renderHelpOf: anItem at: anId on: html [
 						ifFalse: [ self helpBlock mdlCull: anItem cull: html ])
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedList >> renderListOn: html [
 	| div |
 	div := html div
@@ -610,32 +612,32 @@ MDLNestedList >> renderListOn: html [
 	self draggableMechanism: html forDiv: div
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> rightIconBlock [
 	^ self strategy rightIconBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> rightIconBlock: anObject [
 	self strategy rightIconBlock: anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> selectedEntity [
 	^ selectedEntity
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> selectedEntity: anObject [
 	selectedEntity := anObject
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 MDLNestedList >> setAjaxStrategy [
 	self strategy: self strategy asAjaxStrategy
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLNestedList >> setDataForCallBackFor: div html: html [
 	div
 		attributeAt: #'data-url' put: html actionUrl asString;
@@ -647,33 +649,33 @@ MDLNestedList >> setDataForCallBackFor: div html: html [
 		attributeAt: #'data-loadingstep' put: self listElementsDynamicalLoadingStep asString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> shouldBeExpanded [
 	^ shouldBeExpanded
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> shouldBeExpanded: anObject [
 	shouldBeExpanded := anObject
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 MDLNestedList >> states [
 	self flag: #BECAREFUL.	"I am absolutly not sure we want to do this. I let it to try but it might be removed."
 	^ Array with: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> strategy [
 	^ strategy ifNil: [ strategy := MDLNestedListItemRenderAnchorStrategy for: self ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedList >> strategy: anObject [
 	strategy := anObject
 ]
 
-{ #category : #researchField }
+{ #category : 'researchField' }
 MDLNestedList >> withResearchField [
 	self displayResearchField: true
 ]

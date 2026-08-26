@@ -23,23 +23,25 @@ Example
 			html mdlLayoutContent: [  ] ]
 "
 Class {
-	#name : #MDLNavigationLink,
-	#superclass : #WAAnchorTag,
-	#category : #'Material-Design-Lite-Components-Nav'
+	#name : 'MDLNavigationLink',
+	#superclass : 'WAAnchorTag',
+	#category : 'Material-Design-Lite-Components-Nav',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Nav'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLNavigationLink >> beCurrent [
     self class: 'mdl-navigation__link--current'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLNavigationLink >> beCurrentIf: aBlockOrBoolean [
 	aBlockOrBoolean value
 		ifTrue: [ self beCurrent ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLNavigationLink >> initialize [
 	super initialize.
 	self class: 'mdl-navigation__link'

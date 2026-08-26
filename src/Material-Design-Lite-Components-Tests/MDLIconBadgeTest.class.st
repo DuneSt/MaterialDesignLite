@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLIconBadgeTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Badge'
+	#name : 'MDLIconBadgeTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Badge',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Badge'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconBadgeTest >> testBareBrush [
 	self assert: [ :html | html mdlIconBadge ] generates: '<div class="mdl-badge material-icons"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconBadgeTest >> testComplexe [
 	self
 		assert: [ :html | 
@@ -21,7 +23,7 @@ MDLIconBadgeTest >> testComplexe [
 		generates: '<div class="mdl-badge material-icons mdl-badge--overlap mdl-badge--no-background" data-badge="3">account_box</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconBadgeTest >> testDataBadge [
 	self
 		assert: [ :html | 
@@ -31,7 +33,7 @@ MDLIconBadgeTest >> testDataBadge [
 		generates: '<div class="mdl-badge material-icons" data-badge="1">account_box</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconBadgeTest >> testDataBadgeWithNumber [
 	self
 		assert: [ :html | 
@@ -41,7 +43,7 @@ MDLIconBadgeTest >> testDataBadgeWithNumber [
 		generates: '<div class="mdl-badge material-icons" data-badge="1">account_box</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconBadgeTest >> testNoBackground [
 	self
 		assert: [ :html | 
@@ -51,7 +53,7 @@ MDLIconBadgeTest >> testNoBackground [
 		generates: '<div class="mdl-badge material-icons mdl-badge--no-background">account_box</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconBadgeTest >> testOverlap [
 	self
 		assert: [ :html | 
@@ -61,7 +63,7 @@ MDLIconBadgeTest >> testOverlap [
 		generates: '<div class="mdl-badge material-icons mdl-badge--overlap">account_box</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconBadgeTest >> testWithContent [
 	self assert: [ :html | html mdlIconBadge: 'account_box' ] generates: '<div class="mdl-badge material-icons">account_box</div>'
 ]

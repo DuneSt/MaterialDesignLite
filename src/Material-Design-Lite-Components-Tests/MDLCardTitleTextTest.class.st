@@ -2,17 +2,19 @@
 A MDLCardTitleTextTest is a test class for testing the behavior of MDLCardTitleText
 "
 Class {
-	#name : #MDLCardTitleTextTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Card'
+	#name : 'MDLCardTitleTextTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Card',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Card'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testBareBrush [
 	self assert: [ :html | html mdlCardTitleText ] generates: '<h1 class="mdl-card__title-text"></h1>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testLevel1 [
 	self
 		assert: [ :html | 
@@ -22,7 +24,7 @@ MDLCardTitleTextTest >> testLevel1 [
 		generates: '<h1 class="mdl-card__title-text">title</h1>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testLevel2 [
 	self
 		assert: [ :html | 
@@ -32,7 +34,7 @@ MDLCardTitleTextTest >> testLevel2 [
 		generates: '<h2 class="mdl-card__title-text">title</h2>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testLevel3 [
 	self
 		assert: [ :html | 
@@ -42,7 +44,7 @@ MDLCardTitleTextTest >> testLevel3 [
 		generates: '<h3 class="mdl-card__title-text">title</h3>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testLevel4 [
 	self
 		assert: [ :html | 
@@ -52,7 +54,7 @@ MDLCardTitleTextTest >> testLevel4 [
 		generates: '<h4 class="mdl-card__title-text">title</h4>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testLevel5 [
 	self
 		assert: [ :html | 
@@ -62,7 +64,7 @@ MDLCardTitleTextTest >> testLevel5 [
 		generates: '<h5 class="mdl-card__title-text">title</h5>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testLevel6 [
 	self
 		assert: [ :html | 
@@ -72,7 +74,7 @@ MDLCardTitleTextTest >> testLevel6 [
 		generates: '<h6 class="mdl-card__title-text">title</h6>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardTitleTextTest >> testWithContent [
 	self assert: [ :html | html mdlCardTitleText: 'title' ] generates: '<h1 class="mdl-card__title-text">title</h1>'
 ]

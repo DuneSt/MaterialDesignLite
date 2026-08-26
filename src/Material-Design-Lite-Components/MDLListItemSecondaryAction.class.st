@@ -22,12 +22,14 @@ Example
 								with: [ html mdlIcon: #star ] ] ] ]
 "
 Class {
-	#name : #MDLListItemSecondaryAction,
-	#superclass : #WAAnchorTag,
-	#category : #'Material-Design-Lite-Components-List'
+	#name : 'MDLListItemSecondaryAction',
+	#superclass : 'WAAnchorTag',
+	#category : 'Material-Design-Lite-Components-List',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'List'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLListItemSecondaryAction >> initialize [
 	super initialize.
 	self class: 'mdl-list__item-secondary-action'

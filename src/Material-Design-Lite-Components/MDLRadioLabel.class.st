@@ -18,18 +18,20 @@ Example
 			html mdlRadioLabel: 'First' ]
 "
 Class {
-	#name : #MDLRadioLabel,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLRadioLabel',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLRadioLabel >> initialize [
 	super initialize.
 	self class: 'mdl-radio__label'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLRadioLabel >> tag [
 	^ 'span'
 ]

@@ -6,7 +6,8 @@ For Example, use MDLHeaderScreenDecorator to add a header to your screen automat
 Use MDLFooterScreenDecorator to add a footer.
 "
 Class {
-	#name : #MDLScreen,
-	#superclass : #WAComponent,
-	#category : #'Material-Design-Lite-Core'
+	#name : 'MDLScreen',
+	#superclass : 'WAComponent',
+	#category : 'Material-Design-Lite-Core',
+	#package : 'Material-Design-Lite-Core'
 }

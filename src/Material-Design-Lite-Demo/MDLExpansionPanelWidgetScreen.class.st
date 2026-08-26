@@ -2,22 +2,24 @@
 Implementation of expansion panel for MDL.
 "
 Class {
-	#name : #MDLExpansionPanelWidgetScreen,
-	#superclass : #MDLWidgetDemo,
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#name : 'MDLExpansionPanelWidgetScreen',
+	#superclass : 'MDLWidgetDemo',
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanelWidgetScreen class >> icon [
 	^ #compexpansionPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanelWidgetScreen class >> title [
 	^ 'Expansion Panel'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> ajaxExpansionPanel [
 	^ OrderedDictionary new
 		add: 'Expansion panel loading via ajax initially folded.' -> #renderExpansionPanelWithAjaxStrategyOn:;
@@ -25,7 +27,7 @@ MDLExpansionPanelWidgetScreen >> ajaxExpansionPanel [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> basicExpansionPanel [
 	^ OrderedDictionary new
 		add: 'Basic expansion panel initially folded' -> #renderBasicExpansionPanelFoldedOn:;
@@ -33,14 +35,14 @@ MDLExpansionPanelWidgetScreen >> basicExpansionPanel [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> expansionMultipleDescriptions [
 	^ OrderedDictionary new
 		add: 'With multiple descriptions' -> #renderMultipleDescriptionsOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> lazyExpansionPanel [
 	^ OrderedDictionary new
 		add: 'Expansion panel loading lazily initially folded.' -> #renderExpansionPanelWithLazyStrategyOn:;
@@ -48,7 +50,7 @@ MDLExpansionPanelWidgetScreen >> lazyExpansionPanel [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelExpandedOn: html [
 	html div
 		style: 'width: 400px';
@@ -67,7 +69,7 @@ MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelExpandedOn: html [
 						yourself) ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelFoldedOn: html [
 	html div
 		style: 'width: 400px';
@@ -86,7 +88,7 @@ MDLExpansionPanelWidgetScreen >> renderBasicExpansionPanelFoldedOn: html [
 						yourself) ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithAjaxStrategyInitiallyExpandedOn: html [
 	| counter |
 	counter := 0.
@@ -110,7 +112,7 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithAjaxStrategyInitiallyEx
 						yourself) ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithAjaxStrategyOn: html [
 	| counter |
 	counter := 0.
@@ -133,7 +135,7 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithAjaxStrategyOn: html [
 						yourself) ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyInitiallyExpandedOn: html [
 	html div
 		style: 'width: 400px';
@@ -153,7 +155,7 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyInitiallyEx
 						yourself) ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyOn: html [
 	html div
 		style: 'width: 400px';
@@ -172,7 +174,7 @@ MDLExpansionPanelWidgetScreen >> renderExpansionPanelWithLazyStrategyOn: html [
 						yourself) ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLExpansionPanelWidgetScreen >> renderMultipleDescriptionsOn: html [
 	html
 		render:
@@ -189,7 +191,7 @@ MDLExpansionPanelWidgetScreen >> renderMultipleDescriptionsOn: html [
 				yourself)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanelWidgetScreen >> renderScreenContentOn: html [
 	self
 		render: self basicExpansionPanel on: html;

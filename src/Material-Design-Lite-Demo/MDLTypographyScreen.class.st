@@ -2,32 +2,34 @@
 Predefined typographies
 "
 Class {
-	#name : #MDLTypographyScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLTypographyScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTypographyScreen class >> icon [
 	^ 'compTypoPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTypographyScreen class >> title [
 	^ 'Typography'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTypographyScreen >> backgroundColorOptions [
 	^ OrderedDictionary with: 'Background color options' -> #renderBackgroundColorOptionsOn:
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTypographyScreen >> fontOptions [
 	^ OrderedDictionary with: 'Font options' -> #renderFontOptionsOn:
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTypographyScreen >> renderBackgroundColorOptionsOn: html [
 	html div
 		mdlTypographyTextJustify;
@@ -43,7 +45,7 @@ MDLTypographyScreen >> renderBackgroundColorOptionsOn: html [
 						with: each asLowercase capitalized ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTypographyScreen >> renderFontOptionsOn: html [
 	html div
 		mdlTypographyTextJustify;
@@ -58,7 +60,7 @@ MDLTypographyScreen >> renderFontOptionsOn: html [
 						with: 'This is am example with the font option: ' , each ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTypographyScreen >> renderScreenContentOn: html [
 	self
 		render: self typographies on: html;
@@ -68,7 +70,7 @@ MDLTypographyScreen >> renderScreenContentOn: html [
 		render: self textColorOptions on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTypographyScreen >> renderTextColorOptionsOn: html [
 	html div
 		mdlTypographyTextJustify;
@@ -83,7 +85,7 @@ MDLTypographyScreen >> renderTextColorOptionsOn: html [
 						with: each asLowercase capitalized ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTypographyScreen >> renderTextOptionsOn: html [
 	html div
 		mdlTypographyTextJustify;
@@ -97,7 +99,7 @@ MDLTypographyScreen >> renderTextOptionsOn: html [
 						with: 'This is am example with the text option: ' , each ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTypographyScreen >> renderTypographiesOn: html [
 	html div
 		mdlTypographyTextJustify;
@@ -112,7 +114,7 @@ MDLTypographyScreen >> renderTypographiesOn: html [
 						with: each asLowercase capitalized ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTypographyScreen >> renderTypographiesWithContrastOn: html [
 	html div
 		mdlTypographyTextJustify;
@@ -127,17 +129,17 @@ MDLTypographyScreen >> renderTypographiesWithContrastOn: html [
 						with: each asLowercase capitalized ] ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTypographyScreen >> textColorOptions [
 	^ OrderedDictionary with: 'Text color options' -> #renderTextColorOptionsOn:
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTypographyScreen >> textOptions [
 	^ OrderedDictionary with: 'Text options' -> #renderTextOptionsOn:
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTypographyScreen >> typographies [
 	^ OrderedDictionary with: 'Typographies' -> #renderTypographiesOn: with: 'Color contrast' -> #renderTypographiesWithContrastOn:
 ]

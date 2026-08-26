@@ -18,18 +18,20 @@ Example
 			html mdlTextFieldError: 'Input is not a number !' ]
 "
 Class {
-	#name : #MDLTextFieldError,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLTextFieldError',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTextFieldError >> initialize [
 	super initialize.
 	self class: 'mdl-textfield__error'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldError >> tag [
 	^ 'span'
 ]

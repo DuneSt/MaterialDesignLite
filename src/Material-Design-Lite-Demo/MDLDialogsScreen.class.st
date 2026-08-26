@@ -2,29 +2,31 @@
 Modal windows for dedicated user input.
 "
 Class {
-	#name : #MDLDialogsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLDialogsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogsScreen class >> icon [
 		^ 'compdialogPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogsScreen class >> title [
 	^ 'Dialog'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLDialogsScreen >> complexDialog [
 	^ OrderedDictionary new
 		add: 'Dialog with buttons' -> #renderComplexDialogOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLDialogsScreen >> renderComplexDialogOn: html [
 	| idButtonOpen idButtonClose |
 	html mdlButton
@@ -48,14 +50,14 @@ MDLDialogsScreen >> renderComplexDialogOn: html [
 						with: 'Disagree' ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDialogsScreen >> renderScreenContentOn: html [
 	self
 		render: self simpleDialog on: html;
 		render: self complexDialog on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLDialogsScreen >> renderSimpleDialogOn: html [
 	html mdlButton
 		id: html nextId;
@@ -71,7 +73,7 @@ MDLDialogsScreen >> renderSimpleDialogOn: html [
 			html mdlDialogContent: [ html paragraph: 'You managed to open the dialog' ] ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLDialogsScreen >> simpleDialog [
 	^ OrderedDictionary new
 		add: 'Simple Dialog' -> #renderSimpleDialogOn:;

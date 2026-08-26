@@ -4,8 +4,8 @@ A login widget which use a MDLCardWidget
 I'm ready to use, you just have to give me a callback with 2 arguments (login and password) and insert me in a form.
 "
 Class {
-	#name : #MDLLoginWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLLoginWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'titleLabel',
 		'titleLevel',
@@ -18,30 +18,31 @@ Class {
 		'cancelLabel',
 		'cancelCallback'
 	],
-	#category : #'Material-Design-Lite-Widgets'
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> callback: anObject [
 	callback := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> cancelCallback [
 	^ cancelCallback ifNil: [ cancelCallback := [  ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> cancelCallback: anObject [
 	cancelCallback := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> cancelLabel: anObject [
 	cancelLabel := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLoginWidget >> initialize [
 	super initialize.
 	titleLabel := 'Please, sign in'.
@@ -52,17 +53,17 @@ MDLLoginWidget >> initialize [
 	submitLabel := 'Sign In'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> login [
 	^ login
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> login: anObject [
 	login := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginWidget >> loginInputWidget [
 	^ MDLTextFieldWidget new
 		beFloatingLabel;
@@ -71,22 +72,22 @@ MDLLoginWidget >> loginInputWidget [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> loginLabel: anObject [
 	loginLabel := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> password [
 	^ password
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> password: anObject [
 	password := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginWidget >> passwordInputWidget [
 	^ MDLTextFieldWidget new beFloatingLabel
 		type: 'password';
@@ -95,12 +96,12 @@ MDLLoginWidget >> passwordInputWidget [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> passwordLabel: anObject [
 	passwordLabel := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginWidget >> renderCancelButtonOn: html [
 	html anchor
 		class: 'mdl-button mdl-js-button mdl-button--raised';
@@ -108,20 +109,20 @@ MDLLoginWidget >> renderCancelButtonOn: html [
 		with: cancelLabel
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginWidget >> renderContentOn: html [
 	self renderFieldsOn: html.
 	self renderSubmitButtonOn: html.
 	self renderCancelButtonOn: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginWidget >> renderFieldsOn: html [
 	html render: self loginInputWidget.
 	html render: self passwordInputWidget
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginWidget >> renderSubmitButtonOn: html [
 	html mdlButton
 		raised;
@@ -131,17 +132,17 @@ MDLLoginWidget >> renderSubmitButtonOn: html [
 		with: submitLabel
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> submitLabel: anObject [
 	submitLabel := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> titleLabel: anObject [
 	titleLabel := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginWidget >> titleLevel: anObject [
 	titleLevel := anObject
 ]

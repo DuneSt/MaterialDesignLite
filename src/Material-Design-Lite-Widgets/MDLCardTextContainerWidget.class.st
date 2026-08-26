@@ -2,22 +2,24 @@
 Widget for text container
 "
 Class {
-	#name : #MDLCardTextContainerWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLCardTextContainerWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'content'
 	],
-	#category : 'Material-Design-Lite-Widgets-Cards'
+	#category : 'Material-Design-Lite-Widgets-Cards',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Cards'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLCardTextContainerWidget class >> newWithContent: anObject [
 	^ self new
 		content: anObject;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLCardTextContainerWidget class >> newWithContent: anObject class: cssClasses [
 	^ self new
 		content: anObject;
@@ -25,12 +27,12 @@ MDLCardTextContainerWidget class >> newWithContent: anObject class: cssClasses [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardTextContainerWidget >> content: text [
 	content := text
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCardTextContainerWidget >> renderContentOn: html [
 	| brush |
 	brush := html mdlCardTextContainer.

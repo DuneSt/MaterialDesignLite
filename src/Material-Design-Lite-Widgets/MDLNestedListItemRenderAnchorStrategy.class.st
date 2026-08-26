@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLNestedListItemRenderAnchorStrategy,
-	#superclass : #MDLNestedListItemRenderAbstractStrategy,
-	#category : #'Material-Design-Lite-Widgets-List'
+	#name : 'MDLNestedListItemRenderAnchorStrategy',
+	#superclass : 'MDLNestedListItemRenderAbstractStrategy',
+	#category : 'Material-Design-Lite-Widgets-List',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'List'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 MDLNestedListItemRenderAnchorStrategy >> asAjaxStrategy [
 	^ (MDLNestedListItemRenderAjaxStrategy for: self list)
 		isJsAction: isJsAction;
@@ -19,7 +21,7 @@ MDLNestedListItemRenderAnchorStrategy >> asAjaxStrategy [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 MDLNestedListItemRenderAnchorStrategy >> getHtmlElementForNode: aNode inDiv: div index: anIndex indentedBy: anInteger on: html [
 	| anchor |
 	anchor := html anchor
@@ -40,7 +42,7 @@ MDLNestedListItemRenderAnchorStrategy >> getHtmlElementForNode: aNode inDiv: div
 	^ anchor
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListItemRenderAnchorStrategy >> overwriteOnCompleteForNode: aNode inDiv: div index: anIndex indentedBy: anInteger on: html [
 	| onClickValue selfOnComplete finalOnComplete |
 	onClickValue := self actionBlock value: aNode element.

@@ -25,43 +25,45 @@ Internal Representation and Key Implementation Points.
 	action is the action to execute when the actionText button is pressed
 "
 Class {
-	#name : #MDLSnackbar,
-	#superclass : #MDLDivTag,
+	#name : 'MDLSnackbar',
+	#superclass : 'MDLDivTag',
 	#instVars : [
 		'message',
 		'timeout',
 		'actionText',
 		'action'
 	],
-	#category : #'Material-Design-Lite-Components-Snackbar'
+	#category : 'Material-Design-Lite-Components-Snackbar',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Snackbar'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> action [
 	^ action
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> action: aString [
 	action := aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> actionText [
 	^ actionText
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> actionText: aString [
 	actionText := aString
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSnackbar >> defaultTimeout [
 	^'2000'
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLSnackbar >> getJsShowingSnackbar [
 	^ String
 		streamContents: [ :s | 
@@ -83,7 +85,7 @@ MDLSnackbar >> getJsShowingSnackbar [
 			s nextPutAll: 'snackbarContainer.MaterialSnackbar.showSnackbar(data);' ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSnackbar >> initialize [
 	super initialize.
 	self class: 'mdl-js-snackbar'.
@@ -91,22 +93,22 @@ MDLSnackbar >> initialize [
    timeout := self defaultTimeout
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> message [
 	^ message
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> message: aString [
 	message := aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> timeout [
 	^ timeout
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSnackbar >> timeout: anInteger [
 	timeout := anInteger
 ]

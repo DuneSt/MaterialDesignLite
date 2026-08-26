@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLLogoTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Footer'
+	#name : 'MDLLogoTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Footer',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Footer'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLLogoTest >> testBareBrush [
 	self assert: [ :html | html mdlLogo ] generates: '<div class="mdl-logo"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLLogoTest >> testWithContent [
 	self assert: [ :html | html mdlLogo: 'Logo' ] generates: '<div class="mdl-logo">Logo</div>'
 ]

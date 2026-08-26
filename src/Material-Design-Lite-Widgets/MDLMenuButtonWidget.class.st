@@ -30,8 +30,8 @@ Internal Representation and Key Implementation Points.
 
 "
 Class {
-	#name : #MDLMenuButtonWidget,
-	#superclass : #MDLWidget,
+	#name : 'MDLMenuButtonWidget',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'textBlock',
 		'selectedObject',
@@ -42,15 +42,17 @@ Class {
 		'buttonContent',
 		'descriptionPosition'
 	],
-	#category : #'Material-Design-Lite-Widgets-Menu'
+	#category : 'Material-Design-Lite-Widgets-Menu',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Menu'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLMenuButtonWidget class >> possibilities: aCollectionOfObjects label: aLabelBlock action: anAction choosingText: aText [
 	^ self possibilities: aCollectionOfObjects label: aLabelBlock action: anAction choosingText: aText description: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLMenuButtonWidget class >> possibilities: aCollectionOfObjects label: aLabelBlock action: anAction choosingText: aText description: aDescriptionValuable [
 	^ self
 		possibilities: aCollectionOfObjects
@@ -61,7 +63,7 @@ MDLMenuButtonWidget class >> possibilities: aCollectionOfObjects label: aLabelBl
 		description: aDescriptionValuable
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLMenuButtonWidget class >> possibilities: aCollectionOfObjects label: aLabelBlock action: anAction selectedObject: anObjectOrNil choosingText: aText [
 	^ self
 		possibilities: aCollectionOfObjects
@@ -72,7 +74,7 @@ MDLMenuButtonWidget class >> possibilities: aCollectionOfObjects label: aLabelBl
 		description: nil
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLMenuButtonWidget class >> possibilities: aCollectionOfObjects label: aLabelBlock action: anAction selectedObject: anObjectOrNil choosingText: aText description: aDescriptionValuable [ 
 	^ self new
 		choosingText: aText;
@@ -84,32 +86,32 @@ MDLMenuButtonWidget class >> possibilities: aCollectionOfObjects label: aLabelBl
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> action [
 	^ action
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> action: anObject [
 	action := anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLMenuButtonWidget >> actionWith: anObject [
 	self action ifNotNil: [ :block | block value: anObject]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> buttonContent [
 	^ buttonContent ifNil: [ buttonContent := 'choose' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> buttonContent: aBlockOrString [
 	buttonContent := aBlockOrString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> choosingText [
 	"This method is to keep backward compatibility with old API. This might be suppress with the next major release."
 
@@ -118,85 +120,85 @@ MDLMenuButtonWidget >> choosingText [
 	self error: 'This button was not configured to render a string but was configured with a block'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> choosingText: aString [
 	"This method is to keep backward compatibility with old API. This might be suppress with the next major release."
 	
 	self buttonContent: aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> description [
 	^ description
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> description: anObject [
 	description := anObject
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenuButtonWidget >> descriptionAtBottom [
 	"Sets the description of the menu at its bottom."
 	self descriptionPosition: #bottom
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenuButtonWidget >> descriptionAtLeft [
 	"Sets the description of the menu at its left."
 	self descriptionPosition: #left
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenuButtonWidget >> descriptionAtRight [
 	"Sets the description of the menu at its right."
 	self descriptionPosition: #right
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenuButtonWidget >> descriptionAtTop [
 	"Sets the description of the menu at its top."
 	self descriptionPosition: #top
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> descriptionPosition [
 	^ descriptionPosition ifNil: [ descriptionPosition := #bottom ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> descriptionPosition: anObject [
 	descriptionPosition := anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLMenuButtonWidget >> labelFor: anObject [
 	^ self textBlock ifNil: [ anObject asString ] ifNotNil: [ :tb | tb cull: anObject ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> objectsPossibilities [
 	^ objectsPossibilities
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> objectsPossibilities: anObject [
 	objectsPossibilities := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> objectsPossibilitiesWithLabel [
 	^ (self objectsPossibilities collect: [ :anObject | (self labelFor: anObject) -> anObject ]) sorted: self sortBlock
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonWidget >> renderButtonContentOn: html [
 	self buttonContent isString
 		ifTrue: [ html render: self buttonContent ]
 		ifFalse: [ self buttonContent cull: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonWidget >> renderButtonOn: html [
 	html div
 		id: self id;
@@ -208,7 +210,7 @@ MDLMenuButtonWidget >> renderButtonOn: html [
 			html mdlIcon: 'arrow_drop_down' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonWidget >> renderContentOn: html [
 	self ensureId: html.
 	self renderButtonOn: html.
@@ -216,7 +218,7 @@ MDLMenuButtonWidget >> renderContentOn: html [
 	self renderTooltipOn: html.
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonWidget >> renderMenuItemOn: html withAssociation: anAssociation [
 	html
 		mdlMenuItem: [ 
@@ -225,7 +227,7 @@ MDLMenuButtonWidget >> renderMenuItemOn: html withAssociation: anAssociation [
 				with: [ html text: anAssociation key ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonWidget >> renderMenuOn: html [
 	html mdlMenu
 		bottomLeft;
@@ -234,7 +236,7 @@ MDLMenuButtonWidget >> renderMenuOn: html [
 		with: [ self objectsPossibilitiesWithLabel do: [ :anAssociation | self renderMenuItemOn: html withAssociation: anAssociation ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonWidget >> renderTooltipOn: html [
 	self description ifNil: [ ^ self ].
 	
@@ -245,32 +247,32 @@ MDLMenuButtonWidget >> renderTooltipOn: html [
 		with: self description
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> selectedObject [
 	^ selectedObject value
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> selectedObject: anObject [
 	selectedObject := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> sortBlock [
 	^ sortBlock ifNil: [ sortBlock := [ :a :b | a <= b ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> sortBlock: anObject [
 	sortBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> textBlock [
 	^ textBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonWidget >> textBlock: anObject [
 	textBlock := anObject
 ]

@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLButtonTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Buttons'
+	#name : 'MDLButtonTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Buttons',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Buttons'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testAccentColor [
 	self
 		assert: [ :html | 
@@ -14,7 +16,7 @@ MDLButtonTest >> testAccentColor [
 		generates: '<button class="mdl-button mdl-js-button mdl-button--accent" type="submit">Validate</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testAsLabel [
 	self
 		assert: [ :html | 
@@ -24,12 +26,12 @@ MDLButtonTest >> testAsLabel [
 		generates: '<label class="mdl-button mdl-js-button" type="submit">Validate</label>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testBareBrush [
 	self assert: [ :html | html mdlButton ] generates: '<button class="mdl-button mdl-js-button" type="submit"></button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testColored [
 	self
 		assert: [ :html | 
@@ -39,7 +41,7 @@ MDLButtonTest >> testColored [
 		generates: '<button class="mdl-button mdl-js-button mdl-button--colored" type="submit">Validate</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testFab [
 	self
 		assert: [ :html | 
@@ -49,7 +51,7 @@ MDLButtonTest >> testFab [
 		generates: '<button class="mdl-button mdl-js-button mdl-button--fab" type="submit">+</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testFor [
 	self
 		assert: [ :html | 
@@ -59,7 +61,7 @@ MDLButtonTest >> testFor [
 		generates: '<button class="mdl-button mdl-js-button" for="id1" type="submit">Validate</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testIcon [
 	self
 		assert: [ :html | 
@@ -70,7 +72,7 @@ MDLButtonTest >> testIcon [
 	self assert: [ :html | html mdlButton icon: 'mood' ] generates: '<button class="mdl-button mdl-js-button mdl-button--icon" type="submit"><i class="material-icons">mood</i></button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testLabelIcon [
 	self
 		assert: [ :html | 
@@ -81,7 +83,7 @@ MDLButtonTest >> testLabelIcon [
 	self assert: [ :html | html mdlButton labelIcon: 'mood' ] generates: '<label class="mdl-button mdl-js-button mdl-button--icon" type="submit"><i class="material-icons">mood</i></label>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testMiniFab [
 	self
 		assert: [ :html | 
@@ -91,7 +93,7 @@ MDLButtonTest >> testMiniFab [
 		generates: '<button class="mdl-button mdl-js-button mdl-button--mini-fab" type="submit">+</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testPrimaryColor [
 	self
 		assert: [ :html | 
@@ -101,7 +103,7 @@ MDLButtonTest >> testPrimaryColor [
 		generates: '<button class="mdl-button mdl-js-button mdl-button--primary" type="submit">Validate</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testRaised [
 	self
 		assert: [ :html | 
@@ -111,12 +113,12 @@ MDLButtonTest >> testRaised [
 		generates: '<button class="mdl-button mdl-js-button mdl-button--raised" type="submit">Validate</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testResetType [
 	self assert: [ :html | html mdlButton resetType; with: 'Validate' ] generates: '<button class="mdl-button mdl-js-button">Validate</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testRippleEffect [
 	self
 		assert: [ :html | 
@@ -126,7 +128,7 @@ MDLButtonTest >> testRippleEffect [
 		generates: '<button class="mdl-button mdl-js-button mdl-js-ripple-effect" type="submit">Validate</button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLButtonTest >> testWithContent [
 	self assert: [ :html | html mdlButton: 'Validate' ] generates: '<button class="mdl-button mdl-js-button" type="submit">Validate</button>'
 ]

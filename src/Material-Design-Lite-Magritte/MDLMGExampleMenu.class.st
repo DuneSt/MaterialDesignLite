@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMGExampleMenu,
-	#superclass : #WAComponent,
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#name : 'MDLMGExampleMenu',
+	#superclass : 'WAComponent',
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleMenu >> examples [
 	^ Array with: MDLMGExampleFormTask with: MDLMGReportExampleTask with: MDLMGExampleInformsConfirms
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMGExampleMenu >> renderContentOn: html [
 	html mdlCardActions
 		border;

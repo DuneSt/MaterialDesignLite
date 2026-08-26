@@ -2,29 +2,31 @@
 Selecting a value out of a range.
 "
 Class {
-	#name : #MDLSlidersScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLSlidersScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSlidersScreen class >> icon [
 	^ 'compslidersPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSlidersScreen class >> title [
 	^ 'Sliders'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLSlidersScreen >> advanceSlider [
 	^ OrderedDictionary new
 		add: 'Advance slider' -> #renderAdvenceSliderOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSlidersScreen >> renderAdvenceSliderOn: html [
 	html
 		mdlSliderContainer: [ 
@@ -48,7 +50,7 @@ MDLSlidersScreen >> renderAdvenceSliderOn: html [
 				with: 1000 ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSlidersScreen >> renderDefaultSliderOn: html [
 	html mdlSlider
 		min: 0;
@@ -56,7 +58,7 @@ MDLSlidersScreen >> renderDefaultSliderOn: html [
 		value: 0
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSlidersScreen >> renderDisabledSliderOn: html [
 	html mdlSlider
 		min: 0;
@@ -65,14 +67,14 @@ MDLSlidersScreen >> renderDisabledSliderOn: html [
 		disabled
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSlidersScreen >> renderScreenContentOn: html [
 	self render: self simpleSliders on: html.
 	html small: 'Warning: Showing bonds might not work on all browsers.'.
 	self render: self advanceSlider on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSlidersScreen >> renderStartingValueSliderOn: html [
 	html mdlSlider
 		min: 0;
@@ -80,7 +82,7 @@ MDLSlidersScreen >> renderStartingValueSliderOn: html [
 		value: 75
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLSlidersScreen >> simpleSliders [
 	^ OrderedDictionary new
 		add: 'Default Slider' -> #renderDefaultSliderOn:;

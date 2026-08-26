@@ -2,45 +2,46 @@
 I represent the login widget but I am display in a dialog
 "
 Class {
-	#name : #MDLLoginDialogWidget,
-	#superclass : #MDLLoginWidget,
+	#name : 'MDLLoginDialogWidget',
+	#superclass : 'MDLLoginWidget',
 	#instVars : [
 		'closeId',
 		'openId',
 		'signInTitleLabel',
 		'signInButtonLabel'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginDialogWidget >> closeId [
 	^ closeId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginDialogWidget >> closeId: anObject [
 	^ closeId := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLoginDialogWidget >> initialize [
 	super initialize.
 	signInTitleLabel := 'Sign In'.
 	signInButtonLabel := 'Sign In'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginDialogWidget >> openId [
 	^ openId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoginDialogWidget >> openId: anObject [
 	^ openId := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginDialogWidget >> renderCancelButtonOn: html [
 	html mdlButton
 		id: closeId;
@@ -48,13 +49,13 @@ MDLLoginDialogWidget >> renderCancelButtonOn: html [
 		with: cancelLabel
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginDialogWidget >> renderContentOn: html [
 	self renderOpenButtonOn: html.
 	self renderLoginDialogOn: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginDialogWidget >> renderLoginDialogOn: html [
 	html mdlDialog
 		openButtonId: openId;
@@ -65,7 +66,7 @@ MDLLoginDialogWidget >> renderLoginDialogOn: html [
 			html mdlDialogContent: [ super renderContentOn: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginDialogWidget >> renderOpenButtonOn: html [
 	html mdlButton
 		id: (openId := html nextId);

@@ -21,12 +21,14 @@ Example
 						with: 'Expandable Input' ] ]
 "
 Class {
-	#name : #MDLTextFieldExpandableHolder,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLTextFieldExpandableHolder',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTextFieldExpandableHolder >> initialize [
 	super initialize.
 	self class: 'mdl-textfield__expandable-holder'

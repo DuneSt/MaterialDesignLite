@@ -12,20 +12,22 @@ Internal Representation and Key Implementation Points.
 
 "
 Class {
-	#name : #MDLDemoSession,
-	#superclass : #WASession,
+	#name : 'MDLDemoSession',
+	#superclass : 'WASession',
 	#instVars : [
 		'rootComponent'
 	],
-	#category : #'Material-Design-Lite-Demo-Core'
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoSession >> rootComponent [
 	^ rootComponent
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoSession >> rootComponent: anObject [
 	rootComponent := anObject
 ]

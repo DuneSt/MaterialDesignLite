@@ -1,6 +1,6 @@
-Extension { #name : #WARadioGroup }
+Extension { #name : 'WARadioGroup' }
 
-{ #category : #'*Material-Design-Lite-Components' }
+{ #category : '*Material-Design-Lite-Components' }
 WARadioGroup >> mdlRadioButton [
 	^ canvas mdlRadioButton group: self
 ]

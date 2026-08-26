@@ -22,28 +22,30 @@ Example
 								with: [ html mdlIcon: #star ] ] ] ]
 "
 Class {
-	#name : #MDLListItem,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-List'
+	#name : 'MDLListItem',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-List',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'List'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLListItem >> initialize [
 	super initialize.
 	self class: 'mdl-list__item'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLListItem >> tag [
 	^ 'li'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLListItem >> threeLine [
 	self class: 'mdl-list__item--three-line'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLListItem >> twoLine [
 	self class: 'mdl-list__item--two-line'
 ]

@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLMASelectListRowsComponent,
-	#superclass : #MASelectListRowsComponent,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMASelectListRowsComponent',
+	#superclass : 'MASelectListRowsComponent',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #'rendering-grouped' }
+{ #category : 'rendering-grouped' }
 MDLMASelectListRowsComponent >> renderEditorForGroupedOn: html [
 	html select
 		id: self labelId;
@@ -13,7 +15,7 @@ MDLMASelectListRowsComponent >> renderEditorForGroupedOn: html [
 		with: [ self renderGroupsOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMASelectListRowsComponent >> renderEditorForUngroupedOn: html [
 	html
 		render:

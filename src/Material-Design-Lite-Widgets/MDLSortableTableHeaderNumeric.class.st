@@ -1,17 +1,19 @@
 Class {
-	#name : #MDLSortableTableHeaderNumeric,
-	#superclass : #MDLSortableTableHeader,
-	#category : 'Material-Design-Lite-Widgets-Table'
+	#name : 'MDLSortableTableHeaderNumeric',
+	#superclass : 'MDLSortableTableHeader',
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeaderNumeric >> headingCellOn: html [
 	^ html mdlTableHeading
 		style: 'cursor: pointer;';
 		yourself
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeaderNumeric >> tableCellOn: html [
 	^ html mdlTableCell
 ]

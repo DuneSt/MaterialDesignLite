@@ -1,6 +1,6 @@
 Class {
-	#name : #MDLNestedListItemRenderAbstractStrategy,
-	#superclass : #MDLWidget,
+	#name : 'MDLNestedListItemRenderAbstractStrategy',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'list',
 		'isJsAction',
@@ -13,112 +13,114 @@ Class {
 		'iconBlock',
 		'rightIconBlock'
 	],
-	#category : #'Material-Design-Lite-Widgets-List'
+	#category : 'Material-Design-Lite-Widgets-List',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'List'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLNestedListItemRenderAbstractStrategy class >> for: aNestedList [
 	^ self new
 		list: aNestedList;
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> actionBlock [
 	^ actionBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> actionBlock: anObject [
 	actionBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> childrenBlock [
 	^ childrenBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> childrenBlock: anObject [
 	childrenBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> childrenSortBlock [
 	^ childrenSortBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> childrenSortBlock: anObject [
 	childrenSortBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> entryCustomizationHook [
 	^ entryCustomizationHook
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> entryCustomizationHook: anObject [
 	entryCustomizationHook := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> format [
 	^ format ifNil: [ #asString ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> format: anObject [
 	format := anObject
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLNestedListItemRenderAbstractStrategy >> hasCustomizationForEntry [
 	^ self entryCustomizationHook notNil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> helpBlock [
 	^ helpBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> helpBlock: anObject [
 	helpBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> iconBlock [
 	^ iconBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> iconBlock: anObject [
 	iconBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> isJsAction [
 	^ isJsAction
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> isJsAction: anObject [
 	isJsAction := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> list [
 	^ list
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> list: anObject [
 	list := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListItemRenderAbstractStrategy >> renderHelpOf: anItem at: anId on: html [ 
 	| helpText |
 	(self helpBlock isNil
@@ -134,7 +136,7 @@ MDLNestedListItemRenderAbstractStrategy >> renderHelpOf: anItem at: anId on: htm
 						ifFalse: [ self helpBlock mdlCull: anItem cull: html ])
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListItemRenderAbstractStrategy >> renderIcon: aBlock Of: anItem on: html [
 	aBlock ifNil: [ ^ self ].
 	
@@ -148,7 +150,7 @@ MDLNestedListItemRenderAbstractStrategy >> renderIcon: aBlock Of: anItem on: htm
 		ifFalse: [ aBlock value: anItem value: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListItemRenderAbstractStrategy >> renderItem: aNode index: anIndex inDiv: div indentedBy: anInteger on: html [
 	| htmlElement |
 	htmlElement := self
@@ -169,7 +171,7 @@ MDLNestedListItemRenderAbstractStrategy >> renderItem: aNode index: anIndex inDi
 				class: #icon ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListItemRenderAbstractStrategy >> renderItemContentOf: aNode index: anIndex indentedBy: anInteger on: html [
 	| div |
 	div := html div class: #itemContener.
@@ -194,7 +196,7 @@ MDLNestedListItemRenderAbstractStrategy >> renderItemContentOf: aNode index: anI
 					self renderIcon: self rightIconBlock Of: aNode element on: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListItemRenderAbstractStrategy >> renderListTree: aTree index: index indentedBy: indentation on: html [
 	html listItem
 		class: #expanded if: (self shouldBeExpandedFor: aTree);
@@ -214,7 +216,7 @@ MDLNestedListItemRenderAbstractStrategy >> renderListTree: aTree index: index in
 						on: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListItemRenderAbstractStrategy >> renderSublistOf: children parentIndex: parentIndex indentedBy: anInteger on: html [
 	| sortedChildren |
 	children ifEmpty: [ ^ self ].
@@ -231,17 +233,17 @@ MDLNestedListItemRenderAbstractStrategy >> renderSublistOf: children parentIndex
 						on: html ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> rightIconBlock [
 	^ rightIconBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListItemRenderAbstractStrategy >> rightIconBlock: anObject [
 	rightIconBlock := anObject
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLNestedListItemRenderAbstractStrategy >> shouldBeExpandedFor: aTree [
 	^ self list shouldBeExpanded or: [ aTree selectedBranch ]
 ]

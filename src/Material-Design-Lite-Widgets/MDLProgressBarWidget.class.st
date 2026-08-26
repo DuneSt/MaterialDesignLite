@@ -24,24 +24,26 @@ Internal Representation and Key Implementation Points.
 
 "
 Class {
-	#name : #MDLProgressBarWidget,
-	#superclass : #MDLWidget,
+	#name : 'MDLProgressBarWidget',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'progressionBlock',
 		'refreshTime',
 		'hide'
 	],
-	#category : #'Material-Design-Lite-Widgets-Loading'
+	#category : 'Material-Design-Lite-Widgets-Loading',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Loading'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLProgressBarWidget class >> progression: aProgressionBlock [
 	^ self new
 		progressionBlock: aProgressionBlock;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLProgressBarWidget class >> progression: aProgressionBlock every: aDuration [
 	^ self new
 		progressionBlock: aProgressionBlock;
@@ -49,29 +51,29 @@ MDLProgressBarWidget class >> progression: aProgressionBlock every: aDuration [
 		yourself
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLProgressBarWidget >> hidden [
 	self hide: true
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarWidget >> hide [
 	^ hide
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarWidget >> hide: aBoolean [
 	hide := aBoolean
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLProgressBarWidget >> initialize [
 	super initialize.
 	self refreshTime: 1 seconds.
 	self hide: false
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLProgressBarWidget >> progressScript: html [
 	self flag: #todo.	"Cyril: I think we can clean a little this part. Maybe it should go partly in a javascript file"
 	^ html document
@@ -91,27 +93,27 @@ MDLProgressBarWidget >> progressScript: html [
 				, (';}, ' , self refreshTime asMilliSeconds asString , ');') js
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarWidget >> progressionBlock [
 	^ progressionBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarWidget >> progressionBlock: aBlock [
 	progressionBlock := aBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarWidget >> refreshTime [
 	^ refreshTime
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarWidget >> refreshTime: aDuration [
 	refreshTime := aDuration
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLProgressBarWidget >> renderContentOn: html [
 	self ensureId: html.
 	self flag: #todo.	"This need some cleaning."
@@ -122,7 +124,7 @@ MDLProgressBarWidget >> renderContentOn: html [
 	self hide ifFalse: [ self progressScript: html ]
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLProgressBarWidget >> showScript: html [
 	^ (html jQuery id: self id) show , (self progressScript: html)
 ]

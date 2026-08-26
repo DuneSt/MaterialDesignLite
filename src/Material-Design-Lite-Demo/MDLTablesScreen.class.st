@@ -2,29 +2,31 @@
 Organize data.
 "
 Class {
-	#name : #MDLTablesScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLTablesScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTablesScreen class >> icon [
 	^ 'comptablesPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTablesScreen class >> title [
 	^ 'Tables'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTablesScreen >> dataTable [
 	^ OrderedDictionary new
 		add: 'Data table' -> #renderDataTableOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTablesScreen >> renderDataTableOn: html [
 	| datas |
 	datas := OrderedDictionary with: 'Acrylic (Transparent)' -> #('25' '$2.90') with: 'Plywood (Birch)' -> #('50' '$1.25') with: 'Laminate (Gold on Blue)' -> #('10' '$2.35').
@@ -46,7 +48,7 @@ MDLTablesScreen >> renderDataTableOn: html [
 									members do: [ :data | html mdlTableCell: data ] ] ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTablesScreen >> renderScreenContentOn: html [
 	self render: self dataTable on: html
 ]

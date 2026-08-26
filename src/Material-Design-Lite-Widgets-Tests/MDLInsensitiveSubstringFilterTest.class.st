@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLInsensitiveSubstringFilterTest,
-	#superclass : #MDLAbstractFilterTest,
-	#category : 'Material-Design-Lite-Widgets-Tests-List'
+	#name : 'MDLInsensitiveSubstringFilterTest',
+	#superclass : 'MDLAbstractFilterTest',
+	#category : 'Material-Design-Lite-Widgets-Tests-List',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'List'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLInsensitiveSubstringFilterTest >> actualClass [
 	^ MDLInsensitiveSubstringFilter
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLInsensitiveSubstringFilterTest >> testFormatedElementMatches [
 	self assert: (self actualClass formatedElement: 'test' matches: 'test').
 	self assert: (self actualClass formatedElement: 'Test' matches: 'test' ).
@@ -20,7 +22,7 @@ MDLInsensitiveSubstringFilterTest >> testFormatedElementMatches [
 	self deny: (self actualClass formatedElement: 'anothertet2' matches: 'test' )
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLInsensitiveSubstringFilterTest >> testSelectMatchingFromFormatWith [
 	self
 		assertCollection:

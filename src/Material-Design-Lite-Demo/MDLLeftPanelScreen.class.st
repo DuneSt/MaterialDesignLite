@@ -2,36 +2,38 @@
 Simple component to add a resizable left panel to a browser
 "
 Class {
-	#name : #MDLLeftPanelScreen,
-	#superclass : #MDLExtensionsDemo,
-	#category : #'Material-Design-Lite-Demo-Extensions'
+	#name : 'MDLLeftPanelScreen',
+	#superclass : 'MDLExtensionsDemo',
+	#category : 'Material-Design-Lite-Demo-Extensions',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Extensions'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLeftPanelScreen class >> icon [
 	^ 'extLeftPanelPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLeftPanelScreen class >> title [
 	^ 'Left panel'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLeftPanelScreen >> leftPanel [
 	^ OrderedDictionary new
 		add: 'Left panel' -> #renderLeftPanelOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLeftPanelScreen >> leftPanelWithResizer [
 	^ OrderedDictionary new
 		add: 'Left panel with resizer' -> #renderLeftPanelWithResizerOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLeftPanelScreen >> renderLeftPanelOn: html [
 	html div
 		shadow: 2;
@@ -50,7 +52,7 @@ MDLLeftPanelScreen >> renderLeftPanelOn: html [
 			html div style: 'background-color: #ECEFF1; flex-grow: 1;' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLeftPanelScreen >> renderLeftPanelWithResizerOn: html [
 	html div
 		shadow: 2;
@@ -71,7 +73,7 @@ MDLLeftPanelScreen >> renderLeftPanelWithResizerOn: html [
 			html div style: 'background-color: #ECEFF1; flex-grow: 1;' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLeftPanelScreen >> renderScreenContentOn: html [
 	self
 		render: self leftPanel fullWidth: true on: html;

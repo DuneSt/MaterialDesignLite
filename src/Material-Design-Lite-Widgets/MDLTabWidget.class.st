@@ -2,28 +2,30 @@
 I represent a simple widget to use mdlTable
 "
 Class {
-	#name : #MDLTabWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLTabWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'tabs',
 		'selectedTabIndex'
 	],
-	#category : #'Material-Design-Lite-Widgets-Tab'
+	#category : 'Material-Design-Lite-Widgets-Tab',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Tab'
 }
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTabWidget >> addTabNamed: aString content: anObject [
 	tabs at: aString put: anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTabWidget >> initialize [
 	super initialize.
 	tabs := OrderedDictionary new.
 	selectedTabIndex := 1
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTabWidget >> renderContentOn: html [
 
 self ensureId: html.
@@ -49,13 +51,13 @@ self ensureId: html.
 					with: tabContent ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTabWidget >> selectedTabIndex [
 
 	^selectedTabIndex
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTabWidget >> selectedTabIndex: aNumber [
 
 	 selectedTabIndex := aNumber 

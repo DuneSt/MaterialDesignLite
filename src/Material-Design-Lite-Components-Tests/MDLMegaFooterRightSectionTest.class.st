@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMegaFooterRightSectionTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Footer'
+	#name : 'MDLMegaFooterRightSectionTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Footer',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Footer'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterRightSectionTest >> testBareBrush [
 	self assert: [ :html | html mdlFooterRightSection ] generates: '<div class="mdl-mega-footer__right-section"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterRightSectionTest >> testWithContent [
 	self assert: [ :html | html mdlFooterRightSection: 'Test' ] generates: '<div class="mdl-mega-footer__right-section">Test</div>'
 ]

@@ -2,12 +2,14 @@
 A MDLAjaxButtonColumnDescriptionTest is a test class for testing the behavior of MDLAjaxButtonColumnDescription
 "
 Class {
-	#name : #MDLAjaxButtonColumnDescriptionTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-Table'
+	#name : 'MDLAjaxButtonColumnDescriptionTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-Table',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Table'
 }
 
-{ #category : #test }
+{ #category : 'test' }
 MDLAjaxButtonColumnDescriptionTest >> testRenderOn [
 	|columnDescription|
 	columnDescription := MDLAjaxButtonColumnDescription new
@@ -17,7 +19,7 @@ MDLAjaxButtonColumnDescriptionTest >> testRenderOn [
 	self assert: [ :html | columnDescription render: #useless on: html ] generates: '<td><label class="mdl-button mdl-js-button mdl-table-widget__cell--button mdl-button--icon" id="id1" onclick="$.noop" type="submit"><i class="material-icons">delete</i></label></td>'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLAjaxButtonColumnDescriptionTest >> testRenderOnWithTooltip [
 	|columnDescription|
 	columnDescription := MDLAjaxButtonColumnDescription new

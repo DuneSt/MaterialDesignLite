@@ -9,12 +9,14 @@ This system help to manage dialogs inside a MDL application. The principle is to
 This trait need to be used by the root component of the application.
 "
 Trait {
-	#name : #TRootDialogRenderer,
+	#name : 'TRootDialogRenderer',
 	#traits : 'TWithRootDialogComponent',
-	#category : 'Material-Design-Lite-Extensions-RootDialog'
+	#category : 'Material-Design-Lite-Extensions-RootDialog',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'RootDialog'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 TRootDialogRenderer >> renderEmptyGenericDialogOn: html [
 	"This method need to be called at the end of the root #renderContentOn:"
 	

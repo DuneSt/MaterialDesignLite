@@ -2,12 +2,14 @@
 A MDLStringColumnDescriptionTest is a test class for testing the behavior of MDLStringColumnDescription
 "
 Class {
-	#name : #MDLStringColumnDescriptionTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-Table'
+	#name : 'MDLStringColumnDescriptionTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-Table',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Table'
 }
 
-{ #category : #test }
+{ #category : 'test' }
 MDLStringColumnDescriptionTest >> testRenderHeadingOn [
 	|columnDescription|
 	columnDescription := MDLStringColumnDescription new
@@ -17,7 +19,7 @@ MDLStringColumnDescriptionTest >> testRenderHeadingOn [
 	self assert: [ :html | columnDescription renderHeadingOn: html ] generates: '<th id="id1" class="mdl-table-widget__cell--string mdl-data-table__cell--non-numeric">non-numeric</th>'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLStringColumnDescriptionTest >> testRenderOn [
 	|columnDescription|
 	columnDescription := MDLStringColumnDescription new

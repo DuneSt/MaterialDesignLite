@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLTextFieldLabelTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Forms'
+	#name : 'MDLTextFieldLabelTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Forms',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Forms'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextFieldLabelTest >> testBareBrush [
 	self assert: [ :html | html brush: MDLTextFieldLabel new ] generates: '<label class="mdl-textfield__label"></label>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextFieldLabelTest >> testWithContent [
 	self assert: [ :html | html mdlTextFieldLabel: 'test' ] generates: '<label class="mdl-textfield__label">test</label>'
 ]

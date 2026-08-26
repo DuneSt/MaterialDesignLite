@@ -2,27 +2,29 @@
 Indicate loading and progress states.
 "
 Class {
-	#name : #MDLProgressBarScreen,
-	#superclass : #MDLWidgetDemo,
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#name : 'MDLProgressBarScreen',
+	#superclass : 'MDLWidgetDemo',
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarScreen class >> icon [
 	^ 'comploadingPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLProgressBarScreen class >> title [
 	^ 'Progress Bar'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLProgressBarScreen >> hiddenProgressBar [
 	^ OrderedDictionary with: 'Hidden progress bar' -> #renderHiddenProgressBarOn:
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLProgressBarScreen >> renderHiddenProgressBarOn: html [
 	| progression progressBar |
 	progression := 0.
@@ -40,14 +42,14 @@ MDLProgressBarScreen >> renderHiddenProgressBarOn: html [
 		with: 'Click to show'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLProgressBarScreen >> renderScreenContentOn: html [
 	self
 		render: self synchronizedProgressBar on: html;
 		render: self hiddenProgressBar on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLProgressBarScreen >> renderSynchronizedProgressBarOn: html [
 	| progression |
 	progression := 0.
@@ -58,7 +60,7 @@ MDLProgressBarScreen >> renderSynchronizedProgressBarOn: html [
 		with: 'Click to progress'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLProgressBarScreen >> renderSynchronizedProgressBarOnTimeOn: html [
 	| progress lastTimestamp |
 	progress := 0.
@@ -74,7 +76,7 @@ MDLProgressBarScreen >> renderSynchronizedProgressBarOnTimeOn: html [
 				every: 0.2 seconds)
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLProgressBarScreen >> synchronizedProgressBar [
 	^ OrderedDictionary
 		with: 'Synchronized progress bar' -> #renderSynchronizedProgressBarOn:

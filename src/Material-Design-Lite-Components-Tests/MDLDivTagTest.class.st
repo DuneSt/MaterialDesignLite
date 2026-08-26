@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLDivTagTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Core'
+	#name : 'MDLDivTagTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Core',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Core'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDivTagTest >> testBareBrush [
 	self assert: [ :html | html mdlDiv ] generates: '<div></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDivTagTest >> testWithContent [
 	self assert: [ :html | html mdlDiv: 'Test' ] generates: '<div>Test</div>'
 ]

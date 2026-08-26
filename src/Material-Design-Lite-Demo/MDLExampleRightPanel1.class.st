@@ -5,12 +5,14 @@ Description
 Utility component to illustrate the right panel extension.
 "
 Class {
-	#name : #MDLExampleRightPanel1,
-	#superclass : #WAComponent,
-	#category : #'Material-Design-Lite-Demo-Utils'
+	#name : 'MDLExampleRightPanel1',
+	#superclass : 'WAComponent',
+	#category : 'Material-Design-Lite-Demo-Utils',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Utils'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExampleRightPanel1 >> renderContentOn: html [
 	html render: 'This is the first panel'
 ]

@@ -1,23 +1,25 @@
 Class {
-	#name : #MDLAbstractLayoutSection,
-	#superclass : #MDLWidget,
+	#name : 'MDLAbstractLayoutSection',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'layout'
 	],
-	#category : 'Material-Design-Lite-Widgets-Header'
+	#category : 'Material-Design-Lite-Widgets-Header',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Header'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAbstractLayoutSection >> layout [
 	^ layout
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLAbstractLayoutSection >> layout: anObject [
 	layout := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAbstractLayoutSection >> renderContentOn: html [
 	self subclassResponsibility
 ]

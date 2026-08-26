@@ -1,37 +1,39 @@
 Class {
-	#name : #MDLSelectWidgetTests,
-	#superclass : #SGTAbstractSeasideTestCase,
+	#name : 'MDLSelectWidgetTests',
+	#superclass : 'SGTAbstractSeasideTestCase',
 	#instVars : [
 		'select'
 	],
-	#category : #'Material-Design-Lite-Widgets-Tests-Form'
+	#category : 'Material-Design-Lite-Widgets-Tests-Form',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Form'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLSelectWidgetTests >> defaultPossibilities [
 	^ #(1 2 3 4 5 5)
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 MDLSelectWidgetTests >> setUp [
 	super setUp.
 	select := MDLSelectWidget new.
 	select possibilities: self defaultPossibilities
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testChoosingText [
 	select choosingText: 'This is a test'.
 	self assert: [ :html | html render: select ] generatedIncludes: '<label class="mdl-textfield__label" for="id2">This is a test</label>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testDescription [
 	select description: 'Test'.
 	self assert: [ :html | html render: select ] generatedIncludes: '<span class="mdl-tooltip mdl-tooltip--large" for="id2">Test</span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testLabelFor [
 	select
 		labelBlock: [ :number | 
@@ -45,7 +47,7 @@ MDLSelectWidgetTests >> testLabelFor [
 	self assert: (select labelFor: 4) equals: '4'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testLabelForVersion [
 	select labelBlock: nil.
 	self assert: (select labelFor: 5 version: 0) equals: '5'.
@@ -54,7 +56,7 @@ MDLSelectWidgetTests >> testLabelForVersion [
 	self assert: (select labelFor: 4 version: 3) equals: '4 (3)'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testLabels [
 	select
 		labelBlock: [ :number | 
@@ -67,7 +69,7 @@ MDLSelectWidgetTests >> testLabels [
 			'<li class="mdl-menu__item" id="id2entry0">0</li><li class="mdl-menu__item" id="id2entry1">1</li><li class="mdl-menu__item" id="id2entry2">2</li><li class="mdl-menu__item" id="id2entry3">3</li><li class="mdl-menu__item" id="id2entry0 (1)">0 (1)</li><li class="mdl-menu__item" id="id2entry0 (2)">0 (2)</li>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testList [
 	select list: self defaultPossibilities.
 	self
@@ -76,7 +78,7 @@ MDLSelectWidgetTests >> testList [
 			'<li class="mdl-menu__item" id="id2entry1">1</li><li class="mdl-menu__item" id="id2entry2">2</li><li class="mdl-menu__item" id="id2entry3">3</li><li class="mdl-menu__item" id="id2entry4">4</li><li class="mdl-menu__item" id="id2entry5">5</li><li class="mdl-menu__item" id="id2entry5 (1)">5 (1)</li>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testPossibilities [
 	self
 		assert: [ :html | html render: select ]
@@ -84,13 +86,13 @@ MDLSelectWidgetTests >> testPossibilities [
 			'<li class="mdl-menu__item" id="id2entry1">1</li><li class="mdl-menu__item" id="id2entry2">2</li><li class="mdl-menu__item" id="id2entry3">3</li><li class="mdl-menu__item" id="id2entry4">4</li><li class="mdl-menu__item" id="id2entry5">5</li><li class="mdl-menu__item" id="id2entry5 (1)">5 (1)</li>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testSelected [
 	select selected: 3.
 	self assert: [ :html | html render: select ] generatedIncludes: 'value="3"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testSortBlock [
 	select
 		labelBlock: [ :number | 
@@ -104,7 +106,7 @@ MDLSelectWidgetTests >> testSortBlock [
 			'<li class="mdl-menu__item" id="id2entry0">0</li><li class="mdl-menu__item" id="id2entry0 (1)">0 (1)</li><li class="mdl-menu__item" id="id2entry0 (2)">0 (2)</li><li class="mdl-menu__item" id="id2entry1">1</li><li class="mdl-menu__item" id="id2entry2">2</li><li class="mdl-menu__item" id="id2entry3">3</li>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSelectWidgetTests >> testStandardSorting [
 	select
 		labelBlock: [ :number | 

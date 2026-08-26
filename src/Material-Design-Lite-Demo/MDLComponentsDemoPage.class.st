@@ -5,22 +5,24 @@ Description
 Page containing all the MDL for seaside components examples.
 "
 Class {
-	#name : #MDLComponentsDemoPage,
-	#superclass : #MDLDemoPageWithList,
-	#category : #'Material-Design-Lite-Demo-Core'
+	#name : 'MDLComponentsDemoPage',
+	#superclass : 'MDLDemoPageWithList',
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLComponentsDemoPage class >> pageName [
 	^ 'Components'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLComponentsDemoPage class >> priority [
 	^ 30
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLComponentsDemoPage >> renderPageDescriptionOn: html [
 	html
 		paragraph:
@@ -28,7 +30,7 @@ MDLComponentsDemoPage >> renderPageDescriptionOn: html [
 	html paragraph: 'The components are made available in the form of Seaside''s brushes.'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLComponentsDemoPage >> screens [
 	^ MDLComponentDemo subclasses
 ]

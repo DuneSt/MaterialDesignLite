@@ -2,32 +2,34 @@
 A widget to create a button that expand to show a menu when clicked
 "
 Class {
-	#name : #MDLMenuButtonScreen,
-	#superclass : #MDLWidgetDemo,
+	#name : 'MDLMenuButtonScreen',
+	#superclass : 'MDLWidgetDemo',
 	#instVars : [
 		'selectedUser'
 	],
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonScreen class >> icon [
 	^ #compmenusPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuButtonScreen class >> title [
 	^ 'Menu Button'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLMenuButtonScreen >> iconMenuButton [
 	^ OrderedDictionary new
 		add: 'Menu Button with block content' -> #renderIconMenuButtonOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLMenuButtonScreen >> renderIconMenuButtonOn: html [
 	html
 		render:
@@ -37,7 +39,7 @@ MDLMenuButtonScreen >> renderIconMenuButtonOn: html [
 				yourself)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonScreen >> renderMenuButtonOn: html [
 	html
 		render:
@@ -52,14 +54,14 @@ MDLMenuButtonScreen >> renderMenuButtonOn: html [
 				yourself)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMenuButtonScreen >> renderScreenContentOn: html [
 	self
 		render: self textMenuButton on: html;
 		render: self iconMenuButton on: html
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLMenuButtonScreen >> textMenuButton [
 	^ OrderedDictionary new
 		add: 'Menu Button' -> #renderMenuButtonOn:;

@@ -72,33 +72,35 @@ Examples
 
 "
 Class {
-	#name : #MDLChipTag,
-	#superclass : #WATagBrush,
+	#name : 'MDLChipTag',
+	#superclass : 'WATagBrush',
 	#instVars : [
 		'hasContactTag'
 	],
-	#category : #'Material-Design-Lite-Components-Chips'
+	#category : 'Material-Design-Lite-Components-Chips',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Chips'
 }
 
-{ #category : #private }
+{ #category : 'private' }
 MDLChipTag >> addDeleteWithAppendBlock: aBlock [
 	self class: #'mdl-chip__deletable'.
 	self script: (self canvas jQuery this append: aBlock)
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLChipTag >> addDeleteWithAppendBlock: aBlock callback: aNiladicValuable [
 	aNiladicValuable argumentCount > 0 ifTrue: [ GRInvalidArgumentCount signal: 'Chip expect a niladic callback.' ].
 	
 	self addDeleteWithAppendBlock: aBlock
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLChipTag >> ajaxDeleteCallback: aNiladicValuable [
 	self ajaxDeleteCallback: aNiladicValuable successHook: ''
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLChipTag >> ajaxDeleteCallback: aNiladicValuable successHook: aString [
 	self
 		addDeleteWithAppendBlock: [ :html | 
@@ -114,7 +116,7 @@ MDLChipTag >> ajaxDeleteCallback: aNiladicValuable successHook: aString [
 		callback: aNiladicValuable
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLChipTag >> deleteCallback: aNiladicValuable [
 	self
 		addDeleteWithAppendBlock: [ :html | 
@@ -125,13 +127,13 @@ MDLChipTag >> deleteCallback: aNiladicValuable [
 		callback: aNiladicValuable
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLChipTag >> initialize [
 	super initialize.
 	self class: #'mdl-chip'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLChipTag >> tag [ 
 	^ 'span'
 ]

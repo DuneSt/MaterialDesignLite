@@ -27,12 +27,14 @@ Example
  
 "
 Class {
-	#name : #MDLChipInitial,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Chips'
+	#name : 'MDLChipInitial',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Chips',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Chips'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLChipInitial >> color: aColor [
 	| hexColor |
 	self flag: #clean.	"This is bad. Really really really bad :( but I don't have time :( In Pharo 4 we have Color>>printHTMLString. In Pharo 5 we have Color>>asHexString. When Pharo 4 will not be suported by MDL anymore we can use #asHexString. Or if someone fave the courage we can create a Material-Design-Lite-Pharo4 package that will have #asHexString as a Color extension and load this package only in Pharo 4. "
@@ -46,7 +48,7 @@ MDLChipInitial >> color: aColor [
 	self hexColor: hexColor
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLChipInitial >> hexColor: aString [
 	self
 		style:
@@ -58,18 +60,18 @@ MDLChipInitial >> hexColor: aString [
 					s nextPutAll: aString ])
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLChipInitial >> initialize [
 	super initialize.
 	self class: #'mdl-color-text--white'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLChipInitial >> tag [
 	^ #span
 ]
 
-{ #category : #public }
+{ #category : 'public' }
 MDLChipInitial >> with: anObject [
 	self beChipDecoration. "Cannot do it at the initialization because it need the canvas."
 	super with: anObject

@@ -4,19 +4,21 @@ I am a button performing its action via AJAX which means that my user control wh
 My #onClickBlock has two arguments: the html canvas to generate javascript on and the row on which the action should be applied.
 "
 Class {
-	#name : #MDLAjaxButtonColumnDescription,
-	#superclass : #MDLButtonColumnDescription,
-	#category : #'Material-Design-Lite-Widgets-Table'
+	#name : 'MDLAjaxButtonColumnDescription',
+	#superclass : 'MDLButtonColumnDescription',
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLAjaxButtonColumnDescription >> initialize [
 	super initialize.
 	"Initialize with a behaviour that does nothing."
 	self onClickBlock: [ :html :rowObject | html jQuery noop ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLAjaxButtonColumnDescription >> render: row on: html [
 	| buttonId |
 	html mdlTableCell

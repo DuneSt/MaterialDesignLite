@@ -12,8 +12,8 @@ See MDLExpansionStrategy subclasses for documentation about them.
 My default strategy is MDLDisplayNoneStrategy.
 "
 Class {
-	#name : #MDLExpansionPanel,
-	#superclass : #MDLWidget,
+	#name : 'MDLExpansionPanel',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'title',
 		'descriptions',
@@ -22,45 +22,47 @@ Class {
 		'shadow',
 		'expansionStrategy'
 	],
-	#category : #'Material-Design-Lite-Widgets-Expansion'
+	#category : 'Material-Design-Lite-Widgets-Expansion',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Expansion'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> description: anObject [
 	self descriptions: { anObject }
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> descriptions [
 	^ descriptions
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> descriptions: aCollection [
 	descriptions := aCollection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> expandedBlock [
 	^ expandedBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> expandedBlock: anObject [
 	expandedBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> expansionStrategy [
 	^ expansionStrategy
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> expansionStrategy: anObject [
 	expansionStrategy := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLExpansionPanel >> initialize [
 	super initialize.
 	self
@@ -71,27 +73,27 @@ MDLExpansionPanel >> initialize [
 		useHideExpansionStrategy
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> isExpanded [
 	^ isExpanded
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> isExpanded: anObject [
 	isExpanded := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanel >> isFolded [
 	^ self isExpanded not
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> isFolded: aBoolean [
 	self isExpanded: aBoolean not
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanel >> renderContentOn: html [
 	self ensureId: html.
 	html mdlExpansionPanel
@@ -102,12 +104,12 @@ MDLExpansionPanel >> renderContentOn: html [
 			html mdlExpansionPanelContent: [ self renderExpansionPanelContentOn: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanel >> renderExpansionPanelContentOn: html [
 	self expansionStrategy renderExpansionPanel: self contentOn: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanel >> renderExpansionPanelHeaderOn: html [
 	| header |
 	header := html mdlExpansionPanelHeader
@@ -120,43 +122,43 @@ MDLExpansionPanel >> renderExpansionPanelHeaderOn: html [
 			html mdlExpansionPanelHeaderIcon ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> shadow [
 	^ shadow
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> shadow: anObject [
 	shadow := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> title [
 	^ title
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanel >> title: anObject [
 	title := anObject
 ]
 
-{ #category : #toggling }
+{ #category : 'toggling' }
 MDLExpansionPanel >> toggleExpansion [
 	self isExpanded: self isExpanded not
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 MDLExpansionPanel >> useAjaxExpansionStrategy [
 	self expansionStrategy: MDLAjaxExpansionStrategy new
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 MDLExpansionPanel >> useHideExpansionStrategy [
 	"Default strategy."
 	self expansionStrategy: MDLHideExpansionStrategy new
 ]
 
-{ #category : #configuring }
+{ #category : 'configuring' }
 MDLExpansionPanel >> useLazyExpansionStrategy [
 	self expansionStrategy: MDLLazyExpansionStrategy new
 ]

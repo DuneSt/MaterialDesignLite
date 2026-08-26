@@ -14,22 +14,24 @@ Example
 		with: 'Button'
 "
 Class {
-	#name : #MDLButton,
-	#superclass : #WAButtonTag,
+	#name : 'MDLButton',
+	#superclass : 'WAButtonTag',
 	#traits : 'TMDLButton',
 	#classTraits : 'TMDLButton classTrait',
 	#instVars : [
 		'tag'
 	],
-	#category : #'Material-Design-Lite-Components-Buttons'
+	#category : 'Material-Design-Lite-Components-Buttons',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Buttons'
 }
 
-{ #category : #converting }
+{ #category : 'converting' }
 MDLButton >> asLabel [
 	tag := 'label'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLButton >> initialize [
 	super initialize.
 	self class: 'mdl-button'.
@@ -37,28 +39,28 @@ MDLButton >> initialize [
 	tag := super tag
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLButton >> labelIcon [
 	self
 		asLabel;
 		icon
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLButton >> labelIcon: aString [
 	self
 		asLabel;
 		icon: aString
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLButton >> resetType [
 	"By default the type will be `submit`. This option remove the type."
 	
 	type := nil
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButton >> tag [
 	^ tag
 ]

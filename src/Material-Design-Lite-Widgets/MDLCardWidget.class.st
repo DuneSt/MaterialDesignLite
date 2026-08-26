@@ -2,21 +2,23 @@
 High level widget to render a card
 "
 Class {
-	#name : #MDLCardWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLCardWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'componentOrBlocks',
 		'cardActions'
 	],
-	#category : 'Material-Design-Lite-Widgets-Cards'
+	#category : 'Material-Design-Lite-Widgets-Cards',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Cards'
 }
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> accentColorTitle: aString [
 	self accentColorTitle: aString class: ''
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> accentColorTitle: aString class: anotherString [
 	| classes |
 	classes := String
@@ -33,38 +35,38 @@ MDLCardWidget >> accentColorTitle: aString class: anotherString [
 	self title: aString class: classes
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLCardWidget >> actionsBordered [
 	self cardActions beBordered
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> addAction: aComponentOrBlock [
 	self cardActions addComponentOrBlock: aComponentOrBlock
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> addComponentOrBlock: aComponentOrBlock [
 	componentOrBlocks add: aComponentOrBlock
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> addMedia: aBlock [
 	self addComponentOrBlock: (MDLCardMediaWidget newWith: aBlock)
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> addTextContainer: aString [
 	self addComponentOrBlock: (MDLCardTextContainerWidget newWithContent: aString)
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> addTextContainer: anObject class: cssClasses [
 	self
 		addComponentOrBlock: (MDLCardTextContainerWidget newWithContent: anObject class: cssClasses)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardWidget >> cardActions [
 	^ cardActions
 		ifNil: [ cardActions := MDLCardActionsWidget new.
@@ -72,19 +74,19 @@ MDLCardWidget >> cardActions [
 			^ cardActions ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCardWidget >> initialize [
 	super initialize.
 	componentOrBlocks := OrderedCollection new.
 	self class: 'mdl-card-widget'
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> primaryColorTitle: aString [
 	self primaryColorTitle: aString class: ''
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> primaryColorTitle: aString class: anotherString [
 	| classes |
 	classes := String
@@ -101,7 +103,7 @@ MDLCardWidget >> primaryColorTitle: aString class: anotherString [
 	self title: aString class: classes
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCardWidget >> renderContentOn: html [
 	| card |
 	card := html mdlCard.
@@ -109,7 +111,7 @@ MDLCardWidget >> renderContentOn: html [
 	card with: [ self renderInnerWidgetsOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCardWidget >> renderInnerWidgetsOn: html [
 	componentOrBlocks
 		do: [ :aComponentOrBlock | 
@@ -118,29 +120,29 @@ MDLCardWidget >> renderInnerWidgetsOn: html [
 				ifFalse: [ html render: aComponentOrBlock ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardWidget >> shadow: aNumber [
 	"aNumber must be between 2 and 24"
 
 	self propertiesAt: #shadow: put: (Array with: aNumber)
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> title: aString [
 	self title: aString level: 2
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> title: aString class: cssClasses [
 	self title: aString level: 2 class: cssClasses
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> title: aString level: aNumber [
 	self title: aString level: aNumber class: ''
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLCardWidget >> title: aString level: aNumber class: cssClasses [
 	self addComponentOrBlock: (MDLCardTitle newWithTitle: aString level: aNumber class: cssClasses)
 ]

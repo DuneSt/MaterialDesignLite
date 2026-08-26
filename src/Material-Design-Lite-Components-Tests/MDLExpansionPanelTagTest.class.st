@@ -2,47 +2,49 @@
 A MDLExpansionPanelTagTest is a test class for testing the behavior of MDLExpansionPanelTag
 "
 Class {
-	#name : #MDLExpansionPanelTagTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-ExpansionPanels'
+	#name : 'MDLExpansionPanelTagTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-ExpansionPanels',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'ExpansionPanels'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testBareBrush [
 	self assert: [ :html | html mdlExpansionPanel ] generates: '<div class="mdl-expansion-panel"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testBareBrushExpanded [
 	self assert: [ :html | html mdlExpansionPanel expand ] generates: '<div class="mdl-expansion-panel"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testBareBrushFolded [
 	self assert: [ :html | html mdlExpansionPanel fold ] generates: '<div class="mdl-expansion-panel isFolded"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testExpandIf [
 	self assert: [ :html | html mdlExpansionPanel expandIf: false ] generates: '<div class="mdl-expansion-panel isFolded"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testExpandIf2 [
 	self assert: [ :html | html mdlExpansionPanel expandIf: true ] generates: '<div class="mdl-expansion-panel"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testFoldIf [
 	self assert: [ :html | html mdlExpansionPanel foldIf: true ] generates: '<div class="mdl-expansion-panel isFolded"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testFoldIf2 [
 	self assert: [ :html | html mdlExpansionPanel foldIf: false ] generates: '<div class="mdl-expansion-panel"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelTagTest >> testWithContent [
 	self assert: [ :html | 
 		html mdlExpansionPanel: [

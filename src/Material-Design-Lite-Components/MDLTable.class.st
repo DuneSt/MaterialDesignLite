@@ -25,18 +25,20 @@ Example
 									members do: [ :data | html tableData: data ] ] ] ] ]
 "
 Class {
-	#name : #MDLTable,
-	#superclass : #WATableTag,
-	#category : #'Material-Design-Lite-Components-Tables'
+	#name : 'MDLTable',
+	#superclass : 'WATableTag',
+	#category : 'Material-Design-Lite-Components-Tables',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Tables'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTable >> initialize [
 	super initialize.
 	self class: 'mdl-data-table mdl-js-data-table'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTable >> selectable [
 	self class: 'mdl-data-table--selectable'
 ]

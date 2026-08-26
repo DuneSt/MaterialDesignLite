@@ -15,21 +15,22 @@ Internal Representation and Key Implementation Points.
 
 "
 Class {
-	#name : #MDLApplication,
-	#superclass : #WAComponent,
+	#name : 'MDLApplication',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'screens',
 		'colors'
 	],
-	#category : #'Material-Design-Lite-Core'
+	#category : 'Material-Design-Lite-Core',
+	#package : 'Material-Design-Lite-Core'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLApplication class >> canBeRoot [
 	^ true
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLApplication class >> registerToDeployment: aName [
 	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].
 	^ (WAAdmin register: self asApplicationAt: aName)
@@ -38,7 +39,7 @@ MDLApplication class >> registerToDeployment: aName [
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLApplication class >> registerToDevelopment: aName [
 	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults addParent: class instance ].
 	^ (WAAdmin register: self asApplicationAt: aName)
@@ -47,54 +48,54 @@ MDLApplication class >> registerToDevelopment: aName [
 		yourself
 ]
 
-{ #category : #'adding/removing' }
+{ #category : 'adding/removing' }
 MDLApplication >> addScreen: aScreen [
 	^ self screens add: aScreen 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLApplication >> colors [
 	^ colors
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLApplication >> colors: anObject [
 	colors := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLApplication >> initialize [
 	super initialize.
 	screens := OrderedCollection new.
 	colors := 'indigo-pink'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLApplication >> primaryColor: anMDLColor secondaryColor: anotherMDLColor [
 	^ self colors: anMDLColor tint, '-', anotherMDLColor tint
 ]
 
-{ #category : #'adding/removing' }
+{ #category : 'adding/removing' }
 MDLApplication >> removeScreen: aScreen [
 	^ self screens remove: aScreen 
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLApplication >> renderContentOn: html [
 	html heading level3; with: 'Put your content in screens and render them'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLApplication >> screens [
 	^ screens
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLApplication >> screens: anObject [
 	screens := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLApplication >> style [
 	^ '
 html > body {
@@ -107,7 +108,7 @@ html > body {
 '
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 MDLApplication >> updateRoot: anHtmlRoot [
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot beHtml5.

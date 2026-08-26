@@ -1,19 +1,20 @@
 Class {
-	#name : #MDLWidget,
-	#superclass : #WAComponent,
+	#name : 'MDLWidget',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'id',
 		'value'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 MDLWidget class >> id: aStringID [
 	^self id: aStringID value: true
 ]
 
-{ #category : #initialize }
+{ #category : 'initialize' }
 MDLWidget class >> id: aStringID value: aBooleanValue [
 	^self new 
 		id: aStringID; 
@@ -21,22 +22,22 @@ MDLWidget class >> id: aStringID value: aBooleanValue [
 		yourself
 ]
 
-{ #category : #id }
+{ #category : 'id' }
 MDLWidget >> ensureId: html [
 	self id ifNil: [ self id: html nextId ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLWidget >> id [
 	^ id
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLWidget >> id: anObject [
 	id := anObject
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLWidget >> restoreFromSnapshot: anObject [
 	| oldId |
 	oldId := self id.
@@ -44,12 +45,12 @@ MDLWidget >> restoreFromSnapshot: anObject [
 	self id: oldId
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLWidget >> value [
 	^ value
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLWidget >> value: anObject [
 	value := anObject
 ]

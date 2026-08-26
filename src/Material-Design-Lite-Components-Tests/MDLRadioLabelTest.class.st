@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLRadioLabelTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Forms'
+	#name : 'MDLRadioLabelTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Forms',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Forms'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLRadioLabelTest >> testBareBrush [
 	self assert: [ :html | html brush: MDLRadioLabel new ] generates: '<span class="mdl-radio__label"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLRadioLabelTest >> testWithContent [
 	self assert: [ :html | html mdlRadioLabel: 'test' ] generates: '<span class="mdl-radio__label">test</span>'
 ]

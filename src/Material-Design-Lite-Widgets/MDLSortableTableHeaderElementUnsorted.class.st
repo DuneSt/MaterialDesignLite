@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLSortableTableHeaderElementUnsorted,
-	#superclass : #MDLSortableTableHeaderState,
-	#category : 'Material-Design-Lite-Widgets-Table'
+	#name : 'MDLSortableTableHeaderElementUnsorted',
+	#superclass : 'MDLSortableTableHeaderState',
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeaderElementUnsorted class >> defaultNextState [
 	^ MDLSortableTableHeaderElementSortedAscending
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeaderElementUnsorted >> renderContentOn: html forTable: table columnIndex: i header: header [
 	(header headingCellOn: html)
 		onClick:

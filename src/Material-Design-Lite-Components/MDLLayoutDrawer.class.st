@@ -23,12 +23,14 @@ Example
 			html mdlLayoutContent: [  ] ]
 "
 Class {
-	#name : #MDLLayoutDrawer,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLLayoutDrawer',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayoutDrawer >> initialize [
 	super initialize.
 	self class: 'mdl-layout__drawer'

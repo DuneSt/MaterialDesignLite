@@ -17,12 +17,14 @@ Example
 					html text: 'Example Chip' ].
 "
 Class {
-	#name : #MDLChipImage,
-	#superclass : #WAImageTag,
-	#category : #'Material-Design-Lite-Components-Chips'
+	#name : 'MDLChipImage',
+	#superclass : 'WAImageTag',
+	#category : 'Material-Design-Lite-Components-Chips',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Chips'
 }
 
-{ #category : #public }
+{ #category : 'public' }
 MDLChipImage >> with: anObject [
 	self beChipDecoration. "Cannot do it at the initialization because it need the canvas."
 	super with: anObject

@@ -5,12 +5,13 @@ Description
 I am an empty class to manage infrastructure stuff
 "
 Class {
-	#name : #MaterialDesignLite,
-	#superclass : #Object,
-	#category : #'Material-Design-Lite-Core'
+	#name : 'MaterialDesignLite',
+	#superclass : 'Object',
+	#category : 'Material-Design-Lite-Core',
+	#package : 'Material-Design-Lite-Core'
 }
 
-{ #category : #'world-menu' }
+{ #category : 'world-menu' }
 MaterialDesignLite class >> mainMenuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: #MaterialDesignLite)
@@ -18,7 +19,7 @@ MaterialDesignLite class >> mainMenuCommandOn: aBuilder [
 		icon: (self mdlIcon scaledToSize: 16@16)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MaterialDesignLite class >> mdlIcon [
 	^ PNGReadWriter formFromStream: MDLLibrary default logoPng readStream
 ]

@@ -1,26 +1,28 @@
 Class {
-	#name : #MDLMGReportChooser,
-	#superclass : #GRObject,
+	#name : 'MDLMGReportChooser',
+	#superclass : 'GRObject',
 	#instVars : [
 		'bordered',
 		'stiped',
 		'condensed',
 		'showBatchFirstLast'
 	],
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> bordered [
 	^ bordered
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> bordered: anObject [
 	bordered := anObject
 ]
 
-{ #category : #'magrittes-descriptions' }
+{ #category : 'magrittes-descriptions' }
 MDLMGReportChooser >> borderedDescription [
 	<magritteDescription>
 	^ MABooleanDescription new 
@@ -33,17 +35,17 @@ MDLMGReportChooser >> borderedDescription [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> condensed [
 	^ condensed
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> condensed: anObject [
 	condensed := anObject
 ]
 
-{ #category : #'magrittes-descriptions' }
+{ #category : 'magrittes-descriptions' }
 MDLMGReportChooser >> condensedDescription [
 	<magritteDescription>
 	^ MABooleanDescription new 
@@ -56,7 +58,7 @@ MDLMGReportChooser >> condensedDescription [
 		yourself
 ]
 
-{ #category : #'magrittes-descriptions' }
+{ #category : 'magrittes-descriptions' }
 MDLMGReportChooser >> descriptionContainer [
 	<magritteContainer>
 	^ super descriptionContainer
@@ -64,17 +66,17 @@ MDLMGReportChooser >> descriptionContainer [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> showBatchFirstLast [
 	^ showBatchFirstLast
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> showBatchFirstLast: anObject [
 	showBatchFirstLast := anObject
 ]
 
-{ #category : #'magrittes-descriptions' }
+{ #category : 'magrittes-descriptions' }
 MDLMGReportChooser >> showBatchFirstLastDescription [
 	<magritteDescription>
 	^ MABooleanDescription new 
@@ -85,17 +87,17 @@ MDLMGReportChooser >> showBatchFirstLastDescription [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> striped [
 	^ stiped
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportChooser >> striped: anObject [
 	stiped := anObject
 ]
 
-{ #category : #'magrittes-descriptions' }
+{ #category : 'magrittes-descriptions' }
 MDLMGReportChooser >> stripedDescription [
 	<magritteDescription>
 	^ MABooleanDescription new 

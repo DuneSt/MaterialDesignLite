@@ -2,22 +2,24 @@
 A Card widget to make easy the use of the cards.
 "
 Class {
-	#name : #MDLCardWidgetScreen,
-	#superclass : #MDLWidgetDemo,
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#name : 'MDLCardWidgetScreen',
+	#superclass : 'MDLWidgetDemo',
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardWidgetScreen class >> icon [
 	^ 'compcardsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardWidgetScreen class >> title [
 	^ 'Cards'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardWidgetScreen >> renderAccentColorCardOn: html [
 	html
 		render:
@@ -33,7 +35,7 @@ MDLCardWidgetScreen >> renderAccentColorCardOn: html [
 				yourself)
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardWidgetScreen >> renderBorderedActionsCardOn: html [
 	html
 		render:
@@ -49,7 +51,7 @@ MDLCardWidgetScreen >> renderBorderedActionsCardOn: html [
 				yourself)
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardWidgetScreen >> renderCardOn: html [
 	html
 		render:
@@ -64,7 +66,7 @@ MDLCardWidgetScreen >> renderCardOn: html [
 				yourself)
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardWidgetScreen >> renderPrimaryColorCardOn: html [
 	html
 		render:
@@ -80,14 +82,14 @@ MDLCardWidgetScreen >> renderPrimaryColorCardOn: html [
 				yourself)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCardWidgetScreen >> renderScreenContentOn: html [
 	self
 		render: self simpleCardWidget on: html;
 		render: self titleColorCardWidget on: html
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLCardWidgetScreen >> simpleCardWidget [
 	^ OrderedDictionary new
 		add: 'Card widget' -> #renderCardOn:;
@@ -95,7 +97,7 @@ MDLCardWidgetScreen >> simpleCardWidget [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLCardWidgetScreen >> titleColorCardWidget [
 	^ OrderedDictionary new
 		add: 'Primary color card' -> #renderPrimaryColorCardOn:;

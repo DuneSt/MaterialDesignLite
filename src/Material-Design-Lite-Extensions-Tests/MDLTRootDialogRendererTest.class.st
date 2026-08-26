@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLTRootDialogRendererTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Extensions-Tests-RootDialog'
+	#name : 'MDLTRootDialogRendererTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Extensions-Tests-RootDialog',
+	#package : 'Material-Design-Lite-Extensions-Tests',
+	#tag : 'RootDialog'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTRootDialogRendererTest >> testRenderEmptyGenericDialogOn [
 	"This component is not available on Gemstone"
 	self isOnGemstone ifTrue: [ ^ self ].

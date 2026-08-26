@@ -1,26 +1,28 @@
 Class {
-	#name : #MDLPollWidgetTests,
-	#superclass : #TestCase,
+	#name : 'MDLPollWidgetTests',
+	#superclass : 'TestCase',
 	#instVars : [
 		'pollWidget'
 	],
-	#category : 'Material-Design-Lite-Widgets-Tests-Poll'
+	#category : 'Material-Design-Lite-Widgets-Tests-Poll',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Poll'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 MDLPollWidgetTests >> setUp [
 	super setUp.
 	pollWidget := MDLPollWidget new
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPollWidgetTests >> testAddNegativeVote [
 	self assert: pollWidget model negativeCount equals: 0.
 	pollWidget addNegativeVote.
 	self assert: pollWidget model negativeCount equals: 1.
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPollWidgetTests >> testAddPositiveVote [
 	self assert: pollWidget model positiveCount equals: 0.
 	pollWidget addPositiveVote.

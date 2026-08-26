@@ -2,16 +2,18 @@
 I am a simple component to display a MDL icon with an help text. My main purpose is to serve in a MDLNestedList to display a MDL icon.
 "
 Class {
-	#name : #MDLListIconComponent,
-	#superclass : #WAComponent,
+	#name : 'MDLListIconComponent',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'label',
 		'helpText'
 	],
-	#category : 'Material-Design-Lite-Widgets-List'
+	#category : 'Material-Design-Lite-Widgets-List',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'List'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLListIconComponent class >> named: aString helpText: aTranslatedString [
 	^ self new
 		label: aString;
@@ -19,27 +21,27 @@ MDLListIconComponent class >> named: aString helpText: aTranslatedString [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLListIconComponent >> helpText [
 	^ helpText
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLListIconComponent >> helpText: anObject [
 	helpText := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLListIconComponent >> label [
 	^ label
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLListIconComponent >> label: anObject [
 	label := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLListIconComponent >> renderContentOn: html [
 	| id |
 	id := html nextId.

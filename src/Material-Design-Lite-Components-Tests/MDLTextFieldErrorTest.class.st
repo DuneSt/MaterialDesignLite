@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLTextFieldErrorTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Forms'
+	#name : 'MDLTextFieldErrorTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Forms',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Forms'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextFieldErrorTest >> testBareBrush [
 	self assert: [ :html | html brush: MDLTextFieldError new ] generates: '<span class="mdl-textfield__error"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextFieldErrorTest >> testWithContent [
 	self assert: [ :html | html mdlTextFieldError: 'test' ] generates: '<span class="mdl-textfield__error">test</span>'
 ]

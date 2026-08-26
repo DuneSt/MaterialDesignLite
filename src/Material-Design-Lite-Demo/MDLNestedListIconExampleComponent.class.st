@@ -5,32 +5,34 @@ Description
 Utility component to illustrate the nested list icon displaying..
 "
 Class {
-	#name : #MDLNestedListIconExampleComponent,
-	#superclass : #WAComponent,
+	#name : 'MDLNestedListIconExampleComponent',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'isRepresentingClass'
 	],
-	#category : #'Material-Design-Lite-Demo-Utils'
+	#category : 'Material-Design-Lite-Demo-Utils',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Utils'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLNestedListIconExampleComponent class >> isRepresentingClass: aBoolean [
 	^ self new
 		isRepresentingClass: aBoolean;
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListIconExampleComponent >> isRepresentingClass [
 	^ isRepresentingClass
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListIconExampleComponent >> isRepresentingClass: anObject [
 	isRepresentingClass := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListIconExampleComponent >> renderContentOn: html [
 	html
 		mdlIcon:

@@ -2,25 +2,27 @@
 A widget to emulate a select input in MDL style.
 "
 Class {
-	#name : #MDLSelectScreen,
-	#superclass : #MDLWidgetDemo,
+	#name : 'MDLSelectScreen',
+	#superclass : 'MDLWidgetDemo',
 	#instVars : [
 		'selectedEntity'
 	],
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectScreen class >> icon [
 	^ #compmenusPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSelectScreen class >> title [
 	^ 'Select'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSelectScreen >> renderAjaxSubmitSelectOn: html [
 	html
 		form:
@@ -38,7 +40,7 @@ MDLSelectScreen >> renderAjaxSubmitSelectOn: html [
 	selectedEntity ifNotNil: [ :entity |  html div mdlTextColorPrimary; with: 'Selected: ' , entity asString ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSelectScreen >> renderAutoSubmitSelectOn: html [
 	html
 		form:
@@ -56,14 +58,14 @@ MDLSelectScreen >> renderAutoSubmitSelectOn: html [
 	selectedEntity ifNotNil: [ :entity |  html div mdlTextColorPrimary; with: 'Selected: ' , entity asString ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSelectScreen >> renderScreenContentOn: html [
 	self
 		render: self select on: html;
 		render: self selectWithAjax on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSelectScreen >> renderSelectOn: html [
 	html
 		form: [ 
@@ -93,7 +95,7 @@ MDLSelectScreen >> renderSelectOn: html [
 				with: 'Submit' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSelectScreen >> renderSelectWithAjaxOn: html [
 	| selected |
 	html div
@@ -117,7 +119,7 @@ MDLSelectScreen >> renderSelectWithAjaxOn: html [
 						yourself) ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLSelectScreen >> select [
 	^ OrderedDictionary new
 		add: 'Select Widget' -> #renderSelectOn:;
@@ -125,7 +127,7 @@ MDLSelectScreen >> select [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLSelectScreen >> selectWithAjax [
 	^ OrderedDictionary new
 		add: 'Select Widget using ajax' -> #renderSelectWithAjaxOn:;

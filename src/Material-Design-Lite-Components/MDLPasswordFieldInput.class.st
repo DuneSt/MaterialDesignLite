@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLPasswordFieldInput,
-	#superclass : #MDLTextFieldInput,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLPasswordFieldInput',
+	#superclass : 'MDLTextFieldInput',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPasswordFieldInput >> type [
 	^ 'password'
 ]

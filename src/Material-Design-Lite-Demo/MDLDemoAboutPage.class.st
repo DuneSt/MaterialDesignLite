@@ -5,22 +5,24 @@ Description
 A simple page describing what is MDL for Seaside.
 "
 Class {
-	#name : #MDLDemoAboutPage,
-	#superclass : #MDLDemoPage,
-	#category : #'Material-Design-Lite-Demo-Core'
+	#name : 'MDLDemoAboutPage',
+	#superclass : 'MDLDemoPage',
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoAboutPage class >> pageName [
 	^ 'About'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoAboutPage class >> priority [
 	^ 10
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoAboutPage >> renderContentOn: html [
 	html mdlGrid
 		noSpacing;
@@ -41,7 +43,7 @@ MDLDemoAboutPage >> renderContentOn: html [
 			html section beCell: 12 ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoAboutPage >> renderMDDescriptionOn: html [
 	html section
 		beCell: 12;
@@ -59,7 +61,7 @@ MDLDemoAboutPage >> renderMDDescriptionOn: html [
 									html text: ' you should do so before attempting to use the components.' ] ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoAboutPage >> renderMDLDescriptionOn: html [
 	html section
 		beCell: 12;
@@ -78,7 +80,7 @@ MDLDemoAboutPage >> renderMDLDescriptionOn: html [
 									html text: ' implementation from Google.' ] ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoAboutPage >> renderMoreDescriptionOn: html [
 	html section
 		beCell: 12;
@@ -99,7 +101,7 @@ MDLDemoAboutPage >> renderMoreDescriptionOn: html [
 										with: 'https://github.com/rko281/MaterialDesignLite' ] ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoAboutPage >> renderSeasideDescriptionOn: html [
 	html section
 		beCell: 12;

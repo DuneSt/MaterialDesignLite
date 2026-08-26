@@ -2,27 +2,29 @@
 A widget to get a paginated table with a sort function.
 "
 Class {
-	#name : #MDLSortedTableScreen,
-	#superclass : #MDLWidgetDemo,
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#name : 'MDLSortedTableScreen',
+	#superclass : 'MDLWidgetDemo',
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortedTableScreen class >> icon [
 	^ #comptablesPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortedTableScreen class >> title [
 	^ 'Sorted Table'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortedTableScreen >> renderScreenContentOn: html [
 	self render: self table on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLSortedTableScreen >> renderSortedTableOn: html [
 	html div
 		style: 'width: 800px;';
@@ -38,7 +40,7 @@ MDLSortedTableScreen >> renderSortedTableOn: html [
 				rowsPerPagePossibilities: #(10 50 100 200))
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLSortedTableScreen >> table [
 	^ OrderedDictionary new
 		add: 'Sorted Table Widget' -> #renderSortedTableOn:;

@@ -2,8 +2,8 @@
 I represent a dialog widget
 "
 Class {
-	#name : #MDLDialogWidget,
-	#superclass : #MDLWidget,
+	#name : 'MDLDialogWidget',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'title',
 		'content',
@@ -13,31 +13,33 @@ Class {
 		'buttonBrush',
 		'dialogBrush'
 	],
-	#category : 'Material-Design-Lite-Widgets-Dialog'
+	#category : 'Material-Design-Lite-Widgets-Dialog',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Dialog'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> content: aBlock actions: aSecondBlock buttonName: aString [
 	^ (self content: aBlock buttonName: aString)
 		actions: aSecondBlock;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> content: aBlock actions: aSecondBlock buttonName: aString closeButtonName: aSecondString [
 	^ (self new content: aBlock actions: aSecondBlock buttonName: aString) 
 		closeButtonName: aSecondString;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> content: aBlock actions: aSecondBlock closeButtonName: aString [ 
 	^ (self content: aBlock buttonName: aString)
 		closeButtonName: aSecondBlock;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> content: aBlock buttonName: aString [
 	^ self new
 		content: aBlock;
@@ -45,95 +47,95 @@ MDLDialogWidget class >> content: aBlock buttonName: aString [
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> title: aString content: aBlock actions: aSecondBlock buttonName: aSecondString [
 	^ (self content: aBlock actions: aSecondBlock buttonName: aSecondString)
 		title: aString;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> title: aString content: aBlock actions: aSecondBlock buttonName: aSecondString closeButtonName: aThirdString [
 	^ (self title: aString content: aBlock actions: aSecondBlock buttonName: aSecondString)
 		closeButtonName: aThirdString;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> title: aString content: aBlock buttonName: aSecondString [
 	^ (self content: aBlock buttonName: aSecondString)
 		title: aString;
 		yourself
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDialogWidget class >> title: aString content: aBlock buttonName: aSecondString closeButtonName: aThirdString [
 	^ (self title: aString content: aBlock buttonName: aSecondString)
 		closeButtonName: aThirdString;
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> actions [
 	^ actions
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> actions: anObject [
 	actions := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> buttonBrush [
 	^ buttonBrush
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> buttonBrush: anObject [
 	buttonBrush := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> buttonName [
 	^ buttonName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> buttonName: anObject [
 	buttonName := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> closeButtonName [
 	^ closeButtonName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> closeButtonName: anObject [
 	closeButtonName := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> content [
 	^ content
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> content: anObject [
 	content := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> dialogBrush [
 	^ dialogBrush
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> dialogBrush: anObject [
 	dialogBrush := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLDialogWidget >> initialize [
 	super initialize.
 	closeButtonName := 'Close'.
@@ -141,7 +143,7 @@ MDLDialogWidget >> initialize [
 	dialogBrush := MDLDialog new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDialogWidget >> renderContentOn: html [
 	| closeButtonId |
 	self ensureId: html.
@@ -165,12 +167,12 @@ MDLDialogWidget >> renderContentOn: html [
 						with: self closeButtonName ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> title [
 	^ title
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialogWidget >> title: anObject [
 	title := anObject
 ]

@@ -15,28 +15,30 @@ Internal Representation and Key Implementation Points.
 
 "
 Class {
-	#name : #MDLDemo,
-	#superclass : #MDLDemoComponent,
+	#name : 'MDLDemo',
+	#superclass : 'MDLDemoComponent',
 	#instVars : [
 		'header',
 		'footer',
 		'componentToDisplay',
 		'componentInstances'
 	],
-	#category : #'Material-Design-Lite-Demo-Core'
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLDemo class >> canBeRoot [
 	^ true
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLDemo class >> initialize [
 	^ self initializeAs: 'MDLDemo'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLDemo class >> initializeAs: aString [
 	| app |
 	self environment at: #WADevelopmentConfiguration ifPresent: [ :class | WAAdmin applicationDefaults removeParent: class instance ].
@@ -54,7 +56,7 @@ MDLDemo class >> initializeAs: aString [
 	^ app
 ]
 
-{ #category : #'world menu' }
+{ #category : 'world menu' }
 MDLDemo class >> menuCommandOn: aBuilder [
 	<worldMenu>
 	(aBuilder item: #'Open demo in default browser')
@@ -65,7 +67,7 @@ MDLDemo class >> menuCommandOn: aBuilder [
 		action: [ self open ].
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLDemo class >> open [
 	<script>
 	| port url |
@@ -86,74 +88,74 @@ MDLDemo class >> open [
 		ifFalse: [ WebBrowser openOn: url ]
 ]
 
-{ #category : #versions }
+{ #category : 'versions' }
 MDLDemo class >> version [
 	^ 'v2.4.0'
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 MDLDemo >> children [
 	^ { self header. self componentToDisplay. self footer }
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> componentInstances [
 	^ componentInstances
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> componentInstances: anObject [
 	componentInstances := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> componentToDisplay [
 	"Component instance to display in the application."
 	
 	^ componentToDisplay
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> componentToDisplay: anObject [
 	componentToDisplay := anObject
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 MDLDemo >> defaultFooter [
 	^ MDLDemoFooter new
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 MDLDemo >> defaultHeader [
 	^ MDLDemoHeader new
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 MDLDemo >> displayInstanceOf: aComponentClass [
 	self componentToDisplay: (self componentInstances at: aComponentClass ifAbsentPut: [ aComponentClass new ])
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> footer [
 	^ footer
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> footer: anObject [
 	footer := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> header [
 	^ header
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> header: anObject [
 	header := anObject
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 MDLDemo >> initialRequest: aRequest [
 	| consumer pageName |
 	super initialRequest: aRequest.
@@ -174,7 +176,7 @@ MDLDemo >> initialRequest: aRequest [
 			consumer next ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLDemo >> initialize [
 	super initialize.
 	self header: self defaultHeader.
@@ -184,7 +186,7 @@ MDLDemo >> initialize [
 	self displayInstanceOf: MDLDemoPage pagesToDisplay first
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemo >> renderContentOn: html [
 	html
 		mdlLayout: [ html render: self header.
@@ -205,14 +207,14 @@ MDLDemo >> renderContentOn: html [
 				with: [ html mdlIcon: #arrow_upward ] ]
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 MDLDemo >> style [
 	^ '.mdl-pagination__current{
         box-shadow: inset 0px -4px 0px 0px #E91E63 !important;
     }'
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 MDLDemo >> updateRoot: anHtmlRoot [
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot beHtml5.
@@ -225,7 +227,7 @@ MDLDemo >> updateRoot: anHtmlRoot [
 	anHtmlRoot javascript add: 'hljs.initHighlightingOnLoad();'
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 MDLDemo >> updateTabIconRoot: anHtmlRoot [
 	anHtmlRoot link
 		relationship: 'apple-touch-icon';
@@ -253,13 +255,13 @@ MDLDemo >> updateTabIconRoot: anHtmlRoot [
 		content: '#ffffff'
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 MDLDemo >> updateUrl: aUrl [
 	super updateUrl: aUrl.
 	aUrl addToPath: (self componentToDisplay pathName)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemo >> version [
 	^ self class version
 ]

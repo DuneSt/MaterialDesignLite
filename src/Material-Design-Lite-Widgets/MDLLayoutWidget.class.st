@@ -1,6 +1,6 @@
 Class {
-	#name : #MDLLayoutWidget,
-	#superclass : #MDLWidget,
+	#name : 'MDLLayoutWidget',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'title',
 		'icon',
@@ -9,67 +9,69 @@ Class {
 		'contentBlock',
 		'brush'
 	],
-	#category : 'Material-Design-Lite-Widgets-Header'
+	#category : 'Material-Design-Lite-Widgets-Header',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Header'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> contentBlock [
 	^ contentBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> contentBlock: anObject [
 	contentBlock := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> drawerSection [
 	^ drawerSection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> drawerSection: anObject [
 	anObject layout: self.
 	drawerSection := anObject
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutWidget >> fixedDrawer [
 	^ brush fixedDrawer 
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutWidget >> fixedHeader [
 	^ brush fixedHeader 
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutWidget >> fixedTabs [
 	^ brush fixedTabs 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> headerSection [
 	^ headerSection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> headerSection: anObject [
 	anObject layout: self.
 	headerSection := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> icon [
 	^ icon
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> icon: anObject [
 	icon := anObject
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayoutWidget >> initialize [
 	super initialize.
 	title := 'Define a title'.
@@ -80,17 +82,17 @@ MDLLayoutWidget >> initialize [
 	brush := MDLLayout new. 
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutWidget >> noDesktopDrawerButton [
 	^ brush noDesktopDrawerButton 
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLLayoutWidget >> noDrawerButton [
 	^ brush noDrawerButton 
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLayoutWidget >> renderContentOn: html [
 	(html brush: brush)
 		with: [ 
@@ -99,12 +101,12 @@ MDLLayoutWidget >> renderContentOn: html [
 			html mdlLayoutContent: contentBlock ].
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> title [
 	^ title
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutWidget >> title: anObject [
 	title := anObject
 ]

@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLVerticalToolbarTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Extensions-Tests-Panels'
+	#name : 'MDLVerticalToolbarTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Extensions-Tests-Panels',
+	#package : 'Material-Design-Lite-Extensions-Tests',
+	#tag : 'Panels'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLVerticalToolbarTest >> testAddAllButtons [
 	| toolbar |
 	toolbar := MDLVerticalToolbar new.
@@ -16,7 +18,7 @@ MDLVerticalToolbarTest >> testAddAllButtons [
 	self assert: toolbar buttons size equals: 2
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLVerticalToolbarTest >> testAddButton [
 	| toolbar |
 	toolbar := MDLVerticalToolbar new.
@@ -25,7 +27,7 @@ MDLVerticalToolbarTest >> testAddButton [
 	self assert: toolbar buttons size equals: 1
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLVerticalToolbarTest >> testChildren [
 	| toolbar buttons |
 	toolbar := MDLVerticalToolbar new.
@@ -35,7 +37,7 @@ MDLVerticalToolbarTest >> testChildren [
 	self assertCollection: toolbar children hasSameElements: buttons
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLVerticalToolbarTest >> testRendering [
 	self
 		assert: [ :html | 
@@ -48,7 +50,7 @@ MDLVerticalToolbarTest >> testRendering [
 		generatedIncludes: 'class="vertical-toolbar"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLVerticalToolbarTest >> testResetButtonsSelection [
 	| toolbar buttons |
 	toolbar := MDLVerticalToolbar new.
