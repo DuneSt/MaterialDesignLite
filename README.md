@@ -8,20 +8,24 @@ This project has as first goal to bind the Google's Material Design Lite project
 
 A migration guide from v1 to v2 can be found [here](resources/migration/v1_to_v2_migration_guide.md).
 
+- [MaterialDesignLite for Seaside ](#materialdesignlite-for-seaside-)
 - [Documentation](#documentation)
-  * [Version management](#version-management)
-  * [Install MDL Seaside](#install-mdl-seaside)
-  * [Getting started](#getting-started)
-    + [Add the right libraries and file](#add-the-right-libraries-and-file)
-      - [Add the css file in the updateRoot of your application:](#add-the-css-file-in-the-updateroot-of-your-application-)
-    + [Subclassing MDLApplication](#subclassing-mdlapplication)
-  * [Examples](#examples)
-  * [ZnWorkspace](#znworkspace)
-  * [Latest supported Dependencies](#latest-supported-dependencies)
-  * [Smalltalk versions compatibility](#smalltalk-versions-compatibility)
-  * [Ports](#ports)
-  * [Under the hood](#under-the-hood)
-  * [Contact](#contact)
+  - [Version management](#version-management)
+  - [Install MDL Seaside](#install-mdl-seaside)
+    - [In Pharo](#in-pharo)
+    - [In GemStone](#in-gemstone)
+  - [Getting started](#getting-started)
+    - [Add the right libraries and file](#add-the-right-libraries-and-file)
+      - [Add the css file in the updateRoot of your application:](#add-the-css-file-in-the-updateroot-of-your-application)
+    - [Add specific style for extensions](#add-specific-style-for-extensions)
+    - [Subclassing MDLApplication](#subclassing-mdlapplication)
+  - [Examples](#examples)
+  - [ZnWorkspace](#znworkspace)
+  - [Latest supported Dependencies](#latest-supported-dependencies)
+  - [Smalltalk versions compatibility](#smalltalk-versions-compatibility)
+  - [Ports](#ports)
+  - [Under the hood](#under-the-hood)
+  - [Contact](#contact)
 
 # Documentation
 
@@ -182,8 +186,8 @@ ZnWorkspace openUrl: 'http://ws.stfx.eu/1JIZRQS7OI00'
 | 1.1.x       	| Pharo 50, 60, 61				| None							|
 | 1.2.x       	| Pharo 50, 60, 61				| None							|
 | 1.3.x       	| Pharo 50, 60, 61				| Gemstone 3.4.1 (*) (**)		|
-| 2.x.x       	| Pharo 61, 70, 80, 90, 10			| None							|
-| Dev       	| Pharo 61, 70, 80, 90, 10			| None							|
+| 2.x.x       	| Pharo 61, 70, 80, 90, 10, 11, 12, 13, 14			| None							|
+| Dev       	| Pharo 61, 70, 80, 90, 10, 11, 12, 13, 14			| None							|
 
 (*) *This version of Gemstone is tested. Older versions might work but we did not tested it.*
 (**) *The compatibility is not total. MaterialDesignLite uses Pharo's Traits to provide the users composables components. Thus, if the Gemstone users wants to use those components they will have to flatten themself the Traits in their Seaside application*
