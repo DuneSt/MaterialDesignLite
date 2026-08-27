@@ -1,13 +1,12 @@
 name: CI
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     strategy:
       fail-fast: false
       matrix:
@@ -26,7 +25,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           flag-name: ${{matrix.smalltalk}}
-          parallel: true
+          parallel: true     
 
   finish:
     needs: build
@@ -37,3 +36,5 @@ jobs:
       with:
         github-token: ${{ secrets.github_token }}
         parallel-finished: true
+
+        
