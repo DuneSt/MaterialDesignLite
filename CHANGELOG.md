@@ -1,5 +1,7 @@
 <!--git log --pretty="* %s ([%h](https://github.com/DuneSt/MaterialDesignLite/commit/%H))" v2.2.4...HEAD --grep="Merge pull"-->
 
+> For future releases, check the notes in the releases directly 
+
 # [v2.2.4](https://github.com/DuneSt/MaterialDesignLite/compare/v2.2.3...v2.2.4) (2020-07-30)
 
 ## Bug fixes
