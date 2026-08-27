@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfMaterialDesignLite }
+Package { #name : 'BaselineOfMaterialDesignLite' }

@@ -1,18 +1,20 @@
 Class {
-	#name : #MDLNestedListTest,
-	#superclass : #SGTAbstractSeasideTestCase,
+	#name : 'MDLNestedListTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
 	#instVars : [
 		'list'
 	],
-	#category : #'Material-Design-Lite-Widgets-Tests-List'
+	#category : 'Material-Design-Lite-Widgets-Tests-List',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'List'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLNestedListTest >> childrenBlockForSampleElements [
 	^ [ :each | self recursivelyFind: each in: self sampleElements ]
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLNestedListTest >> recursivelyFind: each in: dictionary [
 	^ dictionary
 		at: each
@@ -27,37 +29,37 @@ MDLNestedListTest >> recursivelyFind: each in: dictionary [
 			#() ]
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLNestedListTest >> sampleElements [
 	^ OrderedDictionary with: 1 -> #(2 3 4) with: 5 -> #(6 7 8) with: 9 -> (OrderedDictionary with: 10 -> #(11 12 13) with: 14 -> #(15 16 17))
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 MDLNestedListTest >> setUp [
 	super setUp.
 	list := MDLNestedList new
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testElementsDisplayListWithLastElementSelected [
 	list elements: (1 to: list listMaxSize * 2 ).
 	list selectedEntity: list listMaxSize * 2.
 	self assert: list elementsDisplayList size equals: list listMaxSize
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testElementsDisplayListWithLessThanListSize [
 	list elements: (1 to: list listMaxSize).
 	self assert: list elementsDisplayList size equals: list listMaxSize
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testElementsDisplayListWithMoreThanListSize [
 	list elements: (1 to: list listMaxSize * 2 ).
 	self assert: list elementsDisplayList size equals: list listMaxSize
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testIconBlockIsRenderedIfNeeded [
 	list elements: self sampleElements keys.
 	list iconBlock: [ :item :html | html mdlIcon: 'mood' ].
@@ -66,7 +68,7 @@ MDLNestedListTest >> testIconBlockIsRenderedIfNeeded [
 	self deny: [ :html | html render: list ] generatedIncludes: '<i class="material-icons">mood</i>'.
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntity [
 	list elements: self sampleElements keys.
 	list childrenBlock: self childrenBlockForSampleElements.
@@ -76,7 +78,7 @@ MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntity [
 	self assert: list indexOfRootElementContainingSelectedEntity equals: 2
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntityAtSecondLevel [
 	list elements: self sampleElements keys.
 	list childrenBlock: self childrenBlockForSampleElements.
@@ -86,7 +88,7 @@ MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntityAtSecondLevel
 	self assert: list indexOfRootElementContainingSelectedEntity equals: 2
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntityAtThirdLevel [
 	list elements: self sampleElements keys.
 	list childrenBlock: self childrenBlockForSampleElements.
@@ -94,7 +96,7 @@ MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntityAtThirdLevel 
 	self assert: list indexOfRootElementContainingSelectedEntity equals: 3
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntityIfSelectedEntityIsNil [
 	list elements: self sampleElements keys.
 	list childrenBlock: self childrenBlockForSampleElements.
@@ -102,7 +104,7 @@ MDLNestedListTest >> testIndexOfRootElementContainingSelectedEntityIfSelectedEnt
 	self assert: list indexOfRootElementContainingSelectedEntity equals: 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testJsOnLoadHook [
 	list onLoadHook: 'console.log("test")' js.
 	self assert: (list jsOnLoadHook isKindOf: JSStream).
@@ -112,7 +114,7 @@ MDLNestedListTest >> testJsOnLoadHook [
 	self assert: list jsOnLoadHook contents equals: 'console.log("test")'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testNotEraseOnCompleOnJSScript [
 	WAHtmlCanvas builder
 		render: [ :html | 
@@ -127,7 +129,7 @@ MDLNestedListTest >> testNotEraseOnCompleOnJSScript [
 		generatedIncludes: 'console.log(&quot;this exists&quot;)'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testRightIconBlockIsRenderedIfNeeded [
 	list elements: self sampleElements keys.
 	list rightIconBlock: [ :item :html | html mdlIcon: 'mood' ].
@@ -136,7 +138,7 @@ MDLNestedListTest >> testRightIconBlockIsRenderedIfNeeded [
 	self deny: [ :html | html render: list ] generatedIncludes: '<i class="material-icons">mood</i>'.
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLNestedListTest >> testWithResearchField [
 	list displayResearchField: false.
 	list withResearchField.

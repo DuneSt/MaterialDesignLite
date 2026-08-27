@@ -11,18 +11,20 @@ The middle section can contain multiple Dropdown sections.
 Top and Bottom sections can receive only one section (it is still a choice).
 "
 Class {
-	#name : #MDLFooter,
-	#superclass : #MDLWidget,
+	#name : 'MDLFooter',
+	#superclass : 'MDLWidget',
 	#instVars : [
 		'topLeftSection',
 		'topRightSection',
 		'middleSection',
 		'bottomSection'
 	],
-	#category : #'Material-Design-Lite-Widgets-Footer'
+	#category : 'Material-Design-Lite-Widgets-Footer',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Footer'
 }
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLFooter >> atBottomAddLinks: links [
 	"Links must be formatted as following : (header -> #((label1->url1) . (label2 -> url2)))"
 
@@ -35,7 +37,7 @@ MDLFooter >> atBottomAddLinks: links [
 				yourself)
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLFooter >> atMiddleAddLinks: links [
 	"Links must be formatted as following : #(header -> #( (label1->url1) . (label2 -> url2)))"
 
@@ -46,7 +48,7 @@ MDLFooter >> atMiddleAddLinks: links [
 	middleSection addLinksLists: list
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLFooter >> atTopLeftAddComponents: components [
 	"Components must be an array of WAComponents (render: will be called on them)"
 	topLeftSection isNilSection
@@ -54,7 +56,7 @@ MDLFooter >> atTopLeftAddComponents: components [
 	topLeftSection := topLeftSection addComponents: components
 ]
 
-{ #category : #'public api' }
+{ #category : 'public api' }
 MDLFooter >> atTopRightAddComponents: components [
 	"Components must be an array of WAComponents (render: will be called on them)"
 	topRightSection isNilSection
@@ -62,7 +64,7 @@ MDLFooter >> atTopRightAddComponents: components [
 	topRightSection := topRightSection addComponents: components
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLFooter >> initialize [
 	super initialize.
 	topLeftSection := MDLFooterNilSection new.
@@ -71,7 +73,7 @@ MDLFooter >> initialize [
 	bottomSection := MDLFooterNilSection new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFooter >> renderContentOn: html [
 	html mdlFooter: [ 
 		html mdlFooterTopSection: [ 

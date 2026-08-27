@@ -2,8 +2,8 @@
 I represent a text input field widget
 "
 Class {
-	#name : #MDLTextFieldWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLTextFieldWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'label',
 		'brush',
@@ -12,15 +12,17 @@ Class {
 		'patternErrorMessage',
 		'errorMessage'
 	],
-	#category : 'Material-Design-Lite-Widgets-Form'
+	#category : 'Material-Design-Lite-Widgets-Form',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Form'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLTextFieldWidget class >> labeled: aString callback: aBlock [
 	^ self labeled: aString callback: aBlock floatingLabel: false
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLTextFieldWidget class >> labeled: aString callback: aBlock floatingLabel: aBoolean [
 	^ self
 		labeled: aString
@@ -29,7 +31,7 @@ MDLTextFieldWidget class >> labeled: aString callback: aBlock floatingLabel: aBo
 		expandable: false
 ]
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLTextFieldWidget class >> labeled: aString callback: aBlock floatingLabel: aBoolean expandable: aBoolean2 [
 	^ self new
 		label: aString;
@@ -39,50 +41,50 @@ MDLTextFieldWidget class >> labeled: aString callback: aBlock floatingLabel: aBo
 		yourself
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> beExpandable [
 	isExpandable := true
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> beFloatingLabel [
 	isFloatingLabel := true
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> callback: aBlock [
 	self propertiesAt: #callback: put: (Array with: aBlock)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldWidget >> errorMessage [
 	^ errorMessage ifNil: [ errorMessage := '' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldWidget >> errorMessage: aString [
 	errorMessage := aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldWidget >> errorMessage: aString if: aBoolean [
 	aBoolean
 		ifTrue: [ errorMessage := aString ]
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> expandableIf: aBoolean [
 	aBoolean
 		ifTrue: [ self beExpandable ]
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> floatingLabelIf: aBoolean [
 	aBoolean
 		ifTrue: [ self beFloatingLabel ]
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTextFieldWidget >> initialize [
 	super initialize.
 	brush := MDLTextFieldInput new.
@@ -91,47 +93,47 @@ MDLTextFieldWidget >> initialize [
 	patternErrorMessage := ''
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldWidget >> label [
 	^ label
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldWidget >> label: aString [
 	label := aString
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> on: aSymbol of: anObject [
 	self propertiesAt: #on:of: put: (Array with: aSymbol with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> onChange: anObject [
 	self propertiesAt: #onChange: put: (Array with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> onEnter: anObject [
 	self propertiesAt: #onEnter: put: (Array with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> onKeyUp: anObject [
 	self propertiesAt: #onKeyUp: put: (Array with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> onSubmit: anObject [
 	self propertiesAt: #onSubmit: put: (Array with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> pattern: anObject [
 	self propertiesAt: #pattern: put: (Array with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> pattern: aPattern errorMessage: aString [
 	"patternsDictionary at: anObject put: aString"
 
@@ -139,12 +141,12 @@ MDLTextFieldWidget >> pattern: aPattern errorMessage: aString [
 	patternErrorMessage := aString
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> readonly: aBoolean [
 	self propertiesAt: #readonly: put: (Array with: aBoolean)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTextFieldWidget >> renderContentOn: html [
 	| inputId |
 	self id ifNotNil: [ :aString | inputId := aString ] ifNil: [ inputId := html nextId ].
@@ -168,22 +170,22 @@ MDLTextFieldWidget >> renderContentOn: html [
 					self errorMessage ifNotEmpty: [ :message | html mdlTextFieldError: message ] ]
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> required [
 	self propertiesAt: #required put: Array new
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> size: anObject [
 	self propertiesAt: #size: put: (Array with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> type: anObject [
 	self propertiesAt: #type: put: (Array with: anObject)
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTextFieldWidget >> value: anObject [
 	self propertiesAt: #value: put: (Array with: anObject)
 ]

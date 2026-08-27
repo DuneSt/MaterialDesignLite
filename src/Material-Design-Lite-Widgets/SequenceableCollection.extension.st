@@ -1,6 +1,6 @@
-Extension { #name : #SequenceableCollection }
+Extension { #name : 'SequenceableCollection' }
 
-{ #category : #'*Material-Design-Lite-Widgets' }
+{ #category : '*Material-Design-Lite-Widgets' }
 SequenceableCollection >> groupsOf: n [
 	| grouped index |
 	grouped := self species new.

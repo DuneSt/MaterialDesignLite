@@ -5,14 +5,16 @@ Description
 I am a component to illustrate the use of the root dialog. 
 "
 Class {
-	#name : #MDLExampleRootDialogUser,
-	#superclass : #WAComponent,
+	#name : 'MDLExampleRootDialogUser',
+	#superclass : 'WAComponent',
 	#traits : 'TWithRootDialogComponent',
 	#classTraits : 'TWithRootDialogComponent classTrait',
-	#category : #'Material-Design-Lite-Demo-Utils'
+	#category : 'Material-Design-Lite-Demo-Utils',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Utils'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExampleRootDialogUser >> renderButtonExampleOn: html [
 	html
 		preformatted: [ html code
@@ -32,7 +34,7 @@ MDLExampleRootDialogUser >> renderButtonExampleOn: html [
 		with: 'Open dialog'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExampleRootDialogUser >> renderChipExampleOn: html [
 	html
 		preformatted: [ html code
@@ -52,14 +54,14 @@ MDLExampleRootDialogUser >> renderChipExampleOn: html [
 			html mdlChipText: 'Click me' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExampleRootDialogUser >> renderContentOn: html [
 	html
 		mdlGrid: [ html mdlCell: [ self renderButtonExampleOn: html ] size: 6.
 			html mdlCell: [ self renderChipExampleOn: html ] size: 6 ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExampleRootDialogUser >> renderDialogOn: html [
 	html mdlDialogTitle: 'Good job !'.
 	html mdlDialogContent: [ html paragraph: 'You have not managed to click the button' ].

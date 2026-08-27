@@ -17,18 +17,20 @@ Example
 			html mdlSwitchLabel: 'On / Off' ]
 "
 Class {
-	#name : #MDLSwitchLabel,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLSwitchLabel',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSwitchLabel >> initialize [
 	super initialize.
 	self class: 'mdl-switch__label'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSwitchLabel >> tag [
 	^ 'span'
 ]

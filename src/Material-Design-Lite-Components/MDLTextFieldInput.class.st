@@ -14,23 +14,25 @@ Example
 			html mdlTextFieldInput id: html lastId ]
 "
 Class {
-	#name : #MDLTextFieldInput,
-	#superclass : #WAFormInputTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLTextFieldInput',
+	#superclass : 'WAFormInputTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTextFieldInput >> initialize [
 	super initialize.
 	self class: 'mdl-textfield__input'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldInput >> pattern: aPattern [
 	self attributeAt: 'pattern' put: aPattern
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldInput >> type [
 	^ 'text'
 ]

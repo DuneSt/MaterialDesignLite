@@ -2,55 +2,57 @@
 I am a component displaying a calendar to let the user pick a date.
 "
 Class {
-	#name : #MDLFlatDatePicker,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLFlatDatePicker',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'daysList',
 		'calendar',
 		'callback',
 		'onCompleteScript'
 	],
-	#category : #'Material-Design-Lite-Widgets-Calendar'
+	#category : 'Material-Design-Lite-Widgets-Calendar',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Calendar'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> calendar [
 	^ calendar
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> calendar: anObject [
 	calendar := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> callback: aOneArgBlock [
 	aOneArgBlock argumentCount ~= 1
 		ifTrue: [ ^ self error: '1 argument expected' ].
 	callback := aOneArgBlock
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> containerClass [
 	^ 'mdl-calendar'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> currentDate [
 	^ self calendar currentDate
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> currentDate: aDate [
 	self calendar currentDate: aDate
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> daysList [
 	^ daysList
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> displayDate: aDate on: html [
 	html mdlButton
 		class: 'mdl-color-text--primary' if: (self isTodayAndNotSelected: aDate);
@@ -62,32 +64,32 @@ MDLFlatDatePicker >> displayDate: aDate on: html [
 		with: aDate dayOfMonth greaseString
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLFlatDatePicker >> goToMonth: anObject [
 	calendar goToMonth: anObject
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLFlatDatePicker >> goToNextMonth [
 	self calendar selectNextMonth
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLFlatDatePicker >> goToNextYears [
 	self calendar selectNextYears
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLFlatDatePicker >> goToPreviousMonth [
 	self calendar selectPreviousMonth
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLFlatDatePicker >> goToPreviousYears [
 	self calendar selectPreviousYears
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLFlatDatePicker >> initialize [
 	super initialize.
 	daysList := {'S' . 'M' . 'T' . 'W' . 'T' . 'F' . 'S'}.
@@ -95,36 +97,36 @@ MDLFlatDatePicker >> initialize [
 	onCompleteScript := ''
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLFlatDatePicker >> isInCurrentMonth: aDate [
 	^ aDate asMonth = self currentDate asMonth
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLFlatDatePicker >> isTodayAndNotSelected: aDate [
 	^ aDate = Date today and: [ aDate ~= self currentDate ]
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLFlatDatePicker >> jsGoToMonth: aMonth on: html [
 	^ html jQuery ajax
 		callback: [ self goToMonth: aMonth ];
 		onComplete: (self jsOnCompleteScriptOn: html)
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLFlatDatePicker >> jsOnCompleteScript [
 	^ self onCompleteScript js
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLFlatDatePicker >> jsOnCompleteScriptOn: html [
 	^ (html jQuery id: self id) load
 		html: [ :ajaxHtml | self renderCalendarOn: ajaxHtml ];
 		onComplete: self jsOnCompleteScript
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLFlatDatePicker >> jsUpdateDate: aDate on: html [
 	^ html jQuery ajax
 		callback: [ callback value: aDate.
@@ -132,17 +134,17 @@ MDLFlatDatePicker >> jsUpdateDate: aDate on: html [
 		onComplete: (self jsOnCompleteScriptOn: html)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> onCompleteScript [
 	^ onCompleteScript
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLFlatDatePicker >> onCompleteScript: anObject [
 	onCompleteScript := anObject
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderButtonNamed: aString renderingMethod: aSymbol on: html [
 	html mdlButton
 		rippleEffect;
@@ -150,7 +152,7 @@ MDLFlatDatePicker >> renderButtonNamed: aString renderingMethod: aSymbol on: htm
 		with: aString
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderButtonWithIcon: anIcon action: aSymbol on: html [
 	html
 		mdlCellDesktop: 2
@@ -168,7 +170,7 @@ MDLFlatDatePicker >> renderButtonWithIcon: anIcon action: aSymbol on: html [
 				icon: anIcon ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFlatDatePicker >> renderCalendarBodyOn: html [
 	html table
 		class: 'mdl-textfield--full-width';
@@ -176,7 +178,7 @@ MDLFlatDatePicker >> renderCalendarBodyOn: html [
 			self renderWeeksOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFlatDatePicker >> renderCalendarContentOn: html [
 	html mdlGrid
 		style: 'text-align: center; font-size: 14px; line-height:2; color: rgba(0,0,0,1)';
@@ -189,14 +191,14 @@ MDLFlatDatePicker >> renderCalendarContentOn: html [
 				with: [ self renderCalendarBodyOn: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFlatDatePicker >> renderCalendarHeaderOn: html [
 	self renderButtonWithIcon: 'navigate_before' action: #goToPreviousMonth on: html.
 	self renderCurrentMonthOn: html.
 	self renderButtonWithIcon: 'navigate_next' action: #goToNextMonth on: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFlatDatePicker >> renderCalendarOn: html [
 	self renderCalendarTitleOn: html.
 	html div
@@ -204,7 +206,7 @@ MDLFlatDatePicker >> renderCalendarOn: html [
 		with: [ self renderCalendarContentOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFlatDatePicker >> renderCalendarTitleOn: html [
 	html div
 		mdlBackgroundColorPrimary;
@@ -214,7 +216,7 @@ MDLFlatDatePicker >> renderCalendarTitleOn: html [
 				with: self calendar printDateForHeader ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFlatDatePicker >> renderContentOn: html [
 	self ensureId: html.
 	html div
@@ -223,7 +225,7 @@ MDLFlatDatePicker >> renderContentOn: html [
 		with: [ self renderCalendarOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFlatDatePicker >> renderCurrentMonthOn: html [
 	html
 		mdlCellDesktop: 8
@@ -240,18 +242,18 @@ MDLFlatDatePicker >> renderCurrentMonthOn: html [
 				on: html ]
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderDate: aDate on: html [
 	html tableData with: [ self displayDate: aDate on: html ]
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderDaysOn: html [
 	html tableColumnGroup: [ 1 to: 7 do: [ :i | html tableColumn width: '14,3%' ] ].
 	html tableHead: [ html tableRow: [ self daysList do: [ :day |  html tableHeading class: 'mdl-color-text--grey-600'; with: day ] ] ]
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderMonthesOn: html [
 	html mdlGrid
 		mdlTypographyTextCenter;
@@ -268,12 +270,12 @@ MDLFlatDatePicker >> renderMonthesOn: html [
 						with: aString ] ]
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderWeeksOn: html [
 	self currentDate asMonth weeks do: [ :aWeek | html tableRow: [ aWeek dates do: [ :aDate | self renderDate: aDate on: html ] ] ]
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderYearsHeaderOn: html [
 	self
 		renderYearsIntervalButtonWithIcon: 'navigate_before'
@@ -296,7 +298,7 @@ MDLFlatDatePicker >> renderYearsHeaderOn: html [
 		on: html
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderYearsIntervalButtonWithIcon: anIcon action: aSymbol on: html [
 	html
 		mdlCellDesktop: 2
@@ -309,7 +311,7 @@ MDLFlatDatePicker >> renderYearsIntervalButtonWithIcon: anIcon action: aSymbol o
 				icon: anIcon ]
 ]
 
-{ #category : #'private-rendering' }
+{ #category : 'private-rendering' }
 MDLFlatDatePicker >> renderYearsOn: html [
 	html mdlGrid
 		mdlTypographyTextCenter;
@@ -330,7 +332,7 @@ MDLFlatDatePicker >> renderYearsOn: html [
 						with: aYear greaseString ] ]
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLFlatDatePicker >> selectedDateIs: aDate [
 	^ aDate = self currentDate
 ]

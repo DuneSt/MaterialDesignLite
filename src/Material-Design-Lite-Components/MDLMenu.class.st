@@ -29,49 +29,51 @@ Example
 			html div class: 'background' ]
 "
 Class {
-	#name : #MDLMenu,
-	#superclass : #WAUnorderedListTag,
-	#category : #'Material-Design-Lite-Components-Nav'
+	#name : 'MDLMenu',
+	#superclass : 'WAUnorderedListTag',
+	#category : 'Material-Design-Lite-Components-Nav',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Nav'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenu >> bottomLeft [
 	self class: 'mdl-menu--bottom-left'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenu >> bottomRight [
 	self class: 'mdl-menu--bottom-right'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenu >> for: anId [
 	self attributeAt: 'for' put: anId
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLMenu >> initialize [
 	super initialize.
 	self class: 'mdl-menu'.
 	self class: 'mdl-js-menu'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenu >> rippleEffect [
 	self class: 'mdl-js-ripple-effect'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenu >> rippleEffectIf: aBoolean [
 	aBoolean ifTrue: [ self rippleEffect ]
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenu >> topLeft [
 	self class: 'mdl-menu--top-left'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenu >> topRight [
 	self class: 'mdl-menu--top-right'
 ]

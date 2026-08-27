@@ -2,17 +2,19 @@
 A MDLExpansionPanelContentTest is a test class for testing the behavior of MDLExpansionPanelContent
 "
 Class {
-	#name : #MDLExpansionPanelContentTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-ExpansionPanels'
+	#name : 'MDLExpansionPanelContentTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-ExpansionPanels',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'ExpansionPanels'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelContentTest >> testBareBrush [
 	self assert: [ :html | html mdlExpansionPanelContent ] generates: '<div class="mdl-expansion-panel__content"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelContentTest >> testWithContent [
 	self assert: [ :html | html mdlExpansionPanelContent: 'Content.' ] generates: '<div class="mdl-expansion-panel__content">Content.</div>'
 ]

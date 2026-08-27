@@ -29,28 +29,30 @@ Example
 			html div class: 'background' ]
 "
 Class {
-	#name : #MDLMenuItem,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Nav'
+	#name : 'MDLMenuItem',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Nav',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Nav'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenuItem >> disabled [
 	self attributeAt: 'disabled' put: 'true'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMenuItem >> fullBleedDivider [
 	self class: 'mdl-menu__item--full-bleed-divider'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLMenuItem >> initialize [
 	super initialize.
 	self class: 'mdl-menu__item'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMenuItem >> tag [
 	^ 'li'
 ]

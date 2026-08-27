@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLIconTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Core'
+	#name : 'MDLIconTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Core',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Core'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconTest >> testBareBrush [
 	self assert: [ :html | html mdlIcon ] generates: '<i class="material-icons"></i>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconTest >> testChipIcon [
 	self
 		assert: [ :html | 
@@ -19,7 +21,7 @@ MDLIconTest >> testChipIcon [
 		generatedIncludes: '<i class="material-icons mdl-chip__contact" id="id1">mood</i>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconTest >> testListItemAvatar [
 	self
 		assert: [ :html | 
@@ -29,7 +31,7 @@ MDLIconTest >> testListItemAvatar [
 		generates: '<i class="material-icons mdl-list__item-avatar">mood</i>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconTest >> testListItemIcon [
 	self
 		assert: [ :html | 
@@ -39,7 +41,7 @@ MDLIconTest >> testListItemIcon [
 		generates: '<i class="material-icons mdl-list__item-icon">mood</i>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconTest >> testToggle [
 	self
 		assert: [ :html | 
@@ -49,7 +51,7 @@ MDLIconTest >> testToggle [
 		generates: '<i class="material-icons mdl-icon-toggle__label">mood</i>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLIconTest >> testWithContent [
 	self assert: [ :html | html mdlIcon: 'mood' ] generates: '<i class="material-icons">mood</i>'
 ]

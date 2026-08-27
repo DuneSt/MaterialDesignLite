@@ -2,32 +2,34 @@
 Example based on twitter bootstrap's example
 "
 Class {
-	#name : #MDLMGExamples,
-	#superclass : #WAComponent,
+	#name : 'MDLMGExamples',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'menu'
 	],
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLMGExamples class >> initialize [
 	| application |
 	application := WAAdmin register: self asApplicationAt: 'MDL-Magritte-examples'.
 	application preferenceAt: #scriptGeneratorClass put: JQScriptGenerator	
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 MDLMGExamples >> children [
 	^ Array with: self menu
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExamples >> menu [
 	^ menu ifNil: [ menu := MDLMGExampleMenu new ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMGExamples >> renderContentOn: html [
 	html mdlCard
 		style: 'overflow: visible; margin: auto; padding: 15px;';
@@ -36,7 +38,7 @@ MDLMGExamples >> renderContentOn: html [
 			html render: self menu ]
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 MDLMGExamples >> style [
 	^'
 	body {
@@ -50,7 +52,7 @@ MDLMGExamples >> style [
 	}', MDLMAReport cssStylesheet
 ]
 
-{ #category : #updating }
+{ #category : 'updating' }
 MDLMGExamples >> updateRoot: anHtmlRoot [
 	super updateRoot: anHtmlRoot.
 	

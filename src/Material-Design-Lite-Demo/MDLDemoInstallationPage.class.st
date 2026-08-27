@@ -5,22 +5,24 @@ Description
 A simble page explaining how to start using MDL for Seaside.
 "
 Class {
-	#name : #MDLDemoInstallationPage,
-	#superclass : #MDLDemoPage,
-	#category : #'Material-Design-Lite-Demo-Core'
+	#name : 'MDLDemoInstallationPage',
+	#superclass : 'MDLDemoPage',
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoInstallationPage class >> pageName [
 	^ 'Getting started'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDemoInstallationPage class >> priority [
 	^ 20
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoInstallationPage >> renderContentOn: html [
 	html mdlGrid
 		noSpacing;
@@ -31,7 +33,7 @@ MDLDemoInstallationPage >> renderContentOn: html [
 			html section beCell: 12 ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoInstallationPage >> renderDependencyDescriptionOn: html [
 	html section
 		beCell: 12;
@@ -49,7 +51,7 @@ MDLDemoInstallationPage >> renderDependencyDescriptionOn: html [
 							html paragraph: 'Note that you can replace the #master tag by another branch as #development or a tag as #v1.0.0. or a commit SHA as 718c34f.' ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoInstallationPage >> renderInstallOn: html [
 	html section
 		beCell: 12;
@@ -69,7 +71,7 @@ MDLDemoInstallationPage >> renderInstallOn: html [
 							html paragraph: 'Note that you can replace the #v2.x.x tag by a branch as #development or a tag as #v2.0.0. or a commit SHA as 718c34f.' ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDemoInstallationPage >> renderStartDescriptionOn: html [
 	html section
 		beCell: 12;

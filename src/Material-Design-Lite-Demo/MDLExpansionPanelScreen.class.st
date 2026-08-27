@@ -2,22 +2,24 @@
 An expansion panel allows one to show aggregated data that can be expanded to show full data.
 "
 Class {
-	#name : #MDLExpansionPanelScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLExpansionPanelScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanelScreen class >> icon [
 	^ #compexpansionPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExpansionPanelScreen class >> title [
 	^ 'Expansion Panel'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLExpansionPanelScreen >> expansion [
 	^ OrderedDictionary new
 		add: 'Expansion panel expanded' -> #renderExpansionOn:;
@@ -25,14 +27,14 @@ MDLExpansionPanelScreen >> expansion [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLExpansionPanelScreen >> expansionMultipleDescriptions [
 	^ OrderedDictionary new
 		add: 'With multiple descriptions' -> #renderMultipleDescriptionsOn:;
 		yourself
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanelScreen >> renderExpansionFoldedOn: html [
 	html mdlExpansionPanel
 		shadow: 2;
@@ -59,7 +61,7 @@ MDLExpansionPanelScreen >> renderExpansionFoldedOn: html [
 							html mdlTextFieldInput id: html lastId ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanelScreen >> renderExpansionOn: html [
 	html mdlExpansionPanel
 		shadow: 2;
@@ -77,7 +79,7 @@ MDLExpansionPanelScreen >> renderExpansionOn: html [
 							html mdlTextFieldInput id: html lastId ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanelScreen >> renderMultipleDescriptionsOn: html [
 	html mdlExpansionPanel
 		shadow: 2;
@@ -96,7 +98,7 @@ MDLExpansionPanelScreen >> renderMultipleDescriptionsOn: html [
 							html mdlTextFieldInput id: html lastId ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExpansionPanelScreen >> renderScreenContentOn: html [
 	self
 		render: self expansion on: html;

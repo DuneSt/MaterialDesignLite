@@ -5,12 +5,14 @@ IDescription
 I am a brush to create an icon for mdl layouts.
 "
 Class {
-	#name : #MDLLayoutIcon,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLLayoutIcon',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayoutIcon >> initialize [
 	super initialize.
 	self class: 'mdl-layout-icon'

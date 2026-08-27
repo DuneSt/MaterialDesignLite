@@ -6,17 +6,19 @@ I am a simple component allowing to resize a panel to the left of the window.
 
 "
 Class {
-	#name : #MDLLeftPanelResizer,
-	#superclass : #MDLAbstractPanelResizer,
-	#category : 'Material-Design-Lite-Extensions-Panels'
+	#name : 'MDLLeftPanelResizer',
+	#superclass : 'MDLAbstractPanelResizer',
+	#category : 'Material-Design-Lite-Extensions-Panels',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'Panels'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLeftPanelResizer >> initMethodName [
 	^ 'initLeftResizer()'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLeftPanelResizer >> panelClass [
 	^ #'resizer-left'
 ]

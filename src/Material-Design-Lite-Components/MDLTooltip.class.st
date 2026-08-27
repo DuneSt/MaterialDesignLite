@@ -16,53 +16,55 @@ Example
 			html strong: 'file.zip' ]
 "
 Class {
-	#name : #MDLTooltip,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Tooltips'
+	#name : 'MDLTooltip',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Tooltips',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Tooltips'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTooltip >> bottom [
 	self position: #bottom
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTooltip >> for: anId [
 	self attributeAt: 'for' put: anId
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTooltip >> initialize [
 	super initialize.
 	self class: 'mdl-tooltip'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTooltip >> large [
 	self class: 'mdl-tooltip--large'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTooltip >> left [
 	self position: #left
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTooltip >> position: aSymbol [
 	self class: 'mdl-tooltip--' , aSymbol
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTooltip >> right [
 	self position: #right
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTooltip >> tag [
 	^ 'span'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTooltip >> top [
 	self position: #top
 ]

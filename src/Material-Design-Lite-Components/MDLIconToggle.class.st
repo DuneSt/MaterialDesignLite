@@ -16,12 +16,14 @@ Example
 			html mdlIconToggleLabel: 'format_bold' ]
 "
 Class {
-	#name : #MDLIconToggle,
-	#superclass : #WACheckboxTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLIconToggle',
+	#superclass : 'WACheckboxTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLIconToggle >> initialize [
 	super initialize.
 	self class: 'mdl-icon-toggle__input'

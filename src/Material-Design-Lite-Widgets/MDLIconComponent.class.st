@@ -5,25 +5,26 @@ Description
 I am a brush to create a 
 "
 Class {
-	#name : #MDLIconComponent,
-	#superclass : #WAComponent,
+	#name : 'MDLIconComponent',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'iconName'
 	],
-	#category : #'Material-Design-Lite-Widgets'
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLIconComponent >> iconName [
 	^ iconName
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLIconComponent >> iconName: anObject [
 	iconName := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLIconComponent >> renderContentOn: html [
 	iconName ifNotNil: [ html mdlIcon: iconName ] ifNil: [ html text: 'No icon name set' ]
 ]

@@ -2,22 +2,24 @@
 Useful informations on hover.
 "
 Class {
-	#name : #MDLTooltipsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLTooltipsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTooltipsScreen class >> icon [
 	^ 'comptooltipsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTooltipsScreen class >> title [
 	^ 'Tooltips'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTooltipsScreen >> complexeTooltips [
 	^ OrderedDictionary new
 		add: 'Rich' -> #renderRichTooltipOn:;
@@ -25,7 +27,7 @@ MDLTooltipsScreen >> complexeTooltips [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTooltipsScreen >> positionedTooltips [
 	^ OrderedDictionary new
 		add: 'Top' -> #renderTopTooltipOn:;
@@ -35,7 +37,7 @@ MDLTooltipsScreen >> positionedTooltips [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderBottomTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -46,7 +48,7 @@ MDLTooltipsScreen >> renderBottomTooltipOn: html [
 		with: 'Print'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderLargeTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -57,7 +59,7 @@ MDLTooltipsScreen >> renderLargeTooltipOn: html [
 		with: 'Print'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderLeftTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -68,7 +70,7 @@ MDLTooltipsScreen >> renderLeftTooltipOn: html [
 		with: 'Print'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderMultilinesTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -80,7 +82,7 @@ MDLTooltipsScreen >> renderMultilinesTooltipOn: html [
 			html text: 'via social media' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderRichTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -91,7 +93,7 @@ MDLTooltipsScreen >> renderRichTooltipOn: html [
 			html strong: 'file.zip' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderRightTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -102,7 +104,7 @@ MDLTooltipsScreen >> renderRightTooltipOn: html [
 		with: 'Print'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTooltipsScreen >> renderScreenContentOn: html [
 	self
 		render: self simpleTooltips on: html;
@@ -110,7 +112,7 @@ MDLTooltipsScreen >> renderScreenContentOn: html [
 		render: self positionedTooltips on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderSimpleTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -120,7 +122,7 @@ MDLTooltipsScreen >> renderSimpleTooltipOn: html [
 		with: 'Follow'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTooltipsScreen >> renderTopTooltipOn: html [
 	html mdlIcon
 		id: html nextId;
@@ -131,7 +133,7 @@ MDLTooltipsScreen >> renderTopTooltipOn: html [
 		with: 'Print'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTooltipsScreen >> simpleTooltips [
 	^ OrderedDictionary new
 		add: 'Simple' -> #renderSimpleTooltipOn:;

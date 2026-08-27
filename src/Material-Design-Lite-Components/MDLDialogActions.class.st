@@ -27,19 +27,21 @@ Example
 						with: 'Disagree' ] ]
 "
 Class {
-	#name : #MDLDialogActions,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Dialog'
+	#name : 'MDLDialogActions',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Dialog',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Dialog'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLDialogActions >> fullWidth [
 	"This option makes all the buttons takes the full width of the dialog."
 	
 	self class: 'mdl-dialog__actions--full-width'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLDialogActions >> initialize [
 	super initialize.
 	self class: 'mdl-dialog__actions'

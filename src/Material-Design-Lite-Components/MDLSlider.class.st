@@ -13,19 +13,21 @@ Example
 		value: 75
 "
 Class {
-	#name : #MDLSlider,
-	#superclass : #WARangeInputTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLSlider',
+	#superclass : 'WARangeInputTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSlider >> initialize [
 	super initialize.
 	self class: 'mdl-slider'.
 	self class: 'mdl-js-slider'.
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLSlider >> showBounds [
 	"This option currently does not work on some browsers"
 	

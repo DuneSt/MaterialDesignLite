@@ -23,18 +23,20 @@ Example
 			html mdlLayoutContent: [  ] ]
 "
 Class {
-	#name : #MDLLayoutContent,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLLayoutContent',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayoutContent >> initialize [
 	super initialize.
 	self class: 'mdl-layout__content'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLayoutContent >> tag [
 	^ 'main'
 ]

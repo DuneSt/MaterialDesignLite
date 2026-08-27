@@ -8,35 +8,37 @@ Then, next times the user click on the expansion panel, I will behave as MDLHide
 If the panel is initially rendered expanded, I behave exactly as MDLHideExpansionStrategy.
 "
 Class {
-	#name : #MDLLazyExpansionStrategy,
-	#superclass : #MDLExpansionStrategy,
+	#name : 'MDLLazyExpansionStrategy',
+	#superclass : 'MDLExpansionStrategy',
 	#instVars : [
 		'currentStrategy'
 	],
-	#category : #'Material-Design-Lite-Widgets-Expansion'
+	#category : 'Material-Design-Lite-Widgets-Expansion',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Expansion'
 }
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLLazyExpansionStrategy >> customize: anExpansionPanelHeader in: anExpansionPanel on: html [
 	anExpansionPanel isExpanded ifTrue: [ self switchToDisplayNoneStrategy ].
 
 	^ currentStrategy customize: anExpansionPanelHeader in: anExpansionPanel on: html
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLazyExpansionStrategy >> initialize [
 	super initialize.
 	currentStrategy := MDLAjaxExpansionStrategy new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLazyExpansionStrategy >> renderExpansionPanel: anExpansionPanel contentOn: html [
 	anExpansionPanel isExpanded ifTrue: [ self switchToDisplayNoneStrategy ].
 	currentStrategy renderExpansionPanel: anExpansionPanel contentOn: html.
 	currentStrategy isAjaxExpansionStrategy ifTrue: [ self switchToDisplayNoneStrategy ]
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 MDLLazyExpansionStrategy >> switchToDisplayNoneStrategy [
 	currentStrategy := MDLHideExpansionStrategy new
 ]

@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLFoldButtonTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Extensions-Tests-Panels'
+	#name : 'MDLFoldButtonTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Extensions-Tests-Panels',
+	#package : 'Material-Design-Lite-Extensions-Tests',
+	#tag : 'Panels'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLFoldButtonTest >> testFold [
 	self
 		assert: [ :html | 
@@ -17,7 +19,7 @@ MDLFoldButtonTest >> testFold [
 		generatedIncludes: 'document.getElementById(''test'').style.width=''0'';'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLFoldButtonTest >> testOnCompleteScript [
 	self
 		assert: [ :html | 
@@ -36,7 +38,7 @@ MDLFoldButtonTest >> testOnCompleteScript [
 				yourself) showAndHide contents includesSubstring: 'console.log(''test'')')
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLFoldButtonTest >> testUnfold [
 	self
 		deny: [ :html | 

@@ -10,8 +10,8 @@ Sortable table, renders a table and adds the necessary behavior to navigate trou
 	ajaxOnCompleteHook: a String containing some JS code to be executed after we changed of page. By default it will update the MDL components to initialize the new ones.
 "
 Class {
-	#name : #MDLSortableTable,
-	#superclass : #WAComponent,
+	#name : 'MDLSortableTable',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'title',
 		'header',
@@ -26,22 +26,24 @@ Class {
 		'tableStyle',
 		'rowsCache'
 	],
-	#category : #'Material-Design-Lite-Widgets-Table'
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> ajaxOnCompleteHook [
 	"I am a hook to let the user add some javascript after the rendering of a new page. By default I will update the MDL components to initialize the new ones that might be in the table if needed."
 
 	^ ajaxOnCompleteHook ifNil: [ 'componentHandler.upgradeDom();' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> ajaxOnCompleteHook: anObject [
 	ajaxOnCompleteHook := anObject
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLSortableTable >> ajaxUpdateScriptFrom: html [
 	^ html jQuery
 		script: [ :s | 
@@ -52,17 +54,17 @@ MDLSortableTable >> ajaxUpdateScriptFrom: html [
 						onComplete: self ajaxOnCompleteHook) ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> elementsToShow [
 	^ elementsToShow
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> elementsToShow: anObject [
 	elementsToShow := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> ensureCurrentPageIsVisible [
 	"In some case the elements to show can change. If we currently are in a page that does not exist anymore since the number of elements decreased, we should reset the position."
 
@@ -70,22 +72,22 @@ MDLSortableTable >> ensureCurrentPageIsVisible [
 		ifTrue: [ self position: 1 ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> header [
 	^ header
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> header: aCollection [
 	header := aCollection collect: [ :each | each asMDLSortableTableHeader ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> indexOfLastRowToShow [
 	^ rowsCache size min: position + elementsToShow - 1
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSortableTable >> initialize [
 	super initialize.
 	position := 1.
@@ -96,33 +98,33 @@ MDLSortableTable >> initialize [
 	selectable := false
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLSortableTable >> nextPosition [
 	position + elementsToShow < rowsCache size
 		ifTrue: [ self position: position + elementsToShow ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> noPagination [
 	self rowsPerPagePossibilities: {(Float infinity)}
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> position [
 	^ position
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> position: anObject [
 	position := anObject
 ]
 
-{ #category : #actions }
+{ #category : 'actions' }
 MDLSortableTable >> previousPosition [
 	self position: ((position - elementsToShow) max: 1)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderButtonTriggering: aMethod withIcon: aSymbol disabled: isDisabled on: html [
 	html mdlButton
 		bePush;
@@ -136,7 +138,7 @@ MDLSortableTable >> renderButtonTriggering: aMethod withIcon: aSymbol disabled: 
 		with: [ html mdlIcon: aSymbol ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderContentOn: html [
 	html mdlGrid
 		class: 'mdl-sorted-table';
@@ -148,7 +150,7 @@ MDLSortableTable >> renderContentOn: html [
 				with: [ self renderTableContentOn: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderFooterPaginationOn: html [
 	html mdlCardTextContainer
 		class: 'mdl-sorted-table__footer';
@@ -171,13 +173,13 @@ MDLSortableTable >> renderFooterPaginationOn: html [
 										on: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderHeaderOn: html [
 	html
 		tableHead: [ html tableRow: [ header doWithIndex: [ :head :i | head renderContentOn: html forTable: self columnIndex: i ] ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> renderItemsByPageSelectionComponentOn: html [
 	html
 		render:
@@ -191,7 +193,7 @@ MDLSortableTable >> renderItemsByPageSelectionComponentOn: html [
 				yourself)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderPagesInfoOn: html [
 	html
 		text:
@@ -205,7 +207,7 @@ MDLSortableTable >> renderPagesInfoOn: html [
 						print: rowsCache size ])
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderRowContentFor: cells on: html [
 	header
 		doWithIndex: [ :headerCell :columnIndex | 
@@ -217,13 +219,13 @@ MDLSortableTable >> renderRowContentFor: cells on: html [
 						ifFalse: [ cell ]) ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderRowsOn: html [
 	((position to: self indexOfLastRowToShow) collect: [ :rowIndex | rowsCache at: rowIndex ])
 		do: [ :cells | html tableRow: [ self renderRowContentFor: cells on: html ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTable >> renderTableContentOn: html [
 	"We cache the rows because it is possible that the user give a block to execute."
 
@@ -240,49 +242,49 @@ MDLSortableTable >> renderTableContentOn: html [
 	self shouldDisplayPagination ifTrue: [ self renderFooterPaginationOn: html ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> rows [
 	^ rows value
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> rows: anObject [
 	rows := anObject.
 	unsortedRows := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> rowsPerPagePossibilities [
 	^ rowsPerPagePossibilities
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> rowsPerPagePossibilities: aCollection [
 	rowsPerPagePossibilities := aCollection.
 	aCollection ifNotEmpty: [ self elementsToShow: aCollection first ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> selectable [
 	^ selectable
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> selectable: anObject [
 	selectable := anObject
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLSortableTable >> shouldDisplayPagination [
 	^ self rowsPerPagePossibilities min < rowsCache size
 ]
 
-{ #category : #sorting }
+{ #category : 'sorting' }
 MDLSortableTable >> sortAscendingAtRow: aRowIndex [
 	self sortAtRow: aRowIndex using: #>
 ]
 
-{ #category : #sorting }
+{ #category : 'sorting' }
 MDLSortableTable >> sortAtRow: aRowIndex using: aSelector [
 	header
 		do: [ :each | 
@@ -295,32 +297,32 @@ MDLSortableTable >> sortAtRow: aRowIndex using: aSelector [
 				do: [ true ]	 ]
 ]
 
-{ #category : #sorting }
+{ #category : 'sorting' }
 MDLSortableTable >> sortDescendingAtRow: aRowIndex [
 	self sortAtRow: aRowIndex using: #<
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> tableStyle [
 	^ tableStyle
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> tableStyle: anObject [
 	tableStyle := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> title [
 	^ title
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTable >> title: anObject [
 	title := anObject
 ]
 
-{ #category : #sorting }
+{ #category : 'sorting' }
 MDLSortableTable >> unsort [
 	rows := unsortedRows 
 ]

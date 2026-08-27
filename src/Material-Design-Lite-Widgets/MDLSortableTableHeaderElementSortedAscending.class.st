@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLSortableTableHeaderElementSortedAscending,
-	#superclass : #MDLSortableTableHeaderState,
-	#category : 'Material-Design-Lite-Widgets-Table'
+	#name : 'MDLSortableTableHeaderElementSortedAscending',
+	#superclass : 'MDLSortableTableHeaderState',
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLSortableTableHeaderElementSortedAscending class >> defaultNextState [
 	^ MDLSortableTableHeaderElementSortedDescending
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSortableTableHeaderElementSortedAscending >> renderContentOn: html forTable: table columnIndex: i header: header [
 	(header headingCellOn: html)
 		sortedAscending;

@@ -26,54 +26,56 @@ Internal Representation and Key Implementation Points.
 	buttons:		<aCollection> 	A collection of components to show on the toolbar.
 "
 Class {
-	#name : #MDLVerticalToolbar,
-	#superclass : #WAComponent,
+	#name : 'MDLVerticalToolbar',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'buttons'
 	],
-	#category : 'Material-Design-Lite-Extensions-Panels'
+	#category : 'Material-Design-Lite-Extensions-Panels',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'Panels'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLVerticalToolbar class >> buttons: aCollection [
 	^ self new
 		addAllButtons: aCollection;
 		yourself
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLVerticalToolbar >> addAllButtons: aCollection [
 	aCollection do: [ :each | self addButton: each ]
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLVerticalToolbar >> addButton: aButton [
 	self buttons add: aButton.
 	aButton owner: self
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLVerticalToolbar >> buttons [
 	^ buttons
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLVerticalToolbar >> buttons: anObject [
 	buttons := anObject
 ]
 
-{ #category : #hooks }
+{ #category : 'hooks' }
 MDLVerticalToolbar >> children [
 	^ self buttons
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLVerticalToolbar >> initialize [
 	super initialize.
 	self buttons: OrderedCollection new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLVerticalToolbar >> renderContentOn: html [
 	html div
 		class: 'vertical-toolbar';
@@ -85,7 +87,7 @@ MDLVerticalToolbar >> renderContentOn: html [
 								with: [ html render: button ] ] ]
 ]
 
-{ #category : #action }
+{ #category : 'action' }
 MDLVerticalToolbar >> resetButtonsSelection [
 	self buttons do: [ :each | each isSelected: false ]
 ]

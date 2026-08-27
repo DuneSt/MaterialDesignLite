@@ -2,22 +2,24 @@
 Chips represent complex entities in small blocks, such as a contact.
 "
 Class {
-	#name : #MDLChipsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLChipsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLChipsScreen class >> icon [
 	^ 'compchipsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLChipsScreen class >> title [
 	^ 'Chips'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLChipsScreen >> imageChips [
 	^ OrderedDictionary new
 		add: 'Iconned Chip' -> #renderMdlIconChipOn:;
@@ -27,14 +29,14 @@ MDLChipsScreen >> imageChips [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLChipsScreen >> renderAjaxRemovableChipOn: html [
 	html mdlChip
 		ajaxDeleteCallback: [ 'Component deleted' crLog ] successHook: 'alert("Deleted")'; "successHook is optional."
 		with: [ html mdlChipText: 'Example Chip' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLChipsScreen >> renderContactChipOn: html [
 	html mdlChip
 		deleteCallback: [ 'Component deleted' crLog ];
@@ -45,7 +47,7 @@ MDLChipsScreen >> renderContactChipOn: html [
 			html mdlChipText: 'Example Chip' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLChipsScreen >> renderContactColorChipOn: html [
 	html mdlChip
 		deleteCallback: [ 'Component deleted' crLog ];
@@ -56,7 +58,7 @@ MDLChipsScreen >> renderContactColorChipOn: html [
 			html mdlChipText: 'Example Chip' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLChipsScreen >> renderImageChipOn: html [
 	html mdlChip
 		deleteCallback: [ 'Component deleted' crLog ];
@@ -67,7 +69,7 @@ MDLChipsScreen >> renderImageChipOn: html [
 			html mdlChipText: 'Example Chip' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLChipsScreen >> renderMdlIconChipOn: html [
 	html mdlChip
 		deleteCallback: [ 'Component deleted' crLog ];
@@ -78,26 +80,26 @@ MDLChipsScreen >> renderMdlIconChipOn: html [
 			html mdlChipText: 'Example Chip' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLChipsScreen >> renderRemovableChipOn: html [
 	html mdlChip
 		deleteCallback: [ 'Component deleted' crLog ];
 		with: [ html mdlChipText: 'Example Chip' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLChipsScreen >> renderScreenContentOn: html [
 	self
 		render: self simpleChips on: html;
 		render: self imageChips on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLChipsScreen >> renderSimpleChipOn: html [
 	html mdlChip: [ html mdlChipText: 'Example Chip' ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLChipsScreen >> simpleChips [
 	^ OrderedDictionary new
 		add: 'Simple Chip' -> #renderSimpleChipOn:;

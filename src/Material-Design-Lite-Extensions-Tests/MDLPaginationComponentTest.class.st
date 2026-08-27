@@ -1,34 +1,36 @@
 Class {
-	#name : #MDLPaginationComponentTest,
-	#superclass : #SGTAbstractSeasideTestCase,
+	#name : 'MDLPaginationComponentTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
 	#instVars : [
 		'component'
 	],
-	#category : #'Material-Design-Lite-Extensions-Tests-Pagination'
+	#category : 'Material-Design-Lite-Extensions-Tests-Pagination',
+	#package : 'Material-Design-Lite-Extensions-Tests',
+	#tag : 'Pagination'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLPaginationComponentTest >> actualClass [
 	^ MDLPaginationComponent 
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLPaginationComponentTest >> defaultNumberOfPages [
 	^ 20
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLPaginationComponentTest >> newInstance [
 	^ self actualClass numberOfPages: self defaultNumberOfPages
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 MDLPaginationComponentTest >> setUp [
 	super setUp.
 	component := self newInstance
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testCurrentPage [
 	component currentPage: 10.
 	self assert: component currentPage equals: 10.
@@ -36,42 +38,42 @@ MDLPaginationComponentTest >> testCurrentPage [
 	self should: [ component currentPage: self defaultNumberOfPages + 1 ] raise: SubscriptOutOfBounds
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testFirstPage [
 	component currentPage: 10.
 	component firstPage.
 	self assert: component currentPage equals: 1
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testFirstPageInExtremCase [
 	component := self actualClass numberOfPages: 0.
 	component firstPage.
 	self assert: component currentPage equals: 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testLastPage [
 	component currentPage: 10.
 	component lastPage.
 	self assert: component currentPage equals: self defaultNumberOfPages
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testLastPageInExtremCase [
 	component := self actualClass numberOfPages: 0.
 	component lastPage.
 	self assert: component currentPage equals: 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testNextPage [
 	component currentPage: 10.
 	component nextPage.
 	self assert: component currentPage equals: 11
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testPagesButtonsToRender [
 	component currentPage: 10.
 	component adjacentsPagesToShow: 2.
@@ -80,14 +82,14 @@ MDLPaginationComponentTest >> testPagesButtonsToRender [
 	self assert: component pagesButtonsToRender equals: (6 to: 14)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testPreviousPage [
 	component currentPage: 10.
 	component previousPage.
 	self assert: component currentPage equals: 9
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testShouldShowFirstDisabledButton [
 	component firstPage.
 	self deny: component shouldShowFirstDisabledButton.
@@ -101,7 +103,7 @@ MDLPaginationComponentTest >> testShouldShowFirstDisabledButton [
 	self deny: component shouldShowFirstDisabledButton
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testShouldShowLastDisabledButton [
 	component lastPage.
 	self deny: component shouldShowLastDisabledButton.
@@ -115,7 +117,7 @@ MDLPaginationComponentTest >> testShouldShowLastDisabledButton [
 	self deny: component shouldShowLastDisabledButton
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLPaginationComponentTest >> testUpdateBlockUseAjax [
 	self assert: [ :html | html render: component ] generatedIncludes: '<a href="/?3">2</a>'.
 	component := self actualClass numberOfPages: 20 updateBlock: [ :a :b | "something" ].

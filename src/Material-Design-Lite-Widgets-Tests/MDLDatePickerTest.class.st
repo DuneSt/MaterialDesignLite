@@ -1,19 +1,21 @@
 Class {
-	#name : #MDLDatePickerTest,
-	#superclass : #SGTAbstractSeasideTestCase,
+	#name : 'MDLDatePickerTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
 	#instVars : [
 		'calendar'
 	],
-	#category : #'Material-Design-Lite-Widgets-Tests-Calendar'
+	#category : 'Material-Design-Lite-Widgets-Tests-Calendar',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Calendar'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 MDLDatePickerTest >> setUp [
 	super setUp.
 	calendar := MDLDatePicker new
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testDisplayDateOn [
 	| today tommorrow afterTommorrow nextMonth |
 	today := Date today.
@@ -33,7 +35,7 @@ MDLDatePickerTest >> testDisplayDateOn [
 	self assert: [ :html | calendar displayDate: nextMonth on: html ] generatedIncludes: 'disabled'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testGoToNextMonth [
 	calendar currentDate: (Date year: 2016 month: 4 day: 10).
 	calendar goToNextMonth.
@@ -41,7 +43,7 @@ MDLDatePickerTest >> testGoToNextMonth [
 	self assert: calendar currentDate equals: (Date year: 2016 month: 5 day: 10)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testGoToPreviousMonth [
 	calendar currentDate: (Date year: 2016 month: 4 day: 10).
 	calendar goToPreviousMonth.
@@ -49,26 +51,26 @@ MDLDatePickerTest >> testGoToPreviousMonth [
 	self assert: calendar currentDate equals: (Date year: 2016 month: 3 day: 10)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testId [
 	self deny: [ :html | html render: calendar ] generatedIncludes: 'id="testId"'.
 	calendar id: 'testId'.
 	self assert: [ :html | html render: calendar ] generatedIncludes: 'id="testId"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testIdIsEnsured [
 	self assert: [ :html | html render: calendar ] generatedIncludes: 'id="id1"'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testIsInCurrentMonth [
 	calendar currentDate: (Date year: 2018 month: 6 day: 5).
 	self assert: (calendar isInCurrentMonth: (Date year: 2018 month: 6 day: 5)).
 	self deny: (calendar selectedDateIs: (Date year: 2018 month: 7 day: 4))
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testIsTodayAndNotSelected [
 	| today tommorow |
 	today := Date today.
@@ -80,7 +82,7 @@ MDLDatePickerTest >> testIsTodayAndNotSelected [
 	self deny: (calendar isTodayAndNotSelected: tommorow)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testJsOnCompleteScript [
 	calendar onCompleteScript: 'console.log("test")' js.
 	self assert: (calendar jsOnCompleteScript isKindOf: JSStream).
@@ -90,21 +92,21 @@ MDLDatePickerTest >> testJsOnCompleteScript [
 	self assert: calendar jsOnCompleteScript contents equals: 'console.log("test")'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testRenderMonthesOn [
 	self assert: [ :html | calendar renderMonthesOn: html ] generatedIncludesAll: Date monthNames.
 	calendar currentDate: (Date year: 2018 month: 6 day: 5).
 	self assert: [ :html | calendar renderMonthesOn: html ] generatedIncludes: 'May</div><div class="mdl-cell month-cell mdl-color-text--primary mdl-color-text--primary-contrast mdl-color--primary active mdl-cell--4-col-desktop"' "Needs to be active and get additional classes to show it selected."
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testRenderYearsOn [
 	self assert: [ :html | calendar renderYearsOn: html ] generatedIncludesAll: (calendar calendar yearsInterval collect: #asString).
 	calendar currentDate: (Date year: 2018 month: 6 day: 5).
 	self assert: [ :html | calendar renderYearsOn: html ] generatedIncludes: '2017</div><div class="mdl-cell year-cell mdl-color-text--primary mdl-color-text--primary-contrast mdl-color--primary active mdl-cell--4-col-desktop"' "2018 need to be active"
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLDatePickerTest >> testSelectedDateIs [
 	calendar currentDate: (Date year: 2018 month: 6 day: 5).
 	self assert: (calendar selectedDateIs: (Date year: 2018 month: 6 day: 5)).

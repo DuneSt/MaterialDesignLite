@@ -1,25 +1,27 @@
 Class {
-	#name : #MDLMGExampleFormDescription,
-	#superclass : #GRObject,
+	#name : 'MDLMGExampleFormDescription',
+	#superclass : 'GRObject',
 	#instVars : [
 		'name',
 		'number',
 		'bePositive'
 	],
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormDescription >> bePositive [
 	^ bePositive ifNil: [ bePositive := true ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormDescription >> bePositive: anObject [
 	bePositive := anObject
 ]
 
-{ #category : #'magritte descriptions' }
+{ #category : 'magritte descriptions' }
 MDLMGExampleFormDescription >> bePositiveDescription [
 	<magritteDescription>
 	^ MABooleanDescription new
@@ -30,7 +32,7 @@ MDLMGExampleFormDescription >> bePositiveDescription [
 		yourself
 ]
 
-{ #category : #'magritte descriptions' }
+{ #category : 'magritte descriptions' }
 MDLMGExampleFormDescription >> descriptionContainer [
 	<magritteContainer>
 	^ super descriptionContainer
@@ -38,18 +40,18 @@ MDLMGExampleFormDescription >> descriptionContainer [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormDescription >> name [
 	^ name
 
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormDescription >> name: anObject [
 	name := anObject
 ]
 
-{ #category : #'magritte descriptions' }
+{ #category : 'magritte descriptions' }
 MDLMGExampleFormDescription >> nameDescription [
 	<magritteDescription>
 	^ MAStringDescription new
@@ -63,17 +65,17 @@ MDLMGExampleFormDescription >> nameDescription [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormDescription >> number [
 	^ number
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormDescription >> number: anObject [
 	number := anObject
 ]
 
-{ #category : #'magritte descriptions' }
+{ #category : 'magritte descriptions' }
 MDLMGExampleFormDescription >> numberDescription [
 	<magritteDescription>
 	^ MASingleOptionDescription new

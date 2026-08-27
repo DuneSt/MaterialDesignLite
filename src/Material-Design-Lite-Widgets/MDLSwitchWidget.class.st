@@ -1,10 +1,11 @@
 Class {
-	#name : #MDLSwitchWidget,
-	#superclass : #MDLWidget,
-	#category : 'Material-Design-Lite-Widgets'
+	#name : 'MDLSwitchWidget',
+	#superclass : 'MDLWidget',
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLSwitchWidget >> renderContentOn: html [
 	html div 
 		style: 'width: 28px;';

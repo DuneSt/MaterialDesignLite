@@ -15,12 +15,14 @@ Example
 							html listItem: [ html anchor: 'Privacy & Terms' ] ] ] ]
 "
 Class {
-	#name : #MDLMiniFooterRightSection,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Footer'
+	#name : 'MDLMiniFooterRightSection',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Footer',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Footer'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLMiniFooterRightSection >> initialize [
 	super initialize.
 	self class: 'mdl-mini-footer__right-section'

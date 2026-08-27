@@ -2,22 +2,24 @@
 Textual input components.
 "
 Class {
-	#name : #MDLTextFieldsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLTextFieldsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldsScreen class >> icon [
 	^'comptextfieldsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTextFieldsScreen class >> title [
 	^ 'Text Fields'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTextFieldsScreen >> floatingLabelTextFields [
 	^ OrderedDictionary new
 		add: 'Text with floating label' -> #renderFloatingLabelTextFieldOn:;
@@ -26,7 +28,7 @@ MDLTextFieldsScreen >> floatingLabelTextFields [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderExpandingTextFieldOn: html [
 	html mdlTextFieldContainer
 		expandable;
@@ -42,7 +44,7 @@ MDLTextFieldsScreen >> renderExpandingTextFieldOn: html [
 						with: 'Expandable Input' ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderFloatingLabelNumberTextFieldOn: html [
 	html mdlTextFieldContainer
 		floatingLabel;
@@ -55,7 +57,7 @@ MDLTextFieldsScreen >> renderFloatingLabelNumberTextFieldOn: html [
 			html mdlTextFieldError: 'Input is not a number !' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderFloatingLabelTextFieldOn: html [
 	html mdlTextFieldContainer
 		floatingLabel;
@@ -65,7 +67,7 @@ MDLTextFieldsScreen >> renderFloatingLabelTextFieldOn: html [
 			html mdlTextFieldInput id: html lastId ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderInputNumberOn: html [
 	html mdlTextFieldContainer
 		floatingLabel;
@@ -78,7 +80,7 @@ MDLTextFieldsScreen >> renderInputNumberOn: html [
 				type: 'number' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderMultiLineTextFieldOn: html [
 	html
 		mdlTextFieldContainer: [ html mdlTextFieldLabel
@@ -89,7 +91,7 @@ MDLTextFieldsScreen >> renderMultiLineTextFieldOn: html [
 				rows: 3 ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderNumberTextFieldOn: html [
 	html
 		mdlTextFieldContainer: [ html mdlTextFieldLabel
@@ -101,7 +103,7 @@ MDLTextFieldsScreen >> renderNumberTextFieldOn: html [
 			html mdlTextFieldError: 'Input is not a number !' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderPasswordTextFieldOn: html [
 	html
 		mdlTextFieldContainer: [ html mdlTextFieldLabel
@@ -110,7 +112,7 @@ MDLTextFieldsScreen >> renderPasswordTextFieldOn: html [
 			html mdlPasswordFieldInput id: html lastId ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTextFieldsScreen >> renderScreenContentOn: html [
 	self
 		render: self simpleTextFields on: html;
@@ -118,7 +120,7 @@ MDLTextFieldsScreen >> renderScreenContentOn: html [
 		render: self specialTextFields on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLTextFieldsScreen >> renderTextFieldOn: html [
 	html
 		mdlTextFieldContainer: [ html mdlTextFieldLabel
@@ -127,7 +129,7 @@ MDLTextFieldsScreen >> renderTextFieldOn: html [
 			html mdlTextFieldInput id: html lastId ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTextFieldsScreen >> simpleTextFields [
 	^ OrderedDictionary new
 		add: ' Text' -> #renderTextFieldOn:;
@@ -135,7 +137,7 @@ MDLTextFieldsScreen >> simpleTextFields [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLTextFieldsScreen >> specialTextFields [
 	^ OrderedDictionary new
 		add: 'Multiple line' -> #renderMultiLineTextFieldOn:;

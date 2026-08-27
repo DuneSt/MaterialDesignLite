@@ -1,22 +1,24 @@
 Class {
-	#name : #MDLBeginsWithFilterTest,
-	#superclass : #MDLAbstractFilterTest,
-	#category : 'Material-Design-Lite-Widgets-Tests-List'
+	#name : 'MDLBeginsWithFilterTest',
+	#superclass : 'MDLAbstractFilterTest',
+	#category : 'Material-Design-Lite-Widgets-Tests-List',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'List'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLBeginsWithFilterTest >> actualClass [
 	^ MDLBeginsWithFilter
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBeginsWithFilterTest >> testFormatedElementMatches [
 	self assert: (self actualClass formatedElement: 'test' matches: 'test').
 	self deny: (self actualClass formatedElement: 'Test' matches: 'test' ).
 	self deny: (self actualClass formatedElement: 'anotherTest' matches: 'test' ).
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLBeginsWithFilterTest >> testSelectMatchingFromFormatWith [
 	self assertCollection: (self actualClass selectMatchingFrom: #('test' 'anotherTest' 'Test' 'AnotherTest') format: [ :each | 'a' , each ] with: 'atest') hasSameElements: #('test')
 ]

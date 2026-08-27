@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLLayoutIconTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Layouts'
+	#name : 'MDLLayoutIconTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Layouts',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Layouts'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLLayoutIconTest >> testBareBrush [
 	self assert: [ :html | html mdlLayoutIcon ] generates: '<div class="mdl-layout-icon"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLLayoutIconTest >> testWithContent [
 	self assert: [ :html | html mdlLayoutIcon: 'test' ] generates: '<div class="mdl-layout-icon">test</div>'
 ]

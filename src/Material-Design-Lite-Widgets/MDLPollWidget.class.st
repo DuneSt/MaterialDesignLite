@@ -4,37 +4,39 @@ I represent a widget for polling with thumbs.
 For you project, you must subclass me and override #negativePollBlock and #positivePollBlock 
 "
 Class {
-	#name : #MDLPollWidget,
-	#superclass : #MDLHighLevelWidget,
+	#name : 'MDLPollWidget',
+	#superclass : 'MDLHighLevelWidget',
 	#instVars : [
 		'model'
 	],
-	#category : #'Material-Design-Lite-Widgets-Poll'
+	#category : 'Material-Design-Lite-Widgets-Poll',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Poll'
 }
 
-{ #category : #'instance creation' }
+{ #category : 'instance creation' }
 MDLPollWidget class >> newWithPoll: aMDLPoll [
 	^ self new poll: aMDLPoll
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLPollWidget >> addNegativeVote [
 	model increaseNegativeCount
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLPollWidget >> addPositiveVote [
 	model increasePositiveCount
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLPollWidget >> initialize [
 	super initialize.
 	self class: 'mdl-poll-widget'.
 	model := MDLPoll new
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLPollWidget >> jsNegativeButtonClickedOn: html [
 	^ (html jQuery id: self id) load
 		html: [ :ajaxHtml | 
@@ -42,7 +44,7 @@ MDLPollWidget >> jsNegativeButtonClickedOn: html [
 			self renderPollButtonsOn: ajaxHtml ]
 ]
 
-{ #category : #javascript }
+{ #category : 'javascript' }
 MDLPollWidget >> jsPositiveButtonClickedOn: html [
 	^ (html jQuery id: self id) load
 		html: [ :ajaxHtml | 
@@ -50,17 +52,17 @@ MDLPollWidget >> jsPositiveButtonClickedOn: html [
 			self renderPollButtonsOn: ajaxHtml ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPollWidget >> model [
 	^ model
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPollWidget >> poll: aPoll [
 	model := aPoll
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPollWidget >> renderContentOn: html [
 	self ensureId: html.
 	html div
@@ -68,7 +70,7 @@ MDLPollWidget >> renderContentOn: html [
 		with: [ self renderPollButtonsOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPollWidget >> renderNegativePollButtonOn: html [
 	html mdlIconBadge
 		overlap;
@@ -79,13 +81,13 @@ MDLPollWidget >> renderNegativePollButtonOn: html [
 				icon: 'thumb_down' ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPollWidget >> renderPollButtonsOn: html [
 	self renderPositivePollButtonOn: html.
 	self renderNegativePollButtonOn: html
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPollWidget >> renderPositivePollButtonOn: html [
 	html mdlIconBadge
 		overlap;

@@ -1,19 +1,21 @@
 Class {
-	#name : #MDLMGReportWrapper,
-	#superclass : #WAComponent,
+	#name : 'MDLMGReportWrapper',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'report'
 	],
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #'initialize-release' }
+{ #category : 'initialize-release' }
 MDLMGReportWrapper >> close [
 
 	self answer: nil
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMGReportWrapper >> renderContentOn: html [
 	html render: self report.
 	html mdlCardActions
@@ -22,12 +24,12 @@ MDLMGReportWrapper >> renderContentOn: html [
 				with: [ html mdlButton raised with: 'Close' ] ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportWrapper >> report [
 	^ report
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGReportWrapper >> report: anObject [
 	report := anObject
 ]

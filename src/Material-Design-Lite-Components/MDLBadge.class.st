@@ -13,39 +13,41 @@ Example
 		with: 'account_box'
 "
 Class {
-	#name : #MDLBadge,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Badge'
+	#name : 'MDLBadge',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Badge',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Badge'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLBadge >> dataBadge: aString [
 	"Assigns a value to the badge"
 	
 	self attributeAt: 'data-badge' put: aString 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLBadge >> initialize [
 	super initialize.
 	self class: 'mdl-badge'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLBadge >> noBackground [
 	"Applies open-circle effect to badge"
 	
 	self class: 'mdl-badge--no-background'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLBadge >> overlap [
 	"Make the badge overlap with its container"
 	
 	self class: 'mdl-badge--overlap'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLBadge >> tag [
 	^ 'span'
 ]

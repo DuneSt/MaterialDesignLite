@@ -2,36 +2,38 @@
 A simple poll widget.
 "
 Class {
-	#name : #MDLPollScreen,
-	#superclass : #MDLWidgetDemo,
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#name : 'MDLPollScreen',
+	#superclass : 'MDLWidgetDemo',
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPollScreen class >> icon [
 	^ #comppollPng
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPollScreen class >> title [
 	^ 'Poll'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLPollScreen >> poll [
 	^ OrderedDictionary new
 		add: 'Poll Widget' -> #renderPollOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLPollScreen >> renderPollOn: html [
 	html div
 		style: 'width: 100px;';
 		with: MDLPollWidget new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLPollScreen >> renderScreenContentOn: html [
 	self render: self poll on: html
 ]

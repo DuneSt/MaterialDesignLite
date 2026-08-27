@@ -2,22 +2,24 @@
 Variations on Material Design buttons.
 "
 Class {
-	#name : #MDLButtonsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLButtonsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonsScreen class >> icon [
 	^ 'compbuttonsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLButtonsScreen class >> title [
 	^ 'Buttons'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> coloredButtons [
 	^ OrderedDictionary new
 		add: 'Colored button' -> #renderColoredButtonCodeOn:;
@@ -26,7 +28,7 @@ MDLButtonsScreen >> coloredButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> fabButtons [
 	^ OrderedDictionary new
 		add: 'Plain FAB' -> #renderFabButtonCodeOn:;
@@ -35,7 +37,7 @@ MDLButtonsScreen >> fabButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> fabColoredButtons [
 	^ OrderedDictionary new
 		add: 'Colored FAB' -> #renderColoredFabButtonCodeOn:;
@@ -43,7 +45,7 @@ MDLButtonsScreen >> fabColoredButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> flatButtons [
 	^ OrderedDictionary new
 		add: 'Flat button' -> #renderFlatButtonCodeOn:;
@@ -52,7 +54,7 @@ MDLButtonsScreen >> flatButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> iconButtons [
 	^ OrderedDictionary new
 		add: 'Icon button' -> #renderIconButtonCodeOn:;
@@ -61,7 +63,7 @@ MDLButtonsScreen >> iconButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> miniFabButtons [
 	^ OrderedDictionary new
 		add: 'Mini FAB' -> #renderMiniFabButtonCodeOn:;
@@ -69,7 +71,7 @@ MDLButtonsScreen >> miniFabButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> raisedButtons [
 	^ OrderedDictionary new
 		add: 'Plain raised' -> #renderRaisedButtonCodeOn:;
@@ -78,7 +80,7 @@ MDLButtonsScreen >> raisedButtons [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLButtonsScreen >> raisedColoredButtons [
 	^ OrderedDictionary new
 		add: 'Colored button' -> #renderRaisedColoredButtonCodeOn:;
@@ -87,14 +89,14 @@ MDLButtonsScreen >> raisedColoredButtons [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderColoredAccentButtonCodeOn: html [
 	html mdlButton
 		accentColor;
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderColoredAccentRippleEffectButtonCodeOn: html [
 	html mdlButton
 		accentColor;
@@ -102,14 +104,14 @@ MDLButtonsScreen >> renderColoredAccentRippleEffectButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderColoredButtonCodeOn: html [
 	html mdlButton
 		primaryColor;
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderColoredFabButtonCodeOn: html [
 	html mdlButton
 		fab;
@@ -117,7 +119,7 @@ MDLButtonsScreen >> renderColoredFabButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderColoredFabRippleEffectButton2CodeOn: html [
 	html mdlButton
 		fab;
@@ -126,14 +128,14 @@ MDLButtonsScreen >> renderColoredFabRippleEffectButton2CodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderFabButtonCodeOn: html [
 	html mdlButton
 		fab;
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderFabDisabledButtonCodeOn: html [
 	html mdlButton
 		fab;
@@ -141,7 +143,7 @@ MDLButtonsScreen >> renderFabDisabledButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderFabRippleEffectButtonCodeOn: html [
 	html mdlButton
 		fab;
@@ -149,26 +151,26 @@ MDLButtonsScreen >> renderFabRippleEffectButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderFlatButtonCodeOn: html [
 	html mdlButton: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderFlatDisabledButtonCodeOn: html [
 	html mdlButton
 		disabled;
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderFlatRippleEffectButtonCodeOn: html [
 	html mdlButton
 		rippleEffect;
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderIconButtonCodeOn: html [
 	"We could also use the #icon: method"
 	html mdlButton
@@ -176,21 +178,21 @@ MDLButtonsScreen >> renderIconButtonCodeOn: html [
 		with: [ html mdlIcon: 'mood' ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderIconColoredButtonCodeOn: html [
 	html mdlButton
 		primaryColor;
 		icon: 'mood'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderLabelIconButtonCodeOn: html [
 	"We could also use the #labelIcon and provide the icon ourself"
 
 	html mdlButton labelIcon: 'mood'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderMiniFabButtonCodeOn: html [
 	html mdlButton
 		fab;
@@ -198,7 +200,7 @@ MDLButtonsScreen >> renderMiniFabButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderMiniFabColoredButtonCodeOn: html [
 	html mdlButton
 		fab;
@@ -207,14 +209,14 @@ MDLButtonsScreen >> renderMiniFabColoredButtonCodeOn: html [
 		with: '+'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderRaisedButtonCodeOn: html [
 	html mdlButton
 		raised;
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderRaisedColoredAccentButtonCodeOn: html [
 	html mdlButton
 		raised;
@@ -222,7 +224,7 @@ MDLButtonsScreen >> renderRaisedColoredAccentButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderRaisedColoredAccentRippleEffectButtonCodeOn: html [
 	html mdlButton
 		raised;
@@ -231,7 +233,7 @@ MDLButtonsScreen >> renderRaisedColoredAccentRippleEffectButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderRaisedColoredButtonCodeOn: html [
 	html mdlButton
 		raised;
@@ -239,7 +241,7 @@ MDLButtonsScreen >> renderRaisedColoredButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderRaisedDisabledButtonCodeOn: html [
 	html mdlButton
 		raised;
@@ -247,7 +249,7 @@ MDLButtonsScreen >> renderRaisedDisabledButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLButtonsScreen >> renderRaisedRippleEffectButtonCodeOn: html [
 	html mdlButton
 		raised;
@@ -255,7 +257,7 @@ MDLButtonsScreen >> renderRaisedRippleEffectButtonCodeOn: html [
 		with: 'Button'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLButtonsScreen >> renderScreenContentOn: html [
 	self
 		render: self fabColoredButtons on: html;

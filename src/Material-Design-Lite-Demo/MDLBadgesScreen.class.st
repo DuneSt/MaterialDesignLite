@@ -2,22 +2,24 @@
 Small status descriptors for UI elements.
 "
 Class {
-	#name : #MDLBadgesScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLBadgesScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLBadgesScreen class >> icon [
 	^ 'compbadgesPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLBadgesScreen class >> title [
 	^ 'Badges'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLBadgesScreen >> iconBadges [
 	^ OrderedDictionary new
 		add: 'Number' -> #renderNumberBadgeOn:;
@@ -25,7 +27,7 @@ MDLBadgesScreen >> iconBadges [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLBadgesScreen >> noBackgroundBadges [
 	^ OrderedDictionary new
 		add: 'Number with no background' -> #renderNoBackgroundNumberBadgeOn:;
@@ -33,7 +35,7 @@ MDLBadgesScreen >> noBackgroundBadges [
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLBadgesScreen >> overlapedBadges [
 	^ OrderedDictionary new
 		add: 'Overlaped' -> #renderOverlapedBadgeOn:;
@@ -41,7 +43,7 @@ MDLBadgesScreen >> overlapedBadges [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderIconBadgeOn: html [
 	html mdlIconBadge
 		dataBadge: (Character codePoint: 9829) asString;
@@ -49,14 +51,14 @@ MDLBadgesScreen >> renderIconBadgeOn: html [
 		with: 'account_box'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderIconTextBadgeOn: html [
 	html mdlBadge
 		dataBadge: (Character codePoint: 9829) asString;
 		with: 'Mood'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderNoBackgroundIconBadgeOn: html [
 	html mdlIconBadge
 		dataBadge: (Character codePoint: 9829) asString;
@@ -65,7 +67,7 @@ MDLBadgesScreen >> renderNoBackgroundIconBadgeOn: html [
 		with: 'account_box'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderNoBackgroundNumberBadgeOn: html [
 	html mdlIconBadge
 		dataBadge: '1';
@@ -74,14 +76,14 @@ MDLBadgesScreen >> renderNoBackgroundNumberBadgeOn: html [
 		with: 'account_box'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderNotOverlapedBadgeOn: html [
 	html mdlBadge
 		dataBadge: '4';
 		with: 'Inbox'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderNumberBadgeOn: html [
 	html mdlIconBadge
 		dataBadge: '1';
@@ -89,14 +91,14 @@ MDLBadgesScreen >> renderNumberBadgeOn: html [
 		with: 'account_box'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderNumberTextBadgeOn: html [
 	html mdlBadge
 		dataBadge: '4';
 		with: 'Inbox'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLBadgesScreen >> renderOverlapedBadgeOn: html [
 	html mdlBadge
 		dataBadge: '4';
@@ -104,7 +106,7 @@ MDLBadgesScreen >> renderOverlapedBadgeOn: html [
 		with: 'Inbox'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLBadgesScreen >> renderScreenContentOn: html [
 	self
 		render: self iconBadges on: html;
@@ -113,7 +115,7 @@ MDLBadgesScreen >> renderScreenContentOn: html [
 		render: self noBackgroundBadges on: html
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLBadgesScreen >> textBadges [
 	^ OrderedDictionary new
 		add: 'Number' -> #renderNumberTextBadgeOn:;

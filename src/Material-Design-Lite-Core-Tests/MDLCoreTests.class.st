@@ -1,17 +1,18 @@
 Class {
-	#name : #MDLCoreTests,
-	#superclass : #TestCase,
-	#category : 'Material-Design-Lite-Core-Tests'
+	#name : 'MDLCoreTests',
+	#superclass : 'TestCase',
+	#category : 'Material-Design-Lite-Core-Tests',
+	#package : 'Material-Design-Lite-Core-Tests'
 }
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLCoreTests >> mockMethod [
 	"I am a Mock method for tests"
 	
 	^ 2 + 3
 ]
 
-{ #category : #helpers }
+{ #category : 'helpers' }
 MDLCoreTests >> testCodeOf [
 	self
 		assert: (self codeOf: #mockMethod)

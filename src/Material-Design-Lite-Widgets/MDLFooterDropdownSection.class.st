@@ -1,24 +1,26 @@
 Class {
-	#name : #MDLFooterDropdownSection,
-	#superclass : #MDLFooterAbstractSection,
+	#name : 'MDLFooterDropdownSection',
+	#superclass : 'MDLFooterAbstractSection',
 	#instVars : [
 		'linksLists'
 	],
-	#category : 'Material-Design-Lite-Widgets-Footer'
+	#category : 'Material-Design-Lite-Widgets-Footer',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Footer'
 }
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLFooterDropdownSection >> addLinksLists: lists [
 	linksLists addAll: lists
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLFooterDropdownSection >> initialize [
 	super initialize.
 	linksLists := OrderedCollection new
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLFooterDropdownSection >> renderSectionOn: html [
 	linksLists do: [ :aList | html mdlFooterDropdownSection: [ aList renderLinksWithHeaderOn: html ] ].
 ]

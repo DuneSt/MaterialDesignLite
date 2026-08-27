@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLTextFieldExpandableHolderTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Forms'
+	#name : 'MDLTextFieldExpandableHolderTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Forms',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Forms'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextFieldExpandableHolderTest >> testBareBrush [
 	self assert: [ :html | html mdlTextFieldExpandableHolder ] generates: '<div class="mdl-textfield__expandable-holder"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLTextFieldExpandableHolderTest >> testWithContent [
 	self assert: [ :html | html mdlTextFieldExpandableHolder: 'test' ] generates: '<div class="mdl-textfield__expandable-holder">test</div>'
 ]

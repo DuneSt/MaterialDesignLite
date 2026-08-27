@@ -6,21 +6,23 @@ I work by providing myself a #collection which just needs to be iterable (i.e. u
 I provide a nice API to add colum descriptions (see my 'adding' protocol).
 "
 Class {
-	#name : #MDLTableWidget,
-	#superclass : #WAComponent,
+	#name : 'MDLTableWidget',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'columnDescriptions',
 		'collection'
 	],
-	#category : #'Material-Design-Lite-Widgets-Table'
+	#category : 'Material-Design-Lite-Widgets-Table',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Table'
 }
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addAjaxButtonColumnNamed: aString iconName: iconName onClick: onClickBlock [
 	self addAjaxButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: nil
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addAjaxButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: tooltip [
 	self addColumn: (MDLAjaxButtonColumnDescription new
 							title: aString;
@@ -30,12 +32,12 @@ MDLTableWidget >> addAjaxButtonColumnNamed: aString iconName: iconName onClick: 
 							yourself)
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addAjaxButtonColumnWithIconName: iconName onClick: onClickBlock tooltip: tooltip [
 	self addAjaxButtonColumnNamed: '' iconName: iconName onClick: onClickBlock tooltip: tooltip
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClick: onClickBlock tooltip: tooltip [
 	self addColumn: (MDLButtonColumnDescription new
 							title: aString;
@@ -45,17 +47,17 @@ MDLTableWidget >> addButtonColumnNamed: aString iconName: iconName onClick: onCl
 							yourself)
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addButtonColumnWithIconName: iconName onClick: onClickBlock tooltip: tooltip [
 	self addButtonColumnNamed: '' iconName: iconName onClick: onClickBlock tooltip: tooltip
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addColumn: aColumnDescription [
 	columnDescriptions add: aColumnDescription
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addNumericColumnNamed: aString evaluated: aBlock [
 	self addColumn: (MDLNumericColumnDescription new
 							title: aString;
@@ -63,7 +65,7 @@ MDLTableWidget >> addNumericColumnNamed: aString evaluated: aBlock [
 							yourself)
 ]
 
-{ #category : #adding }
+{ #category : 'adding' }
 MDLTableWidget >> addStringColumnNamed: aString evaluated: aBlock [
 	self addColumn: (MDLStringColumnDescription new
 							title: aString;
@@ -71,29 +73,29 @@ MDLTableWidget >> addStringColumnNamed: aString evaluated: aBlock [
 							yourself)
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableWidget >> collection [
 	^ collection
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableWidget >> collection: anObject [
 	collection := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLTableWidget >> columnDescriptions [
 	^ columnDescriptions
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTableWidget >> initialize [
 	super initialize.
 	columnDescriptions := OrderedCollection new.
 	collection := #()
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTableWidget >> renderContentOn: html [
 	html mdlTable
 		class: 'mdl-table-widget';
@@ -102,7 +104,7 @@ MDLTableWidget >> renderContentOn: html [
 			self renderTableBodyOn: html ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTableWidget >> renderTableBodyOn: html [
 	html tableBody
 		class: 'mdl-table-widget__body';
@@ -113,7 +115,7 @@ MDLTableWidget >> renderTableBodyOn: html [
 					columnDescription render: row on: html ] ] ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLTableWidget >> renderTableHeadOn: html [
 	html tableHead
 		class: 'mdl-table-widget__head';

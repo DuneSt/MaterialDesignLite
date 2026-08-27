@@ -28,12 +28,14 @@ Example
 						with: 'View Updates' ] ]
 "
 Class {
-	#name : #MDLCardTitleText,
-	#superclass : #WAHeadingTag,
-	#category : #'Material-Design-Lite-Components-Cards'
+	#name : 'MDLCardTitleText',
+	#superclass : 'WAHeadingTag',
+	#category : 'Material-Design-Lite-Components-Cards',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Cards'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCardTitleText >> initialize [
 	super initialize.
 	self class: 'mdl-card__title-text'

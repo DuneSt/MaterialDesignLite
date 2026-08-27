@@ -10,24 +10,26 @@ Example
 	html mdlSpinner active singleColor
 "
 Class {
-	#name : #MDLSpinner,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Loading'
+	#name : 'MDLSpinner',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Loading',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Loading'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLSpinner >> active [
 	self class: 'is-active'
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSpinner >> initialize [
 	super 	initialize.
 	self class: 'mdl-spinner'.
 	self class: 'mdl-js-spinner'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLSpinner >> singleColor [
 	self class: 'mdl-spinner--single-color'
 ]

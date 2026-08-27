@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLSwitchTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Forms'
+	#name : 'MDLSwitchTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Forms',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Forms'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSwitchTest >> testBareBrush [
 	self assert: [ :html | html mdlSwitch ] generates: '<input class="mdl-switch__input" type="checkbox"/>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSwitchTest >> testWithContent [
 	"Not for this brush"
 ]

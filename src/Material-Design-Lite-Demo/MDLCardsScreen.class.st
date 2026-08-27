@@ -2,22 +2,24 @@
 Self-contained pieces of paper with data
 "
 Class {
-	#name : #MDLCardsScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLCardsScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardsScreen class >> icon [
 		^ 'compcardsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLCardsScreen class >> title [
 	^ 'Cards'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLCardsScreen >> imageCards [
 	^ OrderedDictionary new
 		add: 'Image' -> #renderImageCardOn:;
@@ -25,7 +27,7 @@ MDLCardsScreen >> imageCards [
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardsScreen >> renderDateCardOn: html [
 	html mdlCard
 		shadow: 2;
@@ -64,7 +66,7 @@ MDLCardsScreen >> renderDateCardOn: html [
 						with: 'event' ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardsScreen >> renderImageCardOn: html [
 	html mdlCard
 		shadow: 2;
@@ -81,7 +83,7 @@ MDLCardsScreen >> renderImageCardOn: html [
 						with: 'Image.jpg' ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLCardsScreen >> renderScreenContentOn: html [
 	self
 		render: self wideCards on: html;
@@ -89,7 +91,7 @@ MDLCardsScreen >> renderScreenContentOn: html [
 		render: self imageCards on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardsScreen >> renderSquareCardOn: html [
 	html mdlCard
 		shadow: 2;
@@ -112,7 +114,7 @@ MDLCardsScreen >> renderSquareCardOn: html [
 						with: 'View Updates' ] ]
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLCardsScreen >> renderWideCardOn: html [
 	html mdlCard
 		shadow: 2;
@@ -141,14 +143,14 @@ MDLCardsScreen >> renderWideCardOn: html [
 						with: [ html mdlIcon: 'share' ] ] ]
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLCardsScreen >> squareCards [
 	^ OrderedDictionary new
 		add: 'Square' -> #renderSquareCardOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLCardsScreen >> wideCards [
 	^ OrderedDictionary new
 		add: 'Wide' -> #renderWideCardOn:;

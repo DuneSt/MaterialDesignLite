@@ -16,12 +16,14 @@ Example
 				rows: 3 ]
 "
 Class {
-	#name : #MDLTextArea,
-	#superclass : #WATextAreaTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLTextArea',
+	#superclass : 'WATextAreaTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTextArea >> initialize [
 	super initialize.
 	self class: 'mdl-textfield__input'

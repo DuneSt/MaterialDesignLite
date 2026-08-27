@@ -34,12 +34,14 @@ Example
 						with: [ html mdlIcon: 'share' ] ] ]
 "
 Class {
-	#name : #MDLCardTitleContainer,
-	#superclass : #MDLCardInnerDiv,
-	#category : #'Material-Design-Lite-Components-Cards'
+	#name : 'MDLCardTitleContainer',
+	#superclass : 'MDLCardInnerDiv',
+	#category : 'Material-Design-Lite-Components-Cards',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Cards'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCardTitleContainer >> initialize [
 	super initialize.
 	self class: 'mdl-card__title'

@@ -2,12 +2,13 @@
 I'm a login widget render in a card widget
 "
 Class {
-	#name : #MDLLoginCardWidget,
-	#superclass : #MDLLoginWidget,
-	#category : 'Material-Design-Lite-Widgets'
+	#name : 'MDLLoginCardWidget',
+	#superclass : 'MDLLoginWidget',
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoginCardWidget >> renderContentOn: html [
 	html
 		render:

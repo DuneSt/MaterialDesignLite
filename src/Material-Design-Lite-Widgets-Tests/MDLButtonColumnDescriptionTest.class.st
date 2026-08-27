@@ -2,12 +2,14 @@
 A MDLButtonColumnDescriptionTest is a test class for testing the behavior of MDLButtonColumnDescription
 "
 Class {
-	#name : #MDLButtonColumnDescriptionTest,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-Table'
+	#name : 'MDLButtonColumnDescriptionTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-Table',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Table'
 }
 
-{ #category : #test }
+{ #category : 'test' }
 MDLButtonColumnDescriptionTest >> testRenderHeadingOn [
 	|columnDescription|
 	columnDescription := MDLButtonColumnDescription new
@@ -17,7 +19,7 @@ MDLButtonColumnDescriptionTest >> testRenderHeadingOn [
 	self assert: [ :html | columnDescription renderHeadingOn: html ] generates: '<th id="id1" class="mdl-table-widget__cell--button mdl-data-table__cell--non-numeric">callback</th>'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLButtonColumnDescriptionTest >> testRenderOn [
 	|columnDescription|
 	columnDescription := MDLButtonColumnDescription new
@@ -27,7 +29,7 @@ MDLButtonColumnDescriptionTest >> testRenderOn [
 	self assert: [ :html | columnDescription render: #useless on: html ] generates: '<td class="mdl-table-widget__cell--button"><a class="mdl-button mdl-js-button mdl-button--icon" id="id1" href="/?2"><i class="material-icons">delete</i></a></td>'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLButtonColumnDescriptionTest >> testRenderOnWithTooltip [
 	|columnDescription|
 	columnDescription := MDLButtonColumnDescription new

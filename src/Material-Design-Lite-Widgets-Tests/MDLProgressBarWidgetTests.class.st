@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLProgressBarWidgetTests,
-	#superclass : #SGTAbstractSeasideTestCase,
-	#category : #'Material-Design-Lite-Widgets-Tests-Loading'
+	#name : 'MDLProgressBarWidgetTests',
+	#superclass : 'SGTAbstractSeasideTestCase',
+	#category : 'Material-Design-Lite-Widgets-Tests-Loading',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Loading'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLProgressBarWidgetTests >> testHidden [
 	| bar |
 	bar := MDLProgressBarWidget new.
@@ -15,7 +17,7 @@ MDLProgressBarWidgetTests >> testHidden [
 	
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLProgressBarWidgetTests >> testRefreshTime [
 	| bar |
 	bar := MDLProgressBarWidget new.

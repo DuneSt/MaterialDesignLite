@@ -29,12 +29,14 @@ Example
 				with: 1000 ]
 "
 Class {
-	#name : #MDLSliderContainer,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLSliderContainer',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLSliderContainer >> initialize [
 	super initialize.
 	self class: #'mdl-slider-container'

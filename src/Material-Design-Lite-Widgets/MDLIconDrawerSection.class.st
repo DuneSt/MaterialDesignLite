@@ -1,16 +1,18 @@
 Class {
-	#name : #MDLIconDrawerSection,
-	#superclass : #MDLLinkingLayoutSection,
-	#category : 'Material-Design-Lite-Widgets-Header'
+	#name : 'MDLIconDrawerSection',
+	#superclass : 'MDLLinkingLayoutSection',
+	#category : 'Material-Design-Lite-Widgets-Header',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Header'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLIconDrawerSection >> links: someLinks [
 	"here links must be seaside components"
 	^ super links: someLinks 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 MDLIconDrawerSection >> renderContentOn: html [
 	html
 		mdlLayoutDrawer: [ 
@@ -20,7 +22,7 @@ MDLIconDrawerSection >> renderContentOn: html [
 			self renderLinksOn: html ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : 'as yet unclassified' }
 MDLIconDrawerSection >> renderLinksOn: html [
 	links do: [ :aLink | html render: aLink ]
 ]

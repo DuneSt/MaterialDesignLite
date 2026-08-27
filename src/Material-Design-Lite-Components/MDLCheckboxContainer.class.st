@@ -16,24 +16,26 @@ Example
 			html mdlCheckboxLabel: 'Checkbox' ]
 "
 Class {
-	#name : #MDLCheckboxContainer,
-	#superclass : #WALabelTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLCheckboxContainer',
+	#superclass : 'WALabelTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCheckboxContainer >> initialize [
 	super initialize.
 	self class: 'mdl-checkbox'.
 	self class: 'mdl-js-checkbox'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLCheckboxContainer >> rippleEffect [
 	self class: 'mdl-js-ripple-effect'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLCheckboxContainer >> rippleEffectIf: aBoolean [
 	aBoolean
 		ifTrue: [ self rippleEffect ]

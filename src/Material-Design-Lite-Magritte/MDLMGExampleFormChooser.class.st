@@ -1,14 +1,16 @@
 Class {
-	#name : #MDLMGExampleFormChooser,
-	#superclass : #GRObject,
+	#name : 'MDLMGExampleFormChooser',
+	#superclass : 'GRObject',
 	#instVars : [
 		'layoutStyle',
 		'validationMessageStyle'
 	],
-	#category : 'Material-Design-Lite-Magritte-Examples'
+	#category : 'Material-Design-Lite-Magritte-Examples',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Examples'
 }
 
-{ #category : #'magritte descriptions' }
+{ #category : 'magritte descriptions' }
 MDLMGExampleFormChooser >> descriptionContainer [
 	<magritteContainer>
 	^ super descriptionContainer
@@ -16,37 +18,37 @@ MDLMGExampleFormChooser >> descriptionContainer [
 		yourself
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> isLayoutStyleFormInline [
 	^ self layoutStyle = 'form-inline'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> isValidationMessageStyleBoth [
 	^ self validationMessageStyle = 'Inline and top validation messages'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> isValidationMessageStyleInline [
 	^ self isValidationMessageStyleTop not or: [ self isValidationMessageStyleBoth ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> isValidationMessageStyleTop [
 	^ self validationMessageStyle = 'top validation messages' or: [ self isValidationMessageStyleBoth ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> layoutStyle [
 	^ layoutStyle ifNil: [ layoutStyle := self layoutStyles first ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> layoutStyle: anObject [
 	layoutStyle := anObject
 ]
 
-{ #category : #'magritte descriptions' }
+{ #category : 'magritte descriptions' }
 MDLMGExampleFormChooser >> layoutStyleDescription [
 	<magritteDescription>
 	^ MASingleOptionDescription new 
@@ -58,27 +60,27 @@ MDLMGExampleFormChooser >> layoutStyleDescription [
 		yourself
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMGExampleFormChooser >> layoutStyles [
 	^ Array with: 'form-vertical' with: 'form-inline' with: 'form-search' with: 'form-horizontal'
 ]
 
-{ #category : #printing }
+{ #category : 'printing' }
 MDLMGExampleFormChooser >> optionsSelectedString [
 	^ layoutStyle, ', ', validationMessageStyle
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> validationMessageStyle [
 	^ validationMessageStyle ifNil: [ validationMessageStyle := self validationMessageStyles first ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLMGExampleFormChooser >> validationMessageStyle: anObject [
 	validationMessageStyle := anObject
 ]
 
-{ #category : #'magritte descriptions' }
+{ #category : 'magritte descriptions' }
 MDLMGExampleFormChooser >> validationMessageStyleDescription [
 	<magritteDescription>
 	^ MASingleOptionDescription new 
@@ -90,7 +92,7 @@ MDLMGExampleFormChooser >> validationMessageStyleDescription [
 		yourself
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLMGExampleFormChooser >> validationMessageStyles [
 	^ Array with: 'inline validation messages' with: 'top validation messages' with: 'Inline and top validation messages'
 ]

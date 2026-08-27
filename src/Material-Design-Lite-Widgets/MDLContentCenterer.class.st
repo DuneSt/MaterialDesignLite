@@ -2,48 +2,49 @@
 Just a widget that allow to center a component and specify its size
 "
 Class {
-	#name : #MDLContentCenterer,
-	#superclass : #WAComponent,
+	#name : 'MDLContentCenterer',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'component',
 		'desktopSize',
 		'tabletSize',
 		'phoneSize'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> component [
 	^ component
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> component: anObject [
 	component := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> desktopSize [
 	^ desktopSize
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> desktopSize: anObject [
 	desktopSize := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> phoneSize [
 	^ phoneSize
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> phoneSize: anObject [
 	phoneSize := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLContentCenterer >> renderContentOn: html [
 	html mdlGrid: [ 
 		html mdlLayoutSpacer.
@@ -52,19 +53,19 @@ MDLContentCenterer >> renderContentOn: html [
 	super renderContentOn: html
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> size: anObject [
 	self desktopSize: anObject.
 	self phoneSize: anObject.
 	self tabletSize: anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> tabletSize [
 	^ tabletSize
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLContentCenterer >> tabletSize: anObject [
 	tabletSize := anObject
 ]

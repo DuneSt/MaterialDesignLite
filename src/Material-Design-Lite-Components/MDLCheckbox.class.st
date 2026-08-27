@@ -16,12 +16,14 @@ Example
 			html mdlCheckboxLabel: 'Checkbox' ]
 "
 Class {
-	#name : #MDLCheckbox,
-	#superclass : #WACheckboxTag,
-	#category : #'Material-Design-Lite-Components-Forms'
+	#name : 'MDLCheckbox',
+	#superclass : 'WACheckboxTag',
+	#category : 'Material-Design-Lite-Components-Forms',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Forms'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLCheckbox >> initialize [
 	super initialize.
 	self class: 'mdl-checkbox__input'

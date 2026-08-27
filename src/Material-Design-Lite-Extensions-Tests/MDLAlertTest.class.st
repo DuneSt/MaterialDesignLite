@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLAlertTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Extensions-Tests-Alerts'
+	#name : 'MDLAlertTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Extensions-Tests-Alerts',
+	#package : 'Material-Design-Lite-Extensions-Tests',
+	#tag : 'Alerts'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLAlertTest >> testBareBrush [
 	self assert: [ :html | html mdlAlert ] generates: '<div class="mdl-alert"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLAlertTest >> testBeDanger [
 	self
 		assert: [ :html | 
@@ -19,7 +21,7 @@ MDLAlertTest >> testBeDanger [
 		generates: '<div class="mdl-alert mdl-alert__danger">Test</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLAlertTest >> testBeDefault [
 	self
 		assert: [ :html | 
@@ -29,7 +31,7 @@ MDLAlertTest >> testBeDefault [
 		generates: '<div class="mdl-alert mdl-alert__default">Test</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLAlertTest >> testBeInfo [
 	self
 		assert: [ :html | 
@@ -39,7 +41,7 @@ MDLAlertTest >> testBeInfo [
 		generates: '<div class="mdl-alert mdl-alert__info">Test</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLAlertTest >> testBeSuccess [
 	self
 		assert: [ :html | 
@@ -49,7 +51,7 @@ MDLAlertTest >> testBeSuccess [
 		generates: '<div class="mdl-alert mdl-alert__success">Test</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLAlertTest >> testBeWarning [
 	self
 		assert: [ :html | 
@@ -59,7 +61,7 @@ MDLAlertTest >> testBeWarning [
 		generates: '<div class="mdl-alert mdl-alert__warning">Test</div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLAlertTest >> testWithContent [
 	self assert: [ :html | html mdlAlert: 'Test' ] generates: '<div class="mdl-alert">Test</div>'
 ]

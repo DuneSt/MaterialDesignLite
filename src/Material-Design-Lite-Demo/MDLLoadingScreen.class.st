@@ -2,43 +2,45 @@
 Indicate loading and progress states.
 "
 Class {
-	#name : #MDLLoadingScreen,
-	#superclass : #MDLComponentDemo,
-	#category : #'Material-Design-Lite-Demo-Components'
+	#name : 'MDLLoadingScreen',
+	#superclass : 'MDLComponentDemo',
+	#category : 'Material-Design-Lite-Demo-Components',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Components'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoadingScreen class >> icon [
 	^ 'comploadingPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoadingScreen class >> title [
 	^ 'Loading'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLoadingScreen >> bufferingProgressBar [
 	^ OrderedDictionary new
 		add: 'Buffering' -> #renderBufferingProgressBarOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLoadingScreen >> indeterminateProgressBar [
 	^ OrderedDictionary new
 		add: 'Indeterminate' -> #renderIndeterminateProgressBarOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLoadingScreen >> progressBar [
 	^ OrderedDictionary new
 		add: 'Default' -> #renderProgressBarOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLoadingScreen >> renderBufferingProgressBarOn: html [
 	html mdlProgressBar id: 'bufferingProgressBar'.
 	html
@@ -49,23 +51,23 @@ MDLLoadingScreen >> renderBufferingProgressBarOn: html [
 });'
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLoadingScreen >> renderDefaultSpinnerOn: html [
 	html mdlSpinner active
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLoadingScreen >> renderIndeterminateProgressBarOn: html [
 	html mdlProgressBar indeterminate
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLoadingScreen >> renderProgressBarOn: html [
 	html mdlProgressBar id: 'progressBar'.
 	html script: 'setInterval(function(){document.querySelector(''#progressBar'').MaterialProgress.setProgress(100/60* (new Date()).getSeconds());}, 1000);' js
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLoadingScreen >> renderScreenContentOn: html [
 	self renderTocOn: html.
 	html heading level5
@@ -83,17 +85,17 @@ MDLLoadingScreen >> renderScreenContentOn: html [
 	self render: self spinner on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLLoadingScreen >> renderSingleColorSpinnerOn: html [
 	html mdlSpinner active singleColor
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLoadingScreen >> sections [
 	^ OrderedDictionary with: '#progress-bar' -> 'Progress bar' with: '#spinner' -> 'Spinner'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLLoadingScreen >> spinner [
 	^ OrderedDictionary new
 		add: 'Default' -> #renderDefaultSpinnerOn:;

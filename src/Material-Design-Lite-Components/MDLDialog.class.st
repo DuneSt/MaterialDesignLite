@@ -20,31 +20,33 @@ Example
 			html mdlDialogContent: [ html paragraph: 'You managed to open the dialog' ] ]
 "
 Class {
-	#name : #MDLDialog,
-	#superclass : #WATagBrush,
-	#category : #'Material-Design-Lite-Components-Dialog'
+	#name : 'MDLDialog',
+	#superclass : 'WATagBrush',
+	#category : 'Material-Design-Lite-Components-Dialog',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Dialog'
 }
 
-{ #category : #'javascript generation' }
+{ #category : 'javascript generation' }
 MDLDialog >> closeButtonId: id [
    self id ifNil: [ self id: id, '-dialog' ].
    self attributeAt: 'data-closebtnid' put: id. 
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLDialog >> initialize [
 	super initialize.
 	self class: 'mdl-dialog'.
 ]
 
-{ #category : #'javascript generation' }
+{ #category : 'javascript generation' }
 MDLDialog >> openButtonId: id [
 	self id ifNil: [ self id: id , '-dialog' ].
 	self attributeAt: 'data-openbtnid' put: id.
 	self script: ('newDialog("' , self id , '")') js
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDialog >> tag [
 	^ 'dialog'
 ]

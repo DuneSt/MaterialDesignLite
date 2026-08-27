@@ -2,22 +2,24 @@
 A MDLCardInnerDivTest is a test class for testing the behavior of MDLCardInnerDiv
 "
 Class {
-	#name : #MDLCardInnerDivTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Card'
+	#name : 'MDLCardInnerDivTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Card',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Card'
 }
 
-{ #category : #testing }
+{ #category : 'testing' }
 MDLCardInnerDivTest class >> isAbstract [
 	^ self = MDLCardInnerDivTest
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardInnerDivTest >> testBorder [
 	self subclassResponsibility
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLCardInnerDivTest >> testExpand [
 	self subclassResponsibility
 ]

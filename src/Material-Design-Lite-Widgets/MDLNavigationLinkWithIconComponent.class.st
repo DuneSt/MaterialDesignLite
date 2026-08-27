@@ -1,46 +1,47 @@
 Class {
-	#name : #MDLNavigationLinkWithIconComponent,
-	#superclass : #WAComponent,
+	#name : 'MDLNavigationLinkWithIconComponent',
+	#superclass : 'WAComponent',
 	#instVars : [
 		'icon',
 		'label',
 		'callback',
 		'iconUrl'
 	],
-	#category : 'Material-Design-Lite-Widgets'
+	#category : 'Material-Design-Lite-Widgets',
+	#package : 'Material-Design-Lite-Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNavigationLinkWithIconComponent >> callback [
 	^ callback
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNavigationLinkWithIconComponent >> callback: anObject [
 	callback := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNavigationLinkWithIconComponent >> icon [
 	^ icon
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNavigationLinkWithIconComponent >> iconUrl: anObject [
 	iconUrl := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNavigationLinkWithIconComponent >> label [
 	^ label
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNavigationLinkWithIconComponent >> label: anObject [
 	label := anObject
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNavigationLinkWithIconComponent >> renderContentOn: html [
 	html mdlNavigationLink
 		style: 'margin: 8px 16px';

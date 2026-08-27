@@ -1,13 +1,15 @@
 Class {
-	#name : #MDLAbstractHeaderSection,
-	#superclass : #MDLLinkingLayoutSection,
+	#name : 'MDLAbstractHeaderSection',
+	#superclass : 'MDLLinkingLayoutSection',
 	#instVars : [
 		'brush'
 	],
-	#category : 'Material-Design-Lite-Widgets-Header'
+	#category : 'Material-Design-Lite-Widgets-Header',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Header'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLAbstractHeaderSection >> initialize [
 	super initialize.
 	brush := MDLLayoutHeader new

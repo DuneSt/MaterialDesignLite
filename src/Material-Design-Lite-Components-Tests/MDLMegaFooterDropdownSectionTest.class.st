@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMegaFooterDropdownSectionTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Footer'
+	#name : 'MDLMegaFooterDropdownSectionTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Footer',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Footer'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterDropdownSectionTest >> testBareBrush [
 	self assert: [ :html | html mdlFooterDropdownSection ] generates: '<div class="mdl-mega-footer__drop-down-section"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterDropdownSectionTest >> testWithContent [
 	self assert: [ :html | html mdlFooterDropdownSection: 'Test' ] generates: '<div class="mdl-mega-footer__drop-down-section">Test</div>'
 ]

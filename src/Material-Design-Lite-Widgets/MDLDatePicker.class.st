@@ -2,17 +2,19 @@
 I am a date picker embebded in a MDLCard for a better display.
 "
 Class {
-	#name : #MDLDatePicker,
-	#superclass : #MDLFlatDatePicker,
-	#category : #'Material-Design-Lite-Widgets-Calendar'
+	#name : 'MDLDatePicker',
+	#superclass : 'MDLFlatDatePicker',
+	#category : 'Material-Design-Lite-Widgets-Calendar',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Calendar'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLDatePicker >> containerClass [
 	^ 'mdl-calendar-card'
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLDatePicker >> renderCalendarOn: html [
 	html
 		render:

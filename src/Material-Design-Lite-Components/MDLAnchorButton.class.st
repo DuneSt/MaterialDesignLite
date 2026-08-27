@@ -16,14 +16,16 @@ Example
  
 "
 Class {
-	#name : #MDLAnchorButton,
-	#superclass : #WAAnchorTag,
+	#name : 'MDLAnchorButton',
+	#superclass : 'WAAnchorTag',
 	#traits : 'TMDLButton',
 	#classTraits : 'TMDLButton classTrait',
-	#category : #'Material-Design-Lite-Components-Buttons'
+	#category : 'Material-Design-Lite-Components-Buttons',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Buttons'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLAnchorButton >> initialize [
 	super initialize.
 	self class: 'mdl-button'.

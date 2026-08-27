@@ -2,21 +2,23 @@
 A MDLTableWidgetTest is a test class for testing the behavior of MDLTableWidget
 "
 Class {
-	#name : #MDLTableWidgetTest,
-	#superclass : #SGTAbstractSeasideTestCase,
+	#name : 'MDLTableWidgetTest',
+	#superclass : 'SGTAbstractSeasideTestCase',
 	#instVars : [
 		'table'
 	],
-	#category : #'Material-Design-Lite-Widgets-Tests-Table'
+	#category : 'Material-Design-Lite-Widgets-Tests-Table',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Table'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 MDLTableWidgetTest >> setUp [
 	super setUp.
 	table := MDLTableWidget new
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddAjaxButtonColumnNamedIconNameOnClick [
 	| onClickBlock lastColumnDescription |
 	onClickBlock := [ :html :rowObject | html jQuery noop ].
@@ -30,7 +32,7 @@ MDLTableWidgetTest >> testAddAjaxButtonColumnNamedIconNameOnClick [
 	self assert: lastColumnDescription tooltip isNil
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddAjaxButtonColumnNamedIconNameOnClickTooltip [
 	| onClickBlock lastColumnDescription |
 	onClickBlock := [ :html :rowObject | html jQuery noop ].
@@ -44,7 +46,7 @@ MDLTableWidgetTest >> testAddAjaxButtonColumnNamedIconNameOnClickTooltip [
 	self assert: lastColumnDescription tooltip equals: 'Example tooltip.'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddAjaxButtonColumnWithIconNameOnClickTooltip [
 	| onClickBlock lastColumnDescription |
 	onClickBlock := [ :html :rowObject | html jQuery noop ].
@@ -58,7 +60,7 @@ MDLTableWidgetTest >> testAddAjaxButtonColumnWithIconNameOnClickTooltip [
 	self assert: lastColumnDescription tooltip equals: 'Example tooltip.'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddButtonColumnNamedIconNameOnClickTooltip [
 	| onClickBlock lastColumnDescription |
 	onClickBlock := [  ].
@@ -72,7 +74,7 @@ MDLTableWidgetTest >> testAddButtonColumnNamedIconNameOnClickTooltip [
 	self assert: lastColumnDescription tooltip equals: 'Example tooltip.'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddButtonColumnWithIconNameOnClickTooltip [
 	| onClickBlock lastColumnDescription |
 	onClickBlock := [  ].
@@ -86,7 +88,7 @@ MDLTableWidgetTest >> testAddButtonColumnWithIconNameOnClickTooltip [
 	self assert: lastColumnDescription tooltip equals: 'Example tooltip.'
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddColumn [
 	| column other |
 	self assert: table columnDescriptions isEmpty.
@@ -113,7 +115,7 @@ MDLTableWidgetTest >> testAddColumn [
 	self assert: table columnDescriptions last == other.
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddNumericColumnNamedEvaluated [
 	| evaluationBlock lastColumnDescription |
 	evaluationBlock := [ :x | x asInteger ].
@@ -125,7 +127,7 @@ MDLTableWidgetTest >> testAddNumericColumnNamedEvaluated [
 	self assert: lastColumnDescription evaluation equals: evaluationBlock.
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testAddStringColumnNamedEvaluated [
 	| evaluationBlock lastColumnDescription |
 	evaluationBlock := [ :x | x asString ].
@@ -137,7 +139,7 @@ MDLTableWidgetTest >> testAddStringColumnNamedEvaluated [
 	self assert: lastColumnDescription evaluation equals: evaluationBlock.
 ]
 
-{ #category : #test }
+{ #category : 'test' }
 MDLTableWidgetTest >> testRenderContentOn [
 	self assert: [ :html | html render: table ] generatedIncludes: 'class="mdl-data-table mdl-js-data-table mdl-table-widget"'
 ]

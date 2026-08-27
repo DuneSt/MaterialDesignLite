@@ -2,22 +2,24 @@
 A MDLExpansionPanelHeaderTest is a test class for testing the behavior of MDLExpansionPanelHeader
 "
 Class {
-	#name : #MDLExpansionPanelHeaderTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-ExpansionPanels'
+	#name : 'MDLExpansionPanelHeaderTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-ExpansionPanels',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'ExpansionPanels'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelHeaderTest >> testBareBrush [
 	self assert: [ :html | html mdlExpansionPanelHeader ] generates: '<div class="mdl-expansion-panel__header"></div>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelHeaderTest >> testToggleExpansionOnClick [
 	self assert: [ :html | html mdlExpansionPanelHeader toggleExpansionOnClick ] generatedIncludes: 'onclick="this'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLExpansionPanelHeaderTest >> testWithContent [
 	self assert: [ :html | 
 		html mdlExpansionPanelHeader: [ 

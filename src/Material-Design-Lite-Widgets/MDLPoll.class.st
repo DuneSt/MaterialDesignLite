@@ -4,58 +4,60 @@ I am the model for MDLPollWidget.
 I just store the number of positive and negative count.
 "
 Class {
-	#name : #MDLPoll,
-	#superclass : #GRObject,
+	#name : 'MDLPoll',
+	#superclass : 'GRObject',
 	#instVars : [
 		'positiveCount',
 		'negativeCount'
 	],
-	#category : #'Material-Design-Lite-Widgets-Poll'
+	#category : 'Material-Design-Lite-Widgets-Poll',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Poll'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> decreaseNegativeCount [
 	negativeCount := negativeCount - 1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> decreasePositiveCount [
 	positiveCount := positiveCount - 1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> increaseNegativeCount [
 	negativeCount := negativeCount + 1
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> increasePositiveCount [
 	positiveCount := positiveCount + 1
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLPoll >> initialize [
 	super initialize.
 	positiveCount := 0.
 	negativeCount := 0
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> negativeCount [
 	^ negativeCount
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> negativeCount: anObject [
 	negativeCount := anObject
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> positiveCount [
 	^ positiveCount
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLPoll >> positiveCount: anObject [
 	positiveCount := anObject
 ]

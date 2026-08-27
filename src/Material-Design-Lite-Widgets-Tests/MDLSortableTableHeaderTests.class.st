@@ -1,19 +1,21 @@
 Class {
-	#name : #MDLSortableTableHeaderTests,
-	#superclass : #TestCase,
+	#name : 'MDLSortableTableHeaderTests',
+	#superclass : 'TestCase',
 	#instVars : [
 		'header'
 	],
-	#category : 'Material-Design-Lite-Widgets-Tests-Table'
+	#category : 'Material-Design-Lite-Widgets-Tests-Table',
+	#package : 'Material-Design-Lite-Widgets-Tests',
+	#tag : 'Table'
 }
 
-{ #category : #running }
+{ #category : 'running' }
 MDLSortableTableHeaderTests >> setUp [
 	super setUp.
 	header := MDLSortableTableHeader for: #('test' 'material' 'design' 'lite')
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSortableTableHeaderTests >> testGoToNextState [
 	self assert: header currentState class equals: MDLSortableTableHeaderElementUnsorted.
 	header goToNextState.
@@ -25,12 +27,12 @@ MDLSortableTableHeaderTests >> testGoToNextState [
 	
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSortableTableHeaderTests >> testIsInitializedWithUnsortedState [
 	self assert: MDLSortableTableHeader new currentState class equals: MDLSortableTableHeaderElementUnsorted
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLSortableTableHeaderTests >> testUnsort [
 	header goToNextState.
 	self flag: #clean. "#deny:equals: was introduced in P6. When P5 support will be dorpped, uses #deny:equals:."

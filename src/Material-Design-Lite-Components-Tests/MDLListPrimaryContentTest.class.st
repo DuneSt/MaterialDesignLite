@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLListPrimaryContentTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-List'
+	#name : 'MDLListPrimaryContentTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-List',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'List'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListPrimaryContentTest >> testBareBrush [
 	self assert: [ :html | html mdlListPrimaryContent ] generates: '<span class="mdl-list__item-primary-content"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListPrimaryContentTest >> testWithContent [
 	self assert: [ :html | html mdlListPrimaryContent: 'test' ] generates: '<span class="mdl-list__item-primary-content">test</span>'
 ]

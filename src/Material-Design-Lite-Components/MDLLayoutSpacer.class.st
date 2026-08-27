@@ -23,12 +23,14 @@ Example
 			html mdlLayoutContent: [  ] ]
 "
 Class {
-	#name : #MDLLayoutSpacer,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Layout'
+	#name : 'MDLLayoutSpacer',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Layout',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Layout'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLayoutSpacer >> initialize [
 	super initialize.
 	self class: 'mdl-layout-spacer'

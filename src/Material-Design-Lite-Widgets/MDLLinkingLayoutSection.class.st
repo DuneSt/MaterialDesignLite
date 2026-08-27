@@ -1,30 +1,32 @@
 Class {
-	#name : #MDLLinkingLayoutSection,
-	#superclass : #MDLAbstractLayoutSection,
+	#name : 'MDLLinkingLayoutSection',
+	#superclass : 'MDLAbstractLayoutSection',
 	#instVars : [
 		'links'
 	],
-	#category : 'Material-Design-Lite-Widgets-Header'
+	#category : 'Material-Design-Lite-Widgets-Header',
+	#package : 'Material-Design-Lite-Widgets',
+	#tag : 'Header'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLLinkingLayoutSection >> initialize [
 	super initialize.
 	links := OrderedCollection new.
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLinkingLayoutSection >> links [
 	^ links
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLLinkingLayoutSection >> links: anOrderedCollection [
 	"This should be a collection of dictionaries Text -> callback"
 	links := anOrderedCollection
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLLinkingLayoutSection >> renderLinksOn: html [
 	self links
 		do: [ :aDictionary | 

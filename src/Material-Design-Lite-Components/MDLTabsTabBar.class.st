@@ -29,23 +29,25 @@ Example
 						with: [ html unorderedList: [ members do: [ :member | html listItem: member ] ] ] ] ]
 "
 Class {
-	#name : #MDLTabsTabBar,
-	#superclass : #MDLDivTag,
-	#category : #'Material-Design-Lite-Components-Nav'
+	#name : 'MDLTabsTabBar',
+	#superclass : 'MDLDivTag',
+	#category : 'Material-Design-Lite-Components-Nav',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Nav'
 }
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 MDLTabsTabBar >> initialize [
 	super initialize.
 	self class: 'mdl-tabs__tab-bar'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTabsTabBar >> rippleEffect [
 	self class: 'mdl-js-ripple-effect'
 ]
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTabsTabBar >> rippleEffectIf: aBoolean [
 	aBoolean ifTrue: [ self rippleEffect ]
 ]

@@ -5,22 +5,24 @@ Description
 Page containing all the MDL for seaside extensions examples.
 "
 Class {
-	#name : #MDLExtensionsDemoPage,
-	#superclass : #MDLDemoPageWithList,
-	#category : #'Material-Design-Lite-Demo-Core'
+	#name : 'MDLExtensionsDemoPage',
+	#superclass : 'MDLDemoPageWithList',
+	#category : 'Material-Design-Lite-Demo-Core',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Core'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExtensionsDemoPage class >> pageName [
 	^ 'Extensions'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExtensionsDemoPage class >> priority [
 	^ 60
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLExtensionsDemoPage >> renderPageDescriptionOn: html [
 	html
 		paragraph: [ html text: 'The last part of Material Design Lite for Seaside is the extensions. Extensions are brushes, components or even Traits helping with the development of web applications.'.
@@ -29,7 +31,7 @@ MDLExtensionsDemoPage >> renderPageDescriptionOn: html [
 	html paragraph: 'They can be, for example, Traits to simplify the use of dialogs, or brushes to render a lateral resizable panel...'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLExtensionsDemoPage >> screens [
 	^ MDLExtensionsDemo subclasses
 ]

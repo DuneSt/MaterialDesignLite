@@ -1,10 +1,12 @@
 Class {
-	#name : #MDLMACheckboxGroupComponent,
-	#superclass : #MACheckboxGroupComponent,
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#name : 'MDLMACheckboxGroupComponent',
+	#superclass : 'MACheckboxGroupComponent',
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMACheckboxGroupComponent >> renderEditorOn: html [
 	html hiddenInput callback: [ :value | self clear ].
 	self

@@ -2,46 +2,48 @@
 A smart list that will dynamically load in Ajax
 "
 Class {
-	#name : #MDLNestedListScreen,
-	#superclass : #MDLWidgetDemo,
+	#name : 'MDLNestedListScreen',
+	#superclass : 'MDLWidgetDemo',
 	#instVars : [
 		'selectedElement'
 	],
-	#category : #'Material-Design-Lite-Demo-Widgets'
+	#category : 'Material-Design-Lite-Demo-Widgets',
+	#package : 'Material-Design-Lite-Demo',
+	#tag : 'Widgets'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListScreen class >> icon [
 	^ 'complistsPng'
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 MDLNestedListScreen class >> title [
 	^ 'Nested list'
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLNestedListScreen >> ajaxActionList [
 	^ OrderedDictionary new
 		add: 'Ajax action list' -> #renderAjaxActionListOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLNestedListScreen >> iconsList [
 	^ OrderedDictionary new
 		add: 'List with icons' -> #renderListWithIconsOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLNestedListScreen >> nestedList [
 	^ OrderedDictionary new
 		add: 'Nested List' -> #renderNestedListOn:;
 		yourself
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLNestedListScreen >> renderAjaxActionListOn: html [
 	| divId divId2 |
 	divId := html nextId.
@@ -67,7 +69,7 @@ MDLNestedListScreen >> renderAjaxActionListOn: html [
 	html div mdlTextColorAccent; id: divId2
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLNestedListScreen >> renderListWithIconsOn: html [
 	html div
 		style: 'height: 400px; width: 400px;';
@@ -92,7 +94,7 @@ MDLNestedListScreen >> renderListWithIconsOn: html [
 	
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLNestedListScreen >> renderListWithSortedChildrenOn: html [
 	html div
 		style: 'height: 400px; width: 400px;';
@@ -109,7 +111,7 @@ MDLNestedListScreen >> renderListWithSortedChildrenOn: html [
 				yourself)
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLNestedListScreen >> renderNestedListOn: html [
 	html div
 		mdlTextColorPrimary;
@@ -131,7 +133,7 @@ MDLNestedListScreen >> renderNestedListOn: html [
 				yourself)
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLNestedListScreen >> renderScreenContentOn: html [
 	self
 		render: self nestedList on: html;
@@ -141,7 +143,7 @@ MDLNestedListScreen >> renderScreenContentOn: html [
 		render: self sortedChildrenList on: html
 ]
 
-{ #category : #demos }
+{ #category : 'demos' }
 MDLNestedListScreen >> renderSearchableListOn: html [
 	html div
 		style: 'height: 400px; width: 400px;';
@@ -160,14 +162,14 @@ MDLNestedListScreen >> renderSearchableListOn: html [
 				yourself)
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLNestedListScreen >> searchableList [
 	^ OrderedDictionary new
 		add: 'Searchable list' -> #renderSearchableListOn:;
 		yourself
 ]
 
-{ #category : #sections }
+{ #category : 'sections' }
 MDLNestedListScreen >> sortedChildrenList [
 	^ OrderedDictionary new
 		add: 'List with sorted children' -> #renderListWithSortedChildrenOn:;

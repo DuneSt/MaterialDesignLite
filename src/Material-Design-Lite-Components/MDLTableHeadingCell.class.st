@@ -25,12 +25,14 @@ Example
 									members do: [ :data | html tableData: data ] ] ] ] ]
 "
 Class {
-	#name : #MDLTableHeadingCell,
-	#superclass : #WATableHeadingTag,
-	#category : #'Material-Design-Lite-Components-Tables'
+	#name : 'MDLTableHeadingCell',
+	#superclass : 'WATableHeadingTag',
+	#category : 'Material-Design-Lite-Components-Tables',
+	#package : 'Material-Design-Lite-Components',
+	#tag : 'Tables'
 }
 
-{ #category : #options }
+{ #category : 'options' }
 MDLTableHeadingCell >> nonNumerical [
 	self class: 'mdl-data-table__cell--non-numeric'
 ]

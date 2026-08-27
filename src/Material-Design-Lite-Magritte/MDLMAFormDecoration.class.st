@@ -2,15 +2,17 @@
 Form decoration for a description component
 "
 Class {
-	#name : #MDLMAFormDecoration,
-	#superclass : #MAFormDecoration,
+	#name : 'MDLMAFormDecoration',
+	#superclass : 'MAFormDecoration',
 	#instVars : [
 		'title'
 	],
-	#category : 'Material-Design-Lite-Magritte-Core'
+	#category : 'Material-Design-Lite-Magritte-Core',
+	#package : 'Material-Design-Lite-Magritte',
+	#tag : 'Core'
 }
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMAFormDecoration >> renderButtonsOn: html [
 	html div
 		class: 'mdl-typography--text-right';
@@ -29,7 +31,7 @@ MDLMAFormDecoration >> renderButtonsOn: html [
 								text: each value ] ]
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 MDLMAFormDecoration >> renderContentOn: html [
 	html form
 		class: 'magritte';

@@ -1,0 +1,40 @@
+# Used to save an artifact of the releases. Used to deploy a demo on Cyril's server
+name: Release
+
+on: [release]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_NAME: MaterialDesignLite-${{ matrix.smalltalk }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    strategy:
+      fail-fast: false
+      matrix:
+        smalltalk: [ Pharo32-6.1, Pharo32-7.0, Pharo32-8.0, Pharo64-9.0, Pharo64-10, Pharo64-11, Pharo64-12, Pharo64-13, Pharo64-14 ] # Pharo 6, 7, 8 64b currently fails in smalltalkCI :(
+    name: ${{ matrix.smalltalk }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: hpi-swa/setup-smalltalkCI@v1
+        with:
+          smalltalk-image: ${{ matrix.smalltalk }}
+      - run: smalltalkci -s ${{ matrix.smalltalk }}
+        shell: bash
+        timeout-minutes: 15
+           
+      # Here we zip the result of the build to be able to keep the artefacts
+      - name: package
+        run: |
+          mv /home/runner/.smalltalkCI/_builds/* .
+          mv TravisCI.image $PROJECT_NAME.image
+          mv TravisCI.changes $PROJECT_NAME.changes
+          echo ${${{ matrix.smalltalk }}} | sed -e 's/.*\-//g ; s/\..*//g ; s/$/0/' > pharo.version
+          zip -r $PROJECT_NAME.zip $PROJECT_NAME.image $PROJECT_NAME.changes *.sources pharo.version
+          ls
+        
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.PROJECT_NAME }}.zip

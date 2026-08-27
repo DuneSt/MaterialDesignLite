@@ -14,29 +14,31 @@ To use it you need to:
 - Call #renderRightPanelOn: during the rendering phase of the component.
 "
 Trait {
-	#name : #TRightTabsPanelBrowser,
-	#category : 'Material-Design-Lite-Extensions-Panels'
+	#name : 'TRightTabsPanelBrowser',
+	#category : 'Material-Design-Lite-Extensions-Panels',
+	#package : 'Material-Design-Lite-Extensions',
+	#tag : 'Panels'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TRightTabsPanelBrowser >> browserClass [
 	"I should return an html class specific to the browser to prefix generated ids and classes for the HTML."
 
 	^ self explicitRequirement
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 TRightTabsPanelBrowser >> defaultToolbar [
 	^ self explicitRequirement
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 TRightTabsPanelBrowser >> initializeRightPanel [
 	self setDefaultRightPanel.
 	self toolbar: self defaultToolbar
 ]
 
-{ #category : #rendering }
+{ #category : 'rendering' }
 TRightTabsPanelBrowser >> renderRightPanelOn: html [
 	html render: self toolbar.
 	html div
@@ -48,29 +50,29 @@ TRightTabsPanelBrowser >> renderRightPanelOn: html [
 			html render: self rightPanel ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TRightTabsPanelBrowser >> rightPanel [
 	^ self explicitRequirement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TRightTabsPanelBrowser >> rightPanel: aComponent [
 	self explicitRequirement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TRightTabsPanelBrowser >> rightPanelId [
 	"I should return the id of the right panel of the browser."
 
 	^ self browserClass , '-right-panel'
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 TRightTabsPanelBrowser >> setDefaultRightPanel [
 	self explicitRequirement
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 TRightTabsPanelBrowser >> switcherButton: text id: anId tooltip: tooltip perform: method onCompleteHook: aString [
 	^ (MDLPanelSwitcherButton
 		text: text
@@ -86,12 +88,12 @@ TRightTabsPanelBrowser >> switcherButton: text id: anId tooltip: tooltip perform
 		yourself
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 TRightTabsPanelBrowser >> switcherButton: text perform: method [
 	^ self switcherButton: text tooltip: nil perform: method
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 TRightTabsPanelBrowser >> switcherButton: text tooltip: tooltip perform: method [
 	^ self
 		switcherButton: text
@@ -100,7 +102,7 @@ TRightTabsPanelBrowser >> switcherButton: text tooltip: tooltip perform: method 
 		onCompleteHook: ''
 ]
 
-{ #category : #components }
+{ #category : 'components' }
 TRightTabsPanelBrowser >> switcherButton: text tooltip: tooltip perform: method onCompleteHook: aString [
 	^ self
 		switcherButton: text
@@ -110,12 +112,12 @@ TRightTabsPanelBrowser >> switcherButton: text tooltip: tooltip perform: method 
 		onCompleteHook: aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TRightTabsPanelBrowser >> toolbar [
 	^ self explicitRequirement
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 TRightTabsPanelBrowser >> toolbar: aComponent [
 	self explicitRequirement
 ]

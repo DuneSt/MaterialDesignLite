@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLListItemTextBodyTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-List'
+	#name : 'MDLListItemTextBodyTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-List',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'List'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListItemTextBodyTest >> testBareBrush [
 	self assert: [ :html | html mdlListItemTextBody ] generates: '<span class="mdl-list__item-text-body"></span>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLListItemTextBodyTest >> testWithContent [
 	self assert: [ :html | html mdlListItemTextBody: 'test' ] generates: '<span class="mdl-list__item-text-body">test</span>'
 ]

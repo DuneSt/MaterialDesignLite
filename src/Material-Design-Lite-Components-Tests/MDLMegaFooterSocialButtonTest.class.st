@@ -1,15 +1,17 @@
 Class {
-	#name : #MDLMegaFooterSocialButtonTest,
-	#superclass : #SGTAbstractBrushTest,
-	#category : #'Material-Design-Lite-Components-Tests-Footer'
+	#name : 'MDLMegaFooterSocialButtonTest',
+	#superclass : 'SGTAbstractBrushTest',
+	#category : 'Material-Design-Lite-Components-Tests-Footer',
+	#package : 'Material-Design-Lite-Components-Tests',
+	#tag : 'Footer'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterSocialButtonTest >> testBareBrush [
 	self assert: [ :html | html mdlFooterSocialButton ] generates: '<button class="mdl-mega-footer__social-btn" type="submit"></button>'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 MDLMegaFooterSocialButtonTest >> testWithContent [
 	self assert: [ :html | html mdlFooterSocialButton: 'Test' ] generates: '<button class="mdl-mega-footer__social-btn" type="submit">Test</button>'
 ]
